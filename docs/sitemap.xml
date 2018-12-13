@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>https://hugo.kerhuel.eu/project/dc_motorlab_insa_lyon/</loc>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://hugo.kerhuel.eu/tutorial/subtutorial/example/</loc>
       <lastmod>2018-12-13T20:38:00+01:00</lastmod>
     </url>
@@ -100,6 +108,15 @@
     
     <url>
     
+      <loc>https://hugo.kerhuel.eu/tags/dc-motor/</loc>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://hugo.kerhuel.eu/tags/deep-learning/</loc>
       <lastmod>2018-12-13T20:38:00+01:00</lastmod>
       <priority>0</priority>
@@ -127,7 +144,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/project/</loc>
-      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -179,7 +196,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/tags/</loc>
-      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -188,6 +205,51 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/tutorial/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://hugo.kerhuel.eu/tags/matlab/</loc>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://hugo.kerhuel.eu/tags/motor-control/</loc>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://hugo.kerhuel.eu/tags/rapid-prototyping/</loc>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://hugo.kerhuel.eu/tags/simulink/</loc>
+      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://hugo.kerhuel.eu/tags/speed-controller/</loc>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
