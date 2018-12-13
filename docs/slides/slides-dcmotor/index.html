@@ -64,7 +64,25 @@
 
 <p>L.Kerhuel &amp; R.Delpoux</p>
 
-<section data-background-image="./../Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.05>
+<section data-background-image="./../Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
+</section>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="pendule-inverse">Pendule inverse</h2>
+
+<p><img src="./../Inverted_Pendulum_ControlLoopCloseUp.png" alt="./../Inverted_Pendulum_ControlLoopCloseUp.png" /></p>
+
+<section data-background-image="./../Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
 </section>
 
 
@@ -91,15 +109,92 @@
     
       
 
+<p><img src="./../Picooz_IdentificatoinBlockPresentation.png" alt="./../Picooz_IdentificatoinBlockPresentation.png" /></p>
+
+<p><a href="C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi" target="_blank">Video</a></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./../Picooz_Identificatoin_eq_01.png" alt="./../Picooz_Identificatoin_eq_01.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./../Picooz_Identificatoin_eq_02.png" alt="./../Picooz_Identificatoin_eq_02.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./../Picooz_SuperTwistingController.png" alt="./../Picooz_SuperTwistingController.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+      
+
+
+<section data-noprocess data-shortcode-slide
+  
+      
+      data-background-color="#FFFFFF"
+  >
+
+
+<p><img src="./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png" alt="./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
 <h2 id="plan">Plan:</h2>
 
 <p>Modèle de simulation &amp; génération de code</p>
 
 <ul>
-<li>Différence Temporel</li>
-<li>optimization et type de données</li>
-<li>blocks et fonctionalités Simulink</li>
+<li>Différences Temporel</li>
+<li>optimisation et type de données</li>
+<li>blocks et fonctionnalités Simulink</li>
 </ul>
+
+<aside class="notes">
+  DSPACE
+</aside>
 
 
     </section>
@@ -119,7 +214,7 @@
 <p>Modélisation en temps continue, transformé de Laplace dans le domaine p (ou s)</p>
 
 <ul>
-<li>Solver résout les équations différentiels</li>
+<li>Solver résout les équations différentielles</li>
 <li>Pas de contrainte temps réelle</li>
 <li>Résultat dépend du solveur ; pas de calcul variable.</li>
 </ul>
@@ -148,7 +243,7 @@
 <li>Single-Tasking &amp; Multi-Tasking</li>
 </ul>
 
-<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 
@@ -169,18 +264,18 @@
 
 <ul>
 <li>Les blocks ont tous la même période d&rsquo;exécution
-(même couleur)</li>
+(Même couleur)</li>
 </ul></li>
 
 <li><p><strong>Multi-Rate</strong></p>
 
 <ul>
-<li>Les blocks peuvent avoir des période d&rsquo;exécution différentes
-(schéma multicolor)</li>
+<li>Les blocks peuvent avoir des périodes d&rsquo;exécution différentes
+(Schéma multicolore)</li>
 </ul></li>
 </ul>
 
-<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 
@@ -194,7 +289,7 @@
     
       
 
-<h4 id="modèle-multirate">Modèle multirate</h4>
+<h4 id="modèle-multi-rate">Modèle multi-rate</h4>
 
 <p><img src="./../Model_Hardware_Test_withSampleTime.png" alt="./../Model_Hardware_Test_withSampleTime.png" /></p>
 
@@ -209,11 +304,11 @@
     
       
 
-<h4 id="charge-cpu-d-un-modéle-multirate-single-tasking-70-mips">Charge CPU d&rsquo;un modéle multirate single_tasking (@70 mips)</h4>
+<h4 id="charge-cpu-d-un-modèle-multi-rate-single-tasking-70-mips">Charge CPU d&rsquo;un modèle multi-rate single-tasking (@70 mips)</h4>
 
 <p><img src="./../Scope_SingleTasking_70MIPS.png" alt="./../Scope_SingleTasking_70MIPS.png" /></p>
 
-<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 
@@ -227,11 +322,11 @@
     
       
 
-<h4 id="charge-cpu-d-un-modéle-multirate-single-tasking-20-mips">Charge CPU d&rsquo;un modéle multirate single-tasking (@20 mips)</h4>
+<h4 id="charge-cpu-d-un-modèle-multi-rate-single-tasking-20-mips">Charge CPU d&rsquo;un modèle multi-rate single-tasking (@20 mips)</h4>
 
 <p><img src="./../Scope_SingleTasking_20MIPS.png" alt="./../Scope_SingleTasking_20MIPS.png" /></p>
 
-<section data-background-image="./../Scope_SingleTasking_20MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 
@@ -285,11 +380,11 @@
     
       
 
-<h4 id="charge-cpu-d-un-modéle-multirate-single-tasking-70-mips-1">Charge CPU d&rsquo;un modéle multirate single-tasking (@70 mips)</h4>
+<h4 id="charge-cpu-d-un-modèle-multi-rate-single-tasking-70-mips-1">Charge CPU d&rsquo;un modèle multi-rate single-tasking (@70 mips)</h4>
 
 <p><img src="./../Scope_MultiTasking_70MIPS.png" alt="./../Scope_MultiTasking_70MIPS.png" /></p>
 
-<section data-background-image="./../Scope_MultiTasking_70MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 
@@ -303,11 +398,11 @@
     
       
 
-<h4 id="charge-cpu-d-un-modéle-multirate-single-tasking-20-mips-1">Charge CPU d&rsquo;un modéle multirate single-tasking (@20 mips)</h4>
+<h4 id="charge-cpu-d-un-modèle-multi-rate-single-tasking-20-mips-1">Charge CPU d&rsquo;un modèle multi-rate single-tasking (@20 mips)</h4>
 
 <p><img src="./../Scope_MultiTasking_20MIPS.png" alt="./../Scope_MultiTasking_20MIPS.png" /></p>
 
-<section data-background-image="./../Scope_MultiTasking_20MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 
@@ -353,13 +448,13 @@
     
       
 
-<h1 id="optimization">Optimization</h1>
+<h1 id="optimisation">Optimisation</h1>
 
 <h2 id="type-de-données">type de données</h2>
 
 <ul>
 <li>Virgule Fixe</li>
-<li>Virgule Flotante</li>
+<li>Virgule Flottante</li>
 </ul>
 
 
@@ -386,12 +481,12 @@
     
       
 
-<h2 id="ieee-754">IEEE 754</h2>
+<h2 id="flotant">Flotant</h2>
 
 <table>
 <thead>
 <tr>
-<th align="center">Parameter</th>
+<th align="center">IEEE 754</th>
 <th align="center">Single</th>
 <th align="center">Double</th>
 </tr>
@@ -530,7 +625,7 @@
     
       
 
-<h2 id="matlab-code-generating-all-8-bit-floating-values">Matlab code generating all 8 bit floating values</h2>
+<h2 id="script-matlab-pour-tester-un-flottant-8-bits">Script Matlab pour tester un flottant 8 bits</h2>
 
 <pre><code class="language-MATLAB">% 4 bit exponent (signed)
 emax = 6; emax = 7;
@@ -558,7 +653,132 @@ TotalVal = vals'*exps;
     
       
 
-<section data-background-iframe="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&controls=1&showinfo=0&autohide=1&rel=0&modestbranding=1&loop=&start=0" data-background-opacity=0.1 data-background-repeat="repeat">
+<h1 id="simulink">Simulink</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="data-type">Data-type</h2>
+
+<p><img src="./../Simulink_TypeCast_FixPtFormat.png" alt="./../Simulink_TypeCast_FixPtFormat.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="datatype">Datatype</h2>
+
+<ul>
+<li>int8&hellip;uint23</li>
+<li>fixdt(1,16,15)
+
+<ul>
+<li>Scaling is En15 (Exp neg)</li>
+<li>$$\rightarrow 2^-15$$</li>
+</ul></li>
+<li>fixdt(1,16)
+
+<ul>
+<li>signed (1)</li>
+<li>16 bit width</li>
+<li>Scaling is derived from min &amp; max</li>
+</ul></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="datatype-1">Datatype</h2>
+
+<p><img src="./../Simulink_TypeCast_SlopeAndBias.png" alt="./../Simulink_TypeCast_SlopeAndBias.png" /></p>
+
+<ul>
+<li>fixdt(1,16,.01,0)
+
+<ul>
+<li>Scaling is sfix16<strong>Sp</strong>01</li>
+<li>Slope point 01<br /></li>
+</ul></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./../Simulink_TypeCast_SlopeAndBias_Sat.png" alt="./../Simulink_TypeCast_SlopeAndBias_Sat.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="tp">TP</h1>
+
+<p>slides www</p>
+
+<p><a href="https://hugo.kerhuel.eu/slides/slides-dcmotor/" target="_blank">https://hugo.kerhuel.eu/slides/slides-dcmotor/</a></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="test-slides">Test slides</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<section data-background-iframe="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&controls=1&showinfo=0&autohide=1&rel=0&modestbranding=1&loop=&start=0" data-background-opacity=0.06 data-background-repeat="repeat">
 </section>
 
 <h1 id="my-title">My Title !</h1>

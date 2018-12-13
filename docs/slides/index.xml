@@ -19,9 +19,10 @@
       <guid>https://hugo.kerhuel.eu/slides/slides-dcmotor/</guid>
       <description>Prototypage rapide avec Simulink sur dsPIC MPLAB device blocks for Simulink
 L.Kerhuel &amp;amp; R.Delpoux
- Plan: Modèle de simulation &amp;amp; génération de code
- Différence Temporel optimization et type de données blocks et fonctionalités Simulink  Aspect Temporel: Simulation Modélisation en temps continue, transformé de Laplace dans le domaine p (ou s)
- Solver résout les équations différentiels Pas de contrainte temps réelle Résultat dépend du solveur ; pas de calcul variable.</description>
+ Pendule inverse  Video
+Plan: Modèle de simulation &amp;amp; génération de code
+ Différences Temporel optimisation et type de données blocks et fonctionnalités Simulink  DSPACE  Aspect Temporel: Simulation Modélisation en temps continue, transformé de Laplace dans le domaine p (ou s)
+ Solver résout les équations différentielles Pas de contrainte temps réelle Résultat dépend du solveur ; pas de calcul variable.</description>
     </item>
     
   </channel>

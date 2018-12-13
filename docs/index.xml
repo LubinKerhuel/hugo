@@ -368,7 +368,16 @@ comment  --&gt;
 
 &lt;p&gt;L.Kerhuel &amp;amp; R.Delpoux&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.05&gt;
+&lt;section data-background-image=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.06&gt;
+&lt;/section&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;pendule-inverse&#34;&gt;Pendule inverse&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;./../Inverted_Pendulum_ControlLoopCloseUp.png&#34; alt=&#34;./../Inverted_Pendulum_ControlLoopCloseUp.png&#34; /&gt;&lt;/p&gt;
+
+&lt;section data-background-image=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.06&gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
@@ -377,15 +386,49 @@ comment  --&gt;
 
 &lt;hr /&gt;
 
+&lt;p&gt;&lt;img src=&#34;./../Picooz_IdentificatoinBlockPresentation.png&#34; alt=&#34;./../Picooz_IdentificatoinBlockPresentation.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi&#34; target=&#34;_blank&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&#34;./../Picooz_Identificatoin_eq_01.png&#34; alt=&#34;./../Picooz_Identificatoin_eq_01.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&#34;./../Picooz_Identificatoin_eq_02.png&#34; alt=&#34;./../Picooz_Identificatoin_eq_02.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&#34;./../Picooz_SuperTwistingController.png&#34; alt=&#34;./../Picooz_SuperTwistingController.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-color=&#34;#FFFFFF&#34;
+  &gt;
+
+
+&lt;p&gt;&lt;img src=&#34;./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png&#34; alt=&#34;./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
 &lt;h2 id=&#34;plan&#34;&gt;Plan:&lt;/h2&gt;
 
 &lt;p&gt;Modèle de simulation &amp;amp; génération de code&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Différence Temporel&lt;/li&gt;
-&lt;li&gt;optimization et type de données&lt;/li&gt;
-&lt;li&gt;blocks et fonctionalités Simulink&lt;/li&gt;
+&lt;li&gt;Différences Temporel&lt;/li&gt;
+&lt;li&gt;optimisation et type de données&lt;/li&gt;
+&lt;li&gt;blocks et fonctionnalités Simulink&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;aside class=&#34;notes&#34;&gt;
+  DSPACE
+&lt;/aside&gt;
 
 &lt;hr /&gt;
 
@@ -396,7 +439,7 @@ comment  --&gt;
 &lt;p&gt;Modélisation en temps continue, transformé de Laplace dans le domaine p (ou s)&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Solver résout les équations différentiels&lt;/li&gt;
+&lt;li&gt;Solver résout les équations différentielles&lt;/li&gt;
 &lt;li&gt;Pas de contrainte temps réelle&lt;/li&gt;
 &lt;li&gt;Résultat dépend du solveur ; pas de calcul variable.&lt;/li&gt;
 &lt;/ul&gt;
@@ -416,7 +459,7 @@ comment  --&gt;
 &lt;li&gt;Single-Tasking &amp;amp; Multi-Tasking&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;section data-background-image=&#34;./../Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.05 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./../Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
@@ -428,42 +471,42 @@ comment  --&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Les blocks ont tous la même période d&amp;rsquo;exécution
-(même couleur)&lt;/li&gt;
+(Même couleur)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Multi-Rate&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Les blocks peuvent avoir des période d&amp;rsquo;exécution différentes
-(schéma multicolor)&lt;/li&gt;
+&lt;li&gt;Les blocks peuvent avoir des périodes d&amp;rsquo;exécution différentes
+(Schéma multicolore)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;section data-background-image=&#34;./../Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.05 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./../Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;modèle-multirate&#34;&gt;Modèle multirate&lt;/h4&gt;
+&lt;h4 id=&#34;modèle-multi-rate&#34;&gt;Modèle multi-rate&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;charge-cpu-d-un-modéle-multirate-single-tasking-70-mips&#34;&gt;Charge CPU d&amp;rsquo;un modéle multirate single_tasking (@70 mips)&lt;/h4&gt;
+&lt;h4 id=&#34;charge-cpu-d-un-modèle-multi-rate-single-tasking-70-mips&#34;&gt;Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@70 mips)&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;./../Scope_SingleTasking_70MIPS.png&#34; alt=&#34;./../Scope_SingleTasking_70MIPS.png&#34; /&gt;&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.05 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./../Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;charge-cpu-d-un-modéle-multirate-single-tasking-20-mips&#34;&gt;Charge CPU d&amp;rsquo;un modéle multirate single-tasking (@20 mips)&lt;/h4&gt;
+&lt;h4 id=&#34;charge-cpu-d-un-modèle-multi-rate-single-tasking-20-mips&#34;&gt;Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@20 mips)&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;./../Scope_SingleTasking_20MIPS.png&#34; alt=&#34;./../Scope_SingleTasking_20MIPS.png&#34; /&gt;&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Scope_SingleTasking_20MIPS.png&#34; data-background-opacity=0.05 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./../Scope_SingleTasking_20MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
@@ -490,20 +533,20 @@ comment  --&gt;
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;charge-cpu-d-un-modéle-multirate-single-tasking-70-mips-1&#34;&gt;Charge CPU d&amp;rsquo;un modéle multirate single-tasking (@70 mips)&lt;/h4&gt;
+&lt;h4 id=&#34;charge-cpu-d-un-modèle-multi-rate-single-tasking-70-mips-1&#34;&gt;Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@70 mips)&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;./../Scope_MultiTasking_70MIPS.png&#34; alt=&#34;./../Scope_MultiTasking_70MIPS.png&#34; /&gt;&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Scope_MultiTasking_70MIPS.png&#34; data-background-opacity=0.05 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./../Scope_MultiTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;charge-cpu-d-un-modéle-multirate-single-tasking-20-mips-1&#34;&gt;Charge CPU d&amp;rsquo;un modéle multirate single-tasking (@20 mips)&lt;/h4&gt;
+&lt;h4 id=&#34;charge-cpu-d-un-modèle-multi-rate-single-tasking-20-mips-1&#34;&gt;Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@20 mips)&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;./../Scope_MultiTasking_20MIPS.png&#34; alt=&#34;./../Scope_MultiTasking_20MIPS.png&#34; /&gt;&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Scope_MultiTasking_20MIPS.png&#34; data-background-opacity=0.05 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./../Scope_MultiTasking_20MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
@@ -531,13 +574,13 @@ comment  --&gt;
 
 &lt;hr /&gt;
 
-&lt;h1 id=&#34;optimization&#34;&gt;Optimization&lt;/h1&gt;
+&lt;h1 id=&#34;optimisation&#34;&gt;Optimisation&lt;/h1&gt;
 
 &lt;h2 id=&#34;type-de-données&#34;&gt;type de données&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Virgule Fixe&lt;/li&gt;
-&lt;li&gt;Virgule Flotante&lt;/li&gt;
+&lt;li&gt;Virgule Flottante&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -546,12 +589,12 @@ comment  --&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;ieee-754&#34;&gt;IEEE 754&lt;/h2&gt;
+&lt;h2 id=&#34;flotant&#34;&gt;Flotant&lt;/h2&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;Parameter&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;IEEE 754&lt;/th&gt;
 &lt;th align=&#34;center&#34;&gt;Single&lt;/th&gt;
 &lt;th align=&#34;center&#34;&gt;Double&lt;/th&gt;
 &lt;/tr&gt;
@@ -645,7 +688,7 @@ comment  --&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;matlab-code-generating-all-8-bit-floating-values&#34;&gt;Matlab code generating all 8 bit floating values&lt;/h2&gt;
+&lt;h2 id=&#34;script-matlab-pour-tester-un-flottant-8-bits&#34;&gt;Script Matlab pour tester un flottant 8 bits&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-MATLAB&#34;&gt;% 4 bit exponent (signed)
 emax = 6; emax = 7;
@@ -664,7 +707,69 @@ TotalVal = vals&#39;*exps;
 
 &lt;hr /&gt;
 
-&lt;section data-background-iframe=&#34;https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&amp;controls=1&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1&amp;loop=&amp;start=0&#34; data-background-opacity=0.1 data-background-repeat=&#34;repeat&#34;&gt;
+&lt;h1 id=&#34;simulink&#34;&gt;Simulink&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;data-type&#34;&gt;Data-type&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;./../Simulink_TypeCast_FixPtFormat.png&#34; alt=&#34;./../Simulink_TypeCast_FixPtFormat.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;datatype&#34;&gt;Datatype&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;int8&amp;hellip;uint23&lt;/li&gt;
+&lt;li&gt;fixdt(1,16,15)
+
+&lt;ul&gt;
+&lt;li&gt;Scaling is En15 (Exp neg)&lt;/li&gt;
+&lt;li&gt;$$\rightarrow 2^-15$$&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;fixdt(1,16)
+
+&lt;ul&gt;
+&lt;li&gt;signed (1)&lt;/li&gt;
+&lt;li&gt;16 bit width&lt;/li&gt;
+&lt;li&gt;Scaling is derived from min &amp;amp; max&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;datatype-1&#34;&gt;Datatype&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;./../Simulink_TypeCast_SlopeAndBias.png&#34; alt=&#34;./../Simulink_TypeCast_SlopeAndBias.png&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;fixdt(1,16,.01,0)
+
+&lt;ul&gt;
+&lt;li&gt;Scaling is sfix16&lt;strong&gt;Sp&lt;/strong&gt;01&lt;/li&gt;
+&lt;li&gt;Slope point 01&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&#34;./../Simulink_TypeCast_SlopeAndBias_Sat.png&#34; alt=&#34;./../Simulink_TypeCast_SlopeAndBias_Sat.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;tp&#34;&gt;TP&lt;/h1&gt;
+
+&lt;p&gt;slides www&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://hugo.kerhuel.eu/slides/slides-dcmotor/&#34; target=&#34;_blank&#34;&gt;https://hugo.kerhuel.eu/slides/slides-dcmotor/&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;test-slides&#34;&gt;Test slides&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;section data-background-iframe=&#34;https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&amp;controls=1&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1&amp;loop=&amp;start=0&#34; data-background-opacity=0.06 data-background-repeat=&#34;repeat&#34;&gt;
 &lt;/section&gt;
 
 &lt;h1 id=&#34;my-title&#34;&gt;My Title !&lt;/h1&gt;
