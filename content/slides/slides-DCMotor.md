@@ -69,7 +69,7 @@ Modèle de simulation & génération de code
 
 - Différences Temporel
 - optimisation et type de données
-- blocks et fonctionalités Simulink
+- blocks et fonctionnalités Simulink
 
 {{< speaker_note >}}
 DSPACE 
@@ -82,7 +82,7 @@ DSPACE
 
 Modélisation en temps continue, transformé de Laplace dans le domaine p (ou s)
 
-  - Solver résout les équations différentiels
+  - Solver résout les équations différentielles
   - Pas de contrainte temps réelle
   - Résultat dépend du solveur ; pas de calcul variable.
  
@@ -107,11 +107,11 @@ Implémentation en temps discret avec un pas de calcul fixe
 
 - **Single-rate**:
   - Les blocks ont tous la même période d'exécution
-    (même couleur)
+    (Même couleur)
 
 - **Multi-Rate**
-  - Les blocks peuvent avoir des période d'exécution différentes
-    (schéma multicolor)
+  - Les blocks peuvent avoir des périodes d'exécution différentes
+    (Schéma multicolore)
 
 
 <section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
@@ -119,13 +119,13 @@ Implémentation en temps discret avec un pas de calcul fixe
 
 ---
 
-#### Modèle multirate
+#### Modèle multi-rate
 
 ![./../Model_Hardware_Test_withSampleTime.png](./../Model_Hardware_Test_withSampleTime.png)
 
 ---
 
-#### Charge CPU d'un modéle multirate single_tasking (@70 mips)
+#### Charge CPU d'un modèle multi-rate single-tasking (@70 mips)
 
 ![./../Scope_SingleTasking_70MIPS.png](./../Scope_SingleTasking_70MIPS.png)
 
@@ -135,7 +135,7 @@ Implémentation en temps discret avec un pas de calcul fixe
 
 ---
 
-#### Charge CPU d'un modéle multirate single-tasking (@20 mips) 
+#### Charge CPU d'un modèle multi-rate single-tasking (@20 mips) 
 
 ![./../Scope_SingleTasking_20MIPS.png](./../Scope_SingleTasking_20MIPS.png)
 
@@ -161,7 +161,7 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
-#### Charge CPU d'un modéle multirate single-tasking (@70 mips) 
+#### Charge CPU d'un modèle multi-rate single-tasking (@70 mips) 
 
 ![./../Scope_MultiTasking_70MIPS.png](./../Scope_MultiTasking_70MIPS.png)
 
@@ -170,7 +170,7 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
-#### Charge CPU d'un modéle multirate single-tasking (@20 mips) 
+#### Charge CPU d'un modèle multi-rate single-tasking (@20 mips) 
 
 ![./../Scope_MultiTasking_20MIPS.png](./../Scope_MultiTasking_20MIPS.png)
 
@@ -191,12 +191,12 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
-# Optimization 
+# Optimisation 
 
 ## type de données
 
 - Virgule Fixe
-- Virgule Flotante
+- Virgule Flottante
 
 
 ---
@@ -205,9 +205,9 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
-## IEEE 754
+## Flotant
 
- Parameter | Single | Double |
+ IEEE 754| Single | Double |
 |:---:|:---:|:---:|
  Format width | 32 | 64 |
  Sign bit |1 | 1 |
@@ -240,7 +240,7 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 ![./../FloatFixed_4.png](./../FloatFixed_4.png)
 
 ---
-## Matlab code generating all 8 bit floating values
+## Script Matlab pour tester un flottant 8 bits
 
 ```MATLAB
 % 4 bit exponent (signed)
@@ -264,7 +264,7 @@ TotalVal = vals'*exps;
 
 ---
 
-## Datatype 
+## Data-type 
 
 ![./../Simulink_TypeCast_FixPtFormat.png](./../Simulink_TypeCast_FixPtFormat.png)
 
@@ -289,7 +289,7 @@ TotalVal = vals'*exps;
 ![./../Simulink_TypeCast_SlopeAndBias.png](./../Simulink_TypeCast_SlopeAndBias.png)
 
 - fixdt(1,16,.01,0)
-  - Scaling is sfix16*Sp*01 
+  - Scaling is sfix16**Sp**01 
     - Slope point 01    
 
 ---
