@@ -17,21 +17,63 @@ transition = "zoom"
 
 L.Kerhuel & R.Delpoux
 
-<section data-background-image="./../Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.05>
+<section data-background-image="./../Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
 </section>
 
 ---
 
+## Pendule inverse
+
+![./../Inverted_Pendulum_ControlLoopCloseUp.png](./../Inverted_Pendulum_ControlLoopCloseUp.png)
+
+<section data-background-image="./../Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
+</section>
+
+---
+
+
 ![./../Model_Hardware_Test_withSampleTime.png](./../Model_Hardware_Test_withSampleTime.png)
+
+
+---
+
+![./../Picooz_IdentificatoinBlockPresentation.png](./../Picooz_IdentificatoinBlockPresentation.png)
+
+[Video](C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi)
+
+---
+
+![./../Picooz_Identificatoin_eq_01.png](./../Picooz_Identificatoin_eq_01.png)
+
+---
+
+![./../Picooz_Identificatoin_eq_02.png](./../Picooz_Identificatoin_eq_02.png)
+
+---
+
+![./../Picooz_SuperTwistingController.png](./../Picooz_SuperTwistingController.png)
+
+---
+
+{{< slide background-color="#FFFFFF" >}}
+
+
+![./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png](./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png)
+
+
 
 ---
 
 ## Plan:
 Modèle de simulation & génération de code
 
-- Différence Temporel
-- optimization et type de données
+- Différences Temporel
+- optimisation et type de données
 - blocks et fonctionalités Simulink
+
+{{< speaker_note >}}
+DSPACE 
+{{< /speaker_note >}}
 
 ---
 
@@ -56,7 +98,7 @@ Implémentation en temps discret avec un pas de calcul fixe
   - Single-Rate & Multi-Rate
   - Single-Tasking & Multi-Tasking
 
-<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
@@ -72,7 +114,7 @@ Implémentation en temps discret avec un pas de calcul fixe
     (schéma multicolor)
 
 
-<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
@@ -87,7 +129,7 @@ Implémentation en temps discret avec un pas de calcul fixe
 
 ![./../Scope_SingleTasking_70MIPS.png](./../Scope_SingleTasking_70MIPS.png)
 
-<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 
@@ -97,7 +139,7 @@ Implémentation en temps discret avec un pas de calcul fixe
 
 ![./../Scope_SingleTasking_20MIPS.png](./../Scope_SingleTasking_20MIPS.png)
 
-<section data-background-image="./../Scope_SingleTasking_20MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
@@ -123,7 +165,7 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ![./../Scope_MultiTasking_70MIPS.png](./../Scope_MultiTasking_70MIPS.png)
 
-<section data-background-image="./../Scope_MultiTasking_70MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
@@ -132,7 +174,7 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ![./../Scope_MultiTasking_20MIPS.png](./../Scope_MultiTasking_20MIPS.png)
 
-<section data-background-image="./../Scope_MultiTasking_20MIPS.png" data-background-opacity=0.05 data-background-position="center" >
+<section data-background-image="./../Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
@@ -215,11 +257,61 @@ TotalVal = vals'*exps;
 8bitFloat = unique([TotalVal  ; 2^emin * [0:(2^m-1)]']);
 8bitFloat = unique(flipud(-TotalVal) ;TotalVal]); % with neg vals
 ```
+
+---
+
+# Simulink 
+
+---
+
+## Datatype 
+
+![./../Simulink_TypeCast_FixPtFormat.png](./../Simulink_TypeCast_FixPtFormat.png)
+
+---
+
+## Datatype 
+
+- int8...uint23
+- fixdt(1,16,15)
+  - Scaling is En15 (Exp neg)
+    -  $$\rightarrow 2^-15$$
+- fixdt(1,16)
+  - signed (1)
+  - 16 bit width
+  - Scaling is derived from min & max
+
+
+---
+
+## Datatype 
+
+![./../Simulink_TypeCast_SlopeAndBias.png](./../Simulink_TypeCast_SlopeAndBias.png)
+
+- fixdt(1,16,.01,0)
+  - Scaling is sfix16*Sp*01 
+    - Slope point 01    
+
+---
+
+![./../Simulink_TypeCast_SlopeAndBias_Sat.png](./../Simulink_TypeCast_SlopeAndBias_Sat.png)
+
+---
+
+# TP
+
+slides www
+
+https://hugo.kerhuel.eu/slides/slides-dcmotor/
+
+---
+
+# Test slides
+
 ---
 
 
-
-<section data-background-iframe="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&controls=1&showinfo=0&autohide=1&rel=0&modestbranding=1&loop=&start=0" data-background-opacity=0.1 data-background-repeat="repeat">
+<section data-background-iframe="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&controls=1&showinfo=0&autohide=1&rel=0&modestbranding=1&loop=&start=0" data-background-opacity=0.06 data-background-repeat="repeat">
 </section>
 
 # My Title !
