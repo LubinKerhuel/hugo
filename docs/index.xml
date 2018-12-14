@@ -759,11 +759,21 @@ TotalVal = vals&#39;*exps;
 
 &lt;h1 id=&#34;tp&#34;&gt;TP&lt;/h1&gt;
 
-&lt;p&gt;slides www&lt;/p&gt;
+&lt;h2 id=&#34;https-www-ctrl-elec-fr&#34;&gt;&lt;a href=&#34;https://www.ctrl-elec.fr/&#34; target=&#34;_blank&#34;&gt;https://www.ctrl-elec.fr/&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://hugo.kerhuel.eu/slides/slides-dcmotor/&#34; target=&#34;_blank&#34;&gt;https://hugo.kerhuel.eu/slides/slides-dcmotor/&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;h2 id=&#34;elements-de-correction&#34;&gt;Elements de correction&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&#34;./../TP_Correction_OpAmp.png&#34; alt=&#34;./../TP_Correction_OpAmp.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;tp-correction-adc-png-tp-correction-adc-png&#34;&gt;&lt;img src=&#34;./../TP_Correction_ADC.png&#34; alt=&#34;./../TP_Correction_ADC.png&#34; /&gt;&lt;/h2&gt;
 
 &lt;h1 id=&#34;test-slides&#34;&gt;Test slides&lt;/h1&gt;
 

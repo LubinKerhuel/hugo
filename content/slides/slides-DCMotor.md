@@ -300,10 +300,24 @@ TotalVal = vals'*exps;
 
 # TP
 
-slides www
+
+## https://www.ctrl-elec.fr/
 
 https://hugo.kerhuel.eu/slides/slides-dcmotor/
 
+---
+
+## Elements de correction
+
+---
+
+![./../TP_Correction_OpAmp.png](./../TP_Correction_OpAmp.png)
+
+
+---
+
+
+![./../TP_Correction_ADC.png](./../TP_Correction_ADC.png)
 ---
 
 # Test slides
