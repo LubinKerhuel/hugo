@@ -320,6 +320,37 @@ https://hugo.kerhuel.eu/slides/slides-dcmotor/
 ![./../TP_Correction_ADC.png](./../TP_Correction_ADC.png)
 ---
 
+# PWM settings
+
+---
+
+![./../TP_Correction_PWM_Main.png](./../TP_Correction_PWM_Main.png)
+
+
+---
+
+
+![./../TP_Correction_PWM_02.png](./../TP_Correction_PWM_02.png)
+
+---
+
+
+![./../TP_Correction_PWM_03.png](./../TP_Correction_PWM_03.png)
+
+---
+
+
+![./../TP_Correction_PWM_04.png](./../TP_Correction_PWM_04.png)
+
+---
+
+
+![./../TP_Correction_PWM_05.png](./../TP_Correction_PWM_05.png)
+
+
+---
+
+
 # Test slides
 
 ---
