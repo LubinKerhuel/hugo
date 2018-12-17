@@ -110,13 +110,6 @@
     
     <url>
     
-      <loc>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</loc>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://lubin.kerhuel.eu/publication_types/</loc>
       <priority>0</priority>
     </url>
@@ -127,14 +120,6 @@
     
       <loc>https://lubin.kerhuel.eu/</loc>
       <lastmod>2018-12-17T11:40:51+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://lubin.kerhuel.eu/slides/</loc>
       <priority>0</priority>
     </url>
     
