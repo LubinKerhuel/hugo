@@ -11,28 +11,28 @@ weight = 5
 [interests]
   interests = [
     "Embedded Systems",
-    "Automatics, Control Theory",
+    "Applied math", 
     "Modelism"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Micro-Electronics"
-  institution = "Montpellier II University"
+  course = "Ph.D Automatic, Signal Processing, Aerial Robots"
+  institution = "National Center for Scientific Research (CNRS) / University Montpellier II"
   year = 2009
 
 [[education.courses]]
-  course = "Master in Singal Processing"
-  institution = "Sophia-Antipolis University"
-  year = 2006
+  course = "Master (M2R) - Signal Processing and Digital Transmission"
+  institution = "University of Nice Sophia-Antipolis"
+  year = 2004
 
 [[education.courses]]
-  course = "Engineer in System on Chip"
+  course = "Engineer - System on Chip"
   institution = "ESIEE Paris"
-  year = 2006
+  year = 2004
  
 +++
 
 # Biography
 
-Lubin Kerhuel is developping a toolbox or blockset for simulink at Microchip Technology.
+Lubin Kerhuel is developping a toolbox for Matlab at Microchip Technology to target Microchip's microcontrollers from Simulink.

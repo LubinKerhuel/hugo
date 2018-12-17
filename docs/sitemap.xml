@@ -4,8 +4,8 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/project/dc_motorlab_insa_lyon/</loc>
-      <lastmod>2018-12-13T21:06:22+01:00</lastmod>
+      <loc>https://hugo.kerhuel.eu/project/lab_dc_motor/</loc>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
     </url>
     
   
@@ -76,30 +76,6 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/project/external-project/</loc>
-      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://hugo.kerhuel.eu/project/internal-project/</loc>
-      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://hugo.kerhuel.eu/project/internal-project2/</loc>
-      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://hugo.kerhuel.eu/categories/</loc>
       <priority>0</priority>
     </url>
@@ -109,25 +85,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/tags/dc-motor/</loc>
-      <lastmod>2018-12-13T21:06:22+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://hugo.kerhuel.eu/tags/deep-learning/</loc>
-      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://hugo.kerhuel.eu/tags/demo/</loc>
-      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -144,7 +102,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/project/</loc>
-      <lastmod>2018-12-13T21:06:22+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -152,8 +110,8 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/slides/slides-dcmotor/</loc>
-      <lastmod>2018-12-14T11:27:29+01:00</lastmod>
+      <loc>https://hugo.kerhuel.eu/slides/slides_dcmotor_insa/</loc>
+      <lastmod>2018-12-17T10:56:45+01:00</lastmod>
     </url>
     
   
@@ -169,16 +127,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/</loc>
-      <lastmod>2018-10-01T00:16:12+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://hugo.kerhuel.eu/tags/simulink/</loc>
-      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
+      <lastmod>2018-04-09T19:10:15+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -187,7 +136,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/slides/</loc>
-      <lastmod>2018-12-14T11:27:29+01:00</lastmod>
+      <lastmod>2018-12-17T10:56:45+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -196,7 +145,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/tags/</loc>
-      <lastmod>2018-12-13T21:06:22+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -213,7 +162,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/tags/matlab/</loc>
-      <lastmod>2018-12-13T21:06:22+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -222,7 +171,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/tags/motor-control/</loc>
-      <lastmod>2018-12-13T21:06:22+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -231,7 +180,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/tags/rapid-prototyping/</loc>
-      <lastmod>2018-12-13T21:06:22+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -240,7 +189,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/tags/simulink/</loc>
-      <lastmod>2018-12-13T20:38:00+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -249,7 +198,7 @@
     <url>
     
       <loc>https://hugo.kerhuel.eu/tags/speed-controller/</loc>
-      <lastmod>2018-12-13T21:06:22+01:00</lastmod>
+      <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     

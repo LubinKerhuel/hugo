@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -17,10 +15,10 @@
   
     
   
-  <meta name="description" content="Rapid Control Prototyping tools">
+  <meta name="description" content="Simulation &amp; real-time control of a 24v DC motor (INSA Lyon hands-on)">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://hugo.kerhuel.eu/tags/demo/">
+  <link rel="alternate" hreflang="en-us" href="https://hugo.kerhuel.eu/project/lab_dc_motor/">
 
   
 
@@ -68,6 +66,8 @@
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
 
     
 
@@ -86,39 +86,43 @@
   
 
   
-  <link rel="alternate" href="https://hugo.kerhuel.eu/tags/demo/index.xml" type="application/rss+xml" title="Rapid Control Prototyping">
-  <link rel="feed" href="https://hugo.kerhuel.eu/tags/demo/index.xml" type="application/rss+xml" title="Rapid Control Prototyping">
+  <link rel="alternate" href="https://hugo.kerhuel.eu/index.xml" type="application/rss+xml" title="Rapid Control Prototyping">
+  <link rel="feed" href="https://hugo.kerhuel.eu/index.xml" type="application/rss+xml" title="Rapid Control Prototyping">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://hugo.kerhuel.eu/tags/demo/">
+  <link rel="canonical" href="https://hugo.kerhuel.eu/project/lab_dc_motor/">
 
   
   
   
   
     
-    
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@LubinKerhuel">
+  <meta property="twitter:creator" content="@LubinKerhuel">
   
   <meta property="og:site_name" content="Rapid Control Prototyping">
-  <meta property="og:url" content="https://hugo.kerhuel.eu/tags/demo/">
-  <meta property="og:title" content="Demo | Rapid Control Prototyping">
-  <meta property="og:description" content="Rapid Control Prototyping tools"><meta property="og:image" content="https://hugo.kerhuel.eu/img/portrait.jpg">
+  <meta property="og:url" content="https://hugo.kerhuel.eu/project/lab_dc_motor/">
+  <meta property="og:title" content="Real Time Control for a DC Motor | Rapid Control Prototyping">
+  <meta property="og:description" content="Simulation &amp; real-time control of a 24v DC motor (INSA Lyon hands-on)"><meta property="og:image" content="https://hugo.kerhuel.eu/project/lab_dc_motor/featured.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2016-04-27T00:00:00&#43;02:00">
+  <meta property="article:published_time" content="2018-12-01T00:00:00&#43;01:00">
+  
+  <meta property="article:modified_time" content="2018-12-01T00:00:00&#43;01:00">
   
 
   
 
   
 
-  <title>Demo | Rapid Control Prototyping</title>
+  <title>Real Time Control for a DC Motor | Rapid Control Prototyping</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
@@ -183,47 +187,9 @@
         
 
         <li class="nav-item">
-          <a class="nav-link" href="/#about">
+          <a class="nav-link" href="/#teaching">
             
             <span>Home</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#publications_selected">
-            
-            <span>Publications</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#posts">
-            
-            <span>Posts</span>
             
           </a>
         </li>
@@ -291,6 +257,25 @@
         
 
         <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Author</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
           <a class="nav-link" href="/#contact">
             
             <span>Contact</span>
@@ -322,54 +307,317 @@
 </nav>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/project/lab_dc_motor/featured_hu8a889aa035d71b64e8269faea9113227_12038_800x0_resize_box_2.png');"></div>
+  <span class="article-header-caption">Motor Pravalux</span>
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">Real Time Control for a DC Motor</h1>
+
+        
+
+        
+
+<div class="article-metadata">
+
   
   
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lubin Kerhuel">
+  </span>
   
+
+  <span class="article-date">
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Demo</h1>
+    <meta content="2018-12-01 00:00:00 &#43;0100 CET" itemprop="datePublished">
+    <time datetime="2018-12-01 00:00:00 &#43;0100 CET" itemprop="dateModified">
+      Dec 1, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lubin Kerhuel">
+  </span>
 
   
 
   
+  
+
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/slides/slides_dcmotor_insa/" target="_blank">
+    Slides
+  </a>
+  
+
+
+
+
+
+
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+        
 
-  
-  
-  <div>
-    <h2><a href="/project/external-project/">External Project</a></h2>
-    <div class="article-style">
-      
-      An example of linking directly to an external project website using `external_link`.
-      
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/project/lab_dc_motor/featured_hu8a889aa035d71b64e8269faea9113227_12038_680x500_fill_q90_box_smart1_2.png" itemprop="image" alt="">
+        <span class="article-header-caption">Motor Pravalux</span>
+      </div>
     </div>
   </div>
+</div>
+
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">Real Time Control for a DC Motor</h1>
+
+  
+
+  
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lubin Kerhuel">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-12-01 00:00:00 &#43;0100 CET" itemprop="datePublished">
+    <time datetime="2018-12-01 00:00:00 &#43;0100 CET" itemprop="dateModified">
+      Dec 1, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Lubin Kerhuel">
+  </span>
+
+  
+
+  
+  
+
+  
+
+  
   
 
   
 
 </div>
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/slides/slides_dcmotor_insa/" target="_blank">
+    Slides
+  </a>
+  
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>Control a 24V DC motor using the MCLV V2 board with a dsPIC 33EP256MC506.
+This hands-on is for 5th year students at INSA-Lyon.</p>
+
+<p>The hands-on Lab subject available at: <a href="https://rtdc.ctrl-elec.fr/" target="_blank">https://rtdc.ctrl-elec.fr/</a>.</p>
+
+<p>Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:</p>
+
+<ul>
+<li>Real-time scheduler / CPU load analysis</li>
+<li>Fixed-point datatypes</li>
+</ul>
+
+<h3 id="authors">Authors:</h3>
+
+<ul>
+<li>Romain DELPOUX (Romain.Delpoux at insa-lyon.fr), Assistant Professor, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.</li>
+<li>Lubin KERHUEL (Lubin.Kerhuel at microchip.com), Dr-Engineer, Microchip Technology Inc.</li>
+</ul>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/simulink/">simulink</a>
+  
+  <a class="badge badge-light" href="/tags/matlab/">matlab</a>
+  
+  <a class="badge badge-light" href="/tags/motor-control/">motor-control</a>
+  
+  <a class="badge badge-light" href="/tags/rapid-prototyping/">rapid-prototyping</a>
+  
+  <a class="badge badge-light" href="/tags/dc-motor/">DC-motor</a>
+  
+  <a class="badge badge-light" href="/tags/speed-controller/">speed-controller</a>
+  
+</div>
+
+
+
+    
+
+
+    
+    
+
+    
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    
+
+  </div>
+</article>
+
+
+<div class="article-container article-widget">
+  <div class="post-nav">
+  
+  
+</div>
+
+</div>
+
+
 <div class="container">
   <footer class="site-footer">
   
@@ -452,6 +700,8 @@
 
     
     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
 
     
     
@@ -521,6 +771,4 @@
 
   </body>
 </html>
-
-
 

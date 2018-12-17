@@ -17,48 +17,48 @@ transition = "zoom"
 
 L.Kerhuel & R.Delpoux
 
-<section data-background-image="./../Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
+<section data-background-image="./Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
 </section>
 
 ---
 
 ## Pendule inverse
 
-![./../Inverted_Pendulum_ControlLoopCloseUp.png](./../Inverted_Pendulum_ControlLoopCloseUp.png)
+![./Inverted_Pendulum_ControlLoopCloseUp.png](./Inverted_Pendulum_ControlLoopCloseUp.png)
 
-<section data-background-image="./../Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
+<section data-background-image="./Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
 </section>
 
 ---
 
 
-![./../Model_Hardware_Test_withSampleTime.png](./../Model_Hardware_Test_withSampleTime.png)
+![./Model_Hardware_Test_withSampleTime.png](./Model_Hardware_Test_withSampleTime.png)
 
 
 ---
 
-![./../Picooz_IdentificatoinBlockPresentation.png](./../Picooz_IdentificatoinBlockPresentation.png)
+![./Picooz_IdentificatoinBlockPresentation.png](./Picooz_IdentificatoinBlockPresentation.png)
 
 [Video](C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi)
 
 ---
 
-![./../Picooz_Identificatoin_eq_01.png](./../Picooz_Identificatoin_eq_01.png)
+![./Picooz_Identificatoin_eq_01.png](./Picooz_Identificatoin_eq_01.png)
 
 ---
 
-![./../Picooz_Identificatoin_eq_02.png](./../Picooz_Identificatoin_eq_02.png)
+![./Picooz_Identificatoin_eq_02.png](./Picooz_Identificatoin_eq_02.png)
 
 ---
 
-![./../Picooz_SuperTwistingController.png](./../Picooz_SuperTwistingController.png)
+![./Picooz_SuperTwistingController.png](./Picooz_SuperTwistingController.png)
 
 ---
 
 {{< slide background-color="#FFFFFF" >}}
 
 
-![./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png](./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png)
+![./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png](./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png)
 
 
 
@@ -98,7 +98,7 @@ Implémentation en temps discret avec un pas de calcul fixe
   - Single-Rate & Multi-Rate
   - Single-Tasking & Multi-Tasking
 
-<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+<section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
@@ -114,22 +114,22 @@ Implémentation en temps discret avec un pas de calcul fixe
     (Schéma multicolore)
 
 
-<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+<section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
 
 #### Modèle multi-rate
 
-![./../Model_Hardware_Test_withSampleTime.png](./../Model_Hardware_Test_withSampleTime.png)
+![./Model_Hardware_Test_withSampleTime.png](./Model_Hardware_Test_withSampleTime.png)
 
 ---
 
 #### Charge CPU d'un modèle multi-rate single-tasking (@70 mips)
 
-![./../Scope_SingleTasking_70MIPS.png](./../Scope_SingleTasking_70MIPS.png)
+![./Scope_SingleTasking_70MIPS.png](./Scope_SingleTasking_70MIPS.png)
 
-<section data-background-image="./../Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+<section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 
@@ -137,9 +137,9 @@ Implémentation en temps discret avec un pas de calcul fixe
 
 #### Charge CPU d'un modèle multi-rate single-tasking (@20 mips) 
 
-![./../Scope_SingleTasking_20MIPS.png](./../Scope_SingleTasking_20MIPS.png)
+![./Scope_SingleTasking_20MIPS.png](./Scope_SingleTasking_20MIPS.png)
 
-<section data-background-image="./../Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+<section data-background-image="./Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
@@ -163,18 +163,18 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 #### Charge CPU d'un modèle multi-rate single-tasking (@70 mips) 
 
-![./../Scope_MultiTasking_70MIPS.png](./../Scope_MultiTasking_70MIPS.png)
+![./Scope_MultiTasking_70MIPS.png](./Scope_MultiTasking_70MIPS.png)
 
-<section data-background-image="./../Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+<section data-background-image="./Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
 
 #### Charge CPU d'un modèle multi-rate single-tasking (@20 mips) 
 
-![./../Scope_MultiTasking_20MIPS.png](./../Scope_MultiTasking_20MIPS.png)
+![./Scope_MultiTasking_20MIPS.png](./Scope_MultiTasking_20MIPS.png)
 
-<section data-background-image="./../Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+<section data-background-image="./Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
 ---
@@ -201,7 +201,7 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
-![./../FloatFixed_1.png](./../FloatFixed_1.png)
+![./FloatFixed_1.png](./FloatFixed_1.png)
 
 ---
 
@@ -229,15 +229,15 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
  
 ---
 
-![./../FloatFixed_2.png](./../FloatFixed_2.png)
+![./FloatFixed_2.png](./FloatFixed_2.png)
 
 ---
 
-![./../FloatFixed_3.png](./../FloatFixed_3.png)
+![./FloatFixed_3.png](./FloatFixed_3.png)
 
 ---
 
-![./../FloatFixed_4.png](./../FloatFixed_4.png)
+![./FloatFixed_4.png](./FloatFixed_4.png)
 
 ---
 ## Script Matlab pour tester un flottant 8 bits
@@ -266,7 +266,7 @@ TotalVal = vals'*exps;
 
 ## Data-type 
 
-![./../Simulink_TypeCast_FixPtFormat.png](./../Simulink_TypeCast_FixPtFormat.png)
+![./Simulink_TypeCast_FixPtFormat.png](./Simulink_TypeCast_FixPtFormat.png)
 
 ---
 
@@ -286,7 +286,7 @@ TotalVal = vals'*exps;
 
 ## Datatype 
 
-![./../Simulink_TypeCast_SlopeAndBias.png](./../Simulink_TypeCast_SlopeAndBias.png)
+![./Simulink_TypeCast_SlopeAndBias.png](./Simulink_TypeCast_SlopeAndBias.png)
 
 - fixdt(1,16,.01,0)
   - Scaling is sfix16**Sp**01 
@@ -294,7 +294,7 @@ TotalVal = vals'*exps;
 
 ---
 
-![./../Simulink_TypeCast_SlopeAndBias_Sat.png](./../Simulink_TypeCast_SlopeAndBias_Sat.png)
+![./Simulink_TypeCast_SlopeAndBias_Sat.png](./Simulink_TypeCast_SlopeAndBias_Sat.png)
 
 ---
 
@@ -311,41 +311,41 @@ https://hugo.kerhuel.eu/slides/slides-dcmotor/
 
 ---
 
-![./../TP_Correction_OpAmp.png](./../TP_Correction_OpAmp.png)
+![./TP_Correction_OpAmp.png](./TP_Correction_OpAmp.png)
 
 
 ---
 
 
-![./../TP_Correction_ADC.png](./../TP_Correction_ADC.png)
+![./TP_Correction_ADC.png](./TP_Correction_ADC.png)
 ---
 
 # PWM settings
 
 ---
 
-![./../TP_Correction_PWM_Main.png](./../TP_Correction_PWM_Main.png)
+![./TP_Correction_PWM_Main.png](./TP_Correction_PWM_Main.png)
 
 
 ---
 
 
-![./../TP_Correction_PWM_02.png](./../TP_Correction_PWM_02.png)
+![./TP_Correction_PWM_02.png](./TP_Correction_PWM_02.png)
 
 ---
 
 
-![./../TP_Correction_PWM_03.png](./../TP_Correction_PWM_03.png)
+![./TP_Correction_PWM_03.png](./TP_Correction_PWM_03.png)
 
 ---
 
 
-![./../TP_Correction_PWM_04.png](./../TP_Correction_PWM_04.png)
+![./TP_Correction_PWM_04.png](./TP_Correction_PWM_04.png)
 
 ---
 
 
-![./../TP_Correction_PWM_05.png](./../TP_Correction_PWM_05.png)
+![./TP_Correction_PWM_05.png](./TP_Correction_PWM_05.png)
 
 
 ---

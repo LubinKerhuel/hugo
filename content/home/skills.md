@@ -22,21 +22,23 @@ weight = 7
 # * ai - academic icons (see https://jpswalsh.github.io/academicons/)
 
 [[feature]]
-  icon = "desktop"
-  icon_pack = "fas"
-  name = "Matlab/Simulink"
-  description = "90%"
-  
-[[feature]]
   icon = "paper-plane"
   icon_pack = "fas"
-  name = "Control"
-  description = "80%"  
+  name = "Matlab/Simulink - Applied Math - Control Theory"
+  description = "90%"
   
+
+[[feature]]
+  icon = "desktop"
+  icon_pack = "fas"
+  name = "Languages - C++, C, M, Python, Java, Assembly"
+  description = "90%"
+
+
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
-  name = "Electronics"
+  name = "Electronics design"
   description = "40%"  
 
 

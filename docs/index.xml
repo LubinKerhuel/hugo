@@ -7,86 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 17 Dec 2018 00:00:00 +0100</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Real Time Control for a DC Motor</title>
-      <link>https://hugo.kerhuel.eu/project/dc_motorlab_insa_lyon/</link>
+      <link>https://hugo.kerhuel.eu/project/lab_dc_motor/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/project/dc_motorlab_insa_lyon/</guid>
+      <guid>https://hugo.kerhuel.eu/project/lab_dc_motor/</guid>
       <description>
 
-&lt;h1 id=&#34;simulink-model-to-target-a-dspic-mclv-board-running-a-dc-motor&#34;&gt;Simulink model to target a dsPIC MCLV board running a DC motor&lt;/h1&gt;
+&lt;p&gt;Control a 24V DC motor using the MCLV V2 board with a dsPIC 33EP256MC506.
+This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
 
-&lt;p&gt;The model contains blocks to configure &lt;strong&gt;dsPIC peripheral&lt;/strong&gt; (PWM, ADC and QEI) to run a &lt;strong&gt;DC motor&lt;/strong&gt; with the &lt;strong&gt;MCLV-V2 board&lt;/strong&gt; equipped with the &lt;strong&gt;dsPIC-33EP256MC506 PIM&lt;/strong&gt; using internal Op-Amps.
-Sensors measurements are visualized on the computer while the motor is running.&lt;/p&gt;
+&lt;p&gt;The hands-on Lab subject available at: &lt;a href=&#34;https://rtdc.ctrl-elec.fr/&#34; target=&#34;_blank&#34;&gt;https://rtdc.ctrl-elec.fr/&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
-
-&lt;p&gt;The model &lt;a href=&#34;[fig][fig:Model_Hardware_Test_withSampleTime]&#34; target=&#34;_blank&#34;&gt;MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl&lt;/a&gt; is for code generation (peripheral blocks have no effects during a simulation).
-Open the Simulink model and push the build button on the top right, below the Simulink windows menu bar.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;./Fig/Model_Hardware_Test_withSampleTime.png&#34; title=&#34;Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.&#34;&gt;&lt;img src=&#34;./Fig/Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;Simulink Model&#34; title=&#34;Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.&#34; /&gt;&lt;/a&gt;
-*fig: Model &lt;a href=&#34;./MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl&#34;&gt;MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl&lt;/a&gt; set-up the dsPIC 33EP256MC506 peripherals with internal op-amps for the MCLV-v2 board. Two PWM signals updated &lt;strong&gt;at 20kHz&lt;/strong&gt; drives a DC motor through a H mosfet structure. One QEI peripheral sampled &lt;strong&gt;at 500Hz&lt;/strong&gt; provides shaft position and speed from an optical encoder. Two ADC channels provides respectively the board potentiometer position and the current measurement from a shunt resistor. These four measurements are under-sampled &lt;strong&gt;at 100Hz&lt;/strong&gt; and sent through the 115200 UART connection to the computer and decoded with the picgui graphical interface.*&lt;/p&gt;
-
-&lt;h3 id=&#34;hardware-requirements&#34;&gt;Hardware requirements:&lt;/h3&gt;
+&lt;p&gt;Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/dsPICDEMMCLV-2DevelopmentBoard866&#34; title=&#34;Motor Control Board&#34; target=&#34;_blank&#34;&gt;MCLV-V2&lt;/a&gt; Motor Control Board&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/DevelopmentTools/ProductDetails/ma330031&#34; title=&#34;Daughter board for MCLV motor control board&#34; target=&#34;_blank&#34;&gt;PIM dsPIC33EP256MC506&lt;/a&gt; with internal Op-Amp&lt;/li&gt;
-&lt;li&gt;Programmer (&lt;a href=&#34;https://www.microchip.com/pickit4&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;PICkit 4&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/icd4&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;ICD4&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/realice&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;Real-Ice&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/pickit3&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;PICkit 3&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/icd3&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;ICD3&lt;/a&gt;, &amp;hellip;)&lt;/li&gt;
-&lt;li&gt;DC motor (&lt;a href=&#34;https://uk.rs-online.com/web/p/dc-motors/0716200/&#34; title=&#34;Parvalux Brushed DC Motor, 90 W, 24 V dc, 3000 rpm, 7.93mm Shaft Diameter&#34; target=&#34;_blank&#34;&gt;Pravalux Brushed DC Motor, 90 W, 24 V dc, 3000 rpm&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Cable to send data from the MCLV board (Tx) to the PC (Rx) (like a &lt;a href=&#34;https://www.ftdichip.com/Products/Cables/USBTTLSerial.htm&#34; title=&#34;USB TTL Serial Cables&#34; target=&#34;_blank&#34;&gt;FTDI cable&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Real-time scheduler / CPU load analysis&lt;/li&gt;
+&lt;li&gt;Fixed-point datatypes&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;software-requirements&#34;&gt;Software requirements:&lt;/h3&gt;
+&lt;h3 id=&#34;authors&#34;&gt;Authors:&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Matlab/Simulink
-
-&lt;ul&gt;
-&lt;li&gt;Embedded coder (Matlab Coder &amp;amp; Simulink Coder)&lt;/li&gt;
-&lt;li&gt;Fixed point toolbox&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34; title=&#34;Blockset for dsPIC and PIC32&#34; target=&#34;_blank&#34;&gt;MPLAB device blocks for Simulink&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/MPLABX&#34; title=&#34;Microchip development environment&#34; target=&#34;_blank&#34;&gt;MPLAB X IDE&lt;/a&gt; development (required to flash the binary from matlab)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/XC16&#34; title=&#34;Microchip Compiler for dsPIC familly&#34; target=&#34;_blank&#34;&gt;XC16&lt;/a&gt; compiler&lt;/li&gt;
+&lt;li&gt;Romain DELPOUX (Romain.Delpoux at insa-lyon.fr), Assistant Professor, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.&lt;/li&gt;
+&lt;li&gt;Lubin KERHUEL (Lubin.Kerhuel at microchip.com), Dr-Engineer, Microchip Technology Inc.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;experiment&#34;&gt;Experiment&lt;/h2&gt;
-
-&lt;h3 id=&#34;generate-code-and-compile&#34;&gt;Generate code and compile:&lt;/h3&gt;
-
-&lt;p&gt;The build icon on top right of Simulink model, (see &lt;a href=&#34;./Fig/Model_Hardware_Test_withSampleTime.png&#34; title=&#34;Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.&#34;&gt;fig&lt;/a&gt; above) do:
-1. generates c source code,
-2. compiles c code and
-3. flash the resulting binary to the MCLV targeted board.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If programming the board fails (not powered, not connected,&amp;hellip;),
-use the &lt;strong&gt;Microchip -&amp;gt; Flash&lt;/strong&gt; within the Simulink model menu.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;run-the-dc-motor&#34;&gt;Run the DC motor:&lt;/h3&gt;
-
-&lt;p&gt;With the MCLV2 board powered and programmed, rotate the potentiometer to accelerate motor / reverse direction. &lt;strong&gt;Setting the potentiometer at middle position (off) at power on to avoid current surge.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;data-visualization-with-picgui&#34;&gt;Data Visualization with picgui:&lt;/h3&gt;
-
-&lt;p&gt;Open the picgui interface (&lt;a href=&#34;./Fig/DataVisu.png&#34; title=&#34;picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured&#34;&gt;fig&lt;/a&gt;) (type &lt;strong&gt;picgui&lt;/strong&gt; at matlab prompt or double click on the &lt;strong&gt;Interface Tx-Matlab block&lt;/strong&gt; in the model)
-1. Select host UART port and connect at 115200 bauds
-1. Replace the default script within the picgui interface to a call the customized matlab script &lt;a href=&#34;see figure below&#34; target=&#34;_blank&#34;&gt;DataVisu.m&lt;/a&gt;
-1. Push the  &lt;strong&gt;start&lt;/strong&gt; button to visualize runtime curves showing potentiometer, motor position, motor speed and current measured on shunt resistors&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;./Fig/DataVisu.png&#34; title=&#34;picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured&#34;&gt;&lt;img src=&#34;./Fig/DataVisu.png&#34; alt=&#34;picgui interface&#34; title=&#34;picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured&#34; /&gt;&lt;/a&gt;
-&lt;em&gt;fig: The picgui interface decode the incoming UART data stream and plot in real-time received values, here potentiometer, motor speed and current measured. Plots in figure are realized with a matlab script which is continuously refreshing the graphs using incoming data. This script can be modified providing all the matlab capabilities to customize visualization or perform further analysis on received data in real-time.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;./../../README.md&#34;&gt;Back to project presentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;!---  math test not working on GitHub: $\sqrt(2) + \frac{1}{2^5}$
-comment  --&gt;
 </description>
     </item>
     
@@ -230,51 +179,6 @@ comment  --&gt;
     </item>
     
     <item>
-      <title>External Project</title>
-      <link>https://hugo.kerhuel.eu/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>https://hugo.kerhuel.eu/project/external-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Internal Project</title>
-      <link>https://hugo.kerhuel.eu/project/internal-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>https://hugo.kerhuel.eu/project/internal-project/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Internal Project2</title>
-      <link>https://hugo.kerhuel.eu/project/internal-project2/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>https://hugo.kerhuel.eu/project/internal-project2/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>https://hugo.kerhuel.eu/tutorial/subtutorial2/hardware_setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -356,10 +260,10 @@ comment  --&gt;
     
     <item>
       <title>Prototypage Rapide avec Simulink sur dsPIC</title>
-      <link>https://hugo.kerhuel.eu/slides/slides-dcmotor/</link>
+      <link>https://hugo.kerhuel.eu/slides/slides_dcmotor_insa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/slides/slides-dcmotor/</guid>
+      <guid>https://hugo.kerhuel.eu/slides/slides_dcmotor_insa/</guid>
       <description>
 
 &lt;h1 id=&#34;prototypage-rapide-avec-simulink-sur-dspic&#34;&gt;Prototypage rapide avec Simulink sur dsPIC&lt;/h1&gt;
@@ -368,39 +272,39 @@ comment  --&gt;
 
 &lt;p&gt;L.Kerhuel &amp;amp; R.Delpoux&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.06&gt;
+&lt;section data-background-image=&#34;./Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.06&gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
 
 &lt;h2 id=&#34;pendule-inverse&#34;&gt;Pendule inverse&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Inverted_Pendulum_ControlLoopCloseUp.png&#34; alt=&#34;./../Inverted_Pendulum_ControlLoopCloseUp.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Inverted_Pendulum_ControlLoopCloseUp.png&#34; alt=&#34;./Inverted_Pendulum_ControlLoopCloseUp.png&#34; /&gt;&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.06&gt;
+&lt;section data-background-image=&#34;./Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.06&gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;./Model_Hardware_Test_withSampleTime.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Picooz_IdentificatoinBlockPresentation.png&#34; alt=&#34;./../Picooz_IdentificatoinBlockPresentation.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Picooz_IdentificatoinBlockPresentation.png&#34; alt=&#34;./Picooz_IdentificatoinBlockPresentation.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi&#34; target=&#34;_blank&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Picooz_Identificatoin_eq_01.png&#34; alt=&#34;./../Picooz_Identificatoin_eq_01.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Picooz_Identificatoin_eq_01.png&#34; alt=&#34;./Picooz_Identificatoin_eq_01.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Picooz_Identificatoin_eq_02.png&#34; alt=&#34;./../Picooz_Identificatoin_eq_02.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Picooz_Identificatoin_eq_02.png&#34; alt=&#34;./Picooz_Identificatoin_eq_02.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Picooz_SuperTwistingController.png&#34; alt=&#34;./../Picooz_SuperTwistingController.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Picooz_SuperTwistingController.png&#34; alt=&#34;./Picooz_SuperTwistingController.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -412,7 +316,7 @@ comment  --&gt;
   &gt;
 
 
-&lt;p&gt;&lt;img src=&#34;./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png&#34; alt=&#34;./../Picooz_SetpLarge_ClosedLoop_SimuVsReal.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png&#34; alt=&#34;./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -459,7 +363,7 @@ comment  --&gt;
 &lt;li&gt;Single-Tasking &amp;amp; Multi-Tasking&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;section data-background-image=&#34;./../Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
@@ -482,31 +386,31 @@ comment  --&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;section data-background-image=&#34;./../Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
 
 &lt;h4 id=&#34;modèle-multi-rate&#34;&gt;Modèle multi-rate&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;./../Model_Hardware_Test_withSampleTime.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;./Model_Hardware_Test_withSampleTime.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;h4 id=&#34;charge-cpu-d-un-modèle-multi-rate-single-tasking-70-mips&#34;&gt;Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@70 mips)&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Scope_SingleTasking_70MIPS.png&#34; alt=&#34;./../Scope_SingleTasking_70MIPS.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Scope_SingleTasking_70MIPS.png&#34; alt=&#34;./Scope_SingleTasking_70MIPS.png&#34; /&gt;&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./Scope_SingleTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
 
 &lt;h4 id=&#34;charge-cpu-d-un-modèle-multi-rate-single-tasking-20-mips&#34;&gt;Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@20 mips)&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Scope_SingleTasking_20MIPS.png&#34; alt=&#34;./../Scope_SingleTasking_20MIPS.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Scope_SingleTasking_20MIPS.png&#34; alt=&#34;./Scope_SingleTasking_20MIPS.png&#34; /&gt;&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Scope_SingleTasking_20MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./Scope_SingleTasking_20MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
@@ -535,18 +439,18 @@ comment  --&gt;
 
 &lt;h4 id=&#34;charge-cpu-d-un-modèle-multi-rate-single-tasking-70-mips-1&#34;&gt;Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@70 mips)&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Scope_MultiTasking_70MIPS.png&#34; alt=&#34;./../Scope_MultiTasking_70MIPS.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Scope_MultiTasking_70MIPS.png&#34; alt=&#34;./Scope_MultiTasking_70MIPS.png&#34; /&gt;&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Scope_MultiTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./Scope_MultiTasking_70MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
 
 &lt;h4 id=&#34;charge-cpu-d-un-modèle-multi-rate-single-tasking-20-mips-1&#34;&gt;Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@20 mips)&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Scope_MultiTasking_20MIPS.png&#34; alt=&#34;./../Scope_MultiTasking_20MIPS.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Scope_MultiTasking_20MIPS.png&#34; alt=&#34;./Scope_MultiTasking_20MIPS.png&#34; /&gt;&lt;/p&gt;
 
-&lt;section data-background-image=&#34;./../Scope_MultiTasking_20MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
+&lt;section data-background-image=&#34;./Scope_MultiTasking_20MIPS.png&#34; data-background-opacity=0.06 data-background-position=&#34;center&#34; &gt;
 &lt;/section&gt;
 
 &lt;hr /&gt;
@@ -585,7 +489,7 @@ comment  --&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../FloatFixed_1.png&#34; alt=&#34;./../FloatFixed_1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./FloatFixed_1.png&#34; alt=&#34;./FloatFixed_1.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -676,15 +580,15 @@ comment  --&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../FloatFixed_2.png&#34; alt=&#34;./../FloatFixed_2.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./FloatFixed_2.png&#34; alt=&#34;./FloatFixed_2.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../FloatFixed_3.png&#34; alt=&#34;./../FloatFixed_3.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./FloatFixed_3.png&#34; alt=&#34;./FloatFixed_3.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../FloatFixed_4.png&#34; alt=&#34;./../FloatFixed_4.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./FloatFixed_4.png&#34; alt=&#34;./FloatFixed_4.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -713,7 +617,7 @@ TotalVal = vals&#39;*exps;
 
 &lt;h2 id=&#34;data-type&#34;&gt;Data-type&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Simulink_TypeCast_FixPtFormat.png&#34; alt=&#34;./../Simulink_TypeCast_FixPtFormat.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Simulink_TypeCast_FixPtFormat.png&#34; alt=&#34;./Simulink_TypeCast_FixPtFormat.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -740,7 +644,7 @@ TotalVal = vals&#39;*exps;
 
 &lt;h2 id=&#34;datatype-1&#34;&gt;Datatype&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Simulink_TypeCast_SlopeAndBias.png&#34; alt=&#34;./../Simulink_TypeCast_SlopeAndBias.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Simulink_TypeCast_SlopeAndBias.png&#34; alt=&#34;./Simulink_TypeCast_SlopeAndBias.png&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;fixdt(1,16,.01,0)
@@ -753,7 +657,7 @@ TotalVal = vals&#39;*exps;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../Simulink_TypeCast_SlopeAndBias_Sat.png&#34; alt=&#34;./../Simulink_TypeCast_SlopeAndBias_Sat.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Simulink_TypeCast_SlopeAndBias_Sat.png&#34; alt=&#34;./Simulink_TypeCast_SlopeAndBias_Sat.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -769,33 +673,33 @@ TotalVal = vals&#39;*exps;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../TP_Correction_OpAmp.png&#34; alt=&#34;./../TP_Correction_OpAmp.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./TP_Correction_OpAmp.png&#34; alt=&#34;./TP_Correction_OpAmp.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;tp-correction-adc-png-tp-correction-adc-png&#34;&gt;&lt;img src=&#34;./../TP_Correction_ADC.png&#34; alt=&#34;./../TP_Correction_ADC.png&#34; /&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;tp-correction-adc-png-tp-correction-adc-png&#34;&gt;&lt;img src=&#34;./TP_Correction_ADC.png&#34; alt=&#34;./TP_Correction_ADC.png&#34; /&gt;&lt;/h2&gt;
 
 &lt;h1 id=&#34;pwm-settings&#34;&gt;PWM settings&lt;/h1&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../TP_Correction_PWM_Main.png&#34; alt=&#34;./../TP_Correction_PWM_Main.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./TP_Correction_PWM_Main.png&#34; alt=&#34;./TP_Correction_PWM_Main.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../TP_Correction_PWM_02.png&#34; alt=&#34;./../TP_Correction_PWM_02.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./TP_Correction_PWM_02.png&#34; alt=&#34;./TP_Correction_PWM_02.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../TP_Correction_PWM_03.png&#34; alt=&#34;./../TP_Correction_PWM_03.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./TP_Correction_PWM_03.png&#34; alt=&#34;./TP_Correction_PWM_03.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../TP_Correction_PWM_04.png&#34; alt=&#34;./../TP_Correction_PWM_04.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./TP_Correction_PWM_04.png&#34; alt=&#34;./TP_Correction_PWM_04.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&#34;./../TP_Correction_PWM_05.png&#34; alt=&#34;./../TP_Correction_PWM_05.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./TP_Correction_PWM_05.png&#34; alt=&#34;./TP_Correction_PWM_05.png&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 

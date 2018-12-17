@@ -91,12 +91,11 @@ enableGitInfo = true
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  map = 0
+  map = 2
   map_api_key = ""
   latitude = "43.4942"
   longitude = "-1.4393"
-  zoom = 15
-
+  zoom = 6
   # SITE SETUP
 
   # Color theme.
@@ -108,13 +107,13 @@ enableGitInfo = true
   font = "playfair"
 
   # Description for social sharing and search engines. If undefined, author role is used in place.
-  description = ""
+  description = "Rapid Control Prototyping"
 
   # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
   sharing_image = ""
 
   # Twitter username (without @). Used when a vistor shares your site on Twitter.
-  twitter = ""
+  twitter = "LubinKerhuel"
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -289,33 +288,35 @@ enableGitInfo = true
 
 [[menu.main]]
   name = "Home"
-  url = "#about"
+  url = "#teaching"
   weight = 1
 
 [[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
-  weight = 2
+  name = "Author"
+  url = "#about"
+  weight = 5
 
-[[menu.main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 3
 
 [[menu.main]]
   name = "Projects"
   url = "#projects"
-  weight = 4
+  weight = 2
 
-[[menu.main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 6
+# [[menu.main]]
+#   name = "Publications"
+#   url = "#publications_selected"
+#   weight = 3
+
+# [[menu.main]]
+#   name = "Posts"
+#   url = "#posts"
+#   weight = 4
+
 
 [[menu.main]]
   name = "Tutorials"
-  url = "/tutorial/"
-  weight = 5
+#  url = "/tutorial/"
+  weight = 4
 
  [[menu.main]]
    name = "subTutorials"
@@ -328,6 +329,11 @@ enableGitInfo = true
    parent = "Tutorials"
    url = "/tutorial/subtutorial2/"
    weight = 2     
+
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 6
  
 # [[menu.main]]
 #   name = "DC_MotorLab_INSA_Lyon"
