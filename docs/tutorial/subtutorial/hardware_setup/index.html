@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.2.0">
+  <meta name="generator" content="Hugo 0.51" />
+  <meta name="author" content="Lubin Kerhuel">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="Simulink model to target a dsPIC MCLV board running a DC motor The model contains blocks to configure dsPIC peripheral (PWM, ADC and QEI) to run a DC motor with the MCLV-V2 board equipped with the dsPIC-33EP256MC506 PIM using internal Op-Amps. Sensors measurements are visualized on the computer while the motor is running.
+Getting Started The model MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl is for code generation (peripheral blocks have no effects during a simulation).">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://lubin.kerhuel.eu/tutorial/subtutorial/hardware_setup/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair+Display:400,700|Fauna+One">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="https://lubin.kerhuel.eu/index.xml" type="application/rss+xml" title="Rapid Control Prototyping">
+  <link rel="feed" href="https://lubin.kerhuel.eu/index.xml" type="application/rss+xml" title="Rapid Control Prototyping">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://lubin.kerhuel.eu/tutorial/subtutorial/hardware_setup/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@LubinKerhuel">
+  <meta property="twitter:creator" content="@LubinKerhuel">
+  
+  <meta property="og:site_name" content="Rapid Control Prototyping">
+  <meta property="og:url" content="https://lubin.kerhuel.eu/tutorial/subtutorial/hardware_setup/">
+  <meta property="og:title" content="Example Page1111 | Rapid Control Prototyping">
+  <meta property="og:description" content="Simulink model to target a dsPIC MCLV board running a DC motor The model contains blocks to configure dsPIC peripheral (PWM, ADC and QEI) to run a DC motor with the MCLV-V2 board equipped with the dsPIC-33EP256MC506 PIM using internal Op-Amps. Sensors measurements are visualized on the computer while the motor is running.
+Getting Started The model MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl is for code generation (peripheral blocks have no effects during a simulation)."><meta property="og:image" content="https://lubin.kerhuel.eu/img/portrait.jpg">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-09-09T00:00:00&#43;02:00">
+  
+  <meta property="article:modified_time" content="2018-12-13T20:38:00&#43;01:00">
+  
+
+  
+
+  
+
+  <title>Example Page1111 | Rapid Control Prototyping</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Rapid Control Prototyping</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#teaching">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tutorials</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/tutorial/subtutorial/">
+                
+                <span>subTutorials</span>
+                
+              </a>
+            </li>
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/tutorial/subtutorial2/">
+                
+                <span>subTutorials2</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Author</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/tutorial/subtutorial/">Overview11</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/tutorial/subtutorial/example3/">Another Topic</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/tutorial/subtutorial/example3/">test</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/tutorial/subtutorial/example/">Example Topic</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/tutorial/subtutorial/example/">Example Page11</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+      <p class="docs-toc-title">On this page</p>
+      
+
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#simulink-model-to-target-a-dspic-mclv-board-running-a-dc-motor">Simulink model to target a dsPIC MCLV board running a DC motor</a>
+<ul>
+<li><a href="#getting-started">Getting Started</a>
+<ul>
+<li><a href="#hardware-requirements">Hardware requirements:</a></li>
+<li><a href="#software-requirements">Software requirements:</a></li>
+</ul></li>
+<li><a href="#experiment">Experiment</a>
+<ul>
+<li><a href="#generate-code-and-compile">Generate code and compile:</a></li>
+<li><a href="#run-the-dc-motor">Run the DC motor:</a></li>
+<li><a href="#data-visualization-with-picgui">Data Visualization with picgui:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      <ul class="nav toc-top">
+        <li><a href="#">Back to top</a></li>
+      </ul>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Example Page1111</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h1 id="simulink-model-to-target-a-dspic-mclv-board-running-a-dc-motor">Simulink model to target a dsPIC MCLV board running a DC motor</h1>
+
+<p>The model contains blocks to configure <strong>dsPIC peripheral</strong> (PWM, ADC and QEI) to run a <strong>DC motor</strong> with the <strong>MCLV-V2 board</strong> equipped with the <strong>dsPIC-33EP256MC506 PIM</strong> using internal Op-Amps.
+Sensors measurements are visualized on the computer while the motor is running.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>The model <a href="[fig][fig:Model_Hardware_Test_withSampleTime]" target="_blank">MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl</a> is for code generation (peripheral blocks have no effects during a simulation).
+Open the Simulink model and push the build button on the top right, below the Simulink windows menu bar.</p>
+
+<p><a href="./../Fig/Model_Hardware_Test_withSampleTime.png" title="Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor."><img src="./../Fig/Model_Hardware_Test_withSampleTime.png" alt="Simulink Model" title="Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor." /></a>
+*fig: Model <a href="./MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl">MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl</a> set-up the dsPIC 33EP256MC506 peripherals with internal op-amps for the MCLV-v2 board. Two PWM signals updated <strong>at 20kHz</strong> drives a DC motor through a H mosfet structure. One QEI peripheral sampled <strong>at 500Hz</strong> provides shaft position and speed from an optical encoder. Two ADC channels provides respectively the board potentiometer position and the current measurement from a shunt resistor. These four measurements are under-sampled <strong>at 100Hz</strong> and sent through the 115200 UART connection to the computer and decoded with the picgui graphical interface.*</p>
+
+<h3 id="hardware-requirements">Hardware requirements:</h3>
+
+<ul>
+<li><a href="https://www.microchip.com/dsPICDEMMCLV-2DevelopmentBoard866" title="Motor Control Board" target="_blank">MCLV-V2</a> Motor Control Board</li>
+<li><a href="https://www.microchip.com/DevelopmentTools/ProductDetails/ma330031" title="Daughter board for MCLV motor control board" target="_blank">PIM dsPIC33EP256MC506</a> with internal Op-Amp</li>
+<li>Programmer (<a href="https://www.microchip.com/pickit4" title="Microchip programmer" target="_blank">PICkit 4</a>, <a href="https://www.microchip.com/icd4" title="Microchip programmer" target="_blank">ICD4</a>, <a href="https://www.microchip.com/realice" title="Microchip programmer" target="_blank">Real-Ice</a>, <a href="https://www.microchip.com/pickit3" title="Microchip programmer" target="_blank">PICkit 3</a>, <a href="https://www.microchip.com/icd3" title="Microchip programmer" target="_blank">ICD3</a>, &hellip;)</li>
+<li>DC motor (<a href="https://uk.rs-online.com/web/p/dc-motors/0716200/" title="Parvalux Brushed DC Motor, 90 W, 24 V dc, 3000 rpm, 7.93mm Shaft Diameter" target="_blank">Pravalux Brushed DC Motor, 90 W, 24 V dc, 3000 rpm</a>)</li>
+<li>Cable to send data from the MCLV board (Tx) to the PC (Rx) (like a <a href="https://www.ftdichip.com/Products/Cables/USBTTLSerial.htm" title="USB TTL Serial Cables" target="_blank">FTDI cable</a>)</li>
+</ul>
+
+<h3 id="software-requirements">Software requirements:</h3>
+
+<ul>
+<li>Matlab/Simulink
+
+<ul>
+<li>Embedded coder (Matlab Coder &amp; Simulink Coder)</li>
+<li>Fixed point toolbox</li>
+</ul></li>
+<li><a href="https://www.microchip.com/SimulinkBlocks" title="Blockset for dsPIC and PIC32" target="_blank">MPLAB device blocks for Simulink</a></li>
+<li><a href="https://www.microchip.com/MPLABX" title="Microchip development environment" target="_blank">MPLAB X IDE</a> development (required to flash the binary from matlab)</li>
+<li><a href="https://www.microchip.com/XC16" title="Microchip Compiler for dsPIC familly" target="_blank">XC16</a> compiler</li>
+</ul>
+
+<h2 id="experiment">Experiment</h2>
+
+<h3 id="generate-code-and-compile">Generate code and compile:</h3>
+
+<p>The build icon on top right of Simulink model, (see <a href="./../Fig/Model_Hardware_Test_withSampleTime.png" title="Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.">fig</a> above) do:
+1. generates c source code,
+2. compiles c code and
+3. flash the resulting binary to the MCLV targeted board.</p>
+
+<blockquote>
+<p>If programming the board fails (not powered, not connected,&hellip;),
+use the <strong>Microchip -&gt; Flash</strong> within the Simulink model menu.</p>
+</blockquote>
+
+<h3 id="run-the-dc-motor">Run the DC motor:</h3>
+
+<p>With the MCLV2 board powered and programmed, rotate the potentiometer to accelerate motor / reverse direction. <strong>Setting the potentiometer at middle position (off) at power on to avoid current surge.</strong></p>
+
+<h3 id="data-visualization-with-picgui">Data Visualization with picgui:</h3>
+
+<p>Open the picgui interface (<a href="./../Fig/DataVisu.png" title="picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured">fig</a>) (type <strong>picgui</strong> at matlab prompt or double click on the <strong>Interface Tx-Matlab block</strong> in the model)
+1. Select host UART port and connect at 115200 bauds
+1. Replace the default script within the picgui interface to a call the customized matlab script <a href="see figure below" target="_blank">DataVisu.m</a>
+1. Push the  <strong>start</strong> button to visualize runtime curves showing potentiometer, motor position, motor speed and current measured on shunt resistors</p>
+
+<p><a href="./../Fig/DataVisu.png" title="picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured"><img src="./../Fig/DataVisu.png" alt="picgui interface" title="picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured" /></a>
+<em>fig: The picgui interface decode the incoming UART data stream and plot in real-time received values, here potentiometer, motor speed and current measured. Plots in figure are realized with a matlab script which is continuously refreshing the graphs using incoming data. This script can be modified providing all the matlab capabilities to customize visualization or perform further analysis on received data in real-time.</em></p>
+
+<p><a href="./../../README.md">Back to project presentation</a></p>
+
+<!---  math test not working on GitHub: $\sqrt(2) + \frac{1}{2^5}$
+comment  -->
+
+          </div>
+
+          
+
+        </div>
+
+        <div class="body-footer">
+          Last updated on Dec 13, 2018
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.d037ee5294b166a79dec317c58aea9cc.js"></script>
+
+    
+
+  </body>
+</html>
+
+
