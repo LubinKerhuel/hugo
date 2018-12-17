@@ -6,11 +6,11 @@ title = "Prototypage Rapide avec Simulink sur dsPIC"
 # Choose a theme from https://github.com/hakimel/reveal.js#theming
 theme = "black"
 
-slide_number = true
+slide_number = true 
 transition = "zoom"
 
 +++
-
+ 
 # Prototypage rapide avec Simulink sur dsPIC
 
 [MPLAB device blocks for Simulink][blockset]
