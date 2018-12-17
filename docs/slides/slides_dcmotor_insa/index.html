@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.2.0">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/">
+
+  <title>Prototypage Rapide avec Simulink sur dsPIC | Rapid Control Prototyping</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/black.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous">
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/reveal_custom.min.css">
+
+  
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/css/print/pdf.css' : 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+</head>
+<body>
+
+  
+<div class="reveal">
+  <div class="slides">
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="prototypage-rapide-avec-simulink-sur-dspic">Prototypage rapide avec Simulink sur dsPIC</h1>
+
+<p><a href="https://www.microchip.com/SimulinkBlocks" title="Blockset for dsPIC and PIC32" target="_blank">MPLAB device blocks for Simulink</a></p>
+
+<p>L.Kerhuel &amp; R.Delpoux</p>
+
+<section data-background-image="./Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
+</section>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="pendule-inverse">Pendule inverse</h2>
+
+<p><img src="./Inverted_Pendulum_ControlLoopCloseUp.png" alt="./Inverted_Pendulum_ControlLoopCloseUp.png" /></p>
+
+<section data-background-image="./Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
+</section>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./Model_Hardware_Test_withSampleTime.png" alt="./Model_Hardware_Test_withSampleTime.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./Picooz_IdentificatoinBlockPresentation.png" alt="./Picooz_IdentificatoinBlockPresentation.png" /></p>
+
+<p><a href="C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi" target="_blank">Video</a></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./Picooz_Identificatoin_eq_01.png" alt="./Picooz_Identificatoin_eq_01.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./Picooz_Identificatoin_eq_02.png" alt="./Picooz_Identificatoin_eq_02.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./Picooz_SuperTwistingController.png" alt="./Picooz_SuperTwistingController.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+      
+
+
+<section data-noprocess data-shortcode-slide
+  
+      
+      data-background-color="#FFFFFF"
+  >
+
+
+<p><img src="./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png" alt="./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="plan">Plan:</h2>
+
+<p>Modèle de simulation &amp; génération de code</p>
+
+<ul>
+<li>Différences Temporel</li>
+<li>optimisation et type de données</li>
+<li>blocks et fonctionnalités Simulink</li>
+</ul>
+
+<aside class="notes">
+  DSPACE
+</aside>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="aspect-temporel">Aspect Temporel:</h2>
+
+<h3 id="simulation">Simulation</h3>
+
+<p>Modélisation en temps continue, transformé de Laplace dans le domaine p (ou s)</p>
+
+<ul>
+<li>Solver résout les équations différentielles</li>
+<li>Pas de contrainte temps réelle</li>
+<li>Résultat dépend du solveur ; pas de calcul variable.</li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="aspect-temporel-1">Aspect Temporel:</h2>
+
+<h3 id="implémentation">Implémentation</h3>
+
+<p>Implémentation en temps discret avec un pas de calcul fixe</p>
+
+<ul>
+<li>pas de solveur</li>
+<li>Contrainte temps réel</li>
+<li>Single-Rate &amp; Multi-Rate</li>
+<li>Single-Tasking &amp; Multi-Tasking</li>
+</ul>
+
+<section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+</section>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="discrete-times">Discrete times</h2>
+
+<ul>
+<li><p><strong>Single-rate</strong>:</p>
+
+<ul>
+<li>Les blocks ont tous la même période d&rsquo;exécution
+(Même couleur)</li>
+</ul></li>
+
+<li><p><strong>Multi-Rate</strong></p>
+
+<ul>
+<li>Les blocks peuvent avoir des périodes d&rsquo;exécution différentes
+(Schéma multicolore)</li>
+</ul></li>
+</ul>
+
+<section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+</section>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h4 id="modèle-multi-rate">Modèle multi-rate</h4>
+
+<p><img src="./Model_Hardware_Test_withSampleTime.png" alt="./Model_Hardware_Test_withSampleTime.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h4 id="charge-cpu-d-un-modèle-multi-rate-single-tasking-70-mips">Charge CPU d&rsquo;un modèle multi-rate single-tasking (@70 mips)</h4>
+
+<p><img src="./Scope_SingleTasking_70MIPS.png" alt="./Scope_SingleTasking_70MIPS.png" /></p>
+
+<section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+</section>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h4 id="charge-cpu-d-un-modèle-multi-rate-single-tasking-20-mips">Charge CPU d&rsquo;un modèle multi-rate single-tasking (@20 mips)</h4>
+
+<p><img src="./Scope_SingleTasking_20MIPS.png" alt="./Scope_SingleTasking_20MIPS.png" /></p>
+
+<section data-background-image="./Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+</section>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="single-tasking">Single-Tasking</h2>
+
+<p>Single-Tasking: Dans le slot de temps, l&rsquo;exécution de tous les blocks doit se terminer avant la fin du slot.</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="multi-tasking">Multi-Tasking</h2>
+
+<p>Multi-Tasking: Préemption possible -&gt; <strong>Monotonic Rate Scheduler</strong></p>
+
+<ul>
+<li>La tâche la plus fréquente à la priorité maximale
+
+<ul>
+<li>Préemptera une tache plus lente</li>
+<li>Beaucoup plus flexible</li>
+<li>Mode par défaut (voir options du solveur)</li>
+</ul></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h4 id="charge-cpu-d-un-modèle-multi-rate-single-tasking-70-mips-1">Charge CPU d&rsquo;un modèle multi-rate single-tasking (@70 mips)</h4>
+
+<p><img src="./Scope_MultiTasking_70MIPS.png" alt="./Scope_MultiTasking_70MIPS.png" /></p>
+
+<section data-background-image="./Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+</section>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h4 id="charge-cpu-d-un-modèle-multi-rate-single-tasking-20-mips-1">Charge CPU d&rsquo;un modèle multi-rate single-tasking (@20 mips)</h4>
+
+<p><img src="./Scope_MultiTasking_20MIPS.png" alt="./Scope_MultiTasking_20MIPS.png" /></p>
+
+<section data-background-image="./Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+</section>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="tasking-conclusion">Tasking Conclusion</h2>
+
+<ul>
+<li>Single-Tasking @ 20  MIPS  -&gt; <strong>Overload</strong>
+
+<ul>
+<li>dispatcher la tache la plus lente sur plusieurs slots</li>
+<li>(option d&rsquo;offset dans <strong>Time Step</strong> -&gt; <em>[.001 .005])</em></li>
+</ul></li>
+<li>Multi-Tasking @ 20  MIPS  -&gt; <strong>Ok</strong>
+
+<ul>
+<li>Rate transfert block options
+
+<ul>
+<li>Data Integrity</li>
+<li>Deterministic data transfert</li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="optimisation">Optimisation</h1>
+
+<h2 id="type-de-données">type de données</h2>
+
+<ul>
+<li>Virgule Fixe</li>
+<li>Virgule Flottante</li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./FloatFixed_1.png" alt="./FloatFixed_1.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="flotant">Flotant</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">IEEE 754</th>
+<th align="center">Single</th>
+<th align="center">Double</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">Format width</td>
+<td align="center">32</td>
+<td align="center">64</td>
+</tr>
+
+<tr>
+<td align="center">Sign bit</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+
+<tr>
+<td align="center">exponent width</td>
+<td align="center">8</td>
+<td align="center">11</td>
+</tr>
+
+<tr>
+<td align="center">Precision width</td>
+<td align="center">23+1</td>
+<td align="center">52+1</td>
+</tr>
+</tbody>
+</table>
+
+<p>1st bit of the significand is always 1. Phantom bit</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="custom-8-bit-floating-point">Custom 8 bit Floating point</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">Parameter</th>
+<th align="center">Single</th>
+<th align="center">Double</th>
+<th align="center">Custom</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">Format width</td>
+<td align="center">32</td>
+<td align="center">64</td>
+<td align="center">8</td>
+</tr>
+
+<tr>
+<td align="center">Sign bit</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+
+<tr>
+<td align="center">exponent width</td>
+<td align="center">8</td>
+<td align="center">11</td>
+<td align="center">4</td>
+</tr>
+
+<tr>
+<td align="center">Precision width</td>
+<td align="center">23+1</td>
+<td align="center">52+1</td>
+<td align="center">3+1</td>
+</tr>
+</tbody>
+</table>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./FloatFixed_2.png" alt="./FloatFixed_2.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./FloatFixed_3.png" alt="./FloatFixed_3.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./FloatFixed_4.png" alt="./FloatFixed_4.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="script-matlab-pour-tester-un-flottant-8-bits">Script Matlab pour tester un flottant 8 bits</h2>
+
+<pre><code class="language-MATLAB">% 4 bit exponent (signed)
+emax = 6; emax = 7;
+% 3 bits significand
+p = 3;
+
+exps = 2.^[emin:emax]; 
+vals = (2^p) + [0:(2^p-1)];  % significand with leading 1
+
+TotalVal = vals'*exps;
+
+% add denormalized values
+8bitFloat = unique([TotalVal  ; 2^emin * [0:(2^m-1)]']);
+8bitFloat = unique(flipud(-TotalVal) ;TotalVal]); % with neg vals
+</code></pre>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="simulink">Simulink</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="data-type">Data-type</h2>
+
+<p><img src="./Simulink_TypeCast_FixPtFormat.png" alt="./Simulink_TypeCast_FixPtFormat.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="datatype">Datatype</h2>
+
+<ul>
+<li>int8&hellip;uint23</li>
+<li>fixdt(1,16,15)
+
+<ul>
+<li>Scaling is En15 (Exp neg)</li>
+<li>$$\rightarrow 2^-15$$</li>
+</ul></li>
+<li>fixdt(1,16)
+
+<ul>
+<li>signed (1)</li>
+<li>16 bit width</li>
+<li>Scaling is derived from min &amp; max</li>
+</ul></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="datatype-1">Datatype</h2>
+
+<p><img src="./Simulink_TypeCast_SlopeAndBias.png" alt="./Simulink_TypeCast_SlopeAndBias.png" /></p>
+
+<ul>
+<li>fixdt(1,16,.01,0)
+
+<ul>
+<li>Scaling is sfix16<strong>Sp</strong>01</li>
+<li>Slope point 01<br /></li>
+</ul></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./Simulink_TypeCast_SlopeAndBias_Sat.png" alt="./Simulink_TypeCast_SlopeAndBias_Sat.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="tp">TP</h1>
+
+<h2 id="https-www-ctrl-elec-fr"><a href="https://www.ctrl-elec.fr/" target="_blank">https://www.ctrl-elec.fr/</a></h2>
+
+<p><a href="https://hugo.kerhuel.eu/slides/slides-dcmotor/" target="_blank">https://hugo.kerhuel.eu/slides/slides-dcmotor/</a></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="elements-de-correction">Elements de correction</h2>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./TP_Correction_OpAmp.png" alt="./TP_Correction_OpAmp.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="tp-correction-adc-png-tp-correction-adc-png"><img src="./TP_Correction_ADC.png" alt="./TP_Correction_ADC.png" /></h2>
+
+<h1 id="pwm-settings">PWM settings</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./TP_Correction_PWM_Main.png" alt="./TP_Correction_PWM_Main.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./TP_Correction_PWM_02.png" alt="./TP_Correction_PWM_02.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./TP_Correction_PWM_03.png" alt="./TP_Correction_PWM_03.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./TP_Correction_PWM_04.png" alt="./TP_Correction_PWM_04.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p><img src="./TP_Correction_PWM_05.png" alt="./TP_Correction_PWM_05.png" /></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="test-slides">Test slides</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<section data-background-iframe="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&controls=1&showinfo=0&autohide=1&rel=0&modestbranding=1&loop=&start=0" data-background-opacity=0.06 data-background-repeat="repeat">
+</section>
+
+<h1 id="my-title">My Title !</h1>
+
+
+    </section>
+    
+
+    
+    
+    
+      
+
+
+<section data-noprocess data-shortcode-slide
+  
+      
+      data-background-iframe="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&amp;controls=1&amp;showinfo=0&amp;autohide=1"
+  
+      
+      data-background-opacity="0.1"
+  
+      
+      data-backgroundTransition="none"
+  >
+
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/algBpBeQIOY?autoplay=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>mes notes</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="controls">Controls</h2>
+
+<ul>
+<li>Next: <code>Right Arrow</code> or <code>Space</code></li>
+<li>Previous: <code>Left Arrow</code></li>
+<li>Start: <code>Home</code></li>
+<li>Finish: <code>End</code></li>
+<li>Overview: <code>Esc</code></li>
+<li>Speaker notes: <code>S</code></li>
+<li>Fullscreen: <code>F</code></li>
+<li>Zoom: <code>Alt + Click</code></li>
+<li><a href="https://github.com/hakimel/reveal.js#pdf-export" target="_blank">PDF Export</a>: <code>E</code></li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="code-highlighting">Code Highlighting</h2>
+
+<p>Inline code: <code>variable</code></p>
+
+<p>Code block:</p>
+
+<pre><code class="language-python">porridge = &quot;blueberry&quot;
+if porridge == &quot;blueberry&quot;:
+    print(&quot;Eating...&quot;)
+</code></pre>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="math">Math</h2>
+
+<p>In-line math: $x + y = z$</p>
+
+<p>Block math:</p>
+
+<p>$$
+f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$</p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="fragments">Fragments</h2>
+
+<p>Make content appear incrementally</p>
+
+<pre><code>{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+</code></pre>
+
+<p>Press <code>Space</code> to play!</p>
+
+<p><span class="fragment " >
+  One
+</span>
+<span class="fragment " >
+  <strong>Two</strong>
+</span>
+<span class="fragment " >
+  Three
+</span></p>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<p>A fragment can accept two optional parameters:</p>
+
+<ul>
+<li><code>class</code>: use a custom style (requires definition in custom CSS)</li>
+<li><code>weight</code>: sets the order in which a fragment appears</li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="speaker-notes">Speaker Notes</h2>
+
+<p>Add speaker notes to your presentation</p>
+
+<pre><code class="language-markdown">{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+</code></pre>
+
+<p>Press the <code>S</code> key to view the speaker notes!</p>
+
+<aside class="notes">
+  <ul>
+<li>Only the speaker can read these notes</li>
+<li>Press <code>S</code> key to view</li>
+</ul>
+
+</aside>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="themes">Themes</h2>
+
+<ul>
+<li>black: Black background, white text, blue links (default)</li>
+<li>white: White background, black text, blue links</li>
+<li>league: Gray background, white text, blue links</li>
+<li>beige: Beige background, dark text, brown links</li>
+<li>sky: Blue background, thin dark text, blue links</li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<ul>
+<li>night: Black background, thick white text, orange links</li>
+<li>serif: Cappuccino background, gray text, brown links</li>
+<li>simple: White background, black text, blue links</li>
+<li>solarized: Cream-colored background, dark green text, blue links</li>
+</ul>
+
+
+    </section>
+    
+
+    
+    
+    
+      
+
+
+<section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image="/img/boards.jpg"
+  >
+
+
+<h2 id="custom-slide">Custom Slide</h2>
+
+<p>Customize the slide style and background</p>
+
+<pre><code class="language-markdown">{{&lt; slide background-image=&quot;/img/boards.jpg&quot; &gt;}}
+{{&lt; slide background-color=&quot;#0000FF&quot; &gt;}}
+{{&lt; slide class=&quot;my-style&quot; &gt;}}
+</code></pre>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h2 id="custom-css-example">Custom CSS Example</h2>
+
+<p>Let&rsquo;s make headers navy colored.</p>
+
+<p>Create <code>assets/css/reveal_custom.css</code> with:</p>
+
+<pre><code class="language-css">.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+</code></pre>
+
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+
+<h1 id="questions">Questions?</h1>
+
+<p><a href="https://discourse.gohugo.io" target="_blank">Ask</a></p>
+
+<p><a href="https://sourcethemes.com/academic/docs/" target="_blank">Documentation</a></p>
+
+    </section>
+    
+
+    
+    
+  </div>
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.min.js"></script>
+
+  <script>
+    window.revealPlugins = { dependencies: [
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/zoom-js/zoom.js', async: true },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/math/math.js', async: true },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/print-pdf/print-pdf.js', async: true },
+      
+      { src: '\/js\/vendor\/reveal.js\/plugin\/notes\/notes.js', async: true }
+    ]};
+
+    let revealDefaults = { center: true, controls: true, history: true, progress: true, transition: 'slide', mouseWheel: true };
+    let revealOptions = Object.assign({}, revealDefaults, revealPlugins);
+    Reveal.initialize(revealOptions);
+  </script>
+
+</body>
+</html>
