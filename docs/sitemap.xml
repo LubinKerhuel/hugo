@@ -4,7 +4,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/project/lab_dc_motor/</loc>
+      <loc>https://lubin.kerhuel.eu/project/lab_dc_motor/</loc>
       <lastmod>2018-12-01T00:00:00+01:00</lastmod>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tutorial/subtutorial/example/</loc>
+      <loc>https://lubin.kerhuel.eu/tutorial/subtutorial/example/</loc>
       <lastmod>2018-12-13T20:38:00+01:00</lastmod>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tutorial/subtutorial/example3/</loc>
+      <loc>https://lubin.kerhuel.eu/tutorial/subtutorial/example3/</loc>
       <lastmod>2018-12-13T20:38:00+01:00</lastmod>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tutorial/subtutorial/hardware_setup/</loc>
+      <loc>https://lubin.kerhuel.eu/tutorial/subtutorial/hardware_setup/</loc>
       <lastmod>2018-12-13T20:38:00+01:00</lastmod>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tutorial/subtutorial2/</loc>
+      <loc>https://lubin.kerhuel.eu/tutorial/subtutorial2/</loc>
       <lastmod>2018-12-13T20:38:00+01:00</lastmod>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tutorial/subtutorial/</loc>
+      <loc>https://lubin.kerhuel.eu/tutorial/subtutorial/</loc>
       <lastmod>2018-12-13T20:38:00+01:00</lastmod>
     </url>
     
@@ -52,7 +52,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/post/</loc>
+      <loc>https://lubin.kerhuel.eu/post/</loc>
       <lastmod>2018-10-14T02:15:45+01:00</lastmod>
     </url>
     
@@ -60,7 +60,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/publication/</loc>
+      <loc>https://lubin.kerhuel.eu/publication/</loc>
       <lastmod>2018-10-14T02:15:45+01:00</lastmod>
     </url>
     
@@ -68,7 +68,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/talk/</loc>
+      <loc>https://lubin.kerhuel.eu/talk/</loc>
       <lastmod>2018-10-14T02:15:45+01:00</lastmod>
     </url>
     
@@ -76,7 +76,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/categories/</loc>
+      <loc>https://lubin.kerhuel.eu/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -84,7 +84,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tags/dc-motor/</loc>
+      <loc>https://lubin.kerhuel.eu/tags/dc-motor/</loc>
       <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -93,7 +93,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tutorial/subtutorial2/hardware_setup/</loc>
+      <loc>https://lubin.kerhuel.eu/tutorial/subtutorial2/hardware_setup/</loc>
       <lastmod>2018-12-13T20:38:00+01:00</lastmod>
     </url>
     
@@ -101,7 +101,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/project/</loc>
+      <loc>https://lubin.kerhuel.eu/project/</loc>
       <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -110,15 +110,14 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/slides/slides_dcmotor_insa/</loc>
-      <lastmod>2018-12-17T10:56:45+01:00</lastmod>
+      <loc>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</loc>
     </url>
     
   
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/publication_types/</loc>
+      <loc>https://lubin.kerhuel.eu/publication_types/</loc>
       <priority>0</priority>
     </url>
     
@@ -126,8 +125,8 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/</loc>
-      <lastmod>2018-04-09T19:10:15+01:00</lastmod>
+      <loc>https://lubin.kerhuel.eu/</loc>
+      <lastmod>2018-12-17T11:40:51+01:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -135,8 +134,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/slides/</loc>
-      <lastmod>2018-12-17T10:56:45+01:00</lastmod>
+      <loc>https://lubin.kerhuel.eu/slides/</loc>
       <priority>0</priority>
     </url>
     
@@ -144,7 +142,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tags/</loc>
+      <loc>https://lubin.kerhuel.eu/tags/</loc>
       <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -153,7 +151,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tutorial/</loc>
+      <loc>https://lubin.kerhuel.eu/tutorial/</loc>
       <priority>0</priority>
     </url>
     
@@ -161,7 +159,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tags/matlab/</loc>
+      <loc>https://lubin.kerhuel.eu/tags/matlab/</loc>
       <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -170,7 +168,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tags/motor-control/</loc>
+      <loc>https://lubin.kerhuel.eu/tags/motor-control/</loc>
       <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -179,7 +177,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tags/rapid-prototyping/</loc>
+      <loc>https://lubin.kerhuel.eu/tags/rapid-prototyping/</loc>
       <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -188,7 +186,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tags/simulink/</loc>
+      <loc>https://lubin.kerhuel.eu/tags/simulink/</loc>
       <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>
@@ -197,7 +195,7 @@
     
     <url>
     
-      <loc>https://hugo.kerhuel.eu/tags/speed-controller/</loc>
+      <loc>https://lubin.kerhuel.eu/tags/speed-controller/</loc>
       <lastmod>2018-12-01T00:00:00+01:00</lastmod>
       <priority>0</priority>
     </url>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Rapid Control Prototyping</title>
-    <link>https://hugo.kerhuel.eu/project/</link>
+    <link>https://lubin.kerhuel.eu/project/</link>
     <description>Recent content in Projects on Rapid Control Prototyping</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0100</lastBuildDate>
     
-	<atom:link href="https://hugo.kerhuel.eu/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lubin.kerhuel.eu/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Real Time Control for a DC Motor</title>
-      <link>https://hugo.kerhuel.eu/project/lab_dc_motor/</link>
+      <link>https://lubin.kerhuel.eu/project/lab_dc_motor/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/project/lab_dc_motor/</guid>
+      <guid>https://lubin.kerhuel.eu/project/lab_dc_motor/</guid>
       <description>Control a 24V DC motor using the MCLV V2 board with a dsPIC 33EP256MC506. This hands-on is for 5th year students at INSA-Lyon.
 The hands-on Lab subject available at: https://rtdc.ctrl-elec.fr/.
 Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Overview11 on Rapid Control Prototyping</title>
-    <link>https://hugo.kerhuel.eu/tutorial/subtutorial/</link>
+    <link>https://lubin.kerhuel.eu/tutorial/subtutorial/</link>
     <description>Recent content in Overview11 on Rapid Control Prototyping</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://hugo.kerhuel.eu/tutorial/subtutorial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lubin.kerhuel.eu/tutorial/subtutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Example Page11</title>
-      <link>https://hugo.kerhuel.eu/tutorial/subtutorial/example/</link>
+      <link>https://lubin.kerhuel.eu/tutorial/subtutorial/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/tutorial/subtutorial/example/</guid>
+      <guid>https://lubin.kerhuel.eu/tutorial/subtutorial/example/</guid>
       <description>#include &amp;ldquo;includeme.md&amp;rdquo;
 In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:
 main title Simulink Simulink, Mavlink keywords. Matlab,
@@ -29,20 +29,20 @@ second main title piou piou</description>
     
     <item>
       <title>Example Page 13</title>
-      <link>https://hugo.kerhuel.eu/tutorial/subtutorial/example3/</link>
+      <link>https://lubin.kerhuel.eu/tutorial/subtutorial/example3/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/tutorial/subtutorial/example3/</guid>
+      <guid>https://lubin.kerhuel.eu/tutorial/subtutorial/example3/</guid>
       <description>je suis un titre $\frac{1}{pi}$
 mavlink</description>
     </item>
     
     <item>
       <title>Example Page1111</title>
-      <link>https://hugo.kerhuel.eu/tutorial/subtutorial/hardware_setup/</link>
+      <link>https://lubin.kerhuel.eu/tutorial/subtutorial/hardware_setup/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/tutorial/subtutorial/hardware_setup/</guid>
+      <guid>https://lubin.kerhuel.eu/tutorial/subtutorial/hardware_setup/</guid>
       <description>Simulink model to target a dsPIC MCLV board running a DC motor The model contains blocks to configure dsPIC peripheral (PWM, ADC and QEI) to run a DC motor with the MCLV-V2 board equipped with the dsPIC-33EP256MC506 PIM using internal Op-Amps. Sensors measurements are visualized on the computer while the motor is running.
 Getting Started The model MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl is for code generation (peripheral blocks have no effects during a simulation).</description>
     </item>

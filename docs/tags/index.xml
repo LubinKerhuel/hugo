@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Rapid Control Prototyping</title>
-    <link>https://hugo.kerhuel.eu/tags/</link>
+    <link>https://lubin.kerhuel.eu/tags/</link>
     <description>Recent content in Tags on Rapid Control Prototyping</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0100</lastBuildDate>
     
-	<atom:link href="https://hugo.kerhuel.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lubin.kerhuel.eu/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>DC-motor</title>
-      <link>https://hugo.kerhuel.eu/tags/dc-motor/</link>
+      <link>https://lubin.kerhuel.eu/tags/dc-motor/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/tags/dc-motor/</guid>
+      <guid>https://lubin.kerhuel.eu/tags/dc-motor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>matlab</title>
-      <link>https://hugo.kerhuel.eu/tags/matlab/</link>
+      <link>https://lubin.kerhuel.eu/tags/matlab/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/tags/matlab/</guid>
+      <guid>https://lubin.kerhuel.eu/tags/matlab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>motor-control</title>
-      <link>https://hugo.kerhuel.eu/tags/motor-control/</link>
+      <link>https://lubin.kerhuel.eu/tags/motor-control/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/tags/motor-control/</guid>
+      <guid>https://lubin.kerhuel.eu/tags/motor-control/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rapid-prototyping</title>
-      <link>https://hugo.kerhuel.eu/tags/rapid-prototyping/</link>
+      <link>https://lubin.kerhuel.eu/tags/rapid-prototyping/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/tags/rapid-prototyping/</guid>
+      <guid>https://lubin.kerhuel.eu/tags/rapid-prototyping/</guid>
       <description></description>
     </item>
     
     <item>
       <title>simulink</title>
-      <link>https://hugo.kerhuel.eu/tags/simulink/</link>
+      <link>https://lubin.kerhuel.eu/tags/simulink/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/tags/simulink/</guid>
+      <guid>https://lubin.kerhuel.eu/tags/simulink/</guid>
       <description></description>
     </item>
     
     <item>
       <title>speed-controller</title>
-      <link>https://hugo.kerhuel.eu/tags/speed-controller/</link>
+      <link>https://lubin.kerhuel.eu/tags/speed-controller/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://hugo.kerhuel.eu/tags/speed-controller/</guid>
+      <guid>https://lubin.kerhuel.eu/tags/speed-controller/</guid>
       <description></description>
     </item>
     
