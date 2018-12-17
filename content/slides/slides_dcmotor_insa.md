@@ -6,12 +6,16 @@ title = "Prototypage Rapide avec Simulink sur dsPIC"
 # Choose a theme from https://github.com/hakimel/reveal.js#theming
 theme = "black"
 
-slide_number = true 
+slide_number = true
+progress = true 
 transition = "zoom"
+
 
 +++
  
-# Prototypage rapide avec Simulink sur dsPIC
+# Prototypage rapide
+
+## avec Simulink sur dsPIC
 
 [MPLAB device blocks for Simulink][blockset]
 
@@ -30,7 +34,6 @@ L.Kerhuel & R.Delpoux
 </section>
 
 ---
-
 
 ![./Model_Hardware_Test_withSampleTime.png](./Model_Hardware_Test_withSampleTime.png)
 
@@ -244,7 +247,7 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ```MATLAB
 % 4 bit exponent (signed)
-emax = 6; emax = 7;
+emin = -7; emax = 6; 
 % 3 bits significand
 p = 3;
 
@@ -517,6 +520,7 @@ Create `assets/css/reveal_custom.css` with:
 
 [Documentation](https://sourcethemes.com/academic/docs/)
 
+---
 
 [MPLABX]: https://www.microchip.com/MPLABX "Microchip development environment"
 [blockset]: https://www.microchip.com/SimulinkBlocks "Blockset for dsPIC and PIC32"

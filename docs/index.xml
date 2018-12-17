@@ -266,7 +266,9 @@ comment  --&gt;
       <guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid>
       <description>
 
-&lt;h1 id=&#34;prototypage-rapide-avec-simulink-sur-dspic&#34;&gt;Prototypage rapide avec Simulink sur dsPIC&lt;/h1&gt;
+&lt;h1 id=&#34;prototypage-rapide&#34;&gt;Prototypage rapide&lt;/h1&gt;
+
+&lt;h2 id=&#34;avec-simulink-sur-dspic&#34;&gt;avec Simulink sur dsPIC&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34; title=&#34;Blockset for dsPIC and PIC32&#34; target=&#34;_blank&#34;&gt;MPLAB device blocks for Simulink&lt;/a&gt;&lt;/p&gt;
 
@@ -595,7 +597,7 @@ comment  --&gt;
 &lt;h2 id=&#34;script-matlab-pour-tester-un-flottant-8-bits&#34;&gt;Script Matlab pour tester un flottant 8 bits&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-MATLAB&#34;&gt;% 4 bit exponent (signed)
-emax = 6; emax = 7;
+emin = -7; emax = 6; 
 % 3 bits significand
 p = 3;
 
@@ -895,6 +897,8 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 </description>
     </item>
     
