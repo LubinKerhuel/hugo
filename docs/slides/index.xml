@@ -25,5 +25,19 @@ Plan: Modèle de simulation &amp;amp; génération de code
  Solver résout les équations différentielles Pas de contrainte temps réelle Résultat dépend du solveur ; pas de calcul variable.</description>
     </item>
     
+    <item>
+      <title>test slides</title>
+      <link>https://lubin.kerhuel.eu/slides/testslides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lubin.kerhuel.eu/slides/testslides/</guid>
+      <description>Test slides  My Title !   mes notes
+Controls  Next: Right Arrow or Space Previous: Left Arrow Start: Home Finish: End Overview: Esc Speaker notes: S Fullscreen: F Zoom: Alt + Click PDF Export: E  Code Highlighting Inline code: variable
+Code block:
+porridge = &amp;quot;blueberry&amp;quot; if porridge == &amp;quot;blueberry&amp;quot;: print(&amp;quot;Eating...&amp;quot;)  Math In-line math: $x + y = z$
+Block math:
+$$ f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}} $$</description>
+    </item>
+    
   </channel>
 </rss>

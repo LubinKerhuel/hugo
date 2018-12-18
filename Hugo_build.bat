@@ -1,4 +1,4 @@
 rmdir /Q /S docs
-hugo --enableGitInfo --cleanDestinationDir --forceSyncStatic --gc --destination /docs 
+hugo -t "academic" --i18n-warnings --enableGitInfo --cleanDestinationDir --forceSyncStatic --destination /docs 
 git add docs/*
 pause
