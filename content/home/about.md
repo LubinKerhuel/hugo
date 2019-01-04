@@ -35,15 +35,19 @@ weight = 2
 
 # About me
 
+I am responsible at [Microchip Technology Inc](https://www.microchip.com/) for the [Rapid Control Prototyping tool](https://www.microchip.com/simulinkblocks/) for dsPIC and PIC32 microcontrollers. 
 
-Interrested in applied math, my university projects apply control theory on embedded platforms (UAV). From theses projects, I learned that **about 90% of the effort** is concentrated on the **hardware design and low level programming** tasks. Time spent on modelisaiton of the system and control algorithms were reduced if not replaced by PID tuned by successive trials.
+Embedded-system and applied-math enthousiast, I realized many projects on signal processing and control theory. In such project, **90% of the effort** (my estimate) is taken by low level programming tasks and hardware design. Time for simulation is reduced and projects often ends-up with a simple PID algorithm tuned by successive trials.
 
-I started in 2004 designing a blockset for Simulink. I was able to concentrate on control algorithms running on dsPIC microcontroller unit (MCU) direclty from Simulink model. This model based design was used to complete my PhD thesis on Bioloigcally inspired robotics (fly's visual system) from 2005 to 2009. This scheme reduced drastically the time to convert a Simulink/dSPACE algorithm to our [OSCAR II](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721) autonomous robot.
+In 2004, I designed a blockset to deploy Simulink models on dsPIC Micro-Controllers Unit (MCU). The model base design saves the low-level programming task and allows to concentrate on control algorithms. 
 
-I joined [MOVEA](https://www.ideas-laboratory.com/projects/movea/), a spin-up from CEA-Leti in early 2010 where I designed and implemented Data fusion algorithm for Inertial Measurement Unit and derived applications. We switched from hand writting programming to to the model based design approach which speed-up the research and developpment.
+From 2005 to 2009, I applied this rapid prototyping scheme to complete my [PhD thesis](http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on Biologically inspired robotics (fly's visual system from 2005-2009) where it reduced the time to convert a Simulink/dSPACE algorithm to our [OSCAR II](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721) autonomous robot.
 
-Microchip proposed to developp a blockset similar to the one I did for a wider range of microcontrollers. Since 2011 I am responsible for the [Rapid Control Prototyping tool](https://www.microchip.com/simulinkblocks/) for dsPIC, PIC32 chips at [Microchip Technology Inc](https://www.microchip.com/). 
+In 2010, I joined [MOVEA](https://www.ideas-laboratory.com/projects/movea/), a spin-up from CEA-Leti where I designed and implemented Data fusion algorithm for Inertial Measurement Unit for sport applications. The use of model base design reduced the Time to Market: from experimental simulated algorithms to final products.
 
-For scientists, company or students projects, the model based design allows focusing on high level algorithm where added value is. It reduces the time to market for company.  
+For scientists, company, or students' projects, *the model-based design allows focusing on high level algorithm* where added value is.
 
-Theses pages presents projects or informations related to Rapid Control Prototyping tools. All are based on the blockset provided for free by Microchip to target Microchip's microcontrollers directly from Simulink. 
+These pages present customs projects and information's related to Rapid Control Prototyping tools. All are based on the [Microchip blockset](https://www.microchip.com/simulinkblocks/) (provided for free) and a board equipped with a dsPIC or PIC32.
+
+Few articles and patents are listed on [Google Scholar](https://scholar.google.co.uk/citations?user=61SJU_sAAAAJ/). 
+
