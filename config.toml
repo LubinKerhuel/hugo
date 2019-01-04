@@ -62,7 +62,7 @@ enableGitInfo = true
   organizations = [ { name = "Microchip Technology Inc", url = "https://www.microchip.com/" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "idtLK.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
 
   # Details for the Contact Widget
   email = "lubin@kerhuel.eu"
@@ -101,7 +101,7 @@ enableGitInfo = true
 
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`.
-  color_theme = "dark"
+  color_theme = "darkblue"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
