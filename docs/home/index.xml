@@ -36,8 +36,8 @@
       <pubDate>Tue, 25 Dec 2018 00:00:00 +0100</pubDate>
       
       <guid>https://lubin.kerhuel.eu/home/about/</guid>
-      <description>About me Interrested in applied math, my university projects apply control theory on embedded platforms (UAV). From theses projects, I learned that about 90% of the effort is concentrated on the hardware design and low level programming tasks. Time spent on modelisaiton of the system and control algorithms were reduced if not replaced by PID tuned by successive trials.
-I started in 2004 designing a blockset for Simulink. I was able to concentrate on control algorithms running on dsPIC microcontroller unit (MCU) direclty from Simulink model.</description>
+      <description>About me I am responsible at Microchip Technology Inc for the Rapid Control Prototyping tool for dsPIC and PIC32 microcontrollers.
+Embedded-system and applied-math enthousiast, I realized many projects on signal processing and control theory. In such project, 90% of the effort (my estimate) is taken by low level programming tasks and hardware design. Time for simulation is reduced and projects often ends-up with a simple PID algorithm tuned by successive trials.</description>
     </item>
     
     <item>
