@@ -357,15 +357,15 @@ enableGitInfo = true
   #   0: No search engine
   #   1: Built-in (Fuse)
   #   2: Algolia (https://www.algolia.com)
-  engine = 1
+  engine = 2
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
   [params.search.algolia]
-    app_id = ""
-    api_key = ""
-    index_name = ""
-    show_logo = false
+    app_id = "9KRM9LVG63"
+    api_key = "e6d226d6570273fac6eb12984c415004"
+    index_name = "lubin_kerhuel_eu_test1"
+    show_logo = true
 
 # Taxonomies.
 [taxonomies]
