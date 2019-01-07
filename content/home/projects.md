@@ -5,7 +5,7 @@ active = true
 date = 2018-12-24T00:00:00
 
 title = "Projects"
-subtitle = ""
+subtitle = "Rapid Control Prototyping"
 
 # Order that this section will appear in.
 weight = 4
