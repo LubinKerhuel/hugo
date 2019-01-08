@@ -3,7 +3,8 @@
 title = "speed control of a tiny helicopter rotor"
 
 # Date this page was created.
-date = 2018-12-01T00:00:00
+date = 2018-12-01
+draft = true
 
 # Project summary to display on homepage.
 summary = "Sensorless speed control of a toy helicopter (Picooz) rotor. Model of the system is identified. Super Twisting algorithm is validated through simulation then compared with results performed on the helicopter."
@@ -16,7 +17,7 @@ tags = ["simulink","matlab","Sliding Mode","Super Twisting","Identification","Si
 external_link = ""
 
 darft = true
-share = false  # Show social sharing links?
+share = true  # Show social sharing links?
 profile = false  # Show author profile?
 comments = false  # Show comments?
 
@@ -31,7 +32,7 @@ slides = ""
 # Links (optional).
 url_pdf = ""
 url_slides = ""
-url_video = ""
+url_video = "https://vimeo.com/manage/albums/5666939"
 url_code = ""
 
 # Custom links (optional).
@@ -64,6 +65,11 @@ Large Steps:
 {{< youtube id="Ci2h_jrlsDw" >}}
 
 Shirp:
-{{< vimeo id="309895581" >}}
+{{< vimeo id="309895581" title="myVideo">}}
 <!-- You tube alternative: {{< youtube id ="VC2jDBxX3CQ" >}} -->
 {{< youtube id ="VC2jDBxX3CQ" >}}
+
+Paragraph précédent:
+
+{{< figure  src="featured.png" title="Picooz" caption="hello Picooz pouet pouet" attr="attribution text" width="80%">}}
+Paragraph suivant:

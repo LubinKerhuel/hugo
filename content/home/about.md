@@ -41,13 +41,15 @@ Enthousiasted by applied math, I realized projects on control theory from school
 
 I developped a blockset to deploy Simulink models on dsPIC Micro-Controllers Unit (MCU) in 2005 to overcome that pitfall.
 
-From 2005 to 2009, I was lucky enough to use this model based design methodology to complete my [PhD thesis](http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics: robots inspired from the fly's visual control system. The rapid prototyping reduced the time from the simulation or dSPACE test bench platform to our auronomous [OSCAR II](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721) robot. I joined [MOVEA](https://www.ideas-laboratory.com/projects/movea/), a spin-up of the CEA-Leti research center where I validated, still using rapid prototyping method, various data fusion algorithm for Inertial Measurement Unit using low cost MEMS sensors for sports applications. 
+I proposed to use this model based design methodology to complete a [PhD thesis](http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics: robots inspired from the fly's visual control system. The rapid prototyping reduced the time from the simulation or dSPACE test bench platform to our auronomous [OSCAR II](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721) robot. 
 
-I'm now responsible at [Microchip Technology Inc](https://www.microchip.com/) for the [Microchip blockset](https://www.microchip.com/simulinkblocks/) for dsPIC and PIC32 microcontrollers. 
+Thereafter I joined [MOVEA](https://www.ideas-laboratory.com/projects/movea/), a spin-up of the CEA-Leti research center where I designed various data fusion algorithm for Inertial Measurement Unit using low cost MEMS sensors for sports applications ; still using a rapid control prototyping approach. 
+
+I'm now part of the team developping the [Microchip blockset](https://www.microchip.com/simulinkblocks/) for dsPIC and PIC32 microcontrollers at [Microchip Technology Inc](https://www.microchip.com/). 
 
 For scientists, company, and students' projects, *the model-based design allows focusing on the high level algorithm* rather than consuming time on low level programming. It allows quick validation and improvement of algorithms through on site tests for better results and time to market improvement.
 
-The present website share my experiences of Rapid Control Prototyping tools through simple but fun projects. All are based on the [Microchip blockset](https://www.microchip.com/simulinkblocks/) (available for free, but matlab/simulink is not!) and a board endowed with a dsPIC or PIC32.
+The present website share my experiences of Rapid Control Prototyping tools through simple but fun projects. All are based on the [Microchip blockset](https://www.microchip.com/simulinkblocks/) (available for free, require matlab/simulink with embedded coder) and a board endowed with a dsPIC or PIC32.
 
-Complementary information might be found on my publications listed at [Google Scholar](https://scholar.google.co.uk/citations?user=61SJU_sAAAAJ/). Theses work were mostly realised using model based design.
+Complementary information might be found on my publications listed at [Google Scholar](https://scholar.google.co.uk/citations?user=61SJU_sAAAAJ/). Theses work were achieved using a model based design approach.
 

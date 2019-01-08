@@ -3,8 +3,8 @@
 title = "Autopilote for Plane"
 
 # Date this page was created.
-date = 2018-01-07
-darft = true
+date = 2018-12-25T00:00:00
+draft = true
 
 # Project summary to display on homepage.
 summary = "Autopilote for an RC plane."
@@ -31,9 +31,11 @@ slides = ""
 
 # Links (optional).
 url_pdf = ""
+url_code = ""
+url_dataset = ""
 url_slides = ""
 url_video = ""
-url_code = ""
+url_poster = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.

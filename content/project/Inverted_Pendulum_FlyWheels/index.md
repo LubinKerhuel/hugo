@@ -3,8 +3,8 @@
 title = "Inverted Pendulum"
 
 # Date this page was created.
-date = 2018-12-01T00:00:00
-darft = true
+date = 2018-12-01
+draft = true
 
 # Project summary to display on homepage.
 summary = "Inverted pendulum using a flyWheels toy, a microstick II and an IMU sensor. State space feedback loop maintain the pendulum up-right"
@@ -17,7 +17,7 @@ tags = ["simulink","matlab","State space model","Feedback loop","rapid-prototypi
 external_link = ""
 
 
-share = false  # Show social sharing links?
+share = true  # Show social sharing links?
 profile = false  # Show author profile?
 comments = false  # Show comments?
 
@@ -32,7 +32,7 @@ slides = ""
 # Links (optional).
 url_pdf = ""
 url_slides = ""
-url_video = ""
+url_video = "https://vimeo.com/album/5666929"
 url_code = ""
 
 # Custom links (optional).
@@ -47,7 +47,7 @@ url_code = ""
   
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-  focal_point = "Smart"
+  focal_point = "Top"
 +++
 
 Inverted pendulum project.
