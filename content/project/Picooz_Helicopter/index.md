@@ -16,7 +16,6 @@ tags = ["simulink","matlab","Sliding Mode","Super Twisting","Identification","Si
 # Optional external URL for project (replaces project detail page).
 external_link = ""
 
-darft = true
 share = true  # Show social sharing links?
 profile = false  # Show author profile?
 comments = false  # Show comments?

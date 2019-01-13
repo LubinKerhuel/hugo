@@ -4,7 +4,7 @@ title = "Real Time Control for a DC Motor"
 
 # Date this page was created.
 date = 2018-12-01
-draft = true
+draft = false
 
 # Project summary to display on homepage.
 summary = "Simulation & real-time control of a 24v DC motor (INSA Lyon hands-on)"
