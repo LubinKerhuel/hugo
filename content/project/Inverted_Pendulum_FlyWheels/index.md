@@ -50,7 +50,7 @@ url_code = ""
   focal_point = "Top"
 
   # Show image only in page previews?
-  preview_only = false
+#  preview_only = false
 
 
 
