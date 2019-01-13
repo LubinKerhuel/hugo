@@ -1,43 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Slides on Rapid Control Prototyping</title>
-    <link>https://lubin.kerhuel.eu/slides/</link>
-    <description>Recent content in Slides on Rapid Control Prototyping</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    
-	<atom:link href="https://lubin.kerhuel.eu/slides/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Prototypage Rapide avec Simulink sur dsPIC</title>
-      <link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid>
-      <description>Prototypage rapide avec Simulink sur dsPIC MPLAB device blocks for Simulink
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Slides on Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/slides/</link><description>Recent content in Slides on Rapid Control Prototyping</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2018 Lubin Kerhuel</copyright><atom:link href="https://lubin.kerhuel.eu/slides/index.xml" rel="self" type="application/rss+xml"/><item><title>Prototypage Rapide avec Simulink sur dsPIC</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid><description>Prototypage rapide avec Simulink sur dsPIC MPLAB device blocks for Simulink
 L.Kerhuel &amp;amp; R.Delpoux
- Pendule inverse  Video
+Pendule inverse Video
 Plan: Modèle de simulation &amp;amp; génération de code
- Différences Temporel optimisation et type de données blocks et fonctionnalités Simulink  DSPACE  Aspect Temporel: Simulation Modélisation en temps continue, transformé de Laplace dans le domaine p (ou s)
- Solver résout les équations différentielles Pas de contrainte temps réelle Résultat dépend du solveur ; pas de calcul variable.</description>
-    </item>
-    
-    <item>
-      <title>test slides</title>
-      <link>https://lubin.kerhuel.eu/slides/testslides/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lubin.kerhuel.eu/slides/testslides/</guid>
-      <description>Test slides  My Title !   mes notes
-Controls  Next: Right Arrow or Space Previous: Left Arrow Start: Home Finish: End Overview: Esc Speaker notes: S Fullscreen: F Zoom: Alt + Click PDF Export: E  Code Highlighting Inline code: variable
+Différences Temporel optimisation et type de données blocks et fonctionnalités Simulink DSPACE Aspect Temporel: Simulation Modélisation en temps continue, transformé de Laplace dans le domaine p (ou s)
+Solver résout les équations différentielles Pas de contrainte temps réelle Résultat dépend du solveur ; pas de calcul variable.</description></item><item><title>test slides</title><link>https://lubin.kerhuel.eu/slides/testslides/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/testslides/</guid><description>Test slides My Title ! mes notes
+Controls Next: Right Arrow or Space Previous: Left Arrow Start: Home Finish: End Overview: Esc Speaker notes: S Fullscreen: F Zoom: Alt + Click PDF Export: E Code Highlighting Inline code: variable
 Code block:
-porridge = &amp;quot;blueberry&amp;quot; if porridge == &amp;quot;blueberry&amp;quot;: print(&amp;quot;Eating...&amp;quot;)  Math In-line math: $x + y = z$
+porridge = &amp;quot;blueberry&amp;quot; if porridge == &amp;quot;blueberry&amp;quot;: print(&amp;quot;Eating...&amp;quot;) Math In-line math: $x + y = z$
 Block math:
-$$ f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}} $$</description>
-    </item>
-    
-  </channel>
-</rss>
+$$ f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}} $$</description></item></channel></rss>
