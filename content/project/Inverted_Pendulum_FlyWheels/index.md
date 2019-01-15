@@ -50,8 +50,12 @@ url_code = ""
   focal_point = "Top"
 
   # Show image only in page previews?
-#  preview_only = false
+  # theu use header image to show something else in the page
+ preview_only = false
 
+#[header]
+#image = "idtLK.jpg"
+#caption = "head of the inverted pendulum"
 
 
 [[gallery_item]]

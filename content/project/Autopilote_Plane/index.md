@@ -52,6 +52,11 @@ url_poster = ""
   focal_point = "Smart"
 +++
 
+- IMU
+- Pitot tube
+- Wind estimate
+- UxV blocks including GPS, Remote Control and Mavlink blocks and fonctionalities
+
 Autopilote project.
 
 
