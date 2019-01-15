@@ -51,7 +51,7 @@ url_code = ""
 
   # Show image only in page previews?
   # theu use header image to show something else in the page
- preview_only = false
+  # preview_only = false
 
 #[header]
 #image = "idtLK.jpg"
