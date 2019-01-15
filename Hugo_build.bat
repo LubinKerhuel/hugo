@@ -1,6 +1,6 @@
 rem rmdir /Q /S docs
 rem hugo -t "academic" -F --i18n-warnings --minify --enableGitInfo --cleanDestinationDir  --destination /docs 
-hugo -t "academic" -F --i18n-warnings --gc --cleanDestinationDir --minify --enableGitInfo --destination /docs 
+hugo -t "academic" -F --i18n-warnings --gc --cleanDestinationDir --minify --enableGitInfo --forceSyncStatic --destination /docs 
 git add docs/*
 @echo off
 rem  get total number of lines from dir output
