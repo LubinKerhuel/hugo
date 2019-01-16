@@ -8,7 +8,7 @@ title = "Projects"
 subtitle = "Rapid Control Prototyping"
 
 # Order that this section will appear in.
-weight = 4
+weight = 1
 
 # Content.
 # Display content from the following folder.

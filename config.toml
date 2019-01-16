@@ -296,21 +296,23 @@ enableGitInfo = true
   # Align the main menu to the right of the page? (true/false)
   align_right = true
 
-[[menu.main]]
-  name = "Home"
-  url = "#about"
-  weight = 1
-
-[[menu.main]]
-  name = "Author"
-  url = "#about"
-  weight = 5
+# [[menu.main]]
+#   name = "Author"
+#   url = "#about"
+#   weight = 5
 
 
 [[menu.main]]
   name = "Projects"
   url = "#projects"
+  weight = 1
+
+
+[[menu.main]]
+  name = "About"
+  url = "#about"
   weight = 2
+
 
 # [[menu.main]]
 #   name = "Publications"
@@ -323,22 +325,22 @@ enableGitInfo = true
 #   weight = 4
 
 
-[[menu.main]]
-  name = "Tutorials"
+#[[menu.main]]
+#  name = "Tutorials"
 #  url = "/tutorial/"
-  weight = 4
-
- [[menu.main]]
-   name = "subTutorials"
-   parent = "Tutorials"
-   url = "/tutorial/subtutorial/"
-   weight = 1  
-
- [[menu.main]]
-   name = "subTutorials2"
-   parent = "Tutorials"
-   url = "/tutorial/subtutorial2/"
-   weight = 2     
+#  weight = 4
+#
+# [[menu.main]]
+#   name = "subTutorials"
+#   parent = "Tutorials"
+#   url = "/tutorial/subtutorial/"
+#   weight = 1  
+#
+# [[menu.main]]
+#   name = "subTutorials2"
+#   parent = "Tutorials"
+#   url = "/tutorial/subtutorial2/"
+#   weight = 2     
 
 [[menu.main]]
   name = "Contact"
