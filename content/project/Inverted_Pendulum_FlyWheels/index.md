@@ -6,15 +6,23 @@ title = "Inverted Pendulum"
 date = 2018-12-01
 draft = false
 
+#  toc = true  # Show table of contents? true/false
+#  type = "docs"  # Do not modify.
+ # 
+#  [menu.Inverted_Pendulum_FlyWheels]
+#  #  parent = "Inverted_Pendulum"
+#    name = "test"
+#    weight = 1
+
 # Project summary to display on homepage.
 summary = "Inverted pendulum running on a microstick II dsPIC board. Angle is estimated from low cost MEMS sensors with an IMU data fusion algorithm. Stabilizing control loop drives two DC motors from a modified RC toy. No encoder sensor are used."
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["Inverted pendulum","control","state space","LQR","rapid prototyping","model-based design","matlab","simulink"]
+tags = ["Inverted pendulum","control","state space","LQR","rapid prototyping","model-based design","matlab","simulink","DIY"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = ""
+external_link = "/tutorial/inverted_pendulum_flywheels/"
 
 
 share = true  # Show social sharing links?
@@ -86,9 +94,9 @@ caption = "Inside of the FlyWheels toy with its two DC motors"
 {{% toc %}}
 
 
-# Introduction
+## Introduction
 
-Objective is to build an unstable platform to experiment various control loop to stabilize it. The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.
+Objective is to build an `unstable pendulum platform` to experiment various control loop to stabilize it. The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.
 
 
 <!-- test code -->
@@ -103,10 +111,10 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 The top of the pendulum is comparable to a head where the microcontroller acts as a brain and the inertial sensor (accelerometers and rate gyro) as the inner ears. The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see [pictures below](#hw_trolley)).
 
 {{% alert note %}}
-Stabilization overview: The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilize the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.
+`Stabilization overview:` The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilize the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.
 {{% /alert %}}
 
-# Hardware
+## Hardware
 
 The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries. 
 
@@ -121,7 +129,7 @@ numbered="true"
 
 
 
-## head electronics: IMU sensor and microcontroller
+### head electronics: IMU sensor and microcontroller
 
 The controller is a Microstick II board equipped with a dsPIC 33EP128MC202 running at $\approx 70\ MIPS$. It is powered through the USB modified cable which **provide only the power supply** from 4 AA batteries hold in the base.
 
@@ -148,7 +156,7 @@ The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v
 
 
 
-## Base trolley: Motor, batteries and power electronics {#hw_trolley}
+### Base trolley: Motor, batteries and power electronics {#hw_trolley}
 
 {{< gallery album="flywheel_gallery">}}
 
@@ -156,12 +164,12 @@ The base trolley is based on low cost a 2-wheel remote control toy. Its electron
 
 <!--  (pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg)) -->
 
-The L298N H bridge can control up to two DC motors: for each motor,
+The L298N H bridge controls two DC motors. For each motor:
 
-- Two digital input signal set the motor state: direction, brake or free-wheels.
-- A third digital signal power-up the motor accordingly to the state defined. This third signal is modulated thanks to a 100Hs PWM signal whose duty cycle vary from 0 to 100%.
+- Two logic input signals set the motor state: direction, brake, or free-wheels.
+- The third logic input signal power-up the motor depending on to the state defined. This third signal is modulated with a 100Hz square periodic signal (PWM) whose duty cycle vary from 0% to 100%. It sets the torque for the motor.
 
-Three similar signals control the $2^{nd}$ motor. The flat multicolor rubbon connect 6 digital control signal from the Microstick II dsPIC to the input of the L298N H bridge.
+The flat multicolor rubbon connects 6 logic control signal (3 for each motor) from the Microstick II dsPIC to the input of the L298N H bridge.
 
 {{< figure
 src="Pendulum_Base.png"
@@ -172,9 +180,9 @@ caption="A *L298N H bridge* (for arduino) power board drives the two DC motors o
 numbered="true"
 >}}
 
-Each side of the trolley hold two $1.2V$ AA NiMh batteries (total is 4 x AA) which powers both the DC motors and the electronics with $\approx 4.8V$. The black and red wires from the trolley to the top of the pendulum powers the Microstick II electronic equipement.
+Each side of the trolley hold two $1.2V$ AA NiMh batteries (total is 4 x AA) which powers both the DC motors and the electronics with $\approx 4.8V$. The black and red wires from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.
 
-# Pendulum model
+## Pendulum model
 
 The pendulum model is composed of two intertwinned sub-system:
 
@@ -185,16 +193,16 @@ The *1 DoF pendulum* is characterized by a length $L$ and a weight $M$. It is a 
 
 The *1 DoF trolley* is characterized by the motors dynamics when translating the base loaded with an up-right pendulum. The model is $1^{st}$ order system characterized by its time constant $\tau$.
 
-## 1 rotational DoF pendulum
+### 1 rotational DoF pendulum
 
 
 
-## 1 translational DoF trolley
+### 1 translational DoF trolley
 
 
 
 
-# Control feedback loop
+## Control feedback loop
 
 
 Video of the inverted Pendulum when it encounters a wall:

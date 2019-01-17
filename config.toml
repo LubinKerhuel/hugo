@@ -304,14 +304,25 @@ enableGitInfo = true
 
 [[menu.main]]
   name = "Projects"
+  weight = 1
+
+[[menu.main]]
+  name = "Overview"
+  parent = "Projects"
   url = "#projects"
   weight = 1
+
+[[menu.main]]
+  name = "Inverted Pendulum"
+  parent = "Projects"
+  url = "/tutorial/Inverted_Pendulum_FlyWheels/"
+  weight = 5
 
 
 [[menu.main]]
   name = "About"
   url = "#about"
-  weight = 2
+  weight = 10
 
 
 # [[menu.main]]
@@ -345,7 +356,7 @@ enableGitInfo = true
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
+  weight = 20
  
 # [[menu.main]]
 #   name = "DC_MotorLab_INSA_Lyon"
