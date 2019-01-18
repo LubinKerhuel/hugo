@@ -14,7 +14,7 @@ type = "docs"  # Do not modify.
     parent = "Projects"    
     name = "Inverted Pendulum"
     # identifier = "inverted_pendulum"
-    weight = 2
+    weight = 10
     
 
 [[gallery_item]]

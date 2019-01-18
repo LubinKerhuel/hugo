@@ -316,8 +316,13 @@ enableGitInfo = true
   name = "Inverted Pendulum"
   parent = "Projects"
   url = "/docs/invertedpendulum/"
-  weight = 5
+  weight = 10
 
+[[menu.main]]
+  name = "DC Motor"
+  parent = "Projects"
+  url = "/project/LAB_DC_Motor/"
+  weight = 20
 
 [[menu.main]]
   name = "About"
@@ -372,6 +377,15 @@ enableGitInfo = true
 #    name = "CV"
 #    url = "files/cv.pdf"
 #    weight = 7
+
+[[menu.docs]]
+    parent = "Projects"    
+    name = "DC Motor"
+    # identifier = "inverted_pendulum"
+    weight = 20
+    url = "/project/LAB_DC_Motor/"
+
+
 
 # Search.
 [params.search]
