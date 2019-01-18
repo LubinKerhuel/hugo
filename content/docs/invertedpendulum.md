@@ -45,7 +45,7 @@ caption="click open full pendulum picture"
 numbered="false"
 >}}
 
-The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.
+The DIY hardware is presented. An overview of the model is given and a LQR feedback control loop tested.
 
 
 <!-- test code -->
