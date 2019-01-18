@@ -32,6 +32,10 @@ type = "docs"  # Do not modify.
 
 ## Presentation
 
+{{% alert note %}}
+Objective is to build an unstable pendulum platform to experiment various control loop to stabilize it.
+{{% /alert %}}
+
 {{< figure
 src="/img/pendulum_platform_top.png"
 link="/img/pendulum_platform.png"
@@ -40,10 +44,6 @@ title="Top of the inverted pendulum"
 caption="click open full pendulum picture"
 numbered="false"
 >}}
-
-{{% alert note %}}
-Objective is to build an unstable pendulum platform to experiment various control loop to stabilize it.
-{{% /alert %}}
 
 The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.
 
