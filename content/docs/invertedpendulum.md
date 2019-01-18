@@ -42,7 +42,7 @@ numbered="false"
 >}}
 
 {{% alert note %}}
-Objective is to build an `unstable pendulum platform` to experiment various control loop to stabilize it.
+Objective is to build an unstable pendulum platform to experiment various control loop to stabilize it.
 {{% /alert %}}
 
 The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.
