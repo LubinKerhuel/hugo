@@ -1,256 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping on Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/</link><description>Recent content in Rapid Control Prototyping on Rapid Control Prototyping</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2018 Lubin Kerhuel</copyright><lastBuildDate>Mon, 24 Dec 2018 00:00:00 +0100</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>Control feedback loop</title><link>https://lubin.kerhuel.eu/tutorial/inverted_pendulum_flywheels/controller/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/tutorial/inverted_pendulum_flywheels/controller/</guid><description>&lt;p&gt;Video of the inverted Pendulum when it encounters a wall:
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-&lt;iframe src=&#34;//player.vimeo.com/video/309876329&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;!-- You tube alternative:
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-&lt;iframe src=&#34;//www.youtube.com/embed/xbu4hXOnemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
---&gt;&lt;/p&gt;</description></item><item><title>Hardware</title><link>https://lubin.kerhuel.eu/tutorial/inverted_pendulum_flywheels/hardware/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/tutorial/inverted_pendulum_flywheels/hardware/</guid><description>
-&lt;p&gt;The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries.&lt;/p&gt;
-&lt;figure&gt;
-&lt;a href=&#34;https://lubin.kerhuel.eu/pendulum/pendulum_platform.png&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/pendulum/pendulum_platform_reduced_horizontal.png&#34; alt=&#34;click to open vertical full sized picture&#34; width=&#34;60%&#34; /&gt;
-&lt;/a&gt;
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-&lt;h4&gt;inverted Pendulum&lt;/h4&gt;
-&lt;p&gt;
-click to open vertical full sized picture
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;h1 id=&#34;head-electronics&#34;&gt;head electronics&lt;/h1&gt;
-&lt;h2 id=&#34;microcontroller&#34;&gt;Microcontroller&lt;/h2&gt;
-&lt;p&gt;The controller is a Microstick II board equipped with a dsPIC 33EP128MC202 running at $\approx 70\ MIPS$. It is powered through the USB modified cable which &lt;strong&gt;provide only the power supply&lt;/strong&gt; from 4 AA batteries hold in the base.&lt;/p&gt;
-&lt;figure&gt;
-&lt;a href=&#34;https://lubin.kerhuel.eu/pendulum/pendulum_top.png&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/pendulum/pendulum_top.png&#34; alt=&#34;A prototyping board support a Microstick II board with the *dsPIC 33EP128MC202*. A sensor board from drotek endowing the *ICM-20608* inertial sensor is screwed on the base board.&#34; width=&#34;80%&#34; /&gt;
-&lt;/a&gt;
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-&lt;h4&gt;head on top of the inverted pendulum&lt;/h4&gt;
-&lt;p&gt;
-A prototyping board support a Microstick II board with the &lt;em&gt;dsPIC 33EP128MC202&lt;/em&gt;. A sensor board from drotek endowing the &lt;em&gt;ICM-20608&lt;/em&gt; inertial sensor is screwed on the base board.
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;h2 id=&#34;imu-sensor&#34;&gt;IMU sensor&lt;/h2&gt;
-&lt;p&gt;The unique sensor used is a 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; IMU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:IMU&#34;&gt;&lt;a href=&#34;#fn:IMU&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; sensor: the ICM-20608 from invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34; target=&#34;_blank&#34;&gt;drotek board&lt;/a&gt; provides:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;a 3 axis Accelerometers and&lt;/li&gt;
-&lt;li&gt;a 3 axis rate gyro.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The ICM-20608 values are read through an I2C interface running at 400kHz. The I2C interface implemented through the I2C blocks for dsPIC enable hot plug of the sensor: The microcontroller sends an initialization sequence for the sensor each time this last is detected. Others sensor boards were tested endowed with MPU9250 and MPU6050 chips. The GY-91 board is currently the more commonly found on the market and has 10 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.&lt;/li&gt;
-&lt;li&gt;The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either a data logger, a radio link for telemetry module or an RC receiver capable of S.BUS or S.Port protocol (i.e. UART based).&lt;/p&gt;
-&lt;h1 id=&#34;hw_trolley&#34;&gt;Base trolley&lt;/h1&gt;
-&lt;h2 id=&#34;motors&#34;&gt;Motors&lt;/h2&gt;
-&lt;p&gt;The base trolley is based on low cost a 2-wheel remote control toy. Its electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module.&lt;/p&gt;
-&lt;div class=&#34;gallery&#34;&gt;
-&lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;FlyWheels toy package&#34; href=&#34;https://lubin.kerhuel.eu/img/01_toysrus_flywheels_package.jpg&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/img/01_toysrus_flywheels_package.jpg&#34; alt=&#34;&#34;&gt;
-&lt;/a&gt;
-&lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;Inside of the FlyWheels toy with its two DC motors&#34; href=&#34;https://lubin.kerhuel.eu/img/02_toysrus_flywheels_open.jpg&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/img/02_toysrus_flywheels_open.jpg&#34; alt=&#34;&#34;&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-&lt;!-- (pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg)) --&gt;
-&lt;h2 id=&#34;power-electronics&#34;&gt;Power electronics&lt;/h2&gt;
-&lt;p&gt;The L298N H bridge controls two DC motors. For each motor:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Two logic input signals set the motor state: direction, brake, or free-wheels.&lt;/li&gt;
-&lt;li&gt;The third logic input signal power-up the motor depending on to the state defined. This third signal is modulated with a 100Hz square periodic signal (PWM) whose duty cycle vary from 0% to 100%. It sets the torque for the motor.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The flat multicolor rubbon connects 6 logic control signal (3 for each motor) from the Microstick II dsPIC to the input of the L298N H bridge.&lt;/p&gt;
-&lt;figure&gt;
-&lt;a href=&#34;https://lubin.kerhuel.eu/pendulum/pendulum_base.png&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/pendulum/pendulum_base.png&#34; alt=&#34;A *L298N H bridge* (for arduino) power board drives the two DC motors of a modified *FlyWheels* toy. *Four AA batteries* powers the pendulum.&#34; width=&#34;60%&#34; /&gt;
-&lt;/a&gt;
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-&lt;h4&gt;Base trolley of the inverted pendulum&lt;/h4&gt;
-&lt;p&gt;
-A &lt;em&gt;L298N H bridge&lt;/em&gt; (for arduino) power board drives the two DC motors of a modified &lt;em&gt;FlyWheels&lt;/em&gt; toy. &lt;em&gt;Four AA batteries&lt;/em&gt; powers the pendulum.
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;h2 id=&#34;batteries&#34;&gt;Batteries&lt;/h2&gt;
-&lt;p&gt;Each side of the trolley hold two $1.2V$ AA NiMh batteries (total is 4 x AA) which powers both the DC motors and the electronics with $\approx 4.8V$. The black and red wires from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:DoF&#34;&gt;Degree of Freedom
-&lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:DoF&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:IMU&#34;&gt;Inertial Measurement Unit
-&lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:IMU&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/</guid><description>
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#hardware&#34;&gt;Hardware&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#head-electronics-imu-sensor-and-microcontroller&#34;&gt;head electronics: IMU sensor and microcontroller&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#hw_trolley&#34;&gt;Base trolley: Motor, batteries and power electronics&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#pendulum-model&#34;&gt;Pendulum model&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#1-rotational-dof-pendulum&#34;&gt;1 rotational DoF pendulum&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#1-translational-dof-trolley&#34;&gt;1 translational DoF trolley&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#control-feedback-loop&#34;&gt;Control feedback loop&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#acronyms&#34;&gt;Acronyms:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/nav&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Objective is to build an &lt;code&gt;unstable pendulum platform&lt;/code&gt; to experiment various control loop to stabilize it. The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.&lt;/p&gt;
-&lt;!-- test code --&gt;
-&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-&lt;iframe src=&#34;//player.vimeo.com/video/309876246&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;!-- You tube alternative:
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-&lt;iframe src=&#34;//www.youtube.com/embed/dWTK7dTUvCo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
---&gt;
-Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).&lt;/p&gt;
-&lt;p&gt;The top of the pendulum is comparable to a head where the microcontroller acts as a brain and the inertial sensor (accelerometers and rate gyro) as the inner ears. The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see &lt;a href=&#34;#hw_trolley&#34;&gt;pictures below&lt;/a&gt;).&lt;/p&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-&lt;div&gt;
-&lt;p&gt;&lt;code&gt;Stabilization overview:&lt;/code&gt; The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilize the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
-&lt;p&gt;The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries.&lt;/p&gt;
-&lt;figure&gt;
-&lt;a href=&#34;featured.png&#34;&gt;
-&lt;img src=&#34;featured_reduced_horizontal.png&#34; alt=&#34;click to open vertical full sized picture&#34; width=&#34;60%&#34; /&gt;
-&lt;/a&gt;
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-&lt;h4&gt;inverted Pendulum&lt;/h4&gt;
-&lt;p&gt;
-click to open vertical full sized picture
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;h3 id=&#34;head-electronics-imu-sensor-and-microcontroller&#34;&gt;head electronics: IMU sensor and microcontroller&lt;/h3&gt;
-&lt;p&gt;The controller is a Microstick II board equipped with a dsPIC 33EP128MC202 running at $\approx 70\ MIPS$. It is powered through the USB modified cable which &lt;strong&gt;provide only the power supply&lt;/strong&gt; from 4 AA batteries hold in the base.&lt;/p&gt;
-&lt;figure&gt;
-&lt;a href=&#34;Pendulum_Top.png&#34;&gt;
-&lt;img src=&#34;Pendulum_Top.png&#34; alt=&#34;A prototyping board support a Microstick II board with the *dsPIC 33EP128MC202*. A sensor board from drotek endowing the *ICM-20608* inertial sensor is screwed on the base board.&#34; width=&#34;80%&#34; /&gt;
-&lt;/a&gt;
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-&lt;h4&gt;head on top of the inverted pendulum&lt;/h4&gt;
-&lt;p&gt;
-A prototyping board support a Microstick II board with the &lt;em&gt;dsPIC 33EP128MC202&lt;/em&gt;. A sensor board from drotek endowing the &lt;em&gt;ICM-20608&lt;/em&gt; inertial sensor is screwed on the base board.
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;The unique sensor used is a 6 &lt;a href=&#34;DoF&#34; title=&#34;Degree of Freedom
-&#34; target=&#34;_blank&#34;&gt;DoF&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; IMU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:IMU&#34;&gt;&lt;a href=&#34;#fn:IMU&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; sensor: the ICM-20608 from invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34; target=&#34;_blank&#34;&gt;drotek board&lt;/a&gt; provides:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;a 3 axis Accelerometers and&lt;/li&gt;
-&lt;li&gt;a 3 axis rate gyro.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The ICM-20608 values are read through an I2C interface running at 400kHz. The I2C interface implemented through the I2C blocks for dsPIC enable hot plug of the sensor: The microcontroller sends an initialization sequence for the sensor each time this last is detected. Others sensor boards were tested endowed with MPU9250 and MPU6050 chips. The GY-91 board is currently the more commonly found on the market and has 10 &lt;a href=&#34;DoF&#34; title=&#34;Degree of Freedom
-&#34; target=&#34;_blank&#34;&gt;DoF&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.&lt;/li&gt;
-&lt;li&gt;The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either a data logger, a radio link for telemetry module or an RC receiver capable of S.BUS or S.Port protocol (i.e. UART based).&lt;/p&gt;
-&lt;h3 id=&#34;hw_trolley&#34;&gt;Base trolley: Motor, batteries and power electronics&lt;/h3&gt;
-&lt;div class=&#34;gallery&#34;&gt;
-&lt;a data-fancybox=&#34;gallery-flywheel_gallery&#34; href=&#34;https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/flywheel_gallery/01_Toysrus_FlyWheels_package.jpg&#34; data-caption=&#34;FlyWheels toy package&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/flywheel_gallery/01_Toysrus_FlyWheels_package.jpg&#34; alt=&#34;&#34;&gt;
-&lt;/a&gt;
-&lt;a data-fancybox=&#34;gallery-flywheel_gallery&#34; href=&#34;https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/flywheel_gallery/02_Toysrus_FlyWheels_Open.jpg&#34; data-caption=&#34;Inside of the FlyWheels toy with its two DC motors&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/flywheel_gallery/02_Toysrus_FlyWheels_Open.jpg&#34; alt=&#34;&#34;&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;The base trolley is based on low cost a 2-wheel remote control toy. Its electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module.&lt;/p&gt;
-&lt;!-- (pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg)) --&gt;
-&lt;p&gt;The L298N H bridge controls two DC motors. For each motor:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Two logic input signals set the motor state: direction, brake, or free-wheels.&lt;/li&gt;
-&lt;li&gt;The third logic input signal power-up the motor depending on to the state defined. This third signal is modulated with a 100Hz square periodic signal (PWM) whose duty cycle vary from 0% to 100%. It sets the torque for the motor.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The flat multicolor rubbon connects 6 logic control signal (3 for each motor) from the Microstick II dsPIC to the input of the L298N H bridge.&lt;/p&gt;
-&lt;figure&gt;
-&lt;a href=&#34;Pendulum_Base.png&#34;&gt;
-&lt;img src=&#34;Pendulum_Base.png&#34; alt=&#34;A *L298N H bridge* (for arduino) power board drives the two DC motors of a modified *FlyWheels* toy. *Four AA batteries* powers the pendulum.&#34; width=&#34;60%&#34; /&gt;
-&lt;/a&gt;
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-&lt;h4&gt;Base trolley of the inverted pendulum&lt;/h4&gt;
-&lt;p&gt;
-A &lt;em&gt;L298N H bridge&lt;/em&gt; (for arduino) power board drives the two DC motors of a modified &lt;em&gt;FlyWheels&lt;/em&gt; toy. &lt;em&gt;Four AA batteries&lt;/em&gt; powers the pendulum.
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;Each side of the trolley hold two $1.2V$ AA NiMh batteries (total is 4 x AA) which powers both the DC motors and the electronics with $\approx 4.8V$. The black and red wires from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.&lt;/p&gt;
-&lt;h2 id=&#34;pendulum-model&#34;&gt;Pendulum model&lt;/h2&gt;
-&lt;p&gt;The pendulum model is composed of two intertwinned sub-system:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The &lt;em&gt;1 DoF pendulum&lt;/em&gt;, with 1 rotational &lt;a href=&#34;DoF&#34; title=&#34;Degree of Freedom
-&#34; target=&#34;_blank&#34;&gt;DoF&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; around the wheels axis&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;1 DoF trolley&lt;/em&gt;, with 1 horizontal translation &lt;a href=&#34;DoF&#34; title=&#34;Degree of Freedom
-&#34; target=&#34;_blank&#34;&gt;DoF&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The &lt;em&gt;1 DoF pendulum&lt;/em&gt; is characterized by a length $L$ and a weight $M$. It is a $2^{nd}$ order system.&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;1 DoF trolley&lt;/em&gt; is characterized by the motors dynamics when translating the base loaded with an up-right pendulum. The model is $1^{st}$ order system characterized by its time constant $\tau$.&lt;/p&gt;
-&lt;h3 id=&#34;1-rotational-dof-pendulum&#34;&gt;1 rotational DoF pendulum&lt;/h3&gt;
-&lt;h3 id=&#34;1-translational-dof-trolley&#34;&gt;1 translational DoF trolley&lt;/h3&gt;
-&lt;h2 id=&#34;control-feedback-loop&#34;&gt;Control feedback loop&lt;/h2&gt;
-&lt;p&gt;Video of the inverted Pendulum when it encounters a wall:
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-&lt;iframe src=&#34;//player.vimeo.com/video/309876329&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;!-- You tube alternative:
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-&lt;iframe src=&#34;//www.youtube.com/embed/xbu4hXOnemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
---&gt;&lt;/p&gt;
-&lt;h4 id=&#34;acronyms&#34;&gt;Acronyms:&lt;/h4&gt;
-&lt;!--
-&lt;div class=&#34;gallery&#34;&gt;
-&lt;/div&gt;
---&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:DoF&#34;&gt;Degree of Freedom
-&lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:DoF&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:IMU&#34;&gt;Inertial Measurement Unit
-&lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:IMU&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>Pendulum model</title><link>https://lubin.kerhuel.eu/tutorial/inverted_pendulum_flywheels/model/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/tutorial/inverted_pendulum_flywheels/model/</guid><description>
-&lt;p&gt;The pendulum model is composed of two intertwinned sub-system:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The &lt;em&gt;1 DoF pendulum&lt;/em&gt;, with 1 rotational DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; around the wheels axis&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;1 DoF trolley&lt;/em&gt;, with 1 horizontal translation DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The &lt;em&gt;1 DoF pendulum&lt;/em&gt; is characterized by a length $L$ and a weight $M$. It is a $2^{nd}$ order system.&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;1 DoF trolley&lt;/em&gt; is characterized by the motors dynamics when translating the base loaded with an up-right pendulum. The model is $1^{st}$ order system characterized by its time constant $\tau$.&lt;/p&gt;
-&lt;h1 id=&#34;1-rotational-dof-pendulum&#34;&gt;1 rotational DoF pendulum&lt;/h1&gt;
-&lt;p&gt;bla bla bla&lt;/p&gt;
-&lt;h1 id=&#34;1-translational-dof-trolley&#34;&gt;1 translational DoF trolley&lt;/h1&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:DoF&#34;&gt;Degree of Freedom
-&lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:DoF&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab_dc_motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab_dc_motor/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping on Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/</link><description>Recent content in Rapid Control Prototyping on Rapid Control Prototyping</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2018 Lubin Kerhuel</copyright><lastBuildDate>Mon, 24 Dec 2018 00:00:00 +0100</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/</guid><description/></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab_dc_motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab_dc_motor/</guid><description>
 &lt;p&gt;Control a 24V DC motor using the MCLV V2 board with a dsPIC 33EP256MC506.
 This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
 &lt;p&gt;The hands-on Lab subject available at: &lt;a href=&#34;https://rtdc.ctrl-elec.fr/&#34; target=&#34;_blank&#34;&gt;https://rtdc.ctrl-elec.fr/&lt;/a&gt;.&lt;/p&gt;
@@ -263,28 +11,7 @@ This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Romain DELPOUX (Romain.Delpoux at insa-lyon.fr), Assistant Professor, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.&lt;/li&gt;
 &lt;li&gt;Lubin KERHUEL (Lubin.Kerhuel at microchip.com), Dr-Engineer, Microchip Technology Inc.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Example Page11</title><link>https://lubin.kerhuel.eu/tutorial/subtutorial/example/</link><pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/tutorial/subtutorial/example/</guid><description>
-&lt;p&gt;#include &amp;ldquo;includeme.md&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
-&lt;h1 id=&#34;main-title&#34;&gt;main title&lt;/h1&gt;
-&lt;p&gt;Simulink Simulink, Mavlink keywords.
-Matlab,&lt;/p&gt;
-&lt;h2 id=&#34;2nd-bullet&#34;&gt;2nd bullet&lt;/h2&gt;
-&lt;p&gt;$$ \frac{\pi}{2} = 5 $$&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lubin.kerhuel.eu/img/Plane_Firestar.jpg&#34; alt=&#34;Plane_Firestar.jpg&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;Matlab code
-1 + 2 . 0
-5 6 8 4 8 sin(2)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-&lt;h1 id=&#34;second-main-title&#34;&gt;second main title&lt;/h1&gt;
-&lt;p&gt;piou piou&lt;/p&gt;</description></item><item><title>Example Page 13</title><link>https://lubin.kerhuel.eu/tutorial/subtutorial/example3/</link><pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/tutorial/subtutorial/example3/</guid><description>
-&lt;h1 id=&#34;je-suis-un-titre&#34;&gt;je suis un titre&lt;/h1&gt;
-&lt;p&gt;$\frac{1}{pi}$&lt;/p&gt;
-&lt;p&gt;mavlink&lt;/p&gt;</description></item><item><title>Example Page1111</title><link>https://lubin.kerhuel.eu/tutorial/subtutorial/hardware_setup/</link><pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/tutorial/subtutorial/hardware_setup/</guid><description>
+&lt;/ul&gt;</description></item><item><title/><link>https://lubin.kerhuel.eu/tutorial/subtutorial3/hardware_setup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/tutorial/subtutorial3/hardware_setup/</guid><description>
 &lt;h1 id=&#34;simulink-model-to-target-a-dspic-mclv-board-running-a-dc-motor&#34;&gt;Simulink model to target a dsPIC MCLV board running a DC motor&lt;/h1&gt;
 &lt;p&gt;The model contains blocks to configure &lt;strong&gt;dsPIC peripheral&lt;/strong&gt; (PWM, ADC and QEI) to run a &lt;strong&gt;DC motor&lt;/strong&gt; with the &lt;strong&gt;MCLV-V2 board&lt;/strong&gt; equipped with the &lt;strong&gt;dsPIC-33EP256MC506 PIM&lt;/strong&gt; using internal Op-Amps.
 Sensors measurements are visualized on the computer while the motor is running.&lt;/p&gt;
@@ -333,105 +60,137 @@ use the &lt;strong&gt;Microchip -&amp;gt; Flash&lt;/strong&gt; within the Simuli
 &lt;em&gt;fig: The picgui interface decode the incoming UART data stream and plot in real-time received values, here potentiometer, motor speed and current measured. Plots in figure are realized with a matlab script which is continuously refreshing the graphs using incoming data. This script can be modified providing all the matlab capabilities to customize visualization or perform further analysis on received data in real-time.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;./../../README.md&#34;&gt;Back to project presentation&lt;/a&gt;&lt;/p&gt;
 &lt;!--- math test not working on GitHub: $\sqrt(2) + \frac{1}{2^5}$
-comment --&gt;</description></item><item><title/><link>https://lubin.kerhuel.eu/tutorial/subtutorial2/hardware_setup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/tutorial/subtutorial2/hardware_setup/</guid><description>
-&lt;h1 id=&#34;simulink-model-to-target-a-dspic-mclv-board-running-a-dc-motor&#34;&gt;Simulink model to target a dsPIC MCLV board running a DC motor&lt;/h1&gt;
-&lt;p&gt;The model contains blocks to configure &lt;strong&gt;dsPIC peripheral&lt;/strong&gt; (PWM, ADC and QEI) to run a &lt;strong&gt;DC motor&lt;/strong&gt; with the &lt;strong&gt;MCLV-V2 board&lt;/strong&gt; equipped with the &lt;strong&gt;dsPIC-33EP256MC506 PIM&lt;/strong&gt; using internal Op-Amps.
-Sensors measurements are visualized on the computer while the motor is running.&lt;/p&gt;
-&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
-&lt;p&gt;The model &lt;a href=&#34;[fig][fig:Model_Hardware_Test_withSampleTime]&#34; target=&#34;_blank&#34;&gt;MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl&lt;/a&gt; is for code generation (peripheral blocks have no effects during a simulation).
-Open the Simulink model and push the build button on the top right, below the Simulink windows menu bar.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;./../Fig/Model_Hardware_Test_withSampleTime.png&#34; title=&#34;Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.&#34;&gt;&lt;img src=&#34;./../Fig/Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;Simulink Model&#34; title=&#34;Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.&#34; /&gt;&lt;/a&gt;
-*fig: Model &lt;a href=&#34;./MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl&#34;&gt;MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl&lt;/a&gt; set-up the dsPIC 33EP256MC506 peripherals with internal op-amps for the MCLV-v2 board. Two PWM signals updated &lt;strong&gt;at 20kHz&lt;/strong&gt; drives a DC motor through a H mosfet structure. One QEI peripheral sampled &lt;strong&gt;at 500Hz&lt;/strong&gt; provides shaft position and speed from an optical encoder. Two ADC channels provides respectively the board potentiometer position and the current measurement from a shunt resistor. These four measurements are under-sampled &lt;strong&gt;at 100Hz&lt;/strong&gt; and sent through the 115200 UART connection to the computer and decoded with the picgui graphical interface.*&lt;/p&gt;
-&lt;h3 id=&#34;hardware-requirements&#34;&gt;Hardware requirements:&lt;/h3&gt;
+comment --&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/docs/invertedpendulum/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/docs/invertedpendulum/</guid><description>
+&lt;h2 id=&#34;presentation&#34;&gt;Presentation&lt;/h2&gt;
+&lt;figure&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_platform.png&#34;&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_platform_top.png&#34; alt=&#34;click open full pendulum picture&#34; width=&#34;45%&#34; /&gt;
+&lt;/a&gt;
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+&lt;h4&gt;Top of the inverted pendulum&lt;/h4&gt;
+&lt;p&gt;
+click open full pendulum picture
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Objective is to build an &lt;code&gt;unstable pendulum platform&lt;/code&gt; to experiment various control loop to stabilize it. The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.&lt;/p&gt;
+&lt;!-- test code --&gt;
+&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+&lt;iframe src=&#34;//player.vimeo.com/video/309876246&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;!-- You tube alternative:
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+&lt;iframe src=&#34;//www.youtube.com/embed/dWTK7dTUvCo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+--&gt;
+Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).&lt;/p&gt;
+&lt;p&gt;The top of the pendulum is comparable to a head where the microcontroller acts as a brain and the inertial sensor (accelerometers and rate gyro) as the inner ears. The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see &lt;a href=&#34;#hw_trolley&#34;&gt;pictures below&lt;/a&gt;).&lt;/p&gt;
+&lt;h1 id=&#34;hardware&#34;&gt;hardware&lt;/h1&gt;
+&lt;p&gt;The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries.&lt;/p&gt;
+&lt;figure&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_platform.png&#34;&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_platform_reduced_horizontal.png&#34; alt=&#34;click to open vertical full sized picture&#34; width=&#34;60%&#34; /&gt;
+&lt;/a&gt;
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+&lt;h4&gt;inverted Pendulum&lt;/h4&gt;
+&lt;p&gt;
+click to open vertical full sized picture
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id=&#34;head-electronics&#34;&gt;head electronics&lt;/h2&gt;
+&lt;h3 id=&#34;microcontroller&#34;&gt;Microcontroller&lt;/h3&gt;
+&lt;p&gt;The controller is a Microstick II board equipped with a dsPIC 33EP128MC202 running at $\approx 70\ MIPS$. It is powered through the USB modified cable which &lt;strong&gt;provide only the power supply&lt;/strong&gt; from 4 AA batteries hold in the base.&lt;/p&gt;
+&lt;figure&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_top.png&#34;&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_top.png&#34; alt=&#34;A prototyping board support a Microstick II board with the *dsPIC 33EP128MC202*. A sensor board from drotek endowing the *ICM-20608* inertial sensor is screwed on the base board.&#34; width=&#34;80%&#34; /&gt;
+&lt;/a&gt;
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+&lt;h4&gt;head on top of the inverted pendulum&lt;/h4&gt;
+&lt;p&gt;
+A prototyping board support a Microstick II board with the &lt;em&gt;dsPIC 33EP128MC202&lt;/em&gt;. A sensor board from drotek endowing the &lt;em&gt;ICM-20608&lt;/em&gt; inertial sensor is screwed on the base board.
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;imu-sensor&#34;&gt;IMU sensor&lt;/h3&gt;
+&lt;p&gt;The unique sensor used is a 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; IMU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:IMU&#34;&gt;&lt;a href=&#34;#fn:IMU&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; sensor: the ICM-20608 from invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34; target=&#34;_blank&#34;&gt;drotek board&lt;/a&gt; provides:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/dsPICDEMMCLV-2DevelopmentBoard866&#34; title=&#34;Motor Control Board&#34; target=&#34;_blank&#34;&gt;MCLV-V2&lt;/a&gt; Motor Control Board&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/DevelopmentTools/ProductDetails/ma330031&#34; title=&#34;Daughter board for MCLV motor control board&#34; target=&#34;_blank&#34;&gt;PIM dsPIC33EP256MC506&lt;/a&gt; with internal Op-Amp&lt;/li&gt;
-&lt;li&gt;Programmer (&lt;a href=&#34;https://www.microchip.com/pickit4&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;PICkit 4&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/icd4&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;ICD4&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/realice&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;Real-Ice&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/pickit3&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;PICkit 3&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/icd3&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;ICD3&lt;/a&gt;, &amp;hellip;)&lt;/li&gt;
-&lt;li&gt;DC motor (&lt;a href=&#34;https://uk.rs-online.com/web/p/dc-motors/0716200/&#34; title=&#34;Parvalux Brushed DC Motor, 90 W, 24 V dc, 3000 rpm, 7.93mm Shaft Diameter&#34; target=&#34;_blank&#34;&gt;Pravalux Brushed DC Motor, 90 W, 24 V dc, 3000 rpm&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Cable to send data from the MCLV board (Tx) to the PC (Rx) (like a &lt;a href=&#34;https://www.ftdichip.com/Products/Cables/USBTTLSerial.htm&#34; title=&#34;USB TTL Serial Cables&#34; target=&#34;_blank&#34;&gt;FTDI cable&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;a 3 axis Accelerometers and&lt;/li&gt;
+&lt;li&gt;a 3 axis rate gyro.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;software-requirements&#34;&gt;Software requirements:&lt;/h3&gt;
+&lt;p&gt;The ICM-20608 values are read through an I2C interface running at 400kHz. The I2C interface implemented through the I2C blocks for dsPIC enable hot plug of the sensor: The microcontroller sends an initialization sequence for the sensor each time this last is detected. Others sensor boards were tested endowed with MPU9250 and MPU6050 chips. The GY-91 board is currently the more commonly found on the market and has 10 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Matlab/Simulink
-&lt;ul&gt;
-&lt;li&gt;Embedded coder (Matlab Coder &amp;amp; Simulink Coder)&lt;/li&gt;
-&lt;li&gt;Fixed point toolbox&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34; title=&#34;Blockset for dsPIC and PIC32&#34; target=&#34;_blank&#34;&gt;MPLAB device blocks for Simulink&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/MPLABX&#34; title=&#34;Microchip development environment&#34; target=&#34;_blank&#34;&gt;MPLAB X IDE&lt;/a&gt; development (required to flash the binary from matlab)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/XC16&#34; title=&#34;Microchip Compiler for dsPIC familly&#34; target=&#34;_blank&#34;&gt;XC16&lt;/a&gt; compiler&lt;/li&gt;
+&lt;li&gt;The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.&lt;/li&gt;
+&lt;li&gt;The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;experiment&#34;&gt;Experiment&lt;/h2&gt;
-&lt;h3 id=&#34;generate-code-and-compile&#34;&gt;Generate code and compile:&lt;/h3&gt;
-&lt;p&gt;The build icon on top right of Simulink model, (see &lt;a href=&#34;./../Fig/Model_Hardware_Test_withSampleTime.png&#34; title=&#34;Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.&#34;&gt;fig&lt;/a&gt; above) do:
-1. generates c source code,
-2. compiles c code and
-3. flash the resulting binary to the MCLV targeted board.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If programming the board fails (not powered, not connected,&amp;hellip;),
-use the &lt;strong&gt;Microchip -&amp;gt; Flash&lt;/strong&gt; within the Simulink model menu.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;run-the-dc-motor&#34;&gt;Run the DC motor:&lt;/h3&gt;
-&lt;p&gt;With the MCLV2 board powered and programmed, rotate the potentiometer to accelerate motor / reverse direction. &lt;strong&gt;Setting the potentiometer at middle position (off) at power on to avoid current surge.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;data-visualization-with-picgui&#34;&gt;Data Visualization with picgui:&lt;/h3&gt;
-&lt;p&gt;Open the picgui interface (&lt;a href=&#34;./../Fig/DataVisu.png&#34; title=&#34;picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured&#34;&gt;fig&lt;/a&gt;) (type &lt;strong&gt;picgui&lt;/strong&gt; at matlab prompt or double click on the &lt;strong&gt;Interface Tx-Matlab block&lt;/strong&gt; in the model)
-1. Select host UART port and connect at 115200 bauds
-1. Replace the default script within the picgui interface to a call the customized matlab script &lt;a href=&#34;see figure below&#34; target=&#34;_blank&#34;&gt;DataVisu.m&lt;/a&gt;
-1. Push the &lt;strong&gt;start&lt;/strong&gt; button to visualize runtime curves showing potentiometer, motor position, motor speed and current measured on shunt resistors&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;./../Fig/DataVisu.png&#34; title=&#34;picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured&#34;&gt;&lt;img src=&#34;./../Fig/DataVisu.png&#34; alt=&#34;picgui interface&#34; title=&#34;picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured&#34; /&gt;&lt;/a&gt;
-&lt;em&gt;fig: The picgui interface decode the incoming UART data stream and plot in real-time received values, here potentiometer, motor speed and current measured. Plots in figure are realized with a matlab script which is continuously refreshing the graphs using incoming data. This script can be modified providing all the matlab capabilities to customize visualization or perform further analysis on received data in real-time.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;./../../README.md&#34;&gt;Back to project presentation&lt;/a&gt;&lt;/p&gt;
-&lt;!--- math test not working on GitHub: $\sqrt(2) + \frac{1}{2^5}$
-comment --&gt;</description></item><item><title/><link>https://lubin.kerhuel.eu/tutorial/subtutorial3/hardware_setup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/tutorial/subtutorial3/hardware_setup/</guid><description>
-&lt;h1 id=&#34;simulink-model-to-target-a-dspic-mclv-board-running-a-dc-motor&#34;&gt;Simulink model to target a dsPIC MCLV board running a DC motor&lt;/h1&gt;
-&lt;p&gt;The model contains blocks to configure &lt;strong&gt;dsPIC peripheral&lt;/strong&gt; (PWM, ADC and QEI) to run a &lt;strong&gt;DC motor&lt;/strong&gt; with the &lt;strong&gt;MCLV-V2 board&lt;/strong&gt; equipped with the &lt;strong&gt;dsPIC-33EP256MC506 PIM&lt;/strong&gt; using internal Op-Amps.
-Sensors measurements are visualized on the computer while the motor is running.&lt;/p&gt;
-&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
-&lt;p&gt;The model &lt;a href=&#34;[fig][fig:Model_Hardware_Test_withSampleTime]&#34; target=&#34;_blank&#34;&gt;MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl&lt;/a&gt; is for code generation (peripheral blocks have no effects during a simulation).
-Open the Simulink model and push the build button on the top right, below the Simulink windows menu bar.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;./../Fig/Model_Hardware_Test_withSampleTime.png&#34; title=&#34;Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.&#34;&gt;&lt;img src=&#34;./../Fig/Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;Simulink Model&#34; title=&#34;Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.&#34; /&gt;&lt;/a&gt;
-*fig: Model &lt;a href=&#34;./MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl&#34;&gt;MCLV2_dsPIC33EP256MC506_externalOpAmp_HardwareTest.mdl&lt;/a&gt; set-up the dsPIC 33EP256MC506 peripherals with internal op-amps for the MCLV-v2 board. Two PWM signals updated &lt;strong&gt;at 20kHz&lt;/strong&gt; drives a DC motor through a H mosfet structure. One QEI peripheral sampled &lt;strong&gt;at 500Hz&lt;/strong&gt; provides shaft position and speed from an optical encoder. Two ADC channels provides respectively the board potentiometer position and the current measurement from a shunt resistor. These four measurements are under-sampled &lt;strong&gt;at 100Hz&lt;/strong&gt; and sent through the 115200 UART connection to the computer and decoded with the picgui graphical interface.*&lt;/p&gt;
-&lt;h3 id=&#34;hardware-requirements&#34;&gt;Hardware requirements:&lt;/h3&gt;
+&lt;p&gt;The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either a data logger, a radio link for telemetry module or an RC receiver capable of S.BUS or S.Port protocol (i.e. UART based).&lt;/p&gt;
+&lt;h2 id=&#34;hw_trolley&#34;&gt;Base trolley&lt;/h2&gt;
+&lt;h3 id=&#34;motors&#34;&gt;Motors&lt;/h3&gt;
+&lt;p&gt;The base trolley is based on low cost a 2-wheel remote control toy. Its electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module.&lt;/p&gt;
+&lt;div class=&#34;gallery&#34;&gt;
+&lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;FlyWheels toy package&#34; href=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg&#34;&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg&#34; alt=&#34;&#34;&gt;
+&lt;/a&gt;
+&lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;Inside of the FlyWheels toy with its two DC motors&#34; href=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg&#34;&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg&#34; alt=&#34;&#34;&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- (pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg)) --&gt;
+&lt;h3 id=&#34;power-electronics&#34;&gt;Power electronics&lt;/h3&gt;
+&lt;p&gt;The L298N H bridge controls two DC motors. For each motor:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/dsPICDEMMCLV-2DevelopmentBoard866&#34; title=&#34;Motor Control Board&#34; target=&#34;_blank&#34;&gt;MCLV-V2&lt;/a&gt; Motor Control Board&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/DevelopmentTools/ProductDetails/ma330031&#34; title=&#34;Daughter board for MCLV motor control board&#34; target=&#34;_blank&#34;&gt;PIM dsPIC33EP256MC506&lt;/a&gt; with internal Op-Amp&lt;/li&gt;
-&lt;li&gt;Programmer (&lt;a href=&#34;https://www.microchip.com/pickit4&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;PICkit 4&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/icd4&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;ICD4&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/realice&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;Real-Ice&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/pickit3&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;PICkit 3&lt;/a&gt;, &lt;a href=&#34;https://www.microchip.com/icd3&#34; title=&#34;Microchip programmer&#34; target=&#34;_blank&#34;&gt;ICD3&lt;/a&gt;, &amp;hellip;)&lt;/li&gt;
-&lt;li&gt;DC motor (&lt;a href=&#34;https://uk.rs-online.com/web/p/dc-motors/0716200/&#34; title=&#34;Parvalux Brushed DC Motor, 90 W, 24 V dc, 3000 rpm, 7.93mm Shaft Diameter&#34; target=&#34;_blank&#34;&gt;Pravalux Brushed DC Motor, 90 W, 24 V dc, 3000 rpm&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Cable to send data from the MCLV board (Tx) to the PC (Rx) (like a &lt;a href=&#34;https://www.ftdichip.com/Products/Cables/USBTTLSerial.htm&#34; title=&#34;USB TTL Serial Cables&#34; target=&#34;_blank&#34;&gt;FTDI cable&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Two logic signals set the motor state: direction, brake, or free-wheels.&lt;/li&gt;
+&lt;li&gt;One logic signal power-up the motor depending on to the state defined. This third signal is modulated with a 100Hz square periodic signal (PWM) whose duty cycle vary from 0% to 100%. It sets the torque for the motor.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;software-requirements&#34;&gt;Software requirements:&lt;/h3&gt;
+&lt;p&gt;The flat multicolor rubbon connects 6 logic control signal (3 for each motor) from the Microstick II dsPIC to the input of the L298N H bridge.&lt;/p&gt;
+&lt;figure&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_base.png&#34;&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_base.png&#34; alt=&#34;A *L298N H bridge* (for arduino) power board drives the two DC motors of a modified *FlyWheels* toy. *Four AA batteries* powers the pendulum.&#34; width=&#34;60%&#34; /&gt;
+&lt;/a&gt;
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+&lt;h4&gt;Base trolley of the inverted pendulum&lt;/h4&gt;
+&lt;p&gt;
+A &lt;em&gt;L298N H bridge&lt;/em&gt; (for arduino) power board drives the two DC motors of a modified &lt;em&gt;FlyWheels&lt;/em&gt; toy. &lt;em&gt;Four AA batteries&lt;/em&gt; powers the pendulum.
+&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;batteries&#34;&gt;Batteries&lt;/h3&gt;
+&lt;p&gt;Four $1.2V$ AA NiMh batteries dispatched on both side of the trolley powers the motors and the electronics with $\approx 4.8V$. The black and red wires from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.&lt;/p&gt;
+&lt;h1 id=&#34;model&#34;&gt;Model&lt;/h1&gt;
+&lt;p&gt;The pendulum model is composed of two intertwinned sub-system:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Matlab/Simulink
-&lt;ul&gt;
-&lt;li&gt;Embedded coder (Matlab Coder &amp;amp; Simulink Coder)&lt;/li&gt;
-&lt;li&gt;Fixed point toolbox&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34; title=&#34;Blockset for dsPIC and PIC32&#34; target=&#34;_blank&#34;&gt;MPLAB device blocks for Simulink&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/MPLABX&#34; title=&#34;Microchip development environment&#34; target=&#34;_blank&#34;&gt;MPLAB X IDE&lt;/a&gt; development (required to flash the binary from matlab)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microchip.com/XC16&#34; title=&#34;Microchip Compiler for dsPIC familly&#34; target=&#34;_blank&#34;&gt;XC16&lt;/a&gt; compiler&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;1 DoF pendulum&lt;/em&gt;, with 1 rotational DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; around the wheels axis&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;1 DoF trolley&lt;/em&gt;, with 1 horizontal translation DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;experiment&#34;&gt;Experiment&lt;/h2&gt;
-&lt;h3 id=&#34;generate-code-and-compile&#34;&gt;Generate code and compile:&lt;/h3&gt;
-&lt;p&gt;The build icon on top right of Simulink model, (see &lt;a href=&#34;./../Fig/Model_Hardware_Test_withSampleTime.png&#34; title=&#34;Simulink model to generate code for the MCLV-V2 board with a dsPIC PIM to run and log data from a DC motor.&#34;&gt;fig&lt;/a&gt; above) do:
-1. generates c source code,
-2. compiles c code and
-3. flash the resulting binary to the MCLV targeted board.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If programming the board fails (not powered, not connected,&amp;hellip;),
-use the &lt;strong&gt;Microchip -&amp;gt; Flash&lt;/strong&gt; within the Simulink model menu.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;run-the-dc-motor&#34;&gt;Run the DC motor:&lt;/h3&gt;
-&lt;p&gt;With the MCLV2 board powered and programmed, rotate the potentiometer to accelerate motor / reverse direction. &lt;strong&gt;Setting the potentiometer at middle position (off) at power on to avoid current surge.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;data-visualization-with-picgui&#34;&gt;Data Visualization with picgui:&lt;/h3&gt;
-&lt;p&gt;Open the picgui interface (&lt;a href=&#34;./../Fig/DataVisu.png&#34; title=&#34;picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured&#34;&gt;fig&lt;/a&gt;) (type &lt;strong&gt;picgui&lt;/strong&gt; at matlab prompt or double click on the &lt;strong&gt;Interface Tx-Matlab block&lt;/strong&gt; in the model)
-1. Select host UART port and connect at 115200 bauds
-1. Replace the default script within the picgui interface to a call the customized matlab script &lt;a href=&#34;see figure below&#34; target=&#34;_blank&#34;&gt;DataVisu.m&lt;/a&gt;
-1. Push the &lt;strong&gt;start&lt;/strong&gt; button to visualize runtime curves showing potentiometer, motor position, motor speed and current measured on shunt resistors&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;./../Fig/DataVisu.png&#34; title=&#34;picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured&#34;&gt;&lt;img src=&#34;./../Fig/DataVisu.png&#34; alt=&#34;picgui interface&#34; title=&#34;picgui, custom script and figure that present in real-time potentiometer, motor speed and current measured&#34; /&gt;&lt;/a&gt;
-&lt;em&gt;fig: The picgui interface decode the incoming UART data stream and plot in real-time received values, here potentiometer, motor speed and current measured. Plots in figure are realized with a matlab script which is continuously refreshing the graphs using incoming data. This script can be modified providing all the matlab capabilities to customize visualization or perform further analysis on received data in real-time.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;./../../README.md&#34;&gt;Back to project presentation&lt;/a&gt;&lt;/p&gt;
-&lt;!--- math test not working on GitHub: $\sqrt(2) + \frac{1}{2^5}$
-comment --&gt;</description></item><item><title>Prototypage Rapide avec Simulink sur dsPIC</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid><description>
+&lt;p&gt;The &lt;em&gt;1 DoF pendulum&lt;/em&gt; is characterized by a length $L$ and a weight $M$. It is a $2^{nd}$ order system.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;1 DoF trolley&lt;/em&gt; is characterized by the motors dynamics when translating the base loaded with an up-right pendulum. The model is $1^{st}$ order system characterized by its time constant $\tau$.&lt;/p&gt;
+&lt;h2 id=&#34;1-rotational-dof-pendulum&#34;&gt;1 rotational DoF pendulum&lt;/h2&gt;
+&lt;p&gt;bla bla bla&lt;/p&gt;
+&lt;h2 id=&#34;1-translational-dof-trolley&#34;&gt;1 translational DoF trolley&lt;/h2&gt;
+&lt;h1 id=&#34;controller&#34;&gt;Controller&lt;/h1&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;code&gt;Stabilization overview:&lt;/code&gt; The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilize the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Video of the inverted Pendulum when it encounters a wall:
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+&lt;iframe src=&#34;//player.vimeo.com/video/309876329&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;!-- You tube alternative:
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+&lt;iframe src=&#34;//www.youtube.com/embed/xbu4hXOnemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+--&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:DoF&#34;&gt;Degree of Freedom
+&lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:DoF&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:IMU&#34;&gt;Inertial Measurement Unit
+&lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:IMU&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>Prototypage Rapide avec Simulink sur dsPIC</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid><description>
 &lt;h1 id=&#34;prototypage-rapide&#34;&gt;Prototypage rapide&lt;/h1&gt;
 &lt;h2 id=&#34;avec-simulink-sur-dspic&#34;&gt;avec Simulink sur dsPIC&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34; target=&#34;_blank&#34;&gt;MPLAB device blocks for Simulink&lt;/a&gt;&lt;/p&gt;

@@ -315,7 +315,7 @@ enableGitInfo = true
 [[menu.main]]
   name = "Inverted Pendulum"
   parent = "Projects"
-  url = "/tutorial/Inverted_Pendulum_FlyWheels/"
+  url = "/docs/invertedpendulum/"
   weight = 5
 
 
