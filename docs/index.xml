@@ -62,6 +62,11 @@ use the &lt;strong&gt;Microchip -&amp;gt; Flash&lt;/strong&gt; within the Simuli
 &lt;!--- math test not working on GitHub: $\sqrt(2) + \frac{1}{2^5}$
 comment --&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/docs/invertedpendulum/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/docs/invertedpendulum/</guid><description>
 &lt;h2 id=&#34;presentation&#34;&gt;Presentation&lt;/h2&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;div&gt;
+&lt;p&gt;Objective is to build an unstable pendulum platform to experiment various control loop to stabilize it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;figure&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_platform.png&#34;&gt;
 &lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_platform_top.png&#34; alt=&#34;click open full pendulum picture&#34; width=&#34;45%&#34; /&gt;
@@ -73,7 +78,7 @@ click open full pendulum picture
 &lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;Objective is to build an &lt;code&gt;unstable pendulum platform&lt;/code&gt; to experiment various control loop to stabilize it. The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.&lt;/p&gt;
+&lt;p&gt;The DIY hardware is presented. An overview of the model is given and a LQR feedback control loop tested.&lt;/p&gt;
 &lt;!-- test code --&gt;
 &lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
 &lt;iframe src=&#34;//player.vimeo.com/video/309876246&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
@@ -168,11 +173,7 @@ A &lt;em&gt;L298N H bridge&lt;/em&gt; (for arduino) power board drives the two D
 &lt;p&gt;bla bla bla&lt;/p&gt;
 &lt;h2 id=&#34;1-translational-dof-trolley&#34;&gt;1 translational DoF trolley&lt;/h2&gt;
 &lt;h1 id=&#34;controller&#34;&gt;Controller&lt;/h1&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-&lt;div&gt;
 &lt;p&gt;&lt;code&gt;Stabilization overview:&lt;/code&gt; The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilize the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;p&gt;Video of the inverted Pendulum when it encounters a wall:
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
 &lt;iframe src=&#34;//player.vimeo.com/video/309876329&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
