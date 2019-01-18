@@ -41,7 +41,11 @@ caption="click open full pendulum picture"
 numbered="false"
 >}}
 
-Objective is to build an `unstable pendulum platform` to experiment various control loop to stabilize it. The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.
+{{% alert note %}}
+Objective is to build an `unstable pendulum platform` to experiment various control loop to stabilize it.
+{{% /alert %}}
+
+The platform hardware is described below; a brief overview of the model is given and a LQR algorithm implemented as proof of concept.
 
 
 <!-- test code -->
@@ -161,9 +165,8 @@ bla bla bla
 
 # Controller
 
-{{% alert note %}}
 `Stabilization overview:` The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilize the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.
-{{% /alert %}}
+
 
 
 
