@@ -65,7 +65,7 @@ The top of the pendulum is comparable to a head where the microcontroller acts a
 
 # hardware
 
-The head and the base trolley are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from the wheels axis to the top. Wheels have a diameters of $8cm$. Pendulum total weight is $200g$ including $111g$ from the 4 AA batteries. 
+The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries. 
 
 {{< figure
 src="/img/pendulum_platform_reduced_horizontal.png"
@@ -106,7 +106,7 @@ The ICM-20608 values are read through an I2C interface running at 400kHz. The I2
 - The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.
 - The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.
 
-The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either a data logger, a radio link for telemetry module, or an RC receiver capable of S.BUS or S.Port protocol (i.e. UART based).
+The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either a data logger, a radio link for telemetry module or an RC receiver capable of S.BUS or S.Port protocol (i.e. UART based).
 
 
 
@@ -114,7 +114,7 @@ The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v
 
 ### Motors 
 
-The base trolley is based on a low cost a 2-wheeled remote control toy. Its original electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module. 
+The base trolley is based on low cost a 2-wheel remote control toy. Its electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module. 
 
 {{< gallery album="1" >}}
 
@@ -139,7 +139,7 @@ numbered="true"
 
 ### Batteries
 
-Four $1.2V$ AA NiMh batteries dispatched on both side of the trolley powers the motors and the electronics with $\approx 4.8V$. The black and red wires from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.
+Four $1.2V$ AA NiMh batteries are dispatched on both side of the trolley. $\approx 4.8V$ powers the motors and the electronics. The black and red wires from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.
 
 
 
