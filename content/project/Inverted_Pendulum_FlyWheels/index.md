@@ -37,15 +37,25 @@ comments = false  # Show comments?
 #   Otherwise, set `slides = ""`.
 slides = ""
 
+
 # Links (optional).
 url_pdf = ""
+url_preprint = ""
+url_code = ""
+url_dataset = ""
+url_project = "/docs/invertedpendulum/"
 url_slides = ""
 url_video = "https://vimeo.com/album/5666929"
-url_code = ""
+url_poster = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
 #url_custom = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
+
+# url_custom = [
+# 	{name = "Lab", url = "/docs/invertedpendulum/"},
+# 	{name = "Simulink models", url = "https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/tree/master/LABMatlabFiles/"},
+# 	]
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 
