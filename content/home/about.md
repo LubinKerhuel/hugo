@@ -37,7 +37,7 @@ weight = 2
 
 I'm a signal processing and control theory Ph.D with a strong engineering background in embedded system.
 
-Enthusiastic about applied mathematics, I realized projects on control theory from school years (1999-2005). However, the programming developpment absorbed **most of the effort* therefore projects ended up with simplest PID algorithm tuned by successive trials. The dedicated time spent on model, identification and control law was almost null.
+Enthusiastic about applied mathematics, I realized projects on control theory from school years (1999-2005). However, the programming developpment absorbed *most of the effort* therefore projects ended up with simplest PID algorithm tuned by successive trials. The dedicated time spent on model, identification and control law was almost null.
 
 I developed a blockset to deploy Simulink models on dsPIC Micro-Controllers Unit (MCU) in 2005 which improved the situation.
 
