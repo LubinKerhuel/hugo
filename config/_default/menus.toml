@@ -3,35 +3,47 @@
 #     desired widget in your `content/home/` folder.
 #   The weight parameter defines the order that the links will appear in.
 
-[[main]]
-  name = "Home"
-  url = "#about"
-  weight = 1
-
-[[main]]
-  name = "Publications"
-  url = "#publications_featured"
-  weight = 2
-
-[[main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 3
 
 [[main]]
   name = "Projects"
-  url = "#projects"
-  weight = 4
+  weight = 1
 
 [[main]]
-  name = "Tutorials"
-  url = "/tutorial/"
-  weight = 5
+  name = "Overview"
+  parent = "Projects"
+  url = "#projects"
+  weight = 1
+
+[[main]]
+  name = "Inverted Pendulum"
+  parent = "Projects"
+  url = "/docs/invertedpendulum/"
+  weight = 10
+
+[[main]]
+  name = "DC Motor"
+  parent = "Projects"
+  url = "/project/LAB_DC_Motor/"
+  weight = 20
+
+[[main]]
+  name = "About"
+  url = "#about"
+  weight = 10
+
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
+  weight = 20
+
+
+[[docs]]
+    parent = "Projects"    
+    name = "DC Motor"    
+    weight = 20
+    url = "/project/LAB_DC_Motor/"
+
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
