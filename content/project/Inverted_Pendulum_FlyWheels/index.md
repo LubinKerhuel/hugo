@@ -19,7 +19,7 @@ summary = "Inverted pendulum running on a microstick II dsPIC board. Angle is es
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["Inverted pendulum","control","state space","LQR","rapid prototyping","model-based design","matlab","simulink","DIY"]
+tags = ["Inverted pendulum","control","state space","LQR","rapid prototyping","model-based design","matlab","simulink","DIY","dsPIC"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = "/docs/invertedpendulum/"

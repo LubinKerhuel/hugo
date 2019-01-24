@@ -6,6 +6,7 @@
 
 [[main]]
   name = "Projects"
+  url = "#projects"
   weight = 1
 
 [[main]]
@@ -38,8 +39,9 @@
   weight = 20
 
 
+# add extra entry to others menus:
 [[docs]]
-    parent = "Projects"    
+    # parent = "Projects"    
     name = "DC Motor"    
     weight = 20
     url = "/project/LAB_DC_Motor/"

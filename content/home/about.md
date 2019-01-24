@@ -5,7 +5,7 @@ active = true
 date = 2018-12-25T00:00:00
 
 # Order that this section will appear in.
-weight = 2
+weight = 20
 
 author = "lubin"
 

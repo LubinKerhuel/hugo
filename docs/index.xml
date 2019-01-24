@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping on Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/</link><description>Recent content in Rapid Control Prototyping on Rapid Control Prototyping</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2018 Lubin Kerhuel</copyright><lastBuildDate>Mon, 24 Dec 2018 00:00:00 +0100</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/</guid><description/></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab_dc_motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab_dc_motor/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping on Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/</link><description>Recent content in Rapid Control Prototyping on Rapid Control Prototyping</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2019 Lubin Kerhuel</copyright><lastBuildDate>Mon, 24 Dec 2018 00:00:00 +0100</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted_pendulum_flywheels/</guid><description/></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab_dc_motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab_dc_motor/</guid><description>
 &lt;p&gt;Control a 24V DC motor using the MCLV V2 board with a dsPIC 33EP256MC506.
 This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
-&lt;p&gt;The hands-on Lab subject available at: &lt;a href=&#34;https://rtdc.ctrl-elec.fr/&#34; target=&#34;_blank&#34;&gt;https://rtdc.ctrl-elec.fr/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The hands-on Lab subject available at: &lt;a href=&#34;https://rtdc.ctrl-elec.fr/&#34;&gt;https://rtdc.ctrl-elec.fr/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Real-time scheduler / CPU load analysis&lt;/li&gt;
@@ -20,13 +20,10 @@ This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
 &lt;/div&gt;
 &lt;figure&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_platform.png&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_platform_top.png&#34; alt=&#34;click open full pendulum picture&#34; width=&#34;45%&#34; /&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_platform_top.png&#34; width=&#34;45%&#34; /&gt;
 &lt;/a&gt;
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
 &lt;h4&gt;Top of the inverted pendulum&lt;/h4&gt;
-&lt;p&gt;
-click open full pendulum picture
-&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;The DIY hardware is presented. An overview of the model is given and a LQR feedback control loop tested.&lt;/p&gt;
@@ -45,13 +42,10 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 &lt;p&gt;The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries.&lt;/p&gt;
 &lt;figure&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_platform.png&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_platform_reduced_horizontal.png&#34; alt=&#34;click to open vertical full sized picture&#34; width=&#34;60%&#34; /&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_platform_reduced_horizontal.png&#34; width=&#34;60%&#34; /&gt;
 &lt;/a&gt;
 &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-&lt;h4&gt;inverted Pendulum&lt;/h4&gt;
-&lt;p&gt;
-click to open vertical full sized picture
-&lt;/p&gt;
+&lt;h4&gt;Inverted Pendulum&lt;/h4&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h2 id=&#34;head-electronics&#34;&gt;head electronics&lt;/h2&gt;
@@ -62,14 +56,14 @@ click to open vertical full sized picture
 &lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_top.png&#34; alt=&#34;A prototyping board support a Microstick II board with the *dsPIC 33EP128MC202*. A sensor board from drotek endowing the *ICM-20608* inertial sensor is screwed on the base board.&#34; width=&#34;80%&#34; /&gt;
 &lt;/a&gt;
 &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-&lt;h4&gt;head on top of the inverted pendulum&lt;/h4&gt;
+&lt;h4&gt;Microcontroller and sensor on top of the inverted pendulum&lt;/h4&gt;
 &lt;p&gt;
 A prototyping board support a Microstick II board with the &lt;em&gt;dsPIC 33EP128MC202&lt;/em&gt;. A sensor board from drotek endowing the &lt;em&gt;ICM-20608&lt;/em&gt; inertial sensor is screwed on the base board.
 &lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h3 id=&#34;imu-sensor&#34;&gt;IMU sensor&lt;/h3&gt;
-&lt;p&gt;The unique sensor used is a 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; IMU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:IMU&#34;&gt;&lt;a href=&#34;#fn:IMU&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; sensor: the ICM-20608 from invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34; target=&#34;_blank&#34;&gt;drotek board&lt;/a&gt; provides:&lt;/p&gt;
+&lt;p&gt;The unique sensor used is a 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; IMU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:IMU&#34;&gt;&lt;a href=&#34;#fn:IMU&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; sensor: the ICM-20608 from invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34;&gt;drotek board&lt;/a&gt; provides:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;a 3 axis Accelerometers and&lt;/li&gt;
 &lt;li&gt;a 3 axis rate gyro.&lt;/li&gt;
@@ -83,15 +77,25 @@ A prototyping board support a Microstick II board with the &lt;em&gt;dsPIC 33EP1
 &lt;h2 id=&#34;hw_trolley&#34;&gt;Base trolley&lt;/h2&gt;
 &lt;h3 id=&#34;motors&#34;&gt;Motors&lt;/h3&gt;
 &lt;p&gt;The base trolley is based on low cost a 2-wheel remote control toy. Its electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module.&lt;/p&gt;
-&lt;div class=&#34;gallery&#34;&gt;
-&lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;FlyWheels toy package&#34; href=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg&#34; alt=&#34;&#34;&gt;
+&lt;figure&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg&#34;&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg&#34; width=&#34;50%&#34; /&gt;
 &lt;/a&gt;
-&lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;Inside of the FlyWheels toy with its two DC motors&#34; href=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg&#34;&gt;
-&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg&#34; alt=&#34;&#34;&gt;
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+&lt;h4&gt;FlyWheels toy package&lt;/h4&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg&#34;&gt;
+&lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg&#34; width=&#34;50%&#34; /&gt;
 &lt;/a&gt;
-&lt;/div&gt;
-&lt;!-- (pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg)) --&gt;
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+&lt;h4&gt;Inside of the FlyWheels toy with its two DC motors&lt;/h4&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;!--
+(pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg))
+--&gt;
 &lt;h3 id=&#34;power-electronics&#34;&gt;Power electronics&lt;/h3&gt;
 &lt;p&gt;The L298N H bridge controls two DC motors. For each motor:&lt;/p&gt;
 &lt;ul&gt;
@@ -145,7 +149,7 @@ A &lt;em&gt;L298N H bridge&lt;/em&gt; (for arduino) power board drives the two D
 &lt;/div&gt;</description></item><item><title>Prototypage Rapide avec Simulink sur dsPIC</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid><description>
 &lt;h1 id=&#34;prototypage-rapide&#34;&gt;Prototypage rapide&lt;/h1&gt;
 &lt;h2 id=&#34;avec-simulink-sur-dspic&#34;&gt;avec Simulink sur dsPIC&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34; target=&#34;_blank&#34;&gt;MPLAB device blocks for Simulink&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34;&gt;MPLAB device blocks for Simulink&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;L.Kerhuel &amp;amp; R.Delpoux&lt;/p&gt;
 &lt;section data-background-image=&#34;./Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.06&gt;
 &lt;/section&gt;
@@ -158,7 +162,7 @@ A &lt;em&gt;L298N H bridge&lt;/em&gt; (for arduino) power board drives the two D
 &lt;p&gt;&lt;img src=&#34;./Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;./Model_Hardware_Test_withSampleTime.png&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;img src=&#34;./Picooz_IdentificatoinBlockPresentation.png&#34; alt=&#34;./Picooz_IdentificatoinBlockPresentation.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi&#34; target=&#34;_blank&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;img src=&#34;./Picooz_Identificatoin_eq_01.png&#34; alt=&#34;./Picooz_Identificatoin_eq_01.png&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
@@ -407,8 +411,8 @@ TotalVal = vals&#39;*exps;
 &lt;p&gt;&lt;img src=&#34;./Simulink_TypeCast_SlopeAndBias_Sat.png&#34; alt=&#34;./Simulink_TypeCast_SlopeAndBias_Sat.png&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1 id=&#34;tp&#34;&gt;TP&lt;/h1&gt;
-&lt;h2 id=&#34;https-www-ctrl-elec-fr&#34;&gt;&lt;a href=&#34;https://www.ctrl-elec.fr&#34; target=&#34;_blank&#34;&gt;https://www.ctrl-elec.fr&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/slides/slides_dcmotor_insa&#34; target=&#34;_blank&#34;&gt;https://lubin.kerhuel.eu/slides/slides_dcmotor_insa&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;https-www-ctrl-elec-fr&#34;&gt;&lt;a href=&#34;https://www.ctrl-elec.fr&#34;&gt;https://www.ctrl-elec.fr&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/slides/slides_dcmotor_insa&#34;&gt;https://lubin.kerhuel.eu/slides/slides_dcmotor_insa&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2 id=&#34;elements-de-correction&#34;&gt;Elements de correction&lt;/h2&gt;
 &lt;hr /&gt;
@@ -431,11 +435,11 @@ TotalVal = vals&#39;*exps;
 &lt;h2 id=&#34;liens&#34;&gt;Liens:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;MPLAB device blocks for Simulink:
-&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34; target=&#34;_blank&#34;&gt;https://www.microchip.com/SimulinkBlocks&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34;&gt;https://www.microchip.com/SimulinkBlocks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;MPLAB X:
-&lt;a href=&#34;https://www.microchip.com/MPLABX&#34; target=&#34;_blank&#34;&gt;https://www.microchip.com/MPLABX&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;https://www.microchip.com/MPLABX&#34;&gt;https://www.microchip.com/MPLABX&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;XC16:
-&lt;a href=&#34;https://www.microchip.com/XC16&#34; target=&#34;_blank&#34;&gt;https://www.microchip.com/XC16&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;https://www.microchip.com/XC16&#34;&gt;https://www.microchip.com/XC16&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>test slides</title><link>https://lubin.kerhuel.eu/slides/testslides/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/testslides/</guid><description>
 &lt;hr /&gt;
 &lt;h1 id=&#34;test-slides&#34;&gt;Test slides&lt;/h1&gt;
@@ -465,7 +469,7 @@ data-backgroundTransition=&#34;none&#34;
 &lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
@@ -558,6 +562,6 @@ color: navy;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;</description></item></channel></rss>

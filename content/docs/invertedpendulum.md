@@ -8,24 +8,28 @@ draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
+# GitRepo = "hugo"
+
 # Add menu entry to sidebar.
 # parent = "inverted_pendulum_flywheels"
 [menu.docs]
-    parent = "Projects"    
+    #parent = "Projects"    
     name = "Inverted Pendulum"
-    # identifier = "inverted_pendulum"
+    identifier = "inverted_pendulum"
     weight = 10
     
 
-[[gallery_item]]
-	album = "1"
-	image = "pendulum_toysrus_flywheels_package.jpg"
-	caption = "FlyWheels toy package"	
+# [[gallery_item]]
+# 	album = "1"
+# 	image = "pendulum_toysrus_flywheels_package.jpg"
+# 	caption = "FlyWheels toy package"	
+# 
+# [[gallery_item]]
+# 	album = "1"
+# 	image = "pendulum_toysrus_flywheels_open.jpg"
+# 	caption = "Inside of the FlyWheels toy with its two DC motors"
 
-[[gallery_item]]
-	album = "1"
-	image = "pendulum_toysrus_flywheels_open.jpg"
-	caption = "Inside of the FlyWheels toy with its two DC motors"
+# {{< gallery album="1" >}}
 
 
 +++
@@ -41,8 +45,7 @@ src="/img/pendulum_platform_top.png"
 link="/img/pendulum_platform.png"
 width="45%"
 title="Top of the inverted pendulum"
-caption="click open full pendulum picture"
-numbered="false"
+numbered="true"
 >}}
 
 The DIY hardware is presented. An overview of the model is given and a LQR feedback control loop tested.
@@ -71,8 +74,7 @@ The head and the base trolley are described successively. They are separated wit
 src="/img/pendulum_platform_reduced_horizontal.png"
 link="/img/pendulum_platform.png"
 width="60%"
-title="inverted Pendulum"
-caption="click to open vertical full sized picture"
+title="Inverted Pendulum"
 numbered="true"
 >}}
 
@@ -88,7 +90,7 @@ The controller is a Microstick II board equipped with a dsPIC 33EP128MC202 runni
 src="/img/pendulum_top.png" 
 link="/img/pendulum_top.png"
 width="80%"
-title="head on top of the inverted pendulum"
+title="Microcontroller and sensor on top of the inverted pendulum"
 caption="A prototyping board support a Microstick II board with the *dsPIC 33EP128MC202*. A sensor board from drotek endowing the *ICM-20608* inertial sensor is screwed on the base board."
 numbered="true"
 >}}
@@ -116,9 +118,28 @@ The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v
 
 The base trolley is based on low cost a 2-wheel remote control toy. Its electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module. 
 
-{{< gallery album="1" >}}
 
-<!--  (pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg)) -->
+
+{{< figure
+src="/img/pendulum_toysrus_flywheels_package.jpg"
+link="/img/pendulum_toysrus_flywheels_package.jpg"
+width="50%"
+title="FlyWheels toy package"
+numbered="true"
+>}}
+
+{{< figure
+src="/img/pendulum_toysrus_flywheels_open.jpg"
+link="/img/pendulum_toysrus_flywheels_open.jpg"
+width="50%"
+title="Inside of the FlyWheels toy with its two DC motors"
+numbered="true"
+>}}
+
+
+<!-- 
+ (pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg)) 
+ -->
 
 ### Power electronics 
 The L298N H bridge controls two DC motors. For each motor:
