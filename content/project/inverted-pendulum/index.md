@@ -19,10 +19,10 @@ summary = "Inverted pendulum running on a microstick II dsPIC board. Angle is es
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["Inverted pendulum","control","state space","LQR","rapid prototyping","model-based design","matlab","simulink","DIY","dsPIC"]
+tags = ["inverted pendulum","state space","LQR","rapid prototyping","model based design","matlab","simulink","DIY","dsPIC"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "/docs/invertedpendulum/"
+external_link = "/docs/inverted-pendulum/"
 
 
 share = true  # Show social sharing links?
@@ -43,7 +43,7 @@ url_pdf = ""
 url_preprint = ""
 url_code = ""
 url_dataset = ""
-url_project = "/docs/invertedpendulum/"
+url_project = "/docs/inverted-pendulum/"
 url_slides = ""
 url_video = "https://vimeo.com/album/5666929"
 url_poster = ""
@@ -53,7 +53,7 @@ url_poster = ""
 #url_custom = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
 
 # url_custom = [
-# 	{name = "Lab", url = "/docs/invertedpendulum/"},
+# 	{name = "Lab", url = "/docs/inverted-pendulum/"},
 # 	{name = "Simulink models", url = "https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/tree/master/LABMatlabFiles/"},
 # 	]
 

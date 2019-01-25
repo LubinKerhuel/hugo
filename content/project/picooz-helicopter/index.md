@@ -11,7 +11,7 @@ summary = "Sensorless speed control of a toy helicopter (Picooz) rotor. Model of
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["simulink","matlab","Sliding Mode","Super Twisting","Identification","Simulation"]
+tags = ["simulink","matlab","sliding mode","super twisting","identification","simulation"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

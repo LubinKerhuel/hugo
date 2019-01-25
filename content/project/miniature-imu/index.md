@@ -11,7 +11,7 @@ summary = "Compute attitude from low-cost MEMS inertials sensors"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["IMU","model-based design","Simulink"]
+tags = ["IMU","model based design","simulink"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

@@ -15,7 +15,7 @@ type = "docs"  # Do not modify.
 [menu.docs]
     #parent = "Projects"    
     name = "Inverted Pendulum"
-    identifier = "inverted_pendulum"
+    identifier = "inverted-pendulum"
     weight = 10
     
 

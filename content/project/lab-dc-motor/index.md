@@ -1,21 +1,20 @@
 +++
 # Project title.
-title = "Autopilote for Plane"
+title = "Real Time Control for a DC Motor"
 
 # Date this page was created.
-date = 2018-12-25T00:00:00
-draft = true
+date = 2018-12-01
+draft = false
 
 # Project summary to display on homepage.
-summary = "Autopilote for an RC plane."
+summary = "Simulation & real-time control of a 24v DC motor (INSA Lyon hands-on)"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["simulink","matlab","State space model","Feedback loop","rapid-prototyping"]
+tags = ["simulink","matlab","motor","control","rapid prototyping"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
-
 
 share = false  # Show social sharing links?
 profile = false  # Show author profile?
@@ -27,12 +26,14 @@ comments = false  # Show comments?
 #   E.g. `slides = "example-slides"` references 
 #   `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides = ""
+slides = "slides_dcmotor_insa"
 
 # Links (optional).
 url_pdf = ""
+url_preprint = ""
 url_code = ""
 url_dataset = ""
+url_project = ""
 url_slides = ""
 url_video = ""
 url_poster = ""
@@ -41,23 +42,34 @@ url_poster = ""
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
 #url_custom = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
 
+url_custom = [
+	{name = "Lab", url = "https://rtdc.ctrl-elec.fr/"},
+	{name = "Simulink models", url = "https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/tree/master/LABMatlabFiles/"},
+	]
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 
 [image]
   # Caption (optional)
-  caption = "Firstar 1600 plane"
+  caption = "Motor Pravalux"
   
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
   focal_point = "Smart"
 +++
 
-- IMU
-- Pitot tube
-- Wind estimate
-- UxV blocks including GPS, Remote Control and Mavlink blocks and fonctionalities
+Control a 24V DC motor using the MCLV V2 board with a dsPIC 33EP256MC506. 
+This hands-on is for 5th year students at INSA-Lyon. 
 
-Autopilote project.
+The hands-on Lab subject available at: https://rtdc.ctrl-elec.fr/.
+
+Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:
+
+- Real-time scheduler / CPU load analysis
+- Fixed-point datatypes
 
 
+### Authors:
+- Romain DELPOUX (Romain.Delpoux at insa-lyon.fr), Assistant Professor, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.
+- Lubin KERHUEL (Lubin.Kerhuel at microchip.com), Dr-Engineer, Microchip Technology Inc.
 
