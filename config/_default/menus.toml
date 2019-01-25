@@ -5,38 +5,44 @@
 
 
 [[main]]
-  name = "Projects"
+  name = "Home"
   url = "#projects"
   weight = 1
 
 [[main]]
-  name = "Overview"
-  parent = "Projects"
-  url = "#projects"
-  weight = 1
+  name = "Projects"
+#  url = "#projects"
+  weight = 10
+
+
+# [[main]]
+#   name = "Overview"
+#   parent = "Projects"
+#   url = "#projects"
+#   weight = 1
 
 [[main]]
   name = "Inverted Pendulum"
   parent = "Projects"
-  url = "/docs/invertedpendulum/"
+  url = "/docs/inverted-pendulum/"
   weight = 10
 
 [[main]]
   name = "DC Motor"
   parent = "Projects"
-  url = "/project/LAB_DC_Motor/"
+  url = "/project/lab-dc-motor/"
   weight = 20
 
 [[main]]
   name = "About"
   url = "#about"
-  weight = 10
+  weight = 20
 
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 20
+  weight = 50
 
 
 # add extra entry to others menus:
@@ -44,7 +50,7 @@
     # parent = "Projects"    
     name = "DC Motor"    
     weight = 20
-    url = "/project/LAB_DC_Motor/"
+    url = "/project/lab-dc-motor/"
 
 
 # Link to a PDF of your resume/CV from the menu.

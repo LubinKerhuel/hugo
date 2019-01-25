@@ -73,7 +73,7 @@ interests = [
 [[social]]
     icon = "linkedin"
     icon_pack = "fab"
-    link = "https://fr.linkedin.com/in/kerhuel"  # For a direct email link, use "mailto:test@example.org".
+    link = "https://www.linkedin.com/in/kerhuel/"  # For a direct email link, use "mailto:test@example.org".
 
 [[social]]
   icon = "google-scholar"
