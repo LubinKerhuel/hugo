@@ -19,7 +19,7 @@ This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;figure&gt;
-&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_platform.png&#34;&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_platform.jpg&#34;&gt;
 &lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_platform_top.png&#34; width=&#34;45%&#34; /&gt;
 &lt;/a&gt;
 &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
@@ -41,7 +41,7 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 &lt;h1 id=&#34;hardware&#34;&gt;hardware&lt;/h1&gt;
 &lt;p&gt;The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries.&lt;/p&gt;
 &lt;figure&gt;
-&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_platform.png&#34;&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_platform.jpg&#34;&gt;
 &lt;img src=&#34;https://lubin.kerhuel.eu/img/pendulum_platform_reduced_horizontal.png&#34; width=&#34;60%&#34; /&gt;
 &lt;/a&gt;
 &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
@@ -122,11 +122,10 @@ A &lt;em&gt;L298N H bridge&lt;/em&gt; (for arduino) power board drives the two D
 &lt;li&gt;The &lt;em&gt;1 DoF pendulum&lt;/em&gt;, with 1 rotational DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; around the wheels axis&lt;/li&gt;
 &lt;li&gt;The &lt;em&gt;1 DoF trolley&lt;/em&gt;, with 1 horizontal translation DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The &lt;em&gt;1 DoF pendulum&lt;/em&gt; is characterized by a length $L$ and a weight $M$. It is a $2^{nd}$ order system.&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;1 DoF trolley&lt;/em&gt; is characterized by the motors dynamics when translating the base loaded with an up-right pendulum. The model is $1^{st}$ order system characterized by its time constant $\tau$.&lt;/p&gt;
 &lt;h2 id=&#34;1-rotational-dof-pendulum&#34;&gt;1 rotational DoF pendulum&lt;/h2&gt;
-&lt;p&gt;bla bla bla&lt;/p&gt;
+&lt;p&gt;The rotational movement of the pendulum is modeled as a $2^{nd}$ order system. The pendulum is characterized by a its natural oscillation frequency $f_0 = \frac{1}{2\pi}\sqrt{\frac{g}{L}}$ and its damping factor $\gamma$ where $L$ is the length of the pendulum (from trolley wheels axis to center of mass of the pendulum).&lt;/p&gt;
 &lt;h2 id=&#34;1-translational-dof-trolley&#34;&gt;1 translational DoF trolley&lt;/h2&gt;
+&lt;p&gt;The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$. This dynamic include the motor dynamics when it is loaded with the trolley ; neglecting the impact of the inverted pendulum considered as vertical. The model is simplified as we do not consider the impact of the pendulum on the trolley translation, nor the couple applied on the pendulum when motors are powered resulting from frictions.&lt;/p&gt;
 &lt;h1 id=&#34;controller&#34;&gt;Controller&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Stabilization overview:&lt;/code&gt; The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilize the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.&lt;/p&gt;
 &lt;p&gt;Video of the inverted Pendulum when it encounters a wall:

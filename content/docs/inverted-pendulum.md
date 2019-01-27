@@ -42,7 +42,7 @@ Objective is to build an unstable pendulum platform to experiment various contro
 
 {{< figure
 src="/img/pendulum_platform_top.png"
-link="/img/pendulum_platform.png"
+link="/img/pendulum_platform.jpg"
 width="45%"
 title="Top of the inverted pendulum"
 numbered="true"
@@ -72,7 +72,7 @@ The head and the base trolley are described successively. They are separated wit
 
 {{< figure
 src="/img/pendulum_platform_reduced_horizontal.png"
-link="/img/pendulum_platform.png"
+link="/img/pendulum_platform.jpg"
 width="60%"
 title="Inverted Pendulum"
 numbered="true"
@@ -173,15 +173,16 @@ The pendulum model is composed of two intertwinned sub-system:
 - The *1 DoF pendulum*, with 1 rotational DoF[^DoF] around the wheels axis 
 - The *1 DoF trolley*, with 1 horizontal translation DoF[^DoF]. 
 
-The *1 DoF pendulum* is characterized by a length $L$ and a weight $M$. It is a $2^{nd}$ order system.
-
-The *1 DoF trolley* is characterized by the motors dynamics when translating the base loaded with an up-right pendulum. The model is $1^{st}$ order system characterized by its time constant $\tau$.
-
 ## 1 rotational DoF pendulum
 
-bla bla bla
+The rotational movement of the pendulum is modeled as a $2^{nd}$ order system. The pendulum is characterized by a its natural oscillation frequency $f_0 = \frac{1}{2\pi}\sqrt{\frac{g}{L}}$ and its damping factor $\gamma$ where $L$ is the length of the pendulum (from trolley wheels axis to center of mass of the pendulum). 
+
 
 ## 1 translational DoF trolley
+
+The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$. This dynamic include the motor dynamics when it is loaded with the trolley ; neglecting the impact of the inverted pendulum considered as vertical. The model is simplified as we do not consider the impact of the pendulum on the trolley translation, nor the couple applied on the pendulum when motors are powered resulting from frictions. 
+
+
 
 
 # Controller
