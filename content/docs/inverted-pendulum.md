@@ -34,12 +34,6 @@ type = "docs"  # Do not modify.
 
 +++
 
-## Presentation
-
-{{% alert note %}}
-Objective is to build an unstable pendulum platform to experiment various control loop to stabilize it.
-{{% /alert %}}
-
 {{< figure
 src="/img/pendulum_platform_top.png"
 link="/img/pendulum_platform.jpg"
@@ -48,7 +42,10 @@ title="Top of the inverted pendulum"
 numbered="true"
 >}}
 
-The DIY hardware is presented. An overview of the model is given and a LQR feedback control loop tested.
+# Presentation
+
+Objective is to test a DIY unstable pendulum platform for experimenting various feedback control loop. 
+The hardware is presented. An overview of the model is given and a LQR feedback control loop tested.
 
 
 <!-- test code -->
@@ -60,13 +57,13 @@ width="50%"
 Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).
 
 
-The top of the pendulum is comparable to a head where the microcontroller acts as a brain and the inertial sensor (accelerometers and rate gyro) as the inner ears. The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see [pictures below](#hw_trolley)).
+The electronic placed at the top of the pendulum composed of a dsPIC 16 bits microcontroller and an inertial sensor (accelerometers and rate gyro). The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see [pictures below](#hw_trolley)).
 
 
 
+# Hardware
 
-
-# hardware
+## Overview
 
 The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries. 
 
@@ -80,7 +77,7 @@ numbered="true"
 
 
 
-## head electronics
+## Head electronics
 
 ### Microcontroller
 
@@ -108,7 +105,10 @@ The ICM-20608 values are read through an I2C interface running at 400kHz. The I2
 - The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.
 - The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.
 
+### UART interface {#UARTINTERFACE}
+
 The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either a data logger, a radio link for telemetry module or an RC receiver capable of S.BUS or S.Port protocol (i.e. UART based).
+
 
 
 
@@ -168,21 +168,46 @@ Four $1.2V$ AA NiMh batteries are dispatched on both side of the trolley. $\appr
 
 # Model
 
-The pendulum model is composed of two intertwinned sub-system:
+The pendulum model is composed of two intertwined sub-system:
 
-- The *1 DoF pendulum*, with 1 rotational DoF[^DoF] around the wheels axis 
-- The *1 DoF trolley*, with 1 horizontal translation DoF[^DoF]. 
+- The pendulum*, with 1 rotation DoF[^DoF] $\theta$ angle around the wheels axis 
+- The trolley*, with 1 translation DoF[^DoF] $x$ position. 
 
-## 1 rotational DoF pendulum
+## Pendulum
 
-The rotational movement of the pendulum is modeled as a $2^{nd}$ order system. The pendulum is characterized by a its natural oscillation frequency $f_0 = \frac{1}{2\pi}\sqrt{\frac{g}{L}}$ and its damping factor $\gamma$ where $L$ is the length of the pendulum (from trolley wheels axis to center of mass of the pendulum). 
+The rotational movement of the pendulum is modeled as a $2^{nd}$ order system. The pendulum is characterized by 
+
+- its natural oscillation frequency $w_n = \sqrt{ \frac{g}{L} } $ which depends only of the length $L$ of the pendulum (trolley wheels axis to center of mass of the pendulum) and
+- a damping factor $\zeta$. 
+
+$$ S_{pendulum}(p) = \frac{1}{ \frac{1}{w_n^2}p^2 + \frac{2 \zeta}{w_n}p + 1 }$$
+
+|Pendulum Parameters|Identified Value|
+| :---: | :---: |
+| $L$  | $0.45 m$ |
+| $\zeta$  |$0.4$ |
+| $w_n = \sqrt{\frac{g}{L}}$  | $0.37 rad.s^{-1}$ ( $2.33 Hz$ ) |
+
+The parameter $L$ could be measured from the platform hardware but the damping factor $\zeta$ depends on friction and cannot be measured.
+
+ Both $L$ and $\zeta$ are determined by an identification on the free oscillating pendulum. The pendulum is placed up-side between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial state is $90 \deg$ angle from the resting position. It oscillates at its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. Angular speed and accelerations are recorded onboard with a [data-logger](#UARTINTERFACE) board ([openlager](https://github.com/d-ronin/openlager/wiki)) connected on one dsPIC UART output.
+ 
+ Recorded data fed a Simulink model which reconstruct the pendulum angle with a data fusion IMU algorithm. Then the pendulum angular oscillations is compard against a pendulum model output. The model parameters $L$ and $\zeta$ are tuned to best fit with the experimental data. See results in the table. 
 
 
-## 1 translational DoF trolley
+## Trolley
 
-The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$. This dynamic include the motor dynamics when it is loaded with the trolley ; neglecting the impact of the inverted pendulum considered as vertical. The model is simplified as we do not consider the impact of the pendulum on the trolley translation, nor the couple applied on the pendulum when motors are powered resulting from frictions. 
+The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$. This dynamic include the motor dynamics when it is loaded with the trolley considering the pendulum as vertical. The model do not consider the impact of the non vertical pendulum on the trolley translation, nor the couple applied on the pendulum when motors applies a couple on the wheels. 
 
+$$ S_{trollley}(p) = \frac{1}{\tau p + 1}$$
 
+|Trolley Parameter|Estimated Value|
+| :---: | :---: |
+| $\tau$  | $0.3s$ |
+
+The trolley is not equipped with any sensors. Thus the parameters $\tau$ is guessed instead of identified. 
+
+The overall pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real systme running the same feedback loop controller. The simulated pendulum states are re-initialised periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discripancies. Corectness of the model can be checked between theses periodic re-initialisation.
 
 
 # Controller
