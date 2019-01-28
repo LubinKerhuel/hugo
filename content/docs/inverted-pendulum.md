@@ -121,23 +121,17 @@ The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v
 The base trolley is based on low cost a 2-wheel remote control toy. Its electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module. 
 
 
+{{< gallery >}}
+	{{< figure
+	src="/img/pendulum_toysrus_flywheels_package.jpg"
+	title="FlyWheels toy package"
+	>}}
 
-{{< figure
-src="/img/pendulum_toysrus_flywheels_package.jpg"
-link="/img/pendulum_toysrus_flywheels_package.jpg"
-width="50%"
-title="FlyWheels toy package"
-numbered="true"
->}}
-
-{{< figure
-src="/img/pendulum_toysrus_flywheels_open.jpg"
-link="/img/pendulum_toysrus_flywheels_open.jpg"
-width="50%"
-title="Inside of the FlyWheels toy with its two DC motors"
-numbered="true"
->}}
-
+	{{< figure
+	src="/img/pendulum_toysrus_flywheels_open.jpg"	
+	title="Two DC motors"
+	>}}
+{{< /gallery >}}
 
 <!-- 
  (pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg)) 
@@ -182,7 +176,7 @@ The rotational movement of the pendulum is modeled as a $2^{nd}$ order system. T
 - its natural oscillation frequency $w_n = \sqrt{ \frac{g}{L} } $ which depends only of the length $L$ of the pendulum (trolley wheels axis to center of mass of the pendulum) and
 - a damping factor $\zeta$. 
 
-$$ S_{pendulum}(p) = \frac{1}{ \frac{1}{w_n^2}p^2 + \frac{2 \zeta}{w_n}p + 1 }$$
+$$ \theta(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s + 1 }$$
 
 |Pendulum Parameters|Identified Value|
 | :---: | :---: |
@@ -192,7 +186,9 @@ $$ S_{pendulum}(p) = \frac{1}{ \frac{1}{w_n^2}p^2 + \frac{2 \zeta}{w_n}p + 1 }$$
 
 The parameter $L$ could be measured from the platform hardware but the damping factor $\zeta$ depends on friction and cannot be measured.
 
- Both $L$ and $\zeta$ are determined by an identification on the free oscillating pendulum. The pendulum is placed up-side between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial state is $90 \deg$ angle from the resting position. It oscillates at its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. Angular speed and accelerations are recorded onboard with a [data-logger](#UARTINTERFACE) board ([openlager](https://github.com/d-ronin/openlager/wiki)) connected on one dsPIC UART output.
+ Both $L$ and $\zeta$ are determined by an identification on the free oscillating pendulum:
+
+ The pendulum is placed up-side-down between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial state is $\approx \frac{\pi}{2} \deg$ angle from the rest position. It oscillates at its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. Angular speed and accelerations are recorded onboard with a [data-logger](#UARTINTERFACE) board ([openlager](https://github.com/d-ronin/openlager/wiki)) connected on one dsPIC UART output.
  
  Recorded data fed a Simulink model which reconstruct the pendulum angle with a data fusion IMU algorithm. Then the pendulum angular oscillations is compard against a pendulum model output. The model parameters $L$ and $\zeta$ are tuned to best fit with the experimental data. See results in the table. 
 
@@ -201,7 +197,7 @@ The parameter $L$ could be measured from the platform hardware but the damping f
 
 The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$. This dynamic include the motor dynamics when it is loaded with the trolley considering the pendulum as vertical. The model do not consider the impact of the non vertical pendulum on the trolley translation, nor the couple applied on the pendulum when motors applies a couple on the wheels. 
 
-$$ S_{trollley}(p) = \frac{1}{\tau p + 1}$$
+$$ x(s) = \frac{1}{\tau s + 1}$$
 
 |Trolley Parameter|Estimated Value|
 | :---: | :---: |
