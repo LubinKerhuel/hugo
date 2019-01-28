@@ -34,9 +34,11 @@ GitRepo = "hugo"
 
 +++
 
+<!-- Enable Photo Swipe + gallery features -->
+{{< load-photoswipe >}} 
+
 {{< figure
 src="/img/pendulum_platform_top.png"
-link="/img/pendulum_platform.jpg"
 width="45%"
 title="Top of the inverted pendulum"
 numbered="true"
