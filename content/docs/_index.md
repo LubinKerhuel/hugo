@@ -1,14 +1,11 @@
 +++
 title = "Overview"
 
-#date = 2016-04-20
-#lastmod = 2017-09-03
-draft = false
-
-toc = true  # Show table of contents? true/false
-type = "docs"  # Do not modify.
-
-math = true
+# List format.
+#   0 = Simple
+#   1 = Detailed
+#   2 = Stream
+list_format = 3
 
 # Add menu entry to sidebar.
 [menu.docs]

@@ -8,7 +8,7 @@ draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
-# GitRepo = "hugo"
+GitRepo = "hugo"
 
 # Add menu entry to sidebar.
 # parent = "inverted_pendulum_flywheels"
