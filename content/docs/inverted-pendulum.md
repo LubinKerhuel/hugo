@@ -46,8 +46,8 @@ numbered="true"
 
 # Presentation
 
-Objective is to test a DIY unstable pendulum platform for experimenting various feedback control loop. 
-The hardware is presented. An overview of the model is given and a LQR feedback control loop tested.
+Stabilisation of an inverted pendulum is a common engineering challenge. Objective is to build an accessible pendulum platform (DIY[^DIY]]) for experiment various feedback control loop.
+The hardware is described, the simulation model of the pendulum is presented and an LQR[^LQR] feedback control loop is tested. 
 
 
 <!-- test code -->
@@ -97,19 +97,21 @@ numbered="true"
 
 ### IMU sensor
 
-The unique sensor used is a 6 DoF[^DoF] IMU[^IMU] sensor: the ICM-20608 from invensense mounted on a [drotek board](https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html) provides:
+The unique sensor used is a 6 DoF[^DoF] sensor: the ICM-20608 from invensense mounted on a [drotek board](https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html) provides:
 
 - a 3 axis Accelerometers and 
 - a 3 axis rate gyro.
 
-The ICM-20608 values are read through an I2C interface running at 400kHz. The I2C interface implemented through the I2C blocks for dsPIC enable hot plug of the sensor: The microcontroller sends an initialization sequence for the sensor each time this last is detected. Others sensor boards were tested endowed with MPU9250 and MPU6050 chips. The GY-91 board is currently the more commonly found on the market and has 10 DoF[^DoF].
+The ICM-20608 values are read all 6 values at $1kHz$ through an I2C interface clocked at $400kHz$. The I2C interface implemented through the I2C blocks for dsPIC enable hot plug of the sensor: The microcontroller initialize the sensor each time this last is detected on the I2C bus. Others sensor boards were tested using MPU9250 or MPU6050 chips. The GY-91 board is currently one widespread board and has 10 DoF[^DoF] (3 acceletometers, 3 rate gyor, 3 magnetometers, and one pressure sensor).
 
 - The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.
 - The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.
 
+The data fusion algorithm in the simulink IMU[^IMU] sub-system perform a data fusion algorithm to reconstruct a drift-free absolute quaternion angular position (except on the yaw angle when magnetometer is not available). The drift-free pitch angle is the only one requierd to stabilize the pendulum. 
+
 ### UART interface {#UARTINTERFACE}
 
-The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either a data logger, a radio link for telemetry module or an RC receiver capable of S.BUS or S.Port protocol (i.e. UART based).
+The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART [data-logger](https://github.com/d-ronin/openlager/wiki) or [radio link](http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio) for telemetry module or an [RC receiver](https://www.frsky-rc.com/product/xsr/) capable of S.BUS, S.Port or P.Port protocol (all UART based).
 
 
 
@@ -171,24 +173,45 @@ The pendulum model is composed of two intertwined sub-system:
 
 ## Pendulum
 
+Forces:
+
+- Weight $ \vec{P} = m\vec{g} $
+- Friction $ \vec{F} = -k \frac{d\vec{ i }}{dt}  $
+- Reaction $ \vec{R} = m\vec{g} . \vec{i} + \frac{l}{m} \frac{d^2\vec{ i }}{dt^2} . \vec{i}  $
+
+Accelerations:
+
+- Acceleration $ \vec{A} = l \frac{d^2\vec{ i }}{dt^2} $
+
+
+
+
+Tangentiel:
+$$ P_t = mg \sin{\theta} - k\dot {\theta} $$ 
+$$ A_t = l \ddot{\theta} $$
+
+$$ \ddot{\theta} + \frac{k}{l}\dot {\theta} - \frac{g}{l} \theta = 0 $$
+
+
 The rotational movement of the pendulum is modeled as a $2^{nd}$ order system. The pendulum is characterized by 
 
 - its natural oscillation frequency $w_n = \sqrt{ \frac{g}{L} } $ which depends only of the length $L$ of the pendulum (trolley wheels axis to center of mass of the pendulum) and
 - a damping factor $\zeta$. 
 
-$$ \theta(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s + 1 }$$
+$$ \theta(s) \left ( \frac{1}{w_n^2}s^2 - \frac{2 \zeta}{w_n}s - 1 \right ) = 0  $$
+$$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 - \frac{2 \zeta}{w_n}s -1 } $$
 
 |Pendulum Parameters|Identified Value|
 | :---: | :---: |
 | $L$  | $0.45 m$ |
-| $\zeta$  |$0.4$ |
+| $k$  |$0.4$ |
 | $w_n = \sqrt{\frac{g}{L}}$  | $0.37 rad.s^{-1}$ ( $2.33 Hz$ ) |
 
 The parameter $L$ could be measured from the platform hardware but the damping factor $\zeta$ depends on friction and cannot be measured.
 
  Both $L$ and $\zeta$ are determined by an identification on the free oscillating pendulum:
 
- The pendulum is placed up-side-down between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial state is $\approx \frac{\pi}{2} \deg$ angle from the rest position. It oscillates at its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. Angular speed and accelerations are recorded onboard with a [data-logger](#UARTINTERFACE) board ([openlager](https://github.com/d-ronin/openlager/wiki)) connected on one dsPIC UART output.
+ The pendulum is placed up-side-down between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial state is $\approx \frac{\pi}{2} \deg$ angle from the rest position. It oscillates at its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. Angular speed and accelerations $1kHz$ samples are recorded onboard na [openlager](https://github.com/d-ronin/openlager/wiki) board connected on the [UART](#UARTINTERFACE) interface.
  
  Recorded data fed a Simulink model which reconstruct the pendulum angle with a data fusion IMU algorithm. Then the pendulum angular oscillations is compard against a pendulum model output. The model parameters $L$ and $\zeta$ are tuned to best fit with the experimental data. See results in the table. 
 
@@ -222,3 +245,5 @@ Video of the inverted Pendulum when it encounters a wall:
 
 [^IMU]: Inertial Measurement Unit
 [^DoF]: Degree of Freedom
+[^LQR]: Linear Quadratic Regulator
+[^DIY]: Do It Yourself

@@ -67,8 +67,8 @@ This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;presentation&#34;&gt;Presentation&lt;/h1&gt;
-&lt;p&gt;Objective is to test a DIY unstable pendulum platform for experimenting various feedback control loop.
-The hardware is presented. An overview of the model is given and a LQR feedback control loop tested.&lt;/p&gt;
+&lt;p&gt;Stabilisation of an inverted pendulum is a common engineering challenge. Objective is to build an accessible pendulum platform (DIY&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DIY&#34;&gt;&lt;a href=&#34;#fn:DIY&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;]) for experiment various feedback control loop.
+The hardware is described, the simulation model of the pendulum is presented and an LQR&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:LQR&#34;&gt;&lt;a href=&#34;#fn:LQR&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; feedback control loop is tested.&lt;/p&gt;
 &lt;!-- test code --&gt;
 &lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
 &lt;iframe src=&#34;//player.vimeo.com/video/309876246&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
@@ -108,18 +108,19 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;imu-sensor&#34;&gt;IMU sensor&lt;/h3&gt;
-&lt;p&gt;The unique sensor used is a 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; IMU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:IMU&#34;&gt;&lt;a href=&#34;#fn:IMU&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; sensor: the ICM-20608 from invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34;&gt;drotek board&lt;/a&gt; provides:&lt;/p&gt;
+&lt;p&gt;The unique sensor used is a 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; sensor: the ICM-20608 from invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34;&gt;drotek board&lt;/a&gt; provides:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;a 3 axis Accelerometers and&lt;/li&gt;
 &lt;li&gt;a 3 axis rate gyro.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The ICM-20608 values are read through an I2C interface running at 400kHz. The I2C interface implemented through the I2C blocks for dsPIC enable hot plug of the sensor: The microcontroller sends an initialization sequence for the sensor each time this last is detected. Others sensor boards were tested endowed with MPU9250 and MPU6050 chips. The GY-91 board is currently the more commonly found on the market and has 10 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;The ICM-20608 values are read all 6 values at $1kHz$ through an I2C interface clocked at $400kHz$. The I2C interface implemented through the I2C blocks for dsPIC enable hot plug of the sensor: The microcontroller initialize the sensor each time this last is detected on the I2C bus. Others sensor boards were tested using MPU9250 or MPU6050 chips. The GY-91 board is currently one widespread board and has 10 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3-acceletometers-3-rate-gyor-3-magnetometers-and-one-pressure-sensor&#34;&gt;&lt;a href=&#34;#fn:3-acceletometers-3-rate-gyor-3-magnetometers-and-one-pressure-sensor&#34;&gt;0&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.&lt;/li&gt;
 &lt;li&gt;The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;The data fusion algorithm in the simulink IMU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:IMU&#34;&gt;&lt;a href=&#34;#fn:IMU&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; sub-system perform a data fusion algorithm to reconstruct a drift-free absolute quaternion angular position (except on the yaw angle when magnetometer is not available). The drift-free pitch angle is the only one requierd to stabilize the pendulum.&lt;/p&gt;
 &lt;h3 id=&#34;UARTINTERFACE&#34;&gt;UART interface&lt;/h3&gt;
-&lt;p&gt;The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either a data logger, a radio link for telemetry module or an RC receiver capable of S.BUS or S.Port protocol (i.e. UART based).&lt;/p&gt;
+&lt;p&gt;The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART &lt;a href=&#34;https://github.com/d-ronin/openlager/wiki&#34;&gt;data-logger&lt;/a&gt; or &lt;a href=&#34;http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio&#34;&gt;radio link&lt;/a&gt; for telemetry module or an &lt;a href=&#34;https://www.frsky-rc.com/product/xsr/&#34;&gt;RC receiver&lt;/a&gt; capable of S.BUS, S.Port or P.Port protocol (all UART based).&lt;/p&gt;
 &lt;h2 id=&#34;hw_trolley&#34;&gt;Base trolley&lt;/h2&gt;
 &lt;h3 id=&#34;motors&#34;&gt;Motors&lt;/h3&gt;
 &lt;p&gt;The base trolley is based on low cost a 2-wheel remote control toy. Its electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module.&lt;/p&gt;
@@ -171,16 +172,31 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 &lt;h1 id=&#34;model&#34;&gt;Model&lt;/h1&gt;
 &lt;p&gt;The pendulum model is composed of two intertwined sub-system:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The pendulum*, with 1 rotation DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; $\theta$ angle around the wheels axis&lt;/li&gt;
-&lt;li&gt;The trolley*, with 1 translation DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; $x$ position.&lt;/li&gt;
+&lt;li&gt;The pendulum*, with 1 rotation DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; $\theta$ angle around the wheels axis&lt;/li&gt;
+&lt;li&gt;The trolley*, with 1 translation DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; $x$ position.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;pendulum&#34;&gt;Pendulum&lt;/h2&gt;
+&lt;p&gt;Forces:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Weight $ \vec{P} = m\vec{g} $&lt;/li&gt;
+&lt;li&gt;Friction $ \vec{F} = -k \frac{d\vec{ i }}{dt} $&lt;/li&gt;
+&lt;li&gt;Reaction $ \vec{R} = m\vec{g} . \vec{i} + \frac{l}{m} \frac{d^2\vec{ i }}{dt^2} . \vec{i} $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Accelerations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Acceleration $ \vec{A} = l \frac{d^2\vec{ i }}{dt^2} $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tangentiel:
+$$ P_t = mg \sin{\theta} - k\dot {\theta} $$
+$$ A_t = l \ddot{\theta} $$&lt;/p&gt;
+&lt;p&gt;$$ \ddot{\theta} + \frac{k}{l}\dot {\theta} - \frac{g}{l} \theta = 0 $$&lt;/p&gt;
 &lt;p&gt;The rotational movement of the pendulum is modeled as a $2^{nd}$ order system. The pendulum is characterized by&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;its natural oscillation frequency $w_n = \sqrt{ \frac{g}{L} } $ which depends only of the length $L$ of the pendulum (trolley wheels axis to center of mass of the pendulum) and&lt;/li&gt;
 &lt;li&gt;a damping factor $\zeta$.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;$$ \theta(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s + 1 }$$&lt;/p&gt;
+&lt;p&gt;$$ \theta(s) \left ( \frac{1}{w_n^2}s^2 - \frac{2 \zeta}{w_n}s - 1 \right ) = 0 $$
+$$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 - \frac{2 \zeta}{w_n}s -1 } $$&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -194,7 +210,7 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 &lt;td align=&#34;center&#34;&gt;$0.45 m$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;$\zeta$&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$k$&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;$0.4$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -205,7 +221,7 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 &lt;/table&gt;
 &lt;p&gt;The parameter $L$ could be measured from the platform hardware but the damping factor $\zeta$ depends on friction and cannot be measured.&lt;/p&gt;
 &lt;p&gt;Both $L$ and $\zeta$ are determined by an identification on the free oscillating pendulum:&lt;/p&gt;
-&lt;p&gt;The pendulum is placed up-side-down between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial state is $\approx \frac{\pi}{2} \deg$ angle from the rest position. It oscillates at its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. Angular speed and accelerations are recorded onboard with a &lt;a href=&#34;#UARTINTERFACE&#34;&gt;data-logger&lt;/a&gt; board (&lt;a href=&#34;https://github.com/d-ronin/openlager/wiki&#34;&gt;openlager&lt;/a&gt;) connected on one dsPIC UART output.&lt;/p&gt;
+&lt;p&gt;The pendulum is placed up-side-down between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial state is $\approx \frac{\pi}{2} \deg$ angle from the rest position. It oscillates at its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. Angular speed and accelerations $1kHz$ samples are recorded onboard na &lt;a href=&#34;https://github.com/d-ronin/openlager/wiki&#34;&gt;openlager&lt;/a&gt; board connected on the &lt;a href=&#34;#UARTINTERFACE&#34;&gt;UART&lt;/a&gt; interface.&lt;/p&gt;
 &lt;p&gt;Recorded data fed a Simulink model which reconstruct the pendulum angle with a data fusion IMU algorithm. Then the pendulum angular oscillations is compard against a pendulum model output. The model parameters $L$ and $\zeta$ are tuned to best fit with the experimental data. See results in the table.&lt;/p&gt;
 &lt;h2 id=&#34;trolley&#34;&gt;Trolley&lt;/h2&gt;
 &lt;p&gt;The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$. This dynamic include the motor dynamics when it is loaded with the trolley considering the pendulum as vertical. The model do not consider the impact of the non vertical pendulum on the trolley translation, nor the couple applied on the pendulum when motors applies a couple on the wheels.&lt;/p&gt;
@@ -240,6 +256,10 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
+&lt;li id=&#34;fn:DIY&#34;&gt;Do It Yourself
+&lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:DIY&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:LQR&#34;&gt;Linear Quadratic Regulator
+&lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:LQR&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li id=&#34;fn:DoF&#34;&gt;Degree of Freedom
 &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:DoF&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li id=&#34;fn:IMU&#34;&gt;Inertial Measurement Unit
