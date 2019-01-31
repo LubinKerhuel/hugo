@@ -40,7 +40,7 @@ GitRepo = "hugo"
 {{< figure
 src="/img/pendulum_platform_top.png"
 width="45%"
-title="Top of the inverted pendulum"
+caption="Top of the inverted pendulum"
 numbered="true"
 >}}
 
@@ -73,7 +73,7 @@ The head and the base trolley are described successively. They are separated wit
 src="/img/pendulum_platform_reduced_horizontal.png"
 link="/img/pendulum_platform.jpg"
 width="60%"
-title="Inverted Pendulum"
+caption="Inverted Pendulum platform"
 numbered="true"
 >}}
 
@@ -127,11 +127,13 @@ The base trolley is based on low cost a 2-wheel remote control toy. Its electron
 	{{< figure
 	src="/img/pendulum_toysrus_flywheels_package.jpg"
 	title="FlyWheels toy package"
+	caption="FlyWheels toy package"
 	>}}
 
 	{{< figure
 	src="/img/pendulum_toysrus_flywheels_open.jpg"	
 	title="Two DC motors"
+	caption="Two DC motors"
 	>}}
 {{< /gallery >}}
 
@@ -162,65 +164,94 @@ Four $1.2V$ AA NiMh batteries are dispatched on both side of the trolley. $\appr
 
 
 
-
-
-# Model
-
 The pendulum model is composed of two intertwined sub-system:
 
 - The pendulum*, with 1 rotation DoF[^DoF] $\theta$ angle around the wheels axis 
 - The trolley*, with 1 translation DoF[^DoF] $x$ position. 
 
-## Pendulum
+# Pendulum Model
 
-Forces:
+## Equations
 
-- Weight $ \vec{P} = m\vec{g} $
-- Friction $ \vec{F} = -k \frac{d\vec{ i }}{dt}  $
-- Reaction $ \vec{R} = m\vec{g} . \vec{i} + \frac{l}{m} \frac{d^2\vec{ i }}{dt^2} . \vec{i}  $
+Applying the Dynamic fundamental law:
+$$ \sum \vec{Force} = m.\vec{a} $$ 
 
-Accelerations:
+We model the three forces which are the weight $\vec{P}$, the Friction $\vec{F}$ which slow down the pendulum, and the Reaction $\vec{R}$ from the rod: 
 
-- Acceleration $ \vec{A} = l \frac{d^2\vec{ i }}{dt^2} $
+$$ \underbrace{ -mg\vec{j} }\_{\vec{P}} \ 
+ - \ \underbrace{ k \frac{\partial \vec{r}}{\\partial t} }\_{\vec{F}} \ 
+ + \ \underbrace{ mg\vec{j} . \vec{r} + \underbrace{Ctfg . \vec{r}}\_{\text{Centrifugal}} }\_{\vec{R}} = ml \frac{\partial^2\vec{ r }}{\\partial t^2}
+$$
 
+With $ \\{ \vec{i},\vec{j} \\} $ the earth reference frame and $ \\{ \vec{r},\vec{n} \\} $ the pendulum frame (rod and normal direction). 
 
+$$
+\left\\{ \begin{array}{rcl}
+	\vec{i} \& = \& \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\\\\\ 
+	\vec{j} \& = \& \vec{n} . sin(\theta) + \vec{r} . cos(\theta)
+\end{array} \right.
+$$ 
 
+With 
 
-Tangentiel:
-$$ P_t = mg \sin{\theta} - k\dot {\theta} $$ 
-$$ A_t = l \ddot{\theta} $$
+$$
+\begin{array}{rcl}
+	k \frac{\partial \vec{r}}{\\partial t}  			\& = \& -k  \dot{\theta} \vec{n} \\\\\\
+	\\\\\\\\
+	ml \frac{\partial^2\vec{ r }}{\partial t^2} 	\& = \& -ml \frac{\partial }{\\partial t} \left( \dot{\theta} \vec{n} \right) \\\\\\
+									\& = \& -ml \ddot{\theta} \vec{n} - ml\dot{\theta}^2 \vec{r}
+\end{array} 
+ $$
 
-$$ \ddot{\theta} + \frac{k}{l}\dot {\theta} - \frac{g}{l} \theta = 0 $$
+Separating each axis $ \\{ \vec{r},\vec{n} \\} $  we obtain:
+$$
+\left\\{ \begin{array}{rcl}
+	\ddot{\theta} + \frac{km}{l}\dot{\theta} - \frac{g}{l} . sin(\theta) = 0 \\\\\\ 
+	ml\dot{\theta}^2 + Ctfg = 0	
+\end{array} \right.
+$$ 
 
+The second equation provides the centrifugal force counteracted by the pendulum rod.
 
-The rotational movement of the pendulum is modeled as a $2^{nd}$ order system. The pendulum is characterized by 
+The first differential equation allows solving the angle $\theta$ evolution. It can be linearized with $sin(\theta) \approx \theta$ when the pendulum is up near $0$, or with $sin(\theta) \approx - (\theta - \pi)$ when the pendulum is down near $\pi$.
 
-- its natural oscillation frequency $w_n = \sqrt{ \frac{g}{L} } $ which depends only of the length $L$ of the pendulum (trolley wheels axis to center of mass of the pendulum) and
-- a damping factor $\zeta$. 
+In the laplace domain:
+$$ \theta(s) \left ( \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 \right ) = 0  $$
 
-$$ \theta(s) \left ( \frac{1}{w_n^2}s^2 - \frac{2 \zeta}{w_n}s - 1 \right ) = 0  $$
-$$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 - \frac{2 \zeta}{w_n}s -1 } $$
+The pendulum transfert function $F_p = \frac{\theta(s)}{E(s)}$ with a null input $E(s) = 1$
+$$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$
+
+Using $\pm 1 \rightarrow +1$ when the pendulum is down side (stable) and $-1$ when up side (unstable).
+
+When the pendulum is up-side down (thus stable situation), the resulting $2^{nd}$ order system is characterized by: 
+
+- its natural oscillation frequency $w_n = \sqrt{ \frac{g}{l} } $ which depends only of the length $l$ of the pendulum (trolley wheels axis to center of mass of the pendulum) and
+- the damping factor $\zeta$. 
+
+The parameter $l$ could be measured from the platform hardware but the damping factor $\zeta$ depends on friction and cannot be measured.
+Thus both $l$ and $\zeta$ are determined by an identification on the free oscillating pendulum
+
+## Identification
+
+The pendulum is placed up-side-down between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial angle is $\theta \approx \frac{\pi}{2}$ (almost horizontal). It oscillates close to its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. The $1kHz$ sampled angular speed and accelerations are recorded onboard an [openlager](https://github.com/d-ronin/openlager/wiki) board connected on the [UART](#UARTINTERFACE) interface.
 
 |Pendulum Parameters|Identified Value|
 | :---: | :---: |
-| $L$  | $0.45 m$ |
+| $l$  | $0.45 m$ |
 | $k$  |$0.4$ |
-| $w_n = \sqrt{\frac{g}{L}}$  | $0.37 rad.s^{-1}$ ( $2.33 Hz$ ) |
-
-The parameter $L$ could be measured from the platform hardware but the damping factor $\zeta$ depends on friction and cannot be measured.
-
- Both $L$ and $\zeta$ are determined by an identification on the free oscillating pendulum:
-
- The pendulum is placed up-side-down between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial state is $\approx \frac{\pi}{2} \deg$ angle from the rest position. It oscillates at its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. Angular speed and accelerations $1kHz$ samples are recorded onboard na [openlager](https://github.com/d-ronin/openlager/wiki) board connected on the [UART](#UARTINTERFACE) interface.
- 
- Recorded data fed a Simulink model which reconstruct the pendulum angle with a data fusion IMU algorithm. Then the pendulum angular oscillations is compard against a pendulum model output. The model parameters $L$ and $\zeta$ are tuned to best fit with the experimental data. See results in the table. 
+| $w_n = \sqrt{\frac{g}{l}}$  | $0.37 rad.s^{-1}$ ( $2.33 Hz$ ) |
 
 
-## Trolley
+ Recorded data fed a Simulink model which reconstruct the pendulum angle with a data fusion IMU algorithm. Then the pendulum angular oscillations is compard against a pendulum model output. The model parameters $l$ and $\zeta$ are tuned to best fit with the experimental data. See results in the table. 
+
+
+# Trolley Model
+
+## Equations
 
 The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$. This dynamic include the motor dynamics when it is loaded with the trolley considering the pendulum as vertical. The model do not consider the impact of the non vertical pendulum on the trolley translation, nor the couple applied on the pendulum when motors applies a couple on the wheels. 
 
-$$ x(s) = \frac{1}{\tau s + 1}$$
+$$  x(s) = \frac{1}{\tau s + 1} $$
 
 |Trolley Parameter|Estimated Value|
 | :---: | :---: |
@@ -228,7 +259,10 @@ $$ x(s) = \frac{1}{\tau s + 1}$$
 
 The trolley is not equipped with any sensors. Thus the parameters $\tau$ is guessed instead of identified. 
 
-The overall pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real systme running the same feedback loop controller. The simulated pendulum states are re-initialised periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discripancies. Corectness of the model can be checked between theses periodic re-initialisation.
+Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real systme running the same feedback loop controller. The simulated pendulum states are re-initialised periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discripancies. Correctness of the model can be checked between theses periodic re-initialisation.
+
+## Identification
+
 
 
 # Controller
@@ -242,6 +276,8 @@ Video of the inverted Pendulum when it encounters a wall:
 {{< vimeo id="309876329" caption="Inverted pendulum pushing a wall">}}
 <!-- You tube alternative: {{< youtube id ="xbu4hXOnemE" >}} -->
 
+
+Another way to stabilize a pendulum with an electric see-saw ([video](https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum)).
 
 [^IMU]: Inertial Measurement Unit
 [^DoF]: Degree of Freedom
