@@ -10,7 +10,7 @@ title = "Rapid Control Prototyping"
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "https://lubin.kerhuel.eu/"
-disableKinds = ["404"]
+#disableKinds = ["404"]
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`.
