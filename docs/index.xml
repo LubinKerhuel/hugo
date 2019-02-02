@@ -68,8 +68,9 @@ This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;presentation&#34;&gt;Presentation&lt;/h1&gt;
-&lt;p&gt;Stabilisation of an inverted pendulum is a common engineering challenge. Objective is to build an accessible pendulum platform (DIY&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DIY&#34;&gt;&lt;a href=&#34;#fn:DIY&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;]) for experiment various feedback control loop.
-The hardware is described, the simulation model of the pendulum is presented and an LQR&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:LQR&#34;&gt;&lt;a href=&#34;#fn:LQR&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; feedback control loop is tested.&lt;/p&gt;
+&lt;p&gt;Stabilisation of an inverted pendulum is a common engineering challenge. Objective is to build a low cost DIY&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DIY&#34;&gt;&lt;a href=&#34;#fn:DIY&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; platform to test various feedback control loop.&lt;/p&gt;
+&lt;p&gt;This document describe the hardware and the theoretical model of the pendulum.
+Simulation are presented with Simulink models and an LQR&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:LQR&#34;&gt;&lt;a href=&#34;#fn:LQR&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; feedback control loop finaly stabilize the platform.&lt;/p&gt;
 &lt;!-- test code --&gt;
 &lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
 &lt;iframe src=&#34;//player.vimeo.com/video/309876246&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
@@ -80,10 +81,12 @@ The hardware is described, the simulation model of the pendulum is presented and
 &lt;/div&gt;
 --&gt;
 Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).&lt;/p&gt;
-&lt;p&gt;The electronic placed at the top of the pendulum composed of a dsPIC 16 bits microcontroller and an inertial sensor (accelerometers and rate gyro). The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see &lt;a href=&#34;#hw_trolley&#34;&gt;pictures below&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The electronic placed at the top of the pendulum composed of a dsPIC 16 bits microcontroller and an inertial sensor (accelerometers and rate gyro).
+The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see &lt;a href=&#34;#hw_trolley&#34;&gt;pictures below&lt;/a&gt;).&lt;/p&gt;
 &lt;h1 id=&#34;hardware&#34;&gt;Hardware&lt;/h1&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube. The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries.&lt;/p&gt;
+&lt;p&gt;The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube.
+The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -97,35 +100,42 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 &lt;/div&gt;
 &lt;h2 id=&#34;head-electronics&#34;&gt;Head electronics&lt;/h2&gt;
 &lt;h3 id=&#34;microcontroller&#34;&gt;Microcontroller&lt;/h3&gt;
-&lt;p&gt;The controller is a Microstick II board equipped with a dsPIC 33EP128MC202 running at $\approx 70\ MIPS$. It is powered through the USB modified cable which &lt;strong&gt;provide only the power supply&lt;/strong&gt; from 4 AA batteries hold in the base.&lt;/p&gt;
+&lt;p&gt;The controller is a &lt;code&gt;Microstick II&lt;/code&gt; board equipped with a &lt;code&gt;dsPIC 33EP128MC202&lt;/code&gt; running at $\approx 70\ MIPS$.
+It is powered through the USB modified cable which &lt;strong&gt;provide only the power supply&lt;/strong&gt; from 4 AA batteries hold in the base.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum_top.png&#34; alt=&#34;A prototyping board support a Microstick II board with the *dsPIC 33EP128MC202*. A sensor board from drotek endowing the *ICM-20608* inertial sensor is screwed on the base board.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum_top.png&#34; alt=&#34;A prototyping board support a Microstick II board with the dsPIC 33EP128MC202. A sensor board from drotek endowing the ICM-20608 inertial sensor is screwed on the base board.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_top.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;Microcontroller and sensor on top of the inverted pendulum&lt;/h4&gt;
-&lt;p&gt;A prototyping board support a Microstick II board with the *dsPIC 33EP128MC202*. A sensor board from drotek endowing the *ICM-20608* inertial sensor is screwed on the base board.&lt;/p&gt;
+&lt;p&gt;A prototyping board support a Microstick II board with the &lt;em&gt;dsPIC 33EP128MC202&lt;/em&gt;. A sensor board from drotek endowing the ICM-20608 inertial sensor is screwed on the base board.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;imu-sensor&#34;&gt;IMU sensor&lt;/h3&gt;
-&lt;p&gt;The unique sensor used is a 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; sensor: the ICM-20608 from invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34;&gt;drotek board&lt;/a&gt; provides:&lt;/p&gt;
+&lt;p&gt;The unique sensor used is a 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; sensor: the &lt;code&gt;ICM-20608&lt;/code&gt; from invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34;&gt;drotek board&lt;/a&gt; provides:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;a 3 axis Accelerometers and&lt;/li&gt;
 &lt;li&gt;a 3 axis rate gyro.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The ICM-20608 values are read all 6 values at $1kHz$ through an I2C interface clocked at $400kHz$. The I2C interface implemented through the I2C blocks for dsPIC enable hot plug of the sensor: The microcontroller initialize the sensor each time this last is detected on the I2C bus. Others sensor boards were tested using MPU9250 or MPU6050 chips. The GY-91 board is currently one widespread board and has 10 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3-acceletometers-3-rate-gyor-3-magnetometers-and-one-pressure-sensor&#34;&gt;&lt;a href=&#34;#fn:3-acceletometers-3-rate-gyor-3-magnetometers-and-one-pressure-sensor&#34;&gt;0&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;The I2C blocks set the BUS clock at $400kHz$ and fetch the 6 sensors values every $1ms$ $(1kHz)$.
+The simulink I2C blocks setting enable hot plug of the I2C sensor: The microcontroller initialize the sensor each time this last is detected or redetected on the I2C bus.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.&lt;/li&gt;
 &lt;li&gt;The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The data fusion algorithm in the simulink IMU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:IMU&#34;&gt;&lt;a href=&#34;#fn:IMU&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; sub-system perform a data fusion algorithm to reconstruct a drift-free absolute quaternion angular position (except on the yaw angle when magnetometer is not available). The drift-free pitch angle is the only one requierd to stabilize the pendulum.&lt;/p&gt;
+&lt;p&gt;A simulink IMU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:IMU&#34;&gt;&lt;a href=&#34;#fn:IMU&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; sub-system perform a data fusion algorithm to reconstruct a drift-free quaternion angular position (the yaw angle drift when magnetometer is not present).
+The stabilization control loop usees the drift-free pitch angle.&lt;/p&gt;
+&lt;p&gt;It is possible to use others sensors like the MPU9250 or MPU6050 with either an I2C or SPI interface.
+The GY-91 board is a 10 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; widespread board based on the 9 DoF MPU9250 (3 accelerometers, 3 magnetometers, 3 rate gyros) and has a pressure sensor.&lt;/p&gt;
 &lt;h3 id=&#34;UARTINTERFACE&#34;&gt;UART interface&lt;/h3&gt;
 &lt;p&gt;The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART &lt;a href=&#34;https://github.com/d-ronin/openlager/wiki&#34;&gt;data-logger&lt;/a&gt; or &lt;a href=&#34;http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio&#34;&gt;radio link&lt;/a&gt; for telemetry module or an &lt;a href=&#34;https://www.frsky-rc.com/product/xsr/&#34;&gt;RC receiver&lt;/a&gt; capable of S.BUS, S.Port or P.Port protocol (all UART based).&lt;/p&gt;
 &lt;h2 id=&#34;hw_trolley&#34;&gt;Base trolley&lt;/h2&gt;
 &lt;h3 id=&#34;motors&#34;&gt;Motors&lt;/h3&gt;
-&lt;p&gt;The base trolley is based on low cost a 2-wheel remote control toy. Its electronics is removed. Two pairs of wires power the two DC motors in either direction through an L298N H bridge external module.&lt;/p&gt;
+&lt;p&gt;The base trolley is a low cost a 2-wheel remote control toy named &lt;code&gt;flywheels&lt;/code&gt;. The toy is from 2012 but 2 wheeled equivalent exist.
+Its electronics is removed.
+Two pairs of wires power two DC motors in either direction through an &lt;code&gt;L298N&lt;/code&gt; H bridge board module.&lt;/p&gt;
 &lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
 &lt;div class=&#34;box&#34; &gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
@@ -156,38 +166,43 @@ Video of the stabilized platform with a 4 state LQR feedback loop. The platform 
 &lt;h3 id=&#34;power-electronics&#34;&gt;Power electronics&lt;/h3&gt;
 &lt;p&gt;The L298N H bridge controls two DC motors. For each motor:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Two logic signals set the motor state: direction, brake, or free-wheels.&lt;/li&gt;
-&lt;li&gt;One logic signal power-up the motor depending on to the state defined. This third signal is modulated with a 100Hz square periodic signal (PWM) whose duty cycle vary from 0% to 100%. It sets the torque for the motor.&lt;/li&gt;
+&lt;li&gt;Two logic signals set the 4 states: direction CW or CCW, brake, or freewheel.&lt;/li&gt;
+&lt;li&gt;The third logic signal power the motor depending on to the state defined.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The flat multicolor rubbon connects 6 logic control signal (3 for each motor) from the Microstick II dsPIC to the input of the L298N H bridge.&lt;/p&gt;
+&lt;p&gt;The third signal is modulated with a 100Hz square periodic signal whose duty cycle vary from 0% to 100% (PWM). It sets the torque for the motor.&lt;/p&gt;
+&lt;p&gt;The flat multicolor rubbon connects 6 logic control signal (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum_base.png&#34; alt=&#34;A *L298N H bridge* (for arduino) power board drives the two DC motors of a modified *FlyWheels* toy. *Four AA batteries* powers the pendulum.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum_base.png&#34; alt=&#34;A L298N H bridge (for arduino) power board drives the two DC motors of a modified FlyWheels toy. Four AA batteries powers the pendulum.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum_base.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;Base trolley of the inverted pendulum&lt;/h4&gt;
-&lt;p&gt;A *L298N H bridge* (for arduino) power board drives the two DC motors of a modified *FlyWheels* toy. *Four AA batteries* powers the pendulum.&lt;/p&gt;
+&lt;p&gt;A &lt;em&gt;L298N H bridge&lt;/em&gt; (for arduino) power board drives the two DC motors of a modified &lt;em&gt;FlyWheels&lt;/em&gt; toy. &lt;em&gt;Four AA batteries&lt;/em&gt; powers the pendulum.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;batteries&#34;&gt;Batteries&lt;/h3&gt;
-&lt;p&gt;Four $1.2V$ AA NiMh batteries are dispatched on both side of the trolley. $\approx 4.8V$ powers the motors and the electronics. The black and red wires from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.&lt;/p&gt;
+&lt;p&gt;Four $1.2V$ AA NiMh batteries are dispatched on both side of the trolley.
+$\approx 4.8V$ powers the motors and the electronics.
+The black and red wires from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.&lt;/p&gt;
+&lt;h1 id=&#34;pendulum-model&#34;&gt;Pendulum Model&lt;/h1&gt;
 &lt;p&gt;The pendulum model is composed of two intertwined sub-system:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The pendulum*, with 1 rotation DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; $\theta$ angle around the wheels axis&lt;/li&gt;
 &lt;li&gt;The trolley*, with 1 translation DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; $x$ position.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;pendulum-model&#34;&gt;Pendulum Model&lt;/h1&gt;
 &lt;h2 id=&#34;equations&#34;&gt;Equations&lt;/h2&gt;
-&lt;p&gt;Applying the Dynamic fundamental law:
+&lt;p&gt;Applying the Dynamic fundamental law on the pendulum:
 $$ \sum \vec{Force} = m.\vec{a} $$&lt;/p&gt;
 &lt;p&gt;We model the three forces which are the weight $\vec{P}$, the Friction $\vec{F}$ which slow down the pendulum, and the Reaction $\vec{R}$ from the rod:&lt;/p&gt;
 &lt;p&gt;$$ \underbrace{ -mg\vec{j} }_{\vec{P}} \
 - \ \underbrace{ k \frac{\partial \vec{r}}{\partial t} }_{\vec{F}} \
 + \ \underbrace{ mg\vec{j} . \vec{r} + \underbrace{Ctfg . \vec{r}}_{\text{Centrifugal}} }_{\vec{R}} = ml \frac{\partial^2\vec{ r }}{\partial t^2}
 $$&lt;/p&gt;
-&lt;p&gt;With $ \{ \vec{i},\vec{j} \} $ the earth reference frame and $ \{ \vec{r},\vec{n} \} $ the pendulum frame (rod and normal direction).&lt;/p&gt;
+&lt;p&gt;With $ \{ \vec{i},\vec{j} \} $ the earth reference frame and $ \{ \vec{r},\vec{n} \} $ the pendulum frame (rod and normal direction).
+$m$ is the mass of the pendulum (without the trolley).
+$l$ is the distance from the inter-wheels axis to the center of mass of the pendulum (without the trolley)&lt;/p&gt;
 &lt;p&gt;$$
 \left\{ \begin{array}{rcl}
 \vec{i} &amp;amp; = &amp;amp; \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\\
@@ -197,10 +212,19 @@ $$&lt;/p&gt;
 &lt;p&gt;With&lt;/p&gt;
 &lt;p&gt;$$
 \begin{array}{rcl}
-k \frac{\partial \vec{r}}{\partial t} &amp;amp; = &amp;amp; -k \dot{\theta} \vec{n} \\&lt;br /&gt;
-\\\&lt;br /&gt;
-ml \frac{\partial^2\vec{ r }}{\partial t^2} &amp;amp; = &amp;amp; -ml \frac{\partial }{\partial t} \left( \dot{\theta} \vec{n} \right) \\&lt;br /&gt;
-&amp;amp; = &amp;amp; -ml \ddot{\theta} \vec{n} - ml\dot{\theta}^2 \vec{r}
+k \frac{\partial \vec{r}}{\partial t}
+&amp;amp; = &amp;amp;
+-k \dot{\theta} \vec{n} \\&lt;br /&gt;
+\end{array}
+$$&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;p&gt;$$
+\begin{array}{rcl}
+ml \frac{\partial^2\vec{ r }}{\partial t^2}&lt;br /&gt;
+&amp;amp; = &amp;amp;
+-ml \frac{\partial }{\partial t} \left( \dot{\theta} \vec{n} \right) \\&lt;br /&gt;
+&amp;amp; = &amp;amp;
+-ml \ddot{\theta} \vec{n} - ml\dot{\theta}^2 \vec{r}
 \end{array}
 $$&lt;/p&gt;
 &lt;p&gt;Separating each axis $ \{ \vec{r},\vec{n} \} $ we obtain:
@@ -212,20 +236,22 @@ ml\dot{\theta}^2 + Ctfg = 0
 $$&lt;/p&gt;
 &lt;p&gt;The second equation provides the centrifugal force counteracted by the pendulum rod.&lt;/p&gt;
 &lt;p&gt;The first differential equation allows solving the angle $\theta$ evolution. It can be linearized with $sin(\theta) \approx \theta$ when the pendulum is up near $0$, or with $sin(\theta) \approx - (\theta - \pi)$ when the pendulum is down near $\pi$.&lt;/p&gt;
-&lt;p&gt;In the laplace domain:
+&lt;p&gt;When the pendulum is up-side down (thus stable situation), the resulting $2^{nd}$ order system is characterized by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a natural oscillation frequency $w_n = \sqrt{ \frac{g}{l} } $, and&lt;/li&gt;
+&lt;li&gt;a damping factor $\zeta$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the laplace domain, differential equations for $\theta$ becomes:
 $$ \theta(s) \left ( \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 \right ) = 0 $$&lt;/p&gt;
 &lt;p&gt;The pendulum transfert function $F_p = \frac{\theta(s)}{E(s)}$ with a null input $E(s) = 1$
 $$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$&lt;/p&gt;
 &lt;p&gt;Using $\pm 1 \rightarrow +1$ when the pendulum is down side (stable) and $-1$ when up side (unstable).&lt;/p&gt;
-&lt;p&gt;When the pendulum is up-side down (thus stable situation), the resulting $2^{nd}$ order system is characterized by:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;its natural oscillation frequency $w_n = \sqrt{ \frac{g}{l} } $ which depends only of the length $l$ of the pendulum (trolley wheels axis to center of mass of the pendulum) and&lt;/li&gt;
-&lt;li&gt;the damping factor $\zeta$.&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;The parameter $l$ could be measured from the platform hardware but the damping factor $\zeta$ depends on friction and cannot be measured.
 Thus both $l$ and $\zeta$ are determined by an identification on the free oscillating pendulum&lt;/p&gt;
 &lt;h2 id=&#34;identification&#34;&gt;Identification&lt;/h2&gt;
-&lt;p&gt;The pendulum is placed up-side-down between two chair back. Motors are off ; the pendulum is let free to oscillate. The initial angle is $\theta \approx \frac{\pi}{2}$ (almost horizontal). It oscillates close to its natural frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. The $1kHz$ sampled angular speed and accelerations are recorded onboard an &lt;a href=&#34;https://github.com/d-ronin/openlager/wiki&#34;&gt;openlager&lt;/a&gt; board connected on the &lt;a href=&#34;#UARTINTERFACE&#34;&gt;UART&lt;/a&gt; interface.&lt;/p&gt;
+&lt;p&gt;The pendulum is placed up-side-down between two chair back.
+The pendulum is let free to oscillate, motor off.
+The initial pendulum angle is $\theta \approx \frac{\pi}{2}$ (almost horizontal). It oscillates at its frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. The $1kHz$ sampled angular speed and accelerations are recorded with &lt;a href=&#34;https://github.com/d-ronin/openlager/wiki&#34;&gt;openlager&lt;/a&gt; board connected on the &lt;a href=&#34;#UARTINTERFACE&#34;&gt;UART&lt;/a&gt; interface.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -248,10 +274,14 @@ Thus both $l$ and $\zeta$ are determined by an identification on the free oscill
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Recorded data fed a Simulink model which reconstruct the pendulum angle with a data fusion IMU algorithm. Then the pendulum angular oscillations is compard against a pendulum model output. The model parameters $l$ and $\zeta$ are tuned to best fit with the experimental data. See results in the table.&lt;/p&gt;
+&lt;p&gt;⬆ Table of pendulum parameters&lt;/p&gt;
+&lt;p&gt;Recorded data fed a Simulink model which reconstruct the pendulum angle with the IMU algorithm. Then the pendulum $\theta$ oscillations is compard against a theoretical pendulum model.
+The model parameters $l$ and $\zeta$ are tuned for the model to match with the experimental data.&lt;/p&gt;
 &lt;h1 id=&#34;trolley-model&#34;&gt;Trolley Model&lt;/h1&gt;
 &lt;h2 id=&#34;equations-1&#34;&gt;Equations&lt;/h2&gt;
-&lt;p&gt;The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$. This dynamic include the motor dynamics when it is loaded with the trolley considering the pendulum as vertical. The model do not consider the impact of the non vertical pendulum on the trolley translation, nor the couple applied on the pendulum when motors applies a couple on the wheels.&lt;/p&gt;
+&lt;p&gt;The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$.
+This dynamic include the motor dynamics when it is loaded with the trolley considering the pendulum as vertical.&lt;/p&gt;
+&lt;p&gt;The model considere as negligible the effect of the pendulum forces (translational and rotational) applied on the trolley.&lt;/p&gt;
 &lt;p&gt;$$ x(s) = \frac{1}{\tau s + 1} $$&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -267,9 +297,9 @@ Thus both $l$ and $\zeta$ are determined by an identification on the free oscill
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;The trolley is not equipped with any sensors. Thus the parameters $\tau$ is guessed instead of identified.&lt;/p&gt;
-&lt;p&gt;Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real systme running the same feedback loop controller. The simulated pendulum states are re-initialised periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discripancies. Correctness of the model can be checked between theses periodic re-initialisation.&lt;/p&gt;
+&lt;p&gt;The trolley do not have any sensors. No encoder or current sensor are used to control the two motors. The parameters $\tau$ is guessed instead of identified.&lt;/p&gt;
 &lt;h2 id=&#34;identification-1&#34;&gt;Identification&lt;/h2&gt;
+&lt;p&gt;Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real systme running the same feedback loop controller. The simulated pendulum states are re-initialised periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discripancies. Correctness of the model can be checked between theses periodic re-initialisation.&lt;/p&gt;
 &lt;h1 id=&#34;controller&#34;&gt;Controller&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Stabilization overview:&lt;/code&gt; The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilize the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.&lt;/p&gt;
 &lt;p&gt;Video of the inverted Pendulum when it encounters a wall:
