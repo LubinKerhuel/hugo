@@ -1,5 +1,5 @@
 +++
-title = "Essential doc on blockset designed by Microchip"
+title = "Essential tools"
 
 draft = true
 
@@ -10,8 +10,8 @@ draft = true
 list_format = 3
 
 # Add menu entry to sidebar.
-[menu.blockset]
-  name = "Overview"
+[menu.tools]
+#  name = "Overview"
   weight = 1
 
 # [header]

@@ -12,7 +12,7 @@ GitRepo = "hugo"
 
 # Add menu entry to sidebar.
 # parent = "inverted_pendulum_flywheels"
-[menu.blockset]
+[menu.tools]
     name = "SPI"
     identifier = "SPI"
     weight = 10
