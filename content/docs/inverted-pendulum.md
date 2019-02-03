@@ -1,14 +1,19 @@
 +++
 title = "Inverted Pendulum"
 
-# date = 2018-09-09T00:00:00
-# lastmod = 2018-09-09T00:00:00
+aliases = ["project/inverted_pendulum_flywheels/"]
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
+math = true
+
+# date = 2018-09-09T00:00:00
+# lastmod = 2018-09-09T00:00:00
+
 GitRepo = "hugo"
+
 
 # Add menu entry to sidebar.
 # parent = "inverted_pendulum_flywheels"
@@ -16,22 +21,7 @@ GitRepo = "hugo"
     #parent = "Projects"    
     name = "Inverted Pendulum"
     identifier = "inverted-pendulum"
-    weight = 10
-    
-
-# [[gallery_item]]
-# 	album = "1"
-# 	image = "pendulum_toysrus_flywheels_package.jpg"
-# 	caption = "FlyWheels toy package"	
-# 
-# [[gallery_item]]
-# 	album = "1"
-# 	image = "pendulum_toysrus_flywheels_open.jpg"
-# 	caption = "Inside of the FlyWheels toy with its two DC motors"
-
-# {{< gallery album="1" >}}
-
-
+    weight = 10 
 
 +++
 

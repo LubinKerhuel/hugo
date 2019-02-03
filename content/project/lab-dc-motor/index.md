@@ -2,6 +2,8 @@
 # Project title.
 title = "Real Time Control for a DC Motor"
 
+aliases = ["project/lab_dc_motor/"]
+
 # Date this page was created.
 date = 2018-12-01
 draft = false
