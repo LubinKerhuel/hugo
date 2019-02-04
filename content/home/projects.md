@@ -1,11 +1,10 @@
 +++
 # Projects widget.
-widget = "projects"
-active = true
-date = 2018-12-24T00:00:00
+widget = "projects"  # Do not modify this line!
+active = true  # Activate this widget? true/false
 
 title = "Projects"
-subtitle = "Rapid Control Prototyping"
+subtitle = "model based design"
 
 # Order that this section will appear in.
 weight = 1
@@ -16,16 +15,17 @@ weight = 1
 folder = "project"
 
 # View.
-# Customize how projects are displayed.
-# Legend: 0 = list, 1 = cards, 2 = showcase.
-view = 1
+#   1 = List
+#   3 = Card
+#   5 = Showcase
+view = 3
 
 # Widget layout
 # Legend: 0 = two columns (default), 1 = single column
 widget_layout = 0
 
 # For Showcase view, flip alternate rows?
-flip_alt_rows = false
+flip_alt_rows = true
 
 # Filter toolbar.
 
