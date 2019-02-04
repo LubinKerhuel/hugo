@@ -12,7 +12,7 @@ day_night = true
 font = "myfont"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = "Rapid Control Prototyping"
+description = "Rapid Control Prototyping projects using Matlab/Simulink coder and the Microchip MPLAB blockset to target dsPIC microcontrollers."
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
 sharing_image = ""

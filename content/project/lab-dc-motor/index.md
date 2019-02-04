@@ -9,7 +9,7 @@ date = 2018-12-01
 draft = false
 
 # Project summary to display on homepage.
-summary = "Simulation & real-time control of a 24v DC motor (INSA Lyon hands-on)"
+summary = "Simulation & real-time control of a Pravalux 24v DC motor (INSA Lyon hands-on)"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`

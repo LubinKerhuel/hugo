@@ -15,7 +15,8 @@ draft = false
 #    weight = 1
 
 # Project summary to display on homepage.
-summary = "Inverted pendulum running on a microstick II dsPIC board. Angle is estimated from low cost MEMS sensors with an IMU data fusion algorithm. Stabilizing control loop drives two DC motors from a modified RC toy. No encoder sensor are used."
+summary = "Low cost inverted pendulum running on a microstick II dsPIC board. Angle is estimated with an IMU data fusion algorithm fed with the ICM-20608 Inertial sensor. LQR control loop drives two DC motors of the modified toy. No encoder sensor are present."
+# summary = "LQR stabilization of an inverted pendulum platform made with low cost toy. Simulink model and generation of code for dsPIC Microchip microcontroller are provided (Rapid Control Prototyping : RCP)"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
