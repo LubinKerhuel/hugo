@@ -21,6 +21,18 @@ transition = "zoom"
 ---
 
 
+{{% section %}}
+
+# Vertical slide 1
+
+---
+
+# Vertical slide 2
+
+{{% /section %}}
+
+---
+
 <section data-background-iframe="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&controls=1&showinfo=0&autohide=1&rel=0&modestbranding=1&loop=&start=0" data-background-opacity=0.06 data-background-repeat="repeat">
 </section>
 
