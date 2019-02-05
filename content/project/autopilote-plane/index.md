@@ -18,7 +18,7 @@ external_link = ""
 
 
 share = false  # Show social sharing links?
-profile = false  # Show author profile?
+profile = true  # Show author profile?
 comments = false  # Show comments?
 
 # Slides (optional).
