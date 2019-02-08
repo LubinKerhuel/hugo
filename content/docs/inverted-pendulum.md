@@ -2,12 +2,14 @@
 title = "Inverted Pendulum"
 
 aliases = ["project/inverted_pendulum_flywheels/"]
-
 summary = "LQR stabilization of an inverted pendulum platform made with low cost toy. Simulink model and generation of code for dsPIC Microchip microcontroller are provided (Rapid Control Prototyping : RCP)"
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+
+ date = 2018-09-09T00:00:00
+ lastmod = 2018-09-09T00:00:00
 
 math = true
 
