@@ -2,6 +2,9 @@
 # Display name
 name = "Lubin Kerhuel"
 
+# Username (this should match the folder name)
+authors = ["lubin"]
+
 # Is this the primary user of the site?
 superuser = true
 
@@ -103,25 +106,36 @@ interests = [
 #   icon_pack = "ai"
 #   link = "files/cv.pdf"
 
+ math = true
 
- 
 +++
 
-During my schrool time (1999-2005), writing C program for embedded system absorbed all the effort therefore control projects ended up with simple PID algorithm tuned with successive trials. **Time dedicated to modeling, identification and simulation were null**.
+During my schrool time (1999-2005), control projects ended up with simple PID algorithm tuned with successive trials.
+Developping embedded C program took so much time than **remaining time  for modeling, identification and simulation tasks tend toward null**.
 
-I developed a blockset to target dsPIC Micro-Controllers Unit (MCU) from simulink in 2005. It enables testing a model on real hardware through a single push button:
+First Attempts to target dsPIC 16f with the Simulink code generator failed due to compiler incompatibility. 
+In 2005 however, the dsPIC 33f compiler and the generated code gets compatible thus I started a blockset targetting dsPIC 33f.
+It does in
 
-- code generation,
-- compilation,
-- download on the target done all at once.
+$$
+\text{one push button}
+\left\\{ \begin{array}{l}
+\text{- C code generation,} \\\\\\
+\text{- Compilation,} \\\\\\
+\text{- Upload \& run on the target.} \\\\\\
+\end{array} \right.
+$$ 
 
-I used this model based designed from 2006 to complete a [PhD thesis](http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on robots inspired from the fly's visual control system. It reduces the time from the simulation or dSPACE test bench platform to our [autonomous robot](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721). 
 
-Thereafter I joined [MOVEA](https://www.ideas-laboratory.com/projects/movea/), where I designed various data fusion algorithm for sports applications using the same rapid control prototyping approach. 
+I completed a [PhD thesis](http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009 using this approach.
+The model based designed reduces the time from the simulation or dSPACE test bench platform to our [autonomous robot](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721). 
 
-I ended-up at [Microchip](https://www.microchip.com/) developping the [MPLAB blockset](https://www.microchip.com/simulinkblocks/) to target dsPIC and PIC32 microcontrollers.
+I designed various data fusion algorithm for sports applications at [MOVEA](https://www.ideas-laboratory.com/projects/movea/) in 2010-2011, using a similar rapid prototyping scheme. 
 
-For company, scientists, and student, *model-based design enable focusing on ideas behind algorithm* rather than developping time consuming C program including peripheral drivers. Shortening the loop-(back) $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, getting better results, product, and possibly reduce the time to market.
+I am now developping the [MPLAB blockset](https://www.microchip.com/simulinkblocks/) at [Microchip](https://www.microchip.com/) to target dsPIC and PIC32 microcontrollers.
 
-The present website shares my experience of Rapid Control Prototyping tools through simple but fun projects. All are based on the [Microchip blockset](https://www.microchip.com/simulinkblocks/) which is available for free but requires matlab/simulink with embedded coder. 
+For company, scientists, and students, *model-based design enable focusing on ideas* rather than getting lost in the embedded programming requirements.
+Shortening the loop-(back) $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, getting better results, product, and possibly reduce the time to market.
 
+The present website shares this experience of Rapid Prototyping tools through custom and hopefully fun projects.
+All are based on the [Microchip blockset](https://www.microchip.com/simulinkblocks/) which is free. It requires matlab/simulink with embedded coder related toolboxes. 
