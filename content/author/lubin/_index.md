@@ -110,15 +110,14 @@ interests = [
 
 +++
 
-During my schrool time (1999-2005), control projects ended up with simple PID algorithm tuned with successive trials.
-Developping embedded C program took so much time than **remaining time  for modeling, identification and simulation tasks tend toward null**.
+Most projects to practice control theory done during my school time (1999-2005) ended-up with simple PID algorithm tuned with successive trials.
+Developpements on embedded systems requires so much time than the **remaining time for modeling, identification and simulation was almost null**.
 
-First Attempts to target dsPIC 16f with the Simulink code generator failed due to compiler incompatibility. 
-In 2005 however, the dsPIC 33f compiler and the generated code gets compatible thus I started a blockset targetting dsPIC 33f.
-It does in
+Looking at a better possibility, the first attempt to target dsPIC 16f with the Simulink code generator failed due to compiler incompatibility. 
+In 2005 however, the dsPIC 33f compiler and the generated code gets compatible thus I continued testing which ended up with a blockset targetting dsPIC 33f.
 
 $$
-\text{one push button}
+\text{One push button}
 \left\\{ \begin{array}{l}
 \text{- C code generation,} \\\\\\
 \text{- Compilation,} \\\\\\
@@ -127,15 +126,17 @@ $$
 $$ 
 
 
-I completed a [PhD thesis](http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009 using this approach.
-The model based designed reduces the time from the simulation or dSPACE test bench platform to our [autonomous robot](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721). 
+This model based design method helped a lot to completed a [PhD thesis](http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009.
+It reduces the time from the simulation or dSPACE test bench platform to our [autonomous robot](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721). 
 
-I designed various data fusion algorithm for sports applications at [MOVEA](https://www.ideas-laboratory.com/projects/movea/) in 2010-2011, using a similar rapid prototyping scheme. 
+The same rapid prototyping scheme helped in developping various data fusion algorithm for sports applications at [MOVEA](https://www.ideas-laboratory.com/projects/movea/) in 2010-2011. 
 
 I am now developping the [MPLAB blockset](https://www.microchip.com/simulinkblocks/) at [Microchip](https://www.microchip.com/) to target dsPIC and PIC32 microcontrollers.
 
 For company, scientists, and students, *model-based design enable focusing on ideas* rather than getting lost in the embedded programming requirements.
 Shortening the loop-(back) $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, getting better results, product, and possibly reduce the time to market.
 
-The present website shares this experience of Rapid Prototyping tools through custom and hopefully fun projects.
-All are based on the [Microchip blockset](https://www.microchip.com/simulinkblocks/) which is free. It requires matlab/simulink with embedded coder related toolboxes. 
+The present website shares some experience with simulink as Rapid Prototyping tools through custom projects.
+All are based on the [Microchip blockset](https://www.microchip.com/simulinkblocks/) targetting dsPIC. It uses matlab/simulink with embedded coder toolboxes and its dependancies.
+
+None of the examples presented are a reference design endorsed by Microchip.  
