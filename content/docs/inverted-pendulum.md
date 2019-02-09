@@ -30,7 +30,7 @@ GitRepo = "hugo"
 +++
 
 <!-- Enable Photo Swipe + gallery features -->
-{{< load-photoswipe >}} 
+{{< load-photoswipe >}}
 
 {{< figure
 src="/img/pendulum_platform_top.png"

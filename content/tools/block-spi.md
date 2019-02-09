@@ -20,7 +20,8 @@ GitRepo = "hugo"
 
 +++
 
-{{< load-photoswipe >}} 
+<!-- Enable Photo Swipe + gallery features -->
+{{< load-photoswipe >}}
 
 The SPI block send/receive SPI frame between the targeted dsPIC / PIC32 a sensor.
 The SPI driver use interrupt to keep the main task running while handling SPI tasks in background.
