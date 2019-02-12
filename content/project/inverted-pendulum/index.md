@@ -15,8 +15,8 @@ draft = false
 #    weight = 1
 
 # Project summary to display on homepage.
-summary = "Low cost inverted pendulum running on a microstick II dsPIC board. Angle is estimated with an IMU data fusion algorithm fed with the ICM-20608 Inertial sensor. LQR control loop drives two DC motors of the modified toy. No encoder sensor are present."
-# summary = "LQR stabilization of an inverted pendulum platform made with low cost toy. Simulink model and generation of code for dsPIC Microchip microcontroller are provided (Rapid Control Prototyping : RCP)"
+summary = "Inverted pendulum running on a microstick II dsPIC board. An IMU algorithm estimate the angle based on a MEMS inertial sensor. LQR feedback controls the DC motors of the trolley. No encoder are used."
+
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
@@ -72,32 +72,9 @@ url_poster = ""
   # theu use header image to show something else in the page
   # preview_only = false
 
-#[header]
-#image = "idtLK.jpg"
-#caption = "head of the inverted pendulum"
-
-
-[[gallery_item]]
-album = "flywheel_gallery"
-image = "01_Toysrus_FlyWheels_package.jpg"
-caption = "FlyWheels toy package"
-
-# [[gallery_item]]
-# album = "1"
-# image = "Toysrus_FlyWheels_Vehicle.jpg"
-# caption = "Toy used as base"
-
-# [[gallery_item]]
-# album = "1"
-# image = "Toysrus_FlyWheels_Vehicle_Remote.jpg"
-# caption = "Toy with its remote"
-
-[[gallery_item]]
-album = "flywheel_gallery"
-image = "02_Toysrus_FlyWheels_Open.jpg"
-caption = "Inside of the FlyWheels toy with its two DC motors"
- 
-
 +++
 
-
+Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
+The embedded IMU data fusion algorithm use the ICM-20608 inertial sensor to estimate the angle.
+LQR control loop drives two DC motors of the modified toy.
+No encoder sensor are present.
