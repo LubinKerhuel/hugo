@@ -42,9 +42,9 @@ url_poster = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-#url_custom = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
+#links = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
 
-url_custom = [
+links = [
 	{name = "Lab", url = "https://rtdc.ctrl-elec.fr/"},
 	{name = "Simulink models", url = "https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/tree/master/LABMatlabFiles/"},
 	]
