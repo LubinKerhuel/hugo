@@ -94,6 +94,7 @@ numbered="true"
 >}}
 
 
+
 ### IMU sensor
 
 The unique sensor used is a 6 DoF[^DoF] sensor: the `ICM-20608` from Invensense mounted on a [Drotek board](https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html) provides:
@@ -180,6 +181,17 @@ The pendulum model is composed of two intertwined sub-system:
 
 - The pendulum*, with 1 rotation DoF[^DoF] $\theta$ angle around the wheel's axis 
 - The trolley*, with 1 translation DoF[^DoF] $x$ position. 
+
+{{< figure 
+src="/img/Pendulum-Forces.png" 
+link="/img/Pendulum-Forces.png"
+width="80%"
+title="Pendulum scheme with forces"
+caption="P is the weight at the center of gravity of the pendulum. R is the reaction force from the stiff rod and from the floor. F is a friction force appearing when the pendulum is in rotation. {i,j} is the earth frame and {r,n} is the pendulum frame."
+numbered="true"
+>}}
+
+
 
 ## Equations
 
