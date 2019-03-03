@@ -185,9 +185,9 @@ The pendulum model is composed of two intertwined sub-system:
 {{< figure 
 src="/img/Pendulum-Forces.png" 
 link="/img/Pendulum-Forces.png"
-width="80%"
+width="100%"
 title="Pendulum scheme with forces"
-caption="P is the weight at the center of gravity of the pendulum. R is the reaction force from the stiff rod and from the floor. F is a friction force appearing when the pendulum is in rotation. {i,j} is the earth frame and {r,n} is the pendulum frame."
+caption="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\\{ \vec{i},\vec{j} \\}$ is the earth frame and $\\{ \vec{r},\vec{n} \\}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations."
 numbered="true"
 >}}
 
@@ -205,9 +205,9 @@ $$ \underbrace{ -mg\vec{j} }\_{\vec{P}} \
  + \ \underbrace{ mg\vec{j} . \vec{r} + \underbrace{Ctfg . \vec{r}}\_{\text{Centrifugal}} }\_{\vec{R}} = ml \frac{\partial^2\vec{ r }}{\\partial t^2}
 $$
 
-With $ \\{ \vec{i},\vec{j} \\} $ the earth reference frame and $ \\{ \vec{r},\vec{n} \\} $ the pendulum frame (rod and normal direction). 
+With $ \\{ \vec{i},\vec{j} \\} $ the static earth frame and $ \\{ \vec{r},\vec{n} \\} $ the pendulum frame (rod and normal direction). 
 $m$ is the mass of the pendulum (without the trolley).
-$l$ is the distance from the inter-wheel's axis to the center of mass of the pendulum (without the trolley)
+$l$ is the length from the inter-wheel's axis to the center of mass of the pendulum (without the trolley)
 
 $$
 \left\\{ \begin{array}{rcl}
@@ -216,13 +216,13 @@ $$
 \end{array} \right.
 $$ 
 
-With 
+Considering the rotation $\theta$, the time derivative of $\vec{r}$ is 
 
 $$
 \begin{array}{rcl}
-	k \frac{\partial \vec{r}}{\\partial t} 
+	\frac{\partial \vec{r}}{\\partial t} 
 	\& = \&
-	-k  \dot{\theta} \vec{n} \\\\\\
+	- \dot{\theta} \vec{n} \\\\\\
 \end{array} 
 $$ 
 
@@ -230,25 +230,33 @@ and
 
 $$
 \begin{array}{rcl}
-	ml \frac{\partial^2\vec{ r }}{\partial t^2} 	
+	\frac{\partial^2\vec{ r }}{\partial t^2} 	
 	\& = \&
-	-ml \frac{\partial }{\\partial t} \left( \dot{\theta} \vec{n} \right) \\\\\\
+	- \frac{\partial }{\\partial t} \left( \dot{\theta} \vec{n} \right) \\\\\\
 	\& = \&
-	-ml \ddot{\theta} \vec{n} - ml\dot{\theta}^2 \vec{r}
+	- \ddot{\theta} \vec{n} - \dot{\theta}^2 \vec{r}
 \end{array} 
  $$
 
-Separating each axis $ \\{ \vec{r},\vec{n} \\} $  we obtain:
+Then the projection of the forces equation in the trolley basis $ \\{ \vec{r},\vec{n} \\} $ is:
 $$
-\left\\{ \begin{array}{rcl}
-	\ddot{\theta} + \frac{km}{l}\dot{\theta} - \frac{g}{l} . sin(\theta) = 0 \\\\\\ 
-	ml\dot{\theta}^2 + Ctfg = 0	
+\left\\{ \begin{array}{rcl}	 
+	 \left( ml\dot{\theta}^2 + Ctfg \right) \vec{r} = \vec{0}	\\\\\\ 	 
+	 \left( l \ddot{\theta} + \frac{k}{m}\dot{\theta} - g . sin(\theta) \right) \vec{n} = \vec{0}  
 \end{array} \right.
 $$ 
 
-The second equation provides the centrifugal force counteracted by the pendulum rod.
+In the first equation on the $\vec{r}$ axis, the weight $\vec{P} = -mg\vec{j}$ is compensated by the term $mg\vec{j}.\vec{r}$ from the reaction force and is simplified.
+The rod also compensate the Centrifugal force $ml\dot{\theta}^2$.
 
-The first differential equation allows solving the angle $\theta$ evolution. It can be linearized with $sin(\theta) \approx \theta$ when the pendulum is up near $0$, or with $sin(\theta) \approx - (\theta - \pi)$ when the pendulum is down near $\pi$.
+The second differential equation on the $\vec{n}$ axis describes the evolution of angle $\theta$.
+It can be linearized with $sin(\theta) \approx \theta$ when the pendulum is up near $0$, or with $sin(\theta) \approx - (\theta - \pi)$ when the pendulum is down near $\pi$.
+
+{{% alert note %}} 
+The linearized term for $sin$ is positive when pendulum is up when $\theta \approx 0$ and negative when pendulum is down when $\theta \approx \pm \pi$.
+{{% /alert %}}
+
+
 
 When the pendulum is up-side down (thus stable situation), the resulting $2^{nd}$ order system is characterized by: 
 
@@ -264,14 +272,14 @@ $$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$
 Using $\pm 1 \rightarrow +1$ when the pendulum is down side (stable) and $-1$ when up side (unstable).
 
 
-The parameter $l$ could be measured from the platform hardware but the damping factor $\zeta$ depends on friction and cannot be measured.
+The parameter $l$ could be estimated from the platform geometry. The damping parameter $\zeta$ depends on frictions and cannot be measured directly from the platform geometry.
 Thus both $l$ and $\zeta$ are determined by an identification on the free oscillating pendulum
 
 ## Identification
 
-The pendulum is placed up-side-down between two chair back.
-The pendulum is let free to oscillate, motor off.
-The initial pendulum angle is $\theta \approx \frac{\pi}{2}$ (almost horizontal). It oscillates at its frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. The $1kHz$ sampled angular speed and accelerations are recorded with [openlager](https://github.com/d-ronin/openlager/wiki) board connected on the [UART](#UARTINTERFACE) interface.
+The pendulum is placed between two chair back so as to be able to oscillate freely up side down. Motor are off.
+The pendulum is left free with initial conditions : $\theta = 161\deg$ and $\dot \theta = 0$  (almost vertical in an instable state).
+It oscillates at its frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. The $1kHz$ sampled angular speed and accelerations are recorded with [openlager](https://github.com/d-ronin/openlager/wiki) board connected on the [UART](#UARTINTERFACE) interface.
 
 |Pendulum Parameters|Identified Value|
 | :---: | :---: |
@@ -281,7 +289,11 @@ The initial pendulum angle is $\theta \approx \frac{\pi}{2}$ (almost horizontal)
 ⬆ Table of pendulum parameters
 
 
- Recorded data fed a Simulink model which reconstruct the pendulum angle with the IMU algorithm. Then the pendulum $\theta$ oscillations is compared against a theoretical pendulum model.
+ Inertial measurement record is used as input data in a Simulink model.
+ The parameters $l$ and $k$ can be retrived by comparing the measured acceleration with the predicted acceleration derived from the forces equations projected in the pendulum frame $\\{ \vec{r},\vec{n} \\}$.
+ The pendulum angle $\theta$ is reconstructed with a complementary filter implemented with quaternion.
+ This reconstructed pendulum angle $\theta$ is compared against a simulated pendulum model validating the estimated parameters.
+
  The model parameters $l$ and $\zeta$ are tuned for the model to match with the experimental data.  
 
 
