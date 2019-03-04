@@ -278,14 +278,14 @@ Motor are off and the pendulum is released up-side with in the unstable conditio
 &lt;p&gt;The measured inertial sensors are then re-used as data source in a Simulink model. $\theta$ angle is reconstructed using an IMU complementary filter algorithm implemented in the quaternion angle representation.&lt;/p&gt;
 &lt;p&gt;The pendulum model is initialized with the experimentation initial condition ($\theta = -19°$ , $\dot \theta = 0$). Trolley linar acceleration input is null.
 Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angle fit with the measured oscillation $\theta$.&lt;/p&gt;
-&lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; alt=&#34;$\theta$ angle of modeled pendulum is compared against free oscillation experimentation measured. The pendulum is released at $16.7s$ almost up side ($19°$) and let free to oscillate. The black curve is the measured reference. The blue curve is a model with a linear damping with $k = 0.4$. The red curve use a non linear damping function where a non linear term -1.1*$sign(\dot{\theta})$ is added to the linear whose parameter $k = 0.17$.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; alt=&#34;$\theta$ angle from free oscillation experiment is compared against two pendul models. The pendul is released at time $16.7s$ up side ($19°$) and let free to oscillate. The wide grey curve is the experimental angle reference reconstructed from inertial sensors. The blue curve is a pendul model using a linear damping with $k = 0.4$. The red curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;Identification - $\theta$ angle measured vs model&lt;/h4&gt;
-&lt;p&gt;$\theta$ angle of modeled pendulum is compared against free oscillation experimentation measured. The pendulum is released at $16.7s$ almost up side ($19°$) and let free to oscillate. The black curve is the measured reference. The blue curve is a model with a linear damping with $k = 0.4$. The red curve use a non linear damping function where a non linear term -1.1*$sign(\dot{\theta})$ is added to the linear whose parameter $k = 0.17$.&lt;/p&gt;
+&lt;figcaption&gt;&lt;h4&gt;Identification - experimental $\theta$ angle reconstructed from inertials sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4&gt;
+&lt;p&gt;$\theta$ angle from free oscillation experiment is compared against two pendul models. The pendul is released at time $16.7s$ up side ($19°$) and let free to oscillate. The wide grey curve is the experimental angle reference reconstructed from inertial sensors. The blue curve is a pendul model using a linear damping with $k = 0.4$. The red curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -307,7 +307,7 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;$w_n = \sqrt{\frac{g}{l}}$&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;$0.37 rad.s^{-1}$ ( $2.33 Hz$ )&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;$4.67\ rad.s^{-1}$ ( $0.74 Hz$ or $1.35s$ period )&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
