@@ -142,7 +142,7 @@ Two pairs of wires power two DC motors in either direction through an `L298N` H 
 	src="/img/pendulum_toysrus_flywheels_open.jpg"	
 	title="Two DC motors"
 	caption="Two DC motors"
-	>}}
+    >}}
 {{< /gallery >}}
 
 <!-- 
@@ -157,7 +157,7 @@ The L298N H bridge controls two DC motors. For each motor:
 
 The third signal is modulated with a 100Hz square periodic signal whose duty cycle vary from 0% to 100% (PWM). It sets the torque for the motor.
 
-The flat multicolor ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.
+The flat multicolour ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.
 
 {{< figure
 src="/img/pendulum_base.png"
@@ -183,14 +183,13 @@ The pendulum model is composed of two intertwined sub-system:
 - The trolley*, with 1 translation DoF[^DoF] $x$ position. 
 
 {{< figure 
-src="/img/Pendulum-Forces.png" 
-link="/img/Pendulum-Forces.png"
+src="/img/pendulum-forces.png" 
+link="/img/pendulum-forces.png"
 width="100%"
 title="Pendulum scheme with forces"
 caption="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\\{ \vec{i},\vec{j} \\}$ is the earth frame and $\\{ \vec{r},\vec{n} \\}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations."
 numbered="true"
 >}}
-
 
 
 ## Equations
@@ -202,7 +201,7 @@ We model the three forces which are the weight $\vec{P}$, the Friction $\vec{F}$
 
 $$ \underbrace{ -mg\vec{j} }\_{\vec{P}} \ 
  - \ \underbrace{ k \frac{\partial \vec{r}}{\\partial t} }\_{\vec{F}} \ 
- + \ \underbrace{ mg\vec{j} . \vec{r} + \underbrace{Ctfg . \vec{r}}\_{\text{Centrifugal}} }\_{\vec{R}} = ml \frac{\partial^2\vec{ r }}{\\partial t^2}
+ + \ \underbrace{ ( mg\vec{j} . \vec{r} + \underbrace{Ctfg}\_{\text{Centrifugal}} } \_{\vec{R} } ) . \vec{r} = ml \frac{\partial^2\vec{ r }}{\\partial t^2}
 $$
 
 With $ \\{ \vec{i},\vec{j} \\} $ the static earth frame and $ \\{ \vec{r},\vec{n} \\} $ the pendulum frame (rod and normal direction). 
@@ -216,20 +215,13 @@ $$
 \end{array} \right.
 $$ 
 
-Considering the rotation $\theta$, the time derivative of $\vec{r}$ is 
+Considering the rotation $\theta$, the first and second time derivative of $\vec{r}$ is 
 
 $$
 \begin{array}{rcl}
 	\frac{\partial \vec{r}}{\\partial t} 
 	\& = \&
 	- \dot{\theta} \vec{n} \\\\\\
-\end{array} 
-$$ 
-
-and 
-
-$$
-\begin{array}{rcl}
 	\frac{\partial^2\vec{ r }}{\partial t^2} 	
 	\& = \&
 	- \frac{\partial }{\\partial t} \left( \dot{\theta} \vec{n} \right) \\\\\\
@@ -246,53 +238,76 @@ $$
 \end{array} \right.
 $$ 
 
-In the first equation on the $\vec{r}$ axis, the weight $\vec{P} = -mg\vec{j}$ is compensated by the term $mg\vec{j}.\vec{r}$ from the reaction force and is simplified.
-The rod also compensate the Centrifugal force $ml\dot{\theta}^2$.
+The first equation for the $\vec{r}$ axis shows internal forces which cancel each other: the weight $\vec{P} = -mg\vec{j}$ which is compensated on the $\vec{r}$ axis by the term $mg\vec{j}.\vec{r}$ from the reaction force which will also compensate for the Centrifugal force $ml\dot{\theta}^2$.
 
-The second differential equation on the $\vec{n}$ axis describes the evolution of angle $\theta$.
-It can be linearized with $sin(\theta) \approx \theta$ when the pendulum is up near $0$, or with $sin(\theta) \approx - (\theta - \pi)$ when the pendulum is down near $\pi$.
+The second differential equation on the $\vec{n}$ axis allows to solve for the evolution of the angle $\theta$.
+It can be made linear with $sin(\theta) \approx \theta$ when the pendulum is up near $0$, or with $sin(\theta) \approx - (\theta - \pi)$ when the pendulum is down near $\pi$.
 
-{{% alert note %}} 
-The linearized term for $sin$ is positive when pendulum is up when $\theta \approx 0$ and negative when pendulum is down when $\theta \approx \pm \pi$.
-{{% /alert %}}
+{{< figure 
+src="/img/pendulum-model-rod.png" 
+link="/img/pendulum-model-rod.png"
+width="100%"
+title="Pendulum model for rod rotation"
+caption="non-linear model of the $\theta$ angle evolution derived from the forces projected on the normal $\vec{n}$ axis of the rod. The trolley linear acceleration input is added."
+numbered="true"
+>}}
 
-
-
-When the pendulum is up-side down (thus stable situation), the resulting $2^{nd}$ order system is characterized by: 
-
-- a natural oscillation frequency $w_n = \sqrt{ \frac{g}{l} } $, and
-- a damping factor $\zeta$. 
-
-In the laplace domain, differential equations for $\theta$ becomes:
+The linear approximation for $\theta$ in the laplace domain is a $2^{nd}$ order system:
 $$ \theta(s) \left ( \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 \right ) = 0  $$
 
-The pendulum transfert function $F_p = \frac{\theta(s)}{E(s)}$ with a null input $E(s) = 1$
+The pendulum transfer function $F_p = \frac{\theta(s)}{E(s)}$ with a null input $E(s) = 1$
 $$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$
 
-Using $\pm 1 \rightarrow +1$ when the pendulum is down side (stable) and $-1$ when up side (unstable).
+{{% alert note %}} 
+The linear term for $sin$ is positive when the pendulum is up when $\theta \approx 0$ (unstable), and negative when pendulum is down when $\theta \approx \pm \pi$ (stable).
+{{% /alert %}}
 
-
-The parameter $l$ could be estimated from the platform geometry. The damping parameter $\zeta$ depends on frictions and cannot be measured directly from the platform geometry.
-Thus both $l$ and $\zeta$ are determined by an identification on the free oscillating pendulum
+This transfer function is characterized when the pendulum is down by its natural frequency $w_n = \sqrt{ \frac{g}{l} } $, and a damping factor $\zeta$. 
 
 ## Identification
 
-The pendulum is placed between two chair back so as to be able to oscillate freely up side down. Motor are off.
-The pendulum is left free with initial conditions : $\theta = 161\deg$ and $\dot \theta = 0$  (almost vertical in an instable state).
-It oscillates at its frequency $w_n$ until the damping friction ($\zeta$) stop the oscillations. The $1kHz$ sampled angular speed and accelerations are recorded with [openlager](https://github.com/d-ronin/openlager/wiki) board connected on the [UART](#UARTINTERFACE) interface.
+The parameter $l$ could be estimated from the platform mechanical but the damping parameter $\zeta$ (or frictions coefficient $k$) could not be estimated easily from the platform and should be measured experimentally.
+
+### Experimental logs
+
+The pendulum is placed on a track (two chairs back to back) so as to be able to make a complete rotation.
+Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -19°$ , $\dot \theta = 0$).
+
+It oscillates until the damping friction ($\zeta$) stops the free oscillations.
+
+The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an [openlager](https://github.com/d-ronin/openlager/wiki) board connected on the dsPIC [UART](#UARTINTERFACE) interface.
+
+### Simulation from logs
+
+The measured inertial sensors are then re-used as data source in a Simulink model. $\theta$ angle is reconstructed using an IMU complementary filter algorithm implemented in the quaternion angle representation.
+ 
+The pendulum model is initialized with the experimentation initial condition ($\theta = -19°$ , $\dot \theta = 0$). Trolley linar acceleration input is null.
+Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angle fit with the measured oscillation $\theta$.
+
+{{< figure 
+src="/img/pendulum-identification-theta.png" 
+link="/img/pendulum-identification-theta.png"
+width="80%"
+title="Identification - $\theta$ angle measured vs model"
+caption="$\theta$ angle of modeled pendulum is compared against free oscillation experimentation measured. The pendulum is released at $16.7s$ almost up side ($19°$) and let free to oscillate. The black curve is the measured reference. The blue curve is a model with a linear damping with $k = 0.4$. The red curve use a non linear damping function where a non linear term -1.1*$sign(\dot{\theta})$ is added to the linear whose parameter $k = 0.17$."
+numbered="true"
+>}}
+
 
 |Pendulum Parameters|Identified Value|
 | :---: | :---: |
 | $l$  | $0.45 m$ |
 | $k$  |$0.4$ |
 | $w_n = \sqrt{\frac{g}{l}}$  | $0.37 rad.s^{-1}$ ( $2.33 Hz$ ) | 
-⬆ Table of pendulum parameters
+⬆ Identified pendulum parameters
+
+{{% alert warning %}} 
+Below is under construction !
+{{% /alert %}}
+
+ The parameters $l$ and $k$ can be retrieved by comparing the measured acceleration with the predicted acceleration derived from the forces equations projected in the pendulum frame $\\{ \vec{r},\vec{n} \\}$.
 
 
- Inertial measurement record is used as input data in a Simulink model.
- The parameters $l$ and $k$ can be retrived by comparing the measured acceleration with the predicted acceleration derived from the forces equations projected in the pendulum frame $\\{ \vec{r},\vec{n} \\}$.
- The pendulum angle $\theta$ is reconstructed with a complementary filter implemented with quaternion.
- This reconstructed pendulum angle $\theta$ is compared against a simulated pendulum model validating the estimated parameters.
 
  The model parameters $l$ and $\zeta$ are tuned for the model to match with the experimental data.  
 
@@ -306,32 +321,31 @@ This dynamic includes the motor dynamics when it is loaded with the trolley cons
 
 The model considers as negligible the effect of the pendulum forces (translational and rotational) applied on the trolley. 
 
-
 $$  x(s) = \frac{1}{\tau s + 1} $$
+
+## Identification
 
 |Trolley Parameter|Estimated Value|
 | :---: | :---: |
 | $\tau$  | $0.3s$ |
-
-The trolley does not have any sensors. No encoder or current sensor are used to control the two motors. The parameters $\tau$ is guessed instead of identified. 
-
-## Identification
+ 
+The trolley does not have any sensors. No encoder or current sensor are used to control the two motors. The parameters $\tau$ is guessed instead of identified.
 
 Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between theses periodic re-initialization.
-
-
 
 # Controller
 
 `Stabilization overview:` The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilizes the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.
 
+## Linearized model
+
+## LQR feedback controller
 
 
 
 Video of the inverted Pendulum when it encounters a wall:
 {{< vimeo id="309876329" caption="Inverted pendulum pushing a wall">}}
 <!-- You tube alternative: {{< youtube id ="xbu4hXOnemE" >}} -->
-
 
 Another way to stabilize a pendulum with an electric see-saw ([video](https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum)).
 
