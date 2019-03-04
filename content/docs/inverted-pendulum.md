@@ -287,9 +287,9 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 {{< figure 
 src="/img/pendulum-identification-theta.png" 
 link="/img/pendulum-identification-theta.png"
-width="80%"
-title="Identification - $\theta$ angle measured vs model"
-caption="$\theta$ angle of modeled pendulum is compared against free oscillation experimentation measured. The pendulum is released at $16.7s$ almost up side ($19°$) and let free to oscillate. The black curve is the measured reference. The blue curve is a model with a linear damping with $k = 0.4$. The red curve use a non linear damping function where a non linear term -1.1*$sign(\dot{\theta})$ is added to the linear whose parameter $k = 0.17$."
+width="100%"
+title="Identification - experimental $\theta$ angle reconstructed from inertials sensors (wide grey curve) vs pendulum model (read and blue dashed curves)"
+caption="$\theta$ angle from free oscillation experiment is compared against two pendul models. The pendul is released at time $16.7s$ up side ($19°$) and let free to oscillate. The wide grey curve is the experimental angle reference reconstructed from inertial sensors. The blue curve is a pendul model using a linear damping with $k = 0.4$. The red curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$."
 numbered="true"
 >}}
 
@@ -298,7 +298,7 @@ numbered="true"
 | :---: | :---: |
 | $l$  | $0.45 m$ |
 | $k$  |$0.4$ |
-| $w_n = \sqrt{\frac{g}{l}}$  | $0.37 rad.s^{-1}$ ( $2.33 Hz$ ) | 
+| $w_n = \sqrt{\frac{g}{l}}$  | $4.67\  rad.s^{-1}$ ( $0.74 Hz$ or $1.35s$ period ) | 
 ⬆ Identified pendulum parameters
 
 {{% alert warning %}} 
