@@ -103,8 +103,8 @@ The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $
 &lt;/div&gt;
 &lt;h2 id=&#34;head-electronics&#34;&gt;Head electronics&lt;/h2&gt;
 &lt;h3 id=&#34;microcontroller&#34;&gt;Microcontroller&lt;/h3&gt;
-&lt;p&gt;The controller is a &lt;code&gt;Microstick II&lt;/code&gt; board equipped with a &lt;code&gt;dsPIC 33EP128MC202&lt;/code&gt; running at $\approx 70\ MIPS$.
-It is powered through the USB modified cable which &lt;strong&gt;provide only the power supply&lt;/strong&gt; from 4 AA batteries hold in the base.&lt;/p&gt;
+&lt;p&gt;The controller is a &lt;code&gt;Microstick II&lt;/code&gt; board equipped with a &lt;code&gt;dsPIC 33EP128MC202&lt;/code&gt; running at $70\ MIPS$.
+It is powered through the USB connector which &lt;strong&gt;only provide the power supply&lt;/strong&gt; from 4 AA batteries hold in the base.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -117,13 +117,13 @@ It is powered through the USB modified cable which &lt;strong&gt;provide only th
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;imu-sensor&#34;&gt;IMU sensor&lt;/h3&gt;
-&lt;p&gt;The unique sensor used is a 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; sensor: the &lt;code&gt;ICM-20608&lt;/code&gt; from Invensense mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34;&gt;Drotek board&lt;/a&gt; provides:&lt;/p&gt;
+&lt;p&gt;The unique sensor used is the 6 DoF&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:DoF&#34;&gt;&lt;a href=&#34;#fn:DoF&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; Invensense &lt;code&gt;ICM-20608&lt;/code&gt; mounted on a &lt;a href=&#34;https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html&#34;&gt;Drotek sensor board&lt;/a&gt;. It endows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;a 3 axis Accelerometers and&lt;/li&gt;
 &lt;li&gt;a 3 axis rate gyros.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The I2C blocks set the BUS clock at $400kHz$ and fetch the 6 sensors values every $1ms$ $(1kHz)$.
-The Simulink I2C blocks setting enable hot plug of the I2C sensor: The microcontroller initializes the sensor each time this last is detected or redetected on the I2C bus.&lt;/p&gt;
+The Simulink I2C blocks setting enable hot plug of the I2C sensor: The microcontroller initializes the sensor each time it is newly detected on the I2C bus.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.&lt;/li&gt;
 &lt;li&gt;The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.&lt;/li&gt;
@@ -164,8 +164,7 @@ Two pairs of wires power two DC motors in either direction through an &lt;code&g
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;!--
-(pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg))
---&gt;
+(pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg))--&gt;
 &lt;h3 id=&#34;power-electronics&#34;&gt;Power electronics&lt;/h3&gt;
 &lt;p&gt;The L298N H bridge controls two DC motors. For each motor:&lt;/p&gt;
 &lt;ul&gt;
@@ -207,9 +206,9 @@ The black and red wire from the trolley to the top of the pendulum powers the Mi
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;equations&#34;&gt;Equations&lt;/h2&gt;
-&lt;p&gt;Applying the Dynamic fundamental law on the pendulum:
+&lt;p&gt;The Dynamic fundamental law applied on the pendulum:
 $$ \sum \vec{Force} = m.\vec{a} $$&lt;/p&gt;
-&lt;p&gt;We model the three forces which are the weight $\vec{P}$, the Friction $\vec{F}$ which slow down the pendulum, and the Reaction $\vec{R}$ from the rod:&lt;/p&gt;
+&lt;p&gt;The three forces presents are the weight $\vec{P}$, the Friction $\vec{F}$, and the Reaction $\vec{R}$ from the rod &amp;amp; floor:&lt;/p&gt;
 &lt;p&gt;$$ \underbrace{ -mg\vec{j} }_{\vec{P}} \
 - \ \underbrace{ k \frac{\partial \vec{r}}{\partial t} }_{\vec{F}} \
 + \ \underbrace{ ( mg\vec{j} . \vec{r} + \underbrace{Ctfg}_{\text{Centrifugal}} } _{\vec{R} } ) . \vec{r} = ml \frac{\partial^2\vec{ r }}{\partial t^2}
@@ -219,27 +218,28 @@ $m$ is the mass of the pendulum (without the trolley).
 $l$ is the length from the inter-wheel&amp;rsquo;s axis to the center of mass of the pendulum (without the trolley)&lt;/p&gt;
 &lt;p&gt;$$
 \left\{ \begin{array}{rcl}
-\vec{i} &amp;amp; = &amp;amp; \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\\
+\vec{i} &amp;amp; = &amp;amp; \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\&lt;br /&gt;
 \vec{j} &amp;amp; = &amp;amp; \vec{n} . sin(\theta) + \vec{r} . cos(\theta)
 \end{array} \right.
 $$&lt;/p&gt;
-&lt;p&gt;Considering the rotation $\theta$, the first and second time derivative of $\vec{r}$ is&lt;/p&gt;
+&lt;p&gt;$$\vec{j}.\vec{r} = cos(\theta)$$&lt;/p&gt;
+&lt;p&gt;Considering the rotation $\theta$, the first and second time derivative of $\vec{r}$ are:&lt;/p&gt;
 &lt;p&gt;$$
 \begin{array}{rcl}
 \frac{\partial \vec{r}}{\partial t}
 &amp;amp; = &amp;amp;
 - \dot{\theta} \vec{n} \\&lt;br /&gt;
-\frac{\partial^2\vec{ r }}{\partial t^2}&lt;br /&gt;
+\frac{\partial^2\vec{ r }}{\partial t^2}
 &amp;amp; = &amp;amp;
 - \frac{\partial }{\partial t} \left( \dot{\theta} \vec{n} \right) \\&lt;br /&gt;
 &amp;amp; = &amp;amp;
 - \ddot{\theta} \vec{n} - \dot{\theta}^2 \vec{r}
 \end{array}
 $$&lt;/p&gt;
-&lt;p&gt;Then the projection of the forces equation in the trolley basis $ \{ \vec{r},\vec{n} \} $ is:
+&lt;p&gt;The projection of the forces equation in the pendulum frame $ \{ \vec{r},\vec{n} \} $ is:
 $$
-\left\{ \begin{array}{rcl}&lt;br /&gt;
-\left( ml\dot{\theta}^2 + Ctfg \right) \vec{r} = \vec{0} \\\&lt;br /&gt;
+\left\{ \begin{array}{rcl}
+\left( ml\dot{\theta}^2 + Ctfg \right) \vec{r} = \vec{0} \\&lt;br /&gt;
 \left( l \ddot{\theta} + \frac{k}{m}\dot{\theta} - g . sin(\theta) \right) \vec{n} = \vec{0}&lt;br /&gt;
 \end{array} \right.
 $$&lt;/p&gt;
@@ -271,21 +271,21 @@ $$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$&lt;/p
 &lt;p&gt;The parameter $l$ could be estimated from the platform mechanical but the damping parameter $\zeta$ (or frictions coefficient $k$) could not be estimated easily from the platform and should be measured experimentally.&lt;/p&gt;
 &lt;h3 id=&#34;experimental-logs&#34;&gt;Experimental logs&lt;/h3&gt;
 &lt;p&gt;The pendulum is placed on a track (two chairs back to back) so as to be able to make a complete rotation.
-Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -19°$ , $\dot \theta = 0$).&lt;/p&gt;
+Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p&gt;
 &lt;p&gt;It oscillates until the damping friction ($\zeta$) stops the free oscillations.&lt;/p&gt;
 &lt;p&gt;The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an &lt;a href=&#34;https://github.com/d-ronin/openlager/wiki&#34;&gt;openlager&lt;/a&gt; board connected on the dsPIC &lt;a href=&#34;#UARTINTERFACE&#34;&gt;UART&lt;/a&gt; interface.&lt;/p&gt;
 &lt;h3 id=&#34;simulation-from-logs&#34;&gt;Simulation from logs&lt;/h3&gt;
 &lt;p&gt;The measured inertial sensors are then re-used as data source in a Simulink model. $\theta$ angle is reconstructed using an IMU complementary filter algorithm implemented in the quaternion angle representation.&lt;/p&gt;
-&lt;p&gt;The pendulum model is initialized with the experimentation initial condition ($\theta = -19°$ , $\dot \theta = 0$). Trolley linar acceleration input is null.
+&lt;p&gt;The pendulum model is initialized with the experimentation initial condition ($\theta = -18°$ , $\dot \theta = 0$). Trolley linear acceleration input is null.
 Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angle fit with the measured oscillation $\theta$.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; alt=&#34;$\theta$ angle from free oscillation experiment is compared against two pendul models. The pendul is released at time $16.7s$ up side ($19°$) and let free to oscillate. The wide grey curve is the experimental angle reference reconstructed from inertial sensors. The blue curve is a pendul model using a linear damping with $k = 0.4$. The red curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; alt=&#34;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ up side ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;Identification - experimental $\theta$ angle reconstructed from inertials sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4&gt;
-&lt;p&gt;$\theta$ angle from free oscillation experiment is compared against two pendul models. The pendul is released at time $16.7s$ up side ($19°$) and let free to oscillate. The wide grey curve is the experimental angle reference reconstructed from inertial sensors. The blue curve is a pendul model using a linear damping with $k = 0.4$. The red curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p&gt;
+&lt;figcaption&gt;&lt;h4&gt;Identification - experimental $\theta$ angle reconstructed from inertial sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4&gt;
+&lt;p&gt;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ up side ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -312,15 +312,22 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;⬆ Identified pendulum parameters&lt;/p&gt;
+&lt;h3 id=&#34;validation-and-imu-improvement&#34;&gt;Validation and IMU improvement&lt;/h3&gt;
+&lt;p&gt;Parameters $l$ and $k$ can be further validated using the force equation and the estimated pendulum angle $\theta$.&lt;/p&gt;
+&lt;p&gt;The IMU input measurements is composed of the rate gyro and the accelerometers data. Magnetometers is not used in this pendulum example.
+The IMU input also require the predicted acceleration vector (resp magnetometer is used).
+The IMU output the sensor orientation and provides the gravity vector prediction as seen in the sensor estimated attitude (i.e. quaternion angle).&lt;/p&gt;
+&lt;p&gt;Comparing the gravity vector predicted with the accelerometers measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p&gt;
+&lt;p&gt;Considering the pendulum principal movement rotation $\theta$, the equations of forces applied on the pendulum derive from $\hat \theta$ a prediction for the dynamic acceleration.
+The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in theses calculations.&lt;/p&gt;
+&lt;p&gt;The updated acceleration comprising both a static and dynamic part is fed into the IMU algorithm improving the IMU correction of the rate gyro integration drift even when the pendulum is not static.&lt;/p&gt;
+&lt;h1 id=&#34;trolley-model&#34;&gt;Trolley Model&lt;/h1&gt;
+&lt;h2 id=&#34;equations-1&#34;&gt;Equations&lt;/h2&gt;
 &lt;div class=&#34;alert alert-warning&#34;&gt;
 &lt;div&gt;
 &lt;p&gt;Below is under construction !&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The parameters $l$ and $k$ can be retrieved by comparing the measured acceleration with the predicted acceleration derived from the forces equations projected in the pendulum frame $\{ \vec{r},\vec{n} \}$.&lt;/p&gt;
-&lt;p&gt;The model parameters $l$ and $\zeta$ are tuned for the model to match with the experimental data.&lt;/p&gt;
-&lt;h1 id=&#34;trolley-model&#34;&gt;Trolley Model&lt;/h1&gt;
-&lt;h2 id=&#34;equations-1&#34;&gt;Equations&lt;/h2&gt;
 &lt;p&gt;The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$.
 This dynamic includes the motor dynamics when it is loaded with the trolley considering the pendulum as vertical.&lt;/p&gt;
 &lt;p&gt;The model considers as negligible the effect of the pendulum forces (translational and rotational) applied on the trolley.&lt;/p&gt;
@@ -340,7 +347,10 @@ This dynamic includes the motor dynamics when it is loaded with the trolley cons
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;The trolley does not have any sensors. No encoder or current sensor are used to control the two motors. The parameters $\tau$ is guessed instead of identified.&lt;/p&gt;
+&lt;p&gt;The trolley does not have any sensors. No encoder or current sensor are used to control the two motors.
+The parameters $\tau$ is &amp;ldquo;guessed&amp;rdquo; in a first step.
+In a second step, a $2^{nd}$ inertial sensor board is temporary glued in the middle of the wheel diameter to as the inertial sensor is in the wheel rotation axe.
+An identification can be computed from the motor set-point and the wheel movements while the pendulum was actively controlled up by a first feedback loop.&lt;/p&gt;
 &lt;p&gt;Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between theses periodic re-initialization.&lt;/p&gt;
 &lt;h1 id=&#34;controller&#34;&gt;Controller&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Stabilization overview:&lt;/code&gt; The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilizes the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.&lt;/p&gt;
