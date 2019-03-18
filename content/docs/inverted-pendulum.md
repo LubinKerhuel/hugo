@@ -170,10 +170,10 @@ The pendulum model is composed of two intertwined sub-system:
 - The trolley*, with 1 translation DoF[^DoF] $x$ position.
 
 {{< figure
-src="/img/pendulum-forces.png"
-link="/img/pendulum-forces.png"
+src="/img/pendulum-free-body-diagram.png"
+link="/img/pendulum-free-body-diagram.png"
 width="100%"
-title="Pendulum scheme with forces"
+title="Pendulum free body diagram"
 caption="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\\{ \vec{i},\vec{j} \\}$ is the earth frame and $\\{ \vec{r},\vec{n} \\}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations."
 numbered="true"
 >}}
@@ -254,7 +254,11 @@ This transfer function is characterized when the pendulum is down by its natural
 
 ## Identification
 
-The parameter $l$ could be estimated from the platform mechanical but the damping parameter $\zeta$ (or frictions coefficient $k$) could not be estimated easily from the platform and should be measured experimentally.
+The parameter $l$ could be estimated from the platform mechanical but the damping parameter $\zeta$ (or frictions coefficient $k$) could not be estimated easily from the platform.
+
+The simulation model is satisfactory when the calculation it performs make realistic prediction.
+Experimental measurement is a good method to refine a model and tune its parameters.
+In our case, the parameters  $l$ and $\zeta$ (or $k$) are identified from the experiment explained below.
 
 ### Experimental logs
 

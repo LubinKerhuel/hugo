@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping on Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/</link><description>Recent content in Rapid Control Prototyping on Rapid Control Prototyping</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; 2019 Lubin Kerhuel</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0100</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping on Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/</link><description>Recent content in Rapid Control Prototyping on Rapid Control Prototyping</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; 2019 Lubin Kerhuel</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0100</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
 The embedded IMU data fusion algorithm use the ICM-20608 inertial sensor to estimate the angle.
 LQR control loop drives two DC motors of the modified toy.
 No encoder sensor are present.&lt;/p&gt;</description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>
@@ -197,10 +197,10 @@ The black and red wire from the trolley to the top of the pendulum powers the Mi
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-forces.png&#34; alt=&#34;$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png&#34; alt=&#34;$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations.&#34;/&gt;
 &lt;/div&gt;
-&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum-forces.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;Pendulum scheme with forces&lt;/h4&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;Pendulum free body diagram&lt;/h4&gt;
 &lt;p&gt;$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -268,7 +268,10 @@ $$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$&lt;/p
 &lt;/div&gt;
 &lt;p&gt;This transfer function is characterized when the pendulum is down by its natural frequency $w_n = \sqrt{ \frac{g}{l} } $, and a damping factor $\zeta$.&lt;/p&gt;
 &lt;h2 id=&#34;identification&#34;&gt;Identification&lt;/h2&gt;
-&lt;p&gt;The parameter $l$ could be estimated from the platform mechanical but the damping parameter $\zeta$ (or frictions coefficient $k$) could not be estimated easily from the platform and should be measured experimentally.&lt;/p&gt;
+&lt;p&gt;The parameter $l$ could be estimated from the platform mechanical but the damping parameter $\zeta$ (or frictions coefficient $k$) could not be estimated easily from the platform.&lt;/p&gt;
+&lt;p&gt;The simulation model is satisfactory when the calculation it performs make realistic prediction.
+Experimental measurement is a good method to refine a model and tune its parameters.
+In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the experiment explained below.&lt;/p&gt;
 &lt;h3 id=&#34;experimental-logs&#34;&gt;Experimental logs&lt;/h3&gt;
 &lt;p&gt;The pendulum is placed on a track (two chairs back to back) so as to be able to make a complete rotation.
 Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p&gt;
