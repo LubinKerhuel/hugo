@@ -17,7 +17,7 @@ baseurl = "https://lubin.kerhuel.eu/"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2019 Lubin Kerhuel"
+copyright = "&copy; {year} Lubin Kerhuel"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-90899-5"
