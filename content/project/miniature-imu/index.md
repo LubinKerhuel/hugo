@@ -49,6 +49,15 @@ url_code = ""
   focal_point = "Smart"
 +++
 
+Magnetometre jamming rejection
+
+AHRS: accelerometer + Gyrometre + magnetometre
+MARG: accelerometer + gyro + mag
+IMU: accelerometer + Gyrometer
 IMU project Todo
+
+Recorded Data Workflow
+Recorded Sensor Data
+
 
 <!-- test code -->
