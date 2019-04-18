@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP) on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/</link><description>Recent content in Rapid Control Prototyping (RCP) on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0100</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0100</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/index.xml" rel="self" type="application/rss+xml"/><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
 The embedded IMU data fusion algorithm use the ICM-20608 inertial sensor to estimate the angle.
 LQR control loop drives two DC motors of the modified toy.
 No encoder sensor are present.&lt;/p&gt;</description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>
@@ -16,49 +16,6 @@ This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
 &lt;li&gt;Lubin KERHUEL (Lubin.Kerhuel at microchip.com), Dr-Engineer, Microchip Technology Inc.&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/docs/inverted-pendulum/</link><pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/docs/inverted-pendulum/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
-&lt;script src=&#34;https://code.jquery.com/jquery-1.12.4.min.js&#34; integrity=&#34;sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://lubin.kerhuel.eu/js/load-photoswipe.js&#34;&gt;&lt;/script&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css&#34; integrity=&#34;sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=&#34; crossorigin=&#34;anonymous&#34; /&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css&#34; integrity=&#34;sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=&#34; crossorigin=&#34;anonymous&#34; /&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js&#34; integrity=&#34;sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js&#34; integrity=&#34;sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-&lt;div class=&#34;pswp&#34; tabindex=&#34;-1&#34; role=&#34;dialog&#34; aria-hidden=&#34;true&#34;&gt;
-&lt;div class=&#34;pswp__bg&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;pswp__scroll-wrap&#34;&gt;
-&lt;div class=&#34;pswp__container&#34;&gt;
-&lt;div class=&#34;pswp__item&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;pswp__item&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;pswp__item&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;pswp__ui pswp__ui--hidden&#34;&gt;
-&lt;div class=&#34;pswp__top-bar&#34;&gt;
-&lt;div class=&#34;pswp__counter&#34;&gt;&lt;/div&gt;
-&lt;button class=&#34;pswp__button pswp__button--close&#34; title=&#34;Close (Esc)&#34;&gt;&lt;/button&gt;
-&lt;button class=&#34;pswp__button pswp__button--share&#34; title=&#34;Share&#34;&gt;&lt;/button&gt;
-&lt;button class=&#34;pswp__button pswp__button--fs&#34; title=&#34;Toggle fullscreen&#34;&gt;&lt;/button&gt;
-&lt;button class=&#34;pswp__button pswp__button--zoom&#34; title=&#34;Zoom in/out&#34;&gt;&lt;/button&gt;
-&lt;div class=&#34;pswp__preloader&#34;&gt;
-&lt;div class=&#34;pswp__preloader__icn&#34;&gt;
-&lt;div class=&#34;pswp__preloader__cut&#34;&gt;
-&lt;div class=&#34;pswp__preloader__donut&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;pswp__share-modal pswp__share-modal--hidden pswp__single-tap&#34;&gt;
-&lt;div class=&#34;pswp__share-tooltip&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;button class=&#34;pswp__button pswp__button--arrow--left&#34; title=&#34;Previous (arrow left)&#34;&gt;
-&lt;/button&gt;
-&lt;button class=&#34;pswp__button pswp__button--arrow--right&#34; title=&#34;Next (arrow right)&#34;&gt;
-&lt;/button&gt;
-&lt;div class=&#34;pswp__caption&#34;&gt;
-&lt;div class=&#34;pswp__caption__center&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://lubin.kerhuel.eu/css/hugo-easy-gallery.css&#34; /&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:45%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -263,7 +220,7 @@ $$ \theta(s) \left ( \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 \right ) = 
 $$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$&lt;/p&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
 &lt;div&gt;
-&lt;p&gt;The linear term for $sin$ is positive when the pendulum is up when $\theta \approx 0$ (unstable), and negative when pendulum is down when $\theta \approx \pm \pi$ (stable).&lt;/p&gt;
+The linear term for $sin$ is positive when the pendulum is up when $\theta \approx 0$ (unstable), and negative when pendulum is down when $\theta \approx \pm \pi$ (stable).
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;This transfer function is characterized when the pendulum is down by its natural frequency $w_n = \sqrt{ \frac{g}{l} } $, and a damping factor $\zeta$.&lt;/p&gt;
@@ -328,7 +285,7 @@ The good match between the predicted acceleration and the experimental measureme
 &lt;h2 id=&#34;equations-1&#34;&gt;Equations&lt;/h2&gt;
 &lt;div class=&#34;alert alert-warning&#34;&gt;
 &lt;div&gt;
-&lt;p&gt;Below is under construction !&lt;/p&gt;
+Below is under construction !
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$.
@@ -680,9 +637,9 @@ TotalVal = vals&#39;*exps;
 &lt;h1 id=&#34;test-slides&#34;&gt;Test slides&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;section data-shortcode-section&gt;
-&lt;h1 id=&#34;vertical-slide-1&#34;&gt;Vertical slide 1&lt;/h1&gt;
-&lt;hr /&gt;
-&lt;h1 id=&#34;vertical-slide-2&#34;&gt;Vertical slide 2&lt;/h1&gt;
+# Vertical slide 1
+---
+# Vertical slide 2
 &lt;/section&gt;
 &lt;hr /&gt;
 &lt;section data-background-iframe=&#34;https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&amp;controls=1&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1&amp;loop=&amp;start=0&#34; data-background-opacity=0.06 data-background-repeat=&#34;repeat&#34;&gt;
