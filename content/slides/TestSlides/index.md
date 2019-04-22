@@ -13,9 +13,6 @@ transition = "zoom"
 +++
  
 
----
-
-
 # Test slides
 
 ---
@@ -25,7 +22,8 @@ transition = "zoom"
 
 # Vertical slide 1
 
----
+{{% /section %}}
+{{% section %}}
 
 # Vertical slide 2
 
