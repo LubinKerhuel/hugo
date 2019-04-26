@@ -47,7 +47,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$","\\.Rmd$", "\\.Rmarkdown$", "_
 preserveTaxonomyNames = true
 
 [outputs]
-  home = [ "HTML", "CSS", "RSS", "JSON" ]
+  home = [ "HTML", "RSS", "JSON" ]
   section = [ "HTML", "RSS" ]
 
 # Configure BlackFriday Markdown rendering.
