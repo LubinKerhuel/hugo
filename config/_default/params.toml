@@ -36,6 +36,8 @@ highlight_languages = ["matlab"]  # Add support for highlighting additional lang
 math = true
 
 
+docs_section_pager = true
+
 # Privacy pack
 #   Show a cookie consent message to visitors
 #   Anonymize IP in Google Analytics (if enabled)
