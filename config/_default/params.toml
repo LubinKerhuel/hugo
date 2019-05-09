@@ -35,9 +35,6 @@ highlight_languages = ["matlab"]  # Add support for highlighting additional lang
 #   If false, you can enable it locally on a per page basis.
 math = true
 
-
-docs_section_pager = true
-
 # Privacy pack
 #   Show a cookie consent message to visitors
 #   Anonymize IP in Google Analytics (if enabled)
@@ -130,14 +127,11 @@ comment_count = false
 
 # Display next/previous section pager?
 section_pager = true
+docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
 
 # Enable in-built social sharing buttons? (true/false)
 sharing = true
 
-# Configuration of talk pages.
-[talks]
-  # Show talk time?
-  time = false
 
 # Configuration of publication pages.
 [publications]
