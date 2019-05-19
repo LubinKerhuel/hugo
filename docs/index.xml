@@ -1,4 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0100</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/index.xml" rel="self" type="application/rss+xml"/><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sun, 19 May 2019 00:00:00 +0200</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/index.xml" rel="self" type="application/rss+xml"/><item><title>Auto-pilote for Plane based on simulink</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>
+&lt;h2 id=&#34;an-autopilot-based-on-rapid-control-prototyping-technics&#34;&gt;An autopilot based on rapid control prototyping technics&lt;/h2&gt;
+&lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
+&lt;p&gt;Elements to build and test an autopilot for a plane are easy to build from low cost elements:&lt;/p&gt;
+&lt;p&gt;10 DoF IMU sensor board: 5 $\$$, Pitot tube: 10$\$$, GPS board: 10$\$$, Microcontroller basic board: price depend on the board used (or make a custom one with a less than 5$\$$ mcu), Plane platform: from 60 to 120$\$$ including servo and motors. You also need a receiver and remote control.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a great platform for testing various control theory.&lt;/p&gt;
+&lt;h3 id=&#34;why-a-new-auto-pilot&#34;&gt;Why a new auto-pilot ?&lt;/h3&gt;
+&lt;p&gt;Off the shelf autopilot exists and are likely to works properly. Their parameters can be tuned (PID gains). But testing a different, your own controller on theses requires to understand the code underneath. Even well documented, it represents hundreds of code pages to read, understand before eventually starting any changes.
+Added to this analysis work, the structure bench might not fit the requirements for your controller (sampling time, asynchronous event).&lt;/p&gt;
+&lt;p&gt;The objective for the present autopilot is to use a model based design approach: The autopilot is generated from a single simulink model.&lt;/p&gt;
+&lt;p&gt;The autopilot controller use standard math blocks and the system low level parts is taken care with the Microchip blockset to drive the microcontroller peripherals and the UxV blockset to easily add features like GPS parser, Remote Control S.BUS, F.Port and Smart Port protocol, Mavlink messaging including Way Point and Parameters protocols.
+This rapid prototyping approach allows to &amp;ldquo;get-in&amp;rdquo; graphically. It simplify any simulation quick test either based on a simulated plane of based on values logged.&lt;/p&gt;
+&lt;h3 id=&#34;hardware-list&#34;&gt;Hardware list&lt;/h3&gt;
+&lt;p&gt;Various combination of material has been tested. Below is elements list providing good results.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RC platform: Volantex Firstar 1600 with stocks motors and servos (Ranger 1600 is the next platform planed)&lt;/li&gt;
+&lt;li&gt;Remote Control: FrSky QX7 remote control&lt;/li&gt;
+&lt;li&gt;Receiver: FrSky XSR-M / XSR used with either the S.Bus and S.port protocol or with the F.Port protocol which combine function of both S.bus with S.port saving thus one UART peripheral of the microcontroller.&lt;/li&gt;
+&lt;li&gt;Microcontroller: AUAV V2 board with a dsPIC 33EP ; only using the microcontroller: board sensors are outdated, glitch issue with the magnetometers sensor and board is not practical to place near the CG thus too much vibration for sensors. This board is not sold anymore. A custom board with a similar dsPIC might replace it. The UDB5 mini can be found as replacement.&lt;/li&gt;
+&lt;li&gt;IMU sensor board: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane reducing thus sensors vibrations. Microcontroller communicate with the Gy-91 through an I2C BUS.&lt;/li&gt;
+&lt;li&gt;Pitot tube:
+&lt;ul&gt;
+&lt;li&gt;An inner tube and an outer tube on which four hole are done laterally.&lt;/li&gt;
+&lt;li&gt;Signal conditioning: the pitot tube pressure sensor (MPXV 7004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;GPS board: based on a uBlox M8N chip which provide up to 10Hz refresh rate and provided best results compared to others chips in the low price range.&lt;/li&gt;
+&lt;li&gt;Data logger: openlager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than 115 200).&lt;/li&gt;
+&lt;li&gt;Radio link: 3DR Sik based Radio module for mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with qgroundcontrol open source base station on either windows PC or android phone.&lt;/li&gt;
+&lt;li&gt;action cam: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;results-obtained-and-next-steps&#34;&gt;Results obtained and next steps&lt;/h3&gt;
+&lt;h4 id=&#34;results&#34;&gt;Results&lt;/h4&gt;
+&lt;p&gt;Sliding mode based controller tested in both pitch and roll axis with two mode:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Control plane angular rate control (angular speed set-point given through the remote control)&lt;/li&gt;
+&lt;li&gt;Control plane angle attitude (angle set point provided through the remote control)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, Mavlink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p&gt;
+&lt;p&gt;Tested with strong wind. Showing fairly good robustness despite the low number of parameters tuned so far.&lt;/p&gt;
+&lt;p&gt;Pitot tube air-speed estimation validated using GPS speed measurement as reference.&lt;/p&gt;
+&lt;p&gt;Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement taking into account the plane orientation.&lt;/p&gt;
+&lt;p&gt;Validated automatic calibration of the magnetometers axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determine if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p&gt;
+&lt;h4 id=&#34;next&#34;&gt;next&lt;/h4&gt;
+&lt;p&gt;Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p&gt;
+&lt;p&gt;Test in flight mavlink protocol parameters tuning.&lt;/p&gt;
+&lt;p&gt;Add automatic guidance of the plane, using Mavlink Way point sets.&lt;/p&gt;
+&lt;h3 id=&#34;site-content&#34;&gt;site content&lt;/h3&gt;
+&lt;p&gt;Time constraints does not allow writing a full description of the project as originally expected. Part of projects which I find interesting of inspiring will be shared.&lt;/p&gt;
+&lt;p&gt;Ideas to expand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IMU&lt;/li&gt;
+&lt;li&gt;Pitot tube&lt;/li&gt;
+&lt;li&gt;Wind estimate&lt;/li&gt;
+&lt;li&gt;UxV blocks including GPS, Remote Control and Mavlink blocks and functionalities&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module adaptation to measure lower current</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;Board reference: &lt;a href=&#34;http://www.mateksys.com/?portfolio=pdb-xpw&#34;&gt;http://www.mateksys.com/?portfolio=pdb-xpw&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The current measurement output signal amplification and conditionning is done through the &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; chip from Texas Instrument.&lt;/p&gt;
+&lt;p&gt;It is the black 5 pins component noted E39 below to the Power supply connector and below to the 0.05 Ohms power resistor.&lt;/p&gt;
+&lt;p&gt;The gain resistor is the non-null resistor next to the component. Original value is 47kOhm corresponding to a gain of 47.
+Using a higher value will increase the gain.&lt;/p&gt;
+&lt;p&gt;Table from Texas instrument doc:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Resistor&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Gain&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1 kOhm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;5 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;10 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;50 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;100 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This board is used as voltage regulator and current measurement for an RC electric plane project. I needed a finer current measurement than the one provided for quad copter which consume more with their four motors.&lt;/p&gt;
+&lt;p&gt;The 47 kOhm resistor was replaced with a 270 kOhm resistor providing a gain of 270.
+The measurable current range is reduced from 140A (original board) to 140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20 (A). 0 to 20 (A) are beeing coded with a swing analog output from 0 to 3.3V.&lt;/p&gt;</description></item><item><title>Record start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;Cable are sold so as to be able to start and stop a record on a RunCam2 action camera from a PWM receiver signal from a receiver.&lt;/p&gt;
+&lt;p&gt;Controlling the action camera can be done straight from the microcontroller.&lt;/p&gt;
+&lt;p&gt;The micro USB cable pinout (on the male part) is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pin 1 : GND&lt;/li&gt;
+&lt;li&gt;Pin 3 : TTL signal&lt;/li&gt;
+&lt;li&gt;Pin 5 : +5V (higher voltage possible for the RunCam2)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo;, a single pulse coding scheme on the USB pin allows to start/stop a recording, and also to switch the camera from video mode to photo mode.&lt;/p&gt;
+&lt;p&gt;The coding scheme is the following:
+Line is low state in Idle. Any pulse is a 85ms high state high state duration.&lt;/p&gt;
+&lt;p&gt;One single pulse switch the camera from video recording mode to Photo mode.
+Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 actoin Cam. Model gererating code tested with a dsPIC. The integrator is resetted for each state change of subsystem input (camera state). While the integrator output is increasing, a double pulse is generated through threshold and binary logic.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;
+&lt;p&gt;Simulink logic to control a runCam2 actoin Cam. Model gererating code tested with a dsPIC. The integrator is resetted for each state change of subsystem input (camera state). While the integrator output is increasing, a double pulse is generated through threshold and binary logic.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
 The embedded IMU data fusion algorithm use the ICM-20608 inertial sensor to estimate the angle.
 LQR control loop drives two DC motors of the modified toy.
 No encoder sensor are present.&lt;/p&gt;</description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>
@@ -285,7 +402,7 @@ The good match between the predicted acceleration and the experimental measureme
 &lt;h2 id=&#34;equations-1&#34;&gt;Equations&lt;/h2&gt;
 &lt;div class=&#34;alert alert-warning&#34;&gt;
 &lt;div&gt;
-Below is under construction !
+🚦 Below is under construction 🚧
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$.

@@ -314,7 +314,7 @@ The updated acceleration comprising both a static and dynamic part is fed into t
 ## Equations
 
 {{% alert warning %}} 
-Below is under construction !
+:vertical_traffic_light: Below is under construction :construction:
 {{% /alert %}}
 
 The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$.

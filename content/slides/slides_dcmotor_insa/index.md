@@ -1,16 +1,17 @@
-﻿+++
-title = "Prototypage Rapide avec Simulink sur dsPIC"
+﻿---
+title: Prototypage Rapide avec Simulink sur dsPIC
 
 
-[reveal_hugo]
-# Choose a theme from https://github.com/hakimel/reveal.js#theming
-theme = "black"
+slides:
+  # Choose a theme from https://github.com/hakimel/reveal.js#theming
+  theme: black  # Reveal JS theme name
+  highlight_style: dracula  # Highlight JS theme name
+  
+  #slide_number: true
+  progress: true 
+  transition: zoom
 
-#slide_number = true
-progress = true 
-transition = "zoom"
-
-+++
+---
  
 # Prototypage rapide
 
