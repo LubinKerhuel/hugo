@@ -1,11 +1,11 @@
 ---
-title: 'MATEKSYS PDB-XPW Dual BEC & Current Module adaptation to measure lower current'
-subtitle: 'Increase Current sensibility (reducing current range from 140A to 20A)'
-summary: Change one resistance from the Op-Amp feedback on the current measurement on the PDB-XPW board from MATEKSYS.
+title: 'MATEKSYS PDB-XPW Dual BEC & Current Module tweak to increase current measurement sensitivity'
+subtitle: 'Narrow current range measurement from 140A to 20A'
+summary: Adapt the MATEKSYS PDB-XPW power module for quad rotor to fit electric RC plane with lower current requirements. Change current measurement range by replacing one single resistor from the Op-Amp current measurement circuit.
 authors:
 - Lubin
-tags: []
-categories: []
+tags: ["Electronics","Power","PDB-XPW"]
+categories: ["Electronics"]
 date: "2019-05-18"
 #lastmod: "2019-04-12T00:00:00Z"
 featured: false
@@ -24,7 +24,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: []
+projects: ["autopilot-plane"]
 
 math: true
 
@@ -35,12 +35,12 @@ math: true
 
 Board reference: http://www.mateksys.com/?portfolio=pdb-xpw
 
-The current measurement output signal amplification and conditionning is done through the "INA1x9 High-Side Measurement Current Shunt Monitor" chip from Texas Instrument.
+The current measurement output signal amplification and conditioning is done using the chip "INA1x9 High-Side Measurement Current Shunt Monitor" from Texas Instrument.
 
-It is the black 5 pins component noted E39 below to the Power supply connector and below to the 0.05 Ohms power resistor.
+On the PDB-XPW, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms power resistor, itself just below to the Power supply input connector.
 
-The gain resistor is the non-null resistor next to the component. Original value is 47kOhm corresponding to a gain of 47.
-Using a higher value will increase the gain. 
+The amplification gain resistor is the 47 kOhm resistor next to the INA1x9 component. Original value of 47kOhm correspond to a gain of 47.
+The gain is simply equal to the value in kOhm. 
 
 Table from Texas instrument doc:
 
@@ -53,8 +53,8 @@ Table from Texas instrument doc:
 |100 Kohm | 100 |
 
 
-This board is used as voltage regulator and current measurement for an RC electric plane project. I needed a finer current measurement than the one provided for quad copter which consume more with their four motors. 
+This board is used as voltage regulator and current measurement for an RC electric plane project. The max current for this plane is 20Amps thus a finer current measurement from the one proposed for quads which typically consume more current is better suited.
 
-The 47 kOhm resistor was replaced with a 270 kOhm resistor providing a gain of 270.
-The measurable current range is reduced from 140A (original board) to 140 * 47/270 = 20 (A). 0 to 20 (A) are beeing coded with a swing analog output from 0 to 3.3V.
+The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47. 
+The original current measurement range is reduced from 140 (A) to 20 (A) (140 * 47/270 = 20). The output analog swing range from 0 to 3.3V code linearly for current in 0 to 20 Amps range.
 

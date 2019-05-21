@@ -1,7 +1,7 @@
 ---
 title: 'Record start/Stop signal for RunCam2 action cam'
-subtitle: 'Signal on the USB connector of the RunCam2 to start/stop record'
-summary: Signal to remotely start / stop / take a picture on a runCam2 and compabile action cam through the USB connector.
+subtitle: 'Signal pattern for the USB connector of the RunCam2 to start/stop record'
+summary: Signal to remotely start / stop / take a picture on a runCam2 and compatible action cam through the USB connector.
 authors:
 - Lubin
 tags: []
@@ -24,37 +24,37 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: []
+projects: [autopilot-plane]
 
 ---
-
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
 
-Cable are sold so as to be able to start and stop a record on a RunCam2 action camera from a PWM receiver signal from a receiver.
 
-Controlling the action camera can be done straight from the microcontroller.
+Cable connecting a RunCam2 action cam to an RC receiver allows to remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
+The cable comprise a component which decode the RC PWM signal and create another signal pulse scheme to start and stop the RunCam2 record.
+
+Controlling the action camera can be done directly from a microcontroller by generating directly the required pulse scheme.
 
 The micro USB cable pinout (on the male part) is
 
- - pin 1 : GND
+ - Pin 1 : GND
  - Pin 3 : TTL signal
  - Pin 5 : +5V (higher voltage possible for the RunCam2)
 
-When the Camera USB port is set for "Remote Control" and not for "mass storage", a single pulse coding scheme on the USB pin allows to start/stop a recording, and also to switch the camera from video mode to photo mode.
+When the Camera USB port is set for "Remote Control" and not for "mass storage", a single pulse on the pin 3 of the USB switch back and forth the camera from video mode to photo mode. A double pulse scheme start or stop a recording.
 
-The coding scheme is the following:
-Line is low state in Idle. Any pulse is a 85ms high state high state duration.
+The pulse scheme is the following:
+Line is low state at rest when Idle. pulses are 85ms in high state duration separated by 85ms on multiple pulse.
 
-One single pulse switch the camera from video recording mode to Photo mode.
-Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).
- 
+- One pulse switch the camera from video recording mode to Photo mode.
+- Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).
 
 
 {{< figure
 src="/img/runcam2-startstop-simulink-logic.png"
 link="/img/runcam2-startstop-simulink-logic.png"
 width="100%"
-caption="Simulink logic to control a runCam2 actoin Cam. Model gererating code tested with a dsPIC. The integrator is resetted for each state change of subsystem input (camera state). While the integrator output is increasing, a double pulse is generated through threshold and binary logic."
+caption="Simulink logic to control a runCam2 action Cam. The integrator reset on each state change of the subsystem input (camera state). Integrator reset is locked if pulses are already being generated. The increment of the integrator generate a double pulse through the binary logic. The generated code were tested on a dsPIC target"
 numbered="true"
 >}}

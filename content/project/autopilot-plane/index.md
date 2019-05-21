@@ -1,25 +1,25 @@
 +++
 # Project title.
-title = "Auto-pilote for Plane based on simulink"
+title = "Auto-pilote for Plane based on Simulink"
 
 # Date this page was created.
 date = 2019-05-19T00:00:00
 draft = false
 
 # Project summary to display on homepage.
-summary = "model based design for an RC plane autopilot"
+summary = "Model based design for an RC plane autopilot"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["simulink","matlab","rapid prototyping","model based design","dsPIC","Sliding Mode","autopilot","UAV","mavlink","FrSky","UxV blockset","AUAV V2 board"]
+tags = ["simulink","matlab","rapid prototyping","model based design (MDB)","dsPIC","Sliding Mode","autopilot","UAV","mavlink","FrSky","UxV blockset","AUAV V2 board"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
 
 
-share = false  # Show social sharing links?
+# share = false  # Show social sharing links?
 profile = true  # Show author profile?
-comments = false  # Show comments?
+# comments = false  # Show comments?
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -30,12 +30,12 @@ comments = false  # Show comments?
 slides = ""
 
 # Links (optional).
-url_pdf = ""
-url_code = ""
-url_dataset = ""
-url_slides = ""
-url_video = ""
-url_poster = ""
+# url_pdf = ""
+# url_code = ""
+# url_dataset = ""
+# url_slides = ""
+# url_video = ""
+# url_poster = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
