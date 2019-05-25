@@ -60,45 +60,47 @@ links = [
 
 ### Motivation ###
 
-An Autopilot platform to test autopilot control loop is easy to build using low cost elements:
+An Autopilot platform to test autopilot control loop is easy to build using simple low cost elements:
 
-- 10 DoF IMU sensor board: $5\ \$$,
-- Pitot tube: $10\ \$$,
-- GPS board: $10\ \$$, 
-- Microcontroller basic board: price depend on the board used (or make a custom one with a less than $5\ \$$ mcu), 
+- 10 DoF IMU sensor board (~$5\ \$$),
+- GPS board: (~$10\ \$$),
+- Pitot tube: (~$15\ \$$),
+- Microcontroller board (price depend on the board ; use a less than $5\ \$$ mcu),
 - Plane platform: from $60$ to $120\ \$$ including servo and motors. 
-- You also need a receiver, a remote control and related battery packs.
+- You also need a receiver, a remote control, battery packs and few optional hardware for data recorder, and telemetry.
 
-It's an exciting platform for experimenting various control theory.
+It can be an exciting platform for testing various control theory.
 
-### Difference from existing auto-pilot ? ###
+### Difference with existing auto-pilot ###
 
-Off the shelf autopilot exists and are likely to works properly. Their parameters can be tuned (PID gains). But testing a different, your own controller on theses requires to understand the code underneath. Even well documented, it represents hundreds of code pages to read, understand before eventually starting any changes.
-Added to this analysis work, the structure bench might not fit the requirements for your specific controller (sampling time, asynchronous event).
+Off the shelf autopilot exists and might works great ([Ardupilot](http://ardupilot.org/), [PX4](https://px4.io/), [iNav](http://inavflight.com/), [LibrePilot](https://www.librepilot.org/site/index.html), [Paparazzi](https://wiki.paparazziuav.org/wiki/Main_Page), further autopilot projects are listed on the [DroneTrest review](https://blog.dronetrest.com/flight-controller-firmware/)). Their parameters can be tuned. However testing your own controller on such autopilot requires implementing it at the right place, thus understanding the code structure underneath. Even well documented, it represents hundreds of C functions to understand, before possibly starting any changes.
+Your custom control loop might not fit the existing structure provided controller implemented in such projects are typically PIDs and you might want to implement a more complex structure, using different sample rate.
 
-The presented autopilot use a model based design approach: The autopilot code is generated from a single simulink model.
+The presented autopilot use a Model Based Design (MDB) approach: The autopilot code is generated from a single simulink model. This is also named Rapic Control Prototyping (RCP).
 
 The autopilot controller use standard math blocks and the system low level parts is taken care with the Microchip blockset to drive the microcontroller peripherals and the UxV blockset to easily add features like GPS parser, Remote Control S.BUS, F.Port and Smart Port protocol, Mavlink messaging including Way Point and Parameters protocols.
-This rapid prototyping approach allows to "get-in" graphically. It simplify any simulation quick test either based on a simulated plane of based on values logged.
+The simulink model allows to "get-in" graphically. It allows simulating parts of the system based on a simulated plane or based on values logged from a real flight which is very useful to work on sensor fusions algorithms.
 
-A similar approach using dsPIC microcontroller is developped by the SLUG team headed by E.Elkaim at UCSC. [SLUG](https://slugsuav.soe.ucsc.edu/) and [SLUG II](https://doi.org/10.1155/2018/6892153) projects use this approach in academic projects. Their design is independant from the one presented here. They use the same Rapid Control Prototyping tool: the blockset for Microchip microcontrollers.
+Another key difference is the use of a 16 bit microcontroller while other autopilot use 32 bit microcontroller. 16 bits dsPIC prove to provide all required ressources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare...).
+
+A similar model based design also using dsPIC microcontroller is developed by Pr E.Elkaim at UCSC in a project named SLUG. Their design is independent from the one presented here.  [SLUG](https://slugsuav.soe.ucsc.edu/) and [SLUG II](https://doi.org/10.1155/2018/6892153) projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).
 
 ### Hardware list ###
 
-Various combination of material has been tested. Below is elements list providing good results.
+Various combination of material were tested. Below is a selected list of hardware which prove to be efficient.
 
-- RC platform: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)
-- Remote Control: FrSky QX7 remote control
-- Receiver: FrSky XSR-M / XSR used with either the S.Bus and S.port protocol or with the F.Port protocol which combine function of both S.bus with S.port saving thus one UART peripheral of the microcontroller.
-- Microcontroller: AUAV V2 board with a dsPIC 33EP ; only using the microcontroller: board sensors are outdated, glitch issue with the magnetometers sensor and board is not practical to place near the CG thus too much vibration for sensors. This board is not sold anymore. A custom board with a similar dsPIC might replace it. The UDB5 mini can be found as replacement.
-- IMU sensor board: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane reducing thus sensors vibrations. Microcontroller communicate with the Gy-91 through an I2C BUS.
-- Pitot tube: 
+- **RC platform**: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)
+- **Remote Control**: FrSky QX7
+- **Receiver**: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and S.port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with S.port saving one UART peripheral of the microcontroller. Each protocol use only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.  
+- **Microcontroller**: dsPIC 33EP on a AUAV V2 board. External motion sensor are used instead of built-in AUAV sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV board which is difficult to find now. The UDB5 mini is similar and can still be found.
+- **IMU sensor**: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane. I2C bus is used between sensors and mcu.
+- **Pitot tube**: 
   - An inner tube and an outer tube on which four hole are done laterally.
   - Signal conditioning: the pitot tube pressure sensor (MPXV 7004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus.
-- GPS board: based on a uBlox M8N chip which provide up to 10Hz refresh rate and provided best results compared to others chips in the low price range.
-- Data logger: openlager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than 115 200).
-- Radio link: 3DR Sik based Radio module for mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with qgroundcontrol open source base station on either windows PC or android phone.
-- action cam: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.
+- **GPS**: based on a $\mu$blox M8N chip providing  up to 10Hz refresh rate and provided good results compared to competitors chips.
+- **Data logger**: openlager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.). 
+- **Radio link**: 3DR Sik based Radio module for mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with [qgroundcontrol](http://qgroundcontrol.com/) base station running on most platforms (PC, android, windows, linux).
+- **Action cam**: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.
 
 ### Results ###
 

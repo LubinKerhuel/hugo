@@ -1,32 +1,34 @@
-+++
+---
 # Display name
-name = "Romain Delpoux"
+name: Romain Delpoux
 
 # Username (this should match the folder name)
-authors = ["romain-delpoux"]
+authors: romain-delpoux
 
 # Is this the primary user of the site?
-superuser = false
+superuser: false
 
 # Role/position
-role = "Assistant Professor"
+role: Assistant Professor
 
 # Details for the Contact Widget
-address = "Laboratoire Ampère UMR CNRS 500"
+address: Laboratoire Ampère UMR CNRS 5005
 
-# Organizations/Affiliations
-#   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-organizations = [ { name = "INSA Lyon", url = "http://www.ampere-lab.fr/" } ]
+organizations:
+- name: INSA Lyon
+  url: "http://www.ampere-lab.fr/"
 
 # Short bio (displayed in user profile at end of posts)
-bio = "Assistant Professor at Laboratoire Ampère UMR CNRS 500, Teaching at INSA Lyon"
+bio: Assistant Professor at Laboratoire Ampère UMR CNRS 500, Teaching at INSA Lyon
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email = "romain.delpoux@insa-lyon.fr"
+email: romain.delpoux@insa-lyon.fr
 
 # List (academic) interests or hobbies
-interests = [
-]
+interests:
+- Permanent Magnets Synchronous Motors control
+- Switched control
+- Parameter Identification
 
 
 # List qualifications (such as academic degrees)
@@ -62,6 +64,11 @@ interests = [
 #   cv, google-scholar, arxiv, orcid, researchgate, mendeley
 #
 #   Full list: https://jpswalsh.github.io/academicons/
+
+social:
+- icon: envelope
+  icon_pack: fas
+  link: 'mailto:romain.delpoux@insa-lyon.fr'  # For a direct email link, use "mailto:test@example.org".
 
 # [[social]]
 #   icon = "envelope"
@@ -101,6 +108,6 @@ interests = [
 #   icon_pack = "ai"
 #   link = "files/cv.pdf"
 
- math = false
+ # math: false
 
-+++
+---

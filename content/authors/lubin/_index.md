@@ -21,7 +21,7 @@ role = ""
 organizations = [ { name = "Microchip Technology Inc", url = "https://www.microchip.com/" } ]
 
 # Short bio (displayed in user profile at end of posts)
-bio = "Interrested in signal processing and control theory, 10 years of experience with rapid control prototyping tools."
+bio = "Interrested in signal processing and control theory. 10 years of experience with rapid control prototyping tools."
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email = "lubin@kerhuel.eu"
@@ -106,12 +106,12 @@ interests = [
 #   icon_pack = "ai"
 #   link = "files/cv.pdf"
 
- math = true
+ # math = true
 
 +++
 
-Control projects realized during my school years (1999-2005) ended-up with simple PID algorithm tuned through successive trials.
-Embedded systems programming takes so much time and the time left for modeling, identification and simulation was almost null.
+Control projects realized during my school years (1999-2005) ended-up with simplest PID algorithm tuned through successive trials.
+Coding for embedded systems require an important effort and left time for modelisation, identification and simulation is often null.
 
 I started developing a blockset for Simulink targeting dsPIC 33F microcontrollers to overcome such constraint.
 
@@ -124,18 +124,17 @@ $$
 \end{array} \right.
 $$ 
 
-
-This Model Based Design (MBD) aproach enabled efficient test with real robots of new signal processing developped in my [PhD thesis](http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009.
-It reduces the time from the simulation to our [autonomous robot](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721) and replaced somehow our dSPACE platform. 
+This Model Based Design (MBD) approach enabled efficient research on signal processing validated with real robot for my [PhD thesis](http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009.
+It reduces the time from the simulation to our [autonomous robot](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721) and replaced somehow our dSPACE platform which was not embedded anyway.
 
 I used the same Rapid Control Prototyping (RCP) to develop data fusion algorithm on motion analysis for wearable sports article at [MOVEA](https://www.ideas-laboratory.com/projects/movea/) in 2010-2011. 
 
-I joined [Microchip Technology](https://www.microchip.com/) where I am developing the [MPLAB blockset](https://www.microchip.com/simulinkblocks/) to target dsPIC and PIC32 microcontrollers.
+I joined [Microchip Technology](https://www.microchip.com/) where I am pursuing the developpement of the [MPLAB blockset](https://www.microchip.com/simulinkblocks/) to target dsPIC and PIC32 microcontrollers.
 
 For company, scientists, and students, *rapid prototyping enables focusing on new ideas* rather than getting into the details of embedded programming.
 Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.
 
-The present website shares some experience through custom projects using Maltab/Simulink as Rapid Prototyping toolchain.
-Examples uses the (free) [Microchip blockset](https://www.microchip.com/simulinkblocks/) targeting dsPIC.
+The present website shares some experience through custom projects using Maltab/Simulink as Rapid Prototyping tool-chain.
+Examples uses the free [Microchip blockset](https://www.microchip.com/simulinkblocks/) targeting dsPIC.
 
-Examples are not reference design and are not endorsed by Microchip.  
+Examples are not reference design and are not officially endorsed by Microchip.  
