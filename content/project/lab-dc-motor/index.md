@@ -8,6 +8,8 @@ aliases = ["project/lab_dc_motor/"]
 date = 2018-12-01
 draft = false
 
+authors = ["lubin","romain-delpoux"]
+
 # Project summary to display on homepage.
 summary = "Simulation & real-time control of a Pravalux 24v DC motor (INSA Lyon hands-on)"
 
@@ -19,7 +21,7 @@ tags = ["simulink","matlab","motor","control","rapid prototyping"]
 external_link = ""
 
 share = false  # Show social sharing links?
-profile = false  # Show author profile?
+profile = false  # Show author profile? Show only first profile
 comments = false  # Show comments?
 
 # Slides (optional).
@@ -60,8 +62,8 @@ links = [
   focal_point = "Smart"
 +++
 
-Control a 24V DC motor using the MCLV V2 board with a dsPIC 33EP256MC506. 
-This hands-on is for 5th year students at INSA-Lyon. 
+Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.
+This hands-on is for 5th year students at INSA-Lyon.
 
 The hands-on Lab subject available at: https://rtdc.ctrl-elec.fr/.
 
@@ -69,9 +71,3 @@ Slides presents the adaptation required to go from a Simulink model for Simulati
 
 - Real-time scheduler / CPU load analysis
 - Fixed-point datatypes
-
-
-### Authors:
-- Romain DELPOUX (Romain.Delpoux at insa-lyon.fr), Assistant Professor, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.
-- Lubin KERHUEL (Lubin.Kerhuel at microchip.com), Dr-Engineer, Microchip Technology Inc.
-

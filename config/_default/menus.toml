@@ -4,14 +4,14 @@
 #   The weight parameter defines the order that the links will appear in.
 
 
-[[main]]
-  name = "Home"
-  url = "#projects"
-  weight = 1
+# [[main]]
+  # name = "Home"
+  # url = "#projects"
+  # weight = 1
 
 [[main]]
   name = "Projects"
-#  url = "#projects"
+  url = "#projects" # to comment to make submenue
   weight = 10
 
 
@@ -21,17 +21,23 @@
 #   url = "#projects"
 #   weight = 1
 
-[[main]]
-  name = "Inverted Pendulum"
-  parent = "Projects"
-  url = "/docs/inverted-pendulum/"
-  weight = 10
+# [[main]]
+#   name = "Inverted Pendulum"
+#   parent = "Projects"
+#   url = "/docs/inverted-pendulum/"
+#   weight = 10
+
+# [[main]]
+#   name = "DC Motor"
+#   parent = "Projects"
+#   url = "/project/lab-dc-motor/"
+#   weight = 20
 
 [[main]]
-  name = "DC Motor"
-  parent = "Projects"
-  url = "/project/lab-dc-motor/"
-  weight = 20
+  name = "Posts"
+  url = "/post/"
+  weight = 15
+
 
 [[main]]
   name = "About"

@@ -60,27 +60,34 @@ links = [
 
 ### Motivation ###
 
-Elements to build and test an autopilot for a plane are easy to build from low cost elements:
+An Autopilot platform to test autopilot control loop is easy to build using low cost elements:
 
-10 DoF IMU sensor board: 5 $\$$, Pitot tube: 10$\$$, GPS board: 10$\$$, Microcontroller basic board: price depend on the board used (or make a custom one with a less than 5$\$$ mcu), Plane platform: from 60 to 120$\$$ including servo and motors. You also need a receiver and remote control.
+- 10 DoF IMU sensor board: $5\ \$$,
+- Pitot tube: $10\ \$$,
+- GPS board: $10\ \$$, 
+- Microcontroller basic board: price depend on the board used (or make a custom one with a less than $5\ \$$ mcu), 
+- Plane platform: from $60$ to $120\ \$$ including servo and motors. 
+- You also need a receiver, a remote control and related battery packs.
 
-It's a great platform for testing various control theory.
+It's an exciting platform for experimenting various control theory.
 
-### Why a new auto-pilot ? ###
+### Difference from existing auto-pilot ? ###
 
 Off the shelf autopilot exists and are likely to works properly. Their parameters can be tuned (PID gains). But testing a different, your own controller on theses requires to understand the code underneath. Even well documented, it represents hundreds of code pages to read, understand before eventually starting any changes.
-Added to this analysis work, the structure bench might not fit the requirements for your controller (sampling time, asynchronous event).
+Added to this analysis work, the structure bench might not fit the requirements for your specific controller (sampling time, asynchronous event).
 
-The objective for the present autopilot is to use a model based design approach: The autopilot is generated from a single simulink model.
+The presented autopilot use a model based design approach: The autopilot code is generated from a single simulink model.
 
 The autopilot controller use standard math blocks and the system low level parts is taken care with the Microchip blockset to drive the microcontroller peripherals and the UxV blockset to easily add features like GPS parser, Remote Control S.BUS, F.Port and Smart Port protocol, Mavlink messaging including Way Point and Parameters protocols.
 This rapid prototyping approach allows to "get-in" graphically. It simplify any simulation quick test either based on a simulated plane of based on values logged.
+
+A similar approach using dsPIC microcontroller is developped by the SLUG team headed by E.Elkaim at UCSC. [SLUG](https://slugsuav.soe.ucsc.edu/) and [SLUG II](https://doi.org/10.1155/2018/6892153) projects use this approach in academic projects. Their design is independant from the one presented here. They use the same Rapid Control Prototyping tool: the blockset for Microchip microcontrollers.
 
 ### Hardware list ###
 
 Various combination of material has been tested. Below is elements list providing good results.
 
-- RC platform: Volantex Firstar 1600 with stocks motors and servos (Ranger 1600 is the next platform planed)
+- RC platform: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)
 - Remote Control: FrSky QX7 remote control
 - Receiver: FrSky XSR-M / XSR used with either the S.Bus and S.port protocol or with the F.Port protocol which combine function of both S.bus with S.port saving thus one UART peripheral of the microcontroller.
 - Microcontroller: AUAV V2 board with a dsPIC 33EP ; only using the microcontroller: board sensors are outdated, glitch issue with the magnetometers sensor and board is not practical to place near the CG thus too much vibration for sensors. This board is not sold anymore. A custom board with a similar dsPIC might replace it. The UDB5 mini can be found as replacement.
@@ -93,9 +100,7 @@ Various combination of material has been tested. Below is elements list providin
 - Radio link: 3DR Sik based Radio module for mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with qgroundcontrol open source base station on either windows PC or android phone.
 - action cam: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.
 
-### Results obtained and next steps ###
-
-#### Results ####
+### Results ###
 
 Sliding mode based controller tested in both pitch and roll axis with two mode:
 
@@ -104,7 +109,7 @@ Sliding mode based controller tested in both pitch and roll axis with two mode:
 
 Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, Mavlink and log sensors data at 1Khz through an UART configured at 24700000)
 
-Tested with strong wind. Showing fairly good robustness despite the low number of parameters tuned so far.
+Tested with strong wind. Showing fairly good robustness despite the low number of parameters tuned so far (video link on top).
 
 Pitot tube air-speed estimation validated using GPS speed measurement as reference.
 
@@ -114,7 +119,7 @@ Validated automatic calibration of the magnetometers axis offset and gain. Once 
 
 
 
-#### next ####
+### Next steps ###
 
 Reduce chattering on ailerons when sliding mode control is enabled.
 
@@ -123,9 +128,9 @@ Test in flight mavlink protocol parameters tuning.
 Add automatic guidance of the plane, using Mavlink Way point sets.
 
 
-### site content ###
+### Site content ###
 
-Time constraints does not allow writing a full description of the project as originally expected. Part of projects which I find interesting of inspiring will be shared.
+Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.
 
 Ideas to expand:
 
@@ -133,3 +138,4 @@ Ideas to expand:
 - Pitot tube
 - Wind estimate
 - UxV blocks including GPS, Remote Control and Mavlink blocks and functionalities
+- Magnetometers auto calibration
