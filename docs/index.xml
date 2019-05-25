@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sun, 19 May 2019 00:00:00 +0200</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/index.xml" rel="self" type="application/rss+xml"/><item><title>Auto-pilote for Plane based on Simulink</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>
 &lt;h2 id=&#34;an-autopilot-based-on-rapid-control-prototyping-technics&#34;&gt;An autopilot based on rapid control prototyping technics&lt;/h2&gt;
 &lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
-&lt;p&gt;Elements to build and test an autopilot for a plane are easy to build from low cost elements:&lt;/p&gt;
-&lt;p&gt;10 DoF IMU sensor board: 5 $\$$, Pitot tube: 10$\$$, GPS board: 10$\$$, Microcontroller basic board: price depend on the board used (or make a custom one with a less than 5$\$$ mcu), Plane platform: from 60 to 120$\$$ including servo and motors. You also need a receiver and remote control.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s a great platform for testing various control theory.&lt;/p&gt;
-&lt;h3 id=&#34;why-a-new-auto-pilot&#34;&gt;Why a new auto-pilot ?&lt;/h3&gt;
+&lt;p&gt;An Autopilot platform to test autopilot control loop is easy to build using low cost elements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;10 DoF IMU sensor board: $5\ \$$,&lt;/li&gt;
+&lt;li&gt;Pitot tube: $10\ \$$,&lt;/li&gt;
+&lt;li&gt;GPS board: $10\ \$$,&lt;/li&gt;
+&lt;li&gt;Microcontroller basic board: price depend on the board used (or make a custom one with a less than $5\ \$$ mcu),&lt;/li&gt;
+&lt;li&gt;Plane platform: from $60$ to $120\ \$$ including servo and motors.&lt;/li&gt;
+&lt;li&gt;You also need a receiver, a remote control and related battery packs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It&amp;rsquo;s an exciting platform for experimenting various control theory.&lt;/p&gt;
+&lt;h3 id=&#34;difference-from-existing-auto-pilot&#34;&gt;Difference from existing auto-pilot ?&lt;/h3&gt;
 &lt;p&gt;Off the shelf autopilot exists and are likely to works properly. Their parameters can be tuned (PID gains). But testing a different, your own controller on theses requires to understand the code underneath. Even well documented, it represents hundreds of code pages to read, understand before eventually starting any changes.
-Added to this analysis work, the structure bench might not fit the requirements for your controller (sampling time, asynchronous event).&lt;/p&gt;
-&lt;p&gt;The objective for the present autopilot is to use a model based design approach: The autopilot is generated from a single simulink model.&lt;/p&gt;
+Added to this analysis work, the structure bench might not fit the requirements for your specific controller (sampling time, asynchronous event).&lt;/p&gt;
+&lt;p&gt;The presented autopilot use a model based design approach: The autopilot code is generated from a single simulink model.&lt;/p&gt;
 &lt;p&gt;The autopilot controller use standard math blocks and the system low level parts is taken care with the Microchip blockset to drive the microcontroller peripherals and the UxV blockset to easily add features like GPS parser, Remote Control S.BUS, F.Port and Smart Port protocol, Mavlink messaging including Way Point and Parameters protocols.
 This rapid prototyping approach allows to &amp;ldquo;get-in&amp;rdquo; graphically. It simplify any simulation quick test either based on a simulated plane of based on values logged.&lt;/p&gt;
+&lt;p&gt;A similar approach using dsPIC microcontroller is developped by the SLUG team headed by E.Elkaim at UCSC. &lt;a href=&#34;https://slugsuav.soe.ucsc.edu/&#34;&gt;SLUG&lt;/a&gt; and &lt;a href=&#34;https://doi.org/10.1155/2018/6892153&#34;&gt;SLUG II&lt;/a&gt; projects use this approach in academic projects. Their design is independant from the one presented here. They use the same Rapid Control Prototyping tool: the blockset for Microchip microcontrollers.&lt;/p&gt;
 &lt;h3 id=&#34;hardware-list&#34;&gt;Hardware list&lt;/h3&gt;
 &lt;p&gt;Various combination of material has been tested. Below is elements list providing good results.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;RC platform: Volantex Firstar 1600 with stocks motors and servos (Ranger 1600 is the next platform planed)&lt;/li&gt;
+&lt;li&gt;RC platform: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)&lt;/li&gt;
 &lt;li&gt;Remote Control: FrSky QX7 remote control&lt;/li&gt;
 &lt;li&gt;Receiver: FrSky XSR-M / XSR used with either the S.Bus and S.port protocol or with the F.Port protocol which combine function of both S.bus with S.port saving thus one UART peripheral of the microcontroller.&lt;/li&gt;
 &lt;li&gt;Microcontroller: AUAV V2 board with a dsPIC 33EP ; only using the microcontroller: board sensors are outdated, glitch issue with the magnetometers sensor and board is not practical to place near the CG thus too much vibration for sensors. This board is not sold anymore. A custom board with a similar dsPIC might replace it. The UDB5 mini can be found as replacement.&lt;/li&gt;
@@ -28,37 +36,36 @@ This rapid prototyping approach allows to &amp;ldquo;get-in&amp;rdquo; graphical
 &lt;li&gt;Radio link: 3DR Sik based Radio module for mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with qgroundcontrol open source base station on either windows PC or android phone.&lt;/li&gt;
 &lt;li&gt;action cam: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;results-obtained-and-next-steps&#34;&gt;Results obtained and next steps&lt;/h3&gt;
-&lt;h4 id=&#34;results&#34;&gt;Results&lt;/h4&gt;
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
 &lt;p&gt;Sliding mode based controller tested in both pitch and roll axis with two mode:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Control plane angular rate control (angular speed set-point given through the remote control)&lt;/li&gt;
 &lt;li&gt;Control plane angle attitude (angle set point provided through the remote control)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, Mavlink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p&gt;
-&lt;p&gt;Tested with strong wind. Showing fairly good robustness despite the low number of parameters tuned so far.&lt;/p&gt;
+&lt;p&gt;Tested with strong wind. Showing fairly good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p&gt;
 &lt;p&gt;Pitot tube air-speed estimation validated using GPS speed measurement as reference.&lt;/p&gt;
 &lt;p&gt;Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement taking into account the plane orientation.&lt;/p&gt;
 &lt;p&gt;Validated automatic calibration of the magnetometers axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determine if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p&gt;
-&lt;h4 id=&#34;next&#34;&gt;next&lt;/h4&gt;
+&lt;h3 id=&#34;next-steps&#34;&gt;Next steps&lt;/h3&gt;
 &lt;p&gt;Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p&gt;
 &lt;p&gt;Test in flight mavlink protocol parameters tuning.&lt;/p&gt;
 &lt;p&gt;Add automatic guidance of the plane, using Mavlink Way point sets.&lt;/p&gt;
-&lt;h3 id=&#34;site-content&#34;&gt;site content&lt;/h3&gt;
-&lt;p&gt;Time constraints does not allow writing a full description of the project as originally expected. Part of projects which I find interesting of inspiring will be shared.&lt;/p&gt;
+&lt;h3 id=&#34;site-content&#34;&gt;Site content&lt;/h3&gt;
+&lt;p&gt;Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.&lt;/p&gt;
 &lt;p&gt;Ideas to expand:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IMU&lt;/li&gt;
 &lt;li&gt;Pitot tube&lt;/li&gt;
 &lt;li&gt;Wind estimate&lt;/li&gt;
 &lt;li&gt;UxV blocks including GPS, Remote Control and Mavlink blocks and functionalities&lt;/li&gt;
+&lt;li&gt;Magnetometers auto calibration&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
-&lt;p&gt;Board reference: &lt;a href=&#34;http://www.mateksys.com/?portfolio=pdb-xpw&#34;&gt;http://www.mateksys.com/?portfolio=pdb-xpw&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The current measurement output signal amplification and conditioning is done using the chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument.&lt;/p&gt;
-&lt;p&gt;On the PDB-XPW, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms power resistor, itself just below to the Power supply input connector.&lt;/p&gt;
-&lt;p&gt;The amplification gain resistor is the 47 kOhm resistor next to the INA1x9 component. Original value of 47kOhm correspond to a gain of 47.
-The gain is simply equal to the value in kOhm.&lt;/p&gt;
-&lt;p&gt;Table from Texas instrument doc:&lt;/p&gt;
+&lt;p&gt;The board &lt;a href=&#34;http://www.mateksys.com/?portfolio=pdb-xpw&#34;&gt;PDB-XPW&lt;/a&gt; from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p&gt;
+&lt;p&gt;The chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument condition and amplify the shunt resistor voltage drop providing an analog output proportional to the current.&lt;/p&gt;
+&lt;p&gt;On the PDB-XPW board, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms shunt resistor, itself just below to the Power supply input connector.&lt;/p&gt;
+&lt;p&gt;The amplification gain is set with the 47 kOhm resistor next to the INA1x9 component. This original value of 47 kOhm correspond to a gain of 47.
+The gain is the value in kOhm as stated by the chip documentation:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -89,51 +96,46 @@ The gain is simply equal to the value in kOhm.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;This board is used as voltage regulator and current measurement for an RC electric plane project. The max current for this plane is 20Amps thus a finer current measurement from the one proposed for quads which typically consume more current is better suited.&lt;/p&gt;
 &lt;p&gt;The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47.
-The original current measurement range is reduced from 140 (A) to 20 (A) (140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20). The output analog swing range from 0 to 3.3V code linearly for current in 0 to 20 Amps range.&lt;/p&gt;</description></item><item><title>Record start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
-&lt;p&gt;Cable connecting a RunCam2 action cam to an RC receiver allows to remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
+The original current measurement range is reduced from 140 (A) to 20 (A) (140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20).&lt;/p&gt;
+&lt;p&gt;The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, FirStar 1600 or Ranger 1600.&lt;/p&gt;</description></item><item><title>Record start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;Commercial cable connecting a RunCam2 action cam to an RC receiver allows to remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
 The cable comprise a component which decode the RC PWM signal and create another signal pulse scheme to start and stop the RunCam2 record.&lt;/p&gt;
-&lt;p&gt;Controlling the action camera can be done directly from a microcontroller by generating directly the required pulse scheme.&lt;/p&gt;
+&lt;p&gt;Controlling the action camera can be done with a microcontroller by generating directly the required pulse scheme described below.&lt;/p&gt;
 &lt;p&gt;The micro USB cable pinout (on the male part) is&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Pin 1 : GND&lt;/li&gt;
-&lt;li&gt;Pin 3 : TTL signal&lt;/li&gt;
-&lt;li&gt;Pin 5 : +5V (higher voltage possible for the RunCam2)&lt;/li&gt;
+&lt;li&gt;Pin 3 : TTL signal (5V)&lt;/li&gt;
+&lt;li&gt;Pin 5 : +5V (higher voltage possible for the RunCam2 connector)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo;, a single pulse on the pin 3 of the USB switch back and forth the camera from video mode to photo mode. A double pulse scheme start or stop a recording.&lt;/p&gt;
-&lt;p&gt;The pulse scheme is the following:
-Line is low state at rest when Idle. pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p&gt;
+&lt;p&gt;When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo; with the configuration application, it is possible to switch back and forth the camera from video mode to photo mode, and to start/stop recording, or take a picture.&lt;/p&gt;
+&lt;p&gt;The pulse scheme is the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;One pulse switch the camera from video recording mode to Photo mode.&lt;/li&gt;
 &lt;li&gt;Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Pulse level is 5V but it works with 3.3V as well. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p&gt;
+&lt;p&gt;Tested with a runCam2 powered from a 3S LiPo battery (10 to 14V), no battery in the camera and pulse generated with a 3.3V dsPIC pin configured as digital output.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The integrator reset on each state change of the subsystem input (camera state). Integrator reset is locked if pulses are already being generated. The increment of the integrator generate a double pulse through the binary logic. The generated code were tested on a dsPIC target&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of the double 85ms pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;
-&lt;p&gt;Simulink logic to control a runCam2 action Cam. The integrator reset on each state change of the subsystem input (camera state). Integrator reset is locked if pulses are already being generated. The increment of the integrator generate a double pulse through the binary logic. The generated code were tested on a dsPIC target&lt;/p&gt;
+&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of the double 85ms pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
 The embedded IMU data fusion algorithm use the ICM-20608 inertial sensor to estimate the angle.
 LQR control loop drives two DC motors of the modified toy.
-No encoder sensor are present.&lt;/p&gt;</description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>
-&lt;p&gt;Control a 24V DC motor using the MCLV V2 board with a dsPIC 33EP256MC506.
+No encoder sensor are present.&lt;/p&gt;</description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p&gt;Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.
 This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
 &lt;p&gt;The hands-on Lab subject available at: &lt;a href=&#34;https://rtdc.ctrl-elec.fr/&#34;&gt;https://rtdc.ctrl-elec.fr/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Real-time scheduler / CPU load analysis&lt;/li&gt;
 &lt;li&gt;Fixed-point datatypes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;authors&#34;&gt;Authors:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Romain DELPOUX (Romain.Delpoux at insa-lyon.fr), Assistant Professor, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.&lt;/li&gt;
-&lt;li&gt;Lubin KERHUEL (Lubin.Kerhuel at microchip.com), Dr-Engineer, Microchip Technology Inc.&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/docs/inverted-pendulum/</link><pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/docs/inverted-pendulum/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:45%&#34;&gt;
