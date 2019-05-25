@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sun, 19 May 2019 00:00:00 +0200</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/index.xml" rel="self" type="application/rss+xml"/><item><title>Auto-pilote for Plane based on simulink</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sun, 19 May 2019 00:00:00 +0200</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/index.xml" rel="self" type="application/rss+xml"/><item><title>Auto-pilote for Plane based on Simulink</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>
 &lt;h2 id=&#34;an-autopilot-based-on-rapid-control-prototyping-technics&#34;&gt;An autopilot based on rapid control prototyping technics&lt;/h2&gt;
 &lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
 &lt;p&gt;Elements to build and test an autopilot for a plane are easy to build from low cost elements:&lt;/p&gt;
@@ -52,12 +52,12 @@ This rapid prototyping approach allows to &amp;ldquo;get-in&amp;rdquo; graphical
 &lt;li&gt;Pitot tube&lt;/li&gt;
 &lt;li&gt;Wind estimate&lt;/li&gt;
 &lt;li&gt;UxV blocks including GPS, Remote Control and Mavlink blocks and functionalities&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module adaptation to measure lower current</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;/ul&gt;</description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;p&gt;Board reference: &lt;a href=&#34;http://www.mateksys.com/?portfolio=pdb-xpw&#34;&gt;http://www.mateksys.com/?portfolio=pdb-xpw&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The current measurement output signal amplification and conditionning is done through the &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; chip from Texas Instrument.&lt;/p&gt;
-&lt;p&gt;It is the black 5 pins component noted E39 below to the Power supply connector and below to the 0.05 Ohms power resistor.&lt;/p&gt;
-&lt;p&gt;The gain resistor is the non-null resistor next to the component. Original value is 47kOhm corresponding to a gain of 47.
-Using a higher value will increase the gain.&lt;/p&gt;
+&lt;p&gt;The current measurement output signal amplification and conditioning is done using the chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument.&lt;/p&gt;
+&lt;p&gt;On the PDB-XPW, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms power resistor, itself just below to the Power supply input connector.&lt;/p&gt;
+&lt;p&gt;The amplification gain resistor is the 47 kOhm resistor next to the INA1x9 component. Original value of 47kOhm correspond to a gain of 47.
+The gain is simply equal to the value in kOhm.&lt;/p&gt;
 &lt;p&gt;Table from Texas instrument doc:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -89,30 +89,33 @@ Using a higher value will increase the gain.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;This board is used as voltage regulator and current measurement for an RC electric plane project. I needed a finer current measurement than the one provided for quad copter which consume more with their four motors.&lt;/p&gt;
-&lt;p&gt;The 47 kOhm resistor was replaced with a 270 kOhm resistor providing a gain of 270.
-The measurable current range is reduced from 140A (original board) to 140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20 (A). 0 to 20 (A) are beeing coded with a swing analog output from 0 to 3.3V.&lt;/p&gt;</description></item><item><title>Record start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
-&lt;p&gt;Cable are sold so as to be able to start and stop a record on a RunCam2 action camera from a PWM receiver signal from a receiver.&lt;/p&gt;
-&lt;p&gt;Controlling the action camera can be done straight from the microcontroller.&lt;/p&gt;
+&lt;p&gt;This board is used as voltage regulator and current measurement for an RC electric plane project. The max current for this plane is 20Amps thus a finer current measurement from the one proposed for quads which typically consume more current is better suited.&lt;/p&gt;
+&lt;p&gt;The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47.
+The original current measurement range is reduced from 140 (A) to 20 (A) (140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20). The output analog swing range from 0 to 3.3V code linearly for current in 0 to 20 Amps range.&lt;/p&gt;</description></item><item><title>Record start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;Cable connecting a RunCam2 action cam to an RC receiver allows to remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
+The cable comprise a component which decode the RC PWM signal and create another signal pulse scheme to start and stop the RunCam2 record.&lt;/p&gt;
+&lt;p&gt;Controlling the action camera can be done directly from a microcontroller by generating directly the required pulse scheme.&lt;/p&gt;
 &lt;p&gt;The micro USB cable pinout (on the male part) is&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;pin 1 : GND&lt;/li&gt;
+&lt;li&gt;Pin 1 : GND&lt;/li&gt;
 &lt;li&gt;Pin 3 : TTL signal&lt;/li&gt;
 &lt;li&gt;Pin 5 : +5V (higher voltage possible for the RunCam2)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo;, a single pulse coding scheme on the USB pin allows to start/stop a recording, and also to switch the camera from video mode to photo mode.&lt;/p&gt;
-&lt;p&gt;The coding scheme is the following:
-Line is low state in Idle. Any pulse is a 85ms high state high state duration.&lt;/p&gt;
-&lt;p&gt;One single pulse switch the camera from video recording mode to Photo mode.
-Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/p&gt;
+&lt;p&gt;When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo;, a single pulse on the pin 3 of the USB switch back and forth the camera from video mode to photo mode. A double pulse scheme start or stop a recording.&lt;/p&gt;
+&lt;p&gt;The pulse scheme is the following:
+Line is low state at rest when Idle. pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One pulse switch the camera from video recording mode to Photo mode.&lt;/li&gt;
+&lt;li&gt;Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 actoin Cam. Model gererating code tested with a dsPIC. The integrator is resetted for each state change of subsystem input (camera state). While the integrator output is increasing, a double pulse is generated through threshold and binary logic.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The integrator reset on each state change of the subsystem input (camera state). Integrator reset is locked if pulses are already being generated. The increment of the integrator generate a double pulse through the binary logic. The generated code were tested on a dsPIC target&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;
-&lt;p&gt;Simulink logic to control a runCam2 actoin Cam. Model gererating code tested with a dsPIC. The integrator is resetted for each state change of subsystem input (camera state). While the integrator output is increasing, a double pulse is generated through threshold and binary logic.&lt;/p&gt;
+&lt;p&gt;Simulink logic to control a runCam2 action Cam. The integrator reset on each state change of the subsystem input (camera state). Integrator reset is locked if pulses are already being generated. The increment of the integrator generate a double pulse through the binary logic. The generated code were tested on a dsPIC target&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
