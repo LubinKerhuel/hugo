@@ -465,14 +465,10 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;h1 id=&#34;prototypage-rapide&#34;&gt;Prototypage rapide&lt;/h1&gt;
 &lt;h2 id=&#34;avec-simulink-sur-dspic&#34;&gt;avec Simulink sur dsPIC&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34;&gt;MPLAB device blocks for Simulink&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;L.Kerhuel &amp;amp; R.Delpoux&lt;/p&gt;
-&lt;section data-background-image=&#34;./Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.06&gt;
-&lt;/section&gt;
+&lt;p&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/&#34;&gt;L.Kerhuel&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://www.ctrl-elec.fr/&#34;&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;h2 id=&#34;pendule-inverse&#34;&gt;Pendule inverse&lt;/h2&gt;
+&lt;h2 id=&#34;pendule-inverse-docs-inverted-pendulum&#34;&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/docs/inverted-pendulum/&#34;&gt;Pendule inverse&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;./Inverted_Pendulum_ControlLoopCloseUp.png&#34; alt=&#34;./Inverted_Pendulum_ControlLoopCloseUp.png&#34; /&gt;&lt;/p&gt;
-&lt;section data-background-image=&#34;./Model_Hardware_Test_withSampleTime.png&#34; data-background-opacity=0.06&gt;
-&lt;/section&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;img src=&#34;./Model_Hardware_Test_withSampleTime.png&#34; alt=&#34;./Model_Hardware_Test_withSampleTime.png&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
@@ -753,8 +749,10 @@ TotalVal = vals&#39;*exps;
 &lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34;&gt;https://www.microchip.com/SimulinkBlocks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;MPLAB X:
 &lt;a href=&#34;https://www.microchip.com/MPLABX&#34;&gt;https://www.microchip.com/MPLABX&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;XC16:
-&lt;a href=&#34;https://www.microchip.com/XC16&#34;&gt;https://www.microchip.com/XC16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;XC16:
+&lt;a href=&#34;https://www.microchip.com/XC16&#34;&gt;https://www.microchip.com/XC16&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://lubin.kerhuel.eu&#34;&gt;https://lubin.kerhuel.eu&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.ctrl-elec.fr&#34;&gt;http://www.ctrl-elec.fr&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>test slides</title><link>https://lubin.kerhuel.eu/slides/testslides/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/testslides/</guid><description>
 &lt;h1 id=&#34;test-slides&#34;&gt;Test slides&lt;/h1&gt;
 &lt;hr /&gt;

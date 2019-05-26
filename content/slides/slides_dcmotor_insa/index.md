@@ -12,31 +12,24 @@ slides:
   transition: zoom
 
 ---
- 
+
 # Prototypage rapide
 
 ## avec Simulink sur dsPIC
 
 [MPLAB device blocks for Simulink](https://www.microchip.com/SimulinkBlocks)
 
-L.Kerhuel & R.Delpoux
-
-<section data-background-image="./Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
-</section>
-
+[L.Kerhuel](/) & [R.Delpoux](http://www.ctrl-elec.fr/)
+ 
 ---
 
-## Pendule inverse
+## [Pendule inverse](/docs/inverted-pendulum/)
 
 ![./Inverted_Pendulum_ControlLoopCloseUp.png](./Inverted_Pendulum_ControlLoopCloseUp.png)
-
-<section data-background-image="./Model_Hardware_Test_withSampleTime.png" data-background-opacity=0.06>
-</section>
 
 ---
 
 ![./Model_Hardware_Test_withSampleTime.png](./Model_Hardware_Test_withSampleTime.png)
-
 
 ---
 
@@ -362,3 +355,6 @@ https://lubin.kerhuel.eu/slides/slides_dcmotor_insa
 	https://www.microchip.com/MPLABX
 - XC16:
 	https://www.microchip.com/XC16
+
+- https://lubin.kerhuel.eu
+- http://www.ctrl-elec.fr
