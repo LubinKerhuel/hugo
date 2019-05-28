@@ -1,5 +1,5 @@
 ---
-title: 'Record start/Stop signal for RunCam2 action cam'
+title: 'Start/Stop signal for RunCam2 action cam'
 subtitle: 'Signal on the USB connector of the RunCam2 to start/stop record'
 summary: Signal to remotely start / stop / take a picture on a runCam2 and compatible action cam through the USB connector.
 authors:

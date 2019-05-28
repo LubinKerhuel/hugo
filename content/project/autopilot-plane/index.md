@@ -11,7 +11,7 @@ summary = "Model based design for an RC plane autopilot"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["simulink","matlab","rapid prototyping","model based design (MDB)","dsPIC","Sliding Mode","autopilot","UAV","mavlink","FrSky","UxV blockset","AUAV V2 board"]
+tags = ["simulink","matlab","rapid prototyping","model based design (MDB)","dsPIC","sliding-mode","autopilot","UAV","mavlink","UxV blockset","AUAV V3 board"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
@@ -56,6 +56,9 @@ links = [
   focal_point = "Smart"
 +++
 
+<!-- Enable Photo Swipe + gallery features -->
+{{< load-photoswipe >}}
+
 ## An autopilot based on rapid control prototyping technics ##
 
 ### Motivation ###
@@ -89,18 +92,36 @@ A similar model based design also using dsPIC microcontroller is developed by Pr
 
 Various combination of material were tested. Below is a selected list of hardware which prove to be efficient.
 
+{{< figure 
+src="/img/firstar1600-qx7.jpg"
+link="/img/firstar1600-qx7.jpg"
+width="80%"
+title="autopilot platform"
+caption="Volantex FirStar 1600 with Qx7 remote control."
+numbered="true"
+>}}
+
 - **RC platform**: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)
 - **Remote Control**: FrSky QX7
 - **Receiver**: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and S.port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with S.port saving one UART peripheral of the microcontroller. Each protocol use only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.  
-- **Microcontroller**: dsPIC 33EP on a AUAV V2 board. External motion sensor are used instead of built-in AUAV sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV board which is difficult to find now. The UDB5 mini is similar and can still be found.
+- **Microcontroller**: dsPIC 33EP on a AUAV V3 board. External motion sensor are used instead of built-in AUAV sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV board which is difficult to find now. The UDB5 mini is similar and can still be found.
 - **IMU sensor**: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane. I2C bus is used between sensors and mcu.
 - **Pitot tube**: 
   - An inner tube and an outer tube on which four hole are done laterally.
-  - Signal conditioning: the pitot tube pressure sensor (MPXV 7004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus.
+  - Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus.
 - **GPS**: based on a $\mu$blox M8N chip providing  up to 10Hz refresh rate and provided good results compared to competitors chips.
-- **Data logger**: openlager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.). 
+- **Data logger**: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.). 
 - **Radio link**: 3DR Sik based Radio module for mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with [qgroundcontrol](http://qgroundcontrol.com/) base station running on most platforms (PC, android, windows, linux).
 - **Action cam**: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.
+
+{{< figure 
+src="/img/autopilot-electronic-sensors-bundle_1.jpg"
+link="/img/autopilot-electronic-sensors-bundle_1.jpg"
+width="80%"
+title="Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16 bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter."
+numbered="true"
+>}}
+
 
 ### Results ###
 

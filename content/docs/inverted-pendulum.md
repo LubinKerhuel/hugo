@@ -4,7 +4,7 @@ title = "Inverted Pendulum"
 aliases = ["project/inverted_pendulum_flywheels/"]
 summary = "LQR stabilization of an inverted pendulum platform based on a low cost toy. Simulink model and generation of code for dsPIC Microchip microcontroller are provided (Rapid Control Prototyping : RCP)"
 
-tags = ["inverted pendulum","state space","LQR","rapid prototyping","model based design (MDB)","matlab","simulink","DIY","dsPIC","L298N","ICM-20608","Microstick II","33EP","33EP128MC202"]
+tags = ["inverted pendulum","state space","LQR","rapid prototyping","model based design (MDB)","matlab","simulink","DIY","dsPIC","L298N","ICM-20608","Microstick II","33EP128MC202"]
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false
@@ -180,7 +180,7 @@ caption="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reac
 numbered="true"
 >}}
 
-## Equations
+## Pendul Equations
 
 The Dynamic fundamental law applied on the pendulum:
 $$ \sum \vec{Force} = m.\vec{a} $$
@@ -254,7 +254,7 @@ The linear term for $sin$ is positive when the pendulum is up when $\theta \appr
 
 This transfer function is characterized when the pendulum is down by its natural frequency $w_n = \sqrt{ \frac{g}{l} } $, and a damping factor $\zeta$.
 
-## Identification
+## Pendul identification
 
 The parameter $l$ could be estimated from the platform mechanical but the damping parameter $\zeta$ (or frictions coefficient $k$) could not be estimated easily from the platform.
 
@@ -311,7 +311,7 @@ The updated acceleration comprising both a static and dynamic part is fed into t
 
 # Trolley Model
 
-## Equations
+## Trolley Equations
 
 {{% alert warning %}} 
 :vertical_traffic_light: Below is under construction :construction:
@@ -324,7 +324,7 @@ The model considers as negligible the effect of the pendulum forces (translation
 
 $$  x(s) = \frac{1}{\tau s + 1} $$
 
-## Identification
+## Trolley Identification
 
 | Trolley Parameter | Estimated Value |
 | :---------------: | :-------------: |
@@ -336,6 +336,15 @@ In a second step, a $2^{nd}$ inertial sensor board is temporary glued in the mid
 An identification can be computed from the motor set-point and the wheel movements while the pendulum was actively controlled up by a first feedback loop.
 
 Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between theses periodic re-initialization.
+
+{{< figure 
+src="/img/pendulum-gy91-wheel.jpg"
+link="/img/pendulum-gy91-wheel.jpg"
+width="45%"
+title="Identification of trolley in real inverted pendulum condition."
+caption="The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91  board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires)."
+numbered="true"
+>}}
 
 # Controller
 
