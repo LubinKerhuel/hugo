@@ -10,6 +10,9 @@ slides:
   #slide_number: true
   progress: true 
   transition: zoom
+  transition_speed: fast
+  history: false
+
 
 ---
 
@@ -53,10 +56,7 @@ slides:
 
 {{< slide background-color="#FFFFFF" >}}
 
-
 ![./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png](./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png)
-
-
 
 ---
 
@@ -68,7 +68,7 @@ Modèle de simulation & génération de code
 - blocks et fonctionnalités Simulink
 
 {{< speaker_note >}}
-DSPACE 
+dSPACE 
 {{< /speaker_note >}}
 
 ---
@@ -276,7 +276,6 @@ TotalVal = vals'*exps;
   - signed (1)
   - 16 bit width
   - Scaling is derived from min & max
-
 
 ---
 
