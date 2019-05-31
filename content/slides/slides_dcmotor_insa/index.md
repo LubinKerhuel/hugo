@@ -13,6 +13,15 @@ slides:
   transition_speed: fast
   history: false
 
+  defaultTiming: 120
+  mouseWheel: true
+
+  previewLinks: true
+
+  backgroundTransition: fade
+  
+
+
 
 ---
 
