@@ -166,17 +166,14 @@ numbered="true"
 
 ## Results - GPS - Wind EStimation
 
-{{% alert warning %}} 
-:construction: Below is under construction :construction:
-{{% /alert %}}
+The figure below presents the Ground Speed (GPS) with Air Speed (pitot) measurement. Theses two speed are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.
+With the wind estimation, the airplane ground speed from the GPS measurement can be retrieved by adding the projected wind to the aircraft forward air-speed measured with the pitot tube. The figure present the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
+The reconstructed ground speed matches well with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind.
 
-The figure below presents the Ground Speed (GPS) with Air Speed (pitot) measurement. Without wind, theses two speed should quite similar, except for the vertical speed which might be poorly measured by the GPS. A constant wind can be estimated by comparing the airspeed with the groundspeed of the aircraft.
-Once the wind estimation performed, the GPS and Air Speed can be compared once the relative forward wind speed is added to the aircraft measured air speed. The figure present the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
-The reconstructed ground speed matches well with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant composant of the wind. 
 
- Remaining error is small. Theses might be explained by sensor limitation but it might also be due to GPS accuracy limitation and wind gust which are not compensated for.
+ The remaining error might be explained by sensor limitation but also by GPS accuracy limitation particularly at estimating vertical speed changes ; wind gust which are not compensated for.
 
-{{< figure 
+ {{< figure 
 src="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
 link="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
 width="100%"

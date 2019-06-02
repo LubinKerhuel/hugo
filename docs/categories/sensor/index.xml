@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/categories/sensor/</link><description>Recent content in Sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/categories/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/categories/sensor/</link><description>Recent content in sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/categories/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
 &lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consist of a tube pointing in the forward direction. When the sensor move forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
@@ -189,15 +189,10 @@ m = 72mm
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;results-gps-wind-estimation&#34;&gt;Results - GPS - Wind EStimation&lt;/h2&gt;
-&lt;div class=&#34;alert alert-warning&#34;&gt;
-&lt;div&gt;
-🚧 Below is under construction 🚧
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;The figure below presents the Ground Speed (GPS) with Air Speed (pitot) measurement. Without wind, theses two speed should quite similar, except for the vertical speed which might be poorly measured by the GPS. A constant wind can be estimated by comparing the airspeed with the groundspeed of the aircraft.
-Once the wind estimation performed, the GPS and Air Speed can be compared once the relative forward wind speed is added to the aircraft measured air speed. The figure present the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
-The reconstructed ground speed matches well with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant composant of the wind.&lt;/p&gt;
-&lt;p&gt;Remaining error is small. Theses might be explained by sensor limitation but it might also be due to GPS accuracy limitation and wind gust which are not compensated for.&lt;/p&gt;
+&lt;p&gt;The figure below presents the Ground Speed (GPS) with Air Speed (pitot) measurement. Theses two speed are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.
+With the wind estimation, the airplane ground speed from the GPS measurement can be retrieved by adding the projected wind to the aircraft forward air-speed measured with the pitot tube. The figure present the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
+The reconstructed ground speed matches well with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind.&lt;/p&gt;
+&lt;p&gt;The remaining error might be explained by sensor limitation but also by GPS accuracy limitation particularly at estimating vertical speed changes ; wind gust which are not compensated for.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
