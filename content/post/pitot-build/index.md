@@ -89,24 +89,24 @@ We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) wh
 
 Table below provide theoretical differential pressure expected for a given speed, using $\rho=1.2$ and $P_{diff} = \frac{1}{2}\rho v^2$.
 
-| Speed (m/s) | (Km/h) | diff pressure (Pa) | ~ H2O level (cm) |
-|:-:|:-:|:-:|:-:|
-| 1 | 3.6	| 0.6	 |0.006 |
-| 2 | 7.2	| 2.4	 |0.024 |
-| 4 | 14.4| 	9.6 |	0.096 |
-| 7 | 25.2	| 29.4 |	0.294 |
-| 10 | 36	| 60	 | 0.6 |
-| 15 | 54	| 135	 |1.3 |
-| 20 | 72	| 240	 |2.4 |
-| 25 | 90	| 375	 |3.75 |
-| 30 | 108	| 540	 |5.4 |
-| 40 | 144	| 960	 |9.6 |
+| v (m/s) | v (Km/h) | $P_{diff}$ (Pa) | ~ $H_2O$ (cm) | [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) & [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428)  (0.2041Pa / LSB) |
+|:-:|:-:|:-:|:-:|:-:|
+| 1 | 3.6	| 0.6	 |0.006 | 3 |
+| 2 | 7.2	| 2.4	 |0.024 | 12 |
+| 4 | 14.4| 	9.6 |	0.096 | 47 |
+| 7 | 25.2	| 29.4 |	0.294 | 144 |
+| 10 | 36	| 60	 | 0.6 | 294 |
+| 15 | 54	| 135	 |1.3 | 661 |
+| 20 | 72	| 240	 |2.4 | 1176 |
+| 25 | 90	| 375	 |3.75 | 1837 |
+| 30 | 108	| 540	 |5.4 | 2646 |
+| 40 | 144	| 960	 |9.6 | *4704* (4095 sat) |
 
 ### Signal conditioning and conversion 
 
-The sensor is deported on the wing. Analog signal transport is to be avoided on such distance for sake of simplicity. The use of the [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) from Microchip provide an integrated solution. It is a high resolution sigma-delta analog to digital converter with four differential input channels. It has an I2C interface and provide a programmable gain on each analog input from 1 to 8. 
+The pressure sensor is close to the pitot tube on the wing. The analog to digital conversion is also done nearby to avoid noise pollution of analog signal. The [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC. 
 
-The MP3V5004dp output analog signal is connected to the MCP3428 Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency of 28Hz ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus lines are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.
+The [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) output analog signal is connected to the [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus lines are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg"
@@ -117,9 +117,24 @@ caption="Differential pressure sensor (MP3V5004dp) with Analog to Digital conver
 numbered="true"
 >}}
 
+### Sensor static tests
+
+A 90 minutes lasting measurement is performed indoor without movements is performed. Sensor output are logged at 100Hz. The figure below shows a slow drift. The sensor standard deviation measured on the overall measurement is 0.54 Pa (including the drift).
+
+{{< figure 
+src="/img/pitot-darcy-prandtl-static-characteristic.png"
+link="/img/pitot-darcy-prandtl-static-characteristic.png"
+width="100%"
+title="Differential Sensor static characteristics"
+caption="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa."
+numbered="true"
+>}}
+
+One point to note however si that the sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB from memory, to be checked).
+
 ## Installation
 
-One magnet is glued on the pitot tube. The pitot tube is firmly attached to the plane through a 2nd magnet glued into the wing. It allows the tube to detach stay in place during flight, and detach in case of crash, avoiding possible injury. Flexible tube connecting the sensor to its electronics are fishing tube originally used to protect fish lines.
+A 2mm flexible tube originally used to protect fish lines connect the pitot tube with the sensor.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg"
@@ -130,7 +145,7 @@ caption="Fishing Tube used to connect pressure MP3V5004dp sensor to pitot tube."
 numbered="true"
 >}}
 
-pitot-darcy-prandtl-tubesoupledecathlon
+One magnet is glued on the pitot tube. The pitot tube is attached to the plane through a 2nd magnet integrated into the wing. This flexible solution allows the tube to stay in place during flight, and eject in case of hard landing or crash, avoiding possible injury or destruction.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
@@ -139,7 +154,6 @@ width="80%"
 title="Brass pitot tube with its electronic board mounted on the bottom of the right FirStar 1600 wing."
 numbered="true"
 >}}
-
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-wing-carbon2.jpg"
@@ -150,11 +164,48 @@ caption="Outer tube is a 5mm carbon tube. Inner tube is a brass 2mm/1mm tube."
 numbered="true"
 >}}
 
-## Calibration
+## Results
 
 {{% alert warning %}} 
-:vertical_traffic_light: Below is under construction :construction:
+:construction: Below is under construction :construction:
 {{% /alert %}}
+
+
+
+{{< figure 
+src="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
+link="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
+width="100%"
+title="GPS reference Speed over ground (large grey), Pitot speed without wind compensation (dashed blue). Pitot speed with speed compensation (black)"
+caption="GPS (grey curve) and Pitot compensated (black curve) matches well. The compensated pitot consist of the pitot measurement shifted by the estimated constant wind speed projected on the plane direction."
+numbered="true"
+>}}
+
+Offline matlab sript for wind estimation:
+
+``` matlab
+V_err = V_gps - V_pitot;    % Speed difference  
+
+M = [sin(COG); cos(COG) ]'; % COG is the direction measured from the GPS
+y = -V_err';                
+x = M\y;    % estimate wind strenght and direction with linear algebra
+
+Theta_Wind = atan2(x(1),x(2));  % Wind angle (rad)
+V_Wind = sqrt(sum(x(1:2).^2));  % Wind strength (m/s)
+```
+
+{{< figure 
+src="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
+link="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
+width="100%"
+title="GPS and pitot speed estimation error in function of the plane direction."
+caption="Blue point are speed difference with GPS for each pitot measurement. The black curve is a sine which correspond to the estimated wind which best explain this speed difference error."
+numbered="true"
+>}}
+
+COG add a bias. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor required.
+
+
 
 <!--
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind -->

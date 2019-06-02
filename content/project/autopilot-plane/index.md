@@ -104,7 +104,7 @@ numbered="true"
 - **RC platform**: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)
 - **Remote Control**: FrSky QX7
 - **Receiver**: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and S.port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with S.port saving one UART peripheral of the microcontroller. Each protocol use only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.  
-- **Microcontroller**: dsPIC 33EP on a AUAV V3 board. External motion sensor are used instead of built-in AUAV sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV board which is difficult to find now. The UDB5 mini is similar and can still be found.
+- **Microcontroller**: dsPIC 33EP on a AUAV V3 board. External motion sensor are used instead of built-in AUAV3 sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV3 board which is difficult to find now. The UDB5 mini is similar and can still be found.
 - **IMU sensor**: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane. I2C bus is used between sensors and mcu.
 - **Pitot tube**: 
   - An inner tube and an outer tube on which four hole are done laterally.
