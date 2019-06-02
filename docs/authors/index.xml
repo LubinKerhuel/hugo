@@ -1,5 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Authors on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/authors/</link><description>Recent content in Authors on Rapid Control Prototyping (RCP)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/authors/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://lubin.kerhuel.eu/authors/lubin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/authors/lubin/</guid><description>Control projects realized during my school years (1999-2005) ended-up with simplest PID algorithm tuned through successive trials. Coding for embedded systems require an important effort and left time for modelisation, identification and simulation is often null.
-I started developing a blockset for Simulink targeting dsPIC 33F microcontrollers to overcome such constraint.
-$$ \text{One push button} \left\{ \begin{array}{l} \text{- C code generation,} \\
-\text{- Compilation,} \\
-\text{- Upload &amp;amp; run on the target.</description></item><item><title/><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/authors/romain-delpoux/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Authors on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/authors/</link><description>Recent content in Authors on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/authors/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://lubin.kerhuel.eu/authors/lubin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/authors/lubin/</guid><description>&lt;p&gt;Control projects realized during my school years (1999-2005) ended-up with simplest PID algorithm tuned through successive trials.
+Coding for embedded systems require an important effort and left time for modelisation, identification and simulation is often null.&lt;/p&gt;
+&lt;p&gt;I started developing a blockset for Simulink targeting dsPIC 33F microcontrollers to overcome such constraint.&lt;/p&gt;
+&lt;p&gt;$$
+\text{One push button}
+\left\{ \begin{array}{l}
+\text{- C code generation,} \\&lt;br /&gt;
+\text{- Compilation,} \\&lt;br /&gt;
+\text{- Upload &amp;amp; run on the target.} \\&lt;br /&gt;
+\end{array} \right.
+$$&lt;/p&gt;
+&lt;p&gt;This Model Based Design (MBD) approach enabled efficient research on signal processing validated with real robot for my &lt;a href=&#34;http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf&#34;&gt;PhD thesis&lt;/a&gt; on bio-robotics from 2006 to 2009.
+It reduces the time from the simulation to our &lt;a href=&#34;https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721&#34;&gt;autonomous robot&lt;/a&gt; and replaced somehow our dSPACE platform which was not embedded anyway.&lt;/p&gt;
+&lt;p&gt;I used the same Rapid Control Prototyping (RCP) to develop data fusion algorithm on motion analysis for wearable sports article at &lt;a href=&#34;https://www.ideas-laboratory.com/projects/movea/&#34;&gt;MOVEA&lt;/a&gt; in 2010-2011.&lt;/p&gt;
+&lt;p&gt;I joined &lt;a href=&#34;https://www.microchip.com/&#34;&gt;Microchip Technology&lt;/a&gt; where I am pursuing the developpement of the &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;MPLAB blockset&lt;/a&gt; to target dsPIC and PIC32 microcontrollers.&lt;/p&gt;
+&lt;p&gt;For company, scientists, and students, &lt;em&gt;rapid prototyping enables focusing on new ideas&lt;/em&gt; rather than getting into the details of embedded programming.
+Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.&lt;/p&gt;
+&lt;p&gt;The present website shares some experience through custom projects using Maltab/Simulink as Rapid Prototyping tool-chain.
+Examples uses the free &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;Microchip blockset&lt;/a&gt; targeting dsPIC.&lt;/p&gt;
+&lt;p&gt;Examples are not reference design and are not officially endorsed by Microchip.&lt;/p&gt;</description></item><item><title/><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/authors/romain-delpoux/</guid><description/></item></channel></rss>

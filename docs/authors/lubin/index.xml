@@ -1,5 +1,327 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/authors/lubin/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><atom:link href="https://lubin.kerhuel.eu/authors/lubin/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>Build a miniature pitot-tube with two tubes, one differential pressure sensor and one analog to digital converter integrating the signal conditioning. Calibrate air-speed measurement with a GPS ground speed reference.</description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>Adapt the MATEKSYS PDB-XPW power module for quad rotor to fit electric RC plane with lower current requirements. Change current measurement range by replacing one single resistor from the Op-Amp current measurement circuit.</description></item><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>Signal to remotely start / stop / take a picture on a runCam2 and compatible action cam through the USB connector.</description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>Simulation &amp;amp; real-time control of a Pravalux 24v DC motor (INSA Lyon hands-on)</description></item><item><title/><link>https://lubin.kerhuel.eu/authors/lubin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/authors/lubin/</guid><description>Control projects realized during my school years (1999-2005) ended-up with simplest PID algorithm tuned through successive trials. Coding for embedded systems require an important effort and left time for modelisation, identification and simulation is often null.
-I started developing a blockset for Simulink targeting dsPIC 33F microcontrollers to overcome such constraint.
-$$ \text{One push button} \left\{ \begin{array}{l} \text{- C code generation,} \\
-\text{- Compilation,} \\
-\text{- Upload &amp;amp; run on the target.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/authors/lubin/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><atom:link href="https://lubin.kerhuel.eu/authors/lubin/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
+&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
+&lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consist of a tube pointing in the forward direction. When the sensor move forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
+&lt;p&gt;The pressure measured is linear to the square of the air speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $P_t$ and $P_s$ are the pressure in Pa, $\rho$ is the fluid density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude, and $v$ the speed in $m.s^{-1}$. The differential pressure measured is $P_d = P_t-P_s$.&lt;/p&gt;
+&lt;h2 id=&#34;prandtl-tube&#34;&gt;Prandtl tube&lt;/h2&gt;
+&lt;p&gt;Prandtl tube is build placing an inner tube within an outer tube. Both tube are centered on their top which are aligned and the space between the tubes is hermetically filled in with a hard enough glue like epoxy. The side of the outer tube is drilled to sense the static pressure. At the bottom of the tube, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector providing access to the static pressure which lies between the two tube.&lt;/p&gt;
+&lt;p&gt;The static pressure holes should be placed at a minimum distance from the top due to airflow perturbations. A distance 4 times the diameter of the outer tube is retains here.&lt;/p&gt;
+&lt;p&gt;Any tube can be used. First test were done with brass tube. Inner tube were 1mm inside, 2mm outside. Outer tube was 3mm inside, 4mm outside. A lighter Prandtl tube was made using one inner brass tube (1mm/2mm) with a carbon outer tube (3mm/5mm).&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg&#34; alt=&#34;Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm (d=4mm). Outer tube length is m=86mm (21d). Four 1mm width holes are at l=16mm (4d) from the top.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;Brass inner and outer tubes composing the pitot tube.&lt;/h4&gt;
+&lt;p&gt;Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm (d=4mm). Outer tube length is m=86mm (21d). Four 1mm width holes are at l=16mm (4d) from the top.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf&#34;&gt;report&lt;/a&gt; by W.Gracey on the impact of the various shape on the measurement.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf&#34;&gt;report (french)&lt;/a&gt; from ANSTJ with general information on pitot sensor.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://voiletech.free.fr/skyassistant/pitot.htm&#34;&gt;website (french)&lt;/a&gt; from Rémi Bourgin with experimental pitot tube for RC plane&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
+Tube intèrieur: 2mm, trou 1mm
+Tube extèrieur: 4mm, trou 3mm
+Longueur total:
+d = 4mm
+l = 4d =&gt; 16mm
+m = 11d =&gt;44mm
+Tube altigator:
+d = 4mm
+l = 18mm
+m = 72mm
+--&gt;
+&lt;h2 id=&#34;electronics&#34;&gt;Electronics&lt;/h2&gt;
+&lt;h3 id=&#34;sensitivity-requirements-and-pressure-sensor&#34;&gt;Sensitivity requirements and Pressure sensor&lt;/h3&gt;
+&lt;p&gt;The differential pressure measured is vary with the square of the speed. RC plane speed can be quite low. Challenge is to build an electronic sensitive enough to obtain good measurement even in the low speed range.&lt;/p&gt;
+&lt;p&gt;One sensitive differential pressure sensor available is the &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; from NXP. It measures differential pressure from 0 to 3.92 kPa and provide a ratiometric analog ouptut swing from 0.6V to 3V (2.4V swing). For reference, 1 kPa correspond to the pressure of 10cm of water.&lt;/p&gt;
+&lt;p&gt;We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% only of its nominal range.&lt;/p&gt;
+&lt;p&gt;Table below provide theoretical differential pressure expected for a given speed, using $\rho=1.2$ and $P_{diff} = \frac{1}{2}\rho v^2$.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;v (m/s)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;v (Km/h)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;$P_{diff}$ (Pa)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;~ $H_2O$ (cm)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; (0.2041Pa / LSB)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3.6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.006&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;7.2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.024&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;14.4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;9.6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.096&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;47&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;25.2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;29.4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.294&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;144&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;36&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;60&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;294&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;15&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;54&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;135&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;661&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;20&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;72&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;240&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2.4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1176&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;25&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;90&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;375&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3.75&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1837&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;30&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;108&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;540&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5.4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2646&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;40&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;144&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;960&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;9.6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;em&gt;4704&lt;/em&gt; (4095 sat)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;signal-conditioning-and-conversion&#34;&gt;Signal conditioning and conversion&lt;/h3&gt;
+&lt;p&gt;The pressure sensor is close to the pitot tube on the wing. The analog to digital conversion is also done nearby to avoid noise pollution of analog signal. The &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; output analog signal is connected to the &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus lines are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg&#34; alt=&#34;Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A 3.3V voltage regulator adapt and filter out the 5V input voltage.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;Pressure sensor and electronics mounted on a DIP adapter board.&lt;/h4&gt;
+&lt;p&gt;Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A 3.3V voltage regulator adapt and filter out the 5V input voltage.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;sensor-static-tests&#34;&gt;Sensor static tests&lt;/h3&gt;
+&lt;p&gt;A 90 minutes lasting measurement is performed indoor without movements is performed. Sensor output are logged at 100Hz. The figure below shows a slow drift. The sensor standard deviation measured on the overall measurement is 0.54 Pa (including the drift).&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png&#34; alt=&#34;90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;Differential Sensor static characteristics&lt;/h4&gt;
+&lt;p&gt;90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;One point to note however si that the sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB from memory, to be checked).&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;A 2mm flexible tube originally used to protect fish lines connect the pitot tube with the sensor.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:50%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg&#34; alt=&#34;Fishing Tube used to connect pressure MP3V5004dp sensor to pitot tube.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;Flashmer - Tube souple 2mm. Image from Decathlon (france)&lt;/h4&gt;
+&lt;p&gt;Fishing Tube used to connect pressure MP3V5004dp sensor to pitot tube.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;One magnet is glued on the pitot tube. The pitot tube is attached to the plane through a 2nd magnet integrated into the wing. This flexible solution allows the tube to stay in place during flight, and eject in case of hard landing or crash, avoiding possible injury or destruction.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg&#34; /&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;Brass pitot tube with its electronic board mounted on the bottom of the right FirStar 1600 wing.&lt;/h4&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg&#34; alt=&#34;Outer tube is a 5mm carbon tube. Inner tube is a brass 2mm/1mm tube.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;Carbon-Brass pitot tube attached to the wing with a magnet.&lt;/h4&gt;
+&lt;p&gt;Outer tube is a 5mm carbon tube. Inner tube is a brass 2mm/1mm tube.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;results-gps-wind-estimation&#34;&gt;Results - GPS - Wind EStimation&lt;/h2&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+&lt;div&gt;
+🚧 Below is under construction 🚧
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The figure below presents the Ground Speed (GPS) with Air Speed (pitot) measurement. Without wind, theses two speed should quite similar, except for the vertical speed which might be poorly measured by the GPS. A constant wind can be estimated by comparing the airspeed with the groundspeed of the aircraft.
+Once the wind estimation performed, the GPS and Air Speed can be compared once the relative forward wind speed is added to the aircraft measured air speed. The figure present the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
+The reconstructed ground speed matches well with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant composant of the wind.&lt;/p&gt;
+&lt;p&gt;Remaining error is small. Theses might be explained by sensor limitation but it might also be due to GPS accuracy limitation and wind gust which are not compensated for.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue). Pitot air-speed minus constant wind estimation (black curve)&lt;/h4&gt;
+&lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;The matlab sript for wind estimation (offline) is provided below:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% V_gps and V_pitot are the vector with all data measured.
+V_err = V_gps - V_pitot; % Ground and Air speed difference (i.e. wind)
+M = [sin(COG); cos(COG) ]&#39;; % COG is the direction (rad) vector data measured from the GPS
+y = -V_err&#39;;
+x = M\y; % estimate wind strenght and direction with linear algebra (MMSE)
+Theta_Wind = atan2(x(1),x(2)); % Wind angle (rad)
+V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The curve illustrate the wind estimation.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction, amplitude is wind strength) which best match the air speed and ground speed differences.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a firstar 1600.&lt;/h4&gt;
+&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction, amplitude is wind strength) which best match the air speed and ground speed differences.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor required.&lt;/p&gt;
+&lt;!--
+C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;</description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;The board &lt;a href=&#34;http://www.mateksys.com/?portfolio=pdb-xpw&#34;&gt;PDB-XPW&lt;/a&gt; from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p&gt;
+&lt;p&gt;The chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument condition and amplify the shunt resistor voltage drop providing an analog output proportional to the current.&lt;/p&gt;
+&lt;p&gt;On the PDB-XPW board, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms shunt resistor, itself just below to the Power supply input connector.&lt;/p&gt;
+&lt;p&gt;The amplification gain is set with the 47 kOhm resistor next to the INA1x9 component. This original value of 47 kOhm correspond to a gain of 47.
+The gain is the value in kOhm as stated by the chip documentation:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Resistor&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Gain&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1 kOhm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;5 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;10 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;50 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;100 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47.
+The original current measurement range is reduced from 140 (A) to 20 (A) (140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20).&lt;/p&gt;
+&lt;p&gt;The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, FirStar 1600 or Ranger 1600.&lt;/p&gt;</description></item><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;Commercial cable connecting a RunCam2 action cam to an RC receiver allows to remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
+The cable comprise a component which decode the RC PWM signal and create another signal pulse scheme to start and stop the RunCam2 record.&lt;/p&gt;
+&lt;p&gt;Controlling the action camera can be done with a microcontroller by generating directly the required pulse scheme described below.&lt;/p&gt;
+&lt;p&gt;The micro USB cable pinout (on the male part) is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pin 1 : GND&lt;/li&gt;
+&lt;li&gt;Pin 3 : TTL signal (5V)&lt;/li&gt;
+&lt;li&gt;Pin 5 : +5V (higher voltage possible for the RunCam2 connector)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo; with the configuration application, it is possible to switch back and forth the camera from video mode to photo mode, and to start/stop recording, or take a picture.&lt;/p&gt;
+&lt;p&gt;The pulse scheme is the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One pulse switch the camera from video recording mode to Photo mode.&lt;/li&gt;
+&lt;li&gt;Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pulse level is 5V but it works with 3.3V as well. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p&gt;
+&lt;p&gt;Tested with a runCam2 powered from a 3S LiPo battery (10 to 14V), no battery in the camera and pulse generated with a 3.3V dsPIC pin configured as digital output.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of the double 85ms pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;
+&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of the double 85ms pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;</description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p&gt;Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.
+This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
+&lt;p&gt;The hands-on Lab subject available at: &lt;a href=&#34;https://rtdc.ctrl-elec.fr/&#34;&gt;https://rtdc.ctrl-elec.fr/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time scheduler / CPU load analysis&lt;/li&gt;
+&lt;li&gt;Fixed-point datatypes&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title/><link>https://lubin.kerhuel.eu/authors/lubin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/authors/lubin/</guid><description>&lt;p&gt;Control projects realized during my school years (1999-2005) ended-up with simplest PID algorithm tuned through successive trials.
+Coding for embedded systems require an important effort and left time for modelisation, identification and simulation is often null.&lt;/p&gt;
+&lt;p&gt;I started developing a blockset for Simulink targeting dsPIC 33F microcontrollers to overcome such constraint.&lt;/p&gt;
+&lt;p&gt;$$
+\text{One push button}
+\left\{ \begin{array}{l}
+\text{- C code generation,} \\&lt;br /&gt;
+\text{- Compilation,} \\&lt;br /&gt;
+\text{- Upload &amp;amp; run on the target.} \\&lt;br /&gt;
+\end{array} \right.
+$$&lt;/p&gt;
+&lt;p&gt;This Model Based Design (MBD) approach enabled efficient research on signal processing validated with real robot for my &lt;a href=&#34;http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf&#34;&gt;PhD thesis&lt;/a&gt; on bio-robotics from 2006 to 2009.
+It reduces the time from the simulation to our &lt;a href=&#34;https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721&#34;&gt;autonomous robot&lt;/a&gt; and replaced somehow our dSPACE platform which was not embedded anyway.&lt;/p&gt;
+&lt;p&gt;I used the same Rapid Control Prototyping (RCP) to develop data fusion algorithm on motion analysis for wearable sports article at &lt;a href=&#34;https://www.ideas-laboratory.com/projects/movea/&#34;&gt;MOVEA&lt;/a&gt; in 2010-2011.&lt;/p&gt;
+&lt;p&gt;I joined &lt;a href=&#34;https://www.microchip.com/&#34;&gt;Microchip Technology&lt;/a&gt; where I am pursuing the developpement of the &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;MPLAB blockset&lt;/a&gt; to target dsPIC and PIC32 microcontrollers.&lt;/p&gt;
+&lt;p&gt;For company, scientists, and students, &lt;em&gt;rapid prototyping enables focusing on new ideas&lt;/em&gt; rather than getting into the details of embedded programming.
+Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.&lt;/p&gt;
+&lt;p&gt;The present website shares some experience through custom projects using Maltab/Simulink as Rapid Prototyping tool-chain.
+Examples uses the free &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;Microchip blockset&lt;/a&gt; targeting dsPIC.&lt;/p&gt;
+&lt;p&gt;Examples are not reference design and are not officially endorsed by Microchip.&lt;/p&gt;</description></item></channel></rss>

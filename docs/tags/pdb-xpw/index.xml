@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PDB-XPW on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/tags/pdb-xpw/</link><description>Recent content in PDB-XPW on Rapid Control Prototyping (RCP)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/tags/pdb-xpw/index.xml" rel="self" type="application/rss+xml"/><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>Adapt the MATEKSYS PDB-XPW power module for quad rotor to fit electric RC plane with lower current requirements. Change current measurement range by replacing one single resistor from the Op-Amp current measurement circuit.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PDB-XPW on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/tags/pdb-xpw/</link><description>Recent content in PDB-XPW on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/tags/pdb-xpw/index.xml" rel="self" type="application/rss+xml"/><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;The board &lt;a href=&#34;http://www.mateksys.com/?portfolio=pdb-xpw&#34;&gt;PDB-XPW&lt;/a&gt; from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p&gt;
+&lt;p&gt;The chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument condition and amplify the shunt resistor voltage drop providing an analog output proportional to the current.&lt;/p&gt;
+&lt;p&gt;On the PDB-XPW board, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms shunt resistor, itself just below to the Power supply input connector.&lt;/p&gt;
+&lt;p&gt;The amplification gain is set with the 47 kOhm resistor next to the INA1x9 component. This original value of 47 kOhm correspond to a gain of 47.
+The gain is the value in kOhm as stated by the chip documentation:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Resistor&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Gain&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1 kOhm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;5 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;10 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;50 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;100 Kohm&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47.
+The original current measurement range is reduced from 140 (A) to 20 (A) (140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20).&lt;/p&gt;
+&lt;p&gt;The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, FirStar 1600 or Ranger 1600.&lt;/p&gt;</description></item></channel></rss>

@@ -164,46 +164,53 @@ caption="Outer tube is a 5mm carbon tube. Inner tube is a brass 2mm/1mm tube."
 numbered="true"
 >}}
 
-## Results
+## Results - GPS - Wind EStimation
 
 {{% alert warning %}} 
 :construction: Below is under construction :construction:
 {{% /alert %}}
 
+The figure below presents the Ground Speed (GPS) with Air Speed (pitot) measurement. Without wind, theses two speed should quite similar, except for the vertical speed which might be poorly measured by the GPS. A constant wind can be estimated by comparing the airspeed with the groundspeed of the aircraft.
+Once the wind estimation performed, the GPS and Air Speed can be compared once the relative forward wind speed is added to the aircraft measured air speed. The figure present the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
+The reconstructed ground speed matches well with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant composant of the wind. 
 
+ Remaining error is small. Theses might be explained by sensor limitation but it might also be due to GPS accuracy limitation and wind gust which are not compensated for.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
 link="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
 width="100%"
-title="GPS reference Speed over ground (large grey), Pitot speed without wind compensation (dashed blue). Pitot speed with speed compensation (black)"
-caption="GPS (grey curve) and Pitot compensated (black curve) matches well. The compensated pitot consist of the pitot measurement shifted by the estimated constant wind speed projected on the plane direction."
+title="GPS Speed over ground (large grey), Pitot air-speed (dashed blue). Pitot air-speed minus constant wind estimation (black curve)"
+caption="GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement."
 numbered="true"
 >}}
 
-Offline matlab sript for wind estimation:
+The matlab sript for wind estimation (offline) is provided below:
 
 ``` matlab
-V_err = V_gps - V_pitot;    % Speed difference  
+% V_gps and V_pitot are the vector with all data measured.
+V_err = V_gps - V_pitot;    % Ground and Air speed difference (i.e. wind) 
 
-M = [sin(COG); cos(COG) ]'; % COG is the direction measured from the GPS
+M = [sin(COG); cos(COG) ]'; % COG is the direction (rad) vector data measured from the GPS
 y = -V_err';                
-x = M\y;    % estimate wind strenght and direction with linear algebra
+x = M\y;    % estimate wind strenght and direction with linear algebra (MMSE)
 
 Theta_Wind = atan2(x(1),x(2));  % Wind angle (rad)
 V_Wind = sqrt(sum(x(1:2).^2));  % Wind strength (m/s)
 ```
 
+The curve illustrate the wind estimation.
+
 {{< figure 
 src="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
 link="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
 width="100%"
-title="GPS and pitot speed estimation error in function of the plane direction."
-caption="Blue point are speed difference with GPS for each pitot measurement. The black curve is a sine which correspond to the estimated wind which best explain this speed difference error."
+title="GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a firstar 1600."
+caption="Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction, amplitude is wind strength) which best match the air speed and ground speed differences."
 numbered="true"
 >}}
 
-COG add a bias. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor required.
+Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor required.
 
 
 

@@ -45,10 +45,11 @@ m = 72mm
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;Speed (m/s)&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;(Km/h)&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;diff pressure (Pa)&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;~ H2O level (cm)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;v (m/s)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;v (Km/h)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;$P_{diff}$ (Pa)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;~ $H_2O$ (cm)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; (0.2041Pa / LSB)&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -57,66 +58,76 @@ m = 72mm
 &lt;td align=&#34;center&#34;&gt;3.6&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;0.6&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;0.006&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;7.2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;2.4&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;0.024&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;12&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;4&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;14.4&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;9.6&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;0.096&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;47&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;7&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;25.2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;29.4&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;0.294&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;144&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;10&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;36&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;60&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;0.6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;294&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;15&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;54&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;135&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;1.3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;661&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;20&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;72&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;240&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;2.4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1176&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;25&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;90&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;375&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;3.75&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1837&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;30&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;108&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;540&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;5.4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2646&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;40&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;144&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;960&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;9.6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;em&gt;4704&lt;/em&gt; (4095 sat)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;signal-conditioning-and-conversion&#34;&gt;Signal conditioning and conversion&lt;/h3&gt;
-&lt;p&gt;The sensor is deported on the wing. Analog signal transport is to be avoided on such distance for sake of simplicity. The use of the &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; from Microchip provide an integrated solution. It is a high resolution sigma-delta analog to digital converter with four differential input channels. It has an I2C interface and provide a programmable gain on each analog input from 1 to 8.&lt;/p&gt;
-&lt;p&gt;The MP3V5004dp output analog signal is connected to the MCP3428 Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency of 28Hz ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus lines are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p&gt;
+&lt;p&gt;The pressure sensor is close to the pitot tube on the wing. The analog to digital conversion is also done nearby to avoid noise pollution of analog signal. The &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; output analog signal is connected to the &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus lines are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -128,8 +139,22 @@ m = 72mm
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
+&lt;h3 id=&#34;sensor-static-tests&#34;&gt;Sensor static tests&lt;/h3&gt;
+&lt;p&gt;A 90 minutes lasting measurement is performed indoor without movements is performed. Sensor output are logged at 100Hz. The figure below shows a slow drift. The sensor standard deviation measured on the overall measurement is 0.54 Pa (including the drift).&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png&#34; alt=&#34;90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;Differential Sensor static characteristics&lt;/h4&gt;
+&lt;p&gt;90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;One point to note however si that the sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB from memory, to be checked).&lt;/p&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-&lt;p&gt;One magnet is glued on the pitot tube. The pitot tube is firmly attached to the plane through a 2nd magnet glued into the wing. It allows the tube to detach stay in place during flight, and detach in case of crash, avoiding possible injury. Flexible tube connecting the sensor to its electronics are fishing tube originally used to protect fish lines.&lt;/p&gt;
+&lt;p&gt;A 2mm flexible tube originally used to protect fish lines connect the pitot tube with the sensor.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:50%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -141,7 +166,7 @@ m = 72mm
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;pitot-darcy-prandtl-tubesoupledecathlon&lt;/p&gt;
+&lt;p&gt;One magnet is glued on the pitot tube. The pitot tube is attached to the plane through a 2nd magnet integrated into the wing. This flexible solution allows the tube to stay in place during flight, and eject in case of hard landing or crash, avoiding possible injury or destruction.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -163,12 +188,49 @@ m = 72mm
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;h2 id=&#34;calibration&#34;&gt;Calibration&lt;/h2&gt;
+&lt;h2 id=&#34;results-gps-wind-estimation&#34;&gt;Results - GPS - Wind EStimation&lt;/h2&gt;
 &lt;div class=&#34;alert alert-warning&#34;&gt;
 &lt;div&gt;
-🚦 Below is under construction 🚧
+🚧 Below is under construction 🚧
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p&gt;The figure below presents the Ground Speed (GPS) with Air Speed (pitot) measurement. Without wind, theses two speed should quite similar, except for the vertical speed which might be poorly measured by the GPS. A constant wind can be estimated by comparing the airspeed with the groundspeed of the aircraft.
+Once the wind estimation performed, the GPS and Air Speed can be compared once the relative forward wind speed is added to the aircraft measured air speed. The figure present the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
+The reconstructed ground speed matches well with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant composant of the wind.&lt;/p&gt;
+&lt;p&gt;Remaining error is small. Theses might be explained by sensor limitation but it might also be due to GPS accuracy limitation and wind gust which are not compensated for.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue). Pitot air-speed minus constant wind estimation (black curve)&lt;/h4&gt;
+&lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;The matlab sript for wind estimation (offline) is provided below:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% V_gps and V_pitot are the vector with all data measured.
+V_err = V_gps - V_pitot; % Ground and Air speed difference (i.e. wind)
+M = [sin(COG); cos(COG) ]&#39;; % COG is the direction (rad) vector data measured from the GPS
+y = -V_err&#39;;
+x = M\y; % estimate wind strenght and direction with linear algebra (MMSE)
+Theta_Wind = atan2(x(1),x(2)); % Wind angle (rad)
+V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The curve illustrate the wind estimation.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction, amplitude is wind strength) which best match the air speed and ground speed differences.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a firstar 1600.&lt;/h4&gt;
+&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction, amplitude is wind strength) which best match the air speed and ground speed differences.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor required.&lt;/p&gt;
 &lt;!--
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;</description></item><item><title>Auto-pilote for Plane based on Simulink</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
@@ -209,7 +271,7 @@ The simulink model allows to &amp;ldquo;get-in&amp;rdquo; graphically. It allows
 &lt;li&gt;&lt;strong&gt;RC platform&lt;/strong&gt;: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Remote Control&lt;/strong&gt;: FrSky QX7&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Receiver&lt;/strong&gt;: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and S.port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with S.port saving one UART peripheral of the microcontroller. Each protocol use only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Microcontroller&lt;/strong&gt;: dsPIC 33EP on a AUAV V3 board. External motion sensor are used instead of built-in AUAV sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV board which is difficult to find now. The UDB5 mini is similar and can still be found.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Microcontroller&lt;/strong&gt;: dsPIC 33EP on a AUAV V3 board. External motion sensor are used instead of built-in AUAV3 sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV3 board which is difficult to find now. The UDB5 mini is similar and can still be found.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;IMU sensor&lt;/strong&gt;: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane. I2C bus is used between sensors and mcu.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Pitot tube&lt;/strong&gt;:
 &lt;ul&gt;

@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Camera on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/tags/camera/</link><description>Recent content in Camera on Rapid Control Prototyping (RCP)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/tags/camera/index.xml" rel="self" type="application/rss+xml"/><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>Signal to remotely start / stop / take a picture on a runCam2 and compatible action cam through the USB connector.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Camera on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/tags/camera/</link><description>Recent content in Camera on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/tags/camera/index.xml" rel="self" type="application/rss+xml"/><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;Commercial cable connecting a RunCam2 action cam to an RC receiver allows to remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
+The cable comprise a component which decode the RC PWM signal and create another signal pulse scheme to start and stop the RunCam2 record.&lt;/p&gt;
+&lt;p&gt;Controlling the action camera can be done with a microcontroller by generating directly the required pulse scheme described below.&lt;/p&gt;
+&lt;p&gt;The micro USB cable pinout (on the male part) is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pin 1 : GND&lt;/li&gt;
+&lt;li&gt;Pin 3 : TTL signal (5V)&lt;/li&gt;
+&lt;li&gt;Pin 5 : +5V (higher voltage possible for the RunCam2 connector)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo; with the configuration application, it is possible to switch back and forth the camera from video mode to photo mode, and to start/stop recording, or take a picture.&lt;/p&gt;
+&lt;p&gt;The pulse scheme is the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One pulse switch the camera from video recording mode to Photo mode.&lt;/li&gt;
+&lt;li&gt;Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pulse level is 5V but it works with 3.3V as well. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p&gt;
+&lt;p&gt;Tested with a runCam2 powered from a 3S LiPo battery (10 to 14V), no battery in the camera and pulse generated with a 3.3V dsPIC pin configured as digital output.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of the double 85ms pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;
+&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of the double 85ms pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;</description></item></channel></rss>
