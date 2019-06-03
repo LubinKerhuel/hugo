@@ -110,10 +110,11 @@ interests = [
 
 +++
 
-Control projects realized during my school years (1999-2005) ended-up with simplest PID algorithm tuned through successive trials.
-Code implementation for embedded systems requires an important effort and time left for model, identification and simulation is often null.
+Control projects during my academic study ended-up with simplest PID algorithm tuned through successive trials.
+Code implementation for embedded systems requires an important effort. Time left for modeling, identification and simulation is often null.
 
-I started developing a blockset for Simulink targeting dsPIC 33F microcontrollers to overcome such constraint.
+I started in 2005 developing a blockset for Matlab/Simulink targeting dsPIC 33F microcontrollers to overcome such constraint.
+Without a budget for dSPACE, SpeedGoat or another NI alternative, rapid prototyping became possible on any dsPIC based board.
 
 $$
 \text{One push button}
@@ -134,7 +135,7 @@ I joined [Microchip Technology](https://www.microchip.com/) where I am pursuing 
 For company, scientists, and students, *rapid prototyping enables focusing on new ideas* rather than getting into the details of embedded programming.
 Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.
 
-The present website shares some experience through custom projects using Matlab/Simulink as Rapid Prototyping toolchain.
-Examples uses the free [Microchip blockset](https://www.microchip.com/simulinkblocks/) targeting dsPIC.
+I am not academic. I have limited opportunity for traditional publication. I share custom projects as they come using the most practical format for me to maintain. 
+Most projects uses the free [Microchip blockset](https://www.microchip.com/simulinkblocks/) targeting dsPIC, PIC32 and few others microcontrollers. Old project are available on my [old website](https://www.kerhuel.eu/wiki/).
 
-Examples are not reference design and are not officially endorsed by Microchip.  
+None are reference design. None are endorsed by Microchip Technology.  

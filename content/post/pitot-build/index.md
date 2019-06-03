@@ -1,7 +1,7 @@
 ﻿---
-title: 'Air-speed sensor for plane, drone or UAVs.'
-subtitle: 'Mechanic, electronic and calibration for a miniature Pitot-Darcy-Prandtl air speed sensor'
-summary: Build a miniature pitot-tube with two tubes, one differential pressure sensor and one analog to digital converter integrating the signal conditioning. Calibrate air-speed measurement with a GPS ground speed reference.
+title: Air-speed sensor for plane, drone or UAVs.'
+subtitle: 'Mechanic, electronic, test of a miniature Pitot-Darcy-Prandtl air speed sensor embedded in an RC plane'
+summary: Build a miniature pitot-tube with simple tubes, a differential pressure sensor and an analog to digital converter. Calibrate air-speed measurement embedded in an RC plane with a GPS ground speed reference. E the wind constant component from the GPS and pitot output.
 authors:
 - Lubin
 tags: ["Pitot","sensor","air-speed"]
@@ -49,7 +49,7 @@ The pressure measured is linear to the square of the air speed : $P_t = P_s + \f
 
 ## Prandtl tube
 
-Prandtl tube is build placing an inner tube within an outer tube. Both tubes are centered on their top which are aligned and the space between the tubes is hermetically filled in with a hard-enough glue like epoxy. The side of the outer tube is drilled to sense the static pressure. At the bottom of the tube, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector providing access to the static pressure which lies between the two tube.
+Prandtl tube is build placing an inner tube within an outer tube. Both tubes are centered on their top which are aligned and the space between the tubes is hermetically filled in with an epoxy adhesive (Araldite or equivalent). The side of the outer tube is drilled to sense the static pressure. At the bottom of the tube, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector providing access to the static pressure which lies between the two tube.
 
 The static pressure holes should be placed at a minimum distance from the top due to airflow perturbations. A distance 4 times the diameter of the outer tube is retains here.
 
