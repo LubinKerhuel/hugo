@@ -61,6 +61,7 @@ The figure below is the Simulink diagram with the logic used to generate the app
 src="/img/runcam2-startstop-simulink-logic.png"
 link="/img/runcam2-startstop-simulink-logic.png"
 width="100%"
-caption="Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target"
+caption="Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target"
 numbered="true"
 >}}
+

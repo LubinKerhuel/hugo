@@ -21,7 +21,7 @@ address = "Lubin Kerhuel, 8 Chemin de Madame, 64100 Bayonne, FRANCE"
 organizations = [ { name = "Microchip Technology Inc", url = "https://www.microchip.com/" } ]
 
 # Short bio (displayed in user profile at end of posts)
-bio = "Interrested in signal processing and control theory. 10 years of experience with rapid control prototyping tools."
+bio = "Interested in signal processing and control theory. 10 years’ experience with rapid control prototyping."
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email = "lubin@kerhuel.eu"
@@ -111,7 +111,7 @@ interests = [
 +++
 
 Control projects realized during my school years (1999-2005) ended-up with simplest PID algorithm tuned through successive trials.
-Coding for embedded systems require an important effort and left time for modelisation, identification and simulation is often null.
+Code implementation for embedded systems requires an important effort and time left for model, identification and simulation is often null.
 
 I started developing a blockset for Simulink targeting dsPIC 33F microcontrollers to overcome such constraint.
 
@@ -129,12 +129,12 @@ It reduces the time from the simulation to our [autonomous robot](https://www.re
 
 I used the same Rapid Control Prototyping (RCP) to develop data fusion algorithm on motion analysis for wearable sports article at [MOVEA](https://www.ideas-laboratory.com/projects/movea/) in 2010-2011. 
 
-I joined [Microchip Technology](https://www.microchip.com/) where I am pursuing the developpement of the [MPLAB blockset](https://www.microchip.com/simulinkblocks/) to target dsPIC and PIC32 microcontrollers.
+I joined [Microchip Technology](https://www.microchip.com/) where I am pursuing the development of the [MPLAB blockset](https://www.microchip.com/simulinkblocks/) to target dsPIC and PIC32 microcontrollers.
 
 For company, scientists, and students, *rapid prototyping enables focusing on new ideas* rather than getting into the details of embedded programming.
 Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.
 
-The present website shares some experience through custom projects using Maltab/Simulink as Rapid Prototyping tool-chain.
+The present website shares some experience through custom projects using Matlab/Simulink as Rapid Prototyping toolchain.
 Examples uses the free [Microchip blockset](https://www.microchip.com/simulinkblocks/) targeting dsPIC.
 
 Examples are not reference design and are not officially endorsed by Microchip.  

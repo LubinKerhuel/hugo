@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
-&lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consist of a tube pointing in the forward direction. When the sensor move forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
+&lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
 &lt;p&gt;The pressure measured is linear to the square of the air speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $P_t$ and $P_s$ are the pressure in Pa, $\rho$ is the fluid density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude, and $v$ the speed in $m.s^{-1}$. The differential pressure measured is $P_d = P_t-P_s$.&lt;/p&gt;
 &lt;h2 id=&#34;prandtl-tube&#34;&gt;Prandtl tube&lt;/h2&gt;
-&lt;p&gt;Prandtl tube is build placing an inner tube within an outer tube. Both tube are centered on their top which are aligned and the space between the tubes is hermetically filled in with a hard enough glue like epoxy. The side of the outer tube is drilled to sense the static pressure. At the bottom of the tube, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector providing access to the static pressure which lies between the two tube.&lt;/p&gt;
+&lt;p&gt;Prandtl tube is build placing an inner tube within an outer tube. Both tubes are centered on their top which are aligned and the space between the tubes is hermetically filled in with a hard-enough glue like epoxy. The side of the outer tube is drilled to sense the static pressure. At the bottom of the tube, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector providing access to the static pressure which lies between the two tube.&lt;/p&gt;
 &lt;p&gt;The static pressure holes should be placed at a minimum distance from the top due to airflow perturbations. A distance 4 times the diameter of the outer tube is retains here.&lt;/p&gt;
-&lt;p&gt;Any tube can be used. First test were done with brass tube. Inner tube were 1mm inside, 2mm outside. Outer tube was 3mm inside, 4mm outside. A lighter Prandtl tube was made using one inner brass tube (1mm/2mm) with a carbon outer tube (3mm/5mm).&lt;/p&gt;
+&lt;p&gt;Any tube can be used. First test was done with brass tube. Inner tube is 1mm inside, 2mm outside. Outer tube was 3mm inside, 4mm outside. A lighter Prandtl tube was made using one inner brass tube (1mm/2mm) with a carbon outer tube (3mm/5mm).&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -22,7 +22,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf&#34;&gt;report&lt;/a&gt; by W.Gracey on the impact of the various shape on the measurement.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf&#34;&gt;report (french)&lt;/a&gt; from ANSTJ with general information on pitot sensor.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://voiletech.free.fr/skyassistant/pitot.htm&#34;&gt;website (french)&lt;/a&gt; from Rémi Bourgin with experimental pitot tube for RC plane&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://voiletech.free.fr/skyassistant/pitot.htm&#34;&gt;website (French)&lt;/a&gt; from Rémi Bourgin with experimental pitot tube for RC plane&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
 Tube intèrieur: 2mm, trou 1mm
@@ -39,7 +39,7 @@ m = 72mm
 &lt;h2 id=&#34;electronics&#34;&gt;Electronics&lt;/h2&gt;
 &lt;h3 id=&#34;sensitivity-requirements-and-pressure-sensor&#34;&gt;Sensitivity requirements and Pressure sensor&lt;/h3&gt;
 &lt;p&gt;The differential pressure measured is vary with the square of the speed. RC plane speed can be quite low. Challenge is to build an electronic sensitive enough to obtain good measurement even in the low speed range.&lt;/p&gt;
-&lt;p&gt;One sensitive differential pressure sensor available is the &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; from NXP. It measures differential pressure from 0 to 3.92 kPa and provide a ratiometric analog ouptut swing from 0.6V to 3V (2.4V swing). For reference, 1 kPa correspond to the pressure of 10cm of water.&lt;/p&gt;
+&lt;p&gt;One sensitive differential pressure sensor available is the &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; from NXP. It measures differential pressure from 0 to 3.92 kPa and provide a ratio metric analog output swing from 0.6V to 3V (2.4V swing). For reference, 1 kPa correspond to the pressure of 10cm of water.&lt;/p&gt;
 &lt;p&gt;We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% only of its nominal range.&lt;/p&gt;
 &lt;p&gt;Table below provide theoretical differential pressure expected for a given speed, using $\rho=1.2$ and $P_{diff} = \frac{1}{2}\rho v^2$.&lt;/p&gt;
 &lt;table&gt;
@@ -161,7 +161,7 @@ m = 72mm
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg&#34; alt=&#34;Fishing Tube used to connect pressure MP3V5004dp sensor to pitot tube.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;Flashmer - Tube souple 2mm. Image from Decathlon (france)&lt;/h4&gt;
+&lt;figcaption&gt;&lt;h4&gt;Flashmer – flexible Tube 2mm. Image from Decathlon (france)&lt;/h4&gt;
 &lt;p&gt;Fishing Tube used to connect pressure MP3V5004dp sensor to pitot tube.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -173,7 +173,7 @@ m = 72mm
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg&#34; /&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;Brass pitot tube with its electronic board mounted on the bottom of the right FirStar 1600 wing.&lt;/h4&gt;
+&lt;figcaption&gt;&lt;h4&gt;Brass pitot tube with its electronic board mounted on the bottom of the right Firstar 1600 wing.&lt;/h4&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -191,19 +191,19 @@ m = 72mm
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 &lt;h3 id=&#34;comparison-with-gps-ground-speed&#34;&gt;Comparison with GPS ground speed&lt;/h3&gt;
 &lt;p&gt;The Ground Speed (GPS) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.&lt;/p&gt;
-&lt;p&gt;With the wind strenght and direction known, the airplane ground speed (GPS) can be retrieved by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).&lt;/p&gt;
+&lt;p&gt;With the wind strength and direction known, the airplane ground speed (GPS) can be retrieved by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus constant wind estimation (black curve)&lt;/h4&gt;
-&lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
+&lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;The reconstructed ground speed matches with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure were converted to speed with $\rho = 1.2$.&lt;/p&gt;
+&lt;p&gt;The reconstructed ground speed matches with the GPS speed used as reference. It proves the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure was converted to speed with $\rho = 1.2$.&lt;/p&gt;
 &lt;p&gt;The remaining error might be pitot sensor error, but also GPS accuracy limitation particularly at estimating vertical speed changes (During flight, the plane speed was change through rapid climb to test the pitot tube on a wide range), and by wind gust which are not compensated for.&lt;/p&gt;
 &lt;h3 id=&#34;wind-estimation&#34;&gt;Wind estimation&lt;/h3&gt;
 &lt;p&gt;The comparison of the pitot tube with the GPS ground speed require to estimate the wind strength and direction.&lt;/p&gt;
@@ -211,75 +211,75 @@ m = 72mm
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction, amplitude is wind strength) which best match the air speed and ground speed differences.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a firstar 1600.&lt;/h4&gt;
-&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction, amplitude is wind strength) which best match the air speed and ground speed differences.&lt;/p&gt;
+&lt;figcaption&gt;&lt;h4&gt;GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600.&lt;/h4&gt;
+&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;The matlab sript for wind estimation (offline) is provided below:&lt;/p&gt;
+&lt;p&gt;The matlab script for wind estimation (offline) is provided below:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% V_gps and V_pitot are the vector with all data measured.
 V_err = V_gps - V_pitot; % Ground and Air speed difference (i.e. wind)
 M = [sin(COG); cos(COG) ]&#39;; % COG is the direction (Theta in rad) vector data measured from the GPS
 y = -V_err&#39;;
-x = M\y; % estimate wind strenght and direction with linear algebra (MMSE)
+x = M\y; % estimate wind strength and direction with linear algebra (MMSE)
 Theta_Wind = atan2(x(1),x(2)); % Wind angle (rad)
 V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;limitation&#34;&gt;Limitation&lt;/h4&gt;
-&lt;p&gt;Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor used in the demonstration. It works provided the wind is small compared to the airplane air speed, which make the COG bias relatively small.&lt;/p&gt;
+&lt;p&gt;Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensors used in the demonstration. It works provided the wind is small compared to the airplane air speed, which make the COG bias relatively small.&lt;/p&gt;
 &lt;!--
-C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;</description></item><item><title>Auto-pilote for Plane based on Simulink</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>
+C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;</description></item><item><title>Autopilot for Plane based on Simulink</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;h2 id=&#34;an-autopilot-based-on-rapid-control-prototyping-technics&#34;&gt;An autopilot based on rapid control prototyping technics&lt;/h2&gt;
 &lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
-&lt;p&gt;An Autopilot platform to test autopilot control loop is easy to build using simple low cost elements:&lt;/p&gt;
+&lt;p&gt;An Autopilot platform to test autopilot control loop is easy to build using simple low-cost elements:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;10 DoF IMU sensor board (~$5\ \$$),&lt;/li&gt;
 &lt;li&gt;GPS board: (~$10\ \$$),&lt;/li&gt;
 &lt;li&gt;Pitot tube: (~$15\ \$$),&lt;/li&gt;
-&lt;li&gt;Microcontroller board (price depend on the board ; use a less than $5\ \$$ mcu),&lt;/li&gt;
+&lt;li&gt;Microcontroller board (price depend on the board; use a less than $5\ \$$ mcu),&lt;/li&gt;
 &lt;li&gt;Plane platform: from $60$ to $120\ \$$ including servo and motors.&lt;/li&gt;
 &lt;li&gt;You also need a receiver, a remote control, battery packs and few optional hardware for data recorder, and telemetry.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;It can be an exciting platform for testing various control theory.&lt;/p&gt;
-&lt;h3 id=&#34;difference-with-existing-auto-pilot&#34;&gt;Difference with existing auto-pilot&lt;/h3&gt;
-&lt;p&gt;Off the shelf autopilot exists and might works great (&lt;a href=&#34;http://ardupilot.org/&#34;&gt;Ardupilot&lt;/a&gt;, &lt;a href=&#34;https://px4.io/&#34;&gt;PX4&lt;/a&gt;, &lt;a href=&#34;http://inavflight.com/&#34;&gt;iNav&lt;/a&gt;, &lt;a href=&#34;https://www.librepilot.org/site/index.html&#34;&gt;LibrePilot&lt;/a&gt;, &lt;a href=&#34;https://wiki.paparazziuav.org/wiki/Main_Page&#34;&gt;Paparazzi&lt;/a&gt;, further autopilot projects are listed on the &lt;a href=&#34;https://blog.dronetrest.com/flight-controller-firmware/&#34;&gt;DroneTrest review&lt;/a&gt;). Their parameters can be tuned. However testing your own controller on such autopilot requires implementing it at the right place, thus understanding the code structure underneath. Even well documented, it represents hundreds of C functions to understand, before possibly starting any changes.
+&lt;h3 id=&#34;difference-with-existing-autopilot&#34;&gt;Difference with existing autopilot&lt;/h3&gt;
+&lt;p&gt;Off the shelf autopilot exists and might works great (&lt;a href=&#34;http://ardupilot.org/&#34;&gt;Ardupilot&lt;/a&gt;, &lt;a href=&#34;https://px4.io/&#34;&gt;PX4&lt;/a&gt;, &lt;a href=&#34;http://inavflight.com/&#34;&gt;iNav&lt;/a&gt;, &lt;a href=&#34;https://www.librepilot.org/site/index.html&#34;&gt;LibrePilot&lt;/a&gt;, &lt;a href=&#34;https://wiki.paparazziuav.org/wiki/Main_Page&#34;&gt;Paparazzi&lt;/a&gt;, further autopilot projects are listed on the &lt;a href=&#34;https://blog.dronetrest.com/flight-controller-firmware/&#34;&gt;DroneTrest review&lt;/a&gt;). Their parameters can be tuned. However, testing your own controller on such autopilot requires implementing it at the right place, thus understanding the code structure underneath. Even well documented, it represents hundreds of C functions to understand, before possibly starting any changes.
 Your custom control loop might not fit the existing structure provided controller implemented in such projects are typically PIDs and you might want to implement a more complex structure, using different sample rate.&lt;/p&gt;
-&lt;p&gt;The presented autopilot use a Model Based Design (MDB) approach: The autopilot code is generated from a single simulink model. This is also named Rapic Control Prototyping (RCP).&lt;/p&gt;
+&lt;p&gt;The presented autopilot uses a Model Based Design (MDB) approach: The autopilot code is generated from a single Simulink model. This is also named Rapid Control Prototyping (RCP).&lt;/p&gt;
 &lt;p&gt;The autopilot controller use standard math blocks and the system low level parts is taken care with the Microchip blockset to drive the microcontroller peripherals and the UxV blockset to easily add features like GPS parser, Remote Control S.BUS, F.Port and Smart Port protocol, Mavlink messaging including Way Point and Parameters protocols.
-The simulink model allows to &amp;ldquo;get-in&amp;rdquo; graphically. It allows simulating parts of the system based on a simulated plane or based on values logged from a real flight which is very useful to work on sensor fusions algorithms.&lt;/p&gt;
-&lt;p&gt;Another key difference is the use of a 16 bit microcontroller while other autopilot use 32 bit microcontroller. 16 bits dsPIC prove to provide all required ressources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p&gt;
-&lt;p&gt;A similar model based design also using dsPIC microcontroller is developed by Pr E.Elkaim at UCSC in a project named SLUG. Their design is independent from the one presented here. &lt;a href=&#34;https://slugsuav.soe.ucsc.edu/&#34;&gt;SLUG&lt;/a&gt; and &lt;a href=&#34;https://doi.org/10.1155/2018/6892153&#34;&gt;SLUG II&lt;/a&gt; projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p&gt;
+The Simulink model allows to &amp;ldquo;get-in&amp;rdquo; graphically. It allows simulating parts of the system based on a simulated plane or based on values logged from a real flight which is very useful to work on sensor fusions algorithms.&lt;/p&gt;
+&lt;p&gt;Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p&gt;
+&lt;p&gt;A similar model based design using dsPIC microcontroller is developed by Pr G.H.Elkaim at UCSC in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga &lt;a href=&#34;https://slugsuav.soe.ucsc.edu/&#34;&gt;SLUG&lt;/a&gt; is available online. The update &lt;a href=&#34;https://doi.org/10.1155/2018/6892153&#34;&gt;SLUG II&lt;/a&gt; projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p&gt;
 &lt;h3 id=&#34;hardware-list&#34;&gt;Hardware list&lt;/h3&gt;
-&lt;p&gt;Various combination of material were tested. Below is a selected list of hardware which prove to be efficient.&lt;/p&gt;
+&lt;p&gt;Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg&#34; alt=&#34;Volantex FirStar 1600 with Qx7 remote control.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg&#34; alt=&#34;Volantex Firstar 1600 with Qx7 remote control.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;autopilot platform&lt;/h4&gt;
-&lt;p&gt;Volantex FirStar 1600 with Qx7 remote control.&lt;/p&gt;
+&lt;p&gt;Volantex Firstar 1600 with Qx7 remote control.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;RC platform&lt;/strong&gt;: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Remote Control&lt;/strong&gt;: FrSky QX7&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Receiver&lt;/strong&gt;: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and S.port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with S.port saving one UART peripheral of the microcontroller. Each protocol use only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Microcontroller&lt;/strong&gt;: dsPIC 33EP on a AUAV V3 board. External motion sensor are used instead of built-in AUAV3 sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV3 board which is difficult to find now. The UDB5 mini is similar and can still be found.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IMU sensor&lt;/strong&gt;: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane. I2C bus is used between sensors and mcu.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Receiver&lt;/strong&gt;: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and S.port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with S.port saving one UART peripheral of the microcontroller. Each protocol uses only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Microcontroller&lt;/strong&gt;: dsPIC 33EP on a AUAV V3 board. External motion sensor is used instead of built-in AUAV3 sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV3 board which is difficult to find now. The UDB5 mini is similar and can still be found.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IMU sensor&lt;/strong&gt;: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane. I2C bus is used between sensors and MCU.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Pitot tube&lt;/strong&gt;:
 &lt;ul&gt;
-&lt;li&gt;An inner tube and an outer tube on which four hole are done laterally.&lt;/li&gt;
+&lt;li&gt;An inner tube and an outer tube on which four holes are done laterally.&lt;/li&gt;
 &lt;li&gt;Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;GPS&lt;/strong&gt;: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Data logger&lt;/strong&gt;: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Radio link&lt;/strong&gt;: 3DR Sik based Radio module for mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href=&#34;http://qgroundcontrol.com/&#34;&gt;qgroundcontrol&lt;/a&gt; base station running on most platforms (PC, android, windows, linux).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Radio link&lt;/strong&gt;: 3DR Sik based Radio module for Mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href=&#34;http://qgroundcontrol.com/&#34;&gt;qgroundcontrol&lt;/a&gt; base station running on most platforms (PC, android, windows, Linux).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Action cam&lt;/strong&gt;: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
@@ -288,28 +288,28 @@ The simulink model allows to &amp;ldquo;get-in&amp;rdquo; graphically. It allows
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg&#34; /&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16 bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter.&lt;/h4&gt;
+&lt;figcaption&gt;&lt;h4&gt;Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16-bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter.&lt;/h4&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
-&lt;p&gt;Sliding mode based controller tested in both pitch and roll axis with two mode:&lt;/p&gt;
+&lt;p&gt;Sliding mode-based controller tested in both pitch and roll axis with two mode:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Control plane angular rate control (angular speed set-point given through the remote control)&lt;/li&gt;
 &lt;li&gt;Control plane angle attitude (angle set point provided through the remote control)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, Mavlink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p&gt;
-&lt;p&gt;Tested with strong wind. Showing fairly good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p&gt;
+&lt;p&gt;Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p&gt;
 &lt;p&gt;Pitot tube air-speed estimation validated using GPS speed measurement as reference.&lt;/p&gt;
-&lt;p&gt;Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement taking into account the plane orientation.&lt;/p&gt;
-&lt;p&gt;Validated automatic calibration of the magnetometers axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determine if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p&gt;
+&lt;p&gt;Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p&gt;
+&lt;p&gt;Validated automatic calibration of the magnetometer�s axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p&gt;
 &lt;h3 id=&#34;next-steps&#34;&gt;Next steps&lt;/h3&gt;
 &lt;p&gt;Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p&gt;
-&lt;p&gt;Test in flight mavlink protocol parameters tuning.&lt;/p&gt;
+&lt;p&gt;Test in flight Mavlink protocol parameters tuning.&lt;/p&gt;
 &lt;p&gt;Add automatic guidance of the plane, using Mavlink Way point sets.&lt;/p&gt;
 &lt;h3 id=&#34;site-content&#34;&gt;Site content&lt;/h3&gt;
 &lt;p&gt;Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.&lt;/p&gt;
-&lt;p&gt;Ideas to expand:&lt;/p&gt;
+&lt;p&gt;Ideas to dvpt:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IMU&lt;/li&gt;
 &lt;li&gt;Pitot tube&lt;/li&gt;
@@ -354,7 +354,7 @@ The gain is the value in kOhm as stated by the chip documentation:&lt;/p&gt;
 &lt;/table&gt;
 &lt;p&gt;The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47.
 The original current measurement range is reduced from 140 (A) to 20 (A) (140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20).&lt;/p&gt;
-&lt;p&gt;The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, FirStar 1600 or Ranger 1600.&lt;/p&gt;</description></item><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, Firstar 1600 or Ranger 1600.&lt;/p&gt;</description></item><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;p&gt;Cable exist to connect a RunCam2 action cam to an RC receiver for remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
 The cable has logic to decode the RC PWM signal and generate the signal pulse scheme to start and stop the RunCam2 record.&lt;/p&gt;
 &lt;p&gt;Controlling the camera can be done with a microcontroller by generating the required pulse scheme described below.&lt;/p&gt;
@@ -376,11 +376,11 @@ The cable has logic to decode the RC PWM signal and generate the signal pulse sc
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;
-&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&lt;/p&gt;
+&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.
@@ -508,7 +508,7 @@ Two pairs of wires power two DC motors in either direction through an &lt;code&g
 &lt;li&gt;The third logic signal power the motor depending on to the state defined.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The third signal is modulated with a 100Hz square periodic signal whose duty cycle vary from 0% to 100% (PWM). It sets the torque for the motor.&lt;/p&gt;
-&lt;p&gt;The flat multicolour ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.&lt;/p&gt;
+&lt;p&gt;The flat multicolor ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -609,7 +609,7 @@ The linear term for $sin$ is positive when the pendulum is up when $\theta \appr
 Experimental measurement is a good method to refine a model and tune its parameters.
 In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the experiment explained below.&lt;/p&gt;
 &lt;h3 id=&#34;experimental-logs&#34;&gt;Experimental logs&lt;/h3&gt;
-&lt;p&gt;The pendulum is placed on a track (two chairs back to back) so as to be able to make a complete rotation.
+&lt;p&gt;The pendulum is placed on a track (two chairs back to back) to be able to make a complete rotation.
 Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p&gt;
 &lt;p&gt;It oscillates until the damping friction ($\zeta$) stops the free oscillations.&lt;/p&gt;
 &lt;p&gt;The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an &lt;a href=&#34;https://github.com/d-ronin/openlager/wiki&#34;&gt;openlager&lt;/a&gt; board connected on the dsPIC &lt;a href=&#34;#UARTINTERFACE&#34;&gt;UART&lt;/a&gt; interface.&lt;/p&gt;
@@ -620,11 +620,11 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; alt=&#34;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ up side ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; alt=&#34;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;Identification - experimental $\theta$ angle reconstructed from inertial sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4&gt;
-&lt;p&gt;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ up side ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p&gt;
+&lt;p&gt;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -656,9 +656,9 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;p&gt;The IMU input measurements is composed of the rate gyro and the accelerometers data. Magnetometers is not used in this pendulum example.
 The IMU input also require the predicted acceleration vector (resp magnetometer is used).
 The IMU output the sensor orientation and provides the gravity vector prediction as seen in the sensor estimated attitude (i.e. quaternion angle).&lt;/p&gt;
-&lt;p&gt;Comparing the gravity vector predicted with the accelerometers measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p&gt;
+&lt;p&gt;Comparing the gravity vector predicted with the accelerometer’s measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p&gt;
 &lt;p&gt;Considering the pendulum principal movement rotation $\theta$, the equations of forces applied on the pendulum derive from $\hat \theta$ a prediction for the dynamic acceleration.
-The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in theses calculations.&lt;/p&gt;
+The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in these calculations.&lt;/p&gt;
 &lt;p&gt;The updated acceleration comprising both a static and dynamic part is fed into the IMU algorithm improving the IMU correction of the rate gyro integration drift even when the pendulum is not static.&lt;/p&gt;
 &lt;h1 id=&#34;trolley-model&#34;&gt;Trolley Model&lt;/h1&gt;
 &lt;h2 id=&#34;trolley-equations&#34;&gt;Trolley Equations&lt;/h2&gt;
@@ -715,7 +715,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;iframe src=&#34;//www.youtube.com/embed/xbu4hXOnemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 --&gt;&lt;/p&gt;
-&lt;p&gt;Another way to stabilize a pendulum with an electric see-saw (&lt;a href=&#34;https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Another way to stabilize a pendulum with an electric seesaw (&lt;a href=&#34;https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;

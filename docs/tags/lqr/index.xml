@@ -113,7 +113,7 @@ Two pairs of wires power two DC motors in either direction through an &lt;code&g
 &lt;li&gt;The third logic signal power the motor depending on to the state defined.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The third signal is modulated with a 100Hz square periodic signal whose duty cycle vary from 0% to 100% (PWM). It sets the torque for the motor.&lt;/p&gt;
-&lt;p&gt;The flat multicolour ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.&lt;/p&gt;
+&lt;p&gt;The flat multicolor ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -214,7 +214,7 @@ The linear term for $sin$ is positive when the pendulum is up when $\theta \appr
 Experimental measurement is a good method to refine a model and tune its parameters.
 In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the experiment explained below.&lt;/p&gt;
 &lt;h3 id=&#34;experimental-logs&#34;&gt;Experimental logs&lt;/h3&gt;
-&lt;p&gt;The pendulum is placed on a track (two chairs back to back) so as to be able to make a complete rotation.
+&lt;p&gt;The pendulum is placed on a track (two chairs back to back) to be able to make a complete rotation.
 Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p&gt;
 &lt;p&gt;It oscillates until the damping friction ($\zeta$) stops the free oscillations.&lt;/p&gt;
 &lt;p&gt;The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an &lt;a href=&#34;https://github.com/d-ronin/openlager/wiki&#34;&gt;openlager&lt;/a&gt; board connected on the dsPIC &lt;a href=&#34;#UARTINTERFACE&#34;&gt;UART&lt;/a&gt; interface.&lt;/p&gt;
@@ -225,11 +225,11 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; alt=&#34;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ up side ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; alt=&#34;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pendulum-identification-theta.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;Identification - experimental $\theta$ angle reconstructed from inertial sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4&gt;
-&lt;p&gt;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ up side ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p&gt;
+&lt;p&gt;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -261,9 +261,9 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;p&gt;The IMU input measurements is composed of the rate gyro and the accelerometers data. Magnetometers is not used in this pendulum example.
 The IMU input also require the predicted acceleration vector (resp magnetometer is used).
 The IMU output the sensor orientation and provides the gravity vector prediction as seen in the sensor estimated attitude (i.e. quaternion angle).&lt;/p&gt;
-&lt;p&gt;Comparing the gravity vector predicted with the accelerometers measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p&gt;
+&lt;p&gt;Comparing the gravity vector predicted with the accelerometer’s measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p&gt;
 &lt;p&gt;Considering the pendulum principal movement rotation $\theta$, the equations of forces applied on the pendulum derive from $\hat \theta$ a prediction for the dynamic acceleration.
-The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in theses calculations.&lt;/p&gt;
+The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in these calculations.&lt;/p&gt;
 &lt;p&gt;The updated acceleration comprising both a static and dynamic part is fed into the IMU algorithm improving the IMU correction of the rate gyro integration drift even when the pendulum is not static.&lt;/p&gt;
 &lt;h1 id=&#34;trolley-model&#34;&gt;Trolley Model&lt;/h1&gt;
 &lt;h2 id=&#34;trolley-equations&#34;&gt;Trolley Equations&lt;/h2&gt;
@@ -320,7 +320,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;iframe src=&#34;//www.youtube.com/embed/xbu4hXOnemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 --&gt;&lt;/p&gt;
-&lt;p&gt;Another way to stabilize a pendulum with an electric see-saw (&lt;a href=&#34;https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Another way to stabilize a pendulum with an electric seesaw (&lt;a href=&#34;https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum&#34;&gt;video&lt;/a&gt;).&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;

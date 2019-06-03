@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/post/</link><description>Recent content in Posts on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0100</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
-&lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consist of a tube pointing in the forward direction. When the sensor move forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
+&lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
 &lt;p&gt;The pressure measured is linear to the square of the air speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $P_t$ and $P_s$ are the pressure in Pa, $\rho$ is the fluid density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude, and $v$ the speed in $m.s^{-1}$. The differential pressure measured is $P_d = P_t-P_s$.&lt;/p&gt;
 &lt;h2 id=&#34;prandtl-tube&#34;&gt;Prandtl tube&lt;/h2&gt;
-&lt;p&gt;Prandtl tube is build placing an inner tube within an outer tube. Both tube are centered on their top which are aligned and the space between the tubes is hermetically filled in with a hard enough glue like epoxy. The side of the outer tube is drilled to sense the static pressure. At the bottom of the tube, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector providing access to the static pressure which lies between the two tube.&lt;/p&gt;
+&lt;p&gt;Prandtl tube is build placing an inner tube within an outer tube. Both tubes are centered on their top which are aligned and the space between the tubes is hermetically filled in with a hard-enough glue like epoxy. The side of the outer tube is drilled to sense the static pressure. At the bottom of the tube, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector providing access to the static pressure which lies between the two tube.&lt;/p&gt;
 &lt;p&gt;The static pressure holes should be placed at a minimum distance from the top due to airflow perturbations. A distance 4 times the diameter of the outer tube is retains here.&lt;/p&gt;
-&lt;p&gt;Any tube can be used. First test were done with brass tube. Inner tube were 1mm inside, 2mm outside. Outer tube was 3mm inside, 4mm outside. A lighter Prandtl tube was made using one inner brass tube (1mm/2mm) with a carbon outer tube (3mm/5mm).&lt;/p&gt;
+&lt;p&gt;Any tube can be used. First test was done with brass tube. Inner tube is 1mm inside, 2mm outside. Outer tube was 3mm inside, 4mm outside. A lighter Prandtl tube was made using one inner brass tube (1mm/2mm) with a carbon outer tube (3mm/5mm).&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -22,7 +22,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf&#34;&gt;report&lt;/a&gt; by W.Gracey on the impact of the various shape on the measurement.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf&#34;&gt;report (french)&lt;/a&gt; from ANSTJ with general information on pitot sensor.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://voiletech.free.fr/skyassistant/pitot.htm&#34;&gt;website (french)&lt;/a&gt; from Rémi Bourgin with experimental pitot tube for RC plane&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://voiletech.free.fr/skyassistant/pitot.htm&#34;&gt;website (French)&lt;/a&gt; from Rémi Bourgin with experimental pitot tube for RC plane&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
 Tube intèrieur: 2mm, trou 1mm
@@ -39,7 +39,7 @@ m = 72mm
 &lt;h2 id=&#34;electronics&#34;&gt;Electronics&lt;/h2&gt;
 &lt;h3 id=&#34;sensitivity-requirements-and-pressure-sensor&#34;&gt;Sensitivity requirements and Pressure sensor&lt;/h3&gt;
 &lt;p&gt;The differential pressure measured is vary with the square of the speed. RC plane speed can be quite low. Challenge is to build an electronic sensitive enough to obtain good measurement even in the low speed range.&lt;/p&gt;
-&lt;p&gt;One sensitive differential pressure sensor available is the &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; from NXP. It measures differential pressure from 0 to 3.92 kPa and provide a ratiometric analog ouptut swing from 0.6V to 3V (2.4V swing). For reference, 1 kPa correspond to the pressure of 10cm of water.&lt;/p&gt;
+&lt;p&gt;One sensitive differential pressure sensor available is the &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; from NXP. It measures differential pressure from 0 to 3.92 kPa and provide a ratio metric analog output swing from 0.6V to 3V (2.4V swing). For reference, 1 kPa correspond to the pressure of 10cm of water.&lt;/p&gt;
 &lt;p&gt;We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% only of its nominal range.&lt;/p&gt;
 &lt;p&gt;Table below provide theoretical differential pressure expected for a given speed, using $\rho=1.2$ and $P_{diff} = \frac{1}{2}\rho v^2$.&lt;/p&gt;
 &lt;table&gt;
@@ -161,7 +161,7 @@ m = 72mm
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg&#34; alt=&#34;Fishing Tube used to connect pressure MP3V5004dp sensor to pitot tube.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;Flashmer - Tube souple 2mm. Image from Decathlon (france)&lt;/h4&gt;
+&lt;figcaption&gt;&lt;h4&gt;Flashmer – flexible Tube 2mm. Image from Decathlon (france)&lt;/h4&gt;
 &lt;p&gt;Fishing Tube used to connect pressure MP3V5004dp sensor to pitot tube.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -173,7 +173,7 @@ m = 72mm
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg&#34; /&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;Brass pitot tube with its electronic board mounted on the bottom of the right FirStar 1600 wing.&lt;/h4&gt;
+&lt;figcaption&gt;&lt;h4&gt;Brass pitot tube with its electronic board mounted on the bottom of the right Firstar 1600 wing.&lt;/h4&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -191,19 +191,19 @@ m = 72mm
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 &lt;h3 id=&#34;comparison-with-gps-ground-speed&#34;&gt;Comparison with GPS ground speed&lt;/h3&gt;
 &lt;p&gt;The Ground Speed (GPS) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.&lt;/p&gt;
-&lt;p&gt;With the wind strenght and direction known, the airplane ground speed (GPS) can be retrieved by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).&lt;/p&gt;
+&lt;p&gt;With the wind strength and direction known, the airplane ground speed (GPS) can be retrieved by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus constant wind estimation (black curve)&lt;/h4&gt;
-&lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
+&lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;The reconstructed ground speed matches with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure were converted to speed with $\rho = 1.2$.&lt;/p&gt;
+&lt;p&gt;The reconstructed ground speed matches with the GPS speed used as reference. It proves the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure was converted to speed with $\rho = 1.2$.&lt;/p&gt;
 &lt;p&gt;The remaining error might be pitot sensor error, but also GPS accuracy limitation particularly at estimating vertical speed changes (During flight, the plane speed was change through rapid climb to test the pitot tube on a wide range), and by wind gust which are not compensated for.&lt;/p&gt;
 &lt;h3 id=&#34;wind-estimation&#34;&gt;Wind estimation&lt;/h3&gt;
 &lt;p&gt;The comparison of the pitot tube with the GPS ground speed require to estimate the wind strength and direction.&lt;/p&gt;
@@ -211,25 +211,25 @@ m = 72mm
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction, amplitude is wind strength) which best match the air speed and ground speed differences.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a firstar 1600.&lt;/h4&gt;
-&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction, amplitude is wind strength) which best match the air speed and ground speed differences.&lt;/p&gt;
+&lt;figcaption&gt;&lt;h4&gt;GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600.&lt;/h4&gt;
+&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;The matlab sript for wind estimation (offline) is provided below:&lt;/p&gt;
+&lt;p&gt;The matlab script for wind estimation (offline) is provided below:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% V_gps and V_pitot are the vector with all data measured.
 V_err = V_gps - V_pitot; % Ground and Air speed difference (i.e. wind)
 M = [sin(COG); cos(COG) ]&#39;; % COG is the direction (Theta in rad) vector data measured from the GPS
 y = -V_err&#39;;
-x = M\y; % estimate wind strenght and direction with linear algebra (MMSE)
+x = M\y; % estimate wind strength and direction with linear algebra (MMSE)
 Theta_Wind = atan2(x(1),x(2)); % Wind angle (rad)
 V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;limitation&#34;&gt;Limitation&lt;/h4&gt;
-&lt;p&gt;Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor used in the demonstration. It works provided the wind is small compared to the airplane air speed, which make the COG bias relatively small.&lt;/p&gt;
+&lt;p&gt;Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensors used in the demonstration. It works provided the wind is small compared to the airplane air speed, which make the COG bias relatively small.&lt;/p&gt;
 &lt;!--
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;</description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;p&gt;The board &lt;a href=&#34;http://www.mateksys.com/?portfolio=pdb-xpw&#34;&gt;PDB-XPW&lt;/a&gt; from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p&gt;
@@ -269,7 +269,7 @@ The gain is the value in kOhm as stated by the chip documentation:&lt;/p&gt;
 &lt;/table&gt;
 &lt;p&gt;The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47.
 The original current measurement range is reduced from 140 (A) to 20 (A) (140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20).&lt;/p&gt;
-&lt;p&gt;The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, FirStar 1600 or Ranger 1600.&lt;/p&gt;</description></item><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, Firstar 1600 or Ranger 1600.&lt;/p&gt;</description></item><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;p&gt;Cable exist to connect a RunCam2 action cam to an RC receiver for remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
 The cable has logic to decode the RC PWM signal and generate the signal pulse scheme to start and stop the RunCam2 record.&lt;/p&gt;
 &lt;p&gt;Controlling the camera can be done with a microcontroller by generating the required pulse scheme described below.&lt;/p&gt;
@@ -291,11 +291,11 @@ The cable has logic to decode the RC PWM signal and generate the signal pulse sc
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;
-&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&lt;/p&gt;
+&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;</description></item></channel></rss>

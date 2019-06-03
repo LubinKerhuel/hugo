@@ -56,4 +56,5 @@ The gain is the value in kOhm as stated by the chip documentation:
 The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47. 
 The original current measurement range is reduced from 140 (A) to 20 (A) (140 * 47/270 = 20). 
 
-The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, FirStar 1600 or Ranger 1600.
+The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, Firstar 1600 or Ranger 1600.
+

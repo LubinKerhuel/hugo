@@ -1,8 +1,8 @@
-+++
+﻿+++
 title = "Inverted Pendulum"
 
 aliases = ["project/inverted_pendulum_flywheels/"]
-summary = "LQR stabilization of an inverted pendulum platform based on a low cost toy. Simulink model and generation of code for dsPIC Microchip microcontroller are provided (Rapid Control Prototyping : RCP)"
+summary = "LQR stabilization of an inverted pendulum platform based on a low-cost toy. Simulink model and generation of code for dsPIC Microchip microcontroller are provided (Rapid Control Prototyping: RCP)"
 
 tags = ["inverted pendulum","state space","LQR","rapid prototyping","model based design (MDB)","matlab","simulink","DIY","dsPIC","L298N","ICM-20608","Microstick II","33EP128MC202"]
 
@@ -149,7 +149,7 @@ The L298N H bridge controls two DC motors. For each motor:
 
 The third signal is modulated with a 100Hz square periodic signal whose duty cycle vary from 0% to 100% (PWM). It sets the torque for the motor.
 
-The flat multicolour ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.
+The flat multicolor ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.
 
 {{< figure
 src="/img/pendulum_base.png"
@@ -262,11 +262,11 @@ The parameter $l$ could be estimated from the platform mechanical but the dampin
 
 The simulation model is satisfactory when the calculation it performs make realistic prediction.
 Experimental measurement is a good method to refine a model and tune its parameters.
-In our case, the parameters  $l$ and $\zeta$ (or $k$) are identified from the experiment explained below.
+In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the experiment explained below.
 
 ### Experimental logs
 
-The pendulum is placed on a track (two chairs back to back) so as to be able to make a complete rotation.
+The pendulum is placed on a track (two chairs back to back) to be able to make a complete rotation.
 Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).
 
 It oscillates until the damping friction ($\zeta$) stops the free oscillations.
@@ -285,7 +285,7 @@ src="/img/pendulum-identification-theta.png"
 link="/img/pendulum-identification-theta.png"
 width="100%"
 title="Identification - experimental $\theta$ angle reconstructed from inertial sensors (wide grey curve) vs pendulum model (read and blue dashed curves)"
-caption="$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ up side ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a non linear damping with the non linear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$."
+caption="$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$."
 numbered="true"
 >}}
 
@@ -304,10 +304,10 @@ The IMU input measurements is composed of the rate gyro and the accelerometers d
 The IMU input also require the predicted acceleration vector (resp magnetometer is used). 
 The IMU output the sensor orientation and provides the gravity vector prediction as seen in the sensor estimated attitude (i.e. quaternion angle).
 
-Comparing the gravity vector predicted with the accelerometers measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.
+Comparing the gravity vector predicted with the accelerometer’s measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.
 
 Considering the pendulum principal movement rotation $\theta$, the equations of forces applied on the pendulum derive from $\hat \theta$ a prediction for the dynamic acceleration.
-The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in theses calculations.
+The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in these calculations.
 
 The updated acceleration comprising both a static and dynamic part is fed into the IMU algorithm improving the IMU correction of the rate gyro integration drift even when the pendulum is not static.
 
@@ -344,7 +344,7 @@ src="/img/pendulum-gy91-wheel.jpg"
 link="/img/pendulum-gy91-wheel.jpg"
 width="45%"
 title="Identification of trolley in real inverted pendulum condition."
-caption="The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91  board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires)."
+caption="The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91 board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires)."
 numbered="true"
 >}}
 
@@ -360,7 +360,7 @@ Video of the inverted Pendulum when it encounters a wall:
 {{< vimeo id="309876329" caption="Inverted pendulum pushing a wall">}}
 <!-- You tube alternative: {{< youtube id ="xbu4hXOnemE" >}} -->
 
-Another way to stabilize a pendulum with an electric see-saw ([video](https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum)).
+Another way to stabilize a pendulum with an electric seesaw ([video](https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum)).
 
 [^IMU]: Inertial Measurement Unit
 [^DoF]: Degree of Freedom
