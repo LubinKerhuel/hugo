@@ -26,6 +26,9 @@ image:
 #   Otherwise, set `projects = []`.
 projects: ["autopilot-plane"]
 
+sitemap:
+  priority: 1
+
 math: true
 
 highlight: true

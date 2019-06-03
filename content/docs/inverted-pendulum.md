@@ -20,6 +20,8 @@ math = true
 
 GitRepo = "hugo"
 
+[sitemap]
+    priority = 1
 
 # Add menu entry to sidebar.
 # parent = "inverted_pendulum_flywheels"

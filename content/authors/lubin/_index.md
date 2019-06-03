@@ -13,8 +13,8 @@ role = ""
 
 
 
-  # Details for the Contact Widget
-  address = "Lubin Kerhuel, 8 Chemin de Madame, 64100 Bayonne, FRANCE"
+# Details for the Contact Widget
+address = "Lubin Kerhuel, 8 Chemin de Madame, 64100 Bayonne, FRANCE"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.

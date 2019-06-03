@@ -1,6 +1,8 @@
 ﻿---
 title: Prototypage Rapide avec Simulink sur dsPIC
 
+sitemap:
+  priority: 1
 
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
@@ -20,9 +22,6 @@ slides:
 
   backgroundTransition: fade
   
-
-
-
 ---
 
 # Prototypage rapide

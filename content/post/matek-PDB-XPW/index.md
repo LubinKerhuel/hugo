@@ -11,6 +11,9 @@ date: "2019-05-18"
 featured: false
 draft: false
 
+sitemap:
+  priority: 1
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
