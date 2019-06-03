@@ -30,10 +30,10 @@ projects: [autopilot-plane]
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
 
-Commercial cable connecting a RunCam2 action cam to an RC receiver allows to remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
-The cable comprise a component which decode the RC PWM signal and create another signal pulse scheme to start and stop the RunCam2 record.
+Cable exist to connect a RunCam2 action cam to an RC receiver for remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
+The cable has logic to decode the RC PWM signal and generate the signal pulse scheme to start and stop the RunCam2 record.
 
-Controlling the action camera can be done with a microcontroller by generating directly the required pulse scheme described below.
+Controlling the camera can be done with a microcontroller by generating the required pulse scheme described below.
 
 The micro USB cable pinout (on the male part) is
 
@@ -48,14 +48,16 @@ The pulse scheme is the following:
 - One pulse switch the camera from video recording mode to Photo mode.
 - Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).
 
-Pulse level is 5V but it works with 3.3V as well. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.
+Pulse level is 5V but it works with 3.3V. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.
 
 Tested with a runCam2 powered from a 3S LiPo battery (10 to 14V), no battery in the camera and pulse generated with a 3.3V dsPIC pin configured as digital output.
+
+The figure below is the Simulink diagram with the logic used to generate the appropriate pulse on a dsPIC. Code is generated through the Simulink Coder and the [MPLAB block](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/SW007023) from Microchip.
 
 {{< figure
 src="/img/runcam2-startstop-simulink-logic.png"
 link="/img/runcam2-startstop-simulink-logic.png"
 width="100%"
-caption="Simulink logic to control a runCam2 action Cam. The subsystem step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of the double 85ms pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target"
+caption="Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target"
 numbered="true"
 >}}

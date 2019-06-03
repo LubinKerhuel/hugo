@@ -26,14 +26,16 @@ logo = ""
 
 # Enable global source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
-highlight = false
+highlight = false # per page basis
 #     Example: highlight_languages = ["go", "lisp", "ocaml"]
 highlight_languages = ["matlab"]  # Add support for highlighting additional languages
-# highlight_style = "github"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+ highlight_style = "vs2015"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+ # dark, github, ocean, monokai , monokai-sublime, vs2015
+# highlight_style = "Default"
 
 # Enable global LaTeX math rendering?
 #   If false, you can enable it locally on a per page basis.
-math = true
+math = true # must be set for home page
 
 # Privacy pack
 #   Show a cookie consent message to visitors

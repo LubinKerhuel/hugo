@@ -167,7 +167,7 @@ m = 72mm
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;p&gt;One magnet is glued on the pitot tube. The pitot tube is attached to the plane through a 2nd magnet integrated into the wing. This flexible solution allows the tube to stay in place during flight, and eject in case of hard landing or crash, avoiding possible injury or destruction.&lt;/p&gt;
-&lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg&#34; /&gt;
@@ -177,7 +177,7 @@ m = 72mm
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg&#34; alt=&#34;Outer tube is a 5mm carbon tube. Inner tube is a brass 2mm/1mm tube.&#34;/&gt;
@@ -188,32 +188,26 @@ m = 72mm
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;h2 id=&#34;results-gps-wind-estimation&#34;&gt;Results - GPS - Wind EStimation&lt;/h2&gt;
-&lt;p&gt;The figure below presents the Ground Speed (GPS) with Air Speed (pitot) measurement. Theses two speed are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.
-With the wind estimation, the airplane ground speed from the GPS measurement can be retrieved by adding the projected wind to the aircraft forward air-speed measured with the pitot tube. The figure present the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
-The reconstructed ground speed matches well with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind.&lt;/p&gt;
-&lt;p&gt;The remaining error might be explained by sensor limitation but also by GPS accuracy limitation particularly at estimating vertical speed changes ; wind gust which are not compensated for.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;h3 id=&#34;comparison-with-gps-ground-speed&#34;&gt;Comparison with GPS ground speed&lt;/h3&gt;
+&lt;p&gt;The Ground Speed (GPS) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.&lt;/p&gt;
+&lt;p&gt;With the wind strenght and direction known, the airplane ground speed (GPS) can be retrieved by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue). Pitot air-speed minus constant wind estimation (black curve)&lt;/h4&gt;
+&lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus constant wind estimation (black curve)&lt;/h4&gt;
 &lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;The matlab sript for wind estimation (offline) is provided below:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% V_gps and V_pitot are the vector with all data measured.
-V_err = V_gps - V_pitot; % Ground and Air speed difference (i.e. wind)
-M = [sin(COG); cos(COG) ]&#39;; % COG is the direction (rad) vector data measured from the GPS
-y = -V_err&#39;;
-x = M\y; % estimate wind strenght and direction with linear algebra (MMSE)
-Theta_Wind = atan2(x(1),x(2)); % Wind angle (rad)
-V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The curve illustrate the wind estimation.&lt;/p&gt;
+&lt;p&gt;The reconstructed ground speed matches with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure were converted to speed with $\rho = 1.2$.&lt;/p&gt;
+&lt;p&gt;The remaining error might be pitot sensor error, but also GPS accuracy limitation particularly at estimating vertical speed changes (During flight, the plane speed was change through rapid climb to test the pitot tube on a wide range), and by wind gust which are not compensated for.&lt;/p&gt;
+&lt;h3 id=&#34;wind-estimation&#34;&gt;Wind estimation&lt;/h3&gt;
+&lt;p&gt;The comparison of the pitot tube with the GPS ground speed require to estimate the wind strength and direction.&lt;/p&gt;
+&lt;p&gt;The curve below shows the difference between the Ground speed (GPS) with the air speed (pitot) in function of the plane flight direction. This error (blue dashed points) match with a sine which match the model for a constant wind in strength and direction.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -225,7 +219,17 @@ V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor required.&lt;/p&gt;
+&lt;p&gt;The matlab sript for wind estimation (offline) is provided below:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% V_gps and V_pitot are the vector with all data measured.
+V_err = V_gps - V_pitot; % Ground and Air speed difference (i.e. wind)
+M = [sin(COG); cos(COG) ]&#39;; % COG is the direction (Theta in rad) vector data measured from the GPS
+y = -V_err&#39;;
+x = M\y; % estimate wind strenght and direction with linear algebra (MMSE)
+Theta_Wind = atan2(x(1),x(2)); % Wind angle (rad)
+V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;limitation&#34;&gt;Limitation&lt;/h4&gt;
+&lt;p&gt;Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor used in the demonstration. It works provided the wind is small compared to the airplane air speed, which make the COG bias relatively small.&lt;/p&gt;
 &lt;!--
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;</description></item><item><title>Auto-pilote for Plane based on Simulink</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
@@ -351,9 +355,9 @@ The gain is the value in kOhm as stated by the chip documentation:&lt;/p&gt;
 &lt;p&gt;The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47.
 The original current measurement range is reduced from 140 (A) to 20 (A) (140 * &lt;sup&gt;47&lt;/sup&gt;&amp;frasl;&lt;sub&gt;270&lt;/sub&gt; = 20).&lt;/p&gt;
 &lt;p&gt;The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, FirStar 1600 or Ranger 1600.&lt;/p&gt;</description></item><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
-&lt;p&gt;Commercial cable connecting a RunCam2 action cam to an RC receiver allows to remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
-The cable comprise a component which decode the RC PWM signal and create another signal pulse scheme to start and stop the RunCam2 record.&lt;/p&gt;
-&lt;p&gt;Controlling the action camera can be done with a microcontroller by generating directly the required pulse scheme described below.&lt;/p&gt;
+&lt;p&gt;Cable exist to connect a RunCam2 action cam to an RC receiver for remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
+The cable has logic to decode the RC PWM signal and generate the signal pulse scheme to start and stop the RunCam2 record.&lt;/p&gt;
+&lt;p&gt;Controlling the camera can be done with a microcontroller by generating the required pulse scheme described below.&lt;/p&gt;
 &lt;p&gt;The micro USB cable pinout (on the male part) is&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Pin 1 : GND&lt;/li&gt;
@@ -366,16 +370,17 @@ The cable comprise a component which decode the RC PWM signal and create another
 &lt;li&gt;One pulse switch the camera from video recording mode to Photo mode.&lt;/li&gt;
 &lt;li&gt;Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Pulse level is 5V but it works with 3.3V as well. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p&gt;
+&lt;p&gt;Pulse level is 5V but it works with 3.3V. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p&gt;
 &lt;p&gt;Tested with a runCam2 powered from a 3S LiPo battery (10 to 14V), no battery in the camera and pulse generated with a 3.3V dsPIC pin configured as digital output.&lt;/p&gt;
+&lt;p&gt;The figure below is the Simulink diagram with the logic used to generate the appropriate pulse on a dsPIC. Code is generated through the Simulink Coder and the &lt;a href=&#34;https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/SW007023&#34;&gt;MPLAB block&lt;/a&gt; from Microchip.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of the double 85ms pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;
-&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of the double 85ms pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&lt;/p&gt;
+&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code were tested on a dsPIC target&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/project/inverted-pendulum/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/inverted-pendulum/</guid><description>&lt;p&gt;Simulink Rapid Prototyping based inverted pendulum running on a microstick II dsPIC board.

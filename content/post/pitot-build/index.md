@@ -28,6 +28,12 @@ projects: ["autopilot-plane"]
 
 math: true
 
+highlight: true
+# hilight style parameters set in config.toml
+# Matlab style set by default.
+#highlight_languages:
+#  -matlab  # Add support for highlighting additional languages
+
 ---
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
@@ -150,7 +156,7 @@ One magnet is glued on the pitot tube. The pitot tube is attached to the plane t
 {{< figure 
 src="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
 link="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
-width="80%"
+width="100%"
 title="Brass pitot tube with its electronic board mounted on the bottom of the right FirStar 1600 wing."
 numbered="true"
 >}}
@@ -158,45 +164,38 @@ numbered="true"
 {{< figure 
 src="/img/pitot-darcy-prandtl-wing-carbon2.jpg"
 link="/img/pitot-darcy-prandtl-wing-carbon2.jpg"
-width="80%"
+width="60%"
 title="Carbon-Brass pitot tube attached to the wing with a magnet."
 caption="Outer tube is a 5mm carbon tube. Inner tube is a brass 2mm/1mm tube."
 numbered="true"
 >}}
 
-## Results - GPS - Wind EStimation
+## Results
 
-The figure below presents the Ground Speed (GPS) with Air Speed (pitot) measurement. Theses two speed are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.
-With the wind estimation, the airplane ground speed from the GPS measurement can be retrieved by adding the projected wind to the aircraft forward air-speed measured with the pitot tube. The figure present the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
-The reconstructed ground speed matches well with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind.
+### Comparison with GPS ground speed
 
+The Ground Speed (GPS) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.
 
- The remaining error might be explained by sensor limitation but also by GPS accuracy limitation particularly at estimating vertical speed changes ; wind gust which are not compensated for.
+With the wind strenght and direction known, the airplane ground speed (GPS) can be retrieved by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue, and compare the reconstructed ground speed (thin black line) with the GPS ground speed (large grey line).
 
  {{< figure 
 src="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
 link="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
 width="100%"
-title="GPS Speed over ground (large grey), Pitot air-speed (dashed blue). Pitot air-speed minus constant wind estimation (black curve)"
+title="GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus constant wind estimation (black curve)"
 caption="GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement."
 numbered="true"
 >}}
 
-The matlab sript for wind estimation (offline) is provided below:
+The reconstructed ground speed matches with the GPS speed used as reference. It prove the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure were converted to speed with $\rho = 1.2$.
 
-``` matlab
-% V_gps and V_pitot are the vector with all data measured.
-V_err = V_gps - V_pitot;    % Ground and Air speed difference (i.e. wind) 
+The remaining error might be pitot sensor error, but also GPS accuracy limitation particularly at estimating vertical speed changes (During flight, the plane speed was change through rapid climb to test the pitot tube on a wide range), and by wind gust which are not compensated for.
 
-M = [sin(COG); cos(COG) ]'; % COG is the direction (rad) vector data measured from the GPS
-y = -V_err';                
-x = M\y;    % estimate wind strenght and direction with linear algebra (MMSE)
+### Wind estimation
 
-Theta_Wind = atan2(x(1),x(2));  % Wind angle (rad)
-V_Wind = sqrt(sum(x(1:2).^2));  % Wind strength (m/s)
-```
+The comparison of the pitot tube with the GPS ground speed require to estimate the wind strength and direction.  
 
-The curve illustrate the wind estimation.
+The curve below shows the difference between the Ground speed (GPS) with the air speed (pitot) in function of the plane flight direction. This error (blue dashed points) match with a sine which match the model for a constant wind in strength and direction.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
@@ -207,9 +206,23 @@ caption="Blue dots are speed difference between GPS and pitot. The continuous bl
 numbered="true"
 >}}
 
-Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor required.
+The matlab sript for wind estimation (offline) is provided below:
 
+```matlab
+% V_gps and V_pitot are the vector with all data measured.
+V_err = V_gps - V_pitot;    % Ground and Air speed difference (i.e. wind) 
 
+M = [sin(COG); cos(COG) ]'; % COG is the direction (Theta in rad) vector data measured from the GPS
+y = -V_err';                
+x = M\y;    % estimate wind strenght and direction with linear algebra (MMSE)
+
+Theta_Wind = atan2(x(1),x(2));  % Wind angle (rad)
+V_Wind = sqrt(sum(x(1:2).^2));  % Wind strength (m/s)
+```
+
+#### Limitation
+
+Using GPS COG for plane direction add a bias to the plane orientation. Would be better using plane orientation from the IMU sensor. Not done here to reduce the number of sensor used in the demonstration. It works provided the wind is small compared to the airplane air speed, which make the COG bias relatively small.
 
 <!--
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind -->
