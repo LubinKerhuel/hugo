@@ -186,11 +186,19 @@ src="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
 link="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
 width="100%"
 title="GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus constant wind estimation (black curve)"
-caption="GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement."
+caption="GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. The GPS ground speed is correctly estimated based on the pitot tube measurement."
 numbered="true"
 >}}
 
-The reconstructed ground speed matches with the GPS speed used as reference. It proves the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure was converted to speed with $\rho = 1.2$.
+The reconstructed ground speed matches with the GPS speed used as reference. It proves the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure was converted to speed with $V=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.2$.
+
+```matlab
+% Pitot Calibration. P_pitot is the raw MCP3428 sensor output read from I2C bus.
+P_pitot_cal =  0.2041* (double(P_pitot) + 1800);	% to Pa unit
+
+% Compute Speed (m/s) from diff pressure (in Pa).
+V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
+```
 
 The remaining error might be pitot sensor error, but also GPS accuracy limitation particularly at estimating vertical speed changes (During flight, the plane speed was change through rapid climb to test the pitot tube on a wide range), and by wind gust which are not compensated for.
 
@@ -205,7 +213,7 @@ src="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
 link="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
 width="100%"
 title="GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600."
-caption="Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences."
+caption="Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences. Pitot values are averaged and undersampled by a factor 5."
 numbered="true"
 >}}
 

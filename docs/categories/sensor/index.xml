@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/categories/sensor/</link><description>Recent content in Sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/categories/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.&#39;</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/categories/sensor/</link><description>Recent content in sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/categories/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.&#39;</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
 &lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
@@ -195,15 +195,20 @@ m = 72mm
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-estimation.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus constant wind estimation (black curve)&lt;/h4&gt;
-&lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
+&lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data are the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;The reconstructed ground speed matches with the GPS speed used as reference. It proves the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure was converted to speed with $\rho = 1.2$.&lt;/p&gt;
+&lt;p&gt;The reconstructed ground speed matches with the GPS speed used as reference. It proves the correctness of the pitot air-speed measurement, and the possibility to estimate accurately the constant wind. The pitot tube differential pressure was converted to speed with $V=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.2$.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% Pitot Calibration. P_pitot is the raw MCP3428 sensor output read from I2C bus.
+P_pitot_cal = 0.2041* (double(P_pitot) + 1800); % to Pa unit
+% Compute Speed (m/s) from diff pressure (in Pa).
+V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The remaining error might be pitot sensor error, but also GPS accuracy limitation particularly at estimating vertical speed changes (During flight, the plane speed was change through rapid climb to test the pitot tube on a wide range), and by wind gust which are not compensated for.&lt;/p&gt;
 &lt;h3 id=&#34;wind-estimation&#34;&gt;Wind estimation&lt;/h3&gt;
 &lt;p&gt;The comparison of the pitot tube with the GPS ground speed require to estimate the wind strength and direction.&lt;/p&gt;
@@ -211,11 +216,11 @@ m = 72mm
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences. Pitot values are averaged and undersampled by a factor 5.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-fct-direction.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600.&lt;/h4&gt;
-&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences.&lt;/p&gt;
+&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences. Pitot values are averaged and undersampled by a factor 5.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
