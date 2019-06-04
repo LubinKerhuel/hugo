@@ -8,13 +8,15 @@
   # contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
 
 # Uncomment the lines below to configure your website in a second language.
-#[zh]
-#  languageCode = "zh-Hans"
-#  contentDir = "content/zh"
-#  title = "Chinese website title..."
-#  [zh.params]
-#    description = "Site description in Chinese..."
-#  [[zh.menu.main]]
+# do not uncomment contentDir line
+# Check disabled language in config.toml file to re-enable fr.
+[fr]
+  languageCode = "fr"
+#  contentDir = "content/fr"		# leave comment for english file at same place
+  title = "Prototypage Rapide"
+  [fr.params]
+    description = "Site description in Chinese..."
+#  [[fr.menu.main]]
 #    name = "Wo"
 #    url = "#about"
 #    weight = 1
