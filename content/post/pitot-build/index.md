@@ -215,7 +215,7 @@ src="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
 link="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
 width="100%"
 title="GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600."
-caption="Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; amplitude is wind strength) which best match the air speed and ground speed differences. Pitot values are averaged and under-sample by a factor 5."
+caption="Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; 2.56m/s amplitude is wind strength) which best match the air speed and ground speed differences. Pitot values are averaged and under-sample by a factor 5."
 numbered="true"
 >}}
 
@@ -238,6 +238,11 @@ V_Wind = sqrt(sum(x(1:2).^2));  % Wind strength (m/s)
 #### Limitation
 
 Using the GPS COG[^COG] field is not the plane yaw direction but the plane forward direction. Thus the COG is a biased plane yaw direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.
+
+#### Other flight inputs
+
+GPS trace of the flight with a uBlox M8N GPS. Another trace done with a MTK3339 GPS is available map is open with Google MAP. The MTK3339 seems much less precise than the uBlox GPS on this example. KML file can be opened with Google Earth to get a 3D view.
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" width="640" height="480"></iframe>
 
 
 
