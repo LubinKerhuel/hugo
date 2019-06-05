@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/tags/sensor/</link><description>Recent content in sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/tags/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/tags/sensor/</link><description>Recent content in sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/tags/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Miniature air-speed sensor for RC plane or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
 &lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
@@ -39,7 +39,7 @@ m = 72mm
 &lt;h2 id=&#34;electronics&#34;&gt;Electronics&lt;/h2&gt;
 &lt;h3 id=&#34;sensitivity-requirements-and-pressure-sensor&#34;&gt;Sensitivity requirements and Pressure sensor&lt;/h3&gt;
 &lt;p&gt;The differential pressure measured vary with the square of the speed. RC plane speed can be quite low. Challenge is to be sensitive enough to obtain good measurement even in the low speed range of few meters per seconds.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\DeltaV =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\Delta V =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.&lt;/p&gt;
 &lt;p&gt;We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% of its nominal range.&lt;/p&gt;
 &lt;p&gt;Table below provide theoretical differential pressure expected for various speed using $P_{diff} = \frac{1}{2}\rho v^2$ with $\rho=1.2$.&lt;/p&gt;
 &lt;table&gt;
@@ -152,7 +152,7 @@ m = 72mm
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;The sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB; to be checked :construction: ).&lt;/p&gt;
+&lt;p&gt;The sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB; to be checked).&lt;/p&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;p&gt;A 2mm flexible tube originally used to protect fish lines connect the pitot tube with the sensor.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:50%&#34;&gt;

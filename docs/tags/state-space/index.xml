@@ -261,7 +261,7 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;p&gt;The IMU input measurements is composed of the rate gyro and the accelerometers data. Magnetometers is not used in this pendulum example.
 The IMU input also require the predicted acceleration vector (resp magnetometer is used).
 The IMU output the sensor orientation and provides the gravity vector prediction as seen in the sensor estimated attitude (i.e. quaternion angle).&lt;/p&gt;
-&lt;p&gt;Comparing the gravity vector predicted with the accelerometer’s measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p&gt;
+&lt;p&gt;Comparing the gravity vector predicted with the accelerometer&amp;rsquo;s measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p&gt;
 &lt;p&gt;Considering the pendulum principal movement rotation $\theta$, the equations of forces applied on the pendulum derive from $\hat \theta$ a prediction for the dynamic acceleration.
 The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in these calculations.&lt;/p&gt;
 &lt;p&gt;The updated acceleration comprising both a static and dynamic part is fed into the IMU algorithm improving the IMU correction of the rate gyro integration drift even when the pendulum is not static.&lt;/p&gt;
@@ -269,7 +269,7 @@ The good match between the predicted acceleration and the experimental measureme
 &lt;h2 id=&#34;trolley-equations&#34;&gt;Trolley Equations&lt;/h2&gt;
 &lt;div class=&#34;alert alert-warning&#34;&gt;
 &lt;div&gt;
-🚦 Below is under construction 🚧
+Below is under construction 🚧
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$.

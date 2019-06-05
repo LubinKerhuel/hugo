@@ -1,7 +1,7 @@
 ﻿---
-title: Air-speed sensor for plane, drone or UAVs.
-subtitle: Mechanic, electronic, test of a miniature Pitot-Darcy-Prandtl air speed sensor embedded in an RC plane
-summary: DIY miniature pitot-tube with tubes, a differential pressure sensor and an analog to digital converter. Calibrate air-speed measurement embedded in an RC plane with a GPS ground speed reference. Estimate wind strenght and direction fusing GPS data with pitot output.
+title: Miniature air-speed sensor for RC plane or UAVs.
+subtitle: Mechanic, electronic, test of a miniature Pitot-Darcy-Prandtl sensor embedded in an RC plane
+summary: DIY miniature pitot-tube with Electronics and in flight test results. Air-speed measurement performance discussed usihg a GPS ground speed for reference. Estimate wind strenght and direction computed from GPS and pitot outputs.
 authors:
 - Lubin
 tags: 
@@ -98,7 +98,7 @@ m = 72mm
 
 The differential pressure measured vary with the square of the speed. RC plane speed can be quite low. Challenge is to be sensitive enough to obtain good measurement even in the low speed range of few meters per seconds.
 
-The [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\DeltaV =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.
+The [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\Delta V =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.
 
 We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% of its nominal range.
 
@@ -145,7 +145,7 @@ caption="90 minutes lasting static measurement indoor shows a slow drift and a s
 numbered="true"
 >}}
 
-The sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB; to be checked :construction: ).
+The sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB; to be checked).
 
 ## Installation
 
