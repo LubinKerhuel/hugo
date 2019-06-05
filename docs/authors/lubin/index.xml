@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/authors/lubin/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><atom:link href="https://lubin.kerhuel.eu/authors/lubin/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.&#39;</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/authors/lubin/</link><description>Recent content on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><atom:link href="https://lubin.kerhuel.eu/authors/lubin/index.xml" rel="self" type="application/rss+xml"/><item><title>Air-speed sensor for plane, drone or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
 &lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
@@ -241,11 +241,11 @@ V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
 &lt;p&gt;Plane was equipped with two GPS chip:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;one uBlox M8N GPS and&lt;/li&gt;
-&lt;li&gt;- one MTK3339.
+&lt;li&gt;one MTK3339.
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used for the curves above. The MTK trace can be shown on the map by opening the &lt;a href=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34;&gt;google map link&lt;/a&gt;. KML file can be opened with Google Earth to get a 3D view of the trace.
-&lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used for the curves above. The MTK trace can be shown on the map by opening the &lt;a href=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34;&gt;google map link&lt;/a&gt;. KML file can be opened with Google Earth to get a 3D view of the trace.&lt;/p&gt;
+&lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;&lt;/iframe&gt;
 &lt;!--
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;
 &lt;div class=&#34;footnotes&#34;&gt;

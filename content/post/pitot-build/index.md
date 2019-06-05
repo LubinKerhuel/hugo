@@ -1,12 +1,17 @@
 ﻿---
-title: Air-speed sensor for plane, drone or UAVs.'
-subtitle: 'Mechanic, electronic, test of a miniature Pitot-Darcy-Prandtl air speed sensor embedded in an RC plane'
+title: Air-speed sensor for plane, drone or UAVs.
+subtitle: Mechanic, electronic, test of a miniature Pitot-Darcy-Prandtl air speed sensor embedded in an RC plane
 summary: DIY miniature pitot-tube with tubes, a differential pressure sensor and an analog to digital converter. Calibrate air-speed measurement embedded in an RC plane with a GPS ground speed reference. Estimate wind strenght and direction fusing GPS data with pitot output.
 authors:
 - Lubin
-tags: ["Pitot","sensor","air-speed"]
-categories: ["Electronics","sensor"]
-date: "2019-05-28"
+tags: 
+  - Pitot
+  - sensor
+  - air-speed
+categories: 
+  - Electronics
+  - sensor
+date: 2019-05-28
 #lastmod: "2019-04-12T00:00:00Z"
 featured: false
 draft: false
@@ -15,8 +20,8 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
-  caption: 'Carbon pitot tube attached to the wing with a magnet.'
-  focal_point: "Left"
+  caption: Carbon pitot tube attached to the wing with a magnet.
+  focal_point: Left
   preview_only: false
 
 # Projects (optional).
@@ -24,7 +29,8 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: ["autopilot-plane"]
+projects: 
+  - autopilot-plane
 
 sitemap:
   priority: 1
@@ -244,12 +250,11 @@ Using the GPS COG[^COG] field is not the plane yaw direction but the plane forwa
 Plane was equipped with two GPS chip:
 
 - one uBlox M8N GPS and 
-- - one MTK3339.
+- one MTK3339.
   
 The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used for the curves above. The MTK trace can be shown on the map by opening the [google map link](https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9). KML file can be opened with Google Earth to get a 3D view of the trace.
+
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" width="640" height="480"></iframe>
-
-
 
 <!--
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind -->
