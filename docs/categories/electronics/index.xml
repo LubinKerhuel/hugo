@@ -197,7 +197,7 @@ P_pitot_cal = 0.2041* (double(P_pitot) + 1800); % to Pa unit
 % Compute Speed (m/s) from diff pressure (in Pa).
 V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The Ground Speed (GPS) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.&lt;/p&gt;
+&lt;p&gt;The Ground Speed (GPS COG&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:COG&#34;&gt;&lt;a href=&#34;#fn:COG&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.&lt;/p&gt;
 &lt;p&gt;With the wind strength and direction known, the airplane ground speed (GPS) is obtained by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue. The air-speed measurement shows a good sensitivity even at low speed. The reconstructed ground speed (thin black line) matches with the GPS ground speed (large grey line) which prove the accuracy of the measurement. The estimation of the wind strength and direction is described &lt;a href=&#34;#wind-estimation&#34;&gt;below&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
@@ -238,7 +238,13 @@ V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
 &lt;h4 id=&#34;limitation&#34;&gt;Limitation&lt;/h4&gt;
 &lt;p&gt;Using the GPS COG&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:COG&#34;&gt;&lt;a href=&#34;#fn:COG&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; field is not the plane yaw direction but the plane forward direction. Thus the COG is a biased plane yaw direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p&gt;
 &lt;h4 id=&#34;other-flight-inputs&#34;&gt;Other flight inputs&lt;/h4&gt;
-&lt;p&gt;GPS trace of the flight with a uBlox M8N GPS. Another trace done with a MTK3339 GPS is available map is open with Google MAP. The MTK3339 seems much less precise than the uBlox GPS on this example. KML file can be opened with Google Earth to get a 3D view.
+&lt;p&gt;Plane was equipped with two GPS chip:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;one uBlox M8N GPS and&lt;/li&gt;
+&lt;li&gt;- one MTK3339.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used for the curves above. The MTK trace can be shown on the map by opening the &lt;a href=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34;&gt;google map link&lt;/a&gt;. KML file can be opened with Google Earth to get a 3D view of the trace.
 &lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;!--
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;

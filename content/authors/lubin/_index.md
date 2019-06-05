@@ -21,7 +21,7 @@ address = "Lubin Kerhuel, 8 Chemin de Madame, 64100 Bayonne, FRANCE"
 organizations = [ { name = "Microchip Technology Inc", url = "https://www.microchip.com/" } ]
 
 # Short bio (displayed in user profile at end of posts)
-bio = "Interested in signal processing and control theory. 10 years’ experience with rapid control prototyping."
+bio = "Interested in signal processing and control theory. 10 years experience with rapid control prototyping."
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email = "lubin@kerhuel.eu"

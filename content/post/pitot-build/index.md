@@ -189,7 +189,7 @@ P_pitot_cal =  0.2041* (double(P_pitot) + 1800);	% to Pa unit
 V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
 ```
 
-The Ground Speed (GPS) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.
+The Ground Speed (GPS COG[^COG]) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.
 
 With the wind strength and direction known, the airplane ground speed (GPS) is obtained by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue. The air-speed measurement shows a good sensitivity even at low speed. The reconstructed ground speed (thin black line) matches with the GPS ground speed (large grey line) which prove the accuracy of the measurement. The estimation of the wind strength and direction is described [below](#wind-estimation).
 
@@ -241,7 +241,12 @@ Using the GPS COG[^COG] field is not the plane yaw direction but the plane forwa
 
 #### Other flight inputs
 
-GPS trace of the flight with a uBlox M8N GPS. Another trace done with a MTK3339 GPS is available map is open with Google MAP. The MTK3339 seems much less precise than the uBlox GPS on this example. KML file can be opened with Google Earth to get a 3D view.
+Plane was equipped with two GPS chip:
+
+- one uBlox M8N GPS and 
+- - one MTK3339.
+  
+The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used for the curves above. The MTK trace can be shown on the map by opening the [google map link](https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9). KML file can be opened with Google Earth to get a 3D view of the trace.
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" width="640" height="480"></iframe>
 
 
