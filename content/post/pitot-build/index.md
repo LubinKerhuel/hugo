@@ -1,7 +1,7 @@
 ﻿---
 title: Miniature air-speed sensor for RC plane or UAVs.
-subtitle: Mechanic, electronic, test of a miniature Pitot-Darcy-Prandtl sensor embedded in an RC plane
-summary: DIY miniature pitot-tube with Electronics and in flight test results. Air-speed measurement performance discussed usihg a GPS ground speed for reference. Estimate wind strenght and direction computed from GPS and pitot outputs.
+subtitle: Mechanic, electronic, test of a miniature Pitot-Darcy-Prandtl sensor embedded in drone or RC plane
+summary: DIY miniature pitot-tube with mechanic and electronics description and in flight sensor measurements. Air-speed performance is compared against a GPS ground speed reference. Estimate wind strength and direction mixing GPS and pitot outputs.
 authors:
 - Lubin
 tags: 
