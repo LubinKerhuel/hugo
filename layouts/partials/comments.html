@@ -1,0 +1,13 @@
+{{ if and $.Params.ghcommentid $.Params.ghcommentrepo  }}
+<div id="gh-comments">
+    <br/><br/>
+    <h6>COMMENTS</h6>
+    <div id="gh-comments-list"></div>
+    <a href="javascript:void(0)" id="gh-load-comments" style="display:none">Load more comments</a>
+</div>
+
+<script type="text/javascript" src="{{ .Site.BaseURL }}js/github-comments.js"></script>
+<script type="text/javascript">
+    DoGithubComments({{ $.Params.ghcommentrepo }},{{$.Params.ghcommentid }});
+</script>
+{{ end }}

@@ -18,8 +18,8 @@ sitemap:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
-  caption: 'PDB-XPW Dual BEC & current module. Image from MATEK Systems.'
-  focal_point: "TopRight"
+  caption: PDB-XPW Dual BEC & current module. Image from MATEK Systems.
+  focal_point: TopRight
   preview_only: false
 
 # Projects (optional).
@@ -31,6 +31,11 @@ projects: ["autopilot-plane"]
 
 math: true
 
+# add comment through github: required files github-comments.js (static/js) and comments.html (partial)
+# provide a github repository with comment enabled:
+# each page is assigned to a comment id. see github from dwilliamson/donw.io
+# ghcommentrepo: dwilliamson/donw.io
+# ghcommentid: 1
 ---
 
 <!-- Enable Photo Swipe + gallery features -->
