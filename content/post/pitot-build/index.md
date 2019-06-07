@@ -209,15 +209,15 @@ P_pitot_cal =  0.2041* (double(P_pitot) + 1800);	% to Pa unit
 V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
 ```
 
-The Ground Speed (GPS COG[^COG]) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.
+The Ground Speed (GPS Velocity) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.
 
-With the wind strength and direction known, the airplane ground speed (GPS) is obtained by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue. The air-speed measurement shows a good sensitivity even at low speed. The reconstructed ground speed (thin black line) matches with the GPS ground speed (large grey line) which prove the accuracy of the measurement. The estimation of the wind strength and direction is described [below](#wind-estimation).
+With the wind strength and direction known, the airplane ground speed (GPS) is obtained by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue. The air-speed measurement shows a good sensitivity even at low speed. The reconstructed ground speed (thin black line) matches with the GPS velocity (large grey line) which prove the accuracy of the measurement. The estimation of the wind strength and direction is described [below](#wind-estimation).
 
  {{< figure 
-src="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
-link="/img/pitot-darcy-prandtl-gps-wind-estimation.png"
+src="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
+link="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
 width="100%"
-title="GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus constant wind estimation (black curve)"
+title="GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus wind estimated (black curve). Wind impact is reconstructed from the GPS COG angle ($\approx \theta _{heading}$), and the estimated wind strength (2.5 m/s) and direction (101°)."
 caption="GPS (grey curve) and Pitot minus Wind (black curve) matches. Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. The GPS ground speed is correctly estimated based on the pitot tube measurement."
 numbered="true"
 >}}
@@ -231,8 +231,8 @@ The comparison of the pitot tube with the GPS ground speed require to estimate t
 The curve below shows the difference between the Ground speed (GPS) with the air speed (pitot) in function of the plane flight direction. This error (blue dashed points) fit with a sine wave which is the offset added by a wind constant in strength and direction.
 
 {{< figure 
-src="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
-link="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
+src="/img/pitot-darcy-prandtl-speed-error-wind-estimation.png"
+link="/img/pitot-darcy-prandtl-speed-error-wind-estimation.png"
 width="100%"
 title="GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600."
 caption="Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave projection on the $\Theta$ forward direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."
@@ -263,7 +263,7 @@ plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),'-k','linewidth',3)
 
 #### Discussion
 
-Using the GPS COG[^COG] field is not the plane yaw direction $\Theta$ but the plane forward direction. Thus the COG is a biased plane yaw direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.
+Using the GPS COG[^COG] field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane forward direction. Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.
 
 #### Other flight inputs
 
