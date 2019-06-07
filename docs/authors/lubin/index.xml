@@ -213,7 +213,7 @@ m = 72mm
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
-&lt;h3 id=&#34;comparison-with-gps-ground-speed&#34;&gt;Comparison with GPS ground speed&lt;/h3&gt;
+&lt;h3 id=&#34;gps-vs-air-speed&#34;&gt;Comparison with GPS ground speed&lt;/h3&gt;
 &lt;p&gt;The pitot tube differential pressure is converted to speed with $V=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.2$.&lt;/p&gt;
 &lt;p&gt;The MCP3428 sampled $P_{diff}$ at 250Hz during flights.&lt;/p&gt;
 &lt;p&gt;Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):&lt;/p&gt;
@@ -250,6 +250,7 @@ V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
+&lt;p&gt;This wind estimation is used to compensate the air-speed when comparing the GPS ground speed $V_{gps}$ with the pitot air-speed $V_{pitot}$ &lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/#gps-vs-air-speed&#34;&gt;above&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;script&#34;&gt;Script&lt;/h4&gt;
 &lt;p&gt;Matlab script used for off-line wind estimation:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% V_gps and V_pitot are two vector with all data measured.

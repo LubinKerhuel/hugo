@@ -208,7 +208,7 @@ numbered="true"
 
 ## Results
 
-### Comparison with GPS ground speed
+### Comparison with GPS ground speed {#gps-vs-air-speed}
 
 The pitot tube differential pressure is converted to speed with $V=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.2$.
 
@@ -239,7 +239,7 @@ numbered="true"
 
 The remaining error might be sensor error, but also wind gust and GPS accuracy limitation particularly at estimating vertical speed changes (During flight, the plane speed was change through rapid dive to test the pitot tube on a wide range).
 
-### Wind estimation
+### Wind estimation {#wind-estimation}
 
 The comparison of the pitot tube with the GPS ground speed require to estimate the wind strength and direction.  
 
@@ -253,6 +253,8 @@ title="GPS ground speed and pitot air speed difference in function of the plane 
 caption="Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave projection on the $\Theta\_{heading}$ forward direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."
 numbered="true"
 >}}
+
+This wind estimation is used to compensate the air-speed when comparing the GPS ground speed $V\_{gps}$ with the pitot air-speed $V\_{pitot}$ [above](/post/pitot-build/#gps-vs-air-speed).
 
 #### Script
 

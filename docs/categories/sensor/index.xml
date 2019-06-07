@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/categories/sensor/</link><description>Recent content in sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/categories/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Miniature air-speed sensor for RC plane or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/categories/sensor/</link><description>Recent content in Sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/categories/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Miniature air-speed sensor for RC plane or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
 &lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
@@ -213,7 +213,7 @@ m = 72mm
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
-&lt;h3 id=&#34;comparison-with-gps-ground-speed&#34;&gt;Comparison with GPS ground speed&lt;/h3&gt;
+&lt;h3 id=&#34;gps-vs-air-speed&#34;&gt;Comparison with GPS ground speed&lt;/h3&gt;
 &lt;p&gt;The pitot tube differential pressure is converted to speed with $V=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.2$.&lt;/p&gt;
 &lt;p&gt;The MCP3428 sampled $P_{diff}$ at 250Hz during flights.&lt;/p&gt;
 &lt;p&gt;Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):&lt;/p&gt;
@@ -250,6 +250,7 @@ V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
+&lt;p&gt;This wind estimation is used to compensate the air-speed when comparing the GPS ground speed $V_{gps}$ with the pitot air-speed $V_{pitot}$ &lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/#gps-vs-air-speed&#34;&gt;above&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;script&#34;&gt;Script&lt;/h4&gt;
 &lt;p&gt;Matlab script used for off-line wind estimation:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% V_gps and V_pitot are two vector with all data measured.
