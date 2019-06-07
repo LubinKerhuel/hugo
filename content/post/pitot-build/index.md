@@ -104,7 +104,7 @@ We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) wh
 
 Table below provide theoretical differential pressure expected for various speed using $P_{diff} = \frac{1}{2}\rho v^2$ with $\rho=1.2$.
 
-| v (m/s) | v (Km/h) | $P_{diff}$ (Pa) | ~ $H_2O$ (cm) | [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) & [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428)  (0.2041Pa / LSB) |
+| v (m/s) | v (Km/h) | $P_{diff}$ (Pa) | ~ $H_2O$ (cm) | [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) & [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428)  (0.2041Pa / LSB[^LSB]) |
 |:-:|:-:|:-:|:-:|:-:|
 | 1 | 3.6	| 0.6	 |0.006 | 3 |
 | 2 | 7.2	| 2.4	 |0.024 | 12 |
@@ -122,6 +122,18 @@ Table below provide theoretical differential pressure expected for various speed
 The pressure sensor is placed close (~10cm) to the pitot tube on the wing. The analog to digital conversion is also done on site to avoid noise pollution of analog signal. The [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC. 
 
 The [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) output analog signal is connected to the [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus lines are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.
+
+The ADC Sigma-Delta is configured for 
+
+- 12 bits
+- x8 Gain
+- 240 Samples Per Seconds (SPS)
+
+The overall resolution is:
+
+- (1) [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) Analog output sensitivity is 1633 Pa/V
+- (2) [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) 12 bits with a gain of 8 : 0.125mV/LSB[^LSB]
+- with (1) and (2), we obtain $1633 * 0.125e^{-3} $ =  ***0.2041 Pa / LSB[^LSB]*** 
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg"
@@ -141,11 +153,11 @@ src="/img/pitot-darcy-prandtl-static-characteristic.png"
 link="/img/pitot-darcy-prandtl-static-characteristic.png"
 width="100%"
 title="Differential Sensor static characteristics"
-caption="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa."
+caption="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB"
 numbered="true"
 >}}
 
-The sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB; to be checked).
+The sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB[^LSB]; to be checked).
 
 ## Installation
 
@@ -185,10 +197,12 @@ numbered="true"
 
 The pitot tube differential pressure is converted to speed with $V=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.2$.
 
-Matlab script converting raw MCP3428 to Pressure (Pa) and Speed (m/s):
+The MCP3428 sampled $P_{diff}$ at 250Hz during flights.
+
+Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):
 
 ```matlab
-% Pitot Calibration. P_pitot is the raw MCP3428 sensor output read from I2C bus.
+% Pitot Calibration. P_pitot is a vector with raw MCP3428 output read from I2C bus.
 P_pitot_cal =  0.2041* (double(P_pitot) + 1800);	% to Pa unit
 
 % Compute Speed (m/s) from diff pressure (in Pa).
@@ -221,7 +235,7 @@ src="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
 link="/img/pitot-darcy-prandtl-speed-error-fct-direction.png"
 width="100%"
 title="GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600."
-caption="Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave (phase is wind direction; 2.56m/s amplitude is wind strength) which best match the air speed and ground speed differences. Pitot values are averaged and under-sample by a factor 5."
+caption="Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave projection on the $\Theta$ forward direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."
 numbered="true"
 >}}
 
@@ -230,20 +244,26 @@ numbered="true"
 Matlab script used for off-line wind estimation:
 
 ```matlab
-% V_gps and V_pitot are the vector with all data measured.
-V_err = V_gps - V_pitot;    % Ground and Air speed difference (i.e. wind) 
+% V_gps and V_pitot are two vector with all data measured.
+% V_pitot was under-sampled (averaging) by a factor 5 to fit the 50Hz log from the GPS.
+% GPS chip update frequency is 10Hz, but it is logged at 50Hz.
 
-M = [sin(COG); cos(COG) ]'; % COG is the direction (Theta in rad) vector data measured from the GPS
-y = -V_err';
-x = M\y;    % estimate wind strength and direction with linear algebra (MMSE)
+V_err = V_pitot -  V_gps;    % Ground and Air speed difference (i.e. wind) 
 
-Theta_Wind = atan2(x(1),x(2));  % Wind angle (rad)
+M = [cos(COG); sin(COG) ]'; % COG is the direction (Theta in rad) vector data measured from the GPS
+y = V_err';
+x = M\y;    % Solve wind strength and direction using linear algebra (MMSE)
+
+Theta_Wind = -atan2(x(2),x(1));  % Wind (go to) direction. Azimuth direction is opposite to trigo
 V_Wind = sqrt(sum(x(1:2).^2));  % Wind strength (m/s)
+
+plot(COG,V_err','.'); hold on; % plot Error blue dots 
+plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),'-k','linewidth',3); % plot wind
 ```
 
-#### Limitation
+#### Discussion
 
-Using the GPS COG[^COG] field is not the plane yaw direction but the plane forward direction. Thus the COG is a biased plane yaw direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.
+Using the GPS COG[^COG] field is not the plane yaw direction $\Theta$ but the plane forward direction. Thus the COG is a biased plane yaw direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.
 
 #### Other flight inputs
 
@@ -252,7 +272,7 @@ Plane was equipped with two GPS chip:
 - one uBlox M8N GPS and 
 - one MTK3339.
   
-The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used for the curves above. The MTK trace can be shown on the map by opening the [google map link](https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9). KML file can be opened with Google Earth to get a 3D view of the trace.
+The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used for the curves above. The MTK trace can be shown on the map (top left icon).The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" width="640" height="480"></iframe>
 
@@ -260,3 +280,4 @@ The uBlox trace presented on the map below is better than the MTK trace. The uBl
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind -->
 
 [^COG]: Course Over Ground
+[^LSB]: Least Significant Bit (or ULP: Unit in the Last Place)
