@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/categories/sensor/</link><description>Recent content in Sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/categories/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Miniature air-speed sensor for RC plane or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sensor on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/categories/sensor/</link><description>Recent content in sensor on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/categories/sensor/index.xml" rel="self" type="application/rss+xml"/><item><title>Miniature air-speed sensor for RC plane or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
 &lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
-&lt;p&gt;The pressure measured is linear to the square of the air speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $P_t$ and $P_s$ are the pressure in Pa, $\rho$ is the fluid density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude, and $v$ the speed in $m.s^{-1}$. The differential pressure measured is $P_d = P_t-P_s$.&lt;/p&gt;
+&lt;p&gt;The pressure measured is linear to the square of the air speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are the pressure in Pa, $\rho$ is the fluid density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude, and $v$ the speed in $m.s^{-1}$. The differential pressure measured is $P_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$&lt;/p&gt;
 &lt;h2 id=&#34;prandtl-tube&#34;&gt;Prandtl tube&lt;/h2&gt;
 &lt;p&gt;Prandtl tube is made of an inner tube placed within an outer tube. At their top, both tubes are centered. Space between the two tubes is hermetically filled in with an epoxy adhesive (Araldite or equivalent) on few mm near the top. The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector to the static pressure which lies in the empty space between the two tube.&lt;/p&gt;
 &lt;p&gt;The static pressure holes should be placed at a minimum distance from the top due to airflow perturbations. A distance 4 times the diameter of the outer tube is retains here.&lt;/p&gt;
@@ -166,6 +166,18 @@ m = 72mm
 &lt;/div&gt;
 &lt;p&gt;The sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:LSB&#34;&gt;&lt;a href=&#34;#fn:LSB&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;; to be checked).&lt;/p&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
+&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+&lt;div class=&#34;img&#34;&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg&#34; alt=&#34;Platform used for testing with pitot sensor.&#34;/&gt;
+&lt;/div&gt;
+&lt;a href=&#34;https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+&lt;figcaption&gt;&lt;h4&gt;FirStar 1600 from Volantex RC plane.&lt;/h4&gt;
+&lt;p&gt;Platform used for testing with pitot sensor.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
 &lt;p&gt;A 2mm flexible tube originally used to protect fish lines connect the pitot tube with the sensor.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:50%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
@@ -218,7 +230,7 @@ V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus wind estimated (black curve). Wind impact is reconstructed from the GPS COG angle ($\approx \theta _{heading}$), and the estimated wind strength (2.5 m/s) and direction (101°).&lt;/h4&gt;
+&lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus wind estimated (black curve). Wind impact is reconstructed from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength (2.5 m/s) and direction (101°).&lt;/h4&gt;
 &lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -230,11 +242,11 @@ V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave projection on the $\Theta$ forward direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave projection on the $\Theta_{heading}$ forward direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600.&lt;/h4&gt;
-&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave projection on the $\Theta$ forward direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&lt;/p&gt;
+&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave projection on the $\Theta_{heading}$ forward direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -253,7 +265,8 @@ plot(COG,V_err&#39;,&#39;.&#39;); hold on; % plot Error blue dots
 plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),&#39;-k&#39;,&#39;linewidth&#39;,3); % plot wind
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;discussion&#34;&gt;Discussion&lt;/h4&gt;
-&lt;p&gt;Using the GPS COG&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:COG&#34;&gt;&lt;a href=&#34;#fn:COG&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; field is not exactly the plane yaw direction $\Theta&lt;em&gt;{heading}$ but the plane forward direction. Thus the COG is a biased plane yaw $\Theta&lt;/em&gt;{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p&gt;
+&lt;p&gt;Using the GPS COG&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:COG&#34;&gt;&lt;a href=&#34;#fn:COG&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane forward direction.
+Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p&gt;
 &lt;h4 id=&#34;other-flight-inputs&#34;&gt;Other flight inputs&lt;/h4&gt;
 &lt;p&gt;Plane was equipped with two GPS chip:&lt;/p&gt;
 &lt;ul&gt;
