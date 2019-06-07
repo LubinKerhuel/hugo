@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>air-speed on Rapid Control Prototyping (RCP)</title><link>https://lubin.kerhuel.eu/tags/air-speed/</link><description>Recent content in air-speed on Rapid Control Prototyping (RCP)</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/tags/air-speed/index.xml" rel="self" type="application/rss+xml"/><item><title>Miniature air-speed sensor for RC plane or UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
 &lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
 &lt;p&gt;The pressure measured is linear to the square of the air speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are the pressure in Pa, $\rho$ is the fluid density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude, and $v$ the speed in $m.s^{-1}$. The differential pressure measured is $P_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$&lt;/p&gt;
@@ -127,7 +129,7 @@ m = 72mm
 &lt;/table&gt;
 &lt;h3 id=&#34;signal-conditioning-and-conversion&#34;&gt;Signal conditioning and conversion&lt;/h3&gt;
 &lt;p&gt;The pressure sensor is placed close (~10cm) to the pitot tube on the wing. The analog to digital conversion is also done on site to avoid noise pollution of analog signal. The &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; output analog signal is connected to the &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus lines are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://www.nxp.com/part/MP3V5004DP&#34;&gt;MP3V5004dp&lt;/a&gt; output analog signal is connected to the &lt;a href=&#34;https://www.microchip.com/wwwproducts/en/MCP3428&#34;&gt;MCP3428&lt;/a&gt; Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p&gt;
 &lt;p&gt;The ADC Sigma-Delta is configured for&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;12 bits&lt;/li&gt;
@@ -165,7 +167,7 @@ m = 72mm
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;p&gt;The sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:LSB&#34;&gt;&lt;a href=&#34;#fn:LSB&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;; to be checked).&lt;/p&gt;
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;flight-setup&#34;&gt;Flight setup&lt;/h2&gt;
 &lt;p&gt;The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
@@ -178,7 +180,7 @@ m = 72mm
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;A 2mm flexible tube originally used to protect fish lines connect the pitot tube with the sensor.&lt;/p&gt;
+&lt;p&gt;A 2mm flexible tube, originally for protecting fish lines, connect the sensor to the pitot tube.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:50%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
@@ -213,46 +215,53 @@ m = 72mm
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
-&lt;h3 id=&#34;gps-vs-air-speed&#34;&gt;Comparison with GPS ground speed&lt;/h3&gt;
-&lt;p&gt;The pitot tube differential pressure is converted to speed with $V=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.2$.&lt;/p&gt;
-&lt;p&gt;The MCP3428 sampled $P_{diff}$ at 250Hz during flights.&lt;/p&gt;
+&lt;p&gt;The MCP3428 samples $P_{diff}$ at 250Hz during flights. $V_{pitot}=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.2$.&lt;/p&gt;
 &lt;p&gt;Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% Pitot Calibration. P_pitot is a vector with raw MCP3428 output read from I2C bus.
 P_pitot_cal = 0.2041* (double(P_pitot) + 1800); % to Pa unit
 % Compute Speed (m/s) from diff pressure (in Pa).
 V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The Ground Speed (GPS Velocity) and the Air Speed (pitot) measurements are theoretically similar in absence of wind. In presence of a constant wind, the direction and strength can be estimated combining the airspeed with the ground speed and the plane yaw direction.&lt;/p&gt;
-&lt;p&gt;With the wind strength and direction known, the airplane ground speed (GPS) is obtained by adding the projected wind to the aircraft forward direction to the air speed (pitot). The figure below presents the air speed in dashed blue. The air-speed measurement shows a good sensitivity even at low speed. The reconstructed ground speed (thin black line) matches with the GPS velocity (large grey line) which prove the accuracy of the measurement. The estimation of the wind strength and direction is described &lt;a href=&#34;#wind-estimation&#34;&gt;below&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;gps-vs-air-speed&#34;&gt;Comparison with GPS ground speed&lt;/h3&gt;
+&lt;p&gt;In calm condition, the Ground Speed $V_{GPS}$ and Air Speed $V_{pitot}$ are equal.&lt;/p&gt;
+&lt;p&gt;In windy condition, wind average direction and strength are estimated combining $V_{GPS}$, $V_{pitot}$ and the plane yaw $\Theta_{heading}$ direction (using GPS COG&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:COG&#34;&gt;&lt;a href=&#34;#fn:COG&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;). This &lt;a href=&#34;#wind-estimation&#34;&gt;wind estimation&lt;/a&gt; is described below.&lt;/p&gt;
+&lt;p&gt;The airplane ground speed (GPS) is estimated with the difference of the air speed (pitot) with the projected wind to the aircraft forward direction:&lt;/p&gt;
+&lt;p&gt;$V_{GPS} \approx V_{pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) $&lt;/p&gt;
+&lt;p&gt;The figure below presents the air speed in dashed blue. The reconstructed ground speed (thin black) matches accurately with the GPS velocity (large grey) which prove the correctness of the air-speed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The air-speed measurement presents a high sensitivity even at low speed.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png&#34; alt=&#34;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. The GPS ground speed is correctly estimated based on the pitot tube measurement.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png&#34; alt=&#34;Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. GPS (grey curve) and Pitot minus Wind (black) matches.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey), Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Pitot air-speed minus wind estimated (black curve). Wind impact is reconstructed from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength (2.5 m/s) and direction (101°).&lt;/h4&gt;
-&lt;p&gt;GPS (grey curve) and Pitot minus Wind (black curve) matches. Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. The GPS ground speed is correctly estimated based on the pitot tube measurement.&lt;/p&gt;
+&lt;figcaption&gt;&lt;h4&gt;GPS Speed over ground (large grey). Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Reconstructed up-front wind (green). Pitot air-speed minus wind estimated (large green). up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$).&lt;/h4&gt;
+&lt;p&gt;Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. GPS (grey curve) and Pitot minus Wind (black) matches.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;The remaining error might be sensor error, but also wind gust and GPS accuracy limitation particularly at estimating vertical speed changes (During flight, the plane speed was change through rapid dive to test the pitot tube on a wide range).&lt;/p&gt;
+&lt;p&gt;Remaining error might be due to wind gust and GPS limited accuracy particularly at estimating vertical speed variations (During flight, the plane speed was change through climb/dive to log pitot tube reactions on a wide air-speed range).&lt;/p&gt;
 &lt;h3 id=&#34;wind-estimation&#34;&gt;Wind estimation&lt;/h3&gt;
-&lt;p&gt;The comparison of the pitot tube with the GPS ground speed require to estimate the wind strength and direction.&lt;/p&gt;
-&lt;p&gt;The curve below shows the difference between the Ground speed (GPS) with the air speed (pitot) in function of the plane flight direction. This error (blue dashed points) fit with a sine wave which is the offset added by a wind constant in strength and direction.&lt;/p&gt;
+&lt;p&gt;Wind model considered is constant and characterized by&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;its constant direction $\Theta_{wind}$&lt;/li&gt;
+&lt;li&gt;its constant strength $V_{wind}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;wind-v-pitot-v-gps&#34;&gt;Wind =&amp;gt; $V_{pitot} - V_{gps}$&lt;/h4&gt;
+&lt;p&gt;The curve below shows the difference between the Ground speed (GPS) with the air speed (pitot) in function of the plane flight direction. This error (blue dashed points) fit with a sine wave. This sine wave is the speed offset added for each plane direction in $[0 \ 2\pi]$ by a wind with a constant strength and direction. Sine wave amplitude and phase is the wind strength and direction.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
 &lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave projection on the $\Theta_{heading}$ forward direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&#34;/&gt;
+&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png&#34; alt=&#34;Blue dots are speed difference between GPS and pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
 &lt;figcaption&gt;&lt;h4&gt;GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600.&lt;/h4&gt;
-&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous black line is the wind sine wave projection on the $\Theta_{heading}$ forward direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&lt;/p&gt;
+&lt;p&gt;Blue dots are speed difference between GPS and pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;p&gt;This wind estimation is used to compensate the air-speed when comparing the GPS ground speed $V_{gps}$ with the pitot air-speed $V_{pitot}$ &lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/#gps-vs-air-speed&#34;&gt;above&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;script&#34;&gt;Script&lt;/h4&gt;
-&lt;p&gt;Matlab script used for off-line wind estimation:&lt;/p&gt;
+&lt;p&gt;Matlab script to estimate wind off-line:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% V_gps and V_pitot are two vector with all data measured.
 % V_pitot was under-sampled (averaging) by a factor 5 to fit the 50Hz log from the GPS.
 % GPS chip update frequency is 10Hz, but it is logged at 50Hz.
@@ -266,17 +275,17 @@ plot(COG,V_err&#39;,&#39;.&#39;); hold on; % plot Error blue dots
 plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),&#39;-k&#39;,&#39;linewidth&#39;,3); % plot wind
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;discussion&#34;&gt;Discussion&lt;/h4&gt;
-&lt;p&gt;Using the GPS COG&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:COG&#34;&gt;&lt;a href=&#34;#fn:COG&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane forward direction.
+&lt;p&gt;Using the GPS COG&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:COG&#34;&gt;&lt;a href=&#34;#fn:COG&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
 Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p&gt;
 &lt;h4 id=&#34;other-flight-inputs&#34;&gt;Other flight inputs&lt;/h4&gt;
-&lt;p&gt;Plane was equipped with two GPS chip:&lt;/p&gt;
+&lt;p&gt;Plane was equipped with two GPS:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;one uBlox M8N GPS and&lt;/li&gt;
 &lt;li&gt;one MTK3339.
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used for the curves above. The MTK trace can be shown on the map (top left icon).The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p&gt;
-&lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used exclusively for the curves above. The MTK trace can be shown on the &lt;a href=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34;&gt;map&lt;/a&gt; (top left icon). The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p&gt;
+&lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34; style=&#34;width: 100% ; height: 480px&#34;&gt;&lt;/iframe&gt;
 &lt;!--
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
