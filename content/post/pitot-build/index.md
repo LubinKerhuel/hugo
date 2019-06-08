@@ -54,24 +54,24 @@ highlight: true
 
 ## Principle
 
-A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure is created at its top. A differential pressure is measured between the top of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.
+A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure appears at its tip. The differential pressure is measured between the tip of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.
 
-The pressure measured is linear to the square of the air speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are the pressure in Pa, $\rho$ is the fluid density constant typically in $[1.14 \ 1.34]$ depending on temperature & altitude, and $v$ the speed in $m.s^{-1}$. The differential pressure measured is $P\_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$ 
+The pressure measured is the square of the air-speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are the pressure in Pa, $\rho$ is the fluid density constant typically in $[1.14 \ 1.34]$ depending on temperature & altitude, and $v$ the air-speed in $m.s^{-1}$. The differential pressure measured is $P\_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$ 
 
 ## Prandtl tube
 
-Prandtl tube is made of an inner tube placed within an outer tube. At their top, both tubes are centered. Space between the two tubes is hermetically filled in with an epoxy adhesive (Araldite or equivalent) on few mm near the top. The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector to the static pressure which lies in the empty space between the two tube.
+Prandtl tube is made of an inner tube placed within an outer tube. At their tip, both tubes are centered. Space between the two tubes is hermetically filled in with an epoxy adhesive (Araldite or equivalent) on few mm near the tip. The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector to the static pressure which lies in the empty space between the two tube.
 
-The static pressure holes should be placed at a minimum distance from the top due to airflow perturbations. A distance 4 times the diameter of the outer tube is retains here.
+The static pressure holes should be placed at a minimum distance from the tip due to airflow perturbations. A distance 4 times the diameter of the outer tube is retains here.
 
-First test was done using brass tube. Inner tube is 1mm inside, 2mm outside. Outer tube was 3mm inside, 4mm outside. A lighter pitot tube was tested using one inner brass tube (1mm/2mm) with a carbon outer tube (3mm/5mm).
+First test was done using brass tube. Inner tube is 1mm inside, 2mm outside. Outer tube was 3mm inside, 4mm outside. A lighter Pitot tube was tested using one inner brass tube (1mm/2mm) with a carbon outer tube (3mm/5mm).
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-build-brasstubes.jpg"
 link="/img/pitot-darcy-prandtl-build-brasstubes.jpg"
 width="80%"
 title="Brass inner and outer tubes composing the pitot tube."
-caption="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm (d=4mm).  Outer tube length is m=86mm (21d). Four 1mm width holes are at l=16mm (4d) from the top."
+caption="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm (d=4mm).  Outer tube length is m=86mm (21d). Four 1mm width holes are at l=16mm (4d) from the tip."
 numbered="true"
 >}}
 
@@ -107,7 +107,7 @@ The [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) from NXP is a sensitive di
 
 We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% of its nominal range.
 
-Table below provide theoretical differential pressure expected for various speed using $P_{diff} = \frac{1}{2}\rho v^2$ with $\rho=1.2$.
+Table below provide theoretical differential pressure expected for various speed using $P_{diff} = \frac{1}{2}\rho v^2$ with $\rho=1.15$.
 
 | v (m/s) | v (Km/h) | $P_{diff}$ (Pa) | ~ $H_2O$ (cm) | [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) & [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428)  (0.2041Pa / LSB[^LSB]) |
 |:-:|:-:|:-:|:-:|:-:|
@@ -209,7 +209,9 @@ numbered="true"
 
 ## Results
 
-The MCP3428 samples $P\_{diff}$ at 250Hz during flights. $V\_{pitot}=\sqrt{\frac{2}{\rho}*P\_{diff}}$ with $\rho = 1.2$.
+The MCP3428 samples $P\_{diff}$ at 250Hz during flights. $V\_{pitot}=\sqrt{\frac{2}{\rho}*P\_{diff}}$ with $\rho = 1.15$.
+
+No calibration were required. Using sensor scaling and with a "middle" $\rho$ used, we obtained results good enough.
 
 Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):
 
@@ -218,7 +220,7 @@ Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):
 P_pitot_cal =  0.2041* (double(P_pitot) + 1800);	% to Pa unit
 
 % Compute Speed (m/s) from diff pressure (in Pa).
-V_pitot = sqrt(max(0,(2/1.2) * P_pitot_cal));
+V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 ```
 
 ### Comparison with GPS ground speed {#gps-vs-air-speed}
@@ -233,12 +235,18 @@ The airplane ground speed (GPS) is estimated with the difference of the air spee
 
 The figure below presents the air speed in dashed blue. The reconstructed ground speed (thin black) matches accurately with the GPS velocity (large grey) which prove the correctness of the air-speed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The air-speed measurement presents a high  sensitivity even at low speed.
 
+The error is defined with $Err = V\_{gps} - \left( V\_{pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) \right) $. On the first 200s of the flight shown we have:
+
+- standard deviation ( $std(Err)$ ) : **0.74m/s** 
+- mean squared error ( $mean(Err.^2)$ ) :  **0.54m/s**
+- mean absolute error ( $mean(|Err|)$ ) : **0.58m/s**
+
 {{< figure 
 src="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
 link="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
 width="100%"
-title="GPS Speed over ground (large grey). Pitot air-speed (dashed blue) with parameter $\rho=1.2$. Reconstructed up-front wind (green). Pitot air-speed minus wind estimated (large green). up-front wind is estimated from the GPS COG angle ($\approx \theta\_{heading}$), and the estimated wind strength ($V\_{wind}= 2.5 m/s$) and direction ($\theta\_{wind} = 101°$)."
-caption="Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and undersampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. GPS (grey curve) and Pitot minus Wind (black) matches."
+title="GPS Speed over ground (large grey). Pitot air-speed (dashed blue) with parameter $\rho=1.15$. Reconstructed up-front wind (green). Pitot air-speed minus wind estimated (large green). up-front wind is estimated from the GPS COG angle ($\approx \theta\_{heading}$), and the estimated wind strength ($V\_{wind}= 2.5 m/s$) and direction ($\theta\_{wind} = 101°$)."
+caption="Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and under-sampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. GPS (grey curve) and Pitot minus Wind (black) matches."
 numbered="true" >}}
 
 Remaining error might be due to wind gust and GPS limited accuracy particularly at estimating vertical speed variations (During flight, the plane speed was change through climb/dive to log pitot tube reactions on a wide air-speed range).
