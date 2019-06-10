@@ -16,6 +16,8 @@ date: 2019-05-28
 featured: true
 draft: false
 
+slides: pitot-build
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight

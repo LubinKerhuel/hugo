@@ -49,6 +49,8 @@ url_code = ""
   focal_point = "Smart"
 +++
 
+<!-- C:\M91449\MCHP_Blockset\Developpements\2013_08_19_Masters2013\PicooZ\2013_08_16_Logs -->
+
 Picooz project Todo
 
 <!-- test code -->
