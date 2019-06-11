@@ -143,6 +143,13 @@ with wind:
 
 ---
 
+### flight trace
+
+<section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" data-background-opacity=1>
+</section>
+
+---
+
 ### connecting (fish line protection)
 
 ![/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg](/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg)

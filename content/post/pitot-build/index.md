@@ -8,6 +8,7 @@ tags:
   - Pitot
   - sensor
   - air-speed
+  - wind
 categories: 
   - Electronics
   - sensor
@@ -48,6 +49,9 @@ highlight: true
 #highlight_languages:
 #  -matlab  # Add support for highlighting additional languages
 
+
+# ressources:
+# wind estimate from GPS only: https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view
 ---
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
