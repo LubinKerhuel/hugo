@@ -44,6 +44,7 @@ test
 ![/img/pitot-darcy-prandtl-build-brasstubes.jpg](/img/pitot-darcy-prandtl-build-brasstubes.jpg)
 
 ---
+
 ## mp3v5004dp & mcp3428
 
 ![/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg](/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg)
@@ -52,34 +53,96 @@ test
 - Range: [0 836] Pa ($\approx 100km/h $)
 
 ---
+
+## Static sensor noise
+
+- 90 min log @ 100Hz, indoor, still
+- Standard Dev : 0.5 Pa 
+
+---
+
+<section data-background-image="/img/pitot-darcy-prandtl-static-characteristic.png" data-background-opacity=1 data-background-position="center" data-background-size="contain">
+</section>
+
+---
+
+## Flight tests
+
+![Plane](/img/firstar1600-qx7.jpg)
+
+---
+
+![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg)
+
+---
+
+
+<section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+---
+
+## Pressure - Speed
+
+$P\_{diff} = \frac{1}{2}\rho v^2$
+
+
+$v = \sqrt{\frac{2}{\rho} * P\_{diff}}$
+
+with $\rho = 1.16 $
+
+---
+
+<section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-0.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+---
+
+<section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-1.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+---
+
+<section data-background-image="/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+---
+
+<section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-2.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+---
+
+<section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-3.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+---
+
+<section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+
+---
+
+## results
+
+|  $\underbrace{v\_{pitot}-v_{wind}^{p}-v\_{gps}}\_{error}$ | m/s | km/h |
+|:--:|:--:|:--:|
+| mean | 0.017 | 0.06 |
+| standard deviation | 0.74 | 2.6 |
+| | | |
+
+with wind: 
+
+- 2.6 m/s
+- from 101° (east)
+
+---
+
+[page](/post/pitot-build) with further details
+
+---
+
 ### connecting (fish line protection)
 
 ![/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg](/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg)
-
----
-
-## Static Characteristic
-
-- indoor, still
-- 90 min log @ 100Hz
-
----
-
-![/img/pitot-darcy-prandtl-static-characteristic.png](/img/pitot-darcy-prandtl-static-characteristic.png)<!-- .element height="50%" width="50%" -->
-
----
-
-![/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg)
-
----
-
-![/img/pitot-darcy-prandtl-wing-carbon2.jpg](/img/pitot-darcy-prandtl-wing-carbon2.jpg)
-
----
-
-![/img/pitot-darcy-prandtl-gps-wind-calibration.png](/img/pitot-darcy-prandtl-gps-wind-calibration.png)
-
----
-
-![/img/pitot-darcy-prandtl-speed-error-wind-estimation.png](/img/pitot-darcy-prandtl-speed-error-wind-estimation.png)
-
