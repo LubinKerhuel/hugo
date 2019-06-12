@@ -11,7 +11,7 @@ summary = "Model based design for an RC plane autopilot"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["simulink","matlab","rapid prototyping","model based design (MDB)","dsPIC","sliding-mode","autopilot","UAV","Mavlink","UxV blockset","AUAV V3 board"]
+tags = ["simulink","matlab","rapid prototyping","model based design (MDB)","dsPIC","sliding-mode","autopilot","UAV","MAVLink","UxV blockset","AUAV V3 board"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
@@ -93,7 +93,7 @@ Your custom control loop might not fit within the existing structure. You might 
 Starting a new project is sometime faster than re-use a pre-existing advanced one.
 The presented autopilot uses a Model Based Design (MDB) approach: The autopilot code is generated from a unique Simulink model. Everything is within the diagram, from low level sensors handling up to the controller design. This MDB aproach is also named Rapid Control Prototyping (RCP).
 
-The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, Mavlink messaging including Way Point and Parameters protocols.
+The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
 Such Simulink model allows to "get-in" the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.
 
 Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare...).
@@ -123,7 +123,7 @@ numbered="true"
   - Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See [build and test](/post/pitot-build/) page.
 - **GPS**: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.
 - **Data logger**: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.). 
-- **Radio link**: 3DR Sik based Radio module for Mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with [qgroundcontrol](http://qgroundcontrol.com/) base station running on most platforms (PC, android, windows, Linux).
+- **Radio link**: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with [qgroundcontrol](http://qgroundcontrol.com/) base station running on most platforms (PC, android, windows, Linux).
 - **Action cam**: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.
 
 {{< figure 
@@ -142,7 +142,7 @@ Sliding mode-based controller tested in both pitch and roll axis with two mode:
 - Control plane angular rate control (angular speed set-point given through the remote control)
 - Control plane angle attitude (angle set point provided through the remote control)
 
-Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, Mavlink and log sensors data at 1Khz through an UART configured at 24700000)
+Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)
 
 Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).
 
@@ -158,9 +158,9 @@ Validated automatic calibration of the magnetometer's axis offset and gain. Once
 
 Reduce chattering on ailerons when sliding mode control is enabled.
 
-Test in flight Mavlink protocol parameters tuning.
+Test in flight MAVLink protocol parameters tuning.
 
-Add automatic guidance of the plane, using Mavlink Way point sets.
+Add automatic guidance of the plane, using MAVLink Way point sets.
 
 
 ### Site content ###
@@ -171,7 +171,6 @@ Ideas to dvpt:
 
 - IMU
 - [Pitot tube](/post/pitot-build/)
-- [Wind estimate](/post/pitot-build/#wind-estimation)
-- UxV blocks including GPS, Remote Control and Mavlink blocks and functionalities
+- [Wind estimation](/post/pitot-build/#wind-estimation) combining GPS ground-speed with Pitot tube air-speed
+- UxV blocks including GPS, Remote Control and MAVLink blocks and functionalities
 - Magnetometers auto calibration
-

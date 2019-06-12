@@ -31,7 +31,7 @@
 Your custom control loop might not fit within the existing structure. You might want to implement a more advanced controller than existing PIDs, use a different sample rate etc&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Starting a new project is sometime faster than re-use a pre-existing advanced one.
 The presented autopilot uses a Model Based Design (MDB) approach: The autopilot code is generated from a unique Simulink model. Everything is within the diagram, from low level sensors handling up to the controller design. This MDB aproach is also named Rapid Control Prototyping (RCP).&lt;/p&gt;
-&lt;p&gt;The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, Mavlink messaging including Way Point and Parameters protocols.
+&lt;p&gt;The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
 Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p&gt;
 &lt;p&gt;Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p&gt;
 &lt;p&gt;Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga &lt;a href=&#34;https://slugsuav.soe.ucsc.edu/&#34;&gt;SLUG&lt;/a&gt; is available online. The update &lt;a href=&#34;https://doi.org/10.1155/2018/6892153&#34;&gt;SLUG II&lt;/a&gt; projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p&gt;
@@ -61,7 +61,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;GPS&lt;/strong&gt;: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Data logger&lt;/strong&gt;: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Radio link&lt;/strong&gt;: 3DR Sik based Radio module for Mavlink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href=&#34;http://qgroundcontrol.com/&#34;&gt;qgroundcontrol&lt;/a&gt; base station running on most platforms (PC, android, windows, Linux).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Radio link&lt;/strong&gt;: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href=&#34;http://qgroundcontrol.com/&#34;&gt;qgroundcontrol&lt;/a&gt; base station running on most platforms (PC, android, windows, Linux).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Action cam&lt;/strong&gt;: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
@@ -80,23 +80,23 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;li&gt;Control plane angular rate control (angular speed set-point given through the remote control)&lt;/li&gt;
 &lt;li&gt;Control plane angle attitude (angle set point provided through the remote control)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, Mavlink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p&gt;
+&lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p&gt;
 &lt;p&gt;Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p&gt;
 &lt;p&gt;Pitot tube air-speed estimation validated using GPS speed measurement as reference (&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p&gt;
 &lt;p&gt;Validated automatic calibration of the magnetometer&amp;rsquo;s axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p&gt;
 &lt;h3 id=&#34;next-steps&#34;&gt;Next steps&lt;/h3&gt;
 &lt;p&gt;Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p&gt;
-&lt;p&gt;Test in flight Mavlink protocol parameters tuning.&lt;/p&gt;
-&lt;p&gt;Add automatic guidance of the plane, using Mavlink Way point sets.&lt;/p&gt;
+&lt;p&gt;Test in flight MAVLink protocol parameters tuning.&lt;/p&gt;
+&lt;p&gt;Add automatic guidance of the plane, using MAVLink Way point sets.&lt;/p&gt;
 &lt;h3 id=&#34;site-content&#34;&gt;Site content&lt;/h3&gt;
 &lt;p&gt;Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.&lt;/p&gt;
 &lt;p&gt;Ideas to dvpt:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IMU&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/&#34;&gt;Pitot tube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation&#34;&gt;Wind estimate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;UxV blocks including GPS, Remote Control and Mavlink blocks and functionalities&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation&#34;&gt;Wind estimation&lt;/a&gt; combining GPS ground-speed with Pitot tube air-speed&lt;/li&gt;
+&lt;li&gt;UxV blocks including GPS, Remote Control and MAVLink blocks and functionalities&lt;/li&gt;
 &lt;li&gt;Magnetometers auto calibration&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p&gt;Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.
 This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;

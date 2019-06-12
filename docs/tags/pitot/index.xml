@@ -229,7 +229,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;p&gt;The airplane ground speed (GPS) is estimated with the difference of the air speed (pitot) with the projected wind to the aircraft forward direction:&lt;/p&gt;
 &lt;p&gt;$V_{GPS} \approx V_{pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) $&lt;/p&gt;
 &lt;p&gt;The figure below presents the air speed in dashed blue. The reconstructed ground speed (thin black) matches accurately with the GPS velocity (red) which prove the correctness of the air-speed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The air-speed measurement presents a high sensitivity even at low speed.&lt;/p&gt;
-&lt;p&gt;The error is defined with $error = V_{gps} - \left( V_{pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) \right) $. For the 200s of the flight shown on the figure, the error is characterized by:&lt;/p&gt;
+&lt;p&gt;The error is defined with $error = V_{gps} - \left( V_{pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is presented in the table:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -262,7 +262,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;Remaining error might be due to wind gust and GPS limited accuracy particularly at estimating vertical speed variations (During flight, the plane speed was change through climb/dive to log pitot tube reactions on a wide air-speed range).&lt;/p&gt;
+&lt;p&gt;RMS error is relatively low regarding the measured speed value. Part of the error is also due to wind gust and GPS limited accuracy particularly at estimating fast change of vertical speed.&lt;/p&gt;
 &lt;h3 id=&#34;wind-estimation&#34;&gt;Wind estimation&lt;/h3&gt;
 &lt;p&gt;Wind model considered is constant and characterized by&lt;/p&gt;
 &lt;ul&gt;
@@ -301,7 +301,8 @@ plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),&#39;-k&#39;,&#39;l
 &lt;h4 id=&#34;discussion&#34;&gt;Discussion&lt;/h4&gt;
 &lt;p&gt;Using the GPS COG&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:COG&#34;&gt;&lt;a href=&#34;#fn:COG&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
 Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p&gt;
-&lt;h4 id=&#34;other-flight-inputs&#34;&gt;Other flight inputs&lt;/h4&gt;
+&lt;p&gt;W. Premerlani propose a &lt;a href=&#34;https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view&#34;&gt;wind estimation&lt;/a&gt; relying exclusively on GPS data. (To be tested with the same data set to compare&amp;hellip;)&lt;/p&gt;
+&lt;h4 id=&#34;other-flight-data&#34;&gt;Other flight data&lt;/h4&gt;
 &lt;p&gt;Plane was equipped with two GPS:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;one uBlox M8N GPS and&lt;/li&gt;

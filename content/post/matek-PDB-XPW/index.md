@@ -4,8 +4,8 @@ subtitle: 'Narrow current range measurement from 140A to 20A'
 summary: Adapt the MATEKSYS PDB-XPW power module for quad rotor to fit electric RC plane with lower current requirements. Change current measurement range by replacing one single resistor from the Op-Amp current measurement circuit.
 authors:
 - Lubin
-tags: ["Electronics","Power","PDB-XPW"]
-categories: ["Electronics"]
+tags: ["electronics","power","PDB-XPW"]
+categories: ["electronics"]
 date: "2019-05-18"
 #lastmod: "2019-04-12T00:00:00Z"
 featured: false

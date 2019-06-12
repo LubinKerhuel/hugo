@@ -4,8 +4,8 @@ subtitle: 'Signal on the USB connector of the RunCam2 to start/stop record'
 summary: Signal to remotely start / stop / take a picture on a runCam2 and compatible action cam through the USB connector.
 authors:
 - Lubin
-tags: ["Camera"]
-categories: ["Sensor"]
+tags: ["camera"]
+categories: ["sensor"]
 date: "2019-05-18"
 #lastmod: "2019-04-12T00:00:00Z"
 featured: false

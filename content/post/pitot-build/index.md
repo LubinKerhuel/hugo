@@ -10,7 +10,7 @@ tags:
   - air-speed
   - wind
 categories: 
-  - Electronics
+  - electronics
   - sensor
 date: 2019-05-28
 #lastmod: "2019-04-12T00:00:00Z"
@@ -49,9 +49,6 @@ highlight: true
 #highlight_languages:
 #  -matlab  # Add support for highlighting additional languages
 
-
-# ressources:
-# wind estimate from GPS only: https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view
 ---
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
@@ -241,13 +238,12 @@ The airplane ground speed (GPS) is estimated with the difference of the air spee
 
 The figure below presents the air speed in dashed blue. The reconstructed ground speed (thin black) matches accurately with the GPS velocity (red) which prove the correctness of the air-speed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The air-speed measurement presents a high  sensitivity even at low speed.
 
-The error is defined with $error = V\_{gps} - \left( V\_{pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) \right) $. For the 200s of the flight shown on the figure, the error is characterized by:
+The error is defined with $error = V\_{gps} - \left( V\_{pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is presented in the table:
 
 |  error | m/s | km/h |
 |:--:|:--:|:--:|
 | mean | 0.017 | 0.06 |
 | standard deviation | 0.74 | 2.6 |
-
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
@@ -257,7 +253,7 @@ title="GPS Speed over ground (red). Pitot air-speed (dashed blue) with parameter
 caption="Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and under-sampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. GPS (red) and Pitot minus Wind (black) matches."
 numbered="true" >}}
 
-Remaining error might be due to wind gust and GPS limited accuracy particularly at estimating vertical speed variations (During flight, the plane speed was change through climb/dive to log pitot tube reactions on a wide air-speed range).
+RMS error is relatively low regarding the measured speed value. Part of the error is also due to wind gust and GPS limited accuracy particularly at estimating fast change of vertical speed.
 
 ### Wind estimation {#wind-estimation}
 
@@ -310,7 +306,9 @@ plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),'-k','linewidth',3)
 Using the GPS COG[^COG] field is not exactly the plane yaw direction $\Theta\_{heading}$ but the plane flight direction.
 Thus the COG is a biased plane yaw $\Theta\_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.
 
-#### Other flight inputs
+W. Premerlani propose a [wind estimation](https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view) relying exclusively on GPS data. (To be tested with the same data set to compare...)
+
+#### Other flight data
 
 Plane was equipped with two GPS:
 
