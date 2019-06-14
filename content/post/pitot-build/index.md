@@ -1,7 +1,7 @@
 ﻿---
 title: Miniature air-speed sensor for RC plane or UAVs.
-subtitle: Mechanic, electronic, test of a miniature Pitot-Darcy-Prandtl sensor embedded in drone or RC plane
-summary: DIY miniature pitot-tube with mechanic and electronics description and in flight sensor measurements. Air-speed performance is compared against a GPS ground speed reference. Estimate wind strength and direction mixing GPS and pitot outputs.
+subtitle: Mechanic, electronic and performances of a Pitot-Darcy-Prandtl air-speed sensor embedded in a fixed-wing platform.
+summary: DIY miniature Pitot-tube with mechanic and electronics descriptions. In flight air-speed performance is compared to a GPS ground speed used as reference. Estimate wind strength and direction mixing GPS and Pitot outputs.
 authors:
 - Lubin
 tags: 
@@ -17,13 +17,13 @@ date: 2019-05-28
 featured: true
 draft: false
 
-slides: pitot-build
+slides: Pitot-build
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
-  caption: Carbon pitot tube attached to the wing with a magnet.
+  caption: Carbon Pitot tube attached to the wing with a magnet.
   focal_point: Left
   preview_only: false
 
@@ -57,32 +57,32 @@ highlight: true
 
 ## Principle
 
-A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure appears at its tip. The differential pressure is measured between the tip of the tube and the ambient pressure. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.
+A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P\_t$ appears at its tip. The differential pressure $P\_{diff}$ is measured between the tip of the tube $P\_t$ and the ambient pressure $P\_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.
 
-The pressure measured is the square of the air-speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are the pressure in Pa, $\rho$ is the fluid density constant typically in $[1.14 \ 1.34]$ depending on temperature & altitude, and $v$ the air-speed in $m.s^{-1}$. The differential pressure measured is $P\_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$ 
+The pressure measured is the square of the air-speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are measured in Pascal unit (Pa). $\rho$ is the air density constant typically in $[1.14 \ 1.34]$ depending on temperature & altitude. $v$ is the air-speed in $m.s^{-1}$. The differential pressure measured is $P\_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$ 
 
 ## Prandtl tube
 
-Prandtl tube is made of an inner tube placed within an outer tube. At their tip, both tubes are centered. Space between the two tubes is hermetically filled in with an epoxy adhesive (Araldite or equivalent) on few mm near the tip. The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and a tiny tube is added next to create another connector to the static pressure which lies in the empty space between the two tube.
+Prandtl tube is made of an inner tube placed within an outer tube. At their tip, both tubes are centered. Space between the two tubes is filled-in with an epoxy adhesive (Araldite or equivalent) on few mm near the tip. The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.
 
-The static pressure holes should be placed at a minimum distance from the tip due to airflow perturbations. A distance 4 times the diameter of the outer tube is retains here.
+The static pressure holes must be drilled at a minimum distance from the tube tip where airflow perturbations are reduced. A distance 4 times the diameter (d=4mm)of the outer tube is retains here (16mm). Four 1mm holes were drilled with a dremel hand tool. The three tubes are presented on the figure below.
 
-First test was done using brass tube. Inner tube is 1mm inside, 2mm outside. Outer tube was 3mm inside, 4mm outside. A lighter Pitot tube was tested using one inner brass tube (1mm/2mm) with a carbon outer tube (3mm/5mm).
+First test was done using brass tubes. Inner tube width is 2/1mm (outside/inside) and outer tube is 4/3mm.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-build-brasstubes.jpg"
 link="/img/pitot-darcy-prandtl-build-brasstubes.jpg"
 width="80%"
-title="Brass inner and outer tubes composing the pitot tube."
-caption="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm (d=4mm).  Outer tube length is m=86mm (21d). Four 1mm width holes are at l=16mm (4d) from the tip."
+title="Brass inner and outer tubes used to build the DIY Pitot tube."
+caption="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm.  Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip."
 numbered="true"
 >}}
 
 References:
 
 - [report](http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf) by W.Gracey on the impact of the various shape on the measurement.
-- [report (french)](https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf) from ANSTJ with general information on pitot sensor.
-- [website (French)](http://voiletech.free.fr/skyassistant/pitot.htm) from Rémi Bourgin with experimental pitot tube for RC plane
+- [report (french)](https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf) from ANSTJ with general information on Pitot sensor.
+- [website (French)](http://voiletech.free.fr/skyassistant/Pitot.htm) from Rémi Bourgin with experimental Pitot tube for RC plane
 
 <!-- Tube laiton macif (alfer) au Leroy Merlin;
 
@@ -127,7 +127,7 @@ Table below provide theoretical differential pressure expected for various speed
 
 ### Signal conditioning and conversion 
 
-The pressure sensor is placed close (~10cm) to the pitot tube on the wing. The analog to digital conversion is also done on site to avoid noise pollution of analog signal. The [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC. 
+The pressure sensor is placed close (~10cm) to the Pitot tube on the wing. The analog to digital conversion is also done on site to avoid noise pollution of analog signal. The [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC. 
 
 The [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) output analog signal is connected to the [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.
 
@@ -175,29 +175,29 @@ The sensor is mounted on the wing of a FirStar 1600 RC plane.
 src="/img/firstar1600-qx7.jpg"
 link="/img/firstar1600-qx7.jpg"
 width="80%"
-title="FirStar 1600 from Volantex RC plane."
-caption="Platform used for testing with pitot sensor."
+title="FirStar 1600 Volantex RC plane."
+caption="Platform used for tests."
 numbered="true"
 >}}
 
-A 2mm flexible tube, originally for protecting fish lines, connect the sensor to the pitot tube.
+A 2mm flexible tube, originally for protecting fish lines, connect the sensor to the Pitot tube.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg"
 link="/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg"
 width="50%"
-title="Flashmer – flexible Tube 2mm. Image from Decathlon (france)"
-caption="Fishing Tube used to connect pressure MP3V5004dp sensor to pitot tube."
+title="Flashmer – flexible Tube 2mm. Image from Decathlon (france)."
+caption="Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube."
 numbered="true"
 >}}
 
-One magnet is glued on the pitot tube. The pitot tube is attached to the plane through a 2nd magnet integrated into the wing. This flexible solution allows the tube to stay in place during flight, eject in case of hard landing reducing damages and is practical for storage and transportation.
+One magnet is glued on the Pitot tube. A 2nd magnet integrated in the wing allows to fix the Pitot tube. Both magnet are in contact. The tube stays firmly in place during flights and ejects in case of hard landing reducing damages. It is a flexible solution for testing other Pitot tube design ; It's also practical for storage and transportation.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
 link="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
 width="100%"
-title="Brass pitot tube with its electronic board mounted on the bottom of the right Firstar 1600 wing."
+title="Brass Pitot tube with its electronic board installed on the Firstar 1600 fixed wing platform."
 numbered="true"
 >}}
 
@@ -205,16 +205,16 @@ numbered="true"
 src="/img/pitot-darcy-prandtl-wing-carbon2.jpg"
 link="/img/pitot-darcy-prandtl-wing-carbon2.jpg"
 width="60%"
-title="Carbon-Brass pitot tube attached to the wing with a magnet."
-caption="Outer tube is a 5mm carbon tube. Inner tube is a brass 2mm/1mm tube."
+title="Carbon-Brass light Pitot tube sensor attached to the wing with a magnet."
+caption="Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube."
 numbered="true"
 >}}
 
-## Results
+## Experimental results
 
-The MCP3428 samples $P\_{diff}$ at 250Hz during flights. $V\_{pitot}=\sqrt{\frac{2}{\rho}*P\_{diff}}$ with $\rho = 1.15$.
+The MCP3428 samples $P\_{diff}$ at 250Hz during flights. $V\_{Pitot}=\sqrt{\frac{2}{\rho}*P\_{diff}}$ with $\rho = 1.15$.
 
-No calibration were required. Using sensor scaling and with a "middle" $\rho$ used, we obtained results good enough.
+No calibration were required. Sensor theoretical output scaling were used with the formula to compute the speed from the pressure. $\rho$ value was tune from a default value 1.2 to 1.16 which minimized the mean error however the improvement was not a big deal. The only value to adjust is the raw pressure measurement offet (zero). The zero value for the sensor useed is -1800. 
 
 Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):
 
@@ -228,17 +228,17 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 
 ### Comparison with GPS ground speed {#gps-vs-air-speed}
 
-In calm condition, the Ground Speed $V\_{GPS}$ and Air Speed $V\_{pitot}$ are equal.
+In calm condition, the Ground Speed $V\_{GPS}$ and Air Speed $V\_{Pitot}$ are equal.
 
-In windy condition, wind average direction and strength are estimated combining $V\_{GPS}$, $V\_{pitot}$ and the plane yaw $\Theta\_{heading}$ direction (using GPS COG[^COG]). This  [wind estimation](#wind-estimation) is described below.
+In windy condition, wind average direction and strength are estimated combining $V\_{GPS}$, $V\_{Pitot}$ and the plane yaw $\Theta\_{heading}$ direction (using GPS COG[^COG]). This  [wind estimation](#wind-estimation) is described below.
 
-The airplane ground speed (GPS) is estimated with the difference of the air speed (pitot) with the projected wind to the aircraft forward direction:
+The airplane ground speed (GPS) is estimated with the difference of the air speed (Pitot) with the projected wind to the aircraft forward direction:
 
- $V\_{GPS} \approx V\_{pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) $
+ $V\_{GPS} \approx V\_{Pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) $
 
-The figure below presents the air speed in dashed blue. The reconstructed ground speed (thin black) matches accurately with the GPS velocity (red) which prove the correctness of the air-speed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The air-speed measurement presents a high  sensitivity even at low speed.
+The figure below presents the air speed in dashed blue. The reconstructed ground speed (black) matches accurately with the GPS velocity (red) which prove the correctness of the air-speed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The air-speed measurement presents a high  sensitivity even at low speed.
 
-The error is defined with $error = V\_{gps} - \left( V\_{pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is presented in the table:
+The error is defined with $error = V\_{gps} - \left( V\_{Pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is presented in the table:
 
 |  error | m/s | km/h |
 |:--:|:--:|:--:|
@@ -249,9 +249,11 @@ The error is defined with $error = V\_{gps} - \left( V\_{pitot} - V_{wind}*cos(\
 src="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
 link="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
 width="100%"
-title="GPS Speed over ground (red). Pitot air-speed (dashed blue) with parameter $\rho=1.15$. Reconstructed up-front wind (green). Pitot air-speed minus wind estimated (large green). up-front wind is estimated from the GPS COG angle ($\approx \theta\_{heading}$), and the estimated wind strength ($V\_{wind}= 2.5 m/s$) and direction ($\theta\_{wind} = 101°$)."
-caption="Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the pitot is averaged and under-sampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. GPS (red) and Pitot minus Wind (black) matches."
+title="GPS Speed over ground (red). Pitot air-speed (dashed blue) with parameter $\rho=1.15$. Reconstructed up-front wind (green). Pitot air-speed minus wind estimated (green). up-front wind is estimated from the GPS COG angle ($\approx \theta\_{heading}$), and the estimated wind strength ($V\_{wind}= 2.5 m/s$) and direction ($\theta\_{wind} = 101°$)."
+caption="Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the Pitot is averaged and under-sampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. GPS (red) and Pitot minus Wind (black) matches."
 numbered="true" >}}
+
+Further figures are available in [slides](/slides/pitot-build/#/10).
 
 RMS error is relatively low regarding the measured speed value. Part of the error is also due to wind gust and GPS limited accuracy particularly at estimating fast change of vertical speed.
 
@@ -262,22 +264,20 @@ Wind model considered  is constant and characterized by
 - its constant direction $\Theta\_{wind}$
 - its constant strength $V\_{wind}$
 
-#### Wind => $V\_{pitot} - V\_{gps}$
+#### Wind => $V\_{Pitot} - V\_{gps}$
 
-The curve below shows the difference between the Ground speed (GPS) with the air speed (pitot) in function of the plane flight direction. This error (blue dashed points) fit with a sine wave. This sine wave is the speed offset added for each plane direction in $[0 \ 2\pi]$ by a wind with a constant strength and direction. Sine wave amplitude and phase is the wind strength and direction.
+The curve below shows the difference between the Ground speed (GPS) with the air speed (Pitot) in function of the plane flight direction. This error (blue dashed points) fit with a sine wave. This sine wave is the speed offset added for each plane direction in $[0 \ 2\pi]$ by a wind with a constant strength and direction. Sine wave amplitude and phase is the wind strength and direction.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-speed-error-wind-estimation.png"
 link="/img/pitot-darcy-prandtl-speed-error-wind-estimation.png"
 width="100%"
-title="GPS ground speed and pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600."
-caption="Blue dots are speed difference between GPS and pitot. The continuous green curve is the wind sine wave projection on the $\Theta\_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."
+title="GPS ground speed and Pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600."
+caption="Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta\_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."
 numbered="true"
 >}}
 
-This wind estimation is used to compensate the air-speed when comparing the GPS ground speed $V\_{gps}$ with the pitot air-speed $V\_{pitot}$ [above](/post/pitot-build/#gps-vs-air-speed).
-
-Further figures are available in [slides](/slides/pitot-build/#/10).
+This wind estimation is used to compensate the air-speed when comparing the GPS ground speed $V\_{gps}$ with the Pitot air-speed $V\_{Pitot}$ [above](/post/Pitot-build/#gps-vs-air-speed).
 
 #### Script
 

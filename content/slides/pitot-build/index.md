@@ -32,11 +32,10 @@ slides:
 #### for RC plane & UAV
 
 [full](/post/pitot-build) description
- 
+
 ---
 
 ![/post/pitot-build/featured.jpg](/post/pitot-build/featured.jpg)
-test
 
 ---
 ## Brass tube

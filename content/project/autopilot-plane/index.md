@@ -1,13 +1,13 @@
 +++
 # Project title.
-title = "Autopilot for Plane based on Simulink"
+title = "Fixed-wing autopilot based on Simulink model"
 
 # Date this page was created.
 date = 2019-05-19T00:00:00
 draft = false
 
 # Project summary to display on homepage.
-summary = "Model based design for an RC plane autopilot"
+summary = "16-bits fixed-wing autopilot Model Based Design"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
