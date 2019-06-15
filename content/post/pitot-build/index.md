@@ -57,13 +57,13 @@ highlight: true
 
 ## Principle
 
-A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P\_t$ appears at its tip. The differential pressure $P\_{diff}$ is measured between the tip of the tube $P\_t$ and the ambient pressure $P\_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.
+A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P\_t$ is added at its tip. The differential pressure $P\_{diff}$ is measured between the tip of the tube $P\_t$ and the static pressure $P\_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.
 
-The pressure measured is the square of the air-speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are measured in Pascal unit (Pa). $\rho$ is the air density constant typically in $[1.14 \ 1.34]$ depending on temperature & altitude. $v$ is the air-speed in $m.s^{-1}$. The differential pressure measured is $P\_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$ 
+The pressure added at tube tip is the square of the air-speed : $P\_t = P\_s + \frac{1}{2}\rho v^2$ where $ P\_t $ and $P\_s$ are measured in Pascal unit (Pa). $\rho$ is the air density constant typically in $[1.14 \ 1.34]$ depending on temperature & altitude. $v$ is the air-speed in $m.s^{-1}$. The differential pressure measured is $P\_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$ 
 
 ## Prandtl tube
 
-Prandtl tube is made of an inner tube placed within an outer tube. At their tip, both tubes are centered. Space between the two tubes is filled-in with an epoxy adhesive (Araldite or equivalent) on few mm near the tip. The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.
+Prandtl tube is made of an inner tube placed within an outer tube. Both tubes are centered at their tip making the inner tube ling at the center of the outer tube. Space between the two tubes is filled-in with an epoxy adhesive (Araldite or equivalent) on few mm near the tip. The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.
 
 The static pressure holes must be drilled at a minimum distance from the tube tip where airflow perturbations are reduced. A distance 4 times the diameter (d=4mm)of the outer tube is retains here (16mm). Four 1mm holes were drilled with a dremel hand tool. The three tubes are presented on the figure below.
 
@@ -214,7 +214,7 @@ numbered="true"
 
 The MCP3428 samples $P\_{diff}$ at 250Hz during flights. $V\_{Pitot}=\sqrt{\frac{2}{\rho}*P\_{diff}}$ with $\rho = 1.15$.
 
-No calibration were required. Sensor theoretical output scaling were used with the formula to compute the speed from the pressure. $\rho$ value was tune from a default value 1.2 to 1.16 which minimized the mean error however the improvement was not a big deal. The only value to adjust is the raw pressure measurement offet (zero). The zero value for the sensor useed is -1800. 
+No calibration were required. Sensor theoretical output scaling were used with the formula to compute the speed from the pressure. $\rho$ value was tune from a default value 1.2 to 1.16 which minimized the mean error however the improvement was not a big deal. The only value to adjust is the raw pressure measurement offset (zero). The zero value for the sensor used is -1800. 
 
 Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):
 
@@ -306,7 +306,7 @@ plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),'-k','linewidth',3)
 Using the GPS COG[^COG] field is not exactly the plane yaw direction $\Theta\_{heading}$ but the plane flight direction.
 Thus the COG is a biased plane yaw $\Theta\_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane air speed. It might be possible with a more sophisticated script to compensate this bias.
 
-W. Premerlani propose a [wind estimation](https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view) relying exclusively on GPS data. (To be tested with the same data set to compare...)
+W. Premerlani propose a [wind estimation](https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view) using exclusively GPS data. Tests with this GPS dataset was not conclusive while trying to use all GPS sample while the platform direction is modified (i.e. COG derivative is above a given threshold). GPS dynamic seems too slow to provide robust results.
 
 #### Other flight data
 
