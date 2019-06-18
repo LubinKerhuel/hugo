@@ -15,7 +15,7 @@ font = "myfont"
 description = "Rapid Control Prototyping projects using Matlab/Simulink coder and the Microchip MPLAB blockset to target dsPIC microcontrollers."
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image = ""
+sharing_image = "/img/firstar1600-qx7.jpg"
 
 # Twitter username (without @). Used when a vistor shares your site on Twitter.
 twitter = "LubinKerhuel"
@@ -29,7 +29,7 @@ logo = ""
 highlight = false # per page basis
 #     Example: highlight_languages = ["go", "lisp", "ocaml"]
 highlight_languages = ["matlab"]  # Add support for highlighting additional languages
- highlight_style = "vs2015"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+highlight_style = "vs2015"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
  # dark, github, ocean, monokai , monokai-sublime, vs2015
 # highlight_style = "Default"
 
