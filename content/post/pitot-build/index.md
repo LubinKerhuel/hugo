@@ -125,11 +125,12 @@ Table below provide theoretical differential pressure expected for various speed
 | 30 | 108	| 540	 |5.4 | 2646 |
 | 40 | 144	| 960	 |9.6 | *4704* (4095 sat) |
 
-### Signal conditioning and conversion 
+### Signal conditioning and conversion
 
 The pressure sensor is placed close (~10cm) to the Pitot tube on the wing. The analog to digital conversion is also done on site to avoid noise pollution of analog signal. The [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC. 
 
-The [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) output analog signal is connected to the [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor with 1.2k and 560 ohms to the 3.3V ref and GND. $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.
+The [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) output analog signal is connected to the [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor to obtain 1V from the 3.3V reference (480 & 1kOhms). $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.
+<!-- Measured 480 840 for the divisor. Write down 560 and 1.2k -->
 
 The ADC Sigma-Delta is configured for 
 
@@ -148,7 +149,7 @@ src="/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg"
 link="/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg"
 width="80%"
 title="Pressure sensor and electronics mounted on a DIP adapter board."
-caption="Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A 3.3V voltage regulator adapt and filter out the 5V input voltage."
+caption="Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage."
 numbered="true"
 >}}
 
@@ -165,7 +166,9 @@ caption="90 minutes lasting static measurement indoor shows a slow drift and a s
 numbered="true"
 >}}
 
-The sensor is sensitive to its own orientation. Moving the sensor up-side down create an offset of (100 LSB[^LSB]; to be checked).
+The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB[^LSB] with the analog to digital circuit setting).
+
+MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator ([MCP 1700](http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf)) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particularly, periodic peak noise (150 LSB) is noticed wheh a 3DR telemetry module was powered from the same 5V power supply.
 
 ## Flight setup
 
