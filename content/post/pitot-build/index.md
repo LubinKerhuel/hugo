@@ -127,7 +127,7 @@ Table below provide theoretical differential pressure expected for various speed
 
 ### Signal conditioning and conversion
 
-The pressure sensor is placed close (~10cm) to the Pitot tube on the wing. The analog to digital conversion is also done on site to avoid noise pollution of analog signal. The [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC. 
+The pressure sensor is placed close (~10cm) to the Pitot tube on the wing. The analog to digital conversion is also done on site to avoid noise pollution of analog signal. The [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) from Microchip is a high resolution sigma-delta converter with four differential inputs and a programmable gain factor from 1 to 8. It has a digital I2C interface to connect to the dsPIC and its I2C address can be modified. Similar DAC to consider are MCP342x family or the newer MCP346x family or MCP356x providing increased accuracy and higher sampling rate ; The package is smaller thus more difficult to handle for a DIY project.
 
 The [MP3V5004dp](https://www.nxp.com/part/MP3V5004DP) output analog signal is connected to the [MCP3428](https://www.microchip.com/wwwproducts/en/MCP3428) Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor to obtain 1V from the 3.3V reference (480 & 1kOhms). $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.
 <!-- Measured 480 840 for the divisor. Write down 560 and 1.2k -->
@@ -256,7 +256,7 @@ title="GPS Speed over ground (red). Pitot air-speed (dashed blue) with parameter
 caption="Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the Pitot is averaged and under-sampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. GPS (red) and Pitot minus Wind (black) matches."
 numbered="true" >}}
 
-Further figures are available in [slides](/slides/pitot-build/#/10).
+More figures in [online presentation](/slides/pitot-build/#/10).
 
 RMS error is relatively low regarding the measured speed value. Part of the error is also due to wind gust and GPS limited accuracy particularly at estimating fast change of vertical speed.
 
