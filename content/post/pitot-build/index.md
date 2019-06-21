@@ -9,6 +9,7 @@ tags:
   - sensor
   - air-speed
   - wind
+  - experimental
 categories: 
   - electronics
   - sensor
@@ -155,20 +156,22 @@ numbered="true"
 
 ### Sensor static tests
 
-A 90 minutes lasting measurement is performed indoor without movements. Sensor output were logged at 100Hz. The figure below shows a slow drift. The sensor standard deviation measured on the overall measurement is 0.54 Pa (including the drift).
+A 90 minutes lasting measurement is performed indoor without movements. Sensor output were logged at 100Hz. The figure below shows a slow drift (correlated with temperature or battery decay ? TBD). The sensor standard deviation measured on the overall measurement is 0.54 Pa (including the drift).
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-static-characteristic.png"
 link="/img/pitot-darcy-prandtl-static-characteristic.png"
 width="100%"
-title="Differential Sensor static characteristics"
+title="Experimental static characteristic of the MP3V5004dp differential pressure sensor"
 caption="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB"
 numbered="true"
 >}}
 
+#### possible noise/offset sources
+
 The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB[^LSB] with the analog to digital circuit setting).
 
-MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator ([MCP 1700](http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf)) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particularly, periodic peak noise (150 LSB) is noticed wheh a 3DR telemetry module was powered from the same 5V power supply.
+MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator ([MCP 1700](http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf)) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.
 
 ## Flight setup
 
@@ -178,8 +181,8 @@ The sensor is mounted on the wing of a FirStar 1600 RC plane.
 src="/img/firstar1600-qx7.jpg"
 link="/img/firstar1600-qx7.jpg"
 width="80%"
-title="FirStar 1600 Volantex RC plane."
-caption="Platform used for tests."
+title="FirStar 1600 Volantex RC plane"
+caption="Platform used for tests"
 numbered="true"
 >}}
 
@@ -200,7 +203,7 @@ One magnet is glued on the Pitot tube. A 2nd magnet integrated in the wing allow
 src="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
 link="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
 width="100%"
-title="Brass Pitot tube with its electronic board installed on the Firstar 1600 fixed wing platform."
+title="Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform."
 numbered="true"
 >}}
 
@@ -239,24 +242,26 @@ The airplane ground speed (GPS) is estimated with the difference of the air spee
 
  $V\_{GPS} \approx V\_{Pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) $
 
-The figure below presents the air speed in dashed blue. The reconstructed ground speed (black) matches accurately with the GPS velocity (red) which prove the correctness of the air-speed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The air-speed measurement presents a high  sensitivity even at low speed.
-
-The error is defined with $error = V\_{gps} - \left( V\_{Pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is presented in the table:
-
-|  error | m/s | km/h |
-|:--:|:--:|:--:|
-| mean | 0.017 | 0.06 |
-| standard deviation | 0.74 | 2.6 |
+The figure below presents the air speed in blue. The reconstructed ground speed (black) matches accurately with the GPS velocity (red) which prove the correctness of the air-speed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The air-speed measurement presents a high  sensitivity even at low speed.
 
 {{< figure 
 src="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
 link="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
 width="100%"
-title="GPS Speed over ground (red). Pitot air-speed (dashed blue) with parameter $\rho=1.15$. Reconstructed up-front wind (green). Pitot air-speed minus wind estimated (green). up-front wind is estimated from the GPS COG angle ($\approx \theta\_{heading}$), and the estimated wind strength ($V\_{wind}= 2.5 m/s$) and direction ($\theta\_{wind} = 101°$)."
-caption="Data log of the first 200s of the Firstar 1600 RC plane flight. On the black curve, the Pitot is averaged and under-sampled by group of 5 samples reducing its sampling rate from 250Hz to 50Hz. GPS (red) and Pitot minus Wind (black) matches."
+title="Experimental measurement comparing GPS ground speed with pitot-tube air speed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the ground speed estimated from the pitot tube with wind correction."
+caption="GPS Speed over ground (red). Pitot air-speed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot air-speed minus wind estimated (black) where $V\_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta\_{heading}$), and the estimated wind strength ($V\_{wind}= 2.5 m/s$) and direction ($\theta\_{wind} = 101°$)."
 numbered="true" >}}
 
 More figures in [online presentation](/slides/pitot-build/#/10).
+
+The GPS update rate is 10Hz. It is sampled at 50Hz to minimize delay. The pitot-tube update rate is 260Hs and it is sampled at 250Hz. 
+
+The error is defined with $error = V\_{gps} - \left( V\_{Pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is:
+
+|  error | m/s | km/h |
+|:--:|:--:|:--:|
+| mean | 0.017 | 0.06 |
+| standard deviation | 0.74 | 2.6 |
 
 RMS error is relatively low regarding the measured speed value. Part of the error is also due to wind gust and GPS limited accuracy particularly at estimating fast change of vertical speed.
 
@@ -275,7 +280,7 @@ The curve below shows the difference between the Ground speed (GPS) with the air
 src="/img/pitot-darcy-prandtl-speed-error-wind-estimation.png"
 link="/img/pitot-darcy-prandtl-speed-error-wind-estimation.png"
 width="100%"
-title="GPS ground speed and Pitot air speed difference in function of the plane direction during the 450s flight of a Firstar 1600."
+title="Experimental result presenting GPS ground speed and Pitot air speed difference in function of the plane direction of 450s flight of the RC Firstar 1600 plane."
 caption="Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta\_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."
 numbered="true"
 >}}
