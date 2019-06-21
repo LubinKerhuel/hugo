@@ -1,18 +1,24 @@
 ﻿---
 title: Miniature air-speed sensor for RC plane or UAVs.
 subtitle: Mechanic, electronic and performances of a Pitot-Darcy-Prandtl air-speed sensor embedded in a fixed-wing platform.
+
+# Project summary to display on homepage.
 summary: DIY miniature Pitot-tube with mechanic and electronics descriptions. In flight air-speed performance is compared to a GPS ground speed used as reference. Estimate wind strength and direction mixing GPS and Pitot outputs.
+
 authors:
 - Lubin
+
 tags: 
   - Pitot
   - sensor
   - air-speed
   - wind
   - experimental
+
 categories: 
   - electronics
   - sensor
+
 date: 2019-05-28
 #lastmod: "2019-04-12T00:00:00Z"
 featured: true
@@ -328,7 +334,9 @@ The uBlox trace presented on the map below is better than the MTK trace. The uBl
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" style="width: 100% ; height: 480px"></iframe>
 
 <!--
-C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind -->
+Project folder:
+C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind 
+-->
 
 [^COG]: Course Over Ground
 [^LSB]: Least Significant Bit (or ULP: Unit in the Last Place)
