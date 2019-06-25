@@ -316,7 +316,9 @@ Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be bes
 &lt;p&gt;The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used exclusively for the curves above. The MTK trace can be shown on the &lt;a href=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34;&gt;map&lt;/a&gt; (top left icon). The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p&gt;
 &lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34; style=&#34;width: 100% ; height: 480px&#34;&gt;&lt;/iframe&gt;
 &lt;!--
-C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;
+Project folder:
+C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind
+--&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;

@@ -316,7 +316,9 @@ Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be bes
 &lt;p&gt;The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used exclusively for the curves above. The MTK trace can be shown on the &lt;a href=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34;&gt;map&lt;/a&gt; (top left icon). The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p&gt;
 &lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34; style=&#34;width: 100% ; height: 480px&#34;&gt;&lt;/iframe&gt;
 &lt;!--
-C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;
+Project folder:
+C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind
+--&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
@@ -837,7 +839,9 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;li id=&#34;fn:IMU&#34;&gt;Inertial Measurement Unit
 &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:IMU&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>Prototypage Rapide avec Simulink sur dsPIC</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid><description>
+&lt;/div&gt;</description></item><item><title>Old website</title><link>https://lubin.kerhuel.eu/project/www-kerhuel-eu-wiki/</link><pubDate>Sat, 25 Jun 2011 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/project/www-kerhuel-eu-wiki/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;!--
+--&gt;</description></item><item><title>Prototypage Rapide avec Simulink sur dsPIC</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid><description>
 &lt;h1 id=&#34;prototypage-rapide&#34;&gt;Prototypage rapide&lt;/h1&gt;
 &lt;h2 id=&#34;avec-simulink-sur-dspic&#34;&gt;avec Simulink sur dsPIC&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.microchip.com/SimulinkBlocks&#34;&gt;MPLAB device blocks for Simulink&lt;/a&gt;&lt;/p&gt;

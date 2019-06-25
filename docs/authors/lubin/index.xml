@@ -316,7 +316,9 @@ Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be bes
 &lt;p&gt;The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used exclusively for the curves above. The MTK trace can be shown on the &lt;a href=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34;&gt;map&lt;/a&gt; (top left icon). The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p&gt;
 &lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9&#34; style=&#34;width: 100% ; height: 480px&#34;&gt;&lt;/iframe&gt;
 &lt;!--
-C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind --&gt;
+Project folder:
+C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind
+--&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
@@ -417,6 +419,6 @@ It reduces the time from the simulation to our &lt;a href=&#34;https://www.resea
 &lt;p&gt;I joined &lt;a href=&#34;https://www.microchip.com/&#34;&gt;Microchip Technology&lt;/a&gt; where I am pursuing the development of the &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;MPLAB blockset&lt;/a&gt; to target dsPIC and PIC32 microcontrollers.&lt;/p&gt;
 &lt;p&gt;For company, scientists, and students, &lt;em&gt;rapid prototyping enables focusing on new ideas&lt;/em&gt; rather than getting into the details of embedded programming.
 Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.&lt;/p&gt;
-&lt;p&gt;I am not academic. I have limited opportunity for traditional publication. I share custom projects as they come using the most practical format for me to maintain.
-Most projects uses the free &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;Microchip blockset&lt;/a&gt; targeting dsPIC, PIC32 and few others microcontrollers. Old project are available on my &lt;a href=&#34;https://www.kerhuel.eu/wiki/&#34;&gt;old website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;None are reference design. None are endorsed by Microchip Technology.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;I am not academic. I have limited opportunity for scientific publication. I share custom projects as they come using the most practical format for me to maintain.
+Most projects uses the free &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;Microchip blockset&lt;/a&gt; targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my &lt;a href=&#34;https://www.kerhuel.eu/wiki/&#34;&gt;old website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The postings on this site are my own and do not represent Microchip&amp;rsquo;s positions, strategies, or opinions.&lt;/p&gt;</description></item></channel></rss>
