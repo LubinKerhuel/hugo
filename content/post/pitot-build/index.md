@@ -3,7 +3,7 @@ title: Miniature air-speed sensor for RC plane or UAVs.
 subtitle: Mechanic, electronic and performances of a Pitot-Darcy-Prandtl air-speed sensor embedded in a fixed-wing platform.
 
 # Project summary to display on homepage.
-summary: DIY miniature Pitot-tube with mechanic and electronics descriptions. In flight air-speed performance is compared to a GPS ground speed used as reference. Estimate wind strength and direction mixing GPS and Pitot outputs.
+summary: Miniature Pitot-tube with mechanic and electronics descriptions. In flight air-speed performance is compared to a GPS ground speed used as reference. Estimate wind strength and direction mixing GPS and Pitot outputs.
 
 authors:
 - Lubin
@@ -14,13 +14,14 @@ tags:
   - air-speed
   - wind
   - experimental
+  - DIY
 
 categories: 
   - electronics
   - sensor
 
 date: 2019-05-28
-#lastmod: "2019-04-12T00:00:00Z"
+#lastmod: 2019-05-25
 featured: true
 draft: false
 
@@ -62,17 +63,17 @@ highlight: true
 
 {{% toc %}}
 
-## Principle
+## Pitot tube principle
 
-A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P\_t$ is added at its tip. The differential pressure $P\_{diff}$ is measured between the tip of the tube $P\_t$ and the static pressure $P\_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.
+A Pitot-Darcy probe is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P\_t$ is added at its tip. The differential pressure $P\_{diff}$ is measured between the tip of the tube $P\_t$ and the static pressure $P\_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.
 
 The pressure added at tube tip is the square of the air-speed : $P\_t = P\_s + \frac{1}{2}\rho v^2$ where $ P\_t $ and $P\_s$ are measured in Pascal unit (Pa). $\rho$ is the air density constant typically in $[1.14 \ 1.34]$ depending on temperature & altitude. $v$ is the air-speed in $m.s^{-1}$. The differential pressure measured is $P\_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$ 
 
-## Prandtl tube
+## Pitot-Prandtl tube
 
-Prandtl tube is made of an inner tube placed within an outer tube. Both tubes are centered at their tip making the inner tube ling at the center of the outer tube. Space between the two tubes is filled-in with an epoxy adhesive (Araldite or equivalent) on few mm near the tip. The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.
+Prandtl tube is one version of a Pitot probe where an inner tube is placed in the center of an outer tube. Space between the two tubes is filled-in on few mm near the tip with an epoxy adhesive (Araldite or equivalent). The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.
 
-The static pressure holes must be drilled at a minimum distance from the tube tip where airflow perturbations are reduced. A distance 4 times the diameter (d=4mm)of the outer tube is retains here (16mm). Four 1mm holes were drilled with a dremel hand tool. The three tubes are presented on the figure below.
+The static pressure holes must be drilled at a minimum distance from the tube tip where airflow perturbations are reduced. A distance 4 times the diameter (d=4mm)of the outer tube is retains here (16mm). Four 1mm holes were drilled with a Dremel hand tool. The three tubes are presented on the figure below.
 
 First test was done using brass tubes. Inner tube width is 2/1mm (outside/inside) and outer tube is 4/3mm.
 
@@ -80,7 +81,7 @@ First test was done using brass tubes. Inner tube width is 2/1mm (outside/inside
 src="/img/pitot-darcy-prandtl-build-brasstubes.jpg"
 link="/img/pitot-darcy-prandtl-build-brasstubes.jpg"
 width="80%"
-title="Brass inner and outer tubes used to build the DIY Pitot tube."
+title="Brass inner and outer tubes of the Pitot tube."
 caption="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm.  Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip."
 numbered="true"
 >}}
@@ -339,4 +340,4 @@ C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_Pit
 -->
 
 [^COG]: Course Over Ground
-[^LSB]: Least Significant Bit (or ULP: Unit in the Last Place)
+[^LSB]: Least Significant Bit

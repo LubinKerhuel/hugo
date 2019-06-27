@@ -31,7 +31,7 @@ draft: true
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
-  caption: "IMU sensor boards available in 2019: GY-91 (open source) ; IMU 10DOF v2, 9DOF and 6DOF (Drotek)"
+  caption: "IMU sensor boards available in 2019: GY-91 (open source) ; IMU 10DoF v2, 9DoF and 6DoF (Drotek)"
   focal_point: "Smart"
   preview_only: false
 
@@ -67,36 +67,49 @@ The objective is to create a data fusion algorithm to estimate one's attitude fr
 
 ## Sensors
 
-Three types of MEMS sensors typically noted AGM measure 3 quantities in 3 axes:
+Three types of MEMS sensors noted respectively A,G and M measure 3 quantities in 3 axes:
 
-- (A) Accelerometers measure the acceleration vector
-- (G) rate Gyros measure the angular speed rate
-- (M) Magnetometers measure the magnetic field
+- (A) Accelerometers measure the acceleration vector $\vec{a}$
+- (G) rate Gyros measure the angular speed rate $\vec{G}$
+- (M) Magnetometers measure the magnetic field $\vec{m}$
 
-Theses sensors are sometime all in one package. Many boards exist providing 6 (AG), 9 (AGM) and sometime 10 DoF[^DoF] (AGM and barometer).
-example of sensors are: MPU9250 - MPU6050 - MPU6000 - ICM20608
+Theses sensors are sometime all in one single package. Boards provides 6 (AG), 9 (AGM) and even 10 DoF[^DoF] including a barometer. 
 
-### Algorithms
+Example of MEMS sensors: MPU9250 - MPU6050 - MPU6000 - ICM20608
 
-#### Accelerometers - Magnetometers (AM)
+## Attitude algorithms introduction
 
-The simplest algorithm compute attitude from A and M vectors. The gravity and the magnetic vectors $\vec{g}$ and $\vec{m}$ and their vectorial product $\vec{g} \times \vec{m}$ define a  base which is ortho-normalized and placed in a column-wise vector matrix to form the DCM rotation matrix defining the attitude of the object.
+### Accelerometers - Magnetometers (AM)
 
-This algorithm works under the assumption that
+The **TRIAD** algorithm computes attitude from vectors $\vec{a}$ and $\vec{m}$: 
+The gravity $\vec{a}$ and the earth magnetic vector $\vec{m}$ are measured in the object frame. Their vectorial product $\vec{k} = \vec{a} \times \vec{m}$ is orthogonal to  $\vec{g}$ and $\vec{m}$. The base $(\vec{a},\vec{m},\vec{k})$ is ortho-normalized by replacing the vector $\vec{m}$ with $\vec{j} = \vec{a} \times \vec{k}$. The base  $(\vec{a},\vec{j},\vec{k})$ base is ortho-normal. Placed in a column-wise vector matrix, the base $(\vec{a},\vec{j},\vec{k})$ is the DCM[^DCM] rotation matrix which define the attitude of the object frame. The invert rotation is the transposed DCM matrix.
 
-- the object is static (i.e. no linear accelerating) and
+TRIAD algorithm works under the assumption that
+
+- the object is not subject to accelerations and
 - the object is not subject to magnetic perturbations.
 
-For most dynamic systems, theses assumptions are constraining.
-Adding a rate gyro coupled with a data fusion algorithm reduces theses constraints.
+Most dynamics system are subject to accelerations, or take place indoor where magnetic field is not reliable. Another sensor allows reducing theses assumption constraints.
 
-#### Accelerometers - rate Gyro - Magnetometers (AGM)
+### Accelerometers - rate Gyro - Magnetometers (AGM)
 
-AGM algorithms fusing accelerometers with magnetometers with rate gyro, we have 3 steps:
+Attitude estimation relying only on Accelerometers and Magnetometers are prone to errors as the gravity vector measurement is impacted by system own acceleration and earth magnetic field vector measurement is affected by local change of the magnetic field.
 
-- Prediction
-- Error
-- Correction
+A rate gyro MEMS sensor measure angular speed rate in 3 axes. The rate gyro measurement is not perturbed[^rate-gyro-perturbation]. Attitude angle change can be tracked by integrating the angular speed rate. However a rate gyro is not self-sufficient because 
+
+- Integrator initial angle value is not defined
+- Integrator accumulates any sensor bias error making the attitude to drift
+
+AGM algorithms use the `rate gyro` sensor to track the fast dynamic the attitude and the `accelerometers` and `magnetometers` sensors for initial attitude and correction of the drift inherent to the angular speed integration.
+
+Three steps are typical from IMU data fusion algorithm:
+
+1. Prediction
+2. Error
+3. Correction
+
+## AGM algorithms
+
 
 
 Complementary Filter, good for 2D
@@ -104,9 +117,6 @@ Complementary Filter, good for 2D
 Kalman, overkilling
 
 whatever the algorithm picked, 3 steps:
-
-
-
 
 
 ### Algorithms
@@ -124,4 +134,6 @@ Recorded Data Workflow
 Recorded Sensor Data
 
 [^DoF]: Degree of Freedom
+[^DCM]: Direct Cosine Matrix
+[^rate-gyro-perturbation]: Rate gyro measurements are not modified by local magnetic field nor by its own acceleration, except important chocs.
 <!-- test code -->

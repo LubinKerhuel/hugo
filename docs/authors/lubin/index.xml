@@ -2,12 +2,12 @@
 &lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;principle&#34;&gt;Principle&lt;/h2&gt;
-&lt;p&gt;A Pitot-Darcy tube is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P_t$ is added at its tip. The differential pressure $P_{diff}$ is measured between the tip of the tube $P_t$ and the static pressure $P_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
+&lt;h2 id=&#34;pitot-tube-principle&#34;&gt;Pitot tube principle&lt;/h2&gt;
+&lt;p&gt;A Pitot-Darcy probe is an air speed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P_t$ is added at its tip. The differential pressure $P_{diff}$ is measured between the tip of the tube $P_t$ and the static pressure $P_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p&gt;
 &lt;p&gt;The pressure added at tube tip is the square of the air-speed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are measured in Pascal unit (Pa). $\rho$ is the air density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude. $v$ is the air-speed in $m.s^{-1}$. The differential pressure measured is $P_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$&lt;/p&gt;
-&lt;h2 id=&#34;prandtl-tube&#34;&gt;Prandtl tube&lt;/h2&gt;
-&lt;p&gt;Prandtl tube is made of an inner tube placed within an outer tube. Both tubes are centered at their tip making the inner tube ling at the center of the outer tube. Space between the two tubes is filled-in with an epoxy adhesive (Araldite or equivalent) on few mm near the tip. The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.&lt;/p&gt;
-&lt;p&gt;The static pressure holes must be drilled at a minimum distance from the tube tip where airflow perturbations are reduced. A distance 4 times the diameter (d=4mm)of the outer tube is retains here (16mm). Four 1mm holes were drilled with a dremel hand tool. The three tubes are presented on the figure below.&lt;/p&gt;
+&lt;h2 id=&#34;pitot-prandtl-tube&#34;&gt;Pitot-Prandtl tube&lt;/h2&gt;
+&lt;p&gt;Prandtl tube is one version of a Pitot probe where an inner tube is placed in the center of an outer tube. Space between the two tubes is filled-in on few mm near the tip with an epoxy adhesive (Araldite or equivalent). The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.&lt;/p&gt;
+&lt;p&gt;The static pressure holes must be drilled at a minimum distance from the tube tip where airflow perturbations are reduced. A distance 4 times the diameter (d=4mm)of the outer tube is retains here (16mm). Four 1mm holes were drilled with a Dremel hand tool. The three tubes are presented on the figure below.&lt;/p&gt;
 &lt;p&gt;First test was done using brass tubes. Inner tube width is 2/1mm (outside/inside) and outer tube is 4/3mm.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
 &lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
@@ -15,7 +15,7 @@
 &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg&#34; alt=&#34;Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip.&#34;/&gt;
 &lt;/div&gt;
 &lt;a href=&#34;https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;h4&gt;Brass inner and outer tubes used to build the DIY Pitot tube.&lt;/h4&gt;
+&lt;figcaption&gt;&lt;h4&gt;Brass inner and outer tubes of the Pitot tube.&lt;/h4&gt;
 &lt;p&gt;Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip.&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -322,7 +322,7 @@ C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_Pit
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:LSB&#34;&gt;Least Significant Bit (or ULP: Unit in the Last Place)
+&lt;li id=&#34;fn:LSB&#34;&gt;Least Significant Bit
 &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:LSB&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li id=&#34;fn:COG&#34;&gt;Course Over Ground
 &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:COG&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
@@ -419,6 +419,9 @@ It reduces the time from the simulation to our &lt;a href=&#34;https://www.resea
 &lt;p&gt;I joined &lt;a href=&#34;https://www.microchip.com/&#34;&gt;Microchip Technology&lt;/a&gt; where I am pursuing the development of the &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;MPLAB blockset&lt;/a&gt; to target dsPIC and PIC32 microcontrollers.&lt;/p&gt;
 &lt;p&gt;For company, scientists, and students, &lt;em&gt;rapid prototyping enables focusing on new ideas&lt;/em&gt; rather than getting into the details of embedded programming.
 Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.&lt;/p&gt;
-&lt;p&gt;I am not academic. I have limited opportunity for scientific publication. I share custom projects as they come using the most practical format for me to maintain.
-Most projects uses the free &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;Microchip blockset&lt;/a&gt; targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my &lt;a href=&#34;https://www.kerhuel.eu/wiki/&#34;&gt;old website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The postings on this site are my own and do not represent Microchip&amp;rsquo;s positions, strategies, or opinions.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Most projects use the free &lt;a href=&#34;https://www.microchip.com/simulinkblocks/&#34;&gt;Microchip blockset&lt;/a&gt; targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my &lt;a href=&#34;https://www.kerhuel.eu/wiki/&#34;&gt;old website&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+&lt;div&gt;
+The postings on this site are my own and do not represent Microchip&amp;rsquo;s positions, strategies, or opinions.
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>
