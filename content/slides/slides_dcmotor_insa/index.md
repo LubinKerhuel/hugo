@@ -28,7 +28,7 @@ slides:
 
 ## avec Simulink sur dsPIC
 
-[MPLAB device blocks for Simulink](https://www.microchip.com/SimulinkBlocks)
+[MPLAB device blocks for Simulink](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink)
 
 [L.Kerhuel](/) & [R.Delpoux](http://www.ctrl-elec.fr/)
  
@@ -357,7 +357,7 @@ https://lubin.kerhuel.eu/slides/slides_dcmotor_insa
 ## Liens:
 
 - MPLAB device blocks for Simulink:
-	https://www.microchip.com/SimulinkBlocks
+	https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink
 - MPLAB X:
 	https://www.microchip.com/MPLABX
 - XC16:

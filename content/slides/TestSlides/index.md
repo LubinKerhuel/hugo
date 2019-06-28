@@ -194,4 +194,4 @@ Create `assets/css/reveal_custom.css` with:
 
 ---
 
-[blockset]: https://www.microchip.com/SimulinkBlocks "Blockset for dsPIC and PIC32"
+[blockset]: https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink "Blockset for dsPIC and PIC32"

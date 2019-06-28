@@ -130,12 +130,12 @@ It reduces the time from the simulation to our [autonomous robot](https://www.re
 
 I used the same Rapid Control Prototyping (RCP) to develop data fusion algorithm on motion analysis for wearable sports article at [MOVEA](https://www.ideas-laboratory.com/projects/movea/) in 2010-2011. 
 
-I joined [Microchip Technology](https://www.microchip.com/) where I am pursuing the development of the [MPLAB blockset](https://www.microchip.com/simulinkblocks/) to target dsPIC and PIC32 microcontrollers.
+I joined [Microchip Technology](https://www.microchip.com/) where I am pursuing the development of the [MPLAB blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink) to target dsPIC and PIC32 microcontrollers.
 
 For company, scientists, and students, *rapid prototyping enables focusing on new ideas* rather than getting into the details of embedded programming.
 Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.
 
-Most projects use the free [Microchip blockset](https://www.microchip.com/simulinkblocks/) targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my [old website](https://www.kerhuel.eu/wiki/).
+Most projects use the free [Microchip blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink) targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my [old website](https://www.kerhuel.eu/wiki/).
 
 {{% alert warning %}}
 The postings on this site are my own and do not represent Microchip's positions, strategies, or opinions.
