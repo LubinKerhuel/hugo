@@ -7,7 +7,7 @@ date: 2011-06-25
 draft: false
 
 # Project summary to display on homepage.
-summary: Experiments (2006-2011) with rapid control prototyping and dsPIC. Former website and forum.
+summary: rapid control prototyping experiments (2006-2011) with dsPIC. Former blockset, website and forum.
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`

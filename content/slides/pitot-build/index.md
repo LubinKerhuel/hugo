@@ -2,7 +2,7 @@
 title: miniature air-speed sensor
 
 sitemap:
-  priority: 0.5
+  priority: 1
 
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming

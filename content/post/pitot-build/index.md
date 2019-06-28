@@ -169,7 +169,7 @@ A 90 minutes lasting measurement is performed indoor without movements. Sensor o
 src="/img/pitot-darcy-prandtl-static-characteristic.png"
 link="/img/pitot-darcy-prandtl-static-characteristic.png"
 width="100%"
-title="Experimental static characteristic of the MP3V5004dp differential pressure sensor"
+title="Experimental pitot-tube static characteristic with the MP3V5004dp differential pressure sensor"
 caption="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB"
 numbered="true"
 >}}
@@ -255,13 +255,13 @@ The figure below presents the air speed in blue. The reconstructed ground speed 
 src="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
 link="/img/pitot-darcy-prandtl-gps-wind-calibration.png"
 width="100%"
-title="Experimental measurement comparing GPS ground speed with pitot-tube air speed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the ground speed estimated from the pitot tube with wind correction."
+title="Experimental measurement comparing GPS ground speed with pitot-tube air speed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the the pitot tube subtracted from the estimated wind."
 caption="GPS Speed over ground (red). Pitot air-speed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot air-speed minus wind estimated (black) where $V\_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta\_{heading}$), and the estimated wind strength ($V\_{wind}= 2.5 m/s$) and direction ($\theta\_{wind} = 101°$)."
 numbered="true" >}}
 
 More figures in [online presentation](/slides/pitot-build/#/10).
 
-The GPS update rate is 10Hz. It is sampled at 50Hz to minimize delay. The pitot-tube update rate is 260Hs and it is sampled at 250Hz. 
+The GPS update rate is 10Hz. It is sampled at 50Hz to minimize delay. The pitot-tube sensor update rate is 260Hs but it is sampled at 250Hz.
 
 The error is defined with $error = V\_{gps} - \left( V\_{Pitot} - V_{wind}*cos(\Theta\_{heading} + \Theta\_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is:
 
