@@ -21,8 +21,8 @@ tags:
 
 # Page metadata.
 
-# date: "2018-09-09T00:00:00Z"
-# lastmod: "2018-09-09T00:00:00Z"
+date: 2019-07-01
+# lastmod: "2019-07-01"
 draft: false  # Is this a draft? true/false
 toc: true  # Show table of contents? true/false
 type: docs  # Do not modify.
@@ -86,11 +86,9 @@ It also support:
 - WayPoint Protocol
 - Parameters Protocol
 
-### Receiver 
+### Receiver
 
 The receiver blocks support
 - FrSky S.BUS protocol: receiption of transmitter commands
 - FrSky S.Port protocol: Dedicated port to send values to the transmitter through telemetry
 - FrSky F.Port protocol: mix both functions of S.BUS and S.Port in one unique port
-
-
