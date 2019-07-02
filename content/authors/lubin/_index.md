@@ -110,6 +110,10 @@ interests = [
 
 +++
 
+{{% alert warning %}}
+The postings on this site are my own and do not represent Microchip's positions, strategies, or opinions.
+{{% /alert %}}
+
 Control projects during my academic study ended-up with simplest PID algorithm tuned through successive trials.
 Code implementation for embedded systems requires an important effort. Time left for modeling, identification and simulation is often null.
 
@@ -136,7 +140,3 @@ For company, scientists, and students, *rapid prototyping enables focusing on ne
 Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.
 
 Most projects use the free [Microchip blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink) targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my [old website](https://www.kerhuel.eu/wiki/).
-
-{{% alert warning %}}
-The postings on this site are my own and do not represent Microchip's positions, strategies, or opinions.
-{{% /alert %}}
