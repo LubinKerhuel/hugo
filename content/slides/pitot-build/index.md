@@ -21,6 +21,14 @@ slides:
   previewLinks: true
 
   backgroundTransition: fade
+
+  # width: 100%
+  # height: 100%
+  # margin: 0
+  # minScale: 1
+  # maxScale: 3  
+
+  
   
 #markup: mmark 
 
@@ -71,13 +79,20 @@ slides:
 
 ---
 
-![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg)
+<p class="stretch">
+<img data-src="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg">
+</p>
+
+<!-- ![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg) -->
 
 ---
 
+<p class="stretch">
+<img data-src="/img/pitot-darcy-prandtl-wing-carbon2.jpg">
+</p>
 
-<section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
-</section>
+<!-- <section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section> -->
 
 ---
 

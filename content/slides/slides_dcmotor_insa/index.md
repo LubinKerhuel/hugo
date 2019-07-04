@@ -40,7 +40,9 @@ slides:
 
 ---
 
-![./Model_Hardware_Test_withSampleTime.png](./Model_Hardware_Test_withSampleTime.png)
+<p class="stretch">
+<img data-src="./Model_Hardware_Test_withSampleTime.png">
+</p>
 
 ---
 
@@ -64,7 +66,8 @@ slides:
 
 {{< slide background-color="#FFFFFF" >}}
 
-![./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png](./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png)
+<section data-background-image="./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
 
 ---
 
@@ -125,7 +128,9 @@ Implémentation en temps discret avec un pas de calcul fixe
 
 #### Modèle multi-rate
 
-![./Model_Hardware_Test_withSampleTime.png](./Model_Hardware_Test_withSampleTime.png)
+<p class="stretch">
+<img data-src="./Model_Hardware_Test_withSampleTime.png">
+</p>
 
 ---
 
@@ -205,7 +210,8 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
-![./FloatFixed_1.png](./FloatFixed_1.png)
+<section data-background-image="./FloatFixed_1.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
 
 ---
 
@@ -233,15 +239,18 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
  
 ---
 
-![./FloatFixed_2.png](./FloatFixed_2.png)
+<section data-background-image="./FloatFixed_2.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
 
 ---
 
-![./FloatFixed_3.png](./FloatFixed_3.png)
+<section data-background-image="./FloatFixed_3.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
 
 ---
 
-![./FloatFixed_4.png](./FloatFixed_4.png)
+<section data-background-image="./FloatFixed_4.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
 
 ---
 ## Script Matlab pour tester un flottant 8 bits
@@ -270,7 +279,9 @@ TotalVal = vals'*exps;
 
 ## Data-type 
 
-![./Simulink_TypeCast_FixPtFormat.png](./Simulink_TypeCast_FixPtFormat.png)
+<p class="stretch">
+<img data-src="./Simulink_TypeCast_FixPtFormat.png">
+</p>
 
 ---
 
@@ -314,13 +325,13 @@ https://lubin.kerhuel.eu/slides/slides_dcmotor_insa
 
 ---
 
-![./TP_Correction_OpAmp.png](./TP_Correction_OpAmp.png)
-
+<section data-background-image="./TP_Correction_OpAmp.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
 
 ---
 
-
-![./TP_Correction_ADC.png](./TP_Correction_ADC.png)
+<section data-background-image="./TP_Correction_ADC.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
 
 ---
 
@@ -328,29 +339,29 @@ https://lubin.kerhuel.eu/slides/slides_dcmotor_insa
 
 ---
 
-![./TP_Correction_PWM_Main.png](./TP_Correction_PWM_Main.png)
+<section data-background-image="./TP_Correction_PWM_Main.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+---
+
+<section data-background-image="./TP_Correction_PWM_02.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+---
+
+<section data-background-image="./TP_Correction_PWM_03.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
+
+---
+
+<section data-background-image="./TP_Correction_PWM_04.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
 
 
 ---
 
-
-![./TP_Correction_PWM_02.png](./TP_Correction_PWM_02.png)
-
----
-
-
-![./TP_Correction_PWM_03.png](./TP_Correction_PWM_03.png)
-
----
-
-
-![./TP_Correction_PWM_04.png](./TP_Correction_PWM_04.png)
-
----
-
-
-![./TP_Correction_PWM_05.png](./TP_Correction_PWM_05.png)
-
+<section data-background-image="./TP_Correction_PWM_05.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+</section>
 
 ---
 
