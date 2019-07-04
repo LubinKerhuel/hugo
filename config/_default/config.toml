@@ -5,7 +5,7 @@
 # Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
 
 # Title of your site
-title = "Rapid Control Prototyping (RCP)"
+title = "Rapid Control Prototyping"
 
 disableLanguages = ["fr"]
 
