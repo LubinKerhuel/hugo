@@ -854,8 +854,11 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;img data-src=&#34;./Model_Hardware_Test_withSampleTime.png&#34;&gt;
 &lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img src=&#34;./Picooz_IdentificatoinBlockPresentation.png&#34; alt=&#34;./Picooz_IdentificatoinBlockPresentation.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Picooz_IdentificatoinBlockPresentation.png&#34; alt=&#34;./Picooz_IdentificatoinBlockPresentation.png&#34; /&gt;
+&lt;div class=&#34;stretch&#34;&gt;
+&lt;iframe src=&#34;//player.vimeo.com/video/309895581&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;!-- [Video](C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi) --&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;img src=&#34;./Picooz_Identificatoin_eq_01.png&#34; alt=&#34;./Picooz_Identificatoin_eq_01.png&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
