@@ -47,8 +47,8 @@ slides:
 ---
 
 ![./Picooz_IdentificatoinBlockPresentation.png](./Picooz_IdentificatoinBlockPresentation.png)
-
-[Video](C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi)
+{{< vimeo class="stretch" id="309895581" autoplay="false" >}}
+<!-- [Video](C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi) -->
 
 ---
 
