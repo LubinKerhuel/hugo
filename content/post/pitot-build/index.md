@@ -1,9 +1,9 @@
 ﻿---
-title: Miniature air-speed sensor for RC plane or UAVs.
-subtitle: Mechanic, electronic and performances of a Pitot-Darcy-Prandtl air-speed sensor embedded in a fixed-wing platform.
+title: Miniature air-speed sensor for RC plane and UAVs.
+subtitle: "A Pitot-Darcy-Prandtl air-speed sensor embedded in a fixed-wing platform: Parts, Electronic and Performances (DIY)."
 
 # Project summary to display on homepage.
-summary: Miniature Pitot-tube with mechanic and electronics descriptions. In flight air-speed performance is compared to a GPS ground speed used as reference. Estimate wind strength and direction mixing GPS and Pitot outputs.
+summary: Build a miniature Pitot-tube. Parts and electronic design are described. In flight air-speed performance is compared to a GPS ground speed used as reference. Wind speed is also estimated mixing GPS and Pitot informations.
 
 authors:
 - Lubin
@@ -31,7 +31,7 @@ slides: Pitot-build
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
-  caption: Carbon Pitot tube attached to the wing with a magnet.
+  caption: Carbon Pitot-tube attached to the wing with a magnet.
   focal_point: Left
   preview_only: false
 
