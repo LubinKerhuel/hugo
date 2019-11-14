@@ -6,7 +6,7 @@ weight: 10
 
 tags:
     - rapid prototyping
-    - model based design (MDB)
+    - model based design (MBD)
     - matlab
     - simulink
     - UAV
@@ -17,7 +17,7 @@ tags:
 
 #aliases = ["project/inverted_pendulum_flywheels/"]
 
-draft: false  # Is this a draft? true/false
+draft: true  # Is this a draft? true/false
 toc: true  # Show table of contents? true/false
 type: docs  # Do not modify.
 

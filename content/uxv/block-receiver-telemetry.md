@@ -6,7 +6,7 @@ weight: 10
 
 tags:
     - rapid prototyping
-    - model based design (MDB)
+    - model based design (MBD)
     - matlab
     - simulink
     - UAV

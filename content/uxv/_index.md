@@ -2,12 +2,12 @@
 # Course title, summary, and position.
 linktitle: UxV toolbox for Matlab-Simulink
 title: UxV toolbox
-summary: This toolbox provide matlab script and Simulink blocks. Script allows to decode, plot and feed simulation based on MAVlink log files. Block allows to add MAVLink, GPS, FrSky protocol S.BUS, Smart Port and F.Port feature to a model for code generation and is tested with dsPIC MCU. 
+summary: The UxV toolbox provides matlab script and Simulink blocks for autopilot. Script to decode, visualise MAVlink logs and configure a Simulink model feeding MAVlink signal for simulation. Block adds MAVLink, GPS, and FrSky protocol S.BUS, Smart Port and F.Port feature to a rapid prototyping model used for code generation working with the MPLAB blocks from microchip (targeting dsPIC microcontrollers). 
 weight: 1
 
 tags:
     - rapid prototyping
-    - model-based design (MDB)
+    - model-based design (MBD)
     - matlab
     - simulink
     - UAV
@@ -41,54 +41,62 @@ menu:
     weight: 1
 ---
 
-## Motivation
+## Overview
 
-Rapid Control Prototyping tools enable designing autopilot from simulink model.
-This model-based design speed-up the back and forth between simulation and experimental tests.
-Experimental logged data are compared against simulation hypothesis and might also feed a simulation allowing further improvements.
+The UxV toolbox for Matlab/Simulink provides Matlab scripts and simulink blocks for UAVs to handle MAVLink protocol, GPS, RC receivers and telemetry protocols.
 
-The MathWorks Embedded Coder / Simulink Coder generate code for blocks from the Simulink library.
-The MPLAB device blocks add peripheral blocks allowing to generate a standalone executable from the model. It also implement a multi-tasking scheduler allowing to benefit efficiently from multi-rate model. 
+- Matlab script for post flight data analyses (MAVLink).
+- Simulink blocks for autopilote model based design (Rapid Control Prototyping using Simulink)
 
-Intermediate protocol like GPS (NMEA over UART), MAVLink or modern receiver protocol like FrSky S.Bus, Smart Port and F.Port can be added using the C function Call block from the MPLAB device block. User must provide the corresponding C implementation or library. This technical requirement breaks simple block drag & drop design process you are typically looking for when using Rapid Control Prototyping tool.
+This model-based design and analysis tools speed-up the back and forth between experimental tests and simulation.
 
-## Features
+## Matlab scripts for MAVLink
 
-### Blocks
+Three main scripts enable decoding MAVLink messages, creating simulink model for simulation based on logged data, and generating map trajectory trace from GPS messages.
 
-The UxV toolbox provides blocks for 
+| Script           | Input | Output | Function                              |
+|------------------|-------|--------|---------------------------------------|
+| (1) *mavlink2mat*      | Mavlink log | .mat | matlab analysis   |
+| (2) *mavlink2simulink* | Mavlink log | .mat / .mdl (.slx)  | simulation based on real data |
+| (3) *mavlink2kml*      | Mavlink log | .kml | plot GPS trace(s) on a map |
+| *mavlink2gui*      | Mavlink log | GUI | graphical exploration of mavlink log |
 
-- GPS NMEA message decoding,
-- MAVLink protocol (packets, WayPoints, Parameters)
-- FrSky protocol (S.Bus, Smart Port, F.port)
 
-Moreover, the MAVLink and FrSky functions benefits from Simulink extra informations like block sampling rate and simulink parameters structure. This allows for example integrating the MAVLink Parameters protocol so as to enable modifying model tunable parameters. Practically, it enable tuning of model tunable parameters on the fly from a MAVLink base station like QGC or Mission Planner.
+*mavlinkgui* script opens a Graphical User Interface to explore MAVLink data. It list MAVLink messages found in a log file and plot selected {message - value}. Plot script is customizable enabling user to go beyond a simple plot. The GUI provides access to the three scripts mentioned above.
 
-### Scripts
 
-The UxV toolbox provides scripts:
+## Simulink blocks
 
-- mavlink2mat: convert MAVLink log files into .mat format to use with Matlab
-- mavlink2kml: extract MAVLink GPS message to generate KML 3D trajectory to view with a google earth/map
-- mavlink2simulink:create a simulink model replaying a mavlink log into a simulation
-- mavlinkgui: explore converted .mat file through quick plot of various MAVLink message
+10 added blocks add essentials UAV features to implement an autopilot on a dsPIC DSC. Theses blocks complete the MPLAB blocks for Simulink from Microchip providing peripheral blocks for code generation. Theses works on top of the MathWorks Embedded Coder.  Added features:
 
-## Features
+- GPS
+  - *GPS Parser* to decode NMEA messages
+- MATH
+  - *Quaternion to Cardan FxPt* to convert quaternion angle to Cardan angle in fixed point (similar to euler)
+- MAVLink:
+  - *SEND* (send a message)
+  - *RECEIVE* (Receive a message)
+  - *MAVLink Data*  (Way Points data)
+  - *MAVLink Parser* (decode input message and implement WayPoint[^WayPoint] and Parameter[^Parameter] protocols)
+- [Receivers-Telemetry](block-receiver-telemetry)
+  - *S.BUS* receive RC channels
+  - *Smart Port* send telemetry values
+  - *F.Port* receive RC channels + send telemetry
+  - *Sensor for Smart.Port or F.Port* set values to send over telemetry[^Telemetry]
 
-### GPS
+Except the MATH block, theses blocks are typically connected to the dsPIC UART Rx/Tx block to send/receive the data flow from a GPS, a receiver, a radio link.
 
-GPS block support decoding of NMEA messages:
+## Installation
 
-### MAVLink
+Theses blocks are developped by Lubin Kerhuel and distributed for free with the [MPLAB device blocks for Simulink](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink) from Microchip.
 
-MAVLink blocks support MAVLink format 0.9 and 1.0. It rely on the MAVLink xml message definition file and can send any MAVLink packet. 
-It also support:
-- WayPoint Protocol
-- Parameters Protocol
+1. Install the MPLAB Device Blocks for Microchip
+2. type *pinInfo*, click on *go to Third Part Tools folder*
+3. Start script *UxV_Blockset_Installer.p* in the UxV_blockset folder.
 
-### Receiver
 
-The receiver blocks support
-- FrSky S.BUS protocol: receiption of transmitter commands
-- FrSky Smart Port protocol: Dedicated port to send values to the transmitter through telemetry
-- FrSky F.Port protocol: mix both functions of S.BUS and Smart Port in one unique port
+[^WayPoint]: *Way Point protocol* allows setting and reading WayPoint from a MAVLink compatible ground station.
+
+[^Parameter]: *Parameter protocol* enable tuning from any MAVLink ground station the Simulink tunable parameters which are normally tuned with External Mode or from the Processor In the Loop simulation (PIL).
+
+[^Telemetry]: *Sensor for Smart.Port or F.Port* block is used with either the *Smart Port* of the *F.Port* block. Theses protocol allows sending telemetry packet back to the Remote Controller (RC) interface. It enables emulation of Frsky sensor (battery voltage and current, variometer, airspeed, GPS) adding features to your remote easily. They also enable emulation of BetaFlight telemetry. Used with LUA script, this add features like artificial horizon, air speed, vertical speed, distance from home and many other to your remote (tested with [yapuu LUA scripts](https://github.com/yaapu/FrskyTelemetryScript/wiki).

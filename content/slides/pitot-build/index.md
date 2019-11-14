@@ -1,5 +1,5 @@
 ﻿---
-title: miniature air-speed sensor
+title: miniature airspeed sensor
 
 sitemap:
   priority: 1
@@ -36,7 +36,7 @@ slides:
 
 ## Pitot tube
 
-### Miniature air-speed sensor
+### Miniature airspeed sensor
 #### for RC plane & UAV
 
 [full](/post/pitot-build) description

@@ -11,7 +11,7 @@ summary = "16-bits fixed-wing autopilot Model Based Design"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["simulink","matlab","rapid prototyping","model based design (MDB)","dsPIC","sliding-mode","autopilot","UAV","MAVLink","UxV blockset","AUAV V3 board"]
+tags = ["simulink","matlab","rapid prototyping","model based design (MBD)","dsPIC","sliding-mode","autopilot","UAV","MAVLink","UxV blockset","AUAV V3 board"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
@@ -91,7 +91,7 @@ Usually, their internal parameters can be tuned. But, inserting your customized 
 Your custom control loop might not fit within the existing structure. You might want to implement a more advanced controller than existing PIDs, use a different sample rate etc...
 
 Starting a new project is sometime faster than re-use a pre-existing advanced one.
-The presented autopilot uses a Model Based Design (MDB) approach: The autopilot code is generated from a unique Simulink model. Everything is within the diagram, from low level sensors handling up to the controller design. This MDB aproach is also named Rapid Control Prototyping (RCP).
+The presented autopilot uses a Model Based Design (MBD) approach: The autopilot code is generated from a unique Simulink model. Everything is within the diagram, from low level sensors handling up to the controller design. This MBD aproach is also named Rapid Control Prototyping (RCP).
 
 The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
 Such Simulink model allows to "get-in" the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.
@@ -146,7 +146,7 @@ Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the
 
 Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).
 
-Pitot tube air-speed estimation validated using GPS speed measurement as reference ([here](/post/pitot-build)).
+Pitot tube airspeed estimation validated using GPS speed measurement as reference ([here](/post/pitot-build)).
 
 Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.
 
@@ -171,6 +171,6 @@ Ideas to dvpt:
 
 - IMU
 - [Pitot tube](/post/pitot-build/)
-- [Wind estimation](/post/pitot-build/#wind-estimation) combining GPS ground-speed with Pitot tube air-speed
+- [Wind estimation](/post/pitot-build/#wind-estimation) combining GPS ground-speed with Pitot tube airspeed
 - UxV blocks including GPS, Remote Control and MAVLink blocks and functionalities
 - Magnetometers auto calibration

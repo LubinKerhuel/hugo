@@ -4,7 +4,7 @@ title = "Inverted Pendulum"
 aliases = ["/project/inverted_pendulum_flywheels/"]
 summary = "LQR stabilization of an inverted pendulum platform based on a low-cost toy. Simulink model and generation of code for dsPIC Microchip microcontroller are provided (Rapid Control Prototyping: RCP)"
 
-tags = ["inverted pendulum","state space","LQR","rapid prototyping","model based design (MDB)","matlab","simulink","DIY","dsPIC","L298N","ICM-20608","Microstick II","33EP128MC202"]
+tags = ["inverted pendulum","state space","LQR","rapid prototyping","model based design (MBD)","matlab","simulink","DIY","dsPIC","L298N","ICM-20608","Microstick II","33EP128MC202"]
 
 draft = false  # Is this a draft? true/false
 toc = true  # Show table of contents? true/false

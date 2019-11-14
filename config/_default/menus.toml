@@ -19,6 +19,12 @@
   url = "/uxv/" # to comment to make submenue
   weight = 11
 
+[[main]]
+  name = "dsPIC blockset"
+  url = "https://fr.mathworks.com/matlabcentral/fileexchange/71892" # to comment to make submenue
+  weight = 12
+
+
 
 # [[main]]
 #   name = "Overview"
@@ -51,10 +57,10 @@
   weight = 20
 
 
-[[main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 50
+# [[main]]
+#  name = "Contact"
+#  url = "#contact"
+#  weight = 50
 
 
 # add extra entry to others menus:
