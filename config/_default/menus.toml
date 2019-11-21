@@ -10,20 +10,15 @@
   # weight = 1
 
 [[main]]
+  pre = "<i class=\"fas fa-car-battery pr-1\" style=\"color: hsl(195, 90%, 58%);\"></i>"
   name = "Projects"
   url = "#projects" # to comment to make submenue
   weight = 10
 
-[[main]]
-  name = "UxV blockset"
-  url = "/uxv/" # to comment to make submenue
-  weight = 11
-
-[[main]]
-  name = "dsPIC blockset"
-  url = "https://fr.mathworks.com/matlabcentral/fileexchange/71892" # to comment to make submenue
-  weight = 12
-
+# [[main]]
+#   name = "dsPIC blockset"
+#   url = "https://fr.mathworks.com/matlabcentral/fileexchange/71892" # to comment to make submenue
+#   weight = 12
 
 
 # [[main]]
@@ -45,16 +40,35 @@
 #   weight = 20
 
 [[main]]
+  pre = "<i class=\"fas fa-book pr-1\" style=\"color: hsl(195, 90%, 58%);\"></i>"
   name = "Posts"
   #url = "/post/"
   url = "#posts"
-  weight = 15
+  weight = 12
 
 
 [[main]]
+  pre = "<i class=\"fas fa-question pr-1\" style=\"color: hsl(195, 90%, 58%);\"></i>"
   name = "About"
   url = "#about"
   weight = 20
+
+
+[[main_right]]
+  pre = "<i class=\"fas fa-paper-plane pr-1\" style=\"color: hsl(195, 90%, 58%);\"></i>"
+  name = "UxV blockset"
+  url = "/uxv/" # to comment to make submenue
+  weight = 15
+
+
+[[main_right]]
+# fa-download
+# name = "<i https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)></i>"
+# name = "<span class=\"btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3\">Install</span>"
+pre = "<i class=\"fas fa-microchip pr-1\" style=\"color: hsl(195, 90%, 58%);\"></i>"
+name = "MPLAB blockset"
+url = "https://fr.mathworks.com/matlabcentral/fileexchange/71892"
+weight = 30
 
 
 # [[main]]
