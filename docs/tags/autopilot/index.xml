@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>autopilot on Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tags/autopilot/</link><description>Recent content in autopilot on Rapid Control Prototyping</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy; {year} Lubin Kerhuel</copyright><lastBuildDate>Sun, 19 May 2019 00:00:00 +0200</lastBuildDate><atom:link href="https://lubin.kerhuel.eu/tags/autopilot/index.xml" rel="self" type="application/rss+xml"/><item><title>Fixed-wing autopilot based on Simulink model</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>
-&lt;!-- Enable Photo Swipe + gallery features --&gt;
-&lt;h2 id=&#34;a-16-bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools&#34;&gt;A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>autopilot | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tags/autopilot/</link><atom:link href="https://lubin.kerhuel.eu/tags/autopilot/index.xml" rel="self" type="application/rss+xml"/><description>autopilot</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Lubin Kerhuel</copyright><lastBuildDate>Sun, 19 May 2019 00:00:00 +0200</lastBuildDate><image><url>https://lubin.kerhuel.eu/img/img/firstar1600-qx7.jpg</url><title>autopilot</title><link>https://lubin.kerhuel.eu/tags/autopilot/</link></image><item><title>Fixed-wing autopilot based on Simulink model</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;h2 id=&#34;a-16bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools&#34;&gt;A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2&gt;
 &lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
 &lt;p&gt;Building a platform for testing various autopilot control loop has become simple thanks to the many low cost elements available. To cite few of them:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;10 DoF IMU&lt;/strong&gt;: (~$5\ \$$),&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GPS board&lt;/strong&gt;: (~$10\ \$$),&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Pitot tube&lt;/strong&gt; (&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/&#34;&gt;custom&lt;/a&gt;): (~$20\ \$$),&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Microcontroller board&lt;/strong&gt;: depend on the board; rely on $\approx 5\ \$$ mcu,&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plane&lt;/strong&gt; platform: from $60$ to $120\ \$$ including servos and motors.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;10 DoF IMU&lt;/strong&gt;: (~$5\ $$),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPS board&lt;/strong&gt;: (~$10\ $$),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pitot tube&lt;/strong&gt; (&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/&#34;&gt;custom&lt;/a&gt;): (~$20\ $$),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Microcontroller board&lt;/strong&gt;: depend on the board; rely on $\approx 5\ $$ mcu,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plane&lt;/strong&gt; platform: from $60$ to $120\ $$ including servos and motors.&lt;/li&gt;
 &lt;li&gt;You also need few RC hardware:
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;receiver&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;remote control&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;battery pack&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;few optional hardware for &lt;strong&gt;data logging&lt;/strong&gt;, &lt;strong&gt;telemetry&lt;/strong&gt;, &lt;strong&gt;camera&lt;/strong&gt;&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;difference-with-existing-autopilot&#34;&gt;Difference with existing autopilot&lt;/h3&gt;
@@ -30,11 +30,11 @@
 &lt;p&gt;Usually, their internal parameters can be tuned. But, inserting your customized control-loop in such autopilot requires understanding the code structure underneath. Even well documented, it represents hundreds of C functions to navigate into, before starting any changes.
 Your custom control loop might not fit within the existing structure. You might want to implement a more advanced controller than existing PIDs, use a different sample rate etc&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Starting a new project is sometime faster than re-use a pre-existing advanced one.
-The presented autopilot uses a Model Based Design (MDB) approach: The autopilot code is generated from a unique Simulink model. Everything is within the diagram, from low level sensors handling up to the controller design. This MDB aproach is also named Rapid Control Prototyping (RCP).&lt;/p&gt;
+The presented autopilot uses a Model Based Design (MBD) approach: The autopilot code is generated from a unique Simulink model. Everything is within the diagram, from low level sensors handling up to the controller design. This MBD aproach is also named Rapid Control Prototyping (RCP).&lt;/p&gt;
 &lt;p&gt;The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
 Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p&gt;
 &lt;p&gt;Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p&gt;
-&lt;p&gt;Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga &lt;a href=&#34;https://slugsuav.soe.ucsc.edu/&#34;&gt;SLUG&lt;/a&gt; is available online. The update &lt;a href=&#34;https://doi.org/10.1155/2018/6892153&#34;&gt;SLUG II&lt;/a&gt; projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p&gt;
+&lt;p&gt;Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href=&#34;https://slugsuav.soe.ucsc.edu/&#34;&gt;https://slugsuav.soe.ucsc.edu/&lt;/a&gt;) is available online. The update &lt;a href=&#34;https://doi.org/10.1155/2018/6892153&#34;&gt;SLUG II&lt;/a&gt; projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p&gt;
 &lt;h3 id=&#34;hardware-list&#34;&gt;Hardware list&lt;/h3&gt;
 &lt;p&gt;Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p&gt;
 &lt;div class=&#34;box&#34; style=&#34;max-width:80%&#34;&gt;
@@ -51,14 +51,15 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;RC platform&lt;/strong&gt;: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Remote Control&lt;/strong&gt;: FrSky QX7&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Receiver&lt;/strong&gt;: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and Smart Port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with Smart Port saving one UART peripheral of the microcontroller. Each protocol uses only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Receiver&lt;/strong&gt;: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and Smart Port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with Smart Port saving one UART peripheral of the microcontroller. Each protocol uses only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Microcontroller&lt;/strong&gt;: dsPIC 33EP on a AUAV V3 board. External motion sensor is used instead of built-in AUAV3 sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV3 board which is difficult to find now. The UDB5 mini is similar and can still be found.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;IMU sensor&lt;/strong&gt;: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane. I2C bus is used between sensors and MCU.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Pitot tube&lt;/strong&gt;:
 &lt;ul&gt;
 &lt;li&gt;An inner tube and an outer tube on which four holes are done laterally.&lt;/li&gt;
 &lt;li&gt;Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See &lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/&#34;&gt;build and test&lt;/a&gt; page.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;GPS&lt;/strong&gt;: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Data logger&lt;/strong&gt;: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Radio link&lt;/strong&gt;: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href=&#34;http://qgroundcontrol.com/&#34;&gt;qgroundcontrol&lt;/a&gt; base station running on most platforms (PC, android, windows, Linux).&lt;/li&gt;
@@ -82,9 +83,9 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;/ul&gt;
 &lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p&gt;
 &lt;p&gt;Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p&gt;
-&lt;p&gt;Pitot tube air-speed estimation validated using GPS speed measurement as reference (&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p&gt;
-&lt;p&gt;Validated automatic calibration of the magnetometer&amp;rsquo;s axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p&gt;
+&lt;p&gt;Validated automatic calibration of the magnetometer&#39;s axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p&gt;
 &lt;h3 id=&#34;next-steps&#34;&gt;Next steps&lt;/h3&gt;
 &lt;p&gt;Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p&gt;
 &lt;p&gt;Test in flight MAVLink protocol parameters tuning.&lt;/p&gt;
@@ -95,7 +96,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;ul&gt;
 &lt;li&gt;IMU&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/&#34;&gt;Pitot tube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation&#34;&gt;Wind estimation&lt;/a&gt; combining GPS ground-speed with Pitot tube air-speed&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation&#34;&gt;Wind estimation&lt;/a&gt; combining GPS ground-speed with Pitot tube airspeed&lt;/li&gt;
 &lt;li&gt;UxV blocks including GPS, Remote Control and MAVLink blocks and functionalities&lt;/li&gt;
 &lt;li&gt;Magnetometers auto calibration&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>
