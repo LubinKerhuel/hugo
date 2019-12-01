@@ -24,30 +24,58 @@ slides:
   
 ---
 
-# Prototypage rapide
-
-## avec Simulink sur dsPIC
-
-[MPLAB device blocks for Simulink](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink)
-
-[L.Kerhuel](/) & [R.Delpoux](http://www.ctrl-elec.fr/)
- 
----
-
-## [Pendule inverse](/docs/inverted-pendulum/)
-
-![./Inverted_Pendulum_ControlLoopCloseUp.png](./Inverted_Pendulum_ControlLoopCloseUp.png)
-
----
+## Prototypage Rapide 
+### Model Based Design
 
 <p class="stretch">
-<img data-src="./Model_Hardware_Test_withSampleTime.png">
+<a href="https://fr.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu/">
+<img data-src="/img/logo_mplab-deviceblocksforsimulink-whitebackground.png">
+</a>
 </p>
 
----
+\[[Lab](/project/lab-dc-motor/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
 
+---
+## Plan:
+- Model Based Design
+  - Model
+
+- De la simulation au programme embarqué
+  - Différences temporelles
+  - type de données et optimisation
+  - blocks et fonctionnalités Simulink
+
+{{< speaker_note >}}
+dSPACE 
+{{< /speaker_note >}}
+
+---
+{{< slide transition="fade"  transition_speed="slow">}}
+## Model Based Design (MDB)
+
+![./Picooz_01_Close.jpg](./Picooz_01_Close.jpg)
+
+---
+{{< slide transition="fade"  transition_speed="slow">}}
+## Model Based Design (MDB)
+
+![./Picooz_01_Open.jpg](./Picooz_02_Open.jpg)
+
+---
+{{< slide transition="fade"  transition_speed="slow">}}
+## Model Based Design (MDB)
+
+![./Picooz_03_Close.jpg](./Picooz_03_Motor.jpg)
+
+---
+## Model Based Design (MDB)
 ![./Picooz_IdentificatoinBlockPresentation.png](./Picooz_IdentificatoinBlockPresentation.png)
-{{< vimeo class="stretch" id="309895581" autoplay="false" >}}
+
+---
+## Model Based Design (MDB)
+
+{{< vimeo id="309895581" autoplay="false" >}}
+<!-- {{< vimeo id="309895581" class="stretch" autoplay="false" title="test" >}} -->
 <!-- [Video](C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi) -->
 
 ---
@@ -70,43 +98,50 @@ slides:
 </section>
 
 ---
+## <span style="color:yellow">Model</span> Based Design
 
-## Plan:
-Modèle de simulation & génération de code
+1. Identification
+1. Simulation / design
+1. Test
 
-- Différences Temporel
-- optimisation et type de données
-- blocks et fonctionnalités Simulink
-
-{{< speaker_note >}}
-dSPACE 
-{{< /speaker_note >}}
+  
+---
+## De la simulation au programme embarqué
 
 ---
+## [Pendule inverse](/docs/inverted-pendulum/)
+
+![./Inverted_Pendulum_ControlLoopCloseUp.png](./Inverted_Pendulum_ControlLoopCloseUp.png)
+
+
+---
+
 
 ## Aspect Temporel:
 ### Simulation
 
-Modélisation en temps continue, transformé de Laplace dans le domaine p (ou s)
+Modélisation en temps continue: 
 
-  - Solver résout les équations différentielles
-  - Pas de contrainte temps réelle
-  - Résultat dépend du solveur ; pas de calcul variable.
- 
+transformé de Laplace en p (s)
+
+  - Solver résoud les équations différentielles
+    - approximation numérique  
+  - Pas de contraintes temps réelle
+    - différent solveurs (Runge kuta, ODEx,...)
+   
 ---
 
 ## Aspect Temporel:
 ### Implémentation
 
-Implémentation en temps discret avec un pas de calcul fixe
+Implémentation en temps discret:
+
+"pas" de calcul fixe
 
   - pas de solveur 
-  - Contrainte temps réel
-  - Single-Rate & Multi-Rate
-  - Single-Tasking & Multi-Tasking
-
-<section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
-</section>
+  - Contrainte temps réel    
+    - model Single-Rate & Multi-Rate
+    - implementation Single-Tasking & Multi-Tasking
 
 ---
 
@@ -120,17 +155,15 @@ Implémentation en temps discret avec un pas de calcul fixe
   - Les blocks peuvent avoir des périodes d'exécution différentes
     (Schéma multicolore)
 
-
-<section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
-</section>
-
 ---
-
 #### Modèle multi-rate
 
 <p class="stretch">
 <img data-src="./Model_Hardware_Test_withSampleTime.png">
 </p>
+
+<section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+</section>
 
 ---
 
@@ -140,7 +173,6 @@ Implémentation en temps discret avec un pas de calcul fixe
 
 <section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
-
 
 ---
 
@@ -170,7 +202,7 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
-#### Charge CPU d'un modèle multi-rate single-tasking (@70 mips) 
+#### Charge CPU d'un modèle multi-rate multi-tasking (@70 mips) 
 
 ![./Scope_MultiTasking_70MIPS.png](./Scope_MultiTasking_70MIPS.png)
 
@@ -179,7 +211,7 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
-#### Charge CPU d'un modèle multi-rate single-tasking (@20 mips) 
+#### Charge CPU d'un modèle multi-rate multi-tasking (@20 mips) 
 
 ![./Scope_MultiTasking_20MIPS.png](./Scope_MultiTasking_20MIPS.png)
 
@@ -207,6 +239,22 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 - Virgule Fixe
 - Virgule Flottante
 
+---
+
+## Virgule fixe
+
+### int8
+
+
+$\underbrace{1}\_{sign\ (1)} \ \underbrace{1111111}\_{mantisse\ (7)} * \underbrace{slope}\_{\text{LSB value}}$
+
+- $v = (mantisse-sign*128) * slope $
+
+- range: $\pm 2^{7} * slope$
+ 
+- 2 digit [0-9] significatifs
+
+
 
 ---
 
@@ -215,16 +263,48 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
-## Flotant
+{{% section %}}
+
+## Virgule flotante
+
+### Single (32 bits)
+
+
+$\underbrace{1}\_{sign\ (1)} \ \underbrace{11111111}\_{exponent\ (8)} \ \color{yellow}{1}\underbrace{11111111111111111111111}\_{mantisse\ (23)} $
+
+- $v \approx (1-2 sign) * mantisse * 2^{exponent-127}$
+
+- range: $\pm 2^{128} = 3.4*10^{38}$
+ 
+- 7 digit [0-9] significatifs
+
+{{% /section %}}
+{{% section %}}
 
  IEEE 754| Single | Double |
 |:---:|:---:|:---:|
  Format width | 32 | 64 |
  Sign bit |1 | 1 |
  exponent width | 8 | 11 |
- Precision width| 23+1 | 52+1 |
+ Precision width| 23<span style="color:yellow">+1</span> | 52<span style="color:yellow">+1</span> |
 
-1st bit of the significand is always 1. Phantom bit
+<span style="color:yellow">1st</span> phantom bitof the significand is always 1.
+
+{{% /section %}}
+
+---
+## Virgule flotante
+
+### Csutom (8 bits)
+
+
+$\underbrace{1}\_{sign\ (1)} \ \underbrace{1111}\_{exponent\ (4)} \ \color{yellow}{1}\underbrace{111}\_{mantisse\ (3)} $
+
+- $v \approx (1-2 sign) * mantisse * 2^{exponent-127}$
+
+- range: $\pm 2^{128} = 3.4*10^{38}$
+ 
+- 0.9 digit [0-9] significatifs
 
 ---
 
@@ -285,30 +365,33 @@ TotalVal = vals'*exps;
 
 ---
 
-## Datatype 
+## Data-type notation
 
 - int8...uint23
-- fixdt(1,16,15)
-  - Scaling is En15 (Exp neg)
-    -  $$\rightarrow 2^-15$$
 - fixdt(1,16)
   - signed (1)
   - 16 bit width
-  - Scaling is derived from min & max
+  - Scaling is derived from defined min & max
+- fixdt(1,16,15)
+  - Scaling is <span style="color:yellow">En</span>15 (Exp neg $\rightarrow 2^{-15}$) 
+- fixdt(1,16,-15)
+  - Scaling is <span style="color:yellow">E</span>15 (Exp $\rightarrow 2^{15}$)    
 
 ---
 
-## Datatype 
+## Datatype notation
 
 ![./Simulink_TypeCast_SlopeAndBias.png](./Simulink_TypeCast_SlopeAndBias.png)
 
 - fixdt(1,16,.01,0)
-  - Scaling is sfix16**Sp**01 
+  - Scaling is sfix16<span style="color:yellow">Sp</span>01 
     - Slope point 01    
 
 ---
 
 ![./Simulink_TypeCast_SlopeAndBias_Sat.png](./Simulink_TypeCast_SlopeAndBias_Sat.png)
+- <span style="color:yellow">SI</span>: Stored Integer
+- <span style="color:yellow">RWV</span>: Real World Value
 
 ---
 
@@ -376,3 +459,16 @@ https://lubin.kerhuel.eu/slides/slides_dcmotor_insa
 
 - https://lubin.kerhuel.eu
 - http://www.ctrl-elec.fr
+
+
+---
+# Slide control:
+
+- Next: `Right Arrow` or `Space`
+- Previous: `Left Arrow`
+- Start: `Home`
+- Finish: `End`
+- Overview: `Esc`
+- Speaker notes: `S`
+- Fullscreen: `F`
+- Zoom: `Alt + Click`

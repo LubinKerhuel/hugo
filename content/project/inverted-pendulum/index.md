@@ -4,6 +4,9 @@ title = "Inverted Pendulum"
 
 # Date this page was created.
 date = 2018-12-01
+#date = 2019-09-05T00:00:00Z
+lastMod = 2019-09-05T00:00:00Z
+
 draft = false
 
 #  toc = true  # Show table of contents? true/false

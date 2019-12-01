@@ -21,7 +21,7 @@ categories:
   - sensor
 
 date: 2019-05-28
-#lastmod: 2019-05-25
+lastmod: 2019-05-25
 featured: true
 draft: false
 

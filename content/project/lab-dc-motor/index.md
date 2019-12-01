@@ -6,6 +6,7 @@ aliases = ["/project/lab_dc_motor/"]
 
 # Date this page was created.
 date = 2018-12-01
+lastMod = 2019-06-01
 draft = false
 
 authors = ["lubin","romain-delpoux"]

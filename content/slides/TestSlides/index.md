@@ -23,6 +23,8 @@ transition = "zoom"
 
 {{% /section %}}
 
+# Vertical slide 3
+
 {{% section %}}
 
 # Vertical slide 2
