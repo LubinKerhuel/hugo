@@ -33,7 +33,7 @@ slides:
 </a>
 </p>
 
-\[[Lab](/project/lab-dc-motor/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
+\[[Lab](https://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
 
 ---
 ## Plan:
@@ -127,7 +127,7 @@ transformé de Laplace en p (s)
   - Solver résoud les équations différentielles
     - approximation numérique  
   - Pas de contraintes temps réelle
-    - différent solveurs (Runge kuta, ODEx,...)
+    - différent solveurs (Runge-Kutta, ODEx,...)
    
 ---
 

@@ -108,7 +108,7 @@
 &lt;img data-src=&#34;https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png&#34;&gt;
 &lt;/a&gt;
 &lt;/p&gt;
-&lt;p&gt;[&lt;a href=&#34;https://lubin.kerhuel.eu/project/lab-dc-motor/&#34;&gt;Lab&lt;/a&gt;] - &lt;a href=&#34;https://lubin.kerhuel.eu/authors/lubin&#34;&gt;L.Kerhuel&lt;/a&gt; - &lt;a href=&#34;https://lubin.kerhuel.eu/authors/romain-delpoux&#34;&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;a href=&#34;https://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/&#34;&gt;Lab&lt;/a&gt;] - &lt;a href=&#34;https://lubin.kerhuel.eu/authors/lubin&#34;&gt;L.Kerhuel&lt;/a&gt; - &lt;a href=&#34;https://lubin.kerhuel.eu/authors/romain-delpoux&#34;&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2 id=&#34;plan&#34;&gt;Plan:&lt;/h2&gt;
 &lt;ul&gt;
@@ -200,7 +200,7 @@ data-background-color=&#34;#FFFFFF&#34;
 &lt;/li&gt;
 &lt;li&gt;Pas de contraintes temps réelle
 &lt;ul&gt;
-&lt;li&gt;différent solveurs (Runge kuta, ODEx,&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;différent solveurs (Runge-Kutta, ODEx,&amp;hellip;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
