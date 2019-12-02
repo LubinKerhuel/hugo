@@ -43,11 +43,6 @@ slides:
 - De la simulation au programme embarqué
   - Différences temporelles
   - type de données et optimisation
-  - blocks et fonctionnalités Simulink
-
-{{< speaker_note >}}
-dSPACE 
-{{< /speaker_note >}}
 
 ---
 {{< slide transition="fade"  transition_speed="slow">}}
@@ -68,8 +63,25 @@ dSPACE
 ![./Picooz_03_Close.jpg](./Picooz_03_Motor.jpg)
 
 ---
+{{< slide background-color="#FFFFFF" >}}
+
+<p class="stretch">
+<img data-src="./Picooz_DC_Motor_Electronic_All.png">
+</p>
+
+{{< speaker_note >}}
+Commande en Vitesse
+{{< /speaker_note >}}   
+
+---
+
 ## Model Based Design (MDB)
 ![./Picooz_IdentificatoinBlockPresentation.png](./Picooz_IdentificatoinBlockPresentation.png)
+
+{{< speaker_note >}}
+Identification
+{{< /speaker_note >}}   
+
 
 ---
 ## Model Based Design (MDB)
@@ -86,36 +98,65 @@ dSPACE
 
 ![./Picooz_Identificatoin_eq_02.png](./Picooz_Identificatoin_eq_02.png)
 
+{{< speaker_note >}}
+rasoir d'Ockham
+{{< /speaker_note >}}   
+
+
 ---
 
 ![./Picooz_SuperTwistingController.png](./Picooz_SuperTwistingController.png)
 
 ---
-
 {{< slide background-color="#FFFFFF" >}}
 
 <section data-background-image="./Picooz_SetpLarge_ClosedLoop_SimuVsReal.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 </section>
 
+{{< speaker_note >}}
+Prediction Simu vs reel
+{{< /speaker_note >}}   
+
 ---
 ## <span style="color:yellow">Model</span> Based Design
 
 1. Identification
-1. Simulation / design
+1. Simulation / synthèse commande
 1. Test
 
-  
 ---
+
+## TP: Validation du modèle de moteur DC fournit
+
+- log de command & réponse
+- Simulation comparaison 
+  - commande avec modèle moteur
+  vs
+  - système réel
+
+---
+## TP: Validation du modèle de moteur DC fournit
+
+![./Simulink_DCMotorPravalux_LogVsSimu.png](./Simulink_DCMotorPravalux_LogVsSimu.png)
+
+---
+
 ## De la simulation au programme embarqué
+
+---
+
+{{< vimeo id="309876246" autoplay="false" >}}
 
 ---
 ## [Pendule inverse](/docs/inverted-pendulum/)
 
 ![./Inverted_Pendulum_ControlLoopCloseUp.png](./Inverted_Pendulum_ControlLoopCloseUp.png)
-
+{{< speaker_note >}}
+  1) Couleurs : Period echantillonnage
+  2) Datatype  
+{{< /speaker_note >}}   
 
 ---
-
 
 ## Aspect Temporel:
 ### Simulation
@@ -128,7 +169,12 @@ transformé de Laplace en p (s)
     - approximation numérique  
   - Pas de contraintes temps réelle
     - différent solveurs (Runge-Kutta, ODEx,...)
-   
+  
+{{< speaker_note >}}
+  1) Couleurs : Period echantillonnage
+   DSPACE discretise le modèle
+{{< /speaker_note >}}   
+
 ---
 
 ## Aspect Temporel:
@@ -142,6 +188,11 @@ Implémentation en temps discret:
   - Contrainte temps réel    
     - model Single-Rate & Multi-Rate
     - implementation Single-Tasking & Multi-Tasking
+
+{{< speaker_note >}}
+  Single Rate / Multi rate
+  Single Tasking / Multi Tasking 
+{{< /speaker_note >}}   
 
 ---
 
@@ -183,6 +234,10 @@ Implémentation en temps discret:
 <section data-background-image="./Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 </section>
 
+{{< speaker_note >}}
+  OVERLOAD
+{{< /speaker_note >}}   
+
 ---
 
 ## Single-Tasking
@@ -220,15 +275,28 @@ Multi-Tasking: Préemption possible -> **Monotonic Rate Scheduler**
 
 ---
 
+![./Scope_MultiTasking_70MIPS.png](./Scope_MultiTasking_SchedulerIllustration.png)
+
+<section data-background-image="./Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
+</section>
+
+---
+
 ## Tasking Conclusion
 
 - Single-Tasking @ 20  MIPS  -> **Overload**
   - dispatcher la tache la plus lente sur plusieurs slots
   - (option d'offset dans **Time Step** -> *[.001 .005])*
+
 - Multi-Tasking @ 20  MIPS  -> **Ok**
   - Rate transfert block options
       - Data Integrity
       - Deterministic data transfert
+
+{{< speaker_note >}}
+  20 MIPS ok avec multi-tasking
+  Single tasking: deterministe
+{{< /speaker_note >}}   
 
 ---
 
@@ -250,11 +318,13 @@ $\underbrace{1}\_{sign\ (1)} \ \underbrace{1111111}\_{mantisse\ (7)} * \underbra
 
 - $v = (mantisse-sign*128) * slope $
 
-- range: $\pm 2^{7} * slope$
+- plage: $\pm 2^{7} * slope$
  
 - 2 digit [0-9] significatifs
 
-
+{{< speaker_note >}}
+  slope est fixe
+{{< /speaker_note >}}   
 
 ---
 
@@ -274,7 +344,7 @@ $\underbrace{1}\_{sign\ (1)} \ \underbrace{11111111}\_{exponent\ (8)} \ \color{y
 
 - $v \approx (1-2 sign) * mantisse * 2^{exponent-127}$
 
-- range: $\pm 2^{128} = 3.4*10^{38}$
+- plage: $\pm 2^{128} = \pm 3.4*10^{38}$
  
 - 7 digit [0-9] significatifs
 
@@ -295,14 +365,14 @@ $\underbrace{1}\_{sign\ (1)} \ \underbrace{11111111}\_{exponent\ (8)} \ \color{y
 ---
 ## Virgule flotante
 
-### Csutom (8 bits)
+### Custom (8 bits)
 
 
 $\underbrace{1}\_{sign\ (1)} \ \underbrace{1111}\_{exponent\ (4)} \ \color{yellow}{1}\underbrace{111}\_{mantisse\ (3)} $
 
 - $v \approx (1-2 sign) * mantisse * 2^{exponent-127}$
 
-- range: $\pm 2^{128} = 3.4*10^{38}$
+- plage: $\pm 2^{128} = 3.4*10^{38}$
  
 - 0.9 digit [0-9] significatifs
 
@@ -331,6 +401,12 @@ $\underbrace{1}\_{sign\ (1)} \ \underbrace{1111}\_{exponent\ (4)} \ \color{yello
 
 <section data-background-image="./FloatFixed_4.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 </section>
+
+{{< speaker_note >}}
+  Integrateur (avec petit TS)
+  GPS
+{{< /speaker_note >}}  
+
 
 ---
 ## Script Matlab pour tester un flottant 8 bits
@@ -398,53 +474,20 @@ TotalVal = vals'*exps;
 # TP
 
 
-## https://www.ctrl-elec.fr
+## http://www.ctrl-elec.fr
 
 https://lubin.kerhuel.eu/slides/slides_dcmotor_insa
 
 ---
 
+## download
+
+- [base model](https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/raw/master/LABMatlabFiles/02_GettingStarted/MCLV2_dsPIC33EP256MC506_base_R2017a.zip)
+
+
+---
+
 ## Elements de correction
-
----
-
-<section data-background-image="./TP_Correction_OpAmp.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
-</section>
-
----
-
-<section data-background-image="./TP_Correction_ADC.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
-</section>
-
----
-
-## PWM settings
-
----
-
-<section data-background-image="./TP_Correction_PWM_Main.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
-</section>
-
----
-
-<section data-background-image="./TP_Correction_PWM_02.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
-</section>
-
----
-
-<section data-background-image="./TP_Correction_PWM_03.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
-</section>
-
----
-
-<section data-background-image="./TP_Correction_PWM_04.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
-</section>
-
-
----
-
-<section data-background-image="./TP_Correction_PWM_05.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
-</section>
 
 ---
 
