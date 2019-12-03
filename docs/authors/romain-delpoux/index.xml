@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link><atom:link href="https://lubin.kerhuel.eu/authors/romain-delpoux/index.xml" rel="self" type="application/rss+xml"/><description>Rapid Control Prototyping</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Lubin Kerhuel</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0100</lastBuildDate><image><url>https://lubin.kerhuel.eu/img/img/firstar1600-qx7.jpg</url><title>Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link></image><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p&gt;Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.
-This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
-&lt;p&gt;The hands-on Lab subject available at: &lt;a href=&#34;https://rtdc.ctrl-elec.fr/&#34;&gt;https://rtdc.ctrl-elec.fr/&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Real-time scheduler / CPU load analysis&lt;/li&gt;
-&lt;li&gt;Fixed-point datatypes&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link><atom:link href="https://lubin.kerhuel.eu/authors/romain-delpoux/index.xml" rel="self" type="application/rss+xml"/><description>Rapid Control Prototyping</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Lubin Kerhuel</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0100</lastBuildDate><image><url>https://lubin.kerhuel.eu/img/img/firstar1600-qx7.jpg</url><title>Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link></image><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p>Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.
+This hands-on is for 5th year students at INSA-Lyon.&lt;/p>
+&lt;p>The hands-on Lab subject available at: &lt;a href="https://rtdc.ctrl-elec.fr/">https://rtdc.ctrl-elec.fr/&lt;/a>.&lt;/p>
+&lt;p>Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p>
+&lt;ul>
+&lt;li>Real-time scheduler / CPU load analysis&lt;/li>
+&lt;li>Fixed-point datatypes&lt;/li>
+&lt;/ul></description></item></channel></rss>

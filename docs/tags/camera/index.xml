@@ -1,30 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>camera | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tags/camera/</link><atom:link href="https://lubin.kerhuel.eu/tags/camera/index.xml" rel="self" type="application/rss+xml"/><description>camera</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Lubin Kerhuel</copyright><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/img/img/firstar1600-qx7.jpg</url><title>camera</title><link>https://lubin.kerhuel.eu/tags/camera/</link></image><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
-&lt;p&gt;Cable exist to connect a RunCam2 action cam to an RC receiver for remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
-The cable has logic to decode the RC PWM signal and generate the signal pulse scheme to start and stop the RunCam2 record.&lt;/p&gt;
-&lt;p&gt;Controlling the camera can be done with a microcontroller by generating the required pulse scheme described below.&lt;/p&gt;
-&lt;p&gt;The micro USB cable pinout (on the male part) is&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pin 1 : GND&lt;/li&gt;
-&lt;li&gt;Pin 3 : TTL signal (5V)&lt;/li&gt;
-&lt;li&gt;Pin 5 : +5V (higher voltage possible for the RunCam2 connector)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo; with the configuration application, it is possible to switch back and forth the camera from video mode to photo mode, and to start/stop recording, or take a picture.&lt;/p&gt;
-&lt;p&gt;The pulse scheme is the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;One pulse switch the camera from video recording mode to Photo mode.&lt;/li&gt;
-&lt;li&gt;Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pulse level is 5V but it works with 3.3V. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p&gt;
-&lt;p&gt;Tested with a runCam2 powered from a 3S LiPo battery (10 to 14V), no battery in the camera and pulse generated with a 3.3V dsPIC pin configured as digital output.&lt;/p&gt;
-&lt;p&gt;The figure below is the Simulink diagram with the logic used to generate the appropriate pulse on a dsPIC. Code is generated through the Simulink Coder and the &lt;a href=&#34;https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/SW007023&#34;&gt;MPLAB block&lt;/a&gt; from Microchip.&lt;/p&gt;
-&lt;div class=&#34;box&#34; style=&#34;max-width:100%&#34;&gt;
-&lt;figure itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-&lt;div class=&#34;img&#34;&gt;
-&lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; alt=&#34;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&#34;/&gt;
-&lt;/div&gt;
-&lt;a href=&#34;https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-&lt;figcaption&gt;
-&lt;p&gt;Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;/div&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>camera | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tags/camera/</link><atom:link href="https://lubin.kerhuel.eu/tags/camera/index.xml" rel="self" type="application/rss+xml"/><description>camera</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Lubin Kerhuel</copyright><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/img/img/firstar1600-qx7.jpg</url><title>camera</title><link>https://lubin.kerhuel.eu/tags/camera/</link></image><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;p>Cable exist to connect a RunCam2 action cam to an RC receiver for remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
+The cable has logic to decode the RC PWM signal and generate the signal pulse scheme to start and stop the RunCam2 record.&lt;/p>
+&lt;p>Controlling the camera can be done with a microcontroller by generating the required pulse scheme described below.&lt;/p>
+&lt;p>The micro USB cable pinout (on the male part) is&lt;/p>
+&lt;ul>
+&lt;li>Pin 1 : GND&lt;/li>
+&lt;li>Pin 3 : TTL signal (5V)&lt;/li>
+&lt;li>Pin 5 : +5V (higher voltage possible for the RunCam2 connector)&lt;/li>
+&lt;/ul>
+&lt;p>When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo; with the configuration application, it is possible to switch back and forth the camera from video mode to photo mode, and to start/stop recording, or take a picture.&lt;/p>
+&lt;p>The pulse scheme is the following:&lt;/p>
+&lt;ul>
+&lt;li>One pulse switch the camera from video recording mode to Photo mode.&lt;/li>
+&lt;li>Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/li>
+&lt;/ul>
+&lt;p>Pulse level is 5V but it works with 3.3V. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p>
+&lt;p>Tested with a runCam2 powered from a 3S LiPo battery (10 to 14V), no battery in the camera and pulse generated with a 3.3V dsPIC pin configured as digital output.&lt;/p>
+&lt;p>The figure below is the Simulink diagram with the logic used to generate the appropriate pulse on a dsPIC. Code is generated through the Simulink Coder and the &lt;a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/SW007023">MPLAB block&lt;/a> from Microchip.&lt;/p>
+&lt;div class="box" style="max-width:100%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png" alt="Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target"/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png" itemprop="contentUrl">&lt;/a>
+&lt;figcaption>
+&lt;p>Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div></description></item></channel></rss>
