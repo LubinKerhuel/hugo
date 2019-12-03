@@ -33,7 +33,7 @@ slides:
 </a>
 </p>
 
-\[[Lab](https://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
+\[[Lab](https://rtdc.ctrl-elec.fr/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
 
 ---
 ## Plan:
@@ -471,12 +471,11 @@ TotalVal = vals'*exps;
 
 ---
 
-# TP
+## TP
 
 
-## http://www.ctrl-elec.fr
+[https://rtdc.ctrl-elec.fr](https://rtdc.ctrl-elec.fr/)
 
-https://lubin.kerhuel.eu/slides/slides_dcmotor_insa
 
 ---
 
