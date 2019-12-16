@@ -239,14 +239,14 @@ Rx and Tx channels are used. They are assigned to the same pin. UART is configur
 &lt;li>&lt;a href="http://ardupilot.org/copter/docs/common-frsky-passthrough.html">ArduCopter project&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://sbustelemetrysensors.blogspot.com/">SBUS2 by Jerry Chapman&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr />
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
 &lt;ol>
 &lt;li id="fn:1" role="doc-endnote">
-&lt;p>Received Signal Strength Indicator&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
+&lt;p>Received Signal Strength Indicator &lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>block Sensor</title><link>https://lubin.kerhuel.eu/uxv/block-sensor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/block-sensor/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;/section></description></item><item><title>block Sensor</title><link>https://lubin.kerhuel.eu/uxv/block-sensor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/block-sensor/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;p>The block add a sensor &amp;ldquo;packet&amp;rdquo; to be transmitted to a receiver through the Smart Port of the F.Port. The receiver send the telemetry packet to the Remote controller (RC). Thus the Simulink should have either a Smart Port or a F.Port block.&lt;/p>
 &lt;p>Each sensor block declare the sensor reference composed of the two parameters PhysId and {Address+Offset}. Sensor value is composed of 4 bytes array block input. Multiple instance of the sensor block can be added in a model. Two instance can have the same sensor reference wihch is used for sensor sending multiple packets with various values (see FrSky FVLSS or GPS sensor).&lt;/p>
 &lt;p>Each block instance add a 4 bytes buffer to store the sensor value which is updated at block execution time. The block sample rate defines the update rate of the internal buffer.&lt;/p>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dsPIC | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tags/dspic/</link><atom:link href="https://lubin.kerhuel.eu/tags/dspic/index.xml" rel="self" type="application/rss+xml"/><description>dsPIC</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Lubin Kerhuel</copyright><lastBuildDate>Sun, 19 May 2019 00:00:00 +0200</lastBuildDate><image><url>https://lubin.kerhuel.eu/img/img/firstar1600-qx7.jpg</url><title>dsPIC</title><link>https://lubin.kerhuel.eu/tags/dspic/</link></image><item><title>Fixed-wing autopilot based on Simulink model</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
-&lt;h2 id="a-16bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools">A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2>
+&lt;h2 id="a-16-bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools">A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2>
 &lt;h3 id="motivation">Motivation&lt;/h3>
 &lt;p>Building a platform for testing various autopilot control loop has become simple thanks to the many low cost elements available. To cite few of them:&lt;/p>
 &lt;ul>
@@ -112,9 +112,9 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;/figure>
 &lt;/div>
 &lt;h1 id="presentation">Presentation&lt;/h1>
-&lt;p>Stabilization of an inverted pendulum is a common engineering challenge. Objective is to build a low-cost DIY&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> platform to test various feedback control loop.&lt;/p>
+&lt;p>Stabilization of an inverted pendulum is a common engineering challenge. Objective is to build a low-cost DIY&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> platform to test various feedback control loop.&lt;/p>
 &lt;p>This document describes the hardware and the theoretical model of the pendulum.
-Simulation are presented with Simulink models and an LQR&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> feedback control loop finally stabilizes the platform.&lt;/p>
+Simulation are presented with Simulink models and an LQR&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> feedback control loop finally stabilizes the platform.&lt;/p>
 &lt;!-- test code -->
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://player.vimeo.com/video/309876246" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
@@ -158,7 +158,7 @@ It is powered through the USB connector which &lt;strong>only provide the power 
 &lt;/figure>
 &lt;/div>
 &lt;h3 id="imu-sensor">IMU sensor&lt;/h3>
-&lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a &lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html">Drotek sensor board&lt;/a>. It endows:&lt;/p>
+&lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a &lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html">Drotek sensor board&lt;/a>. It endows:&lt;/p>
 &lt;ul>
 &lt;li>a 3 axis Accelerometers and&lt;/li>
 &lt;li>a 3 axis rate gyros.&lt;/li>
@@ -169,10 +169,10 @@ The Simulink I2C blocks setting enable hot plug of the I2C sensor: The microcont
 &lt;li>The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.&lt;/li>
 &lt;li>The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.&lt;/li>
 &lt;/ul>
-&lt;p>A Simulink IMU&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> sub-system run a data fusion algorithm to reconstruct a drift-free quaternion angular position at $1kHz$ (the yaw angle drift when magnetometer is not present).
+&lt;p>A Simulink IMU&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> sub-system run a data fusion algorithm to reconstruct a drift-free quaternion angular position at $1kHz$ (the yaw angle drift when magnetometer is not present).
 The stabilization control loop uses the drift-free pitch angle.&lt;/p>
 &lt;p>It is possible to use other sensors like the MPU9250 or MPU6050 with either an I2C or SPI interface.
-The GY-91 board is a 10 DoF&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> widespread board based on the 9 DoF MPU9250 (3 accelerometers, 3 magnetometers, 3 rate gyros) and has a pressure sensor.&lt;/p>
+The GY-91 board is a 10 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> widespread board based on the 9 DoF MPU9250 (3 accelerometers, 3 magnetometers, 3 rate gyros) and has a pressure sensor.&lt;/p>
 &lt;h3 id="UARTINTERFACE">UART interface&lt;/h3>
 &lt;p>The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART &lt;a href="https://github.com/d-ronin/openlager/wiki">data-logger&lt;/a> or &lt;a href="http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio">radio link&lt;/a> for telemetry module or an &lt;a href="https://www.frsky-rc.com/product/xsr/">RC receiver&lt;/a> capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
 &lt;h2 id="hw_trolley">Base trolley&lt;/h2>
@@ -232,8 +232,8 @@ The black and red wire from the trolley to the top of the pendulum powers the Mi
 &lt;h1 id="pendulum-model">Pendulum Model&lt;/h1>
 &lt;p>The pendulum model is composed of two intertwined sub-system:&lt;/p>
 &lt;ul>
-&lt;li>The pendulum*, with 1 rotation DoF&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> $\theta$ angle around the wheel's axis&lt;/li>
-&lt;li>The trolley*, with 1 translation DoF&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> $x$ position.&lt;/li>
+&lt;li>The pendulum*, with 1 rotation DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> $\theta$ angle around the wheel's axis&lt;/li>
+&lt;li>The trolley*, with 1 translation DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> $x$ position.&lt;/li>
 &lt;/ul>
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -263,7 +263,7 @@ $m$ is the mass of the pendulum (without the trolley).
 $l$ is the length from the inter-wheel's axis to the center of mass of the pendulum (without the trolley)&lt;/p>
 &lt;p>$$
 \left\{ \begin{array}{rcl}
-\vec{i} &amp;amp; = &amp;amp; \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\\&lt;br />
+\vec{i} &amp;amp; = &amp;amp; \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\\&lt;br>
 \vec{j} &amp;amp; = &amp;amp; \vec{n} . sin(\theta) + \vec{r} . cos(\theta)
 \end{array} \right.
 $$&lt;/p>
@@ -273,10 +273,10 @@ $$&lt;/p>
 \begin{array}{rcl}
 \frac{\partial \vec{r}}{\partial t}
 &amp;amp; = &amp;amp;
-- \dot{\theta} \vec{n} \\\&lt;br />
+- \dot{\theta} \vec{n} \\\&lt;br>
 \frac{\partial^2\vec{ r }}{\partial t^2}
 &amp;amp; = &amp;amp;
-- \frac{\partial }{\partial t} \left( \dot{\theta} \vec{n} \right) \\\&lt;br />
+- \frac{\partial }{\partial t} \left( \dot{\theta} \vec{n} \right) \\\&lt;br>
 &amp;amp; = &amp;amp;
 - \ddot{\theta} \vec{n} - \dot{\theta}^2 \vec{r}
 \end{array}
@@ -284,8 +284,8 @@ $$&lt;/p>
 &lt;p>The projection of the forces equation in the pendulum frame $ \{ \vec{r},\vec{n} \} $ is:
 $$
 \left\{ \begin{array}{rcl}
-\left( ml\dot{\theta}^2 + Ctfg \right) \vec{r} = \vec{0} \\\&lt;br />
-\left( l \ddot{\theta} + \frac{k}{m}\dot{\theta} - g . sin(\theta) \right) \vec{n} = \vec{0}&lt;br />
+\left( ml\dot{\theta}^2 + Ctfg \right) \vec{r} = \vec{0} \\\&lt;br>
+\left( l \ddot{\theta} + \frac{k}{m}\dot{\theta} - g . sin(\theta) \right) \vec{n} = \vec{0}&lt;br>
 \end{array} \right.
 $$&lt;/p>
 &lt;p>The first equation for the $\vec{r}$ axis shows internal forces which cancel each other: the weight $\vec{P} = -mg\vec{j}$ which is compensated on the $\vec{r}$ axis by the term $mg\vec{j}.\vec{r}$ from the reaction force which will also compensate for the Centrifugal force $ml\dot{\theta}^2$.&lt;/p>
@@ -428,20 +428,20 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;/div>
 -->
 &lt;p>Another way to stabilize a pendulum with an electric seesaw (&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum">video&lt;/a>).&lt;/p>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr />
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
 &lt;ol>
 &lt;li id="fn:1" role="doc-endnote">
-&lt;p>Inertial Measurement Unit&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
+&lt;p>Do It Yourself &lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:2" role="doc-endnote">
-&lt;p>Degree of Freedom&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
+&lt;p>Linear Quadratic Regulator &lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:3" role="doc-endnote">
-&lt;p>Linear Quadratic Regulator&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
+&lt;p>Degree of Freedom &lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:4" role="doc-endnote">
-&lt;p>Do It Yourself&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
+&lt;p>Inertial Measurement Unit &lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item></channel></rss>
+&lt;/section></description></item></channel></rss>

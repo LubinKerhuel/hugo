@@ -3,7 +3,7 @@
 &lt;h2 id="pitot-tube-principle">Pitot tube principle&lt;/h2>
 &lt;p>A Pitot-Darcy probe is an airspeed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P_t$ is added at its tip. The differential pressure $P_{diff}$ is measured between the tip of the tube $P_t$ and the static pressure $P_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p>
 &lt;p>The pressure added at tube tip is the square of the airspeed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are measured in Pascal unit (Pa). $\rho$ is the air density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude. $v$ is the airspeed in $m.s^{-1}$. The differential pressure measured is $P_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$&lt;/p>
-&lt;h2 id="pitotprandtl-tube">Pitot-Prandtl tube&lt;/h2>
+&lt;h2 id="pitot-prandtl-tube">Pitot-Prandtl tube&lt;/h2>
 &lt;p>Prandtl tube is one version of a Pitot probe where an inner tube is placed in the center of an outer tube. Space between the two tubes is filled-in on few mm near the tip with an epoxy adhesive (Araldite or equivalent). The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.&lt;/p>
 &lt;p>The static pressure holes must be drilled at a minimum distance from the tube tip where airflow perturbations are reduced. A distance 4 times the diameter (d=4mm)of the outer tube is retains here (16mm). Four 1mm holes were drilled with a Dremel hand tool. The three tubes are presented on the figure below.&lt;/p>
 &lt;p>First test was done using brass tubes. Inner tube width is 2/1mm (outside/inside) and outer tube is 4/3mm.&lt;/p>
@@ -49,7 +49,7 @@ m = 72mm
 &lt;th align="center">v (Km/h)&lt;/th>
 &lt;th align="center">$P_{diff}$ (Pa)&lt;/th>
 &lt;th align="center">~ $H_2O$ (cm)&lt;/th>
-&lt;th align="center">&lt;a href="https://www.nxp.com/part/MP3V5004DP">MP3V5004dp&lt;/a> &amp;amp; &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>)&lt;/th>
+&lt;th align="center">&lt;a href="https://www.nxp.com/part/MP3V5004DP">MP3V5004dp&lt;/a> &amp;amp; &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -138,9 +138,9 @@ m = 72mm
 &lt;p>The resulting resolution is provided from:&lt;/p>
 &lt;ul>
 &lt;li>(1) &lt;a href="https://www.nxp.com/part/MP3V5004DP">MP3V5004dp&lt;/a> Analog output sensitivity is 1633 Pa/V&lt;/li>
-&lt;li>(2) &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428">MCP3428&lt;/a> 12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>(2) &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428">MCP3428&lt;/a> 12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
 &lt;/ul>
-&lt;p>With (1) and (2), we obtain a resolution of $1633 * 0.125e^{-3} $ = &lt;em>&lt;strong>0.2041 Pa / LSB&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/strong>&lt;/em>&lt;/p>
+&lt;p>With (1) and (2), we obtain a resolution of $1633 * 0.125e^{-3} $ = &lt;em>&lt;strong>0.2041 Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/strong>&lt;/em>&lt;/p>
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
@@ -166,7 +166,7 @@ m = 72mm
 &lt;/figure>
 &lt;/div>
 &lt;h4 id="possible-noiseoffset-sources">possible noise/offset sources&lt;/h4>
-&lt;p>The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> with the analog to digital circuit setting).&lt;/p>
+&lt;p>The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> with the analog to digital circuit setting).&lt;/p>
 &lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
 &lt;h2 id="flight-setup">Flight setup&lt;/h2>
 &lt;p>The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p>
@@ -226,7 +226,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;/code>&lt;/pre>
 &lt;h3 id="gps-vs-airspeed">Comparison with GPS ground speed&lt;/h3>
 &lt;p>In calm condition, the ground speed $V_{GPS}$ and airspeed $V_{Pitot}$ are equal.&lt;/p>
-&lt;p>In windy condition, wind average direction and strength are estimated combining $V_{GPS}$, $V_{Pitot}$ and the plane yaw $\Theta_{heading}$ direction (using GPS COG&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>). This &lt;a href="#wind-estimation">wind estimation&lt;/a> is described below.&lt;/p>
+&lt;p>In windy condition, wind average direction and strength are estimated combining $V_{GPS}$, $V_{Pitot}$ and the plane yaw $\Theta_{heading}$ direction (using GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>). This &lt;a href="#wind-estimation">wind estimation&lt;/a> is described below.&lt;/p>
 &lt;p>The airplane ground speed (GPS) is estimated with the difference of the airspeed (Pitot) with the projected wind to the aircraft forward direction:&lt;/p>
 &lt;p>$V_{GPS} \approx V_{Pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) $&lt;/p>
 &lt;p>The figure below presents the airspeed in blue. The reconstructed ground speed (black) matches accurately with the GPS velocity (red) which prove the correctness of the airspeed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The airspeed measurement presents a high sensitivity even at low speed.&lt;/p>
@@ -272,7 +272,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;li>its constant direction $\Theta_{wind}$&lt;/li>
 &lt;li>its constant strength $V_{wind}$&lt;/li>
 &lt;/ul>
-&lt;h4 id="wind--vpitot--vgps">Wind =&amp;gt; $V_{Pitot} - V_{gps}$&lt;/h4>
+&lt;h4 id="wind--v-pitot---v-gps">Wind =&amp;gt; $V_{Pitot} - V_{gps}$&lt;/h4>
 &lt;p>The curve below shows the difference between the Ground speed (GPS) with the airspeed (Pitot) in function of the plane flight direction. This error (blue dashed points) fit with a sine wave. This sine wave is the speed offset added for each plane direction in $[0 \ 2\pi]$ by a wind with a constant strength and direction. Sine wave amplitude and phase is the wind strength and direction.&lt;/p>
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -301,7 +301,7 @@ plot(COG,V_err','.'); hold on; % plot Error blue dots
 plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),'-k','linewidth',3); % plot wind
 &lt;/code>&lt;/pre>
 &lt;h4 id="discussion">Discussion&lt;/h4>
-&lt;p>Using the GPS COG&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
+&lt;p>Using the GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
 Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane airspeed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p>
 &lt;p>W. Premerlani propose a &lt;a href="https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view">wind estimation&lt;/a> using exclusively GPS data. Tests with this GPS dataset was not conclusive while trying to use all GPS sample while the platform direction is modified (i.e. COG derivative is above a given threshold). GPS dynamic seems too slow to provide robust results.&lt;/p>
 &lt;h4 id="other-flight-data">Other flight data&lt;/h4>
@@ -316,17 +316,17 @@ Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be bes
 Project folder:
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind
 -->
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr />
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
 &lt;ol>
 &lt;li id="fn:1" role="doc-endnote">
-&lt;p>Course Over Ground&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
+&lt;p>Least Significant Bit &lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:2" role="doc-endnote">
-&lt;p>Least Significant Bit&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#8617;&lt;/a>&lt;/p>
+&lt;p>Course Over Ground &lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;/section></description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;p>The board &lt;a href="http://www.mateksys.com/?portfolio=pdb-xpw">PDB-XPW&lt;/a> from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p>
 &lt;p>The chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument condition and amplify the shunt resistor voltage drop providing an analog output proportional to the current.&lt;/p>
 &lt;p>On the PDB-XPW board, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms shunt resistor, itself just below to the Power supply input connector.&lt;/p>

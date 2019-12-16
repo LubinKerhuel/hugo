@@ -10,9 +10,9 @@ Without a budget for dSPACE, SpeedGoat or another NI alternative, rapid prototyp
 &lt;p>$$
 \text{One push button}
 \left\{ \begin{array}{l}
-\text{- C code generation,} \\\&lt;br />
-\text{- Compilation,} \\\&lt;br />
-\text{- Upload &amp;amp; run on the target.} \\\&lt;br />
+\text{- C code generation,} \\\&lt;br>
+\text{- Compilation,} \\\&lt;br>
+\text{- Upload &amp;amp; run on the target.} \\\&lt;br>
 \end{array} \right.
 $$&lt;/p>
 &lt;p>This Model Based Design (MBD) approach enabled efficient research on signal processing validated with real robot for my &lt;a href="http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf">PhD thesis&lt;/a> on bio-robotics from 2006 to 2009.

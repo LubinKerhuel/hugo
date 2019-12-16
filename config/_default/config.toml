@@ -68,53 +68,66 @@ preserveTaxonomyNames = true
 #   latexDashes = true
 #   extensions = ["backslashLineBreak"]
 
+#[markup]
+#  #defaultMarkdownHandler = "blackFriday"
+#  defaultMarkdownHandler = "goldmark"
+#  [markup.blackFriday]
+#    angledQuotes = false
+#    footnoteAnchorPrefix = ""
+#    footnoteReturnLinkContents = ""
+#    fractions = true
+#    hrefTargetBlank = false
+#    latexDashes = true
+#    nofollowLinks = false
+#    noreferrerLinks = false
+#    plainIDAnchors = true
+#    skipHTML = false
+#    smartDashes = true
+#    smartypants = true
+#    smartypantsQuotesNBSP = false
+#    taskLists = true
+#    extensions = ["backslashLineBreak"]
+#  [markup.goldmark]
+#    [markup.goldmark.extensions]
+#      definitionList = true
+#      footnote = true
+#      linkify = true
+#      strikethrough = true
+#      table = true
+#      taskList = true
+#      typographer = true
+#    [markup.goldmark.parser]
+#      attribute = true
+#      autoHeadingID = true
+#    [markup.goldmark.renderer]
+#      hardWraps = false
+#      unsafe = true
+#      xHTML = true
+#  [markup.highlight]
+#    codeFences = false
+#    hl_Lines = ""
+#    lineNoStart = 1
+#    lineNos = true
+#    lineNumbersInTable = true
+#    noClasses = false
+#    style = "vs2015" #"monokai"
+#    tabWidth = 4
+#  [markup.tableOfContents]
+#    endLevel = 3
+#    startLevel = 2
+
 [markup]
-  #defaultMarkdownHandler = "blackFriday"
   defaultMarkdownHandler = "goldmark"
-  [markup.blackFriday]
-    angledQuotes = false
-    footnoteAnchorPrefix = ""
-    footnoteReturnLinkContents = ""
-    fractions = true
-    hrefTargetBlank = false
-    latexDashes = true
-    nofollowLinks = false
-    noreferrerLinks = false
-    plainIDAnchors = true
-    skipHTML = false
-    smartDashes = true
-    smartypants = true
-    smartypantsQuotesNBSP = false
-    taskLists = true
-    extensions = ["backslashLineBreak"]
   [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-    [markup.goldmark.parser]
-      attribute = true
-      autoHeadingID = true
     [markup.goldmark.renderer]
-      hardWraps = false
-      unsafe = true
-      xHTML = true
+      unsafe = true  # Enable user to embed HTML snippets in Markdown content.
   [markup.highlight]
-    codeFences = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
+    codeFences = false  # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
     style = "vs2015" #"monokai"
     tabWidth = 4
   [markup.tableOfContents]
-    endLevel = 3
     startLevel = 2
+    endLevel = 3    
 
 [imaging]
   resampleFilter = "lanczos"

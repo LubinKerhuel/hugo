@@ -2,65 +2,65 @@
 &lt;h3 id="miniature-airspeed-sensor">Miniature airspeed sensor&lt;/h3>
 &lt;h4 id="for-rc-plane--uav">for RC plane &amp;amp; UAV&lt;/h4>
 &lt;p>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a> description&lt;/p>
-&lt;hr />
-&lt;p>&lt;img src="https://lubin.kerhuel.eu/post/pitot-build/featured.jpg" alt="/post/pitot-build/featured.jpg" />&lt;/p>
-&lt;hr />
+&lt;hr>
+&lt;p>&lt;img src="https://lubin.kerhuel.eu/post/pitot-build/featured.jpg" alt="/post/pitot-build/featured.jpg">&lt;/p>
+&lt;hr>
 &lt;h2 id="brass-tube">Brass tube&lt;/h2>
-&lt;p>&lt;img src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" alt="/img/pitot-darcy-prandtl-build-brasstubes.jpg" />&lt;/p>
-&lt;hr />
+&lt;p>&lt;img src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" alt="/img/pitot-darcy-prandtl-build-brasstubes.jpg">&lt;/p>
+&lt;hr>
 &lt;h2 id="mp3v5004dp--mcp3428">mp3v5004dp &amp;amp; mcp3428&lt;/h2>
-&lt;p>&lt;img src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" alt="/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" />&lt;/p>
+&lt;p>&lt;img src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" alt="/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg">&lt;/p>
 &lt;ul>
 &lt;li>Resolution: 0.2041 Pa/LSB&lt;/li>
 &lt;li>Range: [0 836] Pa ($\approx 100km/h $)&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="static-sensor-noise">Static sensor noise&lt;/h2>
 &lt;ul>
 &lt;li>90 min log @ 100Hz, indoor, still&lt;/li>
 &lt;li>Standard Dev : 0.5 Pa&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="/img/pitot-darcy-prandtl-static-characteristic.png" data-background-opacity=1 data-background-position="center" data-background-size="contain">
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="flight-tests">Flight tests&lt;/h2>
-&lt;p>&lt;img src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" alt="Plane" />&lt;/p>
-&lt;hr />
+&lt;p>&lt;img src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" alt="Plane">&lt;/p>
+&lt;hr>
 &lt;p class="stretch">
 &lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg">
 &lt;/p>
 &lt;!-- ![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg) -->
-&lt;hr />
+&lt;hr>
 &lt;p class="stretch">
 &lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg">
 &lt;/p>
 &lt;!-- &lt;section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section> -->
-&lt;hr />
-&lt;h2 id="pressure--speed">Pressure - Speed&lt;/h2>
+&lt;hr>
+&lt;h2 id="pressure---speed">Pressure - Speed&lt;/h2>
 &lt;p>$P_{diff} = \frac{1}{2}\rho v^2$&lt;/p>
 &lt;p>$v = \sqrt{\frac{2}{\rho} * P_{diff}}$&lt;/p>
 &lt;p>with $\rho = 1.16 $&lt;/p>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-0.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-1.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-2.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-3.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="results">results&lt;/h2>
 &lt;table>
 &lt;thead>
@@ -93,15 +93,15 @@
 &lt;li>2.6 m/s&lt;/li>
 &lt;li>from 101° (east)&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;p>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">page&lt;/a> with further details&lt;/p>
-&lt;hr />
+&lt;hr>
 &lt;h3 id="flight-trace">flight trace&lt;/h3>
 &lt;section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" data-background-opacity=1>
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;h3 id="connecting-fish-line-protection">connecting (fish line protection)&lt;/h3>
-&lt;p>&lt;img src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" alt="/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" />&lt;/p></description></item><item><title>Prototypage Rapide avec Simulink sur dsPIC</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid><description>&lt;h2 id="prototypage-rapide">Prototypage Rapide&lt;/h2>
+&lt;p>&lt;img src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" alt="/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg">&lt;/p></description></item><item><title>Prototypage Rapide avec Simulink sur dsPIC</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa/</guid><description>&lt;h2 id="prototypage-rapide">Prototypage Rapide&lt;/h2>
 &lt;h3 id="model-based-design">Model Based Design&lt;/h3>
 &lt;p class="stretch">
 &lt;a href="https://fr.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu/">
@@ -109,7 +109,7 @@
 &lt;/a>
 &lt;/p>
 &lt;p>[&lt;a href="https://rtdc.ctrl-elec.fr/">Lab&lt;/a>] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin">L.Kerhuel&lt;/a> - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux">R.Delpoux&lt;/a>&lt;/p>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="plan">Plan:&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -126,28 +126,28 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;section data-noprocess data-shortcode-slide
 data-transition="fade"
 data-transition_speed="slow"
 >
 &lt;h2 id="model-based-design-mdb">Model Based Design (MDB)&lt;/h2>
-&lt;p>&lt;img src="./Picooz_01_Close.jpg" alt="./Picooz_01_Close.jpg" />&lt;/p>
-&lt;hr />
+&lt;p>&lt;img src="./Picooz_01_Close.jpg" alt="./Picooz_01_Close.jpg">&lt;/p>
+&lt;hr>
 &lt;section data-noprocess data-shortcode-slide
 data-transition="fade"
 data-transition_speed="slow"
 >
-&lt;h2 id="model-based-design-mdb1">Model Based Design (MDB)&lt;/h2>
-&lt;p>&lt;img src="./Picooz_02_Open.jpg" alt="./Picooz_01_Open.jpg" />&lt;/p>
-&lt;hr />
+&lt;h2 id="model-based-design-mdb-1">Model Based Design (MDB)&lt;/h2>
+&lt;p>&lt;img src="./Picooz_02_Open.jpg" alt="./Picooz_01_Open.jpg">&lt;/p>
+&lt;hr>
 &lt;section data-noprocess data-shortcode-slide
 data-transition="fade"
 data-transition_speed="slow"
 >
-&lt;h2 id="model-based-design-mdb2">Model Based Design (MDB)&lt;/h2>
-&lt;p>&lt;img src="./Picooz_03_Motor.jpg" alt="./Picooz_03_Close.jpg" />&lt;/p>
-&lt;hr />
+&lt;h2 id="model-based-design-mdb-2">Model Based Design (MDB)&lt;/h2>
+&lt;p>&lt;img src="./Picooz_03_Motor.jpg" alt="./Picooz_03_Close.jpg">&lt;/p>
+&lt;hr>
 &lt;section data-noprocess data-shortcode-slide
 data-background-color="#FFFFFF"
 >
@@ -157,14 +157,14 @@ data-background-color="#FFFFFF"
 &lt;aside class="notes">
 Commande en Vitesse
 &lt;/aside>
-&lt;hr />
-&lt;h2 id="model-based-design-mdb3">Model Based Design (MDB)&lt;/h2>
-&lt;p>&lt;img src="./Picooz_IdentificatoinBlockPresentation.png" alt="./Picooz_IdentificatoinBlockPresentation.png" />&lt;/p>
+&lt;hr>
+&lt;h2 id="model-based-design-mdb-3">Model Based Design (MDB)&lt;/h2>
+&lt;p>&lt;img src="./Picooz_IdentificatoinBlockPresentation.png" alt="./Picooz_IdentificatoinBlockPresentation.png">&lt;/p>
 &lt;aside class="notes">
 Identification
 &lt;/aside>
-&lt;hr />
-&lt;h2 id="model-based-design-mdb4">Model Based Design (MDB)&lt;/h2>
+&lt;hr>
+&lt;h2 id="model-based-design-mdb-4">Model Based Design (MDB)&lt;/h2>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://player.vimeo.com/video/309895581" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
 &lt;/div>
@@ -172,16 +172,16 @@ Identification
 &lt;iframe src="https://player.vimeo.com/video/309895581" title="test" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
 &lt;/div> -->
 &lt;!-- [Video](C:/M91449/MCHP_Blockset/Developpements/2013_08_19_Masters2013/Fig/Video_Logs_Shirp.avi) -->
-&lt;hr />
-&lt;p>&lt;img src="./Picooz_Identificatoin_eq_01.png" alt="./Picooz_Identificatoin_eq_01.png" />&lt;/p>
-&lt;hr />
-&lt;p>&lt;img src="./Picooz_Identificatoin_eq_02.png" alt="./Picooz_Identificatoin_eq_02.png" />&lt;/p>
+&lt;hr>
+&lt;p>&lt;img src="./Picooz_Identificatoin_eq_01.png" alt="./Picooz_Identificatoin_eq_01.png">&lt;/p>
+&lt;hr>
+&lt;p>&lt;img src="./Picooz_Identificatoin_eq_02.png" alt="./Picooz_Identificatoin_eq_02.png">&lt;/p>
 &lt;aside class="notes">
 rasoir d'Ockham
 &lt;/aside>
-&lt;hr />
-&lt;p>&lt;img src="./Picooz_SuperTwistingController.png" alt="./Picooz_SuperTwistingController.png" />&lt;/p>
-&lt;hr />
+&lt;hr>
+&lt;p>&lt;img src="./Picooz_SuperTwistingController.png" alt="./Picooz_SuperTwistingController.png">&lt;/p>
+&lt;hr>
 &lt;section data-noprocess data-shortcode-slide
 data-background-color="#FFFFFF"
 >
@@ -190,14 +190,14 @@ data-background-color="#FFFFFF"
 &lt;aside class="notes">
 Prediction Simu vs reel
 &lt;/aside>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="span-stylecoloryellowmodelspan-based-design">&lt;span style="color:yellow">Model&lt;/span> Based Design&lt;/h2>
 &lt;ol>
 &lt;li>Identification&lt;/li>
 &lt;li>Simulation / synthèse commande&lt;/li>
 &lt;li>Test&lt;/li>
 &lt;/ol>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="tp-validation-du-modle-de-moteur-dc-fournit">TP: Validation du modèle de moteur DC fournit&lt;/h2>
 &lt;ul>
 &lt;li>log de command &amp;amp; réponse&lt;/li>
@@ -209,25 +209,25 @@ vs&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;hr />
-&lt;h2 id="tp-validation-du-modle-de-moteur-dc-fournit1">TP: Validation du modèle de moteur DC fournit&lt;/h2>
-&lt;p>&lt;img src="./Simulink_DCMotorPravalux_LogVsSimu.png" alt="./Simulink_DCMotorPravalux_LogVsSimu.png" />&lt;/p>
-&lt;hr />
+&lt;hr>
+&lt;h2 id="tp-validation-du-modle-de-moteur-dc-fournit-1">TP: Validation du modèle de moteur DC fournit&lt;/h2>
+&lt;p>&lt;img src="./Simulink_DCMotorPravalux_LogVsSimu.png" alt="./Simulink_DCMotorPravalux_LogVsSimu.png">&lt;/p>
+&lt;hr>
 &lt;h2 id="de-la-simulation-au-programme-embarqu">De la simulation au programme embarqué&lt;/h2>
-&lt;hr />
+&lt;hr>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://player.vimeo.com/video/309876246" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
 &lt;/div>
-&lt;hr />
-&lt;h2 id="pendule-inversedocsinvertedpendulum">&lt;a href="https://lubin.kerhuel.eu/docs/inverted-pendulum/">Pendule inverse&lt;/a>&lt;/h2>
-&lt;p>&lt;img src="./Inverted_Pendulum_ControlLoopCloseUp.png" alt="./Inverted_Pendulum_ControlLoopCloseUp.png" />
+&lt;hr>
+&lt;h2 id="pendule-inversedocsinverted-pendulum">&lt;a href="https://lubin.kerhuel.eu/docs/inverted-pendulum/">Pendule inverse&lt;/a>&lt;/h2>
+&lt;p>&lt;img src="./Inverted_Pendulum_ControlLoopCloseUp.png" alt="./Inverted_Pendulum_ControlLoopCloseUp.png">
 &lt;aside class="notes">
 &lt;ol>
 &lt;li>Couleurs : Period echantillonnage&lt;/li>
 &lt;li>Datatype&lt;/li>
 &lt;/ol>
 &lt;/aside>&lt;/p>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="aspect-temporel">Aspect Temporel:&lt;/h2>
 &lt;h3 id="simulation">Simulation&lt;/h3>
 &lt;p>Modélisation en temps continue:&lt;/p>
@@ -250,8 +250,8 @@ vs&lt;/li>
 DSPACE discretise le modèle&lt;/li>
 &lt;/ol>
 &lt;/aside>
-&lt;hr />
-&lt;h2 id="aspect-temporel1">Aspect Temporel:&lt;/h2>
+&lt;hr>
+&lt;h2 id="aspect-temporel-1">Aspect Temporel:&lt;/h2>
 &lt;h3 id="implmentation">Implémentation&lt;/h3>
 &lt;p>Implémentation en temps discret:&lt;/p>
 &lt;p>&amp;ldquo;pas&amp;rdquo; de calcul fixe&lt;/p>
@@ -268,7 +268,7 @@ DSPACE discretise le modèle&lt;/li>
 Single Rate / Multi rate
 Single Tasking / Multi Tasking
 &lt;/aside>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="discrete-times">Discrete times&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -286,31 +286,31 @@ Single Tasking / Multi Tasking
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;hr />
-&lt;h4 id="modle-multirate">Modèle multi-rate&lt;/h4>
+&lt;hr>
+&lt;h4 id="modle-multi-rate">Modèle multi-rate&lt;/h4>
 &lt;p class="stretch">
 &lt;img data-src="./Model_Hardware_Test_withSampleTime.png">
 &lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
-&lt;hr />
-&lt;h4 id="charge-cpu-dun-modle-multirate-singletasking-70-mips">Charge CPU d'un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
-&lt;p>&lt;img src="./Scope_SingleTasking_70MIPS.png" alt="./Scope_SingleTasking_70MIPS.png" />&lt;/p>
+&lt;hr>
+&lt;h4 id="charge-cpu-dun-modle-multi-rate-single-tasking-70-mips">Charge CPU d'un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
+&lt;p>&lt;img src="./Scope_SingleTasking_70MIPS.png" alt="./Scope_SingleTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
-&lt;hr />
-&lt;h4 id="charge-cpu-dun-modle-multirate-singletasking-20-mips">Charge CPU d'un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
-&lt;p>&lt;img src="./Scope_SingleTasking_20MIPS.png" alt="./Scope_SingleTasking_20MIPS.png" />&lt;/p>
+&lt;hr>
+&lt;h4 id="charge-cpu-dun-modle-multi-rate-single-tasking-20-mips">Charge CPU d'un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
+&lt;p>&lt;img src="./Scope_SingleTasking_20MIPS.png" alt="./Scope_SingleTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;aside class="notes">
 OVERLOAD
 &lt;/aside>
-&lt;hr />
-&lt;h2 id="singletasking">Single-Tasking&lt;/h2>
+&lt;hr>
+&lt;h2 id="single-tasking">Single-Tasking&lt;/h2>
 &lt;p>Single-Tasking: Dans le slot de temps, l'exécution de tous les blocks doit se terminer avant la fin du slot.&lt;/p>
-&lt;hr />
-&lt;h2 id="multitasking">Multi-Tasking&lt;/h2>
+&lt;hr>
+&lt;h2 id="multi-tasking">Multi-Tasking&lt;/h2>
 &lt;p>Multi-Tasking: Préemption possible -&amp;gt; &lt;strong>Monotonic Rate Scheduler&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>La tâche la plus fréquente à la priorité maximale
@@ -321,21 +321,21 @@ OVERLOAD
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;hr />
-&lt;h4 id="charge-cpu-dun-modle-multirate-multitasking-70-mips">Charge CPU d'un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
-&lt;p>&lt;img src="./Scope_MultiTasking_70MIPS.png" alt="./Scope_MultiTasking_70MIPS.png" />&lt;/p>
+&lt;hr>
+&lt;h4 id="charge-cpu-dun-modle-multi-rate-multi-tasking-70-mips">Charge CPU d'un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
+&lt;p>&lt;img src="./Scope_MultiTasking_70MIPS.png" alt="./Scope_MultiTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
-&lt;hr />
-&lt;h4 id="charge-cpu-dun-modle-multirate-multitasking-20-mips">Charge CPU d'un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
-&lt;p>&lt;img src="./Scope_MultiTasking_20MIPS.png" alt="./Scope_MultiTasking_20MIPS.png" />&lt;/p>
+&lt;hr>
+&lt;h4 id="charge-cpu-dun-modle-multi-rate-multi-tasking-20-mips">Charge CPU d'un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
+&lt;p>&lt;img src="./Scope_MultiTasking_20MIPS.png" alt="./Scope_MultiTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
-&lt;hr />
-&lt;p>&lt;img src="./Scope_MultiTasking_SchedulerIllustration.png" alt="./Scope_MultiTasking_70MIPS.png" />&lt;/p>
+&lt;hr>
+&lt;p>&lt;img src="./Scope_MultiTasking_SchedulerIllustration.png" alt="./Scope_MultiTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="tasking-conclusion">Tasking Conclusion&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -361,14 +361,14 @@ OVERLOAD
 20 MIPS ok avec multi-tasking
 Single tasking: deterministe
 &lt;/aside>
-&lt;hr />
+&lt;hr>
 &lt;h1 id="optimisation">Optimisation&lt;/h1>
 &lt;h2 id="type-de-donnes">type de données&lt;/h2>
 &lt;ul>
 &lt;li>Virgule Fixe&lt;/li>
 &lt;li>Virgule Flottante&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="virgule-fixe">Virgule fixe&lt;/h2>
 &lt;h3 id="int8">int8&lt;/h3>
 &lt;p>$\underbrace{1}_{sign\ (1)} \ \underbrace{1111111}_{mantisse\ (7)} * \underbrace{slope}_{\text{LSB value}}$&lt;/p>
@@ -386,10 +386,10 @@ Single tasking: deterministe
 &lt;aside class="notes">
 slope est fixe
 &lt;/aside>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="./FloatFixed_1.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;section data-shortcode-section>
 &lt;h2 id="virgule-flotante">Virgule flotante&lt;/h2>
 &lt;h3 id="single-32-bits">Single (32 bits)&lt;/h3>
@@ -440,8 +440,8 @@ slope est fixe
 &lt;/table>
 &lt;p>&lt;span style="color:yellow">1st&lt;/span> phantom bitof the significand is always 1.&lt;/p>
 &lt;/section>
-&lt;hr />
-&lt;h2 id="virgule-flotante1">Virgule flotante&lt;/h2>
+&lt;hr>
+&lt;h2 id="virgule-flotante-1">Virgule flotante&lt;/h2>
 &lt;h3 id="custom-8-bits">Custom (8 bits)&lt;/h3>
 &lt;p>$\underbrace{1}_{sign\ (1)} \ \underbrace{1111}_{exponent\ (4)} \ \color{yellow}{1}\underbrace{111}_{mantisse\ (3)} $&lt;/p>
 &lt;ul>
@@ -455,7 +455,7 @@ slope est fixe
 &lt;p>0.9 digit [0-9] significatifs&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="custom-8-bit-floating-point">Custom 8 bit Floating point&lt;/h2>
 &lt;table>
 &lt;thead>
@@ -493,20 +493,20 @@ slope est fixe
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="./FloatFixed_2.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="./FloatFixed_3.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-image="./FloatFixed_4.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
 &lt;/section>
 &lt;aside class="notes">
 Integrateur (avec petit TS)
 GPS
 &lt;/aside>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="script-matlab-pour-tester-un-flottant-8-bits">Script Matlab pour tester un flottant 8 bits&lt;/h2>
 &lt;pre>&lt;code class="language-MATLAB">% 4 bit exponent (signed)
 emin = -7; emax = 6;
@@ -519,15 +519,15 @@ TotalVal = vals'*exps;
 8bitFloat = unique([TotalVal ; 2^emin * [0:(2^m-1)]']);
 8bitFloat = unique(flipud(-TotalVal) ;TotalVal]); % with neg vals
 &lt;/code>&lt;/pre>
-&lt;hr />
+&lt;hr>
 &lt;h1 id="simulink">Simulink&lt;/h1>
-&lt;hr />
-&lt;h2 id="datatype">Data-type&lt;/h2>
+&lt;hr>
+&lt;h2 id="data-type">Data-type&lt;/h2>
 &lt;p class="stretch">
 &lt;img data-src="./Simulink_TypeCast_FixPtFormat.png">
 &lt;/p>
-&lt;hr />
-&lt;h2 id="datatype-notation">Data-type notation&lt;/h2>
+&lt;hr>
+&lt;h2 id="data-type-notation">Data-type notation&lt;/h2>
 &lt;ul>
 &lt;li>int8&amp;hellip;uint23&lt;/li>
 &lt;li>fixdt(1,16)
@@ -548,9 +548,9 @@ TotalVal = vals'*exps;
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;hr />
-&lt;h2 id="datatype-notation1">Datatype notation&lt;/h2>
-&lt;p>&lt;img src="./Simulink_TypeCast_SlopeAndBias.png" alt="./Simulink_TypeCast_SlopeAndBias.png" />&lt;/p>
+&lt;hr>
+&lt;h2 id="datatype-notation">Datatype notation&lt;/h2>
+&lt;p>&lt;img src="./Simulink_TypeCast_SlopeAndBias.png" alt="./Simulink_TypeCast_SlopeAndBias.png">&lt;/p>
 &lt;ul>
 &lt;li>fixdt(1,16,.01,0)
 &lt;ul>
@@ -562,23 +562,23 @@ TotalVal = vals'*exps;
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;hr />
-&lt;p>&lt;img src="./Simulink_TypeCast_SlopeAndBias_Sat.png" alt="./Simulink_TypeCast_SlopeAndBias_Sat.png" />&lt;/p>
+&lt;hr>
+&lt;p>&lt;img src="./Simulink_TypeCast_SlopeAndBias_Sat.png" alt="./Simulink_TypeCast_SlopeAndBias_Sat.png">&lt;/p>
 &lt;ul>
 &lt;li>&lt;span style="color:yellow">SI&lt;/span>: Stored Integer&lt;/li>
 &lt;li>&lt;span style="color:yellow">RWV&lt;/span>: Real World Value&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="tp">TP&lt;/h2>
-&lt;p>&lt;a href="https://rtdc.ctrl-elec.fr/">&lt;a href="https://rtdc.ctrl-elec.fr">https://rtdc.ctrl-elec.fr&lt;/a>&lt;/a>&lt;/p>
-&lt;hr />
+&lt;p>&lt;a href="https://rtdc.ctrl-elec.fr/">https://rtdc.ctrl-elec.fr&lt;/a>&lt;/p>
+&lt;hr>
 &lt;h2 id="download">download&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/raw/master/LABMatlabFiles/02_GettingStarted/MCLV2_dsPIC33EP256MC506_base_R2017a.zip">base model&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="elements-de-correction">Elements de correction&lt;/h2>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="liens">Liens:&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -600,7 +600,7 @@ TotalVal = vals'*exps;
 &lt;p>&lt;a href="http://www.ctrl-elec.fr">http://www.ctrl-elec.fr&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;h1 id="slide-control">Slide control:&lt;/h1>
 &lt;ul>
 &lt;li>Next: &lt;code>Right Arrow&lt;/code> or &lt;code>Space&lt;/code>&lt;/li>
@@ -612,7 +612,7 @@ TotalVal = vals'*exps;
 &lt;li>Fullscreen: &lt;code>F&lt;/code>&lt;/li>
 &lt;li>Zoom: &lt;code>Alt + Click&lt;/code>&lt;/li>
 &lt;/ul></description></item><item><title>test slides</title><link>https://lubin.kerhuel.eu/slides/testslides/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/testslides/</guid><description>&lt;h1 id="test-slides">Test slides&lt;/h1>
-&lt;hr />
+&lt;hr>
 &lt;section data-shortcode-section>
 &lt;h2 id="vertical-slide-1">Vertical slide 1&lt;/h2>
 &lt;/section>
@@ -620,22 +620,22 @@ TotalVal = vals'*exps;
 &lt;section data-shortcode-section>
 &lt;h1 id="vertical-slide-2">Vertical slide 2&lt;/h1>
 &lt;/section>
-&lt;hr />
+&lt;hr>
 &lt;section data-background-iframe="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&amp;controls=1&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;modestbranding=1&amp;loop=&amp;start=0" data-background-opacity=0.06 data-background-repeat="repeat">
 &lt;/section>
 &lt;h1 id="my-title-">My Title !&lt;/h1>
-&lt;hr />
+&lt;hr>
 &lt;section data-noprocess data-shortcode-slide
 data-background-iframe="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1&amp;amp;controls=1&amp;amp;showinfo=0&amp;amp;autohide=1"
 data-background-opacity="0.1"
 data-backgroundTransition="none"
 >
-&lt;hr />
+&lt;hr>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/algBpBeQIOY?autoplay=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
 &lt;p>mes notes&lt;/p>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="controls">Controls&lt;/h2>
 &lt;ul>
 &lt;li>Next: &lt;code>Right Arrow&lt;/code> or &lt;code>Space&lt;/code>&lt;/li>
@@ -648,7 +648,7 @@ data-backgroundTransition="none"
 &lt;li>Zoom: &lt;code>Alt + Click&lt;/code>&lt;/li>
 &lt;li>&lt;a href="https://github.com/hakimel/reveal.js#pdf-export">PDF Export&lt;/a>: &lt;code>E&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="code-highlighting">Code Highlighting&lt;/h2>
 &lt;p>Inline code: &lt;code>variable&lt;/code>&lt;/p>
 &lt;p>Code block:&lt;/p>
@@ -656,14 +656,14 @@ data-backgroundTransition="none"
 if porridge == &amp;quot;blueberry&amp;quot;:
 print(&amp;quot;Eating...&amp;quot;)
 &lt;/code>&lt;/pre>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="math">Math&lt;/h2>
 &lt;p>In-line math: $x + y = z$&lt;/p>
 &lt;p>Block math:&lt;/p>
 &lt;p>$$
 f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
 $$&lt;/p>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="fragments">Fragments&lt;/h2>
 &lt;p>Make content appear incrementally&lt;/p>
 &lt;pre>&lt;code>{{% fragment %}} One {{% /fragment %}}
@@ -680,13 +680,13 @@ One
 &lt;span class="fragment " >
 Three
 &lt;/span>&lt;/p>
-&lt;hr />
+&lt;hr>
 &lt;p>A fragment can accept two optional parameters:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>class&lt;/code>: use a custom style (requires definition in custom CSS)&lt;/li>
 &lt;li>&lt;code>weight&lt;/code>: sets the order in which a fragment appears&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="speaker-notes">Speaker Notes&lt;/h2>
 &lt;p>Add speaker notes to your presentation&lt;/p>
 &lt;pre>&lt;code class="language-markdown">{{% speaker_note %}}
@@ -701,7 +701,7 @@ Three
 &lt;li>Press &lt;code>S&lt;/code> key to view&lt;/li>
 &lt;/ul>
 &lt;/aside>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="themes">Themes&lt;/h2>
 &lt;ul>
 &lt;li>black: Black background, white text, blue links (default)&lt;/li>
@@ -710,14 +710,14 @@ Three
 &lt;li>beige: Beige background, dark text, brown links&lt;/li>
 &lt;li>sky: Blue background, thin dark text, blue links&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;ul>
 &lt;li>night: Black background, thick white text, orange links&lt;/li>
 &lt;li>serif: Cappuccino background, gray text, brown links&lt;/li>
 &lt;li>simple: White background, black text, blue links&lt;/li>
 &lt;li>solarized: Cream-colored background, dark green text, blue links&lt;/li>
 &lt;/ul>
-&lt;hr />
+&lt;hr>
 &lt;section data-noprocess data-shortcode-slide
 data-background-image="/img/boards.jpg"
 >
@@ -727,7 +727,7 @@ data-background-image="/img/boards.jpg"
 {{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
 {{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
 &lt;/code>&lt;/pre>
-&lt;hr />
+&lt;hr>
 &lt;h2 id="custom-css-example">Custom CSS Example&lt;/h2>
 &lt;p>Let's make headers navy colored.&lt;/p>
 &lt;p>Create &lt;code>assets/css/reveal_custom.css&lt;/code> with:&lt;/p>
@@ -737,8 +737,8 @@ data-background-image="/img/boards.jpg"
 color: navy;
 }
 &lt;/code>&lt;/pre>
-&lt;hr />
+&lt;hr>
 &lt;h1 id="questions">Questions?&lt;/h1>
 &lt;p>&lt;a href="https://discourse.gohugo.io">Ask&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://sourcethemes.com/academic/docs/">Documentation&lt;/a>&lt;/p>
-&lt;hr /></description></item></channel></rss>
+&lt;hr></description></item></channel></rss>
