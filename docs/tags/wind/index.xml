@@ -10,10 +10,10 @@
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" alt="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip."/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" class="lazyload" alt="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>Brass inner and outer tubes of the Pitot tube.&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Brass inner and outer tubes of the Pitot tube.&lt;/h4>
 &lt;p>Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -144,10 +144,10 @@ m = 72mm
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" alt="Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage."/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" class="lazyload" alt="Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>Pressure sensor and electronics mounted on a DIP adapter board.&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Pressure sensor and electronics mounted on a DIP adapter board.&lt;/h4>
 &lt;p>Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -157,10 +157,10 @@ m = 72mm
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" alt="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB"/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" class="lazyload" alt="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>Experimental pitot-tube static characteristic with the MP3V5004dp differential pressure sensor&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Experimental pitot-tube static characteristic with the MP3V5004dp differential pressure sensor&lt;/h4>
 &lt;p>90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -173,10 +173,10 @@ m = 72mm
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" alt="Platform used for tests"/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" class="lazyload" alt="Platform used for tests"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>FirStar 1600 Volantex RC plane&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>FirStar 1600 Volantex RC plane&lt;/h4>
 &lt;p>Platform used for tests&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -185,10 +185,10 @@ m = 72mm
 &lt;div class="box" style="max-width:50%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" alt="Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube."/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" class="lazyload" alt="Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>Flashmer – flexible Tube 2mm. Image from Decathlon (france).&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Flashmer – flexible Tube 2mm. Image from Decathlon (france).&lt;/h4>
 &lt;p>Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -197,20 +197,20 @@ m = 72mm
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" />
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" class="lazyload" />
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform.&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform.&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
 &lt;div class="box" style="max-width:60%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" alt="Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube."/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" class="lazyload" alt="Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>Carbon-Brass light Pitot tube sensor attached to the wing with a magnet.&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Carbon-Brass light Pitot tube sensor attached to the wing with a magnet.&lt;/h4>
 &lt;p>Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -233,10 +233,10 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" alt="GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$)."/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" class="lazyload" alt="GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$)."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>Experimental measurement comparing GPS ground speed with pitot-tube airspeed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the the pitot tube subtracted from the estimated wind.&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Experimental measurement comparing GPS ground speed with pitot-tube airspeed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the the pitot tube subtracted from the estimated wind.&lt;/h4>
 &lt;p>GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$).&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -277,10 +277,10 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" alt="Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" class="lazyload" alt="Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>Experimental result presenting GPS ground speed and Pitot airspeed difference in function of the plane direction of 450s flight of the RC Firstar 1600 plane.&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Experimental result presenting GPS ground speed and Pitot airspeed difference in function of the plane direction of 450s flight of the RC Firstar 1600 plane.&lt;/h4>
 &lt;p>Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>

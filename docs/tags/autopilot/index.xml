@@ -40,10 +40,10 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" alt="Volantex Firstar 1600 with Qx7 remote control."/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" class="lazyload" alt="Volantex Firstar 1600 with Qx7 remote control."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>autopilot platform&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>autopilot platform&lt;/h4>
 &lt;p>Volantex Firstar 1600 with Qx7 remote control.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -68,10 +68,10 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" />
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" class="lazyload" />
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption>&lt;h4>Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16-bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter.&lt;/h4>
+&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16-bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter.&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
