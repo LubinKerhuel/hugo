@@ -11,11 +11,13 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 <div class="box{{ with .Get "caption-position" }} fancy-figure caption-position-{{.}}{{end}}{{ with .Get "caption-effect" }} caption-effect-{{.}}{{end}}" {{ with .Get "width" }}style="max-width:{{.}}"{{end}}>
   <figure {{ with .Get "class" }}class="{{.}}"{{ end }} itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img"{{ if .Parent }} style="background-image: url('{{ $thumb | relURL }}');"{{ end }}{{ with .Get "size" }} data-size="{{.}}"{{ end }}>
-      <img itemprop="thumbnail" src="{{ $thumb | relURL }}" {{ with .Get "alt" | default (.Get "caption" | markdownify | emojify) }}alt="{{.}}"{{ end }}/><!-- <img> hidden if in .gallery -->
+      <img itemprop="thumbnail" data-src="{{ $thumb | relURL }}" class="lazyload" {{ with .Get "alt" | default (.Get "caption" | markdownify | emojify) }}alt="{{.}}"{{ end }}/><!-- <img> hidden if in .gallery -->
     </div>
     {{ with .Get "link" | default (.Get "src") }}<a href="{{.}}" itemprop="contentUrl"></a>{{ end }}
     {{- if or (or (.Get "title") (.Get "caption" | markdownify | emojify)) (.Get "attr")}}
-      <figcaption>
+    {{/* Localize the figure numbering (if enabled). */}}
+    {{ $figure := split (i18n "fig" | default "fig %d:") "%d" }}    
+      <figcaption {{ if eq (.Get "numbered") "true" }} data-pre="{{ index $figure 0 }}" data-post="{{ index $figure 1 }}" class="numbered"{{ end }}>        
         {{- with .Get "title" | markdownify | emojify }}<h4>{{.}}</h4>{{ end }}
         {{- if or (.Get "caption" | markdownify | emojify ) (.Get "attr")}}
           <p>
@@ -24,6 +26,7 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
           </p>
         {{- end }}
       </figcaption>
+
     {{- end }}
   </figure>
 </div>

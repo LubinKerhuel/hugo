@@ -24,7 +24,7 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 				<div class="box">
 				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 				    <div class="img" style="background-image: url('{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}');" >
-				      <img itemprop="thumbnail" src="{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}" alt="{{ $caption }}" /><!-- <img> hidden if in .gallery -->
+				      <img itemprop="thumbnail" data-src="{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}" class="lazyload" alt="{{ $caption }}" /><!-- <img> hidden if in .gallery -->
 				    </div>
 			      <figcaption>
 		          <p>{{ $caption }}</p>
