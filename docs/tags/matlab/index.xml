@@ -1,4 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>matlab | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tags/matlab/</link><atom:link href="https://lubin.kerhuel.eu/tags/matlab/index.xml" rel="self" type="application/rss+xml"/><description>matlab</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Lubin Kerhuel</copyright><lastBuildDate>Sun, 19 May 2019 00:00:00 +0200</lastBuildDate><image><url>https://lubin.kerhuel.eu/img/img/firstar1600-qx7.jpg</url><title>matlab</title><link>https://lubin.kerhuel.eu/tags/matlab/</link></image><item><title>block receiver &amp; telemetry: S.BUS, Smart Port, F.Port</title><link>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+&lt;div class="pswp__bg">&lt;/div>
+&lt;div class="pswp__scroll-wrap">
+&lt;div class="pswp__container">
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;/div>
+&lt;div class="pswp__ui pswp__ui--hidden">
+&lt;div class="pswp__top-bar">
+&lt;div class="pswp__counter">&lt;/div>
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
+&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
+&lt;div class="pswp__preloader">
+&lt;div class="pswp__preloader__icn">
+&lt;div class="pswp__preloader__cut">
+&lt;div class="pswp__preloader__donut">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+&lt;div class="pswp__share-tooltip">&lt;/div>
+&lt;/div>
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+&lt;/button>
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+&lt;/button>
+&lt;div class="pswp__caption">
+&lt;div class="pswp__caption__center">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;p>Three blocks add support for three protocol found in receivers. Traditional PWM output receiver can be handled directly through the Input Capture or Change Notification peripheral and do not required a specific block.&lt;/p>
 &lt;h2 id="sbus-smart-port-and-fport">S.BUS, Smart Port and F.Port&lt;/h2>
 &lt;p>S.BUS, Smart Port (also named S.Port) and F.Port are three protocol available in FrSky RC receiver and compatible. All three protocol rely on the UART peripheral with different settings. Their purpose is specific:&lt;/p>
@@ -123,6 +163,7 @@
 &lt;p>UART Rx block is sampled at 1kHz (1ms).
 Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is given a value of 10 (no more than 10 bytes can be received in 1 ms at 100000 bauds/s with two stop bits)&lt;/p>
 &lt;p>The S.BUS block GUI allows to set which block output shoudl be decoded and the scaling for each channels decoded.&lt;/p>
+&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
 &lt;div class="box" style="max-width:40%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
@@ -247,6 +288,46 @@ Rx and Tx channels are used. They are assigned to the same pin. UART is configur
 &lt;/li>
 &lt;/ol>
 &lt;/section></description></item><item><title>block Sensor</title><link>https://lubin.kerhuel.eu/uxv/block-sensor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/block-sensor/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+&lt;div class="pswp__bg">&lt;/div>
+&lt;div class="pswp__scroll-wrap">
+&lt;div class="pswp__container">
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;/div>
+&lt;div class="pswp__ui pswp__ui--hidden">
+&lt;div class="pswp__top-bar">
+&lt;div class="pswp__counter">&lt;/div>
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
+&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
+&lt;div class="pswp__preloader">
+&lt;div class="pswp__preloader__icn">
+&lt;div class="pswp__preloader__cut">
+&lt;div class="pswp__preloader__donut">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+&lt;div class="pswp__share-tooltip">&lt;/div>
+&lt;/div>
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+&lt;/button>
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+&lt;/button>
+&lt;div class="pswp__caption">
+&lt;div class="pswp__caption__center">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;p>The block add a sensor &amp;ldquo;packet&amp;rdquo; to be transmitted to a receiver through the Smart Port of the F.Port. The receiver send the telemetry packet to the Remote controller (RC). Thus the Simulink should have either a Smart Port or a F.Port block.&lt;/p>
 &lt;p>Each sensor block declare the sensor reference composed of the two parameters PhysId and {Address+Offset}. Sensor value is composed of 4 bytes array block input. Multiple instance of the sensor block can be added in a model. Two instance can have the same sensor reference wihch is used for sensor sending multiple packets with various values (see FrSky FVLSS or GPS sensor).&lt;/p>
 &lt;p>Each block instance add a 4 bytes buffer to store the sensor value which is updated at block execution time. The block sample rate defines the update rate of the internal buffer.&lt;/p>
@@ -272,6 +353,46 @@ The block update sample rate is selected by end user. whose value will be sent t
 &lt;p>The sensor PhyId, APPID and APPID Offset variant are set within the block.
 The PRIM field must be set to 0X10 for a sensor. The sensor value unit is set within the block.
 Block input is the 4 bytes codint for the sensor value.&lt;/p></description></item><item><title>Fixed-wing autopilot based on Simulink model</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+&lt;div class="pswp__bg">&lt;/div>
+&lt;div class="pswp__scroll-wrap">
+&lt;div class="pswp__container">
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;/div>
+&lt;div class="pswp__ui pswp__ui--hidden">
+&lt;div class="pswp__top-bar">
+&lt;div class="pswp__counter">&lt;/div>
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
+&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
+&lt;div class="pswp__preloader">
+&lt;div class="pswp__preloader__icn">
+&lt;div class="pswp__preloader__cut">
+&lt;div class="pswp__preloader__donut">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+&lt;div class="pswp__share-tooltip">&lt;/div>
+&lt;/div>
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+&lt;/button>
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+&lt;/button>
+&lt;div class="pswp__caption">
+&lt;div class="pswp__caption__center">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;h2 id="a-16-bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools">A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2>
 &lt;h3 id="motivation">Motivation&lt;/h3>
 &lt;p>Building a platform for testing various autopilot control loop has become simple thanks to the many low cost elements available. To cite few of them:&lt;/p>
@@ -310,6 +431,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;p>Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/">https://slugsuav.soe.ucsc.edu/&lt;/a>) is available online. The update &lt;a href="https://doi.org/10.1155/2018/6892153">SLUG II&lt;/a> projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
 &lt;h3 id="hardware-list">Hardware list&lt;/h3>
 &lt;p>Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p>
+&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
@@ -380,6 +502,47 @@ This hands-on is for 5th year students at INSA-Lyon.&lt;/p>
 &lt;li>Real-time scheduler / CPU load analysis&lt;/li>
 &lt;li>Fixed-point datatypes&lt;/li>
 &lt;/ul></description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/docs/inverted-pendulum/</link><pubDate>Sun, 09 Sep 2018 00:00:00 +0200</pubDate><guid>https://lubin.kerhuel.eu/docs/inverted-pendulum/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+&lt;div class="pswp__bg">&lt;/div>
+&lt;div class="pswp__scroll-wrap">
+&lt;div class="pswp__container">
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;/div>
+&lt;div class="pswp__ui pswp__ui--hidden">
+&lt;div class="pswp__top-bar">
+&lt;div class="pswp__counter">&lt;/div>
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
+&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
+&lt;div class="pswp__preloader">
+&lt;div class="pswp__preloader__icn">
+&lt;div class="pswp__preloader__cut">
+&lt;div class="pswp__preloader__donut">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+&lt;div class="pswp__share-tooltip">&lt;/div>
+&lt;/div>
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+&lt;/button>
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+&lt;/button>
+&lt;div class="pswp__caption">
+&lt;div class="pswp__caption__center">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
 &lt;div class="box" style="max-width:45%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">

@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>electronics | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/categories/electronics/</link><atom:link href="https://lubin.kerhuel.eu/categories/electronics/index.xml" rel="self" type="application/rss+xml"/><description>electronics</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Lubin Kerhuel</copyright><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/img/img/firstar1600-qx7.jpg</url><title>electronics</title><link>https://lubin.kerhuel.eu/categories/electronics/</link></image><item><title>Miniature airspeed sensor for RC plane and UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+&lt;div class="pswp__bg">&lt;/div>
+&lt;div class="pswp__scroll-wrap">
+&lt;div class="pswp__container">
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;/div>
+&lt;div class="pswp__ui pswp__ui--hidden">
+&lt;div class="pswp__top-bar">
+&lt;div class="pswp__counter">&lt;/div>
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
+&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
+&lt;div class="pswp__preloader">
+&lt;div class="pswp__preloader__icn">
+&lt;div class="pswp__preloader__cut">
+&lt;div class="pswp__preloader__donut">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+&lt;div class="pswp__share-tooltip">&lt;/div>
+&lt;/div>
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+&lt;/button>
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+&lt;/button>
+&lt;div class="pswp__caption">
+&lt;div class="pswp__caption__center">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;h2>Table of Contents&lt;/h2>
+&lt;nav id="TableOfContents">
+&lt;ul>
+&lt;li>&lt;a href="#pitot-tube-principle">Pitot tube principle&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#pitot-prandtl-tube">Pitot-Prandtl tube&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#electronics">Electronics&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#sensitivity-requirements-and-pressure-sensor">Sensitivity requirements and Pressure sensor&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#signal-conditioning-and-conversion">Signal conditioning and conversion&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#sensor-static-tests">Sensor static tests&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#flight-setup">Flight setup&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#experimental-results">Experimental results&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#gps-vs-airspeed">Comparison with GPS ground speed&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#wind-estimation">Wind estimation&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/nav>
 &lt;h2 id="pitot-tube-principle">Pitot tube principle&lt;/h2>
 &lt;p>A Pitot-Darcy probe is an airspeed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P_t$ is added at its tip. The differential pressure $P_{diff}$ is measured between the tip of the tube $P_t$ and the static pressure $P_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p>
 &lt;p>The pressure added at tube tip is the square of the airspeed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are measured in Pascal unit (Pa). $\rho$ is the air density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude. $v$ is the airspeed in $m.s^{-1}$. The differential pressure measured is $P_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$&lt;/p>
@@ -7,6 +67,7 @@
 &lt;p>Prandtl tube is one version of a Pitot probe where an inner tube is placed in the center of an outer tube. Space between the two tubes is filled-in on few mm near the tip with an epoxy adhesive (Araldite or equivalent). The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.&lt;/p>
 &lt;p>The static pressure holes must be drilled at a minimum distance from the tube tip where airflow perturbations are reduced. A distance 4 times the diameter (d=4mm)of the outer tube is retains here (16mm). Four 1mm holes were drilled with a Dremel hand tool. The three tubes are presented on the figure below.&lt;/p>
 &lt;p>First test was done using brass tubes. Inner tube width is 2/1mm (outside/inside) and outer tube is 4/3mm.&lt;/p>
+&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
@@ -327,6 +388,46 @@ C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_Pit
 &lt;/li>
 &lt;/ol>
 &lt;/section></description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+&lt;div class="pswp__bg">&lt;/div>
+&lt;div class="pswp__scroll-wrap">
+&lt;div class="pswp__container">
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;/div>
+&lt;div class="pswp__ui pswp__ui--hidden">
+&lt;div class="pswp__top-bar">
+&lt;div class="pswp__counter">&lt;/div>
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
+&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
+&lt;div class="pswp__preloader">
+&lt;div class="pswp__preloader__icn">
+&lt;div class="pswp__preloader__cut">
+&lt;div class="pswp__preloader__donut">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+&lt;div class="pswp__share-tooltip">&lt;/div>
+&lt;/div>
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+&lt;/button>
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+&lt;/button>
+&lt;div class="pswp__caption">
+&lt;div class="pswp__caption__center">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;p>The board &lt;a href="http://www.mateksys.com/?portfolio=pdb-xpw">PDB-XPW&lt;/a> from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p>
 &lt;p>The chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument condition and amplify the shunt resistor voltage drop providing an analog output proportional to the current.&lt;/p>
 &lt;p>On the PDB-XPW board, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms shunt resistor, itself just below to the Power supply input connector.&lt;/p>
