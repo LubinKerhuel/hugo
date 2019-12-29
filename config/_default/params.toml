@@ -244,9 +244,9 @@ plugins_js  = ["load-photoswipe"]
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  engine = 0
+  engine = 2
   api_key = ""
-  zoom = 10
+  zoom = 6
  
 ############################
 ## Marketing
