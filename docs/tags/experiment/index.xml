@@ -333,7 +333,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;li>its constant direction $\Theta_{wind}$&lt;/li>
 &lt;li>its constant strength $V_{wind}$&lt;/li>
 &lt;/ul>
-&lt;h4 id="wind--v-pitot---v-gps">Wind =&amp;gt; $V_{Pitot} - V_{gps}$&lt;/h4>
+&lt;h4 id="wind--v_pitot---v_gps">Wind =&amp;gt; $V_{Pitot} - V_{gps}$&lt;/h4>
 &lt;p>The curve below shows the difference between the Ground speed (GPS) with the airspeed (Pitot) in function of the plane flight direction. This error (blue dashed points) fit with a sine wave. This sine wave is the speed offset added for each plane direction in $[0 \ 2\pi]$ by a wind with a constant strength and direction. Sine wave amplitude and phase is the wind strength and direction.&lt;/p>
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">

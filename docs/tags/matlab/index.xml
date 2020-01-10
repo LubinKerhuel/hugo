@@ -393,8 +393,8 @@ Block input is the 4 bytes codint for the sensor value.&lt;/p></description></it
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h2 id="a-16-bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools">A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2>
-&lt;h3 id="motivation">Motivation&lt;/h3>
+&lt;h2 id="a-16-bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools-">A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2>
+&lt;h3 id="motivation-">Motivation&lt;/h3>
 &lt;p>Building a platform for testing various autopilot control loop has become simple thanks to the many low cost elements available. To cite few of them:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>10 DoF IMU&lt;/strong>: (~$5\ $$),&lt;/li>
@@ -411,7 +411,7 @@ Block input is the 4 bytes codint for the sensor value.&lt;/p></description></it
 &lt;/li>
 &lt;li>few optional hardware for &lt;strong>data logging&lt;/strong>, &lt;strong>telemetry&lt;/strong>, &lt;strong>camera&lt;/strong>&amp;hellip;&lt;/li>
 &lt;/ul>
-&lt;h3 id="difference-with-existing-autopilot">Difference with existing autopilot&lt;/h3>
+&lt;h3 id="difference-with-existing-autopilot-">Difference with existing autopilot&lt;/h3>
 &lt;p>Many off the shelf autopilot exists and works great. To mention few of them:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="http://ardupilot.org/">Ardupilot&lt;/a>&lt;/li>
@@ -429,7 +429,7 @@ The presented autopilot uses a Model Based Design (MBD) approach: The autopilot 
 Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p>
 &lt;p>Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p>
 &lt;p>Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/">https://slugsuav.soe.ucsc.edu/&lt;/a>) is available online. The update &lt;a href="https://doi.org/10.1155/2018/6892153">SLUG II&lt;/a> projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
-&lt;h3 id="hardware-list">Hardware list&lt;/h3>
+&lt;h3 id="hardware-list-">Hardware list&lt;/h3>
 &lt;p>Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p>
 &lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
 &lt;div class="box" style="max-width:80%">
@@ -470,7 +470,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
-&lt;h3 id="results">Results&lt;/h3>
+&lt;h3 id="results-">Results&lt;/h3>
 &lt;p>Sliding mode-based controller tested in both pitch and roll axis with two mode:&lt;/p>
 &lt;ul>
 &lt;li>Control plane angular rate control (angular speed set-point given through the remote control)&lt;/li>
@@ -481,11 +481,11 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;p>Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">here&lt;/a>).&lt;/p>
 &lt;p>Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p>
 &lt;p>Validated automatic calibration of the magnetometer's axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p>
-&lt;h3 id="next-steps">Next steps&lt;/h3>
+&lt;h3 id="next-steps-">Next steps&lt;/h3>
 &lt;p>Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p>
 &lt;p>Test in flight MAVLink protocol parameters tuning.&lt;/p>
 &lt;p>Add automatic guidance of the plane, using MAVLink Way point sets.&lt;/p>
-&lt;h3 id="site-content">Site content&lt;/h3>
+&lt;h3 id="site-content-">Site content&lt;/h3>
 &lt;p>Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.&lt;/p>
 &lt;p>Ideas to dvpt:&lt;/p>
 &lt;ul>

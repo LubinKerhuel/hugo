@@ -198,7 +198,7 @@ Prediction Simu vs reel
 &lt;li>Test&lt;/li>
 &lt;/ol>
 &lt;hr>
-&lt;h2 id="tp-validation-du-modle-de-moteur-dc-fournit">TP: Validation du modèle de moteur DC fournit&lt;/h2>
+&lt;h2 id="tp-validation-du-modèle-de-moteur-dc-fournit">TP: Validation du modèle de moteur DC fournit&lt;/h2>
 &lt;ul>
 &lt;li>log de command &amp;amp; réponse&lt;/li>
 &lt;li>Simulation comparaison
@@ -210,10 +210,10 @@ vs&lt;/li>
 &lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h2 id="tp-validation-du-modle-de-moteur-dc-fournit-1">TP: Validation du modèle de moteur DC fournit&lt;/h2>
+&lt;h2 id="tp-validation-du-modèle-de-moteur-dc-fournit-1">TP: Validation du modèle de moteur DC fournit&lt;/h2>
 &lt;p>&lt;img src="./Simulink_DCMotorPravalux_LogVsSimu.png" alt="./Simulink_DCMotorPravalux_LogVsSimu.png">&lt;/p>
 &lt;hr>
-&lt;h2 id="de-la-simulation-au-programme-embarqu">De la simulation au programme embarqué&lt;/h2>
+&lt;h2 id="de-la-simulation-au-programme-embarqué">De la simulation au programme embarqué&lt;/h2>
 &lt;hr>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://player.vimeo.com/video/309876246" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
@@ -252,7 +252,7 @@ DSPACE discretise le modèle&lt;/li>
 &lt;/aside>
 &lt;hr>
 &lt;h2 id="aspect-temporel-1">Aspect Temporel:&lt;/h2>
-&lt;h3 id="implmentation">Implémentation&lt;/h3>
+&lt;h3 id="implémentation">Implémentation&lt;/h3>
 &lt;p>Implémentation en temps discret:&lt;/p>
 &lt;p>&amp;ldquo;pas&amp;rdquo; de calcul fixe&lt;/p>
 &lt;ul>
@@ -287,19 +287,19 @@ Single Tasking / Multi Tasking
 &lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h4 id="modle-multi-rate">Modèle multi-rate&lt;/h4>
+&lt;h4 id="modèle-multi-rate">Modèle multi-rate&lt;/h4>
 &lt;p class="stretch">
 &lt;img data-src="./Model_Hardware_Test_withSampleTime.png">
 &lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modle-multi-rate-single-tasking-70-mips">Charge CPU d'un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-70-mips">Charge CPU d'un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_SingleTasking_70MIPS.png" alt="./Scope_SingleTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modle-multi-rate-single-tasking-20-mips">Charge CPU d'un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-20-mips">Charge CPU d'un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_SingleTasking_20MIPS.png" alt="./Scope_SingleTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
@@ -322,12 +322,12 @@ OVERLOAD
 &lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modle-multi-rate-multi-tasking-70-mips">Charge CPU d'un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-70-mips">Charge CPU d'un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_MultiTasking_70MIPS.png" alt="./Scope_MultiTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modle-multi-rate-multi-tasking-20-mips">Charge CPU d'un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-20-mips">Charge CPU d'un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_MultiTasking_20MIPS.png" alt="./Scope_MultiTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
@@ -363,7 +363,7 @@ Single tasking: deterministe
 &lt;/aside>
 &lt;hr>
 &lt;h1 id="optimisation">Optimisation&lt;/h1>
-&lt;h2 id="type-de-donnes">type de données&lt;/h2>
+&lt;h2 id="type-de-données">type de données&lt;/h2>
 &lt;ul>
 &lt;li>Virgule Fixe&lt;/li>
 &lt;li>Virgule Flottante&lt;/li>

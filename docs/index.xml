@@ -687,7 +687,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;li>its constant direction $\Theta_{wind}$&lt;/li>
 &lt;li>its constant strength $V_{wind}$&lt;/li>
 &lt;/ul>
-&lt;h4 id="wind--v-pitot---v-gps">Wind =&amp;gt; $V_{Pitot} - V_{gps}$&lt;/h4>
+&lt;h4 id="wind--v_pitot---v_gps">Wind =&amp;gt; $V_{Pitot} - V_{gps}$&lt;/h4>
 &lt;p>The curve below shows the difference between the Ground speed (GPS) with the airspeed (Pitot) in function of the plane flight direction. This error (blue dashed points) fit with a sine wave. This sine wave is the speed offset added for each plane direction in $[0 \ 2\pi]$ by a wind with a constant strength and direction. Sine wave amplitude and phase is the wind strength and direction.&lt;/p>
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -782,8 +782,8 @@ C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_Pit
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h2 id="a-16-bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools">A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2>
-&lt;h3 id="motivation">Motivation&lt;/h3>
+&lt;h2 id="a-16-bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools-">A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2>
+&lt;h3 id="motivation-">Motivation&lt;/h3>
 &lt;p>Building a platform for testing various autopilot control loop has become simple thanks to the many low cost elements available. To cite few of them:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>10 DoF IMU&lt;/strong>: (~$5\ $$),&lt;/li>
@@ -800,7 +800,7 @@ C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_Pit
 &lt;/li>
 &lt;li>few optional hardware for &lt;strong>data logging&lt;/strong>, &lt;strong>telemetry&lt;/strong>, &lt;strong>camera&lt;/strong>&amp;hellip;&lt;/li>
 &lt;/ul>
-&lt;h3 id="difference-with-existing-autopilot">Difference with existing autopilot&lt;/h3>
+&lt;h3 id="difference-with-existing-autopilot-">Difference with existing autopilot&lt;/h3>
 &lt;p>Many off the shelf autopilot exists and works great. To mention few of them:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="http://ardupilot.org/">Ardupilot&lt;/a>&lt;/li>
@@ -818,7 +818,7 @@ The presented autopilot uses a Model Based Design (MBD) approach: The autopilot 
 Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p>
 &lt;p>Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p>
 &lt;p>Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/">https://slugsuav.soe.ucsc.edu/&lt;/a>) is available online. The update &lt;a href="https://doi.org/10.1155/2018/6892153">SLUG II&lt;/a> projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
-&lt;h3 id="hardware-list">Hardware list&lt;/h3>
+&lt;h3 id="hardware-list-">Hardware list&lt;/h3>
 &lt;p>Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p>
 &lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
 &lt;div class="box" style="max-width:80%">
@@ -859,7 +859,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
-&lt;h3 id="results">Results&lt;/h3>
+&lt;h3 id="results-">Results&lt;/h3>
 &lt;p>Sliding mode-based controller tested in both pitch and roll axis with two mode:&lt;/p>
 &lt;ul>
 &lt;li>Control plane angular rate control (angular speed set-point given through the remote control)&lt;/li>
@@ -870,11 +870,11 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;p>Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">here&lt;/a>).&lt;/p>
 &lt;p>Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p>
 &lt;p>Validated automatic calibration of the magnetometer's axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p>
-&lt;h3 id="next-steps">Next steps&lt;/h3>
+&lt;h3 id="next-steps-">Next steps&lt;/h3>
 &lt;p>Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p>
 &lt;p>Test in flight MAVLink protocol parameters tuning.&lt;/p>
 &lt;p>Add automatic guidance of the plane, using MAVLink Way point sets.&lt;/p>
-&lt;h3 id="site-content">Site content&lt;/h3>
+&lt;h3 id="site-content-">Site content&lt;/h3>
 &lt;p>Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.&lt;/p>
 &lt;p>Ideas to dvpt:&lt;/p>
 &lt;ul>
@@ -1669,7 +1669,7 @@ Prediction Simu vs reel
 &lt;li>Test&lt;/li>
 &lt;/ol>
 &lt;hr>
-&lt;h2 id="tp-validation-du-modle-de-moteur-dc-fournit">TP: Validation du modèle de moteur DC fournit&lt;/h2>
+&lt;h2 id="tp-validation-du-modèle-de-moteur-dc-fournit">TP: Validation du modèle de moteur DC fournit&lt;/h2>
 &lt;ul>
 &lt;li>log de command &amp;amp; réponse&lt;/li>
 &lt;li>Simulation comparaison
@@ -1681,10 +1681,10 @@ vs&lt;/li>
 &lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h2 id="tp-validation-du-modle-de-moteur-dc-fournit-1">TP: Validation du modèle de moteur DC fournit&lt;/h2>
+&lt;h2 id="tp-validation-du-modèle-de-moteur-dc-fournit-1">TP: Validation du modèle de moteur DC fournit&lt;/h2>
 &lt;p>&lt;img src="./Simulink_DCMotorPravalux_LogVsSimu.png" alt="./Simulink_DCMotorPravalux_LogVsSimu.png">&lt;/p>
 &lt;hr>
-&lt;h2 id="de-la-simulation-au-programme-embarqu">De la simulation au programme embarqué&lt;/h2>
+&lt;h2 id="de-la-simulation-au-programme-embarqué">De la simulation au programme embarqué&lt;/h2>
 &lt;hr>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://player.vimeo.com/video/309876246" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
@@ -1723,7 +1723,7 @@ DSPACE discretise le modèle&lt;/li>
 &lt;/aside>
 &lt;hr>
 &lt;h2 id="aspect-temporel-1">Aspect Temporel:&lt;/h2>
-&lt;h3 id="implmentation">Implémentation&lt;/h3>
+&lt;h3 id="implémentation">Implémentation&lt;/h3>
 &lt;p>Implémentation en temps discret:&lt;/p>
 &lt;p>&amp;ldquo;pas&amp;rdquo; de calcul fixe&lt;/p>
 &lt;ul>
@@ -1758,19 +1758,19 @@ Single Tasking / Multi Tasking
 &lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h4 id="modle-multi-rate">Modèle multi-rate&lt;/h4>
+&lt;h4 id="modèle-multi-rate">Modèle multi-rate&lt;/h4>
 &lt;p class="stretch">
 &lt;img data-src="./Model_Hardware_Test_withSampleTime.png">
 &lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modle-multi-rate-single-tasking-70-mips">Charge CPU d'un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-70-mips">Charge CPU d'un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_SingleTasking_70MIPS.png" alt="./Scope_SingleTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modle-multi-rate-single-tasking-20-mips">Charge CPU d'un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-20-mips">Charge CPU d'un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_SingleTasking_20MIPS.png" alt="./Scope_SingleTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
@@ -1793,12 +1793,12 @@ OVERLOAD
 &lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modle-multi-rate-multi-tasking-70-mips">Charge CPU d'un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-70-mips">Charge CPU d'un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_MultiTasking_70MIPS.png" alt="./Scope_MultiTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modle-multi-rate-multi-tasking-20-mips">Charge CPU d'un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-20-mips">Charge CPU d'un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_MultiTasking_20MIPS.png" alt="./Scope_MultiTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
@@ -1834,7 +1834,7 @@ Single tasking: deterministe
 &lt;/aside>
 &lt;hr>
 &lt;h1 id="optimisation">Optimisation&lt;/h1>
-&lt;h2 id="type-de-donnes">type de données&lt;/h2>
+&lt;h2 id="type-de-données">type de données&lt;/h2>
 &lt;ul>
 &lt;li>Virgule Fixe&lt;/li>
 &lt;li>Virgule Flottante&lt;/li>
