@@ -45,7 +45,9 @@
 &lt;ul>
 &lt;li>&lt;strong>10 DoF IMU&lt;/strong>: (~$5\ $$),&lt;/li>
 &lt;li>&lt;strong>GPS board&lt;/strong>: (~$10\ $$),&lt;/li>
-&lt;li>&lt;strong>Pitot tube&lt;/strong> (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">custom&lt;/a>): (~$20\ $$),&lt;/li>
+&lt;li>&lt;strong>Pitot tube&lt;/strong> (
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">custom&lt;/a>
+): (~$20\ $$),&lt;/li>
 &lt;li>&lt;strong>Microcontroller board&lt;/strong>: depend on the board; rely on $\approx 5\ $$ mcu,&lt;/li>
 &lt;li>&lt;strong>Plane&lt;/strong> platform: from $60$ to $120\ $$ including servos and motors.&lt;/li>
 &lt;li>You also need few RC hardware:
@@ -60,12 +62,24 @@
 &lt;h3 id="difference-with-existing-autopilot-">Difference with existing autopilot&lt;/h3>
 &lt;p>Many off the shelf autopilot exists and works great. To mention few of them:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="http://ardupilot.org/">Ardupilot&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://px4.io/">PX4&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://inavflight.com/">iNav&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.librepilot.org/site/index.html">LibrePilot&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://wiki.paparazziuav.org/wiki/Main_Page">Paparazzi&lt;/a>.&lt;/li>
-&lt;li>Others are listed on the &lt;a href="https://blog.dronetrest.com/flight-controller-firmware/">DroneTrest review&lt;/a>).&lt;/li>
+&lt;li>
+&lt;a href="http://ardupilot.org/" target="_blank" rel="noopener">Ardupilot&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://px4.io/" target="_blank" rel="noopener">PX4&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="http://inavflight.com/" target="_blank" rel="noopener">iNav&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://www.librepilot.org/site/index.html" target="_blank" rel="noopener">LibrePilot&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://wiki.paparazziuav.org/wiki/Main_Page" target="_blank" rel="noopener">Paparazzi&lt;/a>
+.&lt;/li>
+&lt;li>Others are listed on the
+&lt;a href="https://blog.dronetrest.com/flight-controller-firmware/" target="_blank" rel="noopener">DroneTrest review&lt;/a>
+).&lt;/li>
 &lt;/ul>
 &lt;p>Usually, their internal parameters can be tuned. But, inserting your customized control-loop in such autopilot requires understanding the code structure underneath. Even well documented, it represents hundreds of C functions to navigate into, before starting any changes.
 Your custom control loop might not fit within the existing structure. You might want to implement a more advanced controller than existing PIDs, use a different sample rate etc&amp;hellip;&lt;/p>
@@ -74,7 +88,9 @@ The presented autopilot uses a Model Based Design (MBD) approach: The autopilot 
 &lt;p>The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
 Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p>
 &lt;p>Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p>
-&lt;p>Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/">https://slugsuav.soe.ucsc.edu/&lt;/a>) is available online. The update &lt;a href="https://doi.org/10.1155/2018/6892153">SLUG II&lt;/a> projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
+&lt;p>Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/">https://slugsuav.soe.ucsc.edu/&lt;/a>) is available online. The update
+&lt;a href="https://doi.org/10.1155/2018/6892153" target="_blank" rel="noopener">SLUG II&lt;/a>
+projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
 &lt;h3 id="hardware-list-">Hardware list&lt;/h3>
 &lt;p>Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p>
 &lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
@@ -98,12 +114,16 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;li>&lt;strong>Pitot tube&lt;/strong>:
 &lt;ul>
 &lt;li>An inner tube and an outer tube on which four holes are done laterally.&lt;/li>
-&lt;li>Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See &lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">build and test&lt;/a> page.&lt;/li>
+&lt;li>Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">build and test&lt;/a>
+page.&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;strong>GPS&lt;/strong>: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.&lt;/li>
 &lt;li>&lt;strong>Data logger&lt;/strong>: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.).&lt;/li>
-&lt;li>&lt;strong>Radio link&lt;/strong>: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href="http://qgroundcontrol.com/">qgroundcontrol&lt;/a> base station running on most platforms (PC, android, windows, Linux).&lt;/li>
+&lt;li>&lt;strong>Radio link&lt;/strong>: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with
+&lt;a href="http://qgroundcontrol.com/" target="_blank" rel="noopener">qgroundcontrol&lt;/a>
+base station running on most platforms (PC, android, windows, Linux).&lt;/li>
 &lt;li>&lt;strong>Action cam&lt;/strong>: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li>
 &lt;/ul>
 &lt;div class="box" style="max-width:80%">
@@ -124,7 +144,9 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;/ul>
 &lt;p>Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p>
 &lt;p>Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p>
-&lt;p>Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">here&lt;/a>).&lt;/p>
+&lt;p>Pitot tube airspeed estimation validated using GPS speed measurement as reference (
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">here&lt;/a>
+).&lt;/p>
 &lt;p>Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p>
 &lt;p>Validated automatic calibration of the magnetometer's axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p>
 &lt;h3 id="next-steps-">Next steps&lt;/h3>
@@ -136,8 +158,12 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;p>Ideas to dvpt:&lt;/p>
 &lt;ul>
 &lt;li>IMU&lt;/li>
-&lt;li>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">Pitot tube&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation">Wind estimation&lt;/a> combining GPS ground-speed with Pitot tube airspeed&lt;/li>
+&lt;li>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">Pitot tube&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation">Wind estimation&lt;/a>
+combining GPS ground-speed with Pitot tube airspeed&lt;/li>
 &lt;li>UxV blocks including GPS, Remote Control and MAVLink blocks and functionalities&lt;/li>
 &lt;li>Magnetometers auto calibration&lt;/li>
 &lt;/ul></description></item></channel></rss>

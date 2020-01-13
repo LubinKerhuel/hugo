@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Slides list | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/slides/</link><atom:link href="https://lubin.kerhuel.eu/slides/index.xml" rel="self" type="application/rss+xml"/><description>Slides list</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 - 2020 Lubin Kerhuel</copyright><item><title>miniature airspeed sensor</title><link>https://lubin.kerhuel.eu/slides/pitot-build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/pitot-build/</guid><description>&lt;h2 id="pitot-tube">Pitot tube&lt;/h2>
 &lt;h3 id="miniature-airspeed-sensor">Miniature airspeed sensor&lt;/h3>
 &lt;h4 id="for-rc-plane--uav">for RC plane &amp;amp; UAV&lt;/h4>
-&lt;p>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a> description&lt;/p>
+&lt;p>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a>
+description&lt;/p>
 &lt;hr>
 &lt;p>&lt;img src="https://lubin.kerhuel.eu/post/pitot-build/featured.jpg" alt="/post/pitot-build/featured.jpg">&lt;/p>
 &lt;hr>
@@ -94,7 +96,9 @@
 &lt;li>from 101° (east)&lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;p>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">page&lt;/a> with further details&lt;/p>
+&lt;p>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">page&lt;/a>
+with further details&lt;/p>
 &lt;hr>
 &lt;h3 id="flight-trace">flight trace&lt;/h3>
 &lt;section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" data-background-opacity=1>
@@ -108,7 +112,13 @@
 &lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png">
 &lt;/a>
 &lt;/p>
-&lt;p>[&lt;a href="https://rtdc.ctrl-elec.fr/">Lab&lt;/a>] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin">L.Kerhuel&lt;/a> - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux">R.Delpoux&lt;/a>&lt;/p>
+&lt;p>[
+&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">Lab&lt;/a>
+] -
+&lt;a href="https://lubin.kerhuel.eu/authors/lubin">L.Kerhuel&lt;/a>
+-
+&lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux">R.Delpoux&lt;/a>
+&lt;/p>
 &lt;hr>
 &lt;h2 id="plan">Plan:&lt;/h2>
 &lt;ul>
@@ -219,7 +229,9 @@ vs&lt;/li>
 &lt;iframe src="https://player.vimeo.com/video/309876246" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
 &lt;/div>
 &lt;hr>
-&lt;h2 id="pendule-inversedocsinverted-pendulum">&lt;a href="https://lubin.kerhuel.eu/docs/inverted-pendulum/">Pendule inverse&lt;/a>&lt;/h2>
+&lt;h2 id="pendule-inversedocsinverted-pendulum">
+&lt;a href="https://lubin.kerhuel.eu/docs/inverted-pendulum/">Pendule inverse&lt;/a>
+&lt;/h2>
 &lt;p>&lt;img src="./Inverted_Pendulum_ControlLoopCloseUp.png" alt="./Inverted_Pendulum_ControlLoopCloseUp.png">
 &lt;aside class="notes">
 &lt;ol>
@@ -570,11 +582,15 @@ TotalVal = vals'*exps;
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="tp">TP&lt;/h2>
-&lt;p>&lt;a href="https://rtdc.ctrl-elec.fr/">https://rtdc.ctrl-elec.fr&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">https://rtdc.ctrl-elec.fr&lt;/a>
+&lt;/p>
 &lt;hr>
 &lt;h2 id="download">download&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/raw/master/LABMatlabFiles/02_GettingStarted/MCLV2_dsPIC33EP256MC506_base_R2017a.zip">base model&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/raw/master/LABMatlabFiles/02_GettingStarted/MCLV2_dsPIC33EP256MC506_base_R2017a.zip" target="_blank" rel="noopener">base model&lt;/a>
+&lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="elements-de-correction">Elements de correction&lt;/h2>
@@ -646,7 +662,9 @@ data-backgroundTransition="none"
 &lt;li>Speaker notes: &lt;code>S&lt;/code>&lt;/li>
 &lt;li>Fullscreen: &lt;code>F&lt;/code>&lt;/li>
 &lt;li>Zoom: &lt;code>Alt + Click&lt;/code>&lt;/li>
-&lt;li>&lt;a href="https://github.com/hakimel/reveal.js#pdf-export">PDF Export&lt;/a>: &lt;code>E&lt;/code>&lt;/li>
+&lt;li>
+&lt;a href="https://github.com/hakimel/reveal.js#pdf-export" target="_blank" rel="noopener">PDF Export&lt;/a>
+: &lt;code>E&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="code-highlighting">Code Highlighting&lt;/h2>
@@ -739,6 +757,10 @@ color: navy;
 &lt;/code>&lt;/pre>
 &lt;hr>
 &lt;h1 id="questions">Questions?&lt;/h1>
-&lt;p>&lt;a href="https://discourse.gohugo.io">Ask&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://sourcethemes.com/academic/docs/">Documentation&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="https://discourse.gohugo.io" target="_blank" rel="noopener">Ask&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://sourcethemes.com/academic/docs/" target="_blank" rel="noopener">Documentation&lt;/a>
+&lt;/p>
 &lt;hr></description></item></channel></rss>

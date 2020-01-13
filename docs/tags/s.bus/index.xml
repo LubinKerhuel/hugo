@@ -53,7 +53,9 @@
 &lt;li>&lt;strong>S.Bus &amp;amp; Smart Port&lt;/strong> (stock), available on two distinct three pins ports&lt;/li>
 &lt;li>&lt;strong>F.Port&lt;/strong> available on one replaced Smart Port three pin port&lt;/li>
 &lt;/ol>
-&lt;p>Stock receiver have two ports: S.BUS and Smart Port. This is changed for a unique F.Port by flashing an alternative firmware provided by &lt;a href="https://www.frsky-rc.com/">FrSky&lt;/a>. The alternative firmware remove the S.BUS port and convert the Smart Port to an F.Port.&lt;/p>
+&lt;p>Stock receiver have two ports: S.BUS and Smart Port. This is changed for a unique F.Port by flashing an alternative firmware provided by
+&lt;a href="https://www.frsky-rc.com/" target="_blank" rel="noopener">FrSky&lt;/a>
+. The alternative firmware remove the S.BUS port and convert the Smart Port to an F.Port.&lt;/p>
 &lt;h3 id="uart-settings-and-implementation">UART settings and implementation&lt;/h3>
 &lt;p>S.BUS, S.Port and F.Port have different UART setting defined in the table:&lt;/p>
 &lt;table>
@@ -271,14 +273,30 @@ Rx and Tx channels are used. They are assigned to the same pin. UART is configur
 &lt;h3 id="ressources">Ressources&lt;/h3>
 &lt;p>FrSky protocol are not always documented. The following website helped understanding the various protocol:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="http://www.robotmaker.eu/ROBOTmaker/quadcopter-3d-proximity-sensing/frysky-s-port-interface">Smart Port on ROBOTmaker&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://code.google.com/archive/p/telemetry-convert/wikis/FrSkySPortProtocol.wiki">Smart Port on telemetry-convert project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki/FrSky-SPort-protocol-specs">Smart Port TelemetryScript by Allesandro Apostoli&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/bolderflight/SBUS">S.BUS on Arduino lib project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/athertop/MavLink_FrSkySPort/wiki">Smart Port on MavLink-FrSkySPort project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/betaflight/betaflight/tree/master/src/main/telemetry">betaflight source code&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://ardupilot.org/copter/docs/common-frsky-passthrough.html">ArduCopter project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://sbustelemetrysensors.blogspot.com/">SBUS2 by Jerry Chapman&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="http://www.robotmaker.eu/ROBOTmaker/quadcopter-3d-proximity-sensing/frysky-s-port-interface" target="_blank" rel="noopener">Smart Port on ROBOTmaker&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://code.google.com/archive/p/telemetry-convert/wikis/FrSkySPortProtocol.wiki" target="_blank" rel="noopener">Smart Port on telemetry-convert project&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki/FrSky-SPort-protocol-specs" target="_blank" rel="noopener">Smart Port TelemetryScript by Allesandro Apostoli&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://github.com/bolderflight/SBUS" target="_blank" rel="noopener">S.BUS on Arduino lib project&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://github.com/athertop/MavLink_FrSkySPort/wiki" target="_blank" rel="noopener">Smart Port on MavLink-FrSkySPort project&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://github.com/betaflight/betaflight/tree/master/src/main/telemetry" target="_blank" rel="noopener">betaflight source code&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="http://ardupilot.org/copter/docs/common-frsky-passthrough.html" target="_blank" rel="noopener">ArduCopter project&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="http://sbustelemetrysensors.blogspot.com/" target="_blank" rel="noopener">SBUS2 by Jerry Chapman&lt;/a>
+&lt;/li>
 &lt;/ul>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>

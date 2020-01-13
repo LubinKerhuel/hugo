@@ -15,10 +15,24 @@ Without a budget for dSPACE, SpeedGoat or another NI alternative, rapid prototyp
 \text{- Upload &amp;amp; run on the target.} \\\&lt;br>
 \end{array} \right.
 $$&lt;/p>
-&lt;p>This Model Based Design (MBD) approach enabled efficient research on signal processing validated with real robot for my &lt;a href="http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf">PhD thesis&lt;/a> on bio-robotics from 2006 to 2009.
-It reduces the time from the simulation to our &lt;a href="https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721">autonomous robot&lt;/a> and replaced somehow our dSPACE platform which was not embedded anyway.&lt;/p>
-&lt;p>I used the same Rapid Control Prototyping (RCP) to develop data fusion algorithm on motion analysis for wearable sports article at &lt;a href="https://www.ideas-laboratory.com/projects/movea/">MOVEA&lt;/a> in 2010-2011.&lt;/p>
-&lt;p>I joined &lt;a href="https://www.microchip.com/">Microchip Technology&lt;/a> where I am pursuing the development of the &lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink">MPLAB blockset&lt;/a> to target dsPIC and PIC32 microcontrollers.&lt;/p>
+&lt;p>This Model Based Design (MBD) approach enabled efficient research on signal processing validated with real robot for my
+&lt;a href="http://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf" target="_blank" rel="noopener">PhD thesis&lt;/a>
+on bio-robotics from 2006 to 2009.
+It reduces the time from the simulation to our
+&lt;a href="https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721" target="_blank" rel="noopener">autonomous robot&lt;/a>
+and replaced somehow our dSPACE platform which was not embedded anyway.&lt;/p>
+&lt;p>I used the same Rapid Control Prototyping (RCP) to develop data fusion algorithm on motion analysis for wearable sports article at
+&lt;a href="https://www.ideas-laboratory.com/projects/movea/" target="_blank" rel="noopener">MOVEA&lt;/a>
+in 2010-2011.&lt;/p>
+&lt;p>I joined
+&lt;a href="https://www.microchip.com/" target="_blank" rel="noopener">Microchip Technology&lt;/a>
+where I am pursuing the development of the
+&lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink" target="_blank" rel="noopener">MPLAB blockset&lt;/a>
+to target dsPIC and PIC32 microcontrollers.&lt;/p>
 &lt;p>For company, scientists, and students, &lt;em>rapid prototyping enables focusing on new ideas&lt;/em> rather than getting into the details of embedded programming.
 Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.&lt;/p>
-&lt;p>Most projects use the free &lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink">Microchip blockset&lt;/a> targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my &lt;a href="https://www.kerhuel.eu/wiki/">old website&lt;/a>.&lt;/p></description></item><item><title/><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/authors/romain-delpoux/</guid><description/></item></channel></rss>
+&lt;p>Most projects use the free
+&lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink" target="_blank" rel="noopener">Microchip blockset&lt;/a>
+targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my
+&lt;a href="https://www.kerhuel.eu/wiki/" target="_blank" rel="noopener">old website&lt;/a>
+.&lt;/p></description></item><item><title/><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/authors/romain-delpoux/</guid><description/></item></channel></rss>
