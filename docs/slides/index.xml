@@ -2,8 +2,7 @@
 &lt;h3 id="miniature-airspeed-sensor">Miniature airspeed sensor&lt;/h3>
 &lt;h4 id="for-rc-plane--uav">for RC plane &amp;amp; UAV&lt;/h4>
 &lt;p>
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a>
-description&lt;/p>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a> description&lt;/p>
 &lt;hr>
 &lt;p>&lt;img src="https://lubin.kerhuel.eu/post/pitot-build/featured.jpg" alt="/post/pitot-build/featured.jpg">&lt;/p>
 &lt;hr>
@@ -97,8 +96,7 @@ description&lt;/p>
 &lt;/ul>
 &lt;hr>
 &lt;p>
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">page&lt;/a>
-with further details&lt;/p>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">page&lt;/a> with further details&lt;/p>
 &lt;hr>
 &lt;h3 id="flight-trace">flight trace&lt;/h3>
 &lt;section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" data-background-opacity=1>
@@ -113,12 +111,9 @@ with further details&lt;/p>
 &lt;/a>
 &lt;/p>
 &lt;p>[
-&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">Lab&lt;/a>
-] -
-&lt;a href="https://lubin.kerhuel.eu/authors/lubin">L.Kerhuel&lt;/a>
--
-&lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux">R.Delpoux&lt;/a>
-&lt;/p>
+&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">Lab&lt;/a>] -
+&lt;a href="https://lubin.kerhuel.eu/authors/lubin">L.Kerhuel&lt;/a> -
+&lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux">R.Delpoux&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="plan">Plan:&lt;/h2>
 &lt;ul>
@@ -187,7 +182,7 @@ Identification
 &lt;hr>
 &lt;p>&lt;img src="./Picooz_Identificatoin_eq_02.png" alt="./Picooz_Identificatoin_eq_02.png">&lt;/p>
 &lt;aside class="notes">
-rasoir d'Ockham
+rasoir d&amp;rsquo;Ockham
 &lt;/aside>
 &lt;hr>
 &lt;p>&lt;img src="./Picooz_SuperTwistingController.png" alt="./Picooz_SuperTwistingController.png">&lt;/p>
@@ -230,8 +225,7 @@ vs&lt;/li>
 &lt;/div>
 &lt;hr>
 &lt;h2 id="pendule-inversedocsinverted-pendulum">
-&lt;a href="https://lubin.kerhuel.eu/docs/inverted-pendulum/">Pendule inverse&lt;/a>
-&lt;/h2>
+&lt;a href="https://lubin.kerhuel.eu/docs/inverted-pendulum/">Pendule inverse&lt;/a>&lt;/h2>
 &lt;p>&lt;img src="./Inverted_Pendulum_ControlLoopCloseUp.png" alt="./Inverted_Pendulum_ControlLoopCloseUp.png">
 &lt;aside class="notes">
 &lt;ol>
@@ -286,14 +280,14 @@ Single Tasking / Multi Tasking
 &lt;li>
 &lt;p>&lt;strong>Single-rate&lt;/strong>:&lt;/p>
 &lt;ul>
-&lt;li>Les blocks ont tous la même période d'exécution
+&lt;li>Les blocks ont tous la même période d&amp;rsquo;exécution
 (Même couleur)&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;strong>Multi-Rate&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>Les blocks peuvent avoir des périodes d'exécution différentes
+&lt;li>Les blocks peuvent avoir des périodes d&amp;rsquo;exécution différentes
 (Schéma multicolore)&lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -306,12 +300,12 @@ Single Tasking / Multi Tasking
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-70-mips">Charge CPU d'un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-70-mips">Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_SingleTasking_70MIPS.png" alt="./Scope_SingleTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-20-mips">Charge CPU d'un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-20-mips">Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_SingleTasking_20MIPS.png" alt="./Scope_SingleTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
@@ -320,7 +314,7 @@ OVERLOAD
 &lt;/aside>
 &lt;hr>
 &lt;h2 id="single-tasking">Single-Tasking&lt;/h2>
-&lt;p>Single-Tasking: Dans le slot de temps, l'exécution de tous les blocks doit se terminer avant la fin du slot.&lt;/p>
+&lt;p>Single-Tasking: Dans le slot de temps, l&amp;rsquo;exécution de tous les blocks doit se terminer avant la fin du slot.&lt;/p>
 &lt;hr>
 &lt;h2 id="multi-tasking">Multi-Tasking&lt;/h2>
 &lt;p>Multi-Tasking: Préemption possible -&amp;gt; &lt;strong>Monotonic Rate Scheduler&lt;/strong>&lt;/p>
@@ -334,12 +328,12 @@ OVERLOAD
 &lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-70-mips">Charge CPU d'un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-70-mips">Charge CPU d&amp;rsquo;un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_MultiTasking_70MIPS.png" alt="./Scope_MultiTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-20-mips">Charge CPU d'un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-20-mips">Charge CPU d&amp;rsquo;un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_MultiTasking_20MIPS.png" alt="./Scope_MultiTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
@@ -354,7 +348,7 @@ OVERLOAD
 &lt;p>Single-Tasking @ 20 MIPS -&amp;gt; &lt;strong>Overload&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>dispatcher la tache la plus lente sur plusieurs slots&lt;/li>
-&lt;li>(option d'offset dans &lt;strong>Time Step&lt;/strong> -&amp;gt; &lt;em>[.001 .005])&lt;/em>&lt;/li>
+&lt;li>(option d&amp;rsquo;offset dans &lt;strong>Time Step&lt;/strong> -&amp;gt; &lt;em>[.001 .005])&lt;/em>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
@@ -583,14 +577,12 @@ TotalVal = vals'*exps;
 &lt;hr>
 &lt;h2 id="tp">TP&lt;/h2>
 &lt;p>
-&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">https://rtdc.ctrl-elec.fr&lt;/a>
-&lt;/p>
+&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">https://rtdc.ctrl-elec.fr&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="download">download&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;a href="https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/raw/master/LABMatlabFiles/02_GettingStarted/MCLV2_dsPIC33EP256MC506_base_R2017a.zip" target="_blank" rel="noopener">base model&lt;/a>
-&lt;/li>
+&lt;a href="https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/raw/master/LABMatlabFiles/02_GettingStarted/MCLV2_dsPIC33EP256MC506_base_R2017a.zip" target="_blank" rel="noopener">base model&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="elements-de-correction">Elements de correction&lt;/h2>
@@ -663,8 +655,7 @@ data-backgroundTransition="none"
 &lt;li>Fullscreen: &lt;code>F&lt;/code>&lt;/li>
 &lt;li>Zoom: &lt;code>Alt + Click&lt;/code>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/hakimel/reveal.js#pdf-export" target="_blank" rel="noopener">PDF Export&lt;/a>
-: &lt;code>E&lt;/code>&lt;/li>
+&lt;a href="https://github.com/hakimel/reveal.js#pdf-export" target="_blank" rel="noopener">PDF Export&lt;/a>: &lt;code>E&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="code-highlighting">Code Highlighting&lt;/h2>
@@ -747,7 +738,7 @@ data-background-image="/img/boards.jpg"
 &lt;/code>&lt;/pre>
 &lt;hr>
 &lt;h2 id="custom-css-example">Custom CSS Example&lt;/h2>
-&lt;p>Let's make headers navy colored.&lt;/p>
+&lt;p>Let&amp;rsquo;s make headers navy colored.&lt;/p>
 &lt;p>Create &lt;code>assets/css/reveal_custom.css&lt;/code> with:&lt;/p>
 &lt;pre>&lt;code class="language-css">.reveal section h1,
 .reveal section h2,
@@ -758,9 +749,7 @@ color: navy;
 &lt;hr>
 &lt;h1 id="questions">Questions?&lt;/h1>
 &lt;p>
-&lt;a href="https://discourse.gohugo.io" target="_blank" rel="noopener">Ask&lt;/a>
-&lt;/p>
+&lt;a href="https://discourse.gohugo.io" target="_blank" rel="noopener">Ask&lt;/a>&lt;/p>
 &lt;p>
-&lt;a href="https://sourcethemes.com/academic/docs/" target="_blank" rel="noopener">Documentation&lt;/a>
-&lt;/p>
+&lt;a href="https://sourcethemes.com/academic/docs/" target="_blank" rel="noopener">Documentation&lt;/a>&lt;/p>
 &lt;hr></description></item></channel></rss>

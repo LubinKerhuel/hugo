@@ -54,8 +54,7 @@
 &lt;li>&lt;strong>F.Port&lt;/strong> available on one replaced Smart Port three pin port&lt;/li>
 &lt;/ol>
 &lt;p>Stock receiver have two ports: S.BUS and Smart Port. This is changed for a unique F.Port by flashing an alternative firmware provided by
-&lt;a href="https://www.frsky-rc.com/" target="_blank" rel="noopener">FrSky&lt;/a>
-. The alternative firmware remove the S.BUS port and convert the Smart Port to an F.Port.&lt;/p>
+&lt;a href="https://www.frsky-rc.com/" target="_blank" rel="noopener">FrSky&lt;/a>. The alternative firmware remove the S.BUS port and convert the Smart Port to an F.Port.&lt;/p>
 &lt;h3 id="uart-settings-and-implementation">UART settings and implementation&lt;/h3>
 &lt;p>S.BUS, S.Port and F.Port have different UART setting defined in the table:&lt;/p>
 &lt;table>
@@ -274,29 +273,21 @@ Rx and Tx channels are used. They are assigned to the same pin. UART is configur
 &lt;p>FrSky protocol are not always documented. The following website helped understanding the various protocol:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="http://www.robotmaker.eu/ROBOTmaker/quadcopter-3d-proximity-sensing/frysky-s-port-interface" target="_blank" rel="noopener">Smart Port on ROBOTmaker&lt;/a>
-&lt;/li>
+&lt;a href="http://www.robotmaker.eu/ROBOTmaker/quadcopter-3d-proximity-sensing/frysky-s-port-interface" target="_blank" rel="noopener">Smart Port on ROBOTmaker&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://code.google.com/archive/p/telemetry-convert/wikis/FrSkySPortProtocol.wiki" target="_blank" rel="noopener">Smart Port on telemetry-convert project&lt;/a>
-&lt;/li>
+&lt;a href="https://code.google.com/archive/p/telemetry-convert/wikis/FrSkySPortProtocol.wiki" target="_blank" rel="noopener">Smart Port on telemetry-convert project&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki/FrSky-SPort-protocol-specs" target="_blank" rel="noopener">Smart Port TelemetryScript by Allesandro Apostoli&lt;/a>
-&lt;/li>
+&lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki/FrSky-SPort-protocol-specs" target="_blank" rel="noopener">Smart Port TelemetryScript by Allesandro Apostoli&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/bolderflight/SBUS" target="_blank" rel="noopener">S.BUS on Arduino lib project&lt;/a>
-&lt;/li>
+&lt;a href="https://github.com/bolderflight/SBUS" target="_blank" rel="noopener">S.BUS on Arduino lib project&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/athertop/MavLink_FrSkySPort/wiki" target="_blank" rel="noopener">Smart Port on MavLink-FrSkySPort project&lt;/a>
-&lt;/li>
+&lt;a href="https://github.com/athertop/MavLink_FrSkySPort/wiki" target="_blank" rel="noopener">Smart Port on MavLink-FrSkySPort project&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/betaflight/betaflight/tree/master/src/main/telemetry" target="_blank" rel="noopener">betaflight source code&lt;/a>
-&lt;/li>
+&lt;a href="https://github.com/betaflight/betaflight/tree/master/src/main/telemetry" target="_blank" rel="noopener">betaflight source code&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="http://ardupilot.org/copter/docs/common-frsky-passthrough.html" target="_blank" rel="noopener">ArduCopter project&lt;/a>
-&lt;/li>
+&lt;a href="http://ardupilot.org/copter/docs/common-frsky-passthrough.html" target="_blank" rel="noopener">ArduCopter project&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="http://sbustelemetrysensors.blogspot.com/" target="_blank" rel="noopener">SBUS2 by Jerry Chapman&lt;/a>
-&lt;/li>
+&lt;a href="http://sbustelemetrysensors.blogspot.com/" target="_blank" rel="noopener">SBUS2 by Jerry Chapman&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
@@ -413,8 +404,7 @@ Block input is the 4 bytes codint for the sensor value.&lt;/p></description></it
 &lt;/div>
 &lt;p>A KOMBI bike electrified with the TSDZ2 mid drive motor.
 The motor firmware is upgraded with the
-&lt;a href="https://github.com/OpenSource-EBike-firmware/TSDZ2_wiki/wiki" target="_blank" rel="noopener">TSDZ2 Flexible OpenSource firmware&lt;/a>
-initiated by Casainho.&lt;/p>
+&lt;a href="https://github.com/OpenSource-EBike-firmware/TSDZ2_wiki/wiki" target="_blank" rel="noopener">TSDZ2 Flexible OpenSource firmware&lt;/a> initiated by Casainho.&lt;/p>
 &lt;p>700km so far with original bike chainring and original motor blue gear and clutch. Typically, empty or loaded with two kids; three in rare occasions.&lt;/p>
 &lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
 &lt;div class="box" style="max-width:80%">
@@ -590,14 +580,11 @@ initiated by Casainho.&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a>
-by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
+&lt;a href="http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
 &lt;li>
-&lt;a href="https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf" target="_blank" rel="noopener">report (french)&lt;/a>
-from ANSTJ with general information on Pitot sensor.&lt;/li>
+&lt;a href="https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf" target="_blank" rel="noopener">report (french)&lt;/a> from ANSTJ with general information on Pitot sensor.&lt;/li>
 &lt;li>
-&lt;a href="http://voiletech.free.fr/skyassistant/Pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a>
-from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
+&lt;a href="http://voiletech.free.fr/skyassistant/Pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
 &lt;/ul>
 &lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
 Tube intèrieur: 2mm, trou 1mm
@@ -615,8 +602,7 @@ m = 72mm
 &lt;h3 id="sensitivity-requirements-and-pressure-sensor">Sensitivity requirements and Pressure sensor&lt;/h3>
 &lt;p>The differential pressure measured vary with the square of the speed. RC plane speed can be quite low. Challenge is to be sensitive enough to obtain good measurement even in the low speed range of few meters per seconds.&lt;/p>
 &lt;p>The
-&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a>
-from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\Delta V =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.&lt;/p>
+&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\Delta V =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.&lt;/p>
 &lt;p>We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% of its nominal range.&lt;/p>
 &lt;p>Table below provide theoretical differential pressure expected for various speed using $P_{diff} = \frac{1}{2}\rho v^2$ with $\rho=1.15$.&lt;/p>
 &lt;table>
@@ -627,10 +613,8 @@ from NXP is a sensitive differential pressure sensor. Its differential measureme
 &lt;th align="center">$P_{diff}$ (Pa)&lt;/th>
 &lt;th align="center">~ $H_2O$ (cm)&lt;/th>
 &lt;th align="center">
-&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a>
-&amp;amp;
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a>
-(0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
+&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> &amp;amp;
+&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -708,17 +692,13 @@ from NXP is a sensitive differential pressure sensor. Its differential measureme
 &lt;/table>
 &lt;h3 id="signal-conditioning-and-conversion">Signal conditioning and conversion&lt;/h3>
 &lt;p>The pressure sensor electronics is placed in the wing close (~10cm) to the Pitot tube. The analog to digital conversion is integrated in the sensor board. The
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a>
-from Microchip is a high resolution sigma-delta converter with a programmable gain factor from 1 to 8. It has a digital I2C bus interface and its I2C address can be selected. Similar DAC to consider are MCP342x, the newer MCP346x family or the MCP356x providing increased accuracy and higher sampling rate but its package is smaller thus more difficult to handle for a DIY project.&lt;/p>
+&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> from Microchip is a high resolution sigma-delta converter with a programmable gain factor from 1 to 8. It has a digital I2C bus interface and its I2C address can be selected. Similar DAC to consider are MCP342x, the newer MCP346x family or the MCP356x providing increased accuracy and higher sampling rate but its package is smaller thus more difficult to handle for a DIY project.&lt;/p>
 &lt;p>The
-&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a>
-output analog signal is connected to the
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a>
-Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor to obtain 1V from the 3.3V reference (480 &amp;amp; 1kOhms). $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p>
+&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> output analog signal is connected to the
+&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor to obtain 1V from the 3.3V reference (480 &amp;amp; 1kOhms). $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p>
 &lt;!-- Measured 480 840 for the divisor. Write down 560 and 1.2k -->
 &lt;p>The
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a>
-Sigma-Delta ADC is configured for&lt;/p>
+&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC is configured for&lt;/p>
 &lt;ul>
 &lt;li>12 bits&lt;/li>
 &lt;li>x8 Gain&lt;/li>
@@ -727,11 +707,9 @@ Sigma-Delta ADC is configured for&lt;/p>
 &lt;p>The resulting resolution is provided from:&lt;/p>
 &lt;ul>
 &lt;li>(1)
-&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a>
-Analog output sensitivity is 1633 Pa/V&lt;/li>
+&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> Analog output sensitivity is 1633 Pa/V&lt;/li>
 &lt;li>(2)
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a>
-12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
+&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> 12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
 &lt;/ul>
 &lt;p>With (1) and (2), we obtain a resolution of $1633 * 0.125e^{-3} $ = &lt;em>&lt;strong>0.2041 Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/strong>&lt;/em>&lt;/p>
 &lt;div class="box" style="max-width:80%">
@@ -761,8 +739,7 @@ Analog output sensitivity is 1633 Pa/V&lt;/li>
 &lt;h4 id="possible-noiseoffset-sources">possible noise/offset sources&lt;/h4>
 &lt;p>The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> with the analog to digital circuit setting).&lt;/p>
 &lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (
-&lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>
-) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
+&lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
 &lt;h2 id="flight-setup">Flight setup&lt;/h2>
 &lt;p>The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p>
 &lt;div class="box" style="max-width:80%">
@@ -788,7 +765,7 @@ Analog output sensitivity is 1633 Pa/V&lt;/li>
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
-&lt;p>One magnet is glued on the Pitot tube. A 2nd magnet integrated in the wing allows to fix the Pitot tube. Both magnet are in contact. The tube stays firmly in place during flights and ejects in case of hard landing reducing damages. It is a flexible solution for testing other Pitot tube design ; It's also practical for storage and transportation.&lt;/p>
+&lt;p>One magnet is glued on the Pitot tube. A 2nd magnet integrated in the wing allows to fix the Pitot tube. Both magnet are in contact. The tube stays firmly in place during flights and ejects in case of hard landing reducing damages. It is a flexible solution for testing other Pitot tube design ; It&amp;rsquo;s also practical for storage and transportation.&lt;/p>
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
@@ -822,8 +799,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;h3 id="gps-vs-airspeed">Comparison with GPS ground speed&lt;/h3>
 &lt;p>In calm condition, the ground speed $V_{GPS}$ and airspeed $V_{Pitot}$ are equal.&lt;/p>
 &lt;p>In windy condition, wind average direction and strength are estimated combining $V_{GPS}$, $V_{Pitot}$ and the plane yaw $\Theta_{heading}$ direction (using GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>). This
-&lt;a href="#wind-estimation">wind estimation&lt;/a>
-is described below.&lt;/p>
+&lt;a href="#wind-estimation">wind estimation&lt;/a> is described below.&lt;/p>
 &lt;p>The airplane ground speed (GPS) is estimated with the difference of the airspeed (Pitot) with the projected wind to the aircraft forward direction:&lt;/p>
 &lt;p>$V_{GPS} \approx V_{Pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) $&lt;/p>
 &lt;p>The figure below presents the airspeed in blue. The reconstructed ground speed (black) matches accurately with the GPS velocity (red) which prove the correctness of the airspeed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The airspeed measurement presents a high sensitivity even at low speed.&lt;/p>
@@ -839,8 +815,7 @@ is described below.&lt;/p>
 &lt;/figure>
 &lt;/div>
 &lt;p>More figures in
-&lt;a href="https://lubin.kerhuel.eu/slides/pitot-build/#/10">online presentation&lt;/a>
-.&lt;/p>
+&lt;a href="https://lubin.kerhuel.eu/slides/pitot-build/#/10">online presentation&lt;/a>.&lt;/p>
 &lt;p>The GPS update rate is 10Hz. It is sampled at 50Hz to minimize delay. The pitot-tube sensor update rate is 260Hs but it is sampled at 250Hz.&lt;/p>
 &lt;p>The error is defined with $error = V_{gps} - \left( V_{Pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is:&lt;/p>
 &lt;table>
@@ -885,8 +860,7 @@ is described below.&lt;/p>
 &lt;/figure>
 &lt;/div>
 &lt;p>This wind estimation is used to compensate the airspeed when comparing the GPS ground speed $V_{gps}$ with the Pitot airspeed $V_{Pitot}$
-&lt;a href="https://lubin.kerhuel.eu/post/Pitot-build/#gps-vs-airspeed">above&lt;/a>
-.&lt;/p>
+&lt;a href="https://lubin.kerhuel.eu/post/Pitot-build/#gps-vs-airspeed">above&lt;/a>.&lt;/p>
 &lt;h4 id="script">Script&lt;/h4>
 &lt;p>Matlab script to estimate wind off-line:&lt;/p>
 &lt;pre>&lt;code class="language-matlab">% V_gps and V_pitot are two vector with all data measured.
@@ -905,8 +879,7 @@ plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),'-k','linewidth',3)
 &lt;p>Using the GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
 Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane airspeed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p>
 &lt;p>W. Premerlani propose a
-&lt;a href="https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view" target="_blank" rel="noopener">wind estimation&lt;/a>
-using exclusively GPS data. Tests with this GPS dataset was not conclusive while trying to use all GPS sample while the platform direction is modified (i.e. COG derivative is above a given threshold). GPS dynamic seems too slow to provide robust results.&lt;/p>
+&lt;a href="https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view" target="_blank" rel="noopener">wind estimation&lt;/a> using exclusively GPS data. Tests with this GPS dataset was not conclusive while trying to use all GPS sample while the platform direction is modified (i.e. COG derivative is above a given threshold). GPS dynamic seems too slow to provide robust results.&lt;/p>
 &lt;h4 id="other-flight-data">Other flight data&lt;/h4>
 &lt;p>Plane was equipped with two GPS:&lt;/p>
 &lt;ul>
@@ -914,8 +887,7 @@ using exclusively GPS data. Tests with this GPS dataset was not conclusive while
 &lt;li>one MTK3339.&lt;/li>
 &lt;/ul>
 &lt;p>The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used exclusively for the curves above. The MTK trace can be shown on the
-&lt;a href="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" target="_blank" rel="noopener">map&lt;/a>
-(top left icon). The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p>
+&lt;a href="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" target="_blank" rel="noopener">map&lt;/a> (top left icon). The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p>
 &lt;iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" style="width: 100% ; height: 480px">&lt;/iframe>
 &lt;!--
 Project folder:
@@ -979,8 +951,7 @@ C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_Pit
 &lt;li>&lt;strong>10 DoF IMU&lt;/strong>: (~$5\ $$),&lt;/li>
 &lt;li>&lt;strong>GPS board&lt;/strong>: (~$10\ $$),&lt;/li>
 &lt;li>&lt;strong>Pitot tube&lt;/strong> (
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">custom&lt;/a>
-): (~$20\ $$),&lt;/li>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">custom&lt;/a>): (~$20\ $$),&lt;/li>
 &lt;li>&lt;strong>Microcontroller board&lt;/strong>: depend on the board; rely on $\approx 5\ $$ mcu,&lt;/li>
 &lt;li>&lt;strong>Plane&lt;/strong> platform: from $60$ to $120\ $$ including servos and motors.&lt;/li>
 &lt;li>You also need few RC hardware:
@@ -996,23 +967,17 @@ C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_Pit
 &lt;p>Many off the shelf autopilot exists and works great. To mention few of them:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="http://ardupilot.org/" target="_blank" rel="noopener">Ardupilot&lt;/a>
-&lt;/li>
+&lt;a href="http://ardupilot.org/" target="_blank" rel="noopener">Ardupilot&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://px4.io/" target="_blank" rel="noopener">PX4&lt;/a>
-&lt;/li>
+&lt;a href="https://px4.io/" target="_blank" rel="noopener">PX4&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="http://inavflight.com/" target="_blank" rel="noopener">iNav&lt;/a>
-&lt;/li>
+&lt;a href="http://inavflight.com/" target="_blank" rel="noopener">iNav&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://www.librepilot.org/site/index.html" target="_blank" rel="noopener">LibrePilot&lt;/a>
-&lt;/li>
+&lt;a href="https://www.librepilot.org/site/index.html" target="_blank" rel="noopener">LibrePilot&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://wiki.paparazziuav.org/wiki/Main_Page" target="_blank" rel="noopener">Paparazzi&lt;/a>
-.&lt;/li>
+&lt;a href="https://wiki.paparazziuav.org/wiki/Main_Page" target="_blank" rel="noopener">Paparazzi&lt;/a>.&lt;/li>
 &lt;li>Others are listed on the
-&lt;a href="https://blog.dronetrest.com/flight-controller-firmware/" target="_blank" rel="noopener">DroneTrest review&lt;/a>
-).&lt;/li>
+&lt;a href="https://blog.dronetrest.com/flight-controller-firmware/" target="_blank" rel="noopener">DroneTrest review&lt;/a>).&lt;/li>
 &lt;/ul>
 &lt;p>Usually, their internal parameters can be tuned. But, inserting your customized control-loop in such autopilot requires understanding the code structure underneath. Even well documented, it represents hundreds of C functions to navigate into, before starting any changes.
 Your custom control loop might not fit within the existing structure. You might want to implement a more advanced controller than existing PIDs, use a different sample rate etc&amp;hellip;&lt;/p>
@@ -1022,8 +987,7 @@ The presented autopilot uses a Model Based Design (MBD) approach: The autopilot 
 Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p>
 &lt;p>Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p>
 &lt;p>Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/">https://slugsuav.soe.ucsc.edu/&lt;/a>) is available online. The update
-&lt;a href="https://doi.org/10.1155/2018/6892153" target="_blank" rel="noopener">SLUG II&lt;/a>
-projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
+&lt;a href="https://doi.org/10.1155/2018/6892153" target="_blank" rel="noopener">SLUG II&lt;/a> projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
 &lt;h3 id="hardware-list-">Hardware list&lt;/h3>
 &lt;p>Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p>
 &lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
@@ -1048,15 +1012,13 @@ projects rely on the same tool used here to target the dsPIC: the blockset for M
 &lt;ul>
 &lt;li>An inner tube and an outer tube on which four holes are done laterally.&lt;/li>
 &lt;li>Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">build and test&lt;/a>
-page.&lt;/li>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">build and test&lt;/a> page.&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;strong>GPS&lt;/strong>: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.&lt;/li>
 &lt;li>&lt;strong>Data logger&lt;/strong>: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.).&lt;/li>
 &lt;li>&lt;strong>Radio link&lt;/strong>: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with
-&lt;a href="http://qgroundcontrol.com/" target="_blank" rel="noopener">qgroundcontrol&lt;/a>
-base station running on most platforms (PC, android, windows, Linux).&lt;/li>
+&lt;a href="http://qgroundcontrol.com/" target="_blank" rel="noopener">qgroundcontrol&lt;/a> base station running on most platforms (PC, android, windows, Linux).&lt;/li>
 &lt;li>&lt;strong>Action cam&lt;/strong>: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li>
 &lt;/ul>
 &lt;div class="box" style="max-width:80%">
@@ -1078,10 +1040,9 @@ base station running on most platforms (PC, android, windows, Linux).&lt;/li>
 &lt;p>Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p>
 &lt;p>Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p>
 &lt;p>Pitot tube airspeed estimation validated using GPS speed measurement as reference (
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">here&lt;/a>
-).&lt;/p>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">here&lt;/a>).&lt;/p>
 &lt;p>Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p>
-&lt;p>Validated automatic calibration of the magnetometer's axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p>
+&lt;p>Validated automatic calibration of the magnetometer&amp;rsquo;s axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p>
 &lt;h3 id="next-steps-">Next steps&lt;/h3>
 &lt;p>Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p>
 &lt;p>Test in flight MAVLink protocol parameters tuning.&lt;/p>
@@ -1092,11 +1053,9 @@ base station running on most platforms (PC, android, windows, Linux).&lt;/li>
 &lt;ul>
 &lt;li>IMU&lt;/li>
 &lt;li>
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">Pitot tube&lt;/a>
-&lt;/li>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">Pitot tube&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation">Wind estimation&lt;/a>
-combining GPS ground-speed with Pitot tube airspeed&lt;/li>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation">Wind estimation&lt;/a> combining GPS ground-speed with Pitot tube airspeed&lt;/li>
 &lt;li>UxV blocks including GPS, Remote Control and MAVLink blocks and functionalities&lt;/li>
 &lt;li>Magnetometers auto calibration&lt;/li>
 &lt;/ul></description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
@@ -1141,8 +1100,7 @@ combining GPS ground-speed with Pitot tube airspeed&lt;/li>
 &lt;/div>
 &lt;/div>
 &lt;p>The board
-&lt;a href="http://www.mateksys.com/?portfolio=pdb-xpw" target="_blank" rel="noopener">PDB-XPW&lt;/a>
-from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p>
+&lt;a href="http://www.mateksys.com/?portfolio=pdb-xpw" target="_blank" rel="noopener">PDB-XPW&lt;/a> from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p>
 &lt;p>The chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument condition and amplify the shunt resistor voltage drop providing an analog output proportional to the current.&lt;/p>
 &lt;p>On the PDB-XPW board, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms shunt resistor, itself just below to the Power supply input connector.&lt;/p>
 &lt;p>The amplification gain is set with the 47 kOhm resistor next to the INA1x9 component. This original value of 47 kOhm correspond to a gain of 47.
@@ -1238,8 +1196,7 @@ The cable has logic to decode the RC PWM signal and generate the signal pulse sc
 &lt;p>Pulse level is 5V but it works with 3.3V. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p>
 &lt;p>Tested with a runCam2 powered from a 3S LiPo battery (10 to 14V), no battery in the camera and pulse generated with a 3.3V dsPIC pin configured as digital output.&lt;/p>
 &lt;p>The figure below is the Simulink diagram with the logic used to generate the appropriate pulse on a dsPIC. Code is generated through the Simulink Coder and the
-&lt;a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/SW007023" target="_blank" rel="noopener">MPLAB block&lt;/a>
-from Microchip.&lt;/p>
+&lt;a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/SW007023" target="_blank" rel="noopener">MPLAB block&lt;/a> from Microchip.&lt;/p>
 &lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -1330,8 +1287,7 @@ Simulation are presented with Simulink models and an LQR&lt;sup id="fnref:2">&lt
 &lt;p>Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).&lt;/p>
 &lt;p>The electronic placed at the top of the pendulum composed of a dsPIC 16 bits microcontroller and an inertial sensor (accelerometers and rate gyro).
 The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see
-&lt;a href="#hw_trolley">pictures below&lt;/a>
-).&lt;/p>
+&lt;a href="#hw_trolley">pictures below&lt;/a>).&lt;/p>
 &lt;h1 id="hardware">Hardware&lt;/h1>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube.
@@ -1364,8 +1320,7 @@ It is powered through the USB connector which &lt;strong>only provide the power 
 &lt;/div>
 &lt;h3 id="imu-sensor">IMU sensor&lt;/h3>
 &lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a
-&lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener">Drotek sensor board&lt;/a>
-. It endows:&lt;/p>
+&lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener">Drotek sensor board&lt;/a>. It endows:&lt;/p>
 &lt;ul>
 &lt;li>a 3 axis Accelerometers and&lt;/li>
 &lt;li>a 3 axis rate gyros.&lt;/li>
@@ -1382,12 +1337,9 @@ The stabilization control loop uses the drift-free pitch angle.&lt;/p>
 The GY-91 board is a 10 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> widespread board based on the 9 DoF MPU9250 (3 accelerometers, 3 magnetometers, 3 rate gyros) and has a pressure sensor.&lt;/p>
 &lt;h3 id="UARTINTERFACE">UART interface&lt;/h3>
 &lt;p>The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART
-&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">data-logger&lt;/a>
-or
-&lt;a href="http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener">radio link&lt;/a>
-for telemetry module or an
-&lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener">RC receiver&lt;/a>
-capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
+&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">data-logger&lt;/a> or
+&lt;a href="http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener">radio link&lt;/a> for telemetry module or an
+&lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener">RC receiver&lt;/a> capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
 &lt;h2 id="hw_trolley">Base trolley&lt;/h2>
 &lt;h3 id="motors">Motors&lt;/h3>
 &lt;p>The base trolley is a low cost a 2-wheel remote control toy named &lt;code>flywheels&lt;/code>. The toy is from 2012 but 2 wheeled equivalents exist.
@@ -1445,7 +1397,7 @@ The black and red wire from the trolley to the top of the pendulum powers the Mi
 &lt;h1 id="pendulum-model">Pendulum Model&lt;/h1>
 &lt;p>The pendulum model is composed of two intertwined sub-system:&lt;/p>
 &lt;ul>
-&lt;li>The pendulum*, with 1 rotation DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> $\theta$ angle around the wheel's axis&lt;/li>
+&lt;li>The pendulum*, with 1 rotation DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> $\theta$ angle around the wheel&amp;rsquo;s axis&lt;/li>
 &lt;li>The trolley*, with 1 translation DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> $x$ position.&lt;/li>
 &lt;/ul>
 &lt;div class="box" style="max-width:100%">
@@ -1473,7 +1425,7 @@ $$&lt;/li>
 &lt;/ul>
 &lt;p>With $ \{ \vec{i},\vec{j} \} $ the static earth frame and $ \{ \vec{r},\vec{n} \} $ the pendulum frame (rod and normal direction).
 $m$ is the mass of the pendulum (without the trolley).
-$l$ is the length from the inter-wheel's axis to the center of mass of the pendulum (without the trolley)&lt;/p>
+$l$ is the length from the inter-wheel&amp;rsquo;s axis to the center of mass of the pendulum (without the trolley)&lt;/p>
 &lt;p>$$
 \left\{ \begin{array}{rcl}
 \vec{i} &amp;amp; = &amp;amp; \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\\&lt;br>
@@ -1535,10 +1487,8 @@ In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the exp
 Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p>
 &lt;p>It oscillates until the damping friction ($\zeta$) stops the free oscillations.&lt;/p>
 &lt;p>The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an
-&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">openlager&lt;/a>
-board connected on the dsPIC
-&lt;a href="#UARTINTERFACE">UART&lt;/a>
-interface.&lt;/p>
+&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">openlager&lt;/a> board connected on the dsPIC
+&lt;a href="#UARTINTERFACE">UART&lt;/a> interface.&lt;/p>
 &lt;h3 id="simulation-from-logs">Simulation from logs&lt;/h3>
 &lt;p>The measured inertial sensors are then re-used as data source in a Simulink model. $\theta$ angle is reconstructed using an IMU complementary filter algorithm implemented in the quaternion angle representation.&lt;/p>
 &lt;p>The pendulum model is initialized with the experimentation initial condition ($\theta = -18°$ , $\dot \theta = 0$). Trolley linear acceleration input is null.
@@ -1585,7 +1535,7 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;p>The IMU input measurements is composed of the rate gyro and the accelerometers data. Magnetometers is not used in this pendulum example.
 The IMU input also require the predicted acceleration vector (resp magnetometer is used).
 The IMU output the sensor orientation and provides the gravity vector prediction as seen in the sensor estimated attitude (i.e. quaternion angle).&lt;/p>
-&lt;p>Comparing the gravity vector predicted with the accelerometer's measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p>
+&lt;p>Comparing the gravity vector predicted with the accelerometer&amp;rsquo;s measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p>
 &lt;p>Considering the pendulum principal movement rotation $\theta$, the equations of forces applied on the pendulum derive from $\hat \theta$ a prediction for the dynamic acceleration.
 The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in these calculations.&lt;/p>
 &lt;p>The updated acceleration comprising both a static and dynamic part is fed into the IMU algorithm improving the IMU correction of the rate gyro integration drift even when the pendulum is not static.&lt;/p>
@@ -1645,8 +1595,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;/div>
 -->
 &lt;p>Another way to stabilize a pendulum with an electric seesaw (
-&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener">video&lt;/a>
-).&lt;/p>
+&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener">video&lt;/a>).&lt;/p>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
@@ -1709,8 +1658,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;h3 id="miniature-airspeed-sensor">Miniature airspeed sensor&lt;/h3>
 &lt;h4 id="for-rc-plane--uav">for RC plane &amp;amp; UAV&lt;/h4>
 &lt;p>
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a>
-description&lt;/p>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a> description&lt;/p>
 &lt;hr>
 &lt;p>&lt;img src="https://lubin.kerhuel.eu/post/pitot-build/featured.jpg" alt="/post/pitot-build/featured.jpg">&lt;/p>
 &lt;hr>
@@ -1804,8 +1752,7 @@ description&lt;/p>
 &lt;/ul>
 &lt;hr>
 &lt;p>
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">page&lt;/a>
-with further details&lt;/p>
+&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">page&lt;/a> with further details&lt;/p>
 &lt;hr>
 &lt;h3 id="flight-trace">flight trace&lt;/h3>
 &lt;section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" data-background-opacity=1>
@@ -1820,12 +1767,9 @@ with further details&lt;/p>
 &lt;/a>
 &lt;/p>
 &lt;p>[
-&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">Lab&lt;/a>
-] -
-&lt;a href="https://lubin.kerhuel.eu/authors/lubin">L.Kerhuel&lt;/a>
--
-&lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux">R.Delpoux&lt;/a>
-&lt;/p>
+&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">Lab&lt;/a>] -
+&lt;a href="https://lubin.kerhuel.eu/authors/lubin">L.Kerhuel&lt;/a> -
+&lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux">R.Delpoux&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="plan">Plan:&lt;/h2>
 &lt;ul>
@@ -1894,7 +1838,7 @@ Identification
 &lt;hr>
 &lt;p>&lt;img src="./Picooz_Identificatoin_eq_02.png" alt="./Picooz_Identificatoin_eq_02.png">&lt;/p>
 &lt;aside class="notes">
-rasoir d'Ockham
+rasoir d&amp;rsquo;Ockham
 &lt;/aside>
 &lt;hr>
 &lt;p>&lt;img src="./Picooz_SuperTwistingController.png" alt="./Picooz_SuperTwistingController.png">&lt;/p>
@@ -1937,8 +1881,7 @@ vs&lt;/li>
 &lt;/div>
 &lt;hr>
 &lt;h2 id="pendule-inversedocsinverted-pendulum">
-&lt;a href="https://lubin.kerhuel.eu/docs/inverted-pendulum/">Pendule inverse&lt;/a>
-&lt;/h2>
+&lt;a href="https://lubin.kerhuel.eu/docs/inverted-pendulum/">Pendule inverse&lt;/a>&lt;/h2>
 &lt;p>&lt;img src="./Inverted_Pendulum_ControlLoopCloseUp.png" alt="./Inverted_Pendulum_ControlLoopCloseUp.png">
 &lt;aside class="notes">
 &lt;ol>
@@ -1993,14 +1936,14 @@ Single Tasking / Multi Tasking
 &lt;li>
 &lt;p>&lt;strong>Single-rate&lt;/strong>:&lt;/p>
 &lt;ul>
-&lt;li>Les blocks ont tous la même période d'exécution
+&lt;li>Les blocks ont tous la même période d&amp;rsquo;exécution
 (Même couleur)&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;strong>Multi-Rate&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>Les blocks peuvent avoir des périodes d'exécution différentes
+&lt;li>Les blocks peuvent avoir des périodes d&amp;rsquo;exécution différentes
 (Schéma multicolore)&lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -2013,12 +1956,12 @@ Single Tasking / Multi Tasking
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-70-mips">Charge CPU d'un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-70-mips">Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@70 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_SingleTasking_70MIPS.png" alt="./Scope_SingleTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-20-mips">Charge CPU d'un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-single-tasking-20-mips">Charge CPU d&amp;rsquo;un modèle multi-rate single-tasking (@20 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_SingleTasking_20MIPS.png" alt="./Scope_SingleTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_SingleTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
@@ -2027,7 +1970,7 @@ OVERLOAD
 &lt;/aside>
 &lt;hr>
 &lt;h2 id="single-tasking">Single-Tasking&lt;/h2>
-&lt;p>Single-Tasking: Dans le slot de temps, l'exécution de tous les blocks doit se terminer avant la fin du slot.&lt;/p>
+&lt;p>Single-Tasking: Dans le slot de temps, l&amp;rsquo;exécution de tous les blocks doit se terminer avant la fin du slot.&lt;/p>
 &lt;hr>
 &lt;h2 id="multi-tasking">Multi-Tasking&lt;/h2>
 &lt;p>Multi-Tasking: Préemption possible -&amp;gt; &lt;strong>Monotonic Rate Scheduler&lt;/strong>&lt;/p>
@@ -2041,12 +1984,12 @@ OVERLOAD
 &lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-70-mips">Charge CPU d'un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-70-mips">Charge CPU d&amp;rsquo;un modèle multi-rate multi-tasking (@70 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_MultiTasking_70MIPS.png" alt="./Scope_MultiTasking_70MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
 &lt;hr>
-&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-20-mips">Charge CPU d'un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
+&lt;h4 id="charge-cpu-dun-modèle-multi-rate-multi-tasking-20-mips">Charge CPU d&amp;rsquo;un modèle multi-rate multi-tasking (@20 mips)&lt;/h4>
 &lt;p>&lt;img src="./Scope_MultiTasking_20MIPS.png" alt="./Scope_MultiTasking_20MIPS.png">&lt;/p>
 &lt;section data-background-image="./Scope_MultiTasking_20MIPS.png" data-background-opacity=0.06 data-background-position="center" >
 &lt;/section>
@@ -2061,7 +2004,7 @@ OVERLOAD
 &lt;p>Single-Tasking @ 20 MIPS -&amp;gt; &lt;strong>Overload&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>dispatcher la tache la plus lente sur plusieurs slots&lt;/li>
-&lt;li>(option d'offset dans &lt;strong>Time Step&lt;/strong> -&amp;gt; &lt;em>[.001 .005])&lt;/em>&lt;/li>
+&lt;li>(option d&amp;rsquo;offset dans &lt;strong>Time Step&lt;/strong> -&amp;gt; &lt;em>[.001 .005])&lt;/em>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
@@ -2290,14 +2233,12 @@ TotalVal = vals'*exps;
 &lt;hr>
 &lt;h2 id="tp">TP&lt;/h2>
 &lt;p>
-&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">https://rtdc.ctrl-elec.fr&lt;/a>
-&lt;/p>
+&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">https://rtdc.ctrl-elec.fr&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="download">download&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;a href="https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/raw/master/LABMatlabFiles/02_GettingStarted/MCLV2_dsPIC33EP256MC506_base_R2017a.zip" target="_blank" rel="noopener">base model&lt;/a>
-&lt;/li>
+&lt;a href="https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/raw/master/LABMatlabFiles/02_GettingStarted/MCLV2_dsPIC33EP256MC506_base_R2017a.zip" target="_blank" rel="noopener">base model&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="elements-de-correction">Elements de correction&lt;/h2>
@@ -2370,8 +2311,7 @@ data-backgroundTransition="none"
 &lt;li>Fullscreen: &lt;code>F&lt;/code>&lt;/li>
 &lt;li>Zoom: &lt;code>Alt + Click&lt;/code>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/hakimel/reveal.js#pdf-export" target="_blank" rel="noopener">PDF Export&lt;/a>
-: &lt;code>E&lt;/code>&lt;/li>
+&lt;a href="https://github.com/hakimel/reveal.js#pdf-export" target="_blank" rel="noopener">PDF Export&lt;/a>: &lt;code>E&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="code-highlighting">Code Highlighting&lt;/h2>
@@ -2454,7 +2394,7 @@ data-background-image="/img/boards.jpg"
 &lt;/code>&lt;/pre>
 &lt;hr>
 &lt;h2 id="custom-css-example">Custom CSS Example&lt;/h2>
-&lt;p>Let's make headers navy colored.&lt;/p>
+&lt;p>Let&amp;rsquo;s make headers navy colored.&lt;/p>
 &lt;p>Create &lt;code>assets/css/reveal_custom.css&lt;/code> with:&lt;/p>
 &lt;pre>&lt;code class="language-css">.reveal section h1,
 .reveal section h2,
@@ -2465,9 +2405,7 @@ color: navy;
 &lt;hr>
 &lt;h1 id="questions">Questions?&lt;/h1>
 &lt;p>
-&lt;a href="https://discourse.gohugo.io" target="_blank" rel="noopener">Ask&lt;/a>
-&lt;/p>
+&lt;a href="https://discourse.gohugo.io" target="_blank" rel="noopener">Ask&lt;/a>&lt;/p>
 &lt;p>
-&lt;a href="https://sourcethemes.com/academic/docs/" target="_blank" rel="noopener">Documentation&lt;/a>
-&lt;/p>
+&lt;a href="https://sourcethemes.com/academic/docs/" target="_blank" rel="noopener">Documentation&lt;/a>&lt;/p>
 &lt;hr></description></item></channel></rss>
