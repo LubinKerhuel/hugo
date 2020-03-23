@@ -74,7 +74,7 @@
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" class="lazyload" alt="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Brass inner and outer tubes of the Pitot tube.&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Brass inner and outer tubes of the Pitot tube.&lt;/h4>
 &lt;p>Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -220,7 +220,7 @@ m = 72mm
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" class="lazyload" alt="Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Pressure sensor and electronics mounted on a DIP adapter board.&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Pressure sensor and electronics mounted on a DIP adapter board.&lt;/h4>
 &lt;p>Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -233,7 +233,7 @@ m = 72mm
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" class="lazyload" alt="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Experimental pitot-tube static characteristic with the MP3V5004dp differential pressure sensor&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Experimental pitot-tube static characteristic with the MP3V5004dp differential pressure sensor&lt;/h4>
 &lt;p>90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -250,7 +250,7 @@ m = 72mm
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" class="lazyload" alt="Platform used for tests"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>FirStar 1600 Volantex RC plane&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>FirStar 1600 Volantex RC plane&lt;/h4>
 &lt;p>Platform used for tests&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -262,7 +262,7 @@ m = 72mm
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" class="lazyload" alt="Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Flashmer – flexible Tube 2mm. Image from Decathlon (france).&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Flashmer – flexible Tube 2mm. Image from Decathlon (france).&lt;/h4>
 &lt;p>Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -274,7 +274,7 @@ m = 72mm
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" class="lazyload" />
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform.&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform.&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
@@ -284,7 +284,7 @@ m = 72mm
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" class="lazyload" alt="Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Carbon-Brass light Pitot tube sensor attached to the wing with a magnet.&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Carbon-Brass light Pitot tube sensor attached to the wing with a magnet.&lt;/h4>
 &lt;p>Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -311,7 +311,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" class="lazyload" alt="GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$)."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Experimental measurement comparing GPS ground speed with pitot-tube airspeed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the the pitot tube subtracted from the estimated wind.&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Experimental measurement comparing GPS ground speed with pitot-tube airspeed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the the pitot tube subtracted from the estimated wind.&lt;/h4>
 &lt;p>GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$).&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -356,7 +356,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" class="lazyload" alt="Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Experimental result presenting GPS ground speed and Pitot airspeed difference in function of the plane direction of 450s flight of the RC Firstar 1600 plane.&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Experimental result presenting GPS ground speed and Pitot airspeed difference in function of the plane direction of 450s flight of the RC Firstar 1600 plane.&lt;/h4>
 &lt;p>Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -453,7 +453,7 @@ C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_Pit
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_platform_top.png" class="lazyload" alt="Top of the inverted pendulum"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_platform_top.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">
 &lt;p>Top of the inverted pendulum&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -485,7 +485,7 @@ The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_platform_reduced_horizontal.png" class="lazyload" alt="Inverted Pendulum platform"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_platform.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">
 &lt;p>Inverted Pendulum platform&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -500,7 +500,7 @@ It is powered through the USB connector which &lt;strong>only provide the power 
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_top.png" class="lazyload" alt="A prototyping board support a Microstick II board with the dsPIC 33EP128MC202. A board from Drotek endowing the Invensense ICM-20608 inertial sensor is screwed on the base board."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_top.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Microcontroller and sensor on top of the inverted pendulum&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Microcontroller and sensor on top of the inverted pendulum&lt;/h4>
 &lt;p>A prototyping board support a Microstick II board with the &lt;em>dsPIC 33EP128MC202&lt;/em>. A board from Drotek endowing the Invensense ICM-20608 inertial sensor is screwed on the base board.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -572,7 +572,7 @@ Two pairs of wires power two DC motors in either direction through an &lt;code>L
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_base.png" class="lazyload" alt="A L298N H bridge (for Arduino) power board drives the two DC motors of a modified FlyWheels toy. Four AA batteries powers the pendulum."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_base.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Base trolley of the inverted pendulum&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Base trolley of the inverted pendulum&lt;/h4>
 &lt;p>A &lt;em>L298N H bridge&lt;/em> (for Arduino) power board drives the two DC motors of a modified &lt;em>FlyWheels&lt;/em> toy. &lt;em>Four AA batteries&lt;/em> powers the pendulum.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -593,7 +593,7 @@ The black and red wire from the trolley to the top of the pendulum powers the Mi
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png" class="lazyload" alt="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Pendulum free body diagram&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Pendulum free body diagram&lt;/h4>
 &lt;p>$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -649,7 +649,7 @@ It can be made linear with $sin(\theta) \approx \theta$ when the pendulum is up 
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum-model-rod.png" class="lazyload" alt="non-linear model of the $\theta$ angle evolution derived from the forces projected on the normal $\vec{n}$ axis of the rod. The trolley linear acceleration input is added."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum-model-rod.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Pendulum model for rod rotation&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Pendulum model for rod rotation&lt;/h4>
 &lt;p>non-linear model of the $\theta$ angle evolution derived from the forces projected on the normal $\vec{n}$ axis of the rod. The trolley linear acceleration input is added.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -686,7 +686,7 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum-identification-theta.png" class="lazyload" alt="$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum-identification-theta.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Identification - experimental $\theta$ angle reconstructed from inertial sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Identification - experimental $\theta$ angle reconstructed from inertial sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4>
 &lt;p>$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -763,7 +763,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum-gy91-wheel.jpg" class="lazyload" alt="The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91 board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires)."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum-gy91-wheel.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Identification of trolley in real inverted pendulum condition.&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Identification of trolley in real inverted pendulum condition.&lt;/h4>
 &lt;p>The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91 board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires).&lt;/p>
 &lt;/figcaption>
 &lt;/figure>

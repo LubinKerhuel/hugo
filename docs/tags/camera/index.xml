@@ -65,7 +65,7 @@ The cable has logic to decode the RC PWM signal and generate the signal pulse sc
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png" class="lazyload" alt="Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">
 &lt;p>Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&lt;/p>
 &lt;/figcaption>
 &lt;/figure>

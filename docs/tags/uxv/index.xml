@@ -171,7 +171,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-sbus-gui-control-frame.png" class="lazyload" alt="This simulink block decode S.BUS input stream. Scaling for output RC channels can be selected for each channels."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-sbus-gui-control-frame.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Simulink S.BUS block user interface&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Simulink S.BUS block user interface&lt;/h4>
 &lt;p>This simulink block decode S.BUS input stream. Scaling for output RC channels can be selected for each channels.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -182,7 +182,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" class="lazyload" alt="Scheme to decode S.BUS for use in a dsPIC"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Scheme of the UART Rx block connected to the the S.BUS block.&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Scheme of the UART Rx block connected to the the S.BUS block.&lt;/h4>
 &lt;p>Scheme to decode S.BUS for use in a dsPIC&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -193,7 +193,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-sbus-sport-channels-scaling.png" class="lazyload" alt="raw values from S.BUS are not centered and scaled with power of 2."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-sbus-sport-channels-scaling.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Scheme to center and scale S.BUS channels output within [-1000 1000]&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Scheme to center and scale S.BUS channels output within [-1000 1000]&lt;/h4>
 &lt;p>raw values from S.BUS are not centered and scaled with power of 2.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -240,7 +240,7 @@ The message is sent through an UART Tx block.&lt;/p>
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-gui.png" class="lazyload" alt="caption"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-gui.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>Title&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Title&lt;/h4>
 &lt;p>caption&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -251,7 +251,7 @@ The message is sent through an UART Tx block.&lt;/p>
 &lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-input-scaling.png" class="lazyload" alt="caption"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-input-scaling.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="fig " data-post=":" class="numbered">&lt;h4>title&lt;/h4>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>title&lt;/h4>
 &lt;p>caption&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
