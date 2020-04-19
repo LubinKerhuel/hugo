@@ -120,6 +120,9 @@ numbered="false"
 >}}
 
 
-### links
+### Various 
 
 https://em3ev.com/
+
+- 36V battery: 3.385 kg
+- 42V battery: 3.965 kg
