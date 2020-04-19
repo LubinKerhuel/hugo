@@ -1,6 +1,6 @@
 ﻿---
 # Display name
-name: Romain Delpoux
+title: Romain Delpoux
 
 # Username (this should match the folder name)
 authors: romain-delpoux

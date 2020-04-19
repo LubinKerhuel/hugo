@@ -1,6 +1,6 @@
 +++
 # Display name
-name = "Lubin Kerhuel"
+title = "Lubin Kerhuel"
 
 # Username (this should match the folder name)
 authors = ["lubin"]
