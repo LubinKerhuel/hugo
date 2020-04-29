@@ -11,15 +11,15 @@
 Only one request for each sensor block instance can be present in this FIFO.</p><ul><li>If a sensor block is updated while its previous value has not been sent yet ; this block sensor request to send is still in the FIFO, then the update has no effect and the newer value is lost.</li></ul><p>Unlike the Smart Port, a sensor cannot be sent twice without having been updated once first because the sensor is placed in the send request FIFO while being updated.</p><p>for its corresponding sensor
 The block update sample rate is selected by end user. whose value will be sent to the receiver. The receiver send then the sensor Id and the corresponding values to the remote through telemetry.</p><p>Communication with the receiver can use either the Smart Port, or the F.Port.</p><p>The sensor PhyId, APPID and APPID Offset variant are set within the block.
 The PRIM field must be set to 0X10 for a sensor. The sensor value unit is set within the block.
-Block input is the 4 bytes codint for the sensor value.</p></div><div class=article-tags><a class="badge badge-light" href=/tags/rapid-prototyping/>rapid prototyping</a>
-<a class="badge badge-light" href=/tags/model-based-design-mbd/>model based design (MBD)</a>
+Block input is the 4 bytes codint for the sensor value.</p></div><div class=article-tags><a class="badge badge-light" href=/tags/f.port/>F.Port</a>
 <a class="badge badge-light" href=/tags/matlab/>matlab</a>
+<a class="badge badge-light" href=/tags/model-based-design-mbd/>model based design (MBD)</a>
+<a class="badge badge-light" href=/tags/rapid-prototyping/>rapid prototyping</a>
 <a class="badge badge-light" href=/tags/simulink/>simulink</a>
+<a class="badge badge-light" href=/tags/smart-port/>Smart Port</a>
 <a class="badge badge-light" href=/tags/uav/>UAV</a>
 <a class="badge badge-light" href=/tags/uxv/>UxV</a>
-<a class="badge badge-light" href=/tags/sensor/>Sensor</a>
-<a class="badge badge-light" href=/tags/f.port/>F.Port</a>
-<a class="badge badge-light" href=/tags/smart-port/>Smart Port</a>
+<a class="badge badge-light" href=/tags/sensor/>sensor</a>
 <a class="badge badge-light" href=/tags/block/>block</a></div><div class=article-widget><div class=post-nav><div class=post-nav-item><div class=meta-nav>Previous</div><a href=/uxv/block-receiver-telemetry/ rel=next>block receiver & telemetry: S.BUS, Smart Port, F.Port</a></div></div></div></div><div class=body-footer><p>Last updated on November 2019</p></div></article><footer class=site-footer><p class=powered-by>© 2019 - 2020 Lubin Kerhuel &#183;
 Powered by the
 <a href=https://sourcethemes.com/academic/ target=_blank rel=noopener>Academic theme</a> for
