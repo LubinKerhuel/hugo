@@ -1,4 +1,4 @@
-# SITE SETUP
+ # SITE SETUP
 # Documentation: https://sourcethemes.com/academic/
 
 
@@ -89,11 +89,11 @@ phone = ""
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "8 Chemin de Madame", city = "Bayonne", region = "Aquitaine", postcode = "64100", country = "France", country_code = "FR"}
+address = {street = "19 rue Adrien Barthe", city = "Bayonne", region = "Aquitaine", postcode = "64100", country = "France", country_code = "FR"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "43.4942", longitude = "-1.4393"}
+coordinates = {latitude = "43.481293", longitude = "-1.493581"}
 
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
