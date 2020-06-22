@@ -75,6 +75,8 @@ privacy_pack = false
 # `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page = {repo_url = "https://github.com/LubinKerhuel/hugo", repo_branch = "master", editable = {docs = false, page = false, post = false}}
 
+# Show related content at the bottom of pages?
+show_related = {docs = true, page = false, post = true, project = true, publication = true, talk = true}
 
 ############################
 ## Contact details
@@ -154,7 +156,8 @@ docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
 sharing = true
 
 # show_related
-show_related = {docs = true, page = false, post = true, project = true, publication = true, talk = true}
+# Highlight the site author (superuser) in author lists? (true/false)
+highlight_superuser = false
 
 # Link authors to their profile page? (true/false)
 link_authors = true
@@ -168,7 +171,7 @@ plugins_js  = ["load-photoswipe"]
 [address_formats]
   en-us = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ' ', '']}
   en-gb = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ', ', '']}
-  de = {order = ['street', 'postcode', 'city'], delimiters = [', ', ' ', '']}
+  de = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
   fr-fr = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
   zh = {order = ['postcode', 'region', 'city', 'street'], delimiters = [' ', ' ', ' ', '']}
 
@@ -209,6 +212,11 @@ plugins_js  = ["load-photoswipe"]
   [comments.disqus]
     shortname = ""  # Paste the shortname from your Disqus dashboard.
     show_count = true  # Show comment count in page header? (true/false)
+
+  # Configuration of Commento.
+  [comments.commento]
+    # If self-hosting Commento, enter its URL here (e.g. "https://commento.?.com"), otherwise leave empty.
+    url = ""
 
 ############################
 ## Search
@@ -256,3 +264,9 @@ plugins_js  = ["load-photoswipe"]
 [marketing]
   google_analytics = "UA-90899-5"  
   google_tag_manager = "GTM-THRKWJJ" # LK tag manager ref
+############################
+## Content Management System
+############################
+[cms]
+  # See https://sourcethemes.com/academic/docs/install/#install-with-web-browser
+  netlify_cms = true
