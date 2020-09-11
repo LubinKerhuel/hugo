@@ -41,6 +41,8 @@ defaultContentLanguage = "en"
 hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
 
+enableRobotsTXT = true
+
 removePathAccents = true 
 
 summaryLength = 30  # Listing summary length in words. Also, see `abstract_length` in `params.toml`.
