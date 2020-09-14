@@ -61,41 +61,41 @@
 &lt;thead>
 &lt;tr>
 &lt;th>&lt;/th>
-&lt;th align="center">Baudrate&lt;/th>
-&lt;th align="center">Duplex&lt;/th>
-&lt;th align="center">Logic&lt;/th>
-&lt;th align="center">parity&lt;/th>
-&lt;th align="center">stop-bit&lt;/th>
-&lt;th align="center">flow-ctrl&lt;/th>
+&lt;th style="text-align:center">Baudrate&lt;/th>
+&lt;th style="text-align:center">Duplex&lt;/th>
+&lt;th style="text-align:center">Logic&lt;/th>
+&lt;th style="text-align:center">parity&lt;/th>
+&lt;th style="text-align:center">stop-bit&lt;/th>
+&lt;th style="text-align:center">flow-ctrl&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>S.BUS&lt;/td>
-&lt;td align="center">100000&lt;/td>
-&lt;td align="center">Rx only&lt;/td>
-&lt;td align="center">3.3V inverted&lt;/td>
-&lt;td align="center">even&lt;/td>
-&lt;td align="center">2&lt;/td>
-&lt;td align="center">no&lt;/td>
+&lt;td style="text-align:center">100000&lt;/td>
+&lt;td style="text-align:center">Rx only&lt;/td>
+&lt;td style="text-align:center">3.3V inverted&lt;/td>
+&lt;td style="text-align:center">even&lt;/td>
+&lt;td style="text-align:center">2&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Smart Port&lt;/td>
-&lt;td align="center">57600&lt;/td>
-&lt;td align="center">&lt;strong>Half&lt;/strong>&lt;/td>
-&lt;td align="center">3.3V inverted&lt;/td>
-&lt;td align="center">no&lt;/td>
-&lt;td align="center">1&lt;/td>
-&lt;td align="center">no&lt;/td>
+&lt;td style="text-align:center">57600&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Half&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">3.3V inverted&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>F.Port&lt;/td>
-&lt;td align="center">115200&lt;/td>
-&lt;td align="center">&lt;strong>Half&lt;/strong>&lt;/td>
-&lt;td align="center">3.3V inverted&lt;/td>
-&lt;td align="center">no&lt;/td>
-&lt;td align="center">1&lt;/td>
-&lt;td align="center">no&lt;/td>
+&lt;td style="text-align:center">115200&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Half&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">3.3V inverted&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -104,47 +104,47 @@
 &lt;thead>
 &lt;tr>
 &lt;th>&lt;/th>
-&lt;th align="center">Implementation&lt;/th>
-&lt;th align="center">Buffer size&lt;/th>
-&lt;th align="center">Interrupt priority&lt;/th>
+&lt;th style="text-align:center">Implementation&lt;/th>
+&lt;th style="text-align:center">Buffer size&lt;/th>
+&lt;th style="text-align:center">Interrupt priority&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>S.BUS Rx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">64&lt;/td>
-&lt;td align="center">5&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">64&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>S.BUS Tx&lt;/td>
-&lt;td align="center">None&lt;/td>
-&lt;td align="center">-&lt;/td>
-&lt;td align="center">-&lt;/td>
+&lt;td style="text-align:center">None&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Smart Port Rx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">32&lt;/td>
-&lt;td align="center">5&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">32&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Smart Port Tx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">32&lt;/td>
-&lt;td align="center">6&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">32&lt;/td>
+&lt;td style="text-align:center">6&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>F.Port Rx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">32&lt;/td>
-&lt;td align="center">5&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">32&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>F.Port Tx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">64&lt;/td>
-&lt;td align="center">5&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">64&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -805,25 +805,25 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="center">Pendulum Parameters&lt;/th>
-&lt;th align="center">Identified Value&lt;/th>
+&lt;th style="text-align:center">Pendulum Parameters&lt;/th>
+&lt;th style="text-align:center">Identified Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="center">$l$&lt;/td>
-&lt;td align="center">$0.45 m$&lt;/td>
+&lt;td style="text-align:center">$l$&lt;/td>
+&lt;td style="text-align:center">$0.45 m$&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">$k$&lt;/td>
-&lt;td align="center">$0.4$&lt;/td>
+&lt;td style="text-align:center">$k$&lt;/td>
+&lt;td style="text-align:center">$0.4$&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">$w_n = \sqrt{\frac{g}{l}}$&lt;/td>
-&lt;td align="center">$4.67\ rad.s^{-1}$ ( $0.74 Hz$ or $1.35s$ period )&lt;/td>
+&lt;td style="text-align:center">$w_n = \sqrt{\frac{g}{l}}$&lt;/td>
+&lt;td style="text-align:center">$4.67\ rad.s^{-1}$ ( $0.74 Hz$ or $1.35s$ period )&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">⬆ Identified pendulum parameters&lt;/td>
+&lt;td style="text-align:center">⬆ Identified pendulum parameters&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -852,14 +852,14 @@ This dynamic includes the motor dynamics when it is loaded with the trolley cons
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="center">Trolley Parameter&lt;/th>
-&lt;th align="center">Estimated Value&lt;/th>
+&lt;th style="text-align:center">Trolley Parameter&lt;/th>
+&lt;th style="text-align:center">Estimated Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="center">$\tau$&lt;/td>
-&lt;td align="center">$0.3s$&lt;/td>
+&lt;td style="text-align:center">$\tau$&lt;/td>
+&lt;td style="text-align:center">$0.3s$&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

@@ -442,25 +442,25 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="center">Pendulum Parameters&lt;/th>
-&lt;th align="center">Identified Value&lt;/th>
+&lt;th style="text-align:center">Pendulum Parameters&lt;/th>
+&lt;th style="text-align:center">Identified Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="center">$l$&lt;/td>
-&lt;td align="center">$0.45 m$&lt;/td>
+&lt;td style="text-align:center">$l$&lt;/td>
+&lt;td style="text-align:center">$0.45 m$&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">$k$&lt;/td>
-&lt;td align="center">$0.4$&lt;/td>
+&lt;td style="text-align:center">$k$&lt;/td>
+&lt;td style="text-align:center">$0.4$&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">$w_n = \sqrt{\frac{g}{l}}$&lt;/td>
-&lt;td align="center">$4.67\ rad.s^{-1}$ ( $0.74 Hz$ or $1.35s$ period )&lt;/td>
+&lt;td style="text-align:center">$w_n = \sqrt{\frac{g}{l}}$&lt;/td>
+&lt;td style="text-align:center">$4.67\ rad.s^{-1}$ ( $0.74 Hz$ or $1.35s$ period )&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">⬆ Identified pendulum parameters&lt;/td>
+&lt;td style="text-align:center">⬆ Identified pendulum parameters&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -489,14 +489,14 @@ This dynamic includes the motor dynamics when it is loaded with the trolley cons
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="center">Trolley Parameter&lt;/th>
-&lt;th align="center">Estimated Value&lt;/th>
+&lt;th style="text-align:center">Trolley Parameter&lt;/th>
+&lt;th style="text-align:center">Estimated Value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="center">$\tau$&lt;/td>
-&lt;td align="center">$0.3s$&lt;/td>
+&lt;td style="text-align:center">$\tau$&lt;/td>
+&lt;td style="text-align:center">$0.3s$&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

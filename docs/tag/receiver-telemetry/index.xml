@@ -61,41 +61,41 @@
 &lt;thead>
 &lt;tr>
 &lt;th>&lt;/th>
-&lt;th align="center">Baudrate&lt;/th>
-&lt;th align="center">Duplex&lt;/th>
-&lt;th align="center">Logic&lt;/th>
-&lt;th align="center">parity&lt;/th>
-&lt;th align="center">stop-bit&lt;/th>
-&lt;th align="center">flow-ctrl&lt;/th>
+&lt;th style="text-align:center">Baudrate&lt;/th>
+&lt;th style="text-align:center">Duplex&lt;/th>
+&lt;th style="text-align:center">Logic&lt;/th>
+&lt;th style="text-align:center">parity&lt;/th>
+&lt;th style="text-align:center">stop-bit&lt;/th>
+&lt;th style="text-align:center">flow-ctrl&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>S.BUS&lt;/td>
-&lt;td align="center">100000&lt;/td>
-&lt;td align="center">Rx only&lt;/td>
-&lt;td align="center">3.3V inverted&lt;/td>
-&lt;td align="center">even&lt;/td>
-&lt;td align="center">2&lt;/td>
-&lt;td align="center">no&lt;/td>
+&lt;td style="text-align:center">100000&lt;/td>
+&lt;td style="text-align:center">Rx only&lt;/td>
+&lt;td style="text-align:center">3.3V inverted&lt;/td>
+&lt;td style="text-align:center">even&lt;/td>
+&lt;td style="text-align:center">2&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Smart Port&lt;/td>
-&lt;td align="center">57600&lt;/td>
-&lt;td align="center">&lt;strong>Half&lt;/strong>&lt;/td>
-&lt;td align="center">3.3V inverted&lt;/td>
-&lt;td align="center">no&lt;/td>
-&lt;td align="center">1&lt;/td>
-&lt;td align="center">no&lt;/td>
+&lt;td style="text-align:center">57600&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Half&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">3.3V inverted&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>F.Port&lt;/td>
-&lt;td align="center">115200&lt;/td>
-&lt;td align="center">&lt;strong>Half&lt;/strong>&lt;/td>
-&lt;td align="center">3.3V inverted&lt;/td>
-&lt;td align="center">no&lt;/td>
-&lt;td align="center">1&lt;/td>
-&lt;td align="center">no&lt;/td>
+&lt;td style="text-align:center">115200&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Half&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">3.3V inverted&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:center">no&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -104,47 +104,47 @@
 &lt;thead>
 &lt;tr>
 &lt;th>&lt;/th>
-&lt;th align="center">Implementation&lt;/th>
-&lt;th align="center">Buffer size&lt;/th>
-&lt;th align="center">Interrupt priority&lt;/th>
+&lt;th style="text-align:center">Implementation&lt;/th>
+&lt;th style="text-align:center">Buffer size&lt;/th>
+&lt;th style="text-align:center">Interrupt priority&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>S.BUS Rx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">64&lt;/td>
-&lt;td align="center">5&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">64&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>S.BUS Tx&lt;/td>
-&lt;td align="center">None&lt;/td>
-&lt;td align="center">-&lt;/td>
-&lt;td align="center">-&lt;/td>
+&lt;td style="text-align:center">None&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Smart Port Rx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">32&lt;/td>
-&lt;td align="center">5&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">32&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Smart Port Tx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">32&lt;/td>
-&lt;td align="center">6&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">32&lt;/td>
+&lt;td style="text-align:center">6&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>F.Port Rx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">32&lt;/td>
-&lt;td align="center">5&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">32&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>F.Port Tx&lt;/td>
-&lt;td align="center">Circular Buffer&lt;/td>
-&lt;td align="center">64&lt;/td>
-&lt;td align="center">5&lt;/td>
+&lt;td style="text-align:center">Circular Buffer&lt;/td>
+&lt;td style="text-align:center">64&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

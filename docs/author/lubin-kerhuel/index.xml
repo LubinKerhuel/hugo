@@ -249,85 +249,85 @@ m = 72mm
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="center">v (m/s)&lt;/th>
-&lt;th align="center">v (Km/h)&lt;/th>
-&lt;th align="center">$P_{diff}$ (Pa)&lt;/th>
-&lt;th align="center">~ $H_2O$ (cm)&lt;/th>
-&lt;th align="center">
+&lt;th style="text-align:center">v (m/s)&lt;/th>
+&lt;th style="text-align:center">v (Km/h)&lt;/th>
+&lt;th style="text-align:center">$P_{diff}$ (Pa)&lt;/th>
+&lt;th style="text-align:center">~ $H_2O$ (cm)&lt;/th>
+&lt;th style="text-align:center">
 &lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> &amp;amp;
 &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="center">1&lt;/td>
-&lt;td align="center">3.6&lt;/td>
-&lt;td align="center">0.6&lt;/td>
-&lt;td align="center">0.006&lt;/td>
-&lt;td align="center">3&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:center">3.6&lt;/td>
+&lt;td style="text-align:center">0.6&lt;/td>
+&lt;td style="text-align:center">0.006&lt;/td>
+&lt;td style="text-align:center">3&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">2&lt;/td>
-&lt;td align="center">7.2&lt;/td>
-&lt;td align="center">2.4&lt;/td>
-&lt;td align="center">0.024&lt;/td>
-&lt;td align="center">12&lt;/td>
+&lt;td style="text-align:center">2&lt;/td>
+&lt;td style="text-align:center">7.2&lt;/td>
+&lt;td style="text-align:center">2.4&lt;/td>
+&lt;td style="text-align:center">0.024&lt;/td>
+&lt;td style="text-align:center">12&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">4&lt;/td>
-&lt;td align="center">14.4&lt;/td>
-&lt;td align="center">9.6&lt;/td>
-&lt;td align="center">0.096&lt;/td>
-&lt;td align="center">47&lt;/td>
+&lt;td style="text-align:center">4&lt;/td>
+&lt;td style="text-align:center">14.4&lt;/td>
+&lt;td style="text-align:center">9.6&lt;/td>
+&lt;td style="text-align:center">0.096&lt;/td>
+&lt;td style="text-align:center">47&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">7&lt;/td>
-&lt;td align="center">25.2&lt;/td>
-&lt;td align="center">29.4&lt;/td>
-&lt;td align="center">0.294&lt;/td>
-&lt;td align="center">144&lt;/td>
+&lt;td style="text-align:center">7&lt;/td>
+&lt;td style="text-align:center">25.2&lt;/td>
+&lt;td style="text-align:center">29.4&lt;/td>
+&lt;td style="text-align:center">0.294&lt;/td>
+&lt;td style="text-align:center">144&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">10&lt;/td>
-&lt;td align="center">36&lt;/td>
-&lt;td align="center">60&lt;/td>
-&lt;td align="center">0.6&lt;/td>
-&lt;td align="center">294&lt;/td>
+&lt;td style="text-align:center">10&lt;/td>
+&lt;td style="text-align:center">36&lt;/td>
+&lt;td style="text-align:center">60&lt;/td>
+&lt;td style="text-align:center">0.6&lt;/td>
+&lt;td style="text-align:center">294&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">15&lt;/td>
-&lt;td align="center">54&lt;/td>
-&lt;td align="center">135&lt;/td>
-&lt;td align="center">1.3&lt;/td>
-&lt;td align="center">661&lt;/td>
+&lt;td style="text-align:center">15&lt;/td>
+&lt;td style="text-align:center">54&lt;/td>
+&lt;td style="text-align:center">135&lt;/td>
+&lt;td style="text-align:center">1.3&lt;/td>
+&lt;td style="text-align:center">661&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">20&lt;/td>
-&lt;td align="center">72&lt;/td>
-&lt;td align="center">240&lt;/td>
-&lt;td align="center">2.4&lt;/td>
-&lt;td align="center">1176&lt;/td>
+&lt;td style="text-align:center">20&lt;/td>
+&lt;td style="text-align:center">72&lt;/td>
+&lt;td style="text-align:center">240&lt;/td>
+&lt;td style="text-align:center">2.4&lt;/td>
+&lt;td style="text-align:center">1176&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">25&lt;/td>
-&lt;td align="center">90&lt;/td>
-&lt;td align="center">375&lt;/td>
-&lt;td align="center">3.75&lt;/td>
-&lt;td align="center">1837&lt;/td>
+&lt;td style="text-align:center">25&lt;/td>
+&lt;td style="text-align:center">90&lt;/td>
+&lt;td style="text-align:center">375&lt;/td>
+&lt;td style="text-align:center">3.75&lt;/td>
+&lt;td style="text-align:center">1837&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">30&lt;/td>
-&lt;td align="center">108&lt;/td>
-&lt;td align="center">540&lt;/td>
-&lt;td align="center">5.4&lt;/td>
-&lt;td align="center">2646&lt;/td>
+&lt;td style="text-align:center">30&lt;/td>
+&lt;td style="text-align:center">108&lt;/td>
+&lt;td style="text-align:center">540&lt;/td>
+&lt;td style="text-align:center">5.4&lt;/td>
+&lt;td style="text-align:center">2646&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">40&lt;/td>
-&lt;td align="center">144&lt;/td>
-&lt;td align="center">960&lt;/td>
-&lt;td align="center">9.6&lt;/td>
-&lt;td align="center">&lt;em>4704&lt;/em> (4095 sat)&lt;/td>
+&lt;td style="text-align:center">40&lt;/td>
+&lt;td style="text-align:center">144&lt;/td>
+&lt;td style="text-align:center">960&lt;/td>
+&lt;td style="text-align:center">9.6&lt;/td>
+&lt;td style="text-align:center">&lt;em>4704&lt;/em> (4095 sat)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -462,21 +462,21 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="center">error&lt;/th>
-&lt;th align="center">m/s&lt;/th>
-&lt;th align="center">km/h&lt;/th>
+&lt;th style="text-align:center">error&lt;/th>
+&lt;th style="text-align:center">m/s&lt;/th>
+&lt;th style="text-align:center">km/h&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="center">mean&lt;/td>
-&lt;td align="center">0.017&lt;/td>
-&lt;td align="center">0.06&lt;/td>
+&lt;td style="text-align:center">mean&lt;/td>
+&lt;td style="text-align:center">0.017&lt;/td>
+&lt;td style="text-align:center">0.06&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">standard deviation&lt;/td>
-&lt;td align="center">0.74&lt;/td>
-&lt;td align="center">2.6&lt;/td>
+&lt;td style="text-align:center">standard deviation&lt;/td>
+&lt;td style="text-align:center">0.74&lt;/td>
+&lt;td style="text-align:center">2.6&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -594,30 +594,30 @@ The gain is the value in kOhm as stated by the chip documentation:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="center">Resistor&lt;/th>
-&lt;th align="center">Gain&lt;/th>
+&lt;th style="text-align:center">Resistor&lt;/th>
+&lt;th style="text-align:center">Gain&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="center">1 kOhm&lt;/td>
-&lt;td align="center">1&lt;/td>
+&lt;td style="text-align:center">1 kOhm&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">5 Kohm&lt;/td>
-&lt;td align="center">5&lt;/td>
+&lt;td style="text-align:center">5 Kohm&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">10 Kohm&lt;/td>
-&lt;td align="center">10&lt;/td>
+&lt;td style="text-align:center">10 Kohm&lt;/td>
+&lt;td style="text-align:center">10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">50 Kohm&lt;/td>
-&lt;td align="center">50&lt;/td>
+&lt;td style="text-align:center">50 Kohm&lt;/td>
+&lt;td style="text-align:center">50&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="center">100 Kohm&lt;/td>
-&lt;td align="center">100&lt;/td>
+&lt;td style="text-align:center">100 Kohm&lt;/td>
+&lt;td style="text-align:center">100&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
