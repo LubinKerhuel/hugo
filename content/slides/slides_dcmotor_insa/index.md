@@ -33,7 +33,7 @@ slides:
 </a>
 </p>
 
-\[[Lab](https://rtdc.ctrl-elec.fr/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
+\[[Lab](http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
 
 ---
 ## Plan:
@@ -474,7 +474,7 @@ TotalVal = vals'*exps;
 ## TP
 
 
-[https://rtdc.ctrl-elec.fr](https://rtdc.ctrl-elec.fr/)
+[http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/](http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/)
 
 
 ---
