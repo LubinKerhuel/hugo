@@ -22,7 +22,7 @@ function toggleSearchDialog(){if($('body').hasClass('searching')){$('[id=search-
 (window.innerWidth-document.documentElement.clientWidth)+
 'px;}</style>');$('body').addClass('compensate-for-scrollbar');}
 $('body').addClass('searching');$('.search-results').css({opacity:0,visibility:'visible'}).animate({opacity:1},200);$('#search-query').focus();}}
-function canChangeTheme(){return $('.js-theme-selector').length;}
+function canChangeTheme(){return Boolean(window.wcDarkLightEnabled);}
 function getThemeMode(){return parseInt(localStorage.getItem('dark_mode')||2);}
 function changeThemeModeClick(newMode){console.info('Request to set theme.');if(!canChangeTheme()){console.info('Cannot set theme - admin disabled theme selector.');return;}
 let isDarkTheme;switch(newMode){case 0:localStorage.setItem('dark_mode','1');isDarkTheme=true;console.info('User changed theme variation to Dark.');showActiveTheme(0);break;case 1:localStorage.setItem('dark_mode','2');if(window.matchMedia('(prefers-color-scheme: dark)').matches){isDarkTheme=true;}else if(window.matchMedia('(prefers-color-scheme: light)').matches){isDarkTheme=false;}else{isDarkTheme=isSiteThemeDark;}
