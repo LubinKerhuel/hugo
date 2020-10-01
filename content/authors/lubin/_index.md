@@ -110,9 +110,9 @@ interests = [
 
 +++
 
-{{% alert warning %}}
+{{% callout warning %}}
 The postings on this site are my own and do not represent Microchip's positions, strategies, or opinions.
-{{% /alert %}}
+{{% /callout %}}
 
 Control projects during my academic study ended-up with simplest PID algorithm tuned through successive trials.
 Code implementation for embedded systems requires an important effort. Time left for modeling, identification and simulation is often null.

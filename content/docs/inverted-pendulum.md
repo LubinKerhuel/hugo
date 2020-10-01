@@ -250,9 +250,9 @@ $$ \theta(s) \left ( \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 \right ) = 
 The pendulum transfer function $F_p = \frac{\theta(s)}{E(s)}$ with a null input $E(s) = 1$
 $$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$
 
-{{% alert note %}} 
+{{% callout note %}} 
 The linear term for $sin$ is positive when the pendulum is up when $\theta \approx 0$ (unstable), and negative when pendulum is down when $\theta \approx \pm \pi$ (stable).
-{{% /alert %}}
+{{% /callout %}}
 
 This transfer function is characterized when the pendulum is down by its natural frequency $w_n = \sqrt{ \frac{g}{l} } $, and a damping factor $\zeta$.
 
@@ -315,9 +315,9 @@ The updated acceleration comprising both a static and dynamic part is fed into t
 
 ## Trolley Equations
 
-{{% alert warning %}} 
+{{% callout warning %}} 
 Below is under construction :construction:
-{{% /alert %}}
+{{% /callout %}}
 
 The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$.
 This dynamic includes the motor dynamics when it is loaded with the trolley considering the pendulum as vertical.

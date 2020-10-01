@@ -36,9 +36,9 @@ Several SPI block can use the same SPI peripheral. Using multiple SPI blocks all
 
 Particularly, if one SPI frame must be sent once to initialize a sensor, one SPI block with a sample time set to **inf** ($\inf$) is placed on the model with the initialisation sequence for that sensor.
 
-{{% alert note %}}
+{{% callout note %}}
 The output of a SPI block set with "inf" sample time will not output the expected value. If SPI sequence providing a block output must be executed only once, use a triger mechanism and do no tuse the "inf" sample time.
-{{% /alert %}}
+{{% /callout %}}
 
 The SPI blocks allows to modify the configuration of the SPI peripheral in the middle of any sequence. 
 Add the `Update-Configuration` command. Then the parameters from the *SPI Bus Parameters* (Clock Speed, SPI mode, number of bits...) can be modified.
