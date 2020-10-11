@@ -66,8 +66,7 @@ Simulation are presented with Simulink models and an LQR&lt;sup id="fnref:2">&lt
 -->
 &lt;p>Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).&lt;/p>
 &lt;p>The electronic placed at the top of the pendulum composed of a dsPIC 16 bits microcontroller and an inertial sensor (accelerometers and rate gyro).
-The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see
-&lt;a href="#hw_trolley">pictures below&lt;/a>).&lt;/p>
+The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see &lt;a href="#hw_trolley">pictures below&lt;/a>).&lt;/p>
 &lt;h1 id="hardware">Hardware&lt;/h1>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube.
@@ -99,8 +98,7 @@ It is powered through the USB connector which &lt;strong>only provide the power 
 &lt;/figure>
 &lt;/div>
 &lt;h3 id="imu-sensor">IMU sensor&lt;/h3>
-&lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a
-&lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener">Drotek sensor board&lt;/a>. It endows:&lt;/p>
+&lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a &lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener">Drotek sensor board&lt;/a>. It endows:&lt;/p>
 &lt;ul>
 &lt;li>a 3 axis Accelerometers and&lt;/li>
 &lt;li>a 3 axis rate gyros.&lt;/li>
@@ -116,10 +114,7 @@ The stabilization control loop uses the drift-free pitch angle.&lt;/p>
 &lt;p>It is possible to use other sensors like the MPU9250 or MPU6050 with either an I2C or SPI interface.
 The GY-91 board is a 10 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> widespread board based on the 9 DoF MPU9250 (3 accelerometers, 3 magnetometers, 3 rate gyros) and has a pressure sensor.&lt;/p>
 &lt;h3 id="UARTINTERFACE">UART interface&lt;/h3>
-&lt;p>The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART
-&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">data-logger&lt;/a> or
-&lt;a href="http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener">radio link&lt;/a> for telemetry module or an
-&lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener">RC receiver&lt;/a> capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
+&lt;p>The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">data-logger&lt;/a> or &lt;a href="http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener">radio link&lt;/a> for telemetry module or an &lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener">RC receiver&lt;/a> capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
 &lt;h2 id="hw_trolley">Base trolley&lt;/h2>
 &lt;h3 id="motors">Motors&lt;/h3>
 &lt;p>The base trolley is a low cost a 2-wheel remote control toy named &lt;code>flywheels&lt;/code>. The toy is from 2012 but 2 wheeled equivalents exist.
@@ -266,9 +261,7 @@ In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the exp
 &lt;p>The pendulum is placed on a track (two chairs back to back) to be able to make a complete rotation.
 Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p>
 &lt;p>It oscillates until the damping friction ($\zeta$) stops the free oscillations.&lt;/p>
-&lt;p>The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an
-&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">openlager&lt;/a> board connected on the dsPIC
-&lt;a href="#UARTINTERFACE">UART&lt;/a> interface.&lt;/p>
+&lt;p>The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">openlager&lt;/a> board connected on the dsPIC &lt;a href="#UARTINTERFACE">UART&lt;/a> interface.&lt;/p>
 &lt;h3 id="simulation-from-logs">Simulation from logs&lt;/h3>
 &lt;p>The measured inertial sensors are then re-used as data source in a Simulink model. $\theta$ angle is reconstructed using an IMU complementary filter algorithm implemented in the quaternion angle representation.&lt;/p>
 &lt;p>The pendulum model is initialized with the experimentation initial condition ($\theta = -18°$ , $\dot \theta = 0$). Trolley linear acceleration input is null.
@@ -374,8 +367,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;iframe src="https://www.youtube.com/embed/xbu4hXOnemE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
 -->
-&lt;p>Another way to stabilize a pendulum with an electric seesaw (
-&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener">video&lt;/a>).&lt;/p>
+&lt;p>Another way to stabilize a pendulum with an electric seesaw (&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener">video&lt;/a>).&lt;/p>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>

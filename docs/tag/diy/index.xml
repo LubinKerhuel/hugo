@@ -81,12 +81,9 @@
 &lt;/div>
 &lt;p>References:&lt;/p>
 &lt;ul>
-&lt;li>
-&lt;a href="http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
-&lt;li>
-&lt;a href="https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf" target="_blank" rel="noopener">report (french)&lt;/a> from ANSTJ with general information on Pitot sensor.&lt;/li>
-&lt;li>
-&lt;a href="http://voiletech.free.fr/skyassistant/Pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
+&lt;li>&lt;a href="http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
+&lt;li>&lt;a href="https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf" target="_blank" rel="noopener">report (french)&lt;/a> from ANSTJ with general information on Pitot sensor.&lt;/li>
+&lt;li>&lt;a href="http://voiletech.free.fr/skyassistant/Pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
 &lt;/ul>
 &lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
 Tube intèrieur: 2mm, trou 1mm
@@ -103,8 +100,7 @@ m = 72mm
 &lt;h2 id="electronics">Electronics&lt;/h2>
 &lt;h3 id="sensitivity-requirements-and-pressure-sensor">Sensitivity requirements and Pressure sensor&lt;/h3>
 &lt;p>The differential pressure measured vary with the square of the speed. RC plane speed can be quite low. Challenge is to be sensitive enough to obtain good measurement even in the low speed range of few meters per seconds.&lt;/p>
-&lt;p>The
-&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\Delta V =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.&lt;/p>
+&lt;p>The &lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\Delta V =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.&lt;/p>
 &lt;p>We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% of its nominal range.&lt;/p>
 &lt;p>Table below provide theoretical differential pressure expected for various speed using $P_{diff} = \frac{1}{2}\rho v^2$ with $\rho=1.15$.&lt;/p>
 &lt;table>
@@ -114,9 +110,7 @@ m = 72mm
 &lt;th style="text-align:center">v (Km/h)&lt;/th>
 &lt;th style="text-align:center">$P_{diff}$ (Pa)&lt;/th>
 &lt;th style="text-align:center">~ $H_2O$ (cm)&lt;/th>
-&lt;th style="text-align:center">
-&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> &amp;amp;
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
+&lt;th style="text-align:center">&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> &amp;amp; &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -193,14 +187,10 @@ m = 72mm
 &lt;/tbody>
 &lt;/table>
 &lt;h3 id="signal-conditioning-and-conversion">Signal conditioning and conversion&lt;/h3>
-&lt;p>The pressure sensor electronics is placed in the wing close (~10cm) to the Pitot tube. The analog to digital conversion is integrated in the sensor board. The
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> from Microchip is a high resolution sigma-delta converter with a programmable gain factor from 1 to 8. It has a digital I2C bus interface and its I2C address can be selected. Similar DAC to consider are MCP342x, the newer MCP346x family or the MCP356x providing increased accuracy and higher sampling rate but its package is smaller thus more difficult to handle for a DIY project.&lt;/p>
-&lt;p>The
-&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> output analog signal is connected to the
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor to obtain 1V from the 3.3V reference (480 &amp;amp; 1kOhms). $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p>
+&lt;p>The pressure sensor electronics is placed in the wing close (~10cm) to the Pitot tube. The analog to digital conversion is integrated in the sensor board. The &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> from Microchip is a high resolution sigma-delta converter with a programmable gain factor from 1 to 8. It has a digital I2C bus interface and its I2C address can be selected. Similar DAC to consider are MCP342x, the newer MCP346x family or the MCP356x providing increased accuracy and higher sampling rate but its package is smaller thus more difficult to handle for a DIY project.&lt;/p>
+&lt;p>The &lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> output analog signal is connected to the &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor to obtain 1V from the 3.3V reference (480 &amp;amp; 1kOhms). $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p>
 &lt;!-- Measured 480 840 for the divisor. Write down 560 and 1.2k -->
-&lt;p>The
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC is configured for&lt;/p>
+&lt;p>The &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC is configured for&lt;/p>
 &lt;ul>
 &lt;li>12 bits&lt;/li>
 &lt;li>x8 Gain&lt;/li>
@@ -208,10 +198,8 @@ m = 72mm
 &lt;/ul>
 &lt;p>The resulting resolution is provided from:&lt;/p>
 &lt;ul>
-&lt;li>(1)
-&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> Analog output sensitivity is 1633 Pa/V&lt;/li>
-&lt;li>(2)
-&lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> 12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>(1) &lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> Analog output sensitivity is 1633 Pa/V&lt;/li>
+&lt;li>(2) &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> 12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
 &lt;/ul>
 &lt;p>With (1) and (2), we obtain a resolution of $1633 * 0.125e^{-3} $ = &lt;em>&lt;strong>0.2041 Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/strong>&lt;/em>&lt;/p>
 &lt;div class="box" style="max-width:80%">
@@ -240,8 +228,7 @@ m = 72mm
 &lt;/div>
 &lt;h4 id="possible-noiseoffset-sources">possible noise/offset sources&lt;/h4>
 &lt;p>The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> with the analog to digital circuit setting).&lt;/p>
-&lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (
-&lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
+&lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
 &lt;h2 id="flight-setup">Flight setup&lt;/h2>
 &lt;p>The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p>
 &lt;div class="box" style="max-width:80%">
@@ -300,8 +287,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;/code>&lt;/pre>
 &lt;h3 id="gps-vs-airspeed">Comparison with GPS ground speed&lt;/h3>
 &lt;p>In calm condition, the ground speed $V_{GPS}$ and airspeed $V_{Pitot}$ are equal.&lt;/p>
-&lt;p>In windy condition, wind average direction and strength are estimated combining $V_{GPS}$, $V_{Pitot}$ and the plane yaw $\Theta_{heading}$ direction (using GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>). This
-&lt;a href="#wind-estimation">wind estimation&lt;/a> is described below.&lt;/p>
+&lt;p>In windy condition, wind average direction and strength are estimated combining $V_{GPS}$, $V_{Pitot}$ and the plane yaw $\Theta_{heading}$ direction (using GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>). This &lt;a href="#wind-estimation">wind estimation&lt;/a> is described below.&lt;/p>
 &lt;p>The airplane ground speed (GPS) is estimated with the difference of the airspeed (Pitot) with the projected wind to the aircraft forward direction:&lt;/p>
 &lt;p>$V_{GPS} \approx V_{Pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) $&lt;/p>
 &lt;p>The figure below presents the airspeed in blue. The reconstructed ground speed (black) matches accurately with the GPS velocity (red) which prove the correctness of the airspeed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The airspeed measurement presents a high sensitivity even at low speed.&lt;/p>
@@ -316,8 +302,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
-&lt;p>More figures in
-&lt;a href="https://lubin.kerhuel.eu/slides/pitot-build/#/10">online presentation&lt;/a>.&lt;/p>
+&lt;p>More figures in &lt;a href="https://lubin.kerhuel.eu/slides/pitot-build/#/10">online presentation&lt;/a>.&lt;/p>
 &lt;p>The GPS update rate is 10Hz. It is sampled at 50Hz to minimize delay. The pitot-tube sensor update rate is 260Hs but it is sampled at 250Hz.&lt;/p>
 &lt;p>The error is defined with $error = V_{gps} - \left( V_{Pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is:&lt;/p>
 &lt;table>
@@ -361,8 +346,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
-&lt;p>This wind estimation is used to compensate the airspeed when comparing the GPS ground speed $V_{gps}$ with the Pitot airspeed $V_{Pitot}$
-&lt;a href="https://lubin.kerhuel.eu/post/Pitot-build/#gps-vs-airspeed">above&lt;/a>.&lt;/p>
+&lt;p>This wind estimation is used to compensate the airspeed when comparing the GPS ground speed $V_{gps}$ with the Pitot airspeed $V_{Pitot}$ &lt;a href="https://lubin.kerhuel.eu/post/Pitot-build/#gps-vs-airspeed">above&lt;/a>.&lt;/p>
 &lt;h4 id="script">Script&lt;/h4>
 &lt;p>Matlab script to estimate wind off-line:&lt;/p>
 &lt;pre>&lt;code class="language-matlab">% V_gps and V_pitot are two vector with all data measured.
@@ -380,16 +364,14 @@ plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),'-k','linewidth',3)
 &lt;h4 id="discussion">Discussion&lt;/h4>
 &lt;p>Using the GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
 Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane airspeed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p>
-&lt;p>W. Premerlani propose a
-&lt;a href="https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view" target="_blank" rel="noopener">wind estimation&lt;/a> using exclusively GPS data. Tests with this GPS dataset was not conclusive while trying to use all GPS sample while the platform direction is modified (i.e. COG derivative is above a given threshold). GPS dynamic seems too slow to provide robust results.&lt;/p>
+&lt;p>W. Premerlani propose a &lt;a href="https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view" target="_blank" rel="noopener">wind estimation&lt;/a> using exclusively GPS data. Tests with this GPS dataset was not conclusive while trying to use all GPS sample while the platform direction is modified (i.e. COG derivative is above a given threshold). GPS dynamic seems too slow to provide robust results.&lt;/p>
 &lt;h4 id="other-flight-data">Other flight data&lt;/h4>
 &lt;p>Plane was equipped with two GPS:&lt;/p>
 &lt;ul>
 &lt;li>one uBlox M8N GPS and&lt;/li>
 &lt;li>one MTK3339.&lt;/li>
 &lt;/ul>
-&lt;p>The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used exclusively for the curves above. The MTK trace can be shown on the
-&lt;a href="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" target="_blank" rel="noopener">map&lt;/a> (top left icon). The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p>
+&lt;p>The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used exclusively for the curves above. The MTK trace can be shown on the &lt;a href="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" target="_blank" rel="noopener">map&lt;/a> (top left icon). The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p>
 &lt;iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" style="width: 100% ; height: 480px">&lt;/iframe>
 &lt;!--
 Project folder:
@@ -473,8 +455,7 @@ Simulation are presented with Simulink models and an LQR&lt;sup id="fnref:2">&lt
 -->
 &lt;p>Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).&lt;/p>
 &lt;p>The electronic placed at the top of the pendulum composed of a dsPIC 16 bits microcontroller and an inertial sensor (accelerometers and rate gyro).
-The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see
-&lt;a href="#hw_trolley">pictures below&lt;/a>).&lt;/p>
+The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see &lt;a href="#hw_trolley">pictures below&lt;/a>).&lt;/p>
 &lt;h1 id="hardware">Hardware&lt;/h1>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube.
@@ -506,8 +487,7 @@ It is powered through the USB connector which &lt;strong>only provide the power 
 &lt;/figure>
 &lt;/div>
 &lt;h3 id="imu-sensor">IMU sensor&lt;/h3>
-&lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a
-&lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener">Drotek sensor board&lt;/a>. It endows:&lt;/p>
+&lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a &lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener">Drotek sensor board&lt;/a>. It endows:&lt;/p>
 &lt;ul>
 &lt;li>a 3 axis Accelerometers and&lt;/li>
 &lt;li>a 3 axis rate gyros.&lt;/li>
@@ -523,10 +503,7 @@ The stabilization control loop uses the drift-free pitch angle.&lt;/p>
 &lt;p>It is possible to use other sensors like the MPU9250 or MPU6050 with either an I2C or SPI interface.
 The GY-91 board is a 10 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> widespread board based on the 9 DoF MPU9250 (3 accelerometers, 3 magnetometers, 3 rate gyros) and has a pressure sensor.&lt;/p>
 &lt;h3 id="UARTINTERFACE">UART interface&lt;/h3>
-&lt;p>The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART
-&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">data-logger&lt;/a> or
-&lt;a href="http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener">radio link&lt;/a> for telemetry module or an
-&lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener">RC receiver&lt;/a> capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
+&lt;p>The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">data-logger&lt;/a> or &lt;a href="http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener">radio link&lt;/a> for telemetry module or an &lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener">RC receiver&lt;/a> capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
 &lt;h2 id="hw_trolley">Base trolley&lt;/h2>
 &lt;h3 id="motors">Motors&lt;/h3>
 &lt;p>The base trolley is a low cost a 2-wheel remote control toy named &lt;code>flywheels&lt;/code>. The toy is from 2012 but 2 wheeled equivalents exist.
@@ -673,9 +650,7 @@ In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the exp
 &lt;p>The pendulum is placed on a track (two chairs back to back) to be able to make a complete rotation.
 Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p>
 &lt;p>It oscillates until the damping friction ($\zeta$) stops the free oscillations.&lt;/p>
-&lt;p>The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an
-&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">openlager&lt;/a> board connected on the dsPIC
-&lt;a href="#UARTINTERFACE">UART&lt;/a> interface.&lt;/p>
+&lt;p>The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">openlager&lt;/a> board connected on the dsPIC &lt;a href="#UARTINTERFACE">UART&lt;/a> interface.&lt;/p>
 &lt;h3 id="simulation-from-logs">Simulation from logs&lt;/h3>
 &lt;p>The measured inertial sensors are then re-used as data source in a Simulink model. $\theta$ angle is reconstructed using an IMU complementary filter algorithm implemented in the quaternion angle representation.&lt;/p>
 &lt;p>The pendulum model is initialized with the experimentation initial condition ($\theta = -18°$ , $\dot \theta = 0$). Trolley linear acceleration input is null.
@@ -781,8 +756,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;iframe src="https://www.youtube.com/embed/xbu4hXOnemE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
 -->
-&lt;p>Another way to stabilize a pendulum with an electric seesaw (
-&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener">video&lt;/a>).&lt;/p>
+&lt;p>Another way to stabilize a pendulum with an electric seesaw (&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener">video&lt;/a>).&lt;/p>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>

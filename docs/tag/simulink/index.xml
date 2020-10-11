@@ -53,8 +53,7 @@
 &lt;li>&lt;strong>S.Bus &amp;amp; Smart Port&lt;/strong> (stock), available on two distinct three pins ports&lt;/li>
 &lt;li>&lt;strong>F.Port&lt;/strong> available on one replaced Smart Port three pin port&lt;/li>
 &lt;/ol>
-&lt;p>Stock receiver have two ports: S.BUS and Smart Port. This is changed for a unique F.Port by flashing an alternative firmware provided by
-&lt;a href="https://www.frsky-rc.com/" target="_blank" rel="noopener">FrSky&lt;/a>. The alternative firmware remove the S.BUS port and convert the Smart Port to an F.Port.&lt;/p>
+&lt;p>Stock receiver have two ports: S.BUS and Smart Port. This is changed for a unique F.Port by flashing an alternative firmware provided by &lt;a href="https://www.frsky-rc.com/" target="_blank" rel="noopener">FrSky&lt;/a>. The alternative firmware remove the S.BUS port and convert the Smart Port to an F.Port.&lt;/p>
 &lt;h3 id="uart-settings-and-implementation">UART settings and implementation&lt;/h3>
 &lt;p>S.BUS, S.Port and F.Port have different UART setting defined in the table:&lt;/p>
 &lt;table>
@@ -272,22 +271,14 @@ Rx and Tx channels are used. They are assigned to the same pin. UART is configur
 &lt;h3 id="ressources">Ressources&lt;/h3>
 &lt;p>FrSky protocol are not always documented. The following website helped understanding the various protocol:&lt;/p>
 &lt;ul>
-&lt;li>
-&lt;a href="http://www.robotmaker.eu/ROBOTmaker/quadcopter-3d-proximity-sensing/frysky-s-port-interface" target="_blank" rel="noopener">Smart Port on ROBOTmaker&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://code.google.com/archive/p/telemetry-convert/wikis/FrSkySPortProtocol.wiki" target="_blank" rel="noopener">Smart Port on telemetry-convert project&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki/FrSky-SPort-protocol-specs" target="_blank" rel="noopener">Smart Port TelemetryScript by Allesandro Apostoli&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://github.com/bolderflight/SBUS" target="_blank" rel="noopener">S.BUS on Arduino lib project&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://github.com/athertop/MavLink_FrSkySPort/wiki" target="_blank" rel="noopener">Smart Port on MavLink-FrSkySPort project&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://github.com/betaflight/betaflight/tree/master/src/main/telemetry" target="_blank" rel="noopener">betaflight source code&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="http://ardupilot.org/copter/docs/common-frsky-passthrough.html" target="_blank" rel="noopener">ArduCopter project&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="http://sbustelemetrysensors.blogspot.com/" target="_blank" rel="noopener">SBUS2 by Jerry Chapman&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.robotmaker.eu/ROBOTmaker/quadcopter-3d-proximity-sensing/frysky-s-port-interface" target="_blank" rel="noopener">Smart Port on ROBOTmaker&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://code.google.com/archive/p/telemetry-convert/wikis/FrSkySPortProtocol.wiki" target="_blank" rel="noopener">Smart Port on telemetry-convert project&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki/FrSky-SPort-protocol-specs" target="_blank" rel="noopener">Smart Port TelemetryScript by Allesandro Apostoli&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/bolderflight/SBUS" target="_blank" rel="noopener">S.BUS on Arduino lib project&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/athertop/MavLink_FrSkySPort/wiki" target="_blank" rel="noopener">Smart Port on MavLink-FrSkySPort project&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/betaflight/betaflight/tree/master/src/main/telemetry" target="_blank" rel="noopener">betaflight source code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://ardupilot.org/copter/docs/common-frsky-passthrough.html" target="_blank" rel="noopener">ArduCopter project&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://sbustelemetrysensors.blogspot.com/" target="_blank" rel="noopener">SBUS2 by Jerry Chapman&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
@@ -408,8 +399,7 @@ Block input is the 4 bytes codint for the sensor value.&lt;/p></description></it
 &lt;ul>
 &lt;li>&lt;strong>10 DoF IMU&lt;/strong>: (~$5\ $$),&lt;/li>
 &lt;li>&lt;strong>GPS board&lt;/strong>: (~$10\ $$),&lt;/li>
-&lt;li>&lt;strong>Pitot tube&lt;/strong> (
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">custom&lt;/a>): (~$20\ $$),&lt;/li>
+&lt;li>&lt;strong>Pitot tube&lt;/strong> (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">custom&lt;/a>): (~$20\ $$),&lt;/li>
 &lt;li>&lt;strong>Microcontroller board&lt;/strong>: depend on the board; rely on $\approx 5\ $$ mcu,&lt;/li>
 &lt;li>&lt;strong>Plane&lt;/strong> platform: from $60$ to $120\ $$ including servos and motors.&lt;/li>
 &lt;li>You also need few RC hardware:
@@ -424,18 +414,12 @@ Block input is the 4 bytes codint for the sensor value.&lt;/p></description></it
 &lt;h3 id="difference-with-existing-autopilot">Difference with existing autopilot&lt;/h3>
 &lt;p>Many off the shelf autopilot exists and works great. To mention few of them:&lt;/p>
 &lt;ul>
-&lt;li>
-&lt;a href="http://ardupilot.org/" target="_blank" rel="noopener">Ardupilot&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://px4.io/" target="_blank" rel="noopener">PX4&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="http://inavflight.com/" target="_blank" rel="noopener">iNav&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://www.librepilot.org/site/index.html" target="_blank" rel="noopener">LibrePilot&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://wiki.paparazziuav.org/wiki/Main_Page" target="_blank" rel="noopener">Paparazzi&lt;/a>.&lt;/li>
-&lt;li>Others are listed on the
-&lt;a href="https://blog.dronetrest.com/flight-controller-firmware/" target="_blank" rel="noopener">DroneTrest review&lt;/a>).&lt;/li>
+&lt;li>&lt;a href="http://ardupilot.org/" target="_blank" rel="noopener">Ardupilot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://px4.io/" target="_blank" rel="noopener">PX4&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://inavflight.com/" target="_blank" rel="noopener">iNav&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.librepilot.org/site/index.html" target="_blank" rel="noopener">LibrePilot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.paparazziuav.org/wiki/Main_Page" target="_blank" rel="noopener">Paparazzi&lt;/a>.&lt;/li>
+&lt;li>Others are listed on the &lt;a href="https://blog.dronetrest.com/flight-controller-firmware/" target="_blank" rel="noopener">DroneTrest review&lt;/a>).&lt;/li>
 &lt;/ul>
 &lt;p>Usually, their internal parameters can be tuned. But, inserting your customized control-loop in such autopilot requires understanding the code structure underneath. Even well documented, it represents hundreds of C functions to navigate into, before starting any changes.
 Your custom control loop might not fit within the existing structure. You might want to implement a more advanced controller than existing PIDs, use a different sample rate etc&amp;hellip;&lt;/p>
@@ -444,8 +428,7 @@ The presented autopilot uses a Model Based Design (MBD) approach: The autopilot 
 &lt;p>The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
 Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p>
 &lt;p>Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p>
-&lt;p>Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/">https://slugsuav.soe.ucsc.edu/&lt;/a>) is available online. The update
-&lt;a href="https://doi.org/10.1155/2018/6892153" target="_blank" rel="noopener">SLUG II&lt;/a> projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
+&lt;p>Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/">https://slugsuav.soe.ucsc.edu/&lt;/a>) is available online. The update &lt;a href="https://doi.org/10.1155/2018/6892153" target="_blank" rel="noopener">SLUG II&lt;/a> projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
 &lt;h3 id="hardware-list">Hardware list&lt;/h3>
 &lt;p>Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p>
 &lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
@@ -469,14 +452,12 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;li>&lt;strong>Pitot tube&lt;/strong>:
 &lt;ul>
 &lt;li>An inner tube and an outer tube on which four holes are done laterally.&lt;/li>
-&lt;li>Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">build and test&lt;/a> page.&lt;/li>
+&lt;li>Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See &lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">build and test&lt;/a> page.&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;strong>GPS&lt;/strong>: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.&lt;/li>
 &lt;li>&lt;strong>Data logger&lt;/strong>: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.).&lt;/li>
-&lt;li>&lt;strong>Radio link&lt;/strong>: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with
-&lt;a href="http://qgroundcontrol.com/" target="_blank" rel="noopener">qgroundcontrol&lt;/a> base station running on most platforms (PC, android, windows, Linux).&lt;/li>
+&lt;li>&lt;strong>Radio link&lt;/strong>: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href="http://qgroundcontrol.com/" target="_blank" rel="noopener">qgroundcontrol&lt;/a> base station running on most platforms (PC, android, windows, Linux).&lt;/li>
 &lt;li>&lt;strong>Action cam&lt;/strong>: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li>
 &lt;/ul>
 &lt;div class="box" style="max-width:80%">
@@ -497,8 +478,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;/ul>
 &lt;p>Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p>
 &lt;p>Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p>
-&lt;p>Pitot tube airspeed estimation validated using GPS speed measurement as reference (
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">here&lt;/a>).&lt;/p>
+&lt;p>Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">here&lt;/a>).&lt;/p>
 &lt;p>Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p>
 &lt;p>Validated automatic calibration of the magnetometer&amp;rsquo;s axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p>
 &lt;h3 id="next-steps">Next steps&lt;/h3>
@@ -510,10 +490,8 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;p>Ideas to dvpt:&lt;/p>
 &lt;ul>
 &lt;li>IMU&lt;/li>
-&lt;li>
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">Pitot tube&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation">Wind estimation&lt;/a> combining GPS ground-speed with Pitot tube airspeed&lt;/li>
+&lt;li>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">Pitot tube&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation">Wind estimation&lt;/a> combining GPS ground-speed with Pitot tube airspeed&lt;/li>
 &lt;li>UxV blocks including GPS, Remote Control and MAVLink blocks and functionalities&lt;/li>
 &lt;li>Magnetometers auto calibration&lt;/li>
 &lt;/ul></description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p>Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.
@@ -591,8 +569,7 @@ Simulation are presented with Simulink models and an LQR&lt;sup id="fnref:2">&lt
 -->
 &lt;p>Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).&lt;/p>
 &lt;p>The electronic placed at the top of the pendulum composed of a dsPIC 16 bits microcontroller and an inertial sensor (accelerometers and rate gyro).
-The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see
-&lt;a href="#hw_trolley">pictures below&lt;/a>).&lt;/p>
+The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see &lt;a href="#hw_trolley">pictures below&lt;/a>).&lt;/p>
 &lt;h1 id="hardware">Hardware&lt;/h1>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube.
@@ -624,8 +601,7 @@ It is powered through the USB connector which &lt;strong>only provide the power 
 &lt;/figure>
 &lt;/div>
 &lt;h3 id="imu-sensor">IMU sensor&lt;/h3>
-&lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a
-&lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener">Drotek sensor board&lt;/a>. It endows:&lt;/p>
+&lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a &lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener">Drotek sensor board&lt;/a>. It endows:&lt;/p>
 &lt;ul>
 &lt;li>a 3 axis Accelerometers and&lt;/li>
 &lt;li>a 3 axis rate gyros.&lt;/li>
@@ -641,10 +617,7 @@ The stabilization control loop uses the drift-free pitch angle.&lt;/p>
 &lt;p>It is possible to use other sensors like the MPU9250 or MPU6050 with either an I2C or SPI interface.
 The GY-91 board is a 10 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> widespread board based on the 9 DoF MPU9250 (3 accelerometers, 3 magnetometers, 3 rate gyros) and has a pressure sensor.&lt;/p>
 &lt;h3 id="UARTINTERFACE">UART interface&lt;/h3>
-&lt;p>The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART
-&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">data-logger&lt;/a> or
-&lt;a href="http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener">radio link&lt;/a> for telemetry module or an
-&lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener">RC receiver&lt;/a> capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
+&lt;p>The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">data-logger&lt;/a> or &lt;a href="http://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener">radio link&lt;/a> for telemetry module or an &lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener">RC receiver&lt;/a> capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
 &lt;h2 id="hw_trolley">Base trolley&lt;/h2>
 &lt;h3 id="motors">Motors&lt;/h3>
 &lt;p>The base trolley is a low cost a 2-wheel remote control toy named &lt;code>flywheels&lt;/code>. The toy is from 2012 but 2 wheeled equivalents exist.
@@ -791,9 +764,7 @@ In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the exp
 &lt;p>The pendulum is placed on a track (two chairs back to back) to be able to make a complete rotation.
 Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p>
 &lt;p>It oscillates until the damping friction ($\zeta$) stops the free oscillations.&lt;/p>
-&lt;p>The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an
-&lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">openlager&lt;/a> board connected on the dsPIC
-&lt;a href="#UARTINTERFACE">UART&lt;/a> interface.&lt;/p>
+&lt;p>The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">openlager&lt;/a> board connected on the dsPIC &lt;a href="#UARTINTERFACE">UART&lt;/a> interface.&lt;/p>
 &lt;h3 id="simulation-from-logs">Simulation from logs&lt;/h3>
 &lt;p>The measured inertial sensors are then re-used as data source in a Simulink model. $\theta$ angle is reconstructed using an IMU complementary filter algorithm implemented in the quaternion angle representation.&lt;/p>
 &lt;p>The pendulum model is initialized with the experimentation initial condition ($\theta = -18°$ , $\dot \theta = 0$). Trolley linear acceleration input is null.
@@ -899,8 +870,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;iframe src="https://www.youtube.com/embed/xbu4hXOnemE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
 -->
-&lt;p>Another way to stabilize a pendulum with an electric seesaw (
-&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener">video&lt;/a>).&lt;/p>
+&lt;p>Another way to stabilize a pendulum with an electric seesaw (&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener">video&lt;/a>).&lt;/p>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
