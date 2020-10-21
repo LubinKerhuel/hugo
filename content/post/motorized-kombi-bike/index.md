@@ -45,7 +45,16 @@ math: false
 A KOMBI bike electrified with the TSDZ2 mid drive motor. 
 The motor firmware is upgraded with the [TSDZ2 Flexible OpenSource firmware](https://github.com/OpenSource-EBike-firmware/TSDZ2_wiki/wiki) initiated by Casainho.
 
-700km so far with original bike chainring and original motor blue gear and clutch. Typically, empty or loaded with two kids; three in rare occasions.
+Typically, empty or loaded with two kids; three in rare occasions; 2300km so far with original bike chain and original motor blue gear and clutch.
+
+The first blue bike (pictures below) uses a 36V motor - 36V battery (battery swing from 33V to 42.4V). A second bike realized with the 48V TSDZ2 motor - 48V battery (swing from 40V to 52V).
+The 48V version is more comfortable than the 36V version. With the 36V version, the battery swing does not allows to benefit the full potential of the motor when once it is half empty. This is not noticed with the 48V motor.
+
+
+Problems encountered:
+  - 2300 km: crank bearing noise.
+    Seems cranck were not tight enough. Noise in warm weather (>15°C) Not changed yet but working fine (it's winter time).
+
 
 {{< figure 
 src="/img/yuba-kombi-tsdz2-pedal-removal-01.jpg"
