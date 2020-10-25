@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Parrot | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/parrot/</link><atom:link href="https://lubin.kerhuel.eu/tag/parrot/index.xml" rel="self" type="application/rss+xml"/><description>Parrot</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2020 Lubin Kerhuel</copyright><lastBuildDate>Sun, 11 Oct 2020 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/img/firstar1600-qx7.jpg</url><title>Parrot</title><link>https://lubin.kerhuel.eu/tag/parrot/</link></image><item><title>Replacement motor for Parrot Disco FPV</title><link>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</link><pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Parrot | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/parrot/</link><atom:link href="https://lubin.kerhuel.eu/tag/parrot/index.xml" rel="self" type="application/rss+xml"/><description>Parrot</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2020 Lubin Kerhuel</copyright><lastBuildDate>Sun, 11 Oct 2020 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/img/firstar1600-qx7.jpg</url><title>Parrot</title><link>https://lubin.kerhuel.eu/tag/parrot/</link></image><item><title>Replacement motor for Parrot Disco FPV Flying Wing</title><link>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</link><pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
@@ -44,29 +44,29 @@
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-original-motor-front-small.jpg" class="lazyload" alt="Parrot DISCO original motor with added connectors - front"/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-original-motor-front-small.jpg" class="lazyload" alt="Parrot DISCO original PF070253 motor with added connectors - front"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-original-motor-front.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >
-&lt;p>Parrot DISCO original motor with added connectors - front&lt;/p>
+&lt;figcaption >&lt;h4>Parrot DISCO original PF070253 motor with added connectors - front&lt;/h4>
+&lt;p>Parrot DISCO original PF070253 motor with added connectors - front&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-original-motor-back-small.jpg" class="lazyload" alt="Parrot DISCO original motor - back"/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-original-motor-back-small.jpg" class="lazyload" alt="Parrot DISCO original PF070253 motor - back"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-original-motor-back.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Attempt to repair the motor of the DISCO FPV&lt;/h4>
-&lt;p>Parrot DISCO original motor - back&lt;/p>
+&lt;figcaption >&lt;h4>Attempt to repair the motor PF070253 of the DISCO FPV&lt;/h4>
+&lt;p>Parrot DISCO original PF070253 motor - back&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
-&lt;p>The root cause seems to be vibrations: The motor power cable is not attached on the motor but directly connected on the thin motor wiring. Vibration of the cable powering the motor is likely to break thin motor wiring it is soldered on.&lt;/p>
-&lt;p>The original stock motor is difficult to find and out-priced. The SURPASS Hobby C2826 (C2208) - 1350KV have similar shape and electrical characteristics. It is compatible with the Parrot stock foldable propeller and DISCO wing motor mount. The motor reference is unclear as the motor size correspond to C2208 even if the motor is stamped (and sold) as beeing C2826. Box mentionned &amp;ldquo;C2826 (2208) - 1350KV&amp;rdquo;.&lt;/p>
-&lt;p>The DISCO Flying wing is working similarly than with the original motor with this replaced motor ; Tested with the stock propeller.&lt;/p>
-&lt;p>A propeller replacement candidate is a the GEMFAN 8040 which fit that motor either (if required).&lt;/p>
+&lt;p>The root cause seems to be vibrations: On the original PF070253 DISCO motor, the power cable is not attached on the motor but directly connected on the thin motor wiring. Vibration of the cable powering the motor is likely to break thin motor wiring it is attached to.&lt;/p>
+&lt;p>The original stock motor is difficult to find and out-priced. The SURPASS Hobby C2826 (C2208) - 1350KV have similar shape and electrical characteristics. It is compatible with the Parrot stock foldable propeller and DISCO wing motor mount. The motor reference is unclear as the motor size correspond to a &amp;ldquo;2208&amp;rdquo; even if the motor is stamped (and sold) as beeing C2826. Box of the SURPASS Hobby motor is mentioning &amp;ldquo;C2826 (2208) - 1350KV&amp;rdquo;.&lt;/p>
+&lt;p>With the replaced motor, the DISCO Flying wing is flying without problem. Motor starts, CHUCK controller manage to control motor speed as if it was the original motor. Power consumption seems similar either than the one with the original motor. It has been tested with the original stock propeller.&lt;/p>
+&lt;p>Beeing not sure the original would fit, I get a propeller replacement candidate in case: the GEMFAN 8040 which fit that motor either (Not tested).&lt;/p>
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
