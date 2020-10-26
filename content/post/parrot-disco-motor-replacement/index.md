@@ -42,7 +42,7 @@ math: false
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
 
-Original motor of my parrot Disco Flying wing is broken after few flights. It is not burned. The CHUCK controller is still ok including the motor power stage. The problem comes from wires connections cut at the interface between motor and power cable. It is difficult to repair as the connection break is just few millimeters from the motor windings. 
+Original motor of my parrot Disco Flying wing is broken after few flights. It is not burned. The CHUCK controller is still ok including the motor power stage. The problem comes from wires connections cut at the interface between motor and power cable. It is difficult to repair as the connection break is just few millimeters from the motor windings.
 
 The root cause for theses wire cuts seems to be vibrations: On the original PF070253 DISCO motor, the power cable is not attached on the motor but directly connected on the thin motor wiring. Vibration of the cable powering the motor is likely to break thin motor wiring at the interface between cable and motor.
 
@@ -50,8 +50,8 @@ The root cause for theses wire cuts seems to be vibrations: On the original PF07
 src="/img/parrot-original-motor-front-small.jpg"
 link="/img/parrot-original-motor-front.jpg"
 width="80%"
-title="Parrot DISCO original PF070253 motor with added connectors - front"
-caption="Parrot DISCO original PF070253 motor with added connectors - front"
+title="Parrot DISCO original PF070253 motor (1280KV) with added connectors - front"
+caption="Parrot DISCO original PF070253 motor (1280KV) with added connectors - front"
 numbered="false"
 >}}
 
@@ -64,9 +64,9 @@ caption="Parrot DISCO original PF070253 motor - back"
 numbered="false"
 >}}
 
-The original DISCO motor (PF070253) is difficult to find and out-priced. The SURPASS Hobby C2826 (C2208) - 1350KV have similar shape and electrical characteristics. It is compatible  with the Parrot stock foldable propeller and DISCO wing motor mount. The motor reference is unclear as the motor size correspond to a "2208" but the motor is stamped (and sold) with reference C2826. Box of the SURPASS Hobby motor mention is "C2826 (2208) - 1350KV".
+The original DISCO motor (PF070253, 1280KV) is difficult to find and out-priced. The SURPASS Hobby C2826 (C2208) - 1350KV have similar shape and electrical characteristics. It is compatible  with the Parrot stock foldable propeller and DISCO wing motor mount. The motor reference is unclear as the motor size correspond to a "2208" but the motor is stamped (and sold) with reference C2826. Box of the SURPASS Hobby motor mention is "C2826 (2208) - 1350KV".
 
-With this motor upgrade, the DISCO Flying wing is flying as with the original motor. Motor run, CHUCK controller control motor speed as if it was the original one. Power consumption seems similar than the one with the original motor. It has been tested with the original stock propeller. 
+With this motor upgrade, the DISCO Flying wing is flying as with the original motor. The Parrot CHUCK controller handle motor speed as if it was the original one. Power consumption seems similar than the one with the original motor. It has been tested with the original DISCO propeller. 
 
 I get a propeller replacement candidate in case the original did not fit the motor: the GEMFAN 8040 which fit that motor and has the same size as the stock propeller (Not tested).
 
