@@ -64,28 +64,28 @@
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
-&lt;p>The original DISCO motor (PF070253, 1280KV) is difficult to find and out-priced. The SURPASS Hobby C2826 (C2208) - 1350KV have similar shape and electrical characteristics. It is compatible with the Parrot stock foldable propeller and DISCO wing motor mount. The motor reference is unclear as the motor size correspond to a &amp;ldquo;2208&amp;rdquo; but the motor is stamped (and sold) with reference C2826. Box of the SURPASS Hobby motor mention is &amp;ldquo;C2826 (2208) - 1350KV&amp;rdquo;.&lt;/p>
+&lt;p>The original DISCO motor (PF070253, 1280KV) is difficult to find and out-priced. The SURPASS Hobby C2826 (size 2208) - 1350KV have similar shape and electrical characteristics. It is compatible with the Parrot stock foldable propeller and DISCO wing motor mount. The motor reference is unclear as the motor size correspond to a &amp;ldquo;2208&amp;rdquo; but the motor is stamped (and sold) with reference C2826. Box of the SURPASS Hobby motor mention is &amp;ldquo;C2826 (2208) - 1350KV&amp;rdquo;.&lt;/p>
 &lt;p>With this motor upgrade, the DISCO Flying wing is flying as with the original motor. The Parrot CHUCK controller handle motor speed as if it was the original one. Power consumption seems similar than the one with the original motor. It has been tested with the original DISCO propeller.&lt;/p>
 &lt;p>I get a propeller replacement candidate in case the original did not fit the motor: the GEMFAN 8040 which fit that motor and has the same size as the stock propeller (Not tested).&lt;/p>
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-wires-small.jpg" class="lazyload" alt="Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - inside"/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-wires-small.jpg" class="lazyload" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-wires.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - inside&lt;/h4>
-&lt;p>Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - inside&lt;/p>
+&lt;figcaption >&lt;h4>Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside&lt;/h4>
+&lt;p>Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-final-small.jpg" class="lazyload" alt="Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - detail"/>
+&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-final-small.jpg" class="lazyload" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-final.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - detail&lt;/h4>
-&lt;p>Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - detail&lt;/p>
+&lt;figcaption >&lt;h4>Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail&lt;/h4>
+&lt;p>Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div></description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p>Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.

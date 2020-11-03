@@ -1,6 +1,6 @@
 ---
 title: 'Replacement motor for Parrot Disco FPV Flying Wing'
-subtitle: 'SURPASS Hobby C2826 (C2208) 1350KV motor test'
+subtitle: 'SURPASS Hobby C2826 (size 2208) 1350KV motor test'
 summary: Motor candidate to replace the original PF070253 motor on the Parrot Disco Flying Wing.
 authors:
 - Lubin
@@ -64,7 +64,7 @@ caption="Parrot DISCO original PF070253 motor - back"
 numbered="false"
 >}}
 
-The original DISCO motor (PF070253, 1280KV) is difficult to find and out-priced. The SURPASS Hobby C2826 (C2208) - 1350KV have similar shape and electrical characteristics. It is compatible  with the Parrot stock foldable propeller and DISCO wing motor mount. The motor reference is unclear as the motor size correspond to a "2208" but the motor is stamped (and sold) with reference C2826. Box of the SURPASS Hobby motor mention is "C2826 (2208) - 1350KV".
+The original DISCO motor (PF070253, 1280KV) is difficult to find and out-priced. The SURPASS Hobby C2826 (size 2208) - 1350KV have similar shape and electrical characteristics. It is compatible  with the Parrot stock foldable propeller and DISCO wing motor mount. The motor reference is unclear as the motor size correspond to a "2208" but the motor is stamped (and sold) with reference C2826. Box of the SURPASS Hobby motor mention is "C2826 (2208) - 1350KV".
 
 With this motor upgrade, the DISCO Flying wing is flying as with the original motor. The Parrot CHUCK controller handle motor speed as if it was the original one. Power consumption seems similar than the one with the original motor. It has been tested with the original DISCO propeller. 
 
@@ -74,8 +74,8 @@ I get a propeller replacement candidate in case the original did not fit the mot
 src="/img/parrot-surpass-c2826-mount-wires-small.jpg"
 link="/img/parrot-surpass-c2826-mount-wires.jpg"
 width="100%"
-title="Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - inside"
-caption="Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - inside"
+title="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside"
+caption="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside"
 numbered="false"
 >}}
 
@@ -83,7 +83,7 @@ numbered="false"
 src="/img/parrot-surpass-c2826-mount-final-small.jpg"
 link="/img/parrot-surpass-c2826-mount-final.jpg"
 width="100%"
-title="Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - detail"
-caption="Parrot DISCO with SURPASS Hobby C2826 (C2208) - 1350KV replacement motor - detail"
+title="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail"
+caption="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail"
 numbered="false"
 >}}
