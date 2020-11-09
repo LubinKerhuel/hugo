@@ -21,7 +21,10 @@ baseurl = "https://lubin.kerhuel.eu/"
 copyright = "&copy; 2019 - {year} Lubin Kerhuel"
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = "UA-90899-5"
+#googleAnalytics = "UA-90899-5"
+##google_tag_manager = ""
+
+
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
