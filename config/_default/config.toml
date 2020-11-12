@@ -61,6 +61,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]
   section = [ "HTML", "RSS" ]
 
+[params]
+  require_isotope = false  
+  [cms]
+    netlify_cms = false  
+
 [mediaTypes."application/manifest+json"]
   suffixes = ["webmanifest"]
 
