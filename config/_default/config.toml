@@ -61,10 +61,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]
   section = [ "HTML", "RSS" ]
 
-[params]
-  require_isotope = false  
-  [params.cms]
-    netlify_cms = false  
+# adding this break card multicolumn on main page.
+#[params]
+#  require_isotope = false  
+#  [params.cms]
+#    netlify_cms = false  
 
 [mediaTypes."application/manifest+json"]
   suffixes = ["webmanifest"]
