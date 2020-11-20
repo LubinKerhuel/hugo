@@ -17,7 +17,7 @@
 
 # [[main]]
 #   name = "dsPIC blockset"
-#   url = "https://fr.mathworks.com/matlabcentral/fileexchange/71892" # to comment to make submenue
+#   url = "https://com.mathworks.com/matlabcentral/fileexchange/71892" # to comment to make submenue
 #   weight = 12
 
 
@@ -67,7 +67,7 @@
 # name = "<span class=\"btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3\">Install</span>"
 pre = "<i class=\"fas fa-microchip pr-1\" style=\"color: hsl(195, 90%, 58%);\"></i>"
 name = "MPLAB blockset"
-url = "https://fr.mathworks.com/matlabcentral/fileexchange/71892"
+url = "https://www.mathworks.com/matlabcentral/fileexchange/71892"
 weight = 30
 
 
