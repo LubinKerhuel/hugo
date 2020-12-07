@@ -190,14 +190,7 @@ The black and red wire from the trolley to the top of the pendulum powers the Mi
 &lt;p>The Dynamic fundamental law applied on the pendulum:
 $$ \sum \vec{Force} = m.\vec{a} $$&lt;/p>
 &lt;p>The three forces presents are the weight $\vec{P}$, the Friction $\vec{F}$, and the Reaction $\vec{R}$ from the rod &amp;amp; floor:&lt;/p>
-&lt;p>$$ \underbrace{ -mg\vec{j} }_{\vec{P}} \&lt;/p>
-&lt;ul>
-&lt;li>\ \underbrace{ k \frac{\partial \vec{r}}{\partial t} }_{\vec{F}} \&lt;/li>
-&lt;/ul>
-&lt;ul>
-&lt;li>\ \underbrace{ ( mg\vec{j} . \vec{r} + \underbrace{Ctfg}_{\text{Centrifugal}} } _{\vec{R} } ) . \vec{r} = ml \frac{\partial^2\vec{ r }}{\partial t^2}
-$$&lt;/li>
-&lt;/ul>
+&lt;p>$$ \underbrace{ -mg\vec{j} }_{\vec{P}} \ - \ \underbrace{ k \frac{\partial \vec{r}}{\partial t} }_{\vec{F}} \ + \ \underbrace{ ( mg\vec{j} . \vec{r} + \underbrace{Ctfg}_{\text{Centrifugal}} } _{\vec{R} } ) . \vec{r} = ml \frac{\partial^2\vec{ r }}{\partial t^2} $$&lt;/p>
 &lt;p>With $ \{ \vec{i},\vec{j} \} $ the static earth frame and $ \{ \vec{r},\vec{n} \} $ the pendulum frame (rod and normal direction).
 $m$ is the mass of the pendulum (without the trolley).
 $l$ is the length from the inter-wheel&amp;rsquo;s axis to the center of mass of the pendulum (without the trolley)&lt;/p>

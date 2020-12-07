@@ -189,10 +189,7 @@ $$ \sum \vec{Force} = m.\vec{a} $$
 
 The three forces presents are the weight $\vec{P}$, the Friction $\vec{F}$, and the Reaction $\vec{R}$ from the rod & floor:
 
-$$ \underbrace{ -mg\vec{j} }\_{\vec{P}} \ 
- - \ \underbrace{ k \frac{\partial \vec{r}}{\\partial t} }\_{\vec{F}} \ 
- + \ \underbrace{ ( mg\vec{j} . \vec{r} + \underbrace{Ctfg}\_{\text{Centrifugal}} } \_{\vec{R} } ) . \vec{r} = ml \frac{\partial^2\vec{ r }}{\\partial t^2}
-$$
+$$ \underbrace{ -mg\vec{j} }\_{\vec{P}} \  - \ \underbrace{ k \frac{\partial \vec{r}}{\\partial t} }\_{\vec{F}} \  + \ \underbrace{ ( mg\vec{j} . \vec{r} + \underbrace{Ctfg}\_{\text{Centrifugal}} } \_{\vec{R} } ) . \vec{r} = ml \frac{\partial^2\vec{ r }}{\\partial t^2} $$
 
 With $ \\{ \vec{i},\vec{j} \\} $ the static earth frame and $ \\{ \vec{r},\vec{n} \\} $ the pendulum frame (rod and normal direction).
 $m$ is the mass of the pendulum (without the trolley).
