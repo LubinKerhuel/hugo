@@ -38,11 +38,11 @@ The cable has logic to decode the RC PWM signal and generate the signal pulse sc
 
 Controlling the camera can be done with a microcontroller by generating the required pulse scheme described below.
 
-The micro USB cable pinout (on the male part) is
+The micro USB cable pinout is
 
- - Pin 1 : GND
- - Pin 3 : TTL signal (5V)
- - Pin 5 : +5V (higher voltage possible for the RunCam2 connector)
+ - Pin 1 (VCC): +5V (higher voltage possible for the RunCam2 connector)
+ - Pin 3 (D+): TTL signal (5V)
+ - Pin 5 (GND): GND
 
 When the Camera USB port is set for "Remote Control" and not for "mass storage" with the configuration application, it is possible to switch back and forth the camera from video mode to photo mode, and to start/stop recording, or take a picture.
 
