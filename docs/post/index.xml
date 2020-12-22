@@ -744,11 +744,11 @@ The original current measurement range is reduced from 140 (A) to 20 (A) (140 * 
 &lt;p>Cable exist to connect a RunCam2 action cam to an RC receiver for remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
 The cable has logic to decode the RC PWM signal and generate the signal pulse scheme to start and stop the RunCam2 record.&lt;/p>
 &lt;p>Controlling the camera can be done with a microcontroller by generating the required pulse scheme described below.&lt;/p>
-&lt;p>The micro USB cable pinout (on the male part) is&lt;/p>
+&lt;p>The micro USB cable pinout is&lt;/p>
 &lt;ul>
-&lt;li>Pin 1 : GND&lt;/li>
-&lt;li>Pin 3 : TTL signal (5V)&lt;/li>
-&lt;li>Pin 5 : +5V (higher voltage possible for the RunCam2 connector)&lt;/li>
+&lt;li>Pin 1 (VCC): +5V (higher voltage possible for the RunCam2 connector)&lt;/li>
+&lt;li>Pin 3 (D+): TTL signal (5V)&lt;/li>
+&lt;li>Pin 5 (GND): GND&lt;/li>
 &lt;/ul>
 &lt;p>When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo; with the configuration application, it is possible to switch back and forth the camera from video mode to photo mode, and to start/stop recording, or take a picture.&lt;/p>
 &lt;p>The pulse scheme is the following:&lt;/p>
