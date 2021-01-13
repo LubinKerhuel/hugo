@@ -1,7 +1,7 @@
 ---
-title: 'Motorized long-tail bike'
-subtitle: 'Tongsheng TSDZ2 motor installed on the Yuba KOMBI bike'
-summary: Pictures of an installation of the Tongsheng TSDZ2 motor on the Yuba KOMBI bike. Modified foot-pods to trail another bike.
+title: 'Electric Kombi bike'
+subtitle: 'Yuba long-tail KOMBI assisted with a TSDZ2 motor & open source e-bike firmware'
+summary: Yuba long-tail bike KOMBI equipped with Tongsheng TSDZ2 motor. Update TSDZ2 with an open-source e-bike firmware. Modified Kombi foot-pods to trail another bike.
 authors:
 - Lubin
 tags: ["bike"]
@@ -42,7 +42,7 @@ math: false
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
 
-A KOMBI bike electrified with the TSDZ2 mid drive motor. 
+A KOMBI bike motorized with the TSDZ2 mid drive motor. 
 The motor firmware is upgraded with the [TSDZ2 Flexible OpenSource firmware](https://github.com/OpenSource-EBike-firmware/TSDZ2_wiki/wiki) initiated by Casainho.
 
 Typically, empty or loaded with two kids; three in rare occasions; 2300km so far with original bike chain and original motor blue gear and clutch.
