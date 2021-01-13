@@ -39,7 +39,8 @@
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h2>Table of Contents&lt;/h2>
+&lt;details class="toc-inpage d-print-none " open>
+&lt;summary class="font-weight-bold">Table of Contents&lt;/summary>
 &lt;nav id="TableOfContents">
 &lt;ul>
 &lt;li>&lt;a href="#pitot-tube-principle">Pitot tube principle&lt;/a>&lt;/li>
@@ -60,6 +61,7 @@
 &lt;/li>
 &lt;/ul>
 &lt;/nav>
+&lt;/details>
 &lt;h2 id="pitot-tube-principle">Pitot tube principle&lt;/h2>
 &lt;p>A Pitot-Darcy probe is an airspeed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P_t$ is added at its tip. The differential pressure $P_{diff}$ is measured between the tip of the tube $P_t$ and the static pressure $P_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p>
 &lt;p>The pressure added at tube tip is the square of the airspeed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are measured in Pascal unit (Pa). $\rho$ is the air density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude. $v$ is the airspeed in $m.s^{-1}$. The differential pressure measured is $P_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$&lt;/p>
