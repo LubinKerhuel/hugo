@@ -1,6 +1,6 @@
 +++
 # Project title.
-title = "Real Time Control for a DC Motor"
+title = "Lab INSA - Real Time Control for a DC / PMSM Motors"
 
 aliases = ["/project/lab_dc_motor/"]
 
@@ -12,7 +12,7 @@ draft = false
 authors = ["lubin","romain-delpoux"]
 
 # Project summary to display on homepage.
-summary = "Simulation & real-time control of a Pravalux 24v DC motor (INSA Lyon hands-on)"
+summary = "Simulation & real-time control of a motor with MCLV 2 board"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
@@ -48,7 +48,8 @@ url_poster = ""
 #links = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
 
 links = [
-	{name = "Lab", url = "http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/"},
+	{name = "Lab DC Motor", url = "http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/"},
+  {name = "Lab PMSM Motor", url = "http://rcp.ctrl-elec.fr/"},
 	{name = "Simulink models", url = "https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/tree/master/LABMatlabFiles/"},
 	]
 
@@ -63,7 +64,7 @@ links = [
   focal_point = "Smart"
 +++
 
-Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.
+Control a 24V motor (Pravalux 24v DC) using the MCLV-V2 board with a dsPIC 33EP256MC506.
 This hands-on is for 5th year students at INSA-Lyon.
 
 The hands-on Lab subject available at: http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/.
@@ -72,3 +73,6 @@ Slides presents the adaptation required to go from a Simulink model for Simulati
 
 - Real-time scheduler / CPU load analysis
 - Fixed-point datatypes
+
+2021: Dspace project not feasible in labs due to Covid-19. It was replaced with home lab on MCLV-2 boards (sent to students) replacing Dspace.
+lab subject is availalbe at: http://rcp.ctrl-elec.fr/
