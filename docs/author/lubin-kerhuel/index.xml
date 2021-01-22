@@ -772,11 +772,13 @@ The cable has logic to decode the RC PWM signal and generate the signal pulse sc
 &lt;p>Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
-&lt;/div></description></item><item><title>Real Time Control for a DC Motor</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p>Control a 24V DC motor using the MCLV-V2 board with a dsPIC 33EP256MC506.
+&lt;/div></description></item><item><title>Lab INSA - Real Time Control for a DC / PMSM Motors</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p>Control a 24V motor (Pravalux 24v DC) using the MCLV-V2 board with a dsPIC 33EP256MC506.
 This hands-on is for 5th year students at INSA-Lyon.&lt;/p>
 &lt;p>The hands-on Lab subject available at: &lt;a href="http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/">http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/&lt;/a>.&lt;/p>
 &lt;p>Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p>
 &lt;ul>
 &lt;li>Real-time scheduler / CPU load analysis&lt;/li>
 &lt;li>Fixed-point datatypes&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul>
+&lt;p>2021: Dspace project not feasible in labs due to Covid-19. It was replaced with home lab on MCLV-2 boards (sent to students) replacing Dspace.
+lab subject is availalbe at: &lt;a href="http://rcp.ctrl-elec.fr/">http://rcp.ctrl-elec.fr/&lt;/a>&lt;/p></description></item></channel></rss>
