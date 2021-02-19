@@ -1,6 +1,6 @@
 (() => {
   // ns-params:@params
-  var slides = null;
+  var slides = {backgroundtransition: "fade", defaulttiming: 120, highlight_style: "dracula", history: false, mousewheel: true, previewlinks: true, progress: true, theme: "black", transition: "zoom", transition_speed: "fast"};
 
   // ns-hugo:C:\M91449\MCHP_Blockset\Projects\hugo\themes\academic\wowchemy\assets\js\wowchemy-utils.js
   function fixMermaid() {

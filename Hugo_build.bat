@@ -4,6 +4,9 @@ hugo version
 hugo list drafts 
 
 hugo -t "academic/wowchemy" --environment production -F --i18n-warnings --gc --cleanDestinationDir --minify --enableGitInfo --forceSyncStatic --destination /docs 
+hugo -t "academic/wowchemy" --environment production -F --i18n-warnings --minify --enableGitInfo --destination /docs 
+rem hugo -t "academic/wowchemy" -F --i18n-warnings --gc --cleanDestinationDir --minify --enableGitInfo --forceSyncStatic --destination /docs 
+
 git add docs/*
 @echo off
 rem  get total number of lines from dir output
