@@ -1,4 +1,4 @@
-﻿---
+---
 title: miniature airspeed sensor
 
 sitemap:
@@ -28,10 +28,7 @@ slides:
   # minScale: 1
   # maxScale: 3  
 
-  
-  
 #markup: mmark 
-
 ---
 
 ## Pitot tube
