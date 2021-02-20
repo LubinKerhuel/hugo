@@ -1,0 +1,2 @@
+hugo list drafts 
+pause
