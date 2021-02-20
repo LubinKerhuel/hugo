@@ -10,5 +10,5 @@ console.debug("User theming enabled.");let isDarkTheme;let currentThemeMode=getT
 break;}
 if(isDarkTheme&&!body.classList.contains("dark")){console.debug("Applying Wowchemy dark theme");document.body.classList.add("dark");}else if(!isDarkTheme&&body.classList.contains("dark")){console.debug("Applying Wowchemy light theme");document.body.classList.remove("dark");}
 return{isDarkTheme,themeMode:currentThemeMode};}
-var wcDarkLightEnabled=true;var wcIsSiteThemeDark=true;window.wc={darkLightEnabled:wcDarkLightEnabled,isSiteThemeDark:wcIsSiteThemeDark};if(window.netlifyIdentity){window.netlifyIdentity.on("init",(user)=>{if(!user){window.netlifyIdentity.on("login",()=>{document.location.href="/admin/";});}});}
+var wcDarkLightEnabled=false;var wcIsSiteThemeDark=true;window.wc={darkLightEnabled:wcDarkLightEnabled,isSiteThemeDark:wcIsSiteThemeDark};if(window.netlifyIdentity){window.netlifyIdentity.on("init",(user)=>{if(!user){window.netlifyIdentity.on("login",()=>{document.location.href="/admin/";});}});}
 initThemeVariation();window.PlotlyConfig={MathJaxConfig:"local"};})();

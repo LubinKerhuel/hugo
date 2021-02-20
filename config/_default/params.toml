@@ -12,7 +12,7 @@
 #   Browse user installed themes in `data/themes/`
 theme = "mydarkblue"
 # Enable users to switch between day and night mode?
-day_night = true
+day_night = false
 
 # Show search in main page
 show_search = true
