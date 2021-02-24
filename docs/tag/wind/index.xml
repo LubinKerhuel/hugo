@@ -85,7 +85,7 @@
 &lt;ul>
 &lt;li>&lt;a href="http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
 &lt;li>&lt;a href="https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf" target="_blank" rel="noopener">report (french)&lt;/a> from ANSTJ with general information on Pitot sensor.&lt;/li>
-&lt;li>&lt;a href="http://voiletech.free.fr/skyassistant/Pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
+&lt;li>&lt;a href="http://voiletech.free.fr/skyassistant/pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
 &lt;/ul>
 &lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
 Tube intèrieur: 2mm, trou 1mm
@@ -348,7 +348,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;/figcaption>
 &lt;/figure>
 &lt;/div>
-&lt;p>This wind estimation is used to compensate the airspeed when comparing the GPS ground speed $V_{gps}$ with the Pitot airspeed $V_{Pitot}$ &lt;a href="https://lubin.kerhuel.eu/post/Pitot-build/#gps-vs-airspeed">above&lt;/a>.&lt;/p>
+&lt;p>This wind estimation is used to compensate the airspeed when comparing the GPS ground speed $V_{gps}$ with the Pitot airspeed $V_{Pitot}$ &lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#gps-vs-airspeed">above&lt;/a>.&lt;/p>
 &lt;h4 id="script">Script&lt;/h4>
 &lt;p>Matlab script to estimate wind off-line:&lt;/p>
 &lt;pre>&lt;code class="language-matlab">% V_gps and V_pitot are two vector with all data measured.
