@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>simulink | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/simulink/</link><atom:link href="https://lubin.kerhuel.eu/tag/simulink/index.xml" rel="self" type="application/rss+xml"/><description>simulink</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2021 Lubin Kerhuel</copyright><lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/img/firstar1600-qx7.jpg</url><title>simulink</title><link>https://lubin.kerhuel.eu/tag/simulink/</link></image><item><title>block receiver &amp; telemetry: S.BUS, Smart Port, F.Port</title><link>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>simulink | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/simulink/</link><atom:link href="https://lubin.kerhuel.eu/tag/simulink/index.xml" rel="self" type="application/rss+xml"/><description>simulink</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2021 Lubin Kerhuel</copyright><lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_2.png</url><title>simulink</title><link>https://lubin.kerhuel.eu/tag/simulink/</link></image><item><title>block receiver &amp; telemetry: S.BUS, Smart Port, F.Port</title><link>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
@@ -167,7 +167,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;div class="box" style="max-width:40%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-sbus-gui-control-frame.png" class="lazyload" alt="This simulink block decode S.BUS input stream. Scaling for output RC channels can be selected for each channels."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-sbus-gui-control-frame.png" loading="lazy" alt="This simulink block decode S.BUS input stream. Scaling for output RC channels can be selected for each channels."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-sbus-gui-control-frame.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Simulink S.BUS block user interface&lt;/h4>
@@ -178,7 +178,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" class="lazyload" alt="Scheme to decode S.BUS for use in a dsPIC"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" loading="lazy" alt="Scheme to decode S.BUS for use in a dsPIC"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Scheme of the UART Rx block connected to the the S.BUS block.&lt;/h4>
@@ -189,7 +189,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-sbus-sport-channels-scaling.png" class="lazyload" alt="raw values from S.BUS are not centered and scaled with power of 2."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-sbus-sport-channels-scaling.png" loading="lazy" alt="raw values from S.BUS are not centered and scaled with power of 2."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-sbus-sport-channels-scaling.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Scheme to center and scale S.BUS channels output within [-1000 1000]&lt;/h4>
@@ -219,7 +219,7 @@ The message is sent through an UART Tx block.&lt;/p>
 &lt;div class="box" style="max-width:40%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-fport-gui-control-frame.png" class="lazyload" />
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-fport-gui-control-frame.png" loading="lazy" />
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-fport-gui-control-frame.png" itemprop="contentUrl">&lt;/a>
 &lt;/figure>
@@ -227,7 +227,7 @@ The message is sent through an UART Tx block.&lt;/p>
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-fport-scheme-uart-connection.png" class="lazyload" />
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-fport-scheme-uart-connection.png" loading="lazy" />
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-fport-scheme-uart-connection.png" itemprop="contentUrl">&lt;/a>
 &lt;/figure>
@@ -236,7 +236,7 @@ The message is sent through an UART Tx block.&lt;/p>
 &lt;div class="box" >
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img" style="background-image: url('/img/uxv-block-rc-pwm-gui.png');">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-gui.png" class="lazyload" alt="caption"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-gui.png" loading="lazy" alt="caption"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-gui.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Title&lt;/h4>
@@ -247,7 +247,7 @@ The message is sent through an UART Tx block.&lt;/p>
 &lt;div class="box" >
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img" style="background-image: url('/img/uxv-block-rc-pwm-input-scaling.png');">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-input-scaling.png" class="lazyload" alt="caption"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-input-scaling.png" loading="lazy" alt="caption"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-rc-pwm-input-scaling.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>title&lt;/h4>
@@ -435,7 +435,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" class="lazyload" alt="Volantex Firstar 1600 with Qx7 remote control."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" loading="lazy" alt="Volantex Firstar 1600 with Qx7 remote control."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>autopilot platform&lt;/h4>
@@ -463,7 +463,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" class="lazyload" />
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" loading="lazy" />
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16-bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter.&lt;/h4>
@@ -548,7 +548,7 @@ lab subject is availalbe at: &lt;a href="http://rcp.ctrl-elec.fr/">http://rcp.ct
 &lt;div class="box" style="max-width:45%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_platform_top.png" class="lazyload" alt="Top of the inverted pendulum"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_platform_top.png" loading="lazy" alt="Top of the inverted pendulum"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_platform_top.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">
@@ -579,7 +579,7 @@ The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $
 &lt;div class="box" style="max-width:60%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_platform_reduced_horizontal.png" class="lazyload" alt="Inverted Pendulum platform"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_platform_reduced_horizontal.png" loading="lazy" alt="Inverted Pendulum platform"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_platform.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">
@@ -594,7 +594,7 @@ It is powered through the USB connector which &lt;strong>only provide the power 
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_top.png" class="lazyload" alt="A prototyping board support a Microstick II board with the dsPIC 33EP128MC202. A board from Drotek endowing the Invensense ICM-20608 inertial sensor is screwed on the base board."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_top.png" loading="lazy" alt="A prototyping board support a Microstick II board with the dsPIC 33EP128MC202. A board from Drotek endowing the Invensense ICM-20608 inertial sensor is screwed on the base board."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_top.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Microcontroller and sensor on top of the inverted pendulum&lt;/h4>
@@ -629,7 +629,7 @@ Two pairs of wires power two DC motors in either direction through an &lt;code>L
 &lt;div class="box" >
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img" style="background-image: url('/img/pendulum_toysrus_flywheels_package.jpg');">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg" class="lazyload" alt="FlyWheels toy package"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg" loading="lazy" alt="FlyWheels toy package"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>FlyWheels toy package&lt;/h4>
@@ -640,7 +640,7 @@ Two pairs of wires power two DC motors in either direction through an &lt;code>L
 &lt;div class="box" >
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img" style="background-image: url('/img/pendulum_toysrus_flywheels_open.jpg');">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg" class="lazyload" alt="Two DC motors"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg" loading="lazy" alt="Two DC motors"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Two DC motors&lt;/h4>
@@ -662,7 +662,7 @@ Two pairs of wires power two DC motors in either direction through an &lt;code>L
 &lt;div class="box" style="max-width:60%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum_base.png" class="lazyload" alt="A L298N H bridge (for Arduino) power board drives the two DC motors of a modified FlyWheels toy. Four AA batteries powers the pendulum."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_base.png" loading="lazy" alt="A L298N H bridge (for Arduino) power board drives the two DC motors of a modified FlyWheels toy. Four AA batteries powers the pendulum."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum_base.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Base trolley of the inverted pendulum&lt;/h4>
@@ -683,7 +683,7 @@ The black and red wire from the trolley to the top of the pendulum powers the Mi
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png" class="lazyload" alt="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png" loading="lazy" alt="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Pendulum free body diagram&lt;/h4>
@@ -732,7 +732,7 @@ It can be made linear with $sin(\theta) \approx \theta$ when the pendulum is up 
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum-model-rod.png" class="lazyload" alt="non-linear model of the $\theta$ angle evolution derived from the forces projected on the normal $\vec{n}$ axis of the rod. The trolley linear acceleration input is added."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-model-rod.png" loading="lazy" alt="non-linear model of the $\theta$ angle evolution derived from the forces projected on the normal $\vec{n}$ axis of the rod. The trolley linear acceleration input is added."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum-model-rod.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Pendulum model for rod rotation&lt;/h4>
@@ -767,7 +767,7 @@ Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angl
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum-identification-theta.png" class="lazyload" alt="$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-identification-theta.png" loading="lazy" alt="$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum-identification-theta.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Identification - experimental $\theta$ angle reconstructed from inertial sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4>
@@ -844,7 +844,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;div class="box" style="max-width:45%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pendulum-gy91-wheel.jpg" class="lazyload" alt="The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91 board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires)."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-gy91-wheel.jpg" loading="lazy" alt="The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91 board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires)."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pendulum-gy91-wheel.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Identification of trolley in real inverted pendulum condition.&lt;/h4>

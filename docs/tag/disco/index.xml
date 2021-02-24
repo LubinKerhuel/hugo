@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Disco | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/disco/</link><atom:link href="https://lubin.kerhuel.eu/tag/disco/index.xml" rel="self" type="application/rss+xml"/><description>Disco</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2021 Lubin Kerhuel</copyright><lastBuildDate>Sun, 11 Oct 2020 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/img/firstar1600-qx7.jpg</url><title>Disco</title><link>https://lubin.kerhuel.eu/tag/disco/</link></image><item><title>Replacement motor for Parrot Disco FPV Flying Wing</title><link>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</link><pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Disco | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/disco/</link><atom:link href="https://lubin.kerhuel.eu/tag/disco/index.xml" rel="self" type="application/rss+xml"/><description>Disco</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2021 Lubin Kerhuel</copyright><lastBuildDate>Sun, 11 Oct 2020 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_2.png</url><title>Disco</title><link>https://lubin.kerhuel.eu/tag/disco/</link></image><item><title>Replacement motor for Parrot Disco FPV Flying Wing</title><link>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</link><pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
@@ -45,7 +45,7 @@
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-original-motor-front-small.jpg" class="lazyload" alt="Parrot DISCO original PF070253 motor (1280KV) with added connectors - front"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/parrot-original-motor-front-small.jpg" loading="lazy" alt="Parrot DISCO original PF070253 motor (1280KV) with added connectors - front"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-original-motor-front.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Parrot DISCO original PF070253 motor (1280KV) with added connectors - front&lt;/h4>
@@ -56,7 +56,7 @@
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-original-motor-back-small.jpg" class="lazyload" alt="Parrot DISCO original PF070253 motor - back"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/parrot-original-motor-back-small.jpg" loading="lazy" alt="Parrot DISCO original PF070253 motor - back"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-original-motor-back.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Attempt to repair the motor PF070253 of the DISCO FPV&lt;/h4>
@@ -70,7 +70,7 @@
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-wires-small.jpg" class="lazyload" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-wires-small.jpg" loading="lazy" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-wires.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside&lt;/h4>
@@ -81,7 +81,7 @@
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-final-small.jpg" class="lazyload" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-final-small.jpg" loading="lazy" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-final.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail&lt;/h4>

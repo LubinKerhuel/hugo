@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bike | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/bike/</link><atom:link href="https://lubin.kerhuel.eu/tag/bike/index.xml" rel="self" type="application/rss+xml"/><description>bike</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2021 Lubin Kerhuel</copyright><lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/img/firstar1600-qx7.jpg</url><title>bike</title><link>https://lubin.kerhuel.eu/tag/bike/</link></image><item><title>Electric Kombi bike</title><link>https://lubin.kerhuel.eu/post/motorized-kombi-bike/</link><pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/motorized-kombi-bike/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bike | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/bike/</link><atom:link href="https://lubin.kerhuel.eu/tag/bike/index.xml" rel="self" type="application/rss+xml"/><description>bike</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2021 Lubin Kerhuel</copyright><lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_2.png</url><title>bike</title><link>https://lubin.kerhuel.eu/tag/bike/</link></image><item><title>Electric Kombi bike</title><link>https://lubin.kerhuel.eu/post/motorized-kombi-bike/</link><pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/motorized-kombi-bike/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
@@ -53,7 +53,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" class="lazyload" alt="Original pedals"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" loading="lazy" alt="Original pedals"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Motor Installation (1/3)&lt;/h4>
@@ -64,7 +64,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" class="lazyload" alt="Accessing the BSA 68 bottom bracket"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" loading="lazy" alt="Accessing the BSA 68 bottom bracket"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Motor Installation (2/3)&lt;/h4>
@@ -75,7 +75,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" class="lazyload" alt="BSA 68 bottom bracket"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" loading="lazy" alt="BSA 68 bottom bracket"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Motor Installation (3/3)&lt;/h4>
@@ -86,7 +86,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" class="lazyload" alt="TSDZ2 lying against the front tube protected by an air tube"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" loading="lazy" alt="TSDZ2 lying against the front tube protected by an air tube"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>TSDZ2 motor installed&lt;/h4>
@@ -97,7 +97,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" class="lazyload" alt="Battery vertically installed behind the seat"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" loading="lazy" alt="Battery vertically installed behind the seat"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Yuba KOMBI bike equipped with TSDZ2 motor and battery&lt;/h4>
@@ -108,7 +108,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" class="lazyload" alt="Setup for trailing a BMX race-mini bike (no-one on the BMX). The trailed bike is free to rotate about its steering wheel axis and vertically (up-down) following smoothly the front bike."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" loading="lazy" alt="Setup for trailing a BMX race-mini bike (no-one on the BMX). The trailed bike is free to rotate about its steering wheel axis and vertically (up-down) following smoothly the front bike."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Yuba KOMBI bike trailing a bike&lt;/h4>
@@ -119,7 +119,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" class="lazyload" alt="The front wheel of the trailed bike is engaged in a fence of the foot pod. A strap maintains the front wheel firmly attached to the trailing bike providing two degree of freedom to the trailed bike frame. A second strap helps to maintain the bike the same vertical plane. Note the foot-pod fence small angle providing space for kids foots on the front bike."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" loading="lazy" alt="The front wheel of the trailed bike is engaged in a fence of the foot pod. A strap maintains the front wheel firmly attached to the trailing bike providing two degree of freedom to the trailed bike frame. A second strap helps to maintain the bike the same vertical plane. Note the foot-pod fence small angle providing space for kids foots on the front bike."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Attachment setup for trailing another bike&lt;/h4>
@@ -130,7 +130,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" class="lazyload" alt="Yuba KOMBI bike attached with two other bikes on the car rack."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" loading="lazy" alt="Yuba KOMBI bike attached with two other bikes on the car rack."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>KOMBI bike on a car rack&lt;/h4>

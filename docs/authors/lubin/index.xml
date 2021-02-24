@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lubin Kerhuel | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/author/lubin-kerhuel/</link><atom:link href="https://lubin.kerhuel.eu/author/lubin-kerhuel/index.xml" rel="self" type="application/rss+xml"/><description>Lubin Kerhuel</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2021 Lubin Kerhuel</copyright><image><url>https://lubin.kerhuel.eu/author/lubin-kerhuel/avatar_hub88d8bfcd9aca835933e1808b55368c2_25702_270x270_fill_q90_lanczos_center.jpg</url><title>Lubin Kerhuel</title><link>https://lubin.kerhuel.eu/author/lubin-kerhuel/</link></image><item><title>Replacement motor for Parrot Disco FPV Flying Wing</title><link>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</link><pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lubin Kerhuel | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/authors/lubin/</link><atom:link href="https://lubin.kerhuel.eu/authors/lubin/index.xml" rel="self" type="application/rss+xml"/><description>Lubin Kerhuel</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2019 - 2021 Lubin Kerhuel</copyright><image><url>https://lubin.kerhuel.eu/authors/lubin/avatar_hub88d8bfcd9aca835933e1808b55368c2_25702_270x270_fill_q90_lanczos_center.jpg</url><title>Lubin Kerhuel</title><link>https://lubin.kerhuel.eu/authors/lubin/</link></image><item><title>Replacement motor for Parrot Disco FPV Flying Wing</title><link>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</link><pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
@@ -45,7 +45,7 @@
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-original-motor-front-small.jpg" class="lazyload" alt="Parrot DISCO original PF070253 motor (1280KV) with added connectors - front"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/parrot-original-motor-front-small.jpg" loading="lazy" alt="Parrot DISCO original PF070253 motor (1280KV) with added connectors - front"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-original-motor-front.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Parrot DISCO original PF070253 motor (1280KV) with added connectors - front&lt;/h4>
@@ -56,7 +56,7 @@
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-original-motor-back-small.jpg" class="lazyload" alt="Parrot DISCO original PF070253 motor - back"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/parrot-original-motor-back-small.jpg" loading="lazy" alt="Parrot DISCO original PF070253 motor - back"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-original-motor-back.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Attempt to repair the motor PF070253 of the DISCO FPV&lt;/h4>
@@ -70,7 +70,7 @@
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-wires-small.jpg" class="lazyload" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-wires-small.jpg" loading="lazy" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-wires.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - inside&lt;/h4>
@@ -81,7 +81,7 @@
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-final-small.jpg" class="lazyload" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-final-small.jpg" loading="lazy" alt="Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/parrot-surpass-c2826-mount-final.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Parrot DISCO with SURPASS Hobby C2826 (2208) - 1350KV replacement motor - detail&lt;/h4>
@@ -143,7 +143,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" class="lazyload" alt="Original pedals"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" loading="lazy" alt="Original pedals"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Motor Installation (1/3)&lt;/h4>
@@ -154,7 +154,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" class="lazyload" alt="Accessing the BSA 68 bottom bracket"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" loading="lazy" alt="Accessing the BSA 68 bottom bracket"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Motor Installation (2/3)&lt;/h4>
@@ -165,7 +165,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" class="lazyload" alt="BSA 68 bottom bracket"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" loading="lazy" alt="BSA 68 bottom bracket"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Motor Installation (3/3)&lt;/h4>
@@ -176,7 +176,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" class="lazyload" alt="TSDZ2 lying against the front tube protected by an air tube"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" loading="lazy" alt="TSDZ2 lying against the front tube protected by an air tube"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>TSDZ2 motor installed&lt;/h4>
@@ -187,7 +187,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" class="lazyload" alt="Battery vertically installed behind the seat"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" loading="lazy" alt="Battery vertically installed behind the seat"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Yuba KOMBI bike equipped with TSDZ2 motor and battery&lt;/h4>
@@ -198,7 +198,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" class="lazyload" alt="Setup for trailing a BMX race-mini bike (no-one on the BMX). The trailed bike is free to rotate about its steering wheel axis and vertically (up-down) following smoothly the front bike."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" loading="lazy" alt="Setup for trailing a BMX race-mini bike (no-one on the BMX). The trailed bike is free to rotate about its steering wheel axis and vertically (up-down) following smoothly the front bike."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Yuba KOMBI bike trailing a bike&lt;/h4>
@@ -209,7 +209,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" class="lazyload" alt="The front wheel of the trailed bike is engaged in a fence of the foot pod. A strap maintains the front wheel firmly attached to the trailing bike providing two degree of freedom to the trailed bike frame. A second strap helps to maintain the bike the same vertical plane. Note the foot-pod fence small angle providing space for kids foots on the front bike."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" loading="lazy" alt="The front wheel of the trailed bike is engaged in a fence of the foot pod. A strap maintains the front wheel firmly attached to the trailing bike providing two degree of freedom to the trailed bike frame. A second strap helps to maintain the bike the same vertical plane. Note the foot-pod fence small angle providing space for kids foots on the front bike."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>Attachment setup for trailing another bike&lt;/h4>
@@ -220,7 +220,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" class="lazyload" alt="Yuba KOMBI bike attached with two other bikes on the car rack."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" loading="lazy" alt="Yuba KOMBI bike attached with two other bikes on the car rack."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption >&lt;h4>KOMBI bike on a car rack&lt;/h4>
@@ -308,7 +308,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" class="lazyload" alt="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" loading="lazy" alt="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Brass inner and outer tubes of the Pitot tube.&lt;/h4>
@@ -442,7 +442,7 @@ m = 72mm
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" class="lazyload" alt="Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" loading="lazy" alt="Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Pressure sensor and electronics mounted on a DIP adapter board.&lt;/h4>
@@ -455,7 +455,7 @@ m = 72mm
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" class="lazyload" alt="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" loading="lazy" alt="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Experimental pitot-tube static characteristic with the MP3V5004dp differential pressure sensor&lt;/h4>
@@ -471,7 +471,7 @@ m = 72mm
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" class="lazyload" alt="Platform used for tests"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" loading="lazy" alt="Platform used for tests"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>FirStar 1600 Volantex RC plane&lt;/h4>
@@ -483,7 +483,7 @@ m = 72mm
 &lt;div class="box" style="max-width:50%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" class="lazyload" alt="Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" loading="lazy" alt="Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Flashmer – flexible Tube 2mm. Image from Decathlon (france).&lt;/h4>
@@ -495,7 +495,7 @@ m = 72mm
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" class="lazyload" />
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" loading="lazy" />
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform.&lt;/h4>
@@ -505,7 +505,7 @@ m = 72mm
 &lt;div class="box" style="max-width:60%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" class="lazyload" alt="Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" loading="lazy" alt="Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Carbon-Brass light Pitot tube sensor attached to the wing with a magnet.&lt;/h4>
@@ -531,7 +531,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" class="lazyload" alt="GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$)."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" loading="lazy" alt="GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$)."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Experimental measurement comparing GPS ground speed with pitot-tube airspeed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the the pitot tube subtracted from the estimated wind.&lt;/h4>
@@ -575,7 +575,7 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" class="lazyload" alt="Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" loading="lazy" alt="Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Experimental result presenting GPS ground speed and Pitot airspeed difference in function of the plane direction of 450s flight of the RC Firstar 1600 plane.&lt;/h4>
@@ -765,7 +765,7 @@ The cable has logic to decode the RC PWM signal and generate the signal pulse sc
 &lt;div class="box" style="max-width:100%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
-&lt;img itemprop="thumbnail" data-src="https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png" class="lazyload" alt="Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target"/>
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png" loading="lazy" alt="Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target"/>
 &lt;/div>
 &lt;a href="https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png" itemprop="contentUrl">&lt;/a>
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered">
