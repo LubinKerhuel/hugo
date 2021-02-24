@@ -49,7 +49,7 @@ profile: true  # Show author profile?
 # To use, add an image named `featured.jpg/png` to your project's folder. 
 image:
   # Caption (optional)
-  caption: IMU [page](https://www.kerhuel.eu/wiki/Miniature_Inertial_Measurement_Unit_-_IMU/)
+  caption: IMU [page](https://www.kerhuel.eu/wiki/Miniature_Inertial_Measurement_Unit_-_IMU)
   
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight

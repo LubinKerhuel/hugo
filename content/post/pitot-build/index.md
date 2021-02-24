@@ -25,7 +25,7 @@ lastmod: 2019-05-25
 featured: true
 draft: false
 
-slides: Pitot-build
+slides: pitot-build
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -90,7 +90,7 @@ References:
 
 - [report](http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf) by W.Gracey on the impact of the various shape on the measurement.
 - [report (french)](https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf) from ANSTJ with general information on Pitot sensor.
-- [website (French)](http://voiletech.free.fr/skyassistant/Pitot.htm) from Rémi Bourgin with experimental Pitot tube for RC plane
+- [website (French)](http://voiletech.free.fr/skyassistant/pitot.htm) from Rémi Bourgin with experimental Pitot tube for RC plane
 
 <!-- Tube laiton macif (alfer) au Leroy Merlin;
 
@@ -293,7 +293,7 @@ caption="Blue dots are speed difference between GPS and Pitot. The continuous gr
 numbered="true"
 >}}
 
-This wind estimation is used to compensate the airspeed when comparing the GPS ground speed $V\_{gps}$ with the Pitot airspeed $V\_{Pitot}$ [above](/post/Pitot-build/#gps-vs-airspeed).
+This wind estimation is used to compensate the airspeed when comparing the GPS ground speed $V\_{gps}$ with the Pitot airspeed $V\_{Pitot}$ [above](/post/pitot-build/#gps-vs-airspeed).
 
 #### Script
 
