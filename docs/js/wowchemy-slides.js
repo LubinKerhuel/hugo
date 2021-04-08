@@ -2,8 +2,8 @@
   // ns-params:@params
   var slides = {backgroundtransition: "fade", defaulttiming: 120, highlight_style: "dracula", history: false, mousewheel: true, previewlinks: true, progress: true, theme: "black", transition: "zoom", transition_speed: "fast"};
 
-  // ns-hugo:C:\M91449\MCHP_Blockset\Projects\hugo\themes\academic\wowchemy\assets\js\wowchemy-utils.js
-  function fixMermaid() {
+  // ns-hugo:D:\M91449\MCHP_Blockset\Projects\hugo\themes\academic\wowchemy\assets\js\wowchemy-utils.js
+  function fixMermaid(render = false) {
     let mermaids = [];
     [].push.apply(mermaids, document.getElementsByClassName("language-mermaid"));
     for (let i = 0; i < mermaids.length; i++) {
@@ -11,11 +11,17 @@
       let newElement = document.createElement("div");
       newElement.innerHTML = mermaidCodeElement.innerHTML;
       newElement.classList.add("mermaid");
+      if (render) {
+        window.mermaid.mermaidAPI.render(`mermaid-${i}`, newElement.textContent, function(svgCode) {
+          newElement.innerHTML = svgCode;
+        });
+      }
       mermaidCodeElement.parentNode.replaceWith(newElement);
     }
+    console.debug(`Processed ${mermaids.length} Mermaid code blocks`);
   }
 
-  // js/wowchemy-slides.js
+  // <stdin>
   var enabledPlugins = [RevealMarkdown, RevealHighlight, RevealSearch, RevealNotes, RevealMath, RevealZoom];
   var isObject = function(o) {
     return o === Object(o) && !isArray(o) && typeof o !== "function";
@@ -91,7 +97,7 @@
     mermaidOptions["startOnLoad"] = false;
     mermaid.initialize(mermaidOptions);
     document.addEventListener("DOMContentLoaded", function() {
-      fixMermaid();
+      fixMermaid(false);
     });
   }
   var mermaidOptions;
