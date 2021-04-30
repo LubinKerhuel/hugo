@@ -1273,7 +1273,7 @@ The embedded IMU data fusion algorithm use the ICM-20608 inertial sensor to esti
 LQR control loop drives two DC motors of the modified toy.
 No encoder sensor are present.&lt;/p></description></item><item><title>Lab INSA - Real Time Control for a DC / PMSM Motors</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p>Control a 24V motor (Pravalux 24v DC) using the MCLV-V2 board with a dsPIC 33EP256MC506.
 This hands-on is for 5th year students at INSA-Lyon.&lt;/p>
-&lt;p>The hands-on Lab subject available at: &lt;a href="http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/">http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/&lt;/a>.&lt;/p>
+&lt;p>The hands-on Lab subject available at: &lt;a href="https://rtdc.ctrl-elec.fr/">https://rtdc.ctrl-elec.fr/&lt;/a>.&lt;/p>
 &lt;p>Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p>
 &lt;ul>
 &lt;li>Real-time scheduler / CPU load analysis&lt;/li>
@@ -1811,7 +1811,7 @@ An identification can be computed from the motor set-point and the wheel movemen
 &lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png">
 &lt;/a>
 &lt;/p>
-&lt;p>[&lt;a href="http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/" target="_blank" rel="noopener">Lab&lt;/a>] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin">L.Kerhuel&lt;/a> - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux">R.Delpoux&lt;/a>&lt;/p>
+&lt;p>[&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">Lab&lt;/a>] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin">L.Kerhuel&lt;/a> - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux">R.Delpoux&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="plan">Plan:&lt;/h2>
 &lt;ul>
@@ -2273,7 +2273,7 @@ TotalVal = vals'*exps;
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="tp">TP&lt;/h2>
-&lt;p>&lt;a href="http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/" target="_blank" rel="noopener">http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">https://rtdc.ctrl-elec.fr/&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="download">download&lt;/h2>
 &lt;ul>

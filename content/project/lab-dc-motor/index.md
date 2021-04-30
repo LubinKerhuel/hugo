@@ -48,7 +48,7 @@ url_poster = ""
 #links = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
 
 links = [
-	{name = "Lab DC Motor", url = "http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/"},
+	{name = "Lab DC Motor", url = "https://rtdc.ctrl-elec.fr/"},
   {name = "Lab PMSM Motor", url = "http://rcp.ctrl-elec.fr/"},
 	{name = "Simulink models", url = "https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/tree/master/LABMatlabFiles/"},
 	]
@@ -67,7 +67,7 @@ links = [
 Control a 24V motor (Pravalux 24v DC) using the MCLV-V2 board with a dsPIC 33EP256MC506.
 This hands-on is for 5th year students at INSA-Lyon.
 
-The hands-on Lab subject available at: http://www.ctrl-elec.fr/en/ctrl-elec/motor-control/dc-motor-control/.
+The hands-on Lab subject available at: https://rtdc.ctrl-elec.fr/.
 
 Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:
 
