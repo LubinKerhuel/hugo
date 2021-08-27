@@ -229,7 +229,7 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;/figure>
 &lt;/div>
 &lt;h3 id="various">Various&lt;/h3>
-&lt;p>&lt;a href="https://em3ev.com/">https://em3ev.com/&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://em3ev.com/" target="_blank" rel="noopener">https://em3ev.com/&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>36V battery: 3.385 kg&lt;/li>
 &lt;li>42V battery: 3.965 kg&lt;/li>
@@ -772,13 +772,13 @@ The cable has logic to decode the RC PWM signal and generate the signal pulse sc
 &lt;p>Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
-&lt;/div></description></item><item><title>Lab INSA - Real Time Control for a DC / PMSM Motors</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0100</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p>Control a 24V motor (Pravalux 24v DC) using the MCLV-V2 board with a dsPIC 33EP256MC506.
+&lt;/div></description></item><item><title>Lab INSA - Real Time Control for a DC / PMSM Motors</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p>Control a 24V motor (Pravalux 24v DC) using the MCLV-V2 board with a dsPIC 33EP256MC506.
 This hands-on is for 5th year students at INSA-Lyon.&lt;/p>
-&lt;p>The hands-on Lab subject available at: &lt;a href="https://rtdc.ctrl-elec.fr/">https://rtdc.ctrl-elec.fr/&lt;/a>.&lt;/p>
+&lt;p>The hands-on Lab subject available at: &lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">https://rtdc.ctrl-elec.fr/&lt;/a>.&lt;/p>
 &lt;p>Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p>
 &lt;ul>
 &lt;li>Real-time scheduler / CPU load analysis&lt;/li>
 &lt;li>Fixed-point datatypes&lt;/li>
 &lt;/ul>
 &lt;p>2021: Dspace project not feasible in labs due to Covid-19. It was replaced with home lab on MCLV-2 boards (sent to students) replacing Dspace.
-lab subject is availalbe at: &lt;a href="http://rcp.ctrl-elec.fr/">http://rcp.ctrl-elec.fr/&lt;/a>&lt;/p></description></item></channel></rss>
+lab subject is availalbe at: &lt;a href="http://rcp.ctrl-elec.fr/" target="_blank" rel="noopener">http://rcp.ctrl-elec.fr/&lt;/a>&lt;/p></description></item></channel></rss>
