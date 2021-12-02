@@ -196,7 +196,7 @@ $m$ is the mass of the pendulum (without the trolley).
 $l$ is the length from the inter-wheel&amp;rsquo;s axis to the center of mass of the pendulum (without the trolley)&lt;/p>
 &lt;p>$$
 \left\{ \begin{array}{rcl}
-\vec{i} &amp;amp; = &amp;amp; \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\\&lt;br>
+\vec{i} &amp;amp; = &amp;amp; \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\\
 \vec{j} &amp;amp; = &amp;amp; \vec{n} . sin(\theta) + \vec{r} . cos(\theta)
 \end{array} \right.
 $$&lt;/p>
@@ -206,10 +206,10 @@ $$&lt;/p>
 \begin{array}{rcl}
 \frac{\partial \vec{r}}{\partial t}
 &amp;amp; = &amp;amp;
-- \dot{\theta} \vec{n} \\\&lt;br>
+- \dot{\theta} \vec{n} \\\
 \frac{\partial^2\vec{ r }}{\partial t^2}
 &amp;amp; = &amp;amp;
-- \frac{\partial }{\partial t} \left( \dot{\theta} \vec{n} \right) \\\&lt;br>
+- \frac{\partial }{\partial t} \left( \dot{\theta} \vec{n} \right) \\\
 &amp;amp; = &amp;amp;
 - \ddot{\theta} \vec{n} - \dot{\theta}^2 \vec{r}
 \end{array}
@@ -217,7 +217,7 @@ $$&lt;/p>
 &lt;p>The projection of the forces equation in the pendulum frame $ \{ \vec{r},\vec{n} \} $ is:
 $$
 \left\{ \begin{array}{rcl}
-\left( ml\dot{\theta}^2 + Ctfg \right) \vec{r} = \vec{0} \\\&lt;br>
+\left( ml\dot{\theta}^2 + Ctfg \right) \vec{r} = \vec{0} \\\
 \left( l \ddot{\theta} + \frac{k}{m}\dot{\theta} - g . sin(\theta) \right) \vec{n} = \vec{0}&lt;br>
 \end{array} \right.
 $$&lt;/p>
