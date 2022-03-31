@@ -16,10 +16,6 @@ baseurl = "https://lubin.kerhuel.eu/"
 #canonifyURLs = true
 
 
-# Enter a copyright notice to display in the site footer.
-# To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2019 - {year} Lubin Kerhuel"
-
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""

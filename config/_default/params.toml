@@ -84,38 +84,7 @@ edit_page = {repo_url = "https://github.com/LubinKerhuel/hugo", repo_branch = "m
 # Show related content at the bottom of pages?
 show_related = {book = true, page = false, post = true, project = true, publication = true, talk = true}
 
-############################
-## Contact details
-##
-## These details power the Contact widget (if enabled).
-## Additionally, for organizations, these details may be used to enrich search engine results.
-############################
 
-# Contact Widget setup
-email = "lubin@kerhuel.eu"
-phone = ""
-
-# Address
-# For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "19 rue Adrien Barthe", city = "Bayonne", region = "Aquitaine", postcode = "64100", country = "France", country_code = "FR"}
-
-# Geographic coordinates
-# To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "43.481293", longitude = "-1.493581"}
-
-
-# Enter an optional link for booking appointments (e.g. calendly.com).
-appointment_url = ""
-
-# Contact links
-#   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
-contact_links = [
-#  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/Twitter"},
-#  {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
-#  {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
-  {icon = "comments", icon_pack = "fas", name = "Microchip Forum", link = "https://www.microchip.com/forums/f192.aspx"},
-  # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
-  ]
 
 ############################
 ## Social
@@ -168,7 +137,7 @@ highlight_superuser = false
 
 # Show a copyright license from creativecommons.org in the site footer?
 # Page specific copyright licenses are also possible by adding this option to a page's front matter.
-copyright_license = {enable = false, allow_derivatives = false, share_alike = true, allow_commercial = false, notice = "This work is licensed under {license}"}
+footer = {copyright = { notice = "&copy; 2019 - {year} Lubin Kerhuel" , license = {enable = false, allow_derivatives = false, share_alike = true, allow_commercial = false} } }
 
 # Link authors to their profile page? (true/false)
 link_authors = true
