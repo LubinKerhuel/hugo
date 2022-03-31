@@ -1,5 +1,5 @@
 # Netlify redirects
 # Automatically generated
-# Documentation: http://bit.ly/netlify-deployment
+# Documentation: https://docs.netlify.com/routing/redirects/
 /project/lab_dc_motor/ /project/lab-dc-motor/
 /project/inverted_pendulum_flywheels/ /docs/inverted-pendulum/

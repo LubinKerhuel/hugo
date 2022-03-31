@@ -1,6 +1,9 @@
+d:
+cd D:\M91449\MCHP_Blockset\Projects\hugo
+
 start http://localhost:1313
 hugo version
-hugo server --port 1313 -t "academic/wowchemy" -F --i18n-warnings --gc --minify --enableGitInfo --cleanDestinationDir --forceSyncStatic --noHTTPCache --disableFastRender &
+hugo server --port 1313 -t "academic/wowchemy" -F --gc --minify --enableGitInfo --cleanDestinationDir --forceSyncStatic --noHTTPCache --disableFastRender &
 
 pause
 
