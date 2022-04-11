@@ -517,12 +517,12 @@ m = 72mm
 &lt;p>The MCP3428 samples $P_{diff}$ at 250Hz during flights. $V_{Pitot}=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.15$.&lt;/p>
 &lt;p>No calibration were required. Sensor theoretical output scaling were used with the formula to compute the speed from the pressure. $\rho$ value was tune from a default value 1.2 to 1.16 which minimized the mean error however the improvement was not a big deal. The only value to adjust is the raw pressure measurement offset (zero). The zero value for the sensor used is -1800.&lt;/p>
 &lt;p>Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):&lt;/p>
-&lt;pre>&lt;code class="language-matlab">% Pitot Calibration. P_pitot is a vector with raw MCP3428 output read from I2C bus.
-P_pitot_cal = 0.2041* (double(P_pitot) + 1800); % to Pa unit
-% Compute Speed (m/s) from diff pressure (in Pa).
-V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
-&lt;/code>&lt;/pre>
-&lt;h3 id="gps-vs-airspeed">Comparison with GPS ground speed&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-matlab" data-lang="matlab">&lt;span class="line">&lt;span class="cl">&lt;span class="c">% Pitot Calibration. P_pitot is a vector with raw MCP3428 output read from I2C bus.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">P_pitot_cal&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mf">0.2041&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">double&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">P_pitot&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1800&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c">% to Pa unit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">% Compute Speed (m/s) from diff pressure (in Pa).&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">V_pitot&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mf">1.15&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">P_pitot_cal&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="gps-vs-airspeed">Comparison with GPS ground speed&lt;/h3>
 &lt;p>In calm condition, the ground speed $V_{GPS}$ and airspeed $V_{Pitot}$ are equal.&lt;/p>
 &lt;p>In windy condition, wind average direction and strength are estimated combining $V_{GPS}$, $V_{Pitot}$ and the plane yaw $\Theta_{heading}$ direction (using GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>). This &lt;a href="#wind-estimation">wind estimation&lt;/a> is described below.&lt;/p>
 &lt;p>The airplane ground speed (GPS) is estimated with the difference of the airspeed (Pitot) with the projected wind to the aircraft forward direction:&lt;/p>
@@ -586,19 +586,22 @@ V_pitot = sqrt(max(0,(2/1.15) * P_pitot_cal));
 &lt;p>This wind estimation is used to compensate the airspeed when comparing the GPS ground speed $V_{gps}$ with the Pitot airspeed $V_{Pitot}$ &lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#gps-vs-airspeed">above&lt;/a>.&lt;/p>
 &lt;h4 id="script">Script&lt;/h4>
 &lt;p>Matlab script to estimate wind off-line:&lt;/p>
-&lt;pre>&lt;code class="language-matlab">% V_gps and V_pitot are two vector with all data measured.
-% V_pitot was under-sampled (averaging) by a factor 5 to fit the 50Hz log from the GPS.
-% GPS chip update frequency is 10Hz, but it is logged at 50Hz.
-V_err = V_pitot - V_gps; % Ground and Airspeed difference (i.e. wind)
-M = [cos(COG); sin(COG) ]'; % COG is the direction (Theta in rad) vector data measured from the GPS
-y = V_err';
-x = M\y; % Solve wind strength and direction using linear algebra (MMSE)
-Theta_Wind = -atan2(x(2),x(1)); % Wind (go to) direction. Azimuth direction is opposite to trigo
-V_Wind = sqrt(sum(x(1:2).^2)); % Wind strength (m/s)
-plot(COG,V_err','.'); hold on; % plot Error blue dots
-plot([0:.01:(2*pi)],V_Wind*(cos([0:.01:(2*pi)]+ Theta_Wind)),'-k','linewidth',3); % plot wind
-&lt;/code>&lt;/pre>
-&lt;h4 id="discussion">Discussion&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-matlab" data-lang="matlab">&lt;span class="line">&lt;span class="cl">&lt;span class="c">% V_gps and V_pitot are two vector with all data measured.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">% V_pitot was under-sampled (averaging) by a factor 5 to fit the 50Hz log from the GPS.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">% GPS chip update frequency is 10Hz, but it is logged at 50Hz.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">V_err&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">V_pitot&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">V_gps&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">% Ground and Airspeed difference (i.e. wind) &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">M&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nb">cos&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">COG&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="nb">sin&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">COG&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="o">&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">% COG is the direction (Theta in rad) vector data measured from the GPS&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">y&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">V_err&lt;/span>&lt;span class="o">&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">M&lt;/span>&lt;span class="o">\&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">% Solve wind strength and direction using linear algebra (MMSE)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">Theta_Wind&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="nb">atan2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c">% Wind (go to) direction. Azimuth direction is opposite to trigo&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">V_Wind&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.^&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c">% Wind strength (m/s)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">COG&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">V_err&lt;/span>&lt;span class="o">&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#39;.&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="n">hold&lt;/span> &lt;span class="n">on&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">% plot Error blue dots &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">plot&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">:.&lt;/span>&lt;span class="mi">01&lt;/span>&lt;span class="p">:(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nb">pi&lt;/span>&lt;span class="p">)],&lt;/span>&lt;span class="n">V_Wind&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">cos&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">:.&lt;/span>&lt;span class="mi">01&lt;/span>&lt;span class="p">:(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nb">pi&lt;/span>&lt;span class="p">)]&lt;/span>&lt;span class="o">+&lt;/span> &lt;span class="n">Theta_Wind&lt;/span>&lt;span class="p">)),&lt;/span>&lt;span class="s">&amp;#39;-k&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#39;linewidth&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c">% plot wind&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="discussion">Discussion&lt;/h4>
 &lt;p>Using the GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
 Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane airspeed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p>
 &lt;p>W. Premerlani propose a &lt;a href="https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view" target="_blank" rel="noopener">wind estimation&lt;/a> using exclusively GPS data. Tests with this GPS dataset was not conclusive while trying to use all GPS sample while the platform direction is modified (i.e. COG derivative is above a given threshold). GPS dynamic seems too slow to provide robust results.&lt;/p>
