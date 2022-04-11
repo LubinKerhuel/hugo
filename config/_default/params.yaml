@@ -1,0 +1,115 @@
+# SITE SETUP
+# Guide: https://wowchemy.com/docs/getting-started/
+# Documentation: https://wowchemy.com/docs/
+# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+
+# Appearance
+
+# default media_dir is now media. Otherwise, must add this variable:
+media_dir: img
+
+appearance:
+  theme_day: mydarkblue
+  theme_night: mydarkblue
+  font: myfont #minimal
+  font_size: L
+
+plugins_css: [hugo-easy-gallery]
+
+plugins_js: [load-photoswipe]
+
+# SEO
+
+marketing:
+  seo:
+    site_type: Person
+    local_business_type: ''
+    org_name: ''
+    description: 'Rapid Control Prototyping with Matlab/Simulink for dsPIC, PIC32 and SAMx7 microcontrollers'
+    twitter: 'LubinKerhuel'
+  analytics:
+    google_analytics: '' # removed tag, use tag manager UA-90899-5
+    google_tag_manager: 'GTM-THRKWJJ' # LK tag manager ref tag manager global ref:"GTM-THRKWJJ"   new tag: G-HBBW2KYQGP (not used) G-E4JWYBB89Q
+    microsoft_clarity: '4135mxjybv'    
+    baidu_tongji: ''
+  verification:
+    google: ''
+    baidu: ''
+
+# Site header
+
+header:
+  navbar:
+    enable: true
+    align: l
+    show_logo: true
+    show_language: false
+    show_day_night: false
+    show_search: true
+    highlight_active_link: true
+
+# Site footer
+
+footer:
+  copyright:
+    notice: '&copy; 2019 - {year} Lubin Kerhuel'
+    license:
+      enable: false
+      allow_derivatives: false
+      share_alike: true
+      allow_commercial: false
+
+# Localization
+
+locale:
+  date_format: 'January 2006'
+  time_format: '3:04 PM'
+  address_format: fr-fr
+
+# Site features
+
+features:
+  syntax_highlighter:
+    enable: true # per page basis
+    extra_languages: 
+      - matlab
+    theme: 'vs2015'
+      
+  math:
+    enable: true
+  privacy_pack:
+    enable: false
+  repository:
+    url: 'https://github.com/LubinKerhuel/hugo'
+    content_dir: content
+    branch: master
+  avatar:
+    gravatar: false
+    shape: circle
+  comment:
+    provider: ''
+    disqus:
+      shortname: ''
+      show_count: true
+    commento:
+      url: ''
+  search:
+    provider: wowchemy
+    algolia:
+      app_id: ''
+      api_key: ''
+      index_name: ''
+      show_logo: false
+  map:
+    provider: 'mapnik'
+    api_key: ''
+    zoom: 6
+
+# Extensions
+
+extensions:
+  cms:
+    branch: master
+    local_backend: false
+  academicons:
+    enable: true
