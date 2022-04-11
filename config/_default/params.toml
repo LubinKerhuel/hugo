@@ -18,7 +18,17 @@ theme = "mydarkblue"
 day_night = false
 
 # Show search in main page
-show_search = true
+[header]
+  [header.navbar]
+    enable=true
+    show_logo=true
+    show_language=false
+    show_day_night=false
+    show_search=true
+    highlight_active_link=true
+    
+
+#show_search = true
 
 # Override the theme's font set (optional).
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
@@ -211,6 +221,10 @@ plugins_js  = ["load-photoswipe"]
   #   "wowchemy": Built-in search engine
   #   "algolia": Algolia (https://www.algolia.com)
   provider = "wowchemy"
+
+  [search.wowchemy]
+    min_length = 1
+    threshold= 0.3
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
