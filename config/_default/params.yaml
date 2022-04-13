@@ -9,14 +9,19 @@
 media_dir: img
 
 appearance:
-  theme_day: mydarkblue
-  theme_night: mydarkblue
-  font: myfont #minimal
+  theme: mydarkblue
+#  theme_day: minimal     #mydarkblue
+#  theme_night: mydarkblue
+  font: myfont
   font_size: L
 
+# Photoswipe
 plugins_css: [hugo-easy-gallery]
-
 plugins_js: [load-photoswipe]
+
+# Added parmaeters
+reading_time: false   # could be set per pages, or globally
+
 
 # SEO
 
@@ -33,7 +38,7 @@ marketing:
     microsoft_clarity: '4135mxjybv'    
     baidu_tongji: ''
   verification:
-    google: ''
+    google: 'ifyEc9AgWzGakixVyalqxGmn-bz-9iXp9IeGk-LePzc'
     baidu: ''
 
 # Site header
@@ -44,7 +49,7 @@ header:
     align: l
     show_logo: true
     show_language: false
-    show_day_night: false
+    show_day_night: true
     show_search: true
     highlight_active_link: true
 
