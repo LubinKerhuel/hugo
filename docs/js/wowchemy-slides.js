@@ -3,7 +3,7 @@
   var slides = { backgroundtransition: "fade", defaulttiming: 120, highlight_style: "dracula", history: false, mousewheel: true, previewlinks: true, progress: true, theme: "black", transition: "zoom", transition_speed: "fast" };
 
   // <stdin>
-  var enabledPlugins = [RevealMarkdown, RevealHighlight, RevealSearch, RevealNotes, RevealMath.MathJax3, RevealZoom];
+  var enabledPlugins = [RevealMarkdown, RevealSearch, RevealNotes, RevealMath.MathJax3, RevealZoom];
   var isObject = function(o) {
     return o === Object(o) && !isArray(o) && typeof o !== "function";
   };
