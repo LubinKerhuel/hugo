@@ -1,11 +1,11 @@
 @rem rmdir /Q /S docs
-@rem hugo -t "academic/wowchemy" -F --minify --enableGitInfo --cleanDestinationDir  --destination /docs 
+@rem hugo -t "academic/modules/wowchemy" -F --minify --enableGitInfo --cleanDestinationDir  --destination /docs 
 hugo version
 @rem hugo list drafts 
 
-hugo -t "academic/wowchemy" --environment production -F --gc --cleanDestinationDir --minify --enableGitInfo --forceSyncStatic --destination /docs 
-hugo -t "academic/wowchemy" --environment production -F --minify --enableGitInfo --destination /docs 
-@rem hugo -t "academic/wowchemy" -F --gc --cleanDestinationDir --minify --enableGitInfo --forceSyncStatic --destination /docs 
+hugo -t "academic/modules/wowchemy" --environment production -F --gc --cleanDestinationDir --minify --enableGitInfo --forceSyncStatic --destination /docs 
+hugo -t "academic/modules/wowchemy" --environment production -F --minify --enableGitInfo --destination /docs 
+@rem hugo -t "academic/modules/wowchemy" -F --gc --cleanDestinationDir --minify --enableGitInfo --forceSyncStatic --destination /docs 
 
 git add docs/*
 @echo off

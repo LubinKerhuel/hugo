@@ -201,9 +201,9 @@ m = 72mm
 &lt;p>The resulting resolution is provided from:&lt;/p>
 &lt;ul>
 &lt;li>(1) &lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> Analog output sensitivity is 1633 Pa/V&lt;/li>
-&lt;li>(2) &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> 12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>(2) &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> 12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
 &lt;/ul>
-&lt;p>With (1) and (2), we obtain a resolution of $1633 * 0.125e^{-3} $ = &lt;em>&lt;strong>0.2041 Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/strong>&lt;/em>&lt;/p>
+&lt;p>With (1) and (2), we obtain a resolution of $1633 * 0.125e^{-3} $ = &lt;em>&lt;strong>0.2041 Pa / LSB&lt;sup id="fnref2:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/strong>&lt;/em>&lt;/p>
 &lt;div class="box" style="max-width:80%">
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 &lt;div class="img">
@@ -229,7 +229,7 @@ m = 72mm
 &lt;/figure>
 &lt;/div>
 &lt;h4 id="possible-noiseoffset-sources">possible noise/offset sources&lt;/h4>
-&lt;p>The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> with the analog to digital circuit setting).&lt;/p>
+&lt;p>The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref3:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> with the analog to digital circuit setting).&lt;/p>
 &lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
 &lt;h2 id="flight-setup">Flight setup&lt;/h2>
 &lt;p>The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p>
@@ -367,7 +367,7 @@ m = 72mm
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">COG&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">V_err&lt;/span>&lt;span class="o">&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#39;.&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="n">hold&lt;/span> &lt;span class="n">on&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">% plot Error blue dots &lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">plot&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">:.&lt;/span>&lt;span class="mi">01&lt;/span>&lt;span class="p">:(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nb">pi&lt;/span>&lt;span class="p">)],&lt;/span>&lt;span class="n">V_Wind&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">cos&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">:.&lt;/span>&lt;span class="mi">01&lt;/span>&lt;span class="p">:(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nb">pi&lt;/span>&lt;span class="p">)]&lt;/span>&lt;span class="o">+&lt;/span> &lt;span class="n">Theta_Wind&lt;/span>&lt;span class="p">)),&lt;/span>&lt;span class="s">&amp;#39;-k&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#39;linewidth&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c">% plot wind&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="discussion">Discussion&lt;/h4>
-&lt;p>Using the GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
+&lt;p>Using the GPS COG&lt;sup id="fnref1:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
 Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane airspeed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p>
 &lt;p>W. Premerlani propose a &lt;a href="https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view" target="_blank" rel="noopener">wind estimation&lt;/a> using exclusively GPS data. Tests with this GPS dataset was not conclusive while trying to use all GPS sample while the platform direction is modified (i.e. COG derivative is above a given threshold). GPS dynamic seems too slow to provide robust results.&lt;/p>
 &lt;h4 id="other-flight-data">Other flight data&lt;/h4>
@@ -382,17 +382,17 @@ Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be bes
 Project folder:
 C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind
 -->
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
-&lt;p>Least Significant Bit&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;li id="fn:1">
+&lt;p>Least Significant Bit&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref3:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
-&lt;p>Course Over Ground&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;li id="fn:2">
+&lt;p>Course Over Ground&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;/div></description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>

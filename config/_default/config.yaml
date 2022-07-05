@@ -23,8 +23,18 @@ disableLanguages: fr
 
 module:
   imports:
-    - path: academic/wowchemy    
-    - path: academic/wowchemy-cms        
+    - path: academic/modules/wowchemy-plugin-netlify-cms
+    - path: academic/modules/wowchemy-plugin-netlify
+    - path: academic/modules/wowchemy
+
+params:
+  header:
+    navbar:
+      enable: false
+  extensions:
+    cms:
+      local_backend: false
+      publish_mode:    
 
 ############################
 ## ADVANCED

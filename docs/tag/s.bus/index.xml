@@ -280,11 +280,11 @@ Rx and Tx channels are used. They are assigned to the same pin. UART is configur
 &lt;li>&lt;a href="http://ardupilot.org/copter/docs/common-frsky-passthrough.html" target="_blank" rel="noopener">ArduCopter project&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://sbustelemetrysensors.blogspot.com/" target="_blank" rel="noopener">SBUS2 by Jerry Chapman&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>Received Signal Strength Indicator&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
