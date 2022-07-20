@@ -1,26 +1,33 @@
 ---
 title: miniature airspeed sensor
+summary: build of a pitot tube sensor for aircraft model. With pitot and GPS, determine of wind force and direction.
+authors: [Lubin]
+tags: ['Tutorials']
+categories: []
+#date: '2019-02-05'
 
 sitemap:
   priority: 1
 
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
+  # Choose a code highlighting style (if highlighting enabled in `params.toml`)
+  #   Light style: github. Dark style: dracula (default).
   theme: black  # Reveal JS theme name
   highlight_style: dracula  # Highlight JS theme name
   
   #slide_number: true
-  progress: true 
-  transition: zoom
-  transition_speed: fast
-  history: false
+#  progress: true 
+#  transition: zoom
+#  transition_speed: fast
+#  history: false
 
-  defaultTiming: 120
-  mouseWheel: true
+#  defaultTiming: 120
+#  mouseWheel: true
 
-  previewLinks: true
+#  previewLinks: true
 
-  backgroundTransition: fade
+#  backgroundTransition: fade
 
   # width: 100%
   # height: 100%

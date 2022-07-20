@@ -80,5 +80,3 @@
   }
   var mermaidOptions;
 })();
-maidOptions;
-})();
