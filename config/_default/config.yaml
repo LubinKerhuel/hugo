@@ -25,6 +25,7 @@ module:
   imports:
     - path: academic/modules/wowchemy-plugin-netlify-cms
     - path: academic/modules/wowchemy-plugin-netlify
+    - path: academic/modules/wowchemy-plugin-reveal
     - path: academic/modules/wowchemy
 
 params:
