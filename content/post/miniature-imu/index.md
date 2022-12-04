@@ -24,7 +24,6 @@ date: 2019-06-22
 featured: true
 draft: true
 
-draft: true
 #slides: Pitot-build
 
 # Featured image
