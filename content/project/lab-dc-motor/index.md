@@ -31,7 +31,8 @@ comments = false  # Show comments?
 #   E.g. `slides = "example-slides"` references 
 #   `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides = "slides_dcmotor_insa"
+slides = "slides_dcmotor_insa_2022_12" 
+# "slides_dcmotor_insa"
 
 # Links (optional).
 url_pdf = ""
