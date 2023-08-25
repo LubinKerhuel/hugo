@@ -88,9 +88,9 @@ numbered="true"
 
 References:
 
-- [report](http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf) by W.Gracey on the impact of the various shape on the measurement.
+- [report](https://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf) by W.Gracey on the impact of the various shape on the measurement.
 - [report (french)](https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf) from ANSTJ with general information on Pitot sensor.
-- [website (French)](http://voiletech.free.fr/skyassistant/pitot.htm) from Rémi Bourgin with experimental Pitot tube for RC plane
+- [website (French)](https://voiletech.free.fr/skyassistant/pitot.htm) from Rémi Bourgin with experimental Pitot tube for RC plane
 
 <!-- Tube laiton macif (alfer) au Leroy Merlin;
 
@@ -179,7 +179,7 @@ numbered="true"
 
 The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB[^LSB] with the analog to digital circuit setting).
 
-MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator ([MCP 1700](http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf)) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.
+MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator ([MCP 1700](https://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf)) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.
 
 ## Flight setup
 

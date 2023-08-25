@@ -500,7 +500,7 @@ TotalVal = vals'*exps;
 	https://www.microchip.com/XC16
 
 - https://lubin.kerhuel.eu
-- http://www.ctrl-elec.fr
+- https://www.ctrl-elec.fr
 
 
 ---

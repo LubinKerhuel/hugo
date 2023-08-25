@@ -41,7 +41,7 @@ math: true
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
 
-The board [PDB-XPW](http://www.mateksys.com/?portfolio=pdb-xpw) from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.
+The board [PDB-XPW](https://www.mateksys.com/?portfolio=pdb-xpw) from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.
 
 The chip "INA1x9 High-Side Measurement Current Shunt Monitor" from Texas Instrument condition and amplify the shunt resistor voltage drop providing an analog output proportional to the current.
 

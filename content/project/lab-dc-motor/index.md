@@ -50,7 +50,7 @@ url_poster = ""
 
 links = [
 	{name = "Lab DC Motor", url = "https://rtdc.ctrl-elec.fr/"},
-  {name = "Lab PMSM Motor", url = "http://rcp.ctrl-elec.fr/"},
+  {name = "Lab PMSM Motor", url = "https://rcp.ctrl-elec.fr/"},
 	{name = "Simulink models", url = "https://github.com/rdelpoux/INSA_TP_CommandeTempsReel_MCC/tree/master/LABMatlabFiles/"},
 	]
 
@@ -76,4 +76,4 @@ Slides presents the adaptation required to go from a Simulink model for Simulati
 - Fixed-point datatypes
 
 2021: Dspace project not feasible in labs due to Covid-19. It was replaced with home lab on MCLV-2 boards (sent to students) replacing Dspace.
-lab subject is availalbe at: http://rcp.ctrl-elec.fr/
+lab subject is availalbe at: https://rcp.ctrl-elec.fr/

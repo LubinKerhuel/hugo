@@ -318,9 +318,9 @@ Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not ch
 &lt;/div>
 &lt;p>References:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
+&lt;li>&lt;a href="https://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
 &lt;li>&lt;a href="https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf" target="_blank" rel="noopener">report (french)&lt;/a> from ANSTJ with general information on Pitot sensor.&lt;/li>
-&lt;li>&lt;a href="http://voiletech.free.fr/skyassistant/pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
+&lt;li>&lt;a href="https://voiletech.free.fr/skyassistant/pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
 &lt;/ul>
 &lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
 Tube intèrieur: 2mm, trou 1mm
@@ -465,7 +465,7 @@ m = 72mm
 &lt;/div>
 &lt;h4 id="possible-noiseoffset-sources">possible noise/offset sources&lt;/h4>
 &lt;p>The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref3:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> with the analog to digital circuit setting).&lt;/p>
-&lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
+&lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="https://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
 &lt;h2 id="flight-setup">Flight setup&lt;/h2>
 &lt;p>The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p>
 &lt;div class="box" style="max-width:80%">
@@ -668,7 +668,7 @@ C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_Pit
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>The board &lt;a href="http://www.mateksys.com/?portfolio=pdb-xpw" target="_blank" rel="noopener">PDB-XPW&lt;/a> from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p>
+&lt;p>The board &lt;a href="https://www.mateksys.com/?portfolio=pdb-xpw" target="_blank" rel="noopener">PDB-XPW&lt;/a> from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p>
 &lt;p>The chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument condition and amplify the shunt resistor voltage drop providing an analog output proportional to the current.&lt;/p>
 &lt;p>On the PDB-XPW board, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms shunt resistor, itself just below to the Power supply input connector.&lt;/p>
 &lt;p>The amplification gain is set with the 47 kOhm resistor next to the INA1x9 component. This original value of 47 kOhm correspond to a gain of 47.
@@ -784,7 +784,7 @@ This hands-on is for 5th year students at INSA-Lyon.&lt;/p>
 &lt;li>Fixed-point datatypes&lt;/li>
 &lt;/ul>
 &lt;p>2021: Dspace project not feasible in labs due to Covid-19. It was replaced with home lab on MCLV-2 boards (sent to students) replacing Dspace.
-lab subject is availalbe at: &lt;a href="http://rcp.ctrl-elec.fr/" target="_blank" rel="noopener">http://rcp.ctrl-elec.fr/&lt;/a>&lt;/p></description></item><item><title>miniature airspeed sensor</title><link>https://lubin.kerhuel.eu/slides/pitot-build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/pitot-build/</guid><description>&lt;h2 id="pitot-tube">Pitot tube&lt;/h2>
+lab subject is availalbe at: &lt;a href="https://rcp.ctrl-elec.fr/" target="_blank" rel="noopener">https://rcp.ctrl-elec.fr/&lt;/a>&lt;/p></description></item><item><title>miniature airspeed sensor</title><link>https://lubin.kerhuel.eu/slides/pitot-build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/pitot-build/</guid><description>&lt;h2 id="pitot-tube">Pitot tube&lt;/h2>
 &lt;h3 id="miniature-airspeed-sensor">Miniature airspeed sensor&lt;/h3>
 &lt;h4 id="for-rc-plane--uav">for RC plane &amp;amp; UAV&lt;/h4>
 &lt;p>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a> description&lt;/p>

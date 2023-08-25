@@ -148,9 +148,9 @@ Block input is the 4 bytes codint for the sensor value.&lt;/p></description></it
 &lt;/div>
 &lt;p>References:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="http://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
+&lt;li>&lt;a href="https://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
 &lt;li>&lt;a href="https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf" target="_blank" rel="noopener">report (french)&lt;/a> from ANSTJ with general information on Pitot sensor.&lt;/li>
-&lt;li>&lt;a href="http://voiletech.free.fr/skyassistant/pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
+&lt;li>&lt;a href="https://voiletech.free.fr/skyassistant/pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
 &lt;/ul>
 &lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
 Tube intèrieur: 2mm, trou 1mm
@@ -295,7 +295,7 @@ m = 72mm
 &lt;/div>
 &lt;h4 id="possible-noiseoffset-sources">possible noise/offset sources&lt;/h4>
 &lt;p>The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref3:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> with the analog to digital circuit setting).&lt;/p>
-&lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
+&lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="https://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
 &lt;h2 id="flight-setup">Flight setup&lt;/h2>
 &lt;p>The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p>
 &lt;div class="box" style="max-width:80%">

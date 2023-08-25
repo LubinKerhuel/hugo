@@ -16,7 +16,7 @@ address: Laboratoire Ampère UMR CNRS 5005
 
 organizations:
   - name: INSA Lyon
-    url: http://www.ampere-lab.fr/
+    url: https://www.ampere-lab.fr/
 
 # Short bio (displayed in user profile at end of posts)
 bio: Assistant Professor at Laboratoire Ampère UMR CNRS 500, Teaching at INSA Lyon

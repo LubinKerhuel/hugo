@@ -225,14 +225,14 @@ Tx is implemented with a circular buffer with 64 bytes buffer and interrupt prio
 
 FrSky protocol are not always documented. The following website helped understanding the various protocol:
 
-- [Smart Port on ROBOTmaker](http://www.robotmaker.eu/ROBOTmaker/quadcopter-3d-proximity-sensing/frysky-s-port-interface)
+- [Smart Port on ROBOTmaker](https://www.robotmaker.eu/home/quadcopters-360-degree-proximity-sensing-project-overview/frsky-s-port-interface)
 - [Smart Port on telemetry-convert project](https://code.google.com/archive/p/telemetry-convert/wikis/FrSkySPortProtocol.wiki)
 - [Smart Port TelemetryScript by Allesandro Apostoli](https://github.com/yaapu/FrskyTelemetryScript/wiki/FrSky-SPort-protocol-specs)
 - [S.BUS on Arduino lib project](https://github.com/bolderflight/SBUS)
 - [Smart Port on MavLink-FrSkySPort project](https://github.com/athertop/MavLink_FrSkySPort/wiki)
 - [betaflight source code](https://github.com/betaflight/betaflight/tree/master/src/main/telemetry)
-- [ArduCopter project](http://ardupilot.org/copter/docs/common-frsky-passthrough.html)
-- [SBUS2 by Jerry Chapman](http://sbustelemetrysensors.blogspot.com/)
+- [ArduCopter project](https://ardupilot.org/copter/docs/common-frsky-passthrough.html)
+- [SBUS2 by Jerry Chapman](https://sbustelemetrysensors.blogspot.com/)
 
 
 [^RSSI]: Received Signal Strength Indicator

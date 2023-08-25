@@ -60,9 +60,9 @@
 &lt;h3 id="difference-with-existing-autopilot">Difference with existing autopilot&lt;/h3>
 &lt;p>Many off the shelf autopilot exists and works great. To mention few of them:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="http://ardupilot.org/" target="_blank" rel="noopener">Ardupilot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://ardupilot.org/" target="_blank" rel="noopener">Ardupilot&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://px4.io/" target="_blank" rel="noopener">PX4&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://inavflight.com/" target="_blank" rel="noopener">iNav&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://inavflight.com/" target="_blank" rel="noopener">iNav&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.librepilot.org/site/index.html" target="_blank" rel="noopener">LibrePilot&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://wiki.paparazziuav.org/wiki/Main_Page" target="_blank" rel="noopener">Paparazzi&lt;/a>.&lt;/li>
 &lt;li>Others are listed on the &lt;a href="https://blog.dronetrest.com/flight-controller-firmware/" target="_blank" rel="noopener">DroneTrest review&lt;/a>).&lt;/li>
@@ -103,7 +103,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;/li>
 &lt;li>&lt;strong>GPS&lt;/strong>: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.&lt;/li>
 &lt;li>&lt;strong>Data logger&lt;/strong>: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.).&lt;/li>
-&lt;li>&lt;strong>Radio link&lt;/strong>: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href="http://qgroundcontrol.com/" target="_blank" rel="noopener">qgroundcontrol&lt;/a> base station running on most platforms (PC, android, windows, Linux).&lt;/li>
+&lt;li>&lt;strong>Radio link&lt;/strong>: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href="https://qgroundcontrol.com/" target="_blank" rel="noopener">qgroundcontrol&lt;/a> base station running on most platforms (PC, android, windows, Linux).&lt;/li>
 &lt;li>&lt;strong>Action cam&lt;/strong>: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li>
 &lt;/ul>
 &lt;div class="box" style="max-width:80%">

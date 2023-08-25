@@ -80,9 +80,9 @@ Building a platform for testing various autopilot control loop has become simple
 
 Many off the shelf autopilot exists and works great. To mention few of them:
 
-- [Ardupilot](http://ardupilot.org/)
+- [Ardupilot](https://ardupilot.org/)
 - [PX4](https://px4.io/)
-- [iNav](http://inavflight.com/)
+- [iNav](https://inavflight.com/)
 - [LibrePilot](https://www.librepilot.org/site/index.html)
 - [Paparazzi](https://wiki.paparazziuav.org/wiki/Main_Page).
 - Others are listed on the [DroneTrest review](https://blog.dronetrest.com/flight-controller-firmware/)).
@@ -123,7 +123,7 @@ numbered="true"
   - Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See [build and test](/post/pitot-build/) page.
 - **GPS**: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.
 - **Data logger**: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.). 
-- **Radio link**: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with [qgroundcontrol](http://qgroundcontrol.com/) base station running on most platforms (PC, android, windows, Linux).
+- **Radio link**: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with [qgroundcontrol](https://qgroundcontrol.com/) base station running on most platforms (PC, android, windows, Linux).
 - **Action cam**: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.
 
 {{< figure 
