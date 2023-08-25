@@ -112,7 +112,7 @@ $$
 $$ 
 
 This Model Based Design (MBD) approach enabled efficient research on signal processing validated with real robot for my [PhD thesis](https://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009.
-It reduces the time from the simulation to our [autonomous robot](https://www.researchgate.net/figure/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_fig11_261957721) and replaced somehow our dSPACE platform which was not embedded anyway.
+It reduces the time from the simulation to our [autonomous robot](https://www.researchgate.net/profile/Nicolas-Franceschini/publication/261957721/figure/fig11/AS:613971820285953@1523393697097/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_W640.jpg) and replaced somehow our dSPACE platform which was not embedded anyway.
 
 I used the same Rapid Control Prototyping (RCP) to develop data fusion algorithm on motion analysis for wearable sports article at [MOVEA](https://www.cea-tech.fr/cea-tech/english/Pages/success-stories/movea.aspx) in 2010-2011. 
 

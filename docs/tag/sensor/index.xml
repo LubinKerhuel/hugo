@@ -148,9 +148,9 @@ Block input is the 4 bytes codint for the sensor value.&lt;/p></description></it
 &lt;/div>
 &lt;p>References:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="https://naca.central.cranfield.ac.uk/reports/1957/naca-report-1303.pdf" target="_blank" rel="noopener">report&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
+&lt;li>&lt;a href="https://ntrs.nasa.gov/api/citations/19930092297/downloads/19930092297.pdf" target="_blank" rel="noopener">report WIND-TUNNEL INVESTIGATION OF &amp;lsquo;A NUMBER OF TOTAL-PRESSURE TUBES AT HIGH ANGLES OF ATTACK SUBSONIC, TRANSONIC, AND SUPERSONIC SPEEDS&amp;rsquo;&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
 &lt;li>&lt;a href="https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf" target="_blank" rel="noopener">report (french)&lt;/a> from ANSTJ with general information on Pitot sensor.&lt;/li>
-&lt;li>&lt;a href="https://voiletech.free.fr/skyassistant/pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
+&lt;li>&lt;a href="http://voiletech.free.fr/skyassistant/pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
 &lt;/ul>
 &lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
 Tube intèrieur: 2mm, trou 1mm
@@ -167,7 +167,7 @@ m = 72mm
 &lt;h2 id="electronics">Electronics&lt;/h2>
 &lt;h3 id="sensitivity-requirements-and-pressure-sensor">Sensitivity requirements and Pressure sensor&lt;/h3>
 &lt;p>The differential pressure measured vary with the square of the speed. RC plane speed can be quite low. Challenge is to be sensitive enough to obtain good measurement even in the low speed range of few meters per seconds.&lt;/p>
-&lt;p>The &lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\Delta V =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.&lt;/p>
+&lt;p>The &lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\Delta V =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.&lt;/p>
 &lt;p>We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% of its nominal range.&lt;/p>
 &lt;p>Table below provide theoretical differential pressure expected for various speed using $P_{diff} = \frac{1}{2}\rho v^2$ with $\rho=1.15$.&lt;/p>
 &lt;table>
@@ -177,7 +177,7 @@ m = 72mm
 &lt;th style="text-align:center">v (Km/h)&lt;/th>
 &lt;th style="text-align:center">$P_{diff}$ (Pa)&lt;/th>
 &lt;th style="text-align:center">~ $H_2O$ (cm)&lt;/th>
-&lt;th style="text-align:center">&lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> &amp;amp; &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
+&lt;th style="text-align:center">&lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> &amp;amp; &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -255,7 +255,7 @@ m = 72mm
 &lt;/table>
 &lt;h3 id="signal-conditioning-and-conversion">Signal conditioning and conversion&lt;/h3>
 &lt;p>The pressure sensor electronics is placed in the wing close (~10cm) to the Pitot tube. The analog to digital conversion is integrated in the sensor board. The &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> from Microchip is a high resolution sigma-delta converter with a programmable gain factor from 1 to 8. It has a digital I2C bus interface and its I2C address can be selected. Similar DAC to consider are MCP342x, the newer MCP346x family or the MCP356x providing increased accuracy and higher sampling rate but its package is smaller thus more difficult to handle for a DIY project.&lt;/p>
-&lt;p>The &lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> output analog signal is connected to the &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor to obtain 1V from the 3.3V reference (480 &amp;amp; 1kOhms). $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p>
+&lt;p>The &lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> output analog signal is connected to the &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor to obtain 1V from the 3.3V reference (480 &amp;amp; 1kOhms). $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p>
 &lt;!-- Measured 480 840 for the divisor. Write down 560 and 1.2k -->
 &lt;p>The &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC is configured for&lt;/p>
 &lt;ul>
@@ -265,7 +265,7 @@ m = 72mm
 &lt;/ul>
 &lt;p>The resulting resolution is provided from:&lt;/p>
 &lt;ul>
-&lt;li>(1) &lt;a href="https://www.nxp.com/part/MP3V5004DP" target="_blank" rel="noopener">MP3V5004dp&lt;/a> Analog output sensitivity is 1633 Pa/V&lt;/li>
+&lt;li>(1) &lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> Analog output sensitivity is 1633 Pa/V&lt;/li>
 &lt;li>(2) &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> 12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
 &lt;/ul>
 &lt;p>With (1) and (2), we obtain a resolution of $1633 * 0.125e^{-3} $ = &lt;em>&lt;strong>0.2041 Pa / LSB&lt;sup id="fnref2:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/strong>&lt;/em>&lt;/p>
