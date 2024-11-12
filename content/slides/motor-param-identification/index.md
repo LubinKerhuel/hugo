@@ -7,6 +7,7 @@ sitemap:
 
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
+#  theme: white  # Reveal JS theme name
   theme: black  # Reveal JS theme name
   highlight_style: dracula  # Highlight JS theme name
   
