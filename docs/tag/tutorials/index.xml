@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorials | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/tutorials/</link><atom:link href="https://lubin.kerhuel.eu/tag/tutorials/index.xml" rel="self" type="application/rss+xml"/><description>Tutorials</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_3.png</url><title>Tutorials</title><link>https://lubin.kerhuel.eu/tag/tutorials/</link></image><item><title>miniature airspeed sensor</title><link>https://lubin.kerhuel.eu/slides/pitot-build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/pitot-build/</guid><description>&lt;h2 id="pitot-tube">Pitot tube&lt;/h2>
+&lt;h3 id="miniature-airspeed-sensor">Miniature airspeed sensor&lt;/h3>
+&lt;h4 id="for-rc-plane--uav">for RC plane &amp;amp; UAV&lt;/h4>
+&lt;p>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a> description&lt;/p>
+&lt;hr>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://lubin.kerhuel.eu/post/pitot-build/featured.jpg" alt="/post/pitot-build/featured.jpg" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;hr>
+&lt;h2 id="brass-tube">Brass tube&lt;/h2>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" alt="/img/pitot-darcy-prandtl-build-brasstubes.jpg" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;hr>
+&lt;h2 id="mp3v5004dp--mcp3428">mp3v5004dp &amp;amp; mcp3428&lt;/h2>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" alt="/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;ul>
+&lt;li>Resolution: 0.2041 Pa/LSB&lt;/li>
+&lt;li>Range: [0 836] Pa ($\approx 100km/h $)&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="static-sensor-noise">Static sensor noise&lt;/h2>
+&lt;ul>
+&lt;li>90 min log @ 100Hz, indoor, still&lt;/li>
+&lt;li>Standard Dev : 0.5 Pa&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;section data-background-image="/img/pitot-darcy-prandtl-static-characteristic.png" data-background-opacity=1 data-background-position="center" data-background-size="contain">
+&lt;/section>
+&lt;hr>
+&lt;h2 id="flight-tests">Flight tests&lt;/h2>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" alt="Plane" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;hr>
+&lt;p class="stretch">
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg">
+&lt;/p>
+&lt;!-- ![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg) -->
+&lt;hr>
+&lt;p class="stretch">
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg">
+&lt;/p>
+&lt;!-- &lt;section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+&lt;/section> -->
+&lt;hr>
+&lt;h2 id="pressure---speed">Pressure - Speed&lt;/h2>
+&lt;p>$P_{diff} = \frac{1}{2}\rho v^2$&lt;/p>
+&lt;p>$v = \sqrt{\frac{2}{\rho} * P_{diff}}$&lt;/p>
+&lt;p>with $\rho = 1.16 $&lt;/p>
+&lt;hr>
+&lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-0.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+&lt;/section>
+&lt;hr>
+&lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-1.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+&lt;/section>
+&lt;hr>
+&lt;section data-background-image="/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+&lt;/section>
+&lt;hr>
+&lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-2.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+&lt;/section>
+&lt;hr>
+&lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration-3.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+&lt;/section>
+&lt;hr>
+&lt;section data-background-image="/img/pitot-darcy-prandtl-gps-wind-calibration.png" data-background-opacity=1 data-background-position="center" data-background-size="contain" >
+&lt;/section>
+&lt;hr>
+&lt;h2 id="results">results&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">$\underbrace{v_{pitot}-v_{wind}^{p}-v_{gps}}_{error}$&lt;/th>
+&lt;th style="text-align:center">m/s&lt;/th>
+&lt;th style="text-align:center">km/h&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">mean&lt;/td>
+&lt;td style="text-align:center">0.017&lt;/td>
+&lt;td style="text-align:center">0.06&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">standard deviation&lt;/td>
+&lt;td style="text-align:center">0.74&lt;/td>
+&lt;td style="text-align:center">2.6&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>with wind:&lt;/p>
+&lt;ul>
+&lt;li>2.6 m/s&lt;/li>
+&lt;li>from 101° (east)&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">page&lt;/a> with further details&lt;/p>
+&lt;hr>
+&lt;h3 id="flight-trace">flight trace&lt;/h3>
+&lt;section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" data-background-opacity=1>
+&lt;/section>
+&lt;hr>
+&lt;h3 id="connecting-fish-line-protection">connecting (fish line protection)&lt;/h3>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" alt="/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p></description></item></channel></rss>

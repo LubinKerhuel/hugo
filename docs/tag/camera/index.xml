@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Camera | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/camera/</link><atom:link href="https://lubin.kerhuel.eu/tag/camera/index.xml" rel="self" type="application/rss+xml"/><description>Camera</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_3.png</url><title>Camera</title><link>https://lubin.kerhuel.eu/tag/camera/</link></image><item><title>Start/Stop signal for RunCam2 action cam</title><link>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/runcam-remote-control-cable/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+&lt;div class="pswp__bg">&lt;/div>
+&lt;div class="pswp__scroll-wrap">
+&lt;div class="pswp__container">
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;/div>
+&lt;div class="pswp__ui pswp__ui--hidden">
+&lt;div class="pswp__top-bar">
+&lt;div class="pswp__counter">&lt;/div>
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
+&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
+&lt;div class="pswp__preloader">
+&lt;div class="pswp__preloader__icn">
+&lt;div class="pswp__preloader__cut">
+&lt;div class="pswp__preloader__donut">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+&lt;div class="pswp__share-tooltip">&lt;/div>
+&lt;/div>
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+&lt;/button>
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+&lt;/button>
+&lt;div class="pswp__caption">
+&lt;div class="pswp__caption__center">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Cable exist to connect a RunCam2 action cam to an RC receiver for remotely start and stop a record from the receiver PWM output (20ms period, 1ms to 2ms duty cycle).
+The cable has logic to decode the RC PWM signal and generate the signal pulse scheme to start and stop the RunCam2 record.&lt;/p>
+&lt;p>Controlling the camera can be done with a microcontroller by generating the required pulse scheme described below.&lt;/p>
+&lt;p>The micro USB cable pinout is&lt;/p>
+&lt;ul>
+&lt;li>Pin 1 (VCC): +5V (higher voltage possible for the RunCam2 connector)&lt;/li>
+&lt;li>Pin 3 (D+): TTL signal (5V)&lt;/li>
+&lt;li>Pin 5 (GND): GND&lt;/li>
+&lt;/ul>
+&lt;p>When the Camera USB port is set for &amp;ldquo;Remote Control&amp;rdquo; and not for &amp;ldquo;mass storage&amp;rdquo; with the configuration application, it is possible to switch back and forth the camera from video mode to photo mode, and to start/stop recording, or take a picture.&lt;/p>
+&lt;p>The pulse scheme is the following:&lt;/p>
+&lt;ul>
+&lt;li>One pulse switch the camera from video recording mode to Photo mode.&lt;/li>
+&lt;li>Two pulses separated with 85ms start or stop a video record (or take a picture in photo mode).&lt;/li>
+&lt;/ul>
+&lt;p>Pulse level is 5V but it works with 3.3V. Line is low state when idle. Pulses are 85ms in high state duration separated by 85ms on multiple pulse.&lt;/p>
+&lt;p>Tested with a runCam2 powered from a 3S LiPo battery (10 to 14V), no battery in the camera and pulse generated with a 3.3V dsPIC pin configured as digital output.&lt;/p>
+&lt;p>The figure below is the Simulink diagram with the logic used to generate the appropriate pulse on a dsPIC. Code is generated through the Simulink Coder and the &lt;a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/SW007023" target="_blank" rel="noopener">MPLAB block&lt;/a> from Microchip.&lt;/p>
+&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
+&lt;div class="box" style="max-width:100%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png" loading="lazy" alt="Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target"/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/runcam2-startstop-simulink-logic.png" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">
+&lt;p>Simulink logic to control a runCam2 action Cam. The subsystem time step resolution is 1ms. The integrator is reset on each state change of the subsystem input, which trig the generation of two 85ms pulse pattern. Integrator reset is locked while pulses are being generated. Logic at the output of the integrator generate the pulses. The generated code was tested on a dsPIC target&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div></description></item></channel></rss>

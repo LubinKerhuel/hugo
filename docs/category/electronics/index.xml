@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Electronics | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/category/electronics/</link><atom:link href="https://lubin.kerhuel.eu/category/electronics/index.xml" rel="self" type="application/rss+xml"/><description>Electronics</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_3.png</url><title>Electronics</title><link>https://lubin.kerhuel.eu/category/electronics/</link></image><item><title>Miniature airspeed sensor for RC plane and UAVs.</title><link>https://lubin.kerhuel.eu/post/pitot-build/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/pitot-build/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+&lt;div class="pswp__bg">&lt;/div>
+&lt;div class="pswp__scroll-wrap">
+&lt;div class="pswp__container">
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;/div>
+&lt;div class="pswp__ui pswp__ui--hidden">
+&lt;div class="pswp__top-bar">
+&lt;div class="pswp__counter">&lt;/div>
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
+&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
+&lt;div class="pswp__preloader">
+&lt;div class="pswp__preloader__icn">
+&lt;div class="pswp__preloader__cut">
+&lt;div class="pswp__preloader__donut">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+&lt;div class="pswp__share-tooltip">&lt;/div>
+&lt;/div>
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+&lt;/button>
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+&lt;/button>
+&lt;div class="pswp__caption">
+&lt;div class="pswp__caption__center">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;details class="toc-inpage d-print-none " open>
+&lt;summary class="font-weight-bold">Table of Contents&lt;/summary>
+&lt;nav id="TableOfContents">
+&lt;ul>
+&lt;li>&lt;a href="#pitot-tube-principle">Pitot tube principle&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#pitot-prandtl-tube">Pitot-Prandtl tube&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#electronics">Electronics&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#sensitivity-requirements-and-pressure-sensor">Sensitivity requirements and Pressure sensor&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#signal-conditioning-and-conversion">Signal conditioning and conversion&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#sensor-static-tests">Sensor static tests&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#flight-setup">Flight setup&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#experimental-results">Experimental results&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#gps-vs-airspeed">Comparison with GPS ground speed&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#wind-estimation">Wind estimation&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/nav>
+&lt;/details>
+&lt;h2 id="pitot-tube-principle">Pitot tube principle&lt;/h2>
+&lt;p>A Pitot-Darcy probe is an airspeed sensor commonly used in aviation. It consists of a tube pointing in the forward direction. When the sensor moves forward a stop pressure $P_t$ is added at its tip. The differential pressure $P_{diff}$ is measured between the tip of the tube $P_t$ and the static pressure $P_s$. One variant named from its inventor Prandtl tube has static air ports directly on the side of the tube.&lt;/p>
+&lt;p>The pressure added at tube tip is the square of the airspeed : $P_t = P_s + \frac{1}{2}\rho v^2$ where $ P_t $ and $P_s$ are measured in Pascal unit (Pa). $\rho$ is the air density constant typically in $[1.14 \ 1.34]$ depending on temperature &amp;amp; altitude. $v$ is the airspeed in $m.s^{-1}$. The differential pressure measured is $P_{diff} = P_t - P_s = \frac{1}{2}\rho v^2$&lt;/p>
+&lt;h2 id="pitot-prandtl-tube">Pitot-Prandtl tube&lt;/h2>
+&lt;p>Prandtl tube is one version of a Pitot probe where an inner tube is placed in the center of an outer tube. Space between the two tubes is filled-in on few mm near the tip with an epoxy adhesive (Araldite or equivalent). The side of the outer tube is drilled to sense the static pressure. At the bottom, the inner tube which is longer act as a connector for the dynamic pressure sensor and third short tube is added to create a connector to the static pressure area which lies in the empty space between the two tube.&lt;/p>
+&lt;p>The static pressure holes must be drilled at a minimum distance from the tube tip where airflow perturbations are reduced. A distance 4 times the diameter (d=4mm)of the outer tube is retains here (16mm). Four 1mm holes were drilled with a Dremel hand tool. The three tubes are presented on the figure below.&lt;/p>
+&lt;p>First test was done using brass tubes. Inner tube width is 2/1mm (outside/inside) and outer tube is 4/3mm.&lt;/p>
+&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
+&lt;div class="box" style="max-width:80%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" loading="lazy" alt="Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip."/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-brasstubes.jpg" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Brass inner and outer tubes of the Pitot tube.&lt;/h4>
+&lt;p>Tube alfer from Leroy Merlin. Inner tube is 2mm/1mm. Outer tube is 4mm/3mm. Outer tube length is m=86mm. Four 1mm holes are drilled at l=16mm from the tip.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div>
+&lt;p>References:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://ntrs.nasa.gov/api/citations/19930092297/downloads/19930092297.pdf" target="_blank" rel="noopener">report WIND-TUNNEL INVESTIGATION OF &amp;lsquo;A NUMBER OF TOTAL-PRESSURE TUBES AT HIGH ANGLES OF ATTACK SUBSONIC, TRANSONIC, AND SUPERSONIC SPEEDS&amp;rsquo;&lt;/a> by W.Gracey on the impact of the various shape on the measurement.&lt;/li>
+&lt;li>&lt;a href="https://www.planete-sciences.org/espace/IMG/pdf/tube_de_pitot.pdf" target="_blank" rel="noopener">report (french)&lt;/a> from ANSTJ with general information on Pitot sensor.&lt;/li>
+&lt;li>&lt;a href="http://voiletech.free.fr/skyassistant/pitot.htm" target="_blank" rel="noopener">website (French)&lt;/a> from Rémi Bourgin with experimental Pitot tube for RC plane&lt;/li>
+&lt;/ul>
+&lt;!-- Tube laiton macif (alfer) au Leroy Merlin;
+Tube intèrieur: 2mm, trou 1mm
+Tube extèrieur: 4mm, trou 3mm
+Longueur total:
+d = 4mm
+l = 4d => 16mm
+m = 11d =>44mm
+Tube altigator:
+d = 4mm
+l = 18mm
+m = 72mm
+-->
+&lt;h2 id="electronics">Electronics&lt;/h2>
+&lt;h3 id="sensitivity-requirements-and-pressure-sensor">Sensitivity requirements and Pressure sensor&lt;/h3>
+&lt;p>The differential pressure measured vary with the square of the speed. RC plane speed can be quite low. Challenge is to be sensitive enough to obtain good measurement even in the low speed range of few meters per seconds.&lt;/p>
+&lt;p>The &lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> from NXP is a sensitive differential pressure sensor. Its differential measurement range goes from 0 to 3.92 kPa. The analog output is ratio-metric and swing from 0.6V to 3V ($\Delta V =2.4V$). For reference, 1 kPa is approximately the pressure of 10cm of water.&lt;/p>
+&lt;p>We are interested in speed range varying from $0$ to $25 m.s^{-1}$ ($90km/h$) which correspond to a maximum differential pressure of 3.75 cm of water, or 0.375 kPa. The MP3V5004DP sensor is used in 10% of its nominal range.&lt;/p>
+&lt;p>Table below provide theoretical differential pressure expected for various speed using $P_{diff} = \frac{1}{2}\rho v^2$ with $\rho=1.15$.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">v (m/s)&lt;/th>
+&lt;th style="text-align:center">v (Km/h)&lt;/th>
+&lt;th style="text-align:center">$P_{diff}$ (Pa)&lt;/th>
+&lt;th style="text-align:center">~ $H_2O$ (cm)&lt;/th>
+&lt;th style="text-align:center">&lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> &amp;amp; &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:center">3.6&lt;/td>
+&lt;td style="text-align:center">0.6&lt;/td>
+&lt;td style="text-align:center">0.006&lt;/td>
+&lt;td style="text-align:center">3&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">2&lt;/td>
+&lt;td style="text-align:center">7.2&lt;/td>
+&lt;td style="text-align:center">2.4&lt;/td>
+&lt;td style="text-align:center">0.024&lt;/td>
+&lt;td style="text-align:center">12&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">4&lt;/td>
+&lt;td style="text-align:center">14.4&lt;/td>
+&lt;td style="text-align:center">9.6&lt;/td>
+&lt;td style="text-align:center">0.096&lt;/td>
+&lt;td style="text-align:center">47&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">7&lt;/td>
+&lt;td style="text-align:center">25.2&lt;/td>
+&lt;td style="text-align:center">29.4&lt;/td>
+&lt;td style="text-align:center">0.294&lt;/td>
+&lt;td style="text-align:center">144&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">10&lt;/td>
+&lt;td style="text-align:center">36&lt;/td>
+&lt;td style="text-align:center">60&lt;/td>
+&lt;td style="text-align:center">0.6&lt;/td>
+&lt;td style="text-align:center">294&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">15&lt;/td>
+&lt;td style="text-align:center">54&lt;/td>
+&lt;td style="text-align:center">135&lt;/td>
+&lt;td style="text-align:center">1.3&lt;/td>
+&lt;td style="text-align:center">661&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">20&lt;/td>
+&lt;td style="text-align:center">72&lt;/td>
+&lt;td style="text-align:center">240&lt;/td>
+&lt;td style="text-align:center">2.4&lt;/td>
+&lt;td style="text-align:center">1176&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">25&lt;/td>
+&lt;td style="text-align:center">90&lt;/td>
+&lt;td style="text-align:center">375&lt;/td>
+&lt;td style="text-align:center">3.75&lt;/td>
+&lt;td style="text-align:center">1837&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">30&lt;/td>
+&lt;td style="text-align:center">108&lt;/td>
+&lt;td style="text-align:center">540&lt;/td>
+&lt;td style="text-align:center">5.4&lt;/td>
+&lt;td style="text-align:center">2646&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">40&lt;/td>
+&lt;td style="text-align:center">144&lt;/td>
+&lt;td style="text-align:center">960&lt;/td>
+&lt;td style="text-align:center">9.6&lt;/td>
+&lt;td style="text-align:center">&lt;em>4704&lt;/em> (4095 sat)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="signal-conditioning-and-conversion">Signal conditioning and conversion&lt;/h3>
+&lt;p>The pressure sensor electronics is placed in the wing close (~10cm) to the Pitot tube. The analog to digital conversion is integrated in the sensor board. The &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> from Microchip is a high resolution sigma-delta converter with a programmable gain factor from 1 to 8. It has a digital I2C bus interface and its I2C address can be selected. Similar DAC to consider are MCP342x, the newer MCP346x family or the MCP356x providing increased accuracy and higher sampling rate but its package is smaller thus more difficult to handle for a DIY project.&lt;/p>
+&lt;p>The &lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> output analog signal is connected to the &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC through a first order RC low pass filter with a cut off frequency at $28Hz$ ($R=5.6 kOhm$,$C=1\mu F$). The 2nd differential input is connected on a voltage divisor to obtain 1V from the 3.3V reference (480 &amp;amp; 1kOhms). $10\mu F$ decoupling capacitor are used on power supply. The I2C bus wires are pulled up with 10kOhm and are connected to a 10pf capacitor protecting from glitches.&lt;/p>
+&lt;!-- Measured 480 840 for the divisor. Write down 560 and 1.2k -->
+&lt;p>The &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> Sigma-Delta ADC is configured for&lt;/p>
+&lt;ul>
+&lt;li>12 bits&lt;/li>
+&lt;li>x8 Gain&lt;/li>
+&lt;li>240 Samples Per Seconds (SPS)&lt;/li>
+&lt;/ul>
+&lt;p>The resulting resolution is provided from:&lt;/p>
+&lt;ul>
+&lt;li>(1) &lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> Analog output sensitivity is 1633 Pa/V&lt;/li>
+&lt;li>(2) &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> 12 bits with a gain of 8 : 0.125mV/LSB&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
+&lt;/ul>
+&lt;p>With (1) and (2), we obtain a resolution of $1633 * 0.125e^{-3} $ = &lt;em>&lt;strong>0.2041 Pa / LSB&lt;sup id="fnref2:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/strong>&lt;/em>&lt;/p>
+&lt;div class="box" style="max-width:80%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" loading="lazy" alt="Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage."/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-build-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Pressure sensor and electronics mounted on a DIP adapter board.&lt;/h4>
+&lt;p>Differential pressure sensor (MP3V5004dp) with Analog to Digital converter integrating a differential amplifier (MCP3428). The MCP3428 communicate with the microcontroller through an I2C BUS. A MCP1700 3.3V voltage regulator adapt and filter out the 5V input voltage.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div>
+&lt;h3 id="sensor-static-tests">Sensor static tests&lt;/h3>
+&lt;p>A 90 minutes lasting measurement is performed indoor without movements. Sensor output were logged at 100Hz. The figure below shows a slow drift (correlated with temperature or battery decay ? TBD). The sensor standard deviation measured on the overall measurement is 0.54 Pa (including the drift).&lt;/p>
+&lt;div class="box" style="max-width:100%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" loading="lazy" alt="90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB"/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-static-characteristic.png" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Experimental pitot-tube static characteristic with the MP3V5004dp differential pressure sensor&lt;/h4>
+&lt;p>90 minutes lasting static measurement indoor shows a slow drift and a standard deviation of 0.54 Pa. Resolution is 0.2041 Pa / LSB&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div>
+&lt;h4 id="possible-noiseoffset-sources">possible noise/offset sources&lt;/h4>
+&lt;p>The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref3:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> with the analog to digital circuit setting).&lt;/p>
+&lt;p>MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="https://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener">MCP 1700&lt;/a>) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p>
+&lt;h2 id="flight-setup">Flight setup&lt;/h2>
+&lt;p>The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p>
+&lt;div class="box" style="max-width:80%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" loading="lazy" alt="Platform used for tests"/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>FirStar 1600 Volantex RC plane&lt;/h4>
+&lt;p>Platform used for tests&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div>
+&lt;p>A 2mm flexible tube, originally for protecting fish lines, connect the sensor to the Pitot tube.&lt;/p>
+&lt;div class="box" style="max-width:50%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" loading="lazy" alt="Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube."/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-tubesoupledecathlon.jpg" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Flashmer – flexible Tube 2mm. Image from Decathlon (france).&lt;/h4>
+&lt;p>Fishing Tube used to connect the differential pressure MP3V5004dp sensor to Pitot tube.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div>
+&lt;p>One magnet is glued on the Pitot tube. A 2nd magnet integrated in the wing allows to fix the Pitot tube. Both magnet are in contact. The tube stays firmly in place during flights and ejects in case of hard landing reducing damages. It is a flexible solution for testing other Pitot tube design ; It&amp;rsquo;s also practical for storage and transportation.&lt;/p>
+&lt;div class="box" style="max-width:100%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" loading="lazy" />
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform.&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div>
+&lt;div class="box" style="max-width:60%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" loading="lazy" alt="Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube."/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Carbon-Brass light Pitot tube sensor attached to the wing with a magnet.&lt;/h4>
+&lt;p>Outer tube is a 5/3mm carbon tube. Inner tube is a brass 2mm/1mm tube.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div>
+&lt;h2 id="experimental-results">Experimental results&lt;/h2>
+&lt;p>The MCP3428 samples $P_{diff}$ at 250Hz during flights. $V_{Pitot}=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.15$.&lt;/p>
+&lt;p>No calibration were required. Sensor theoretical output scaling were used with the formula to compute the speed from the pressure. $\rho$ value was tune from a default value 1.2 to 1.16 which minimized the mean error however the improvement was not a big deal. The only value to adjust is the raw pressure measurement offset (zero). The zero value for the sensor used is -1800.&lt;/p>
+&lt;p>Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-matlab" data-lang="matlab">&lt;span class="line">&lt;span class="cl">&lt;span class="c">% Pitot Calibration. P_pitot is a vector with raw MCP3428 output read from I2C bus.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">P_pitot_cal&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mf">0.2041&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">double&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">P_pitot&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1800&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c">% to Pa unit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">% Compute Speed (m/s) from diff pressure (in Pa).&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">V_pitot&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mf">1.15&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">P_pitot_cal&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="gps-vs-airspeed">Comparison with GPS ground speed&lt;/h3>
+&lt;p>In calm condition, the ground speed $V_{GPS}$ and airspeed $V_{Pitot}$ are equal.&lt;/p>
+&lt;p>In windy condition, wind average direction and strength are estimated combining $V_{GPS}$, $V_{Pitot}$ and the plane yaw $\Theta_{heading}$ direction (using GPS COG&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>). This &lt;a href="#wind-estimation">wind estimation&lt;/a> is described below.&lt;/p>
+&lt;p>The airplane ground speed (GPS) is estimated with the difference of the airspeed (Pitot) with the projected wind to the aircraft forward direction:&lt;/p>
+&lt;p>$V_{GPS} \approx V_{Pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) $&lt;/p>
+&lt;p>The figure below presents the airspeed in blue. The reconstructed ground speed (black) matches accurately with the GPS velocity (red) which prove the correctness of the airspeed measurement as well as the wind strength and direction. The onshore wind is laminar with limited turbulences. The airspeed measurement presents a high sensitivity even at low speed.&lt;/p>
+&lt;div class="box" style="max-width:100%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" loading="lazy" alt="GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$)."/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Experimental measurement comparing GPS ground speed with pitot-tube airspeed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the the pitot tube subtracted from the estimated wind.&lt;/h4>
+&lt;p>GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$).&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div>
+&lt;p>More figures in &lt;a href="https://lubin.kerhuel.eu/slides/pitot-build/#/10">online presentation&lt;/a>.&lt;/p>
+&lt;p>The GPS update rate is 10Hz. It is sampled at 50Hz to minimize delay. The pitot-tube sensor update rate is 260Hs but it is sampled at 250Hz.&lt;/p>
+&lt;p>The error is defined with $error = V_{gps} - \left( V_{Pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">error&lt;/th>
+&lt;th style="text-align:center">m/s&lt;/th>
+&lt;th style="text-align:center">km/h&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">mean&lt;/td>
+&lt;td style="text-align:center">0.017&lt;/td>
+&lt;td style="text-align:center">0.06&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">standard deviation&lt;/td>
+&lt;td style="text-align:center">0.74&lt;/td>
+&lt;td style="text-align:center">2.6&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>RMS error is relatively low regarding the measured speed value. Part of the error is also due to wind gust and GPS limited accuracy particularly at estimating fast change of vertical speed.&lt;/p>
+&lt;h3 id="wind-estimation">Wind estimation&lt;/h3>
+&lt;p>Wind model considered is constant and characterized by&lt;/p>
+&lt;ul>
+&lt;li>its constant direction $\Theta_{wind}$&lt;/li>
+&lt;li>its constant strength $V_{wind}$&lt;/li>
+&lt;/ul>
+&lt;h4 id="wind--v_pitot---v_gps">Wind =&amp;gt; $V_{Pitot} - V_{gps}$&lt;/h4>
+&lt;p>The curve below shows the difference between the Ground speed (GPS) with the airspeed (Pitot) in function of the plane flight direction. This error (blue dashed points) fit with a sine wave. This sine wave is the speed offset added for each plane direction in $[0 \ 2\pi]$ by a wind with a constant strength and direction. Sine wave amplitude and phase is the wind strength and direction.&lt;/p>
+&lt;div class="box" style="max-width:100%">
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" loading="lazy" alt="Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5."/>
+&lt;/div>
+&lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-speed-error-wind-estimation.png" itemprop="contentUrl">&lt;/a>
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Experimental result presenting GPS ground speed and Pitot airspeed difference in function of the plane direction of 450s flight of the RC Firstar 1600 plane.&lt;/h4>
+&lt;p>Blue dots are speed difference between GPS and Pitot. The continuous green curve is the wind sine wave projection on the $\Theta_{heading}$ plane direction. Sine phase is wind direction ($(\pi-1.37*\frac{180}{\pi})=101°$, from East to West) and sine amplitude is wind strength (2.56m/s). Pitot values are averaged and under-sample by a factor 5.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/div>
+&lt;p>This wind estimation is used to compensate the airspeed when comparing the GPS ground speed $V_{gps}$ with the Pitot airspeed $V_{Pitot}$ &lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#gps-vs-airspeed">above&lt;/a>.&lt;/p>
+&lt;h4 id="script">Script&lt;/h4>
+&lt;p>Matlab script to estimate wind off-line:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-matlab" data-lang="matlab">&lt;span class="line">&lt;span class="cl">&lt;span class="c">% V_gps and V_pitot are two vector with all data measured.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">% V_pitot was under-sampled (averaging) by a factor 5 to fit the 50Hz log from the GPS.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">% GPS chip update frequency is 10Hz, but it is logged at 50Hz.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">V_err&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">V_pitot&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">V_gps&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">% Ground and Airspeed difference (i.e. wind) &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">M&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nb">cos&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">COG&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="nb">sin&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">COG&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">]&lt;/span>&lt;span class="o">&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">% COG is the direction (Theta in rad) vector data measured from the GPS&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">y&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">V_err&lt;/span>&lt;span class="o">&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">M&lt;/span>&lt;span class="o">\&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">% Solve wind strength and direction using linear algebra (MMSE)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">Theta_Wind&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="nb">atan2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c">% Wind (go to) direction. Azimuth direction is opposite to trigo&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">V_Wind&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.^&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c">% Wind strength (m/s)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">COG&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">V_err&lt;/span>&lt;span class="o">&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#39;.&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="n">hold&lt;/span> &lt;span class="n">on&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">% plot Error blue dots &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">plot&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">:.&lt;/span>&lt;span class="mi">01&lt;/span>&lt;span class="p">:(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nb">pi&lt;/span>&lt;span class="p">)],&lt;/span>&lt;span class="n">V_Wind&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">cos&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">:.&lt;/span>&lt;span class="mi">01&lt;/span>&lt;span class="p">:(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nb">pi&lt;/span>&lt;span class="p">)]&lt;/span>&lt;span class="o">+&lt;/span> &lt;span class="n">Theta_Wind&lt;/span>&lt;span class="p">)),&lt;/span>&lt;span class="s">&amp;#39;-k&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#39;linewidth&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c">% plot wind&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="discussion">Discussion&lt;/h4>
+&lt;p>Using the GPS COG&lt;sup id="fnref1:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> field is not exactly the plane yaw direction $\Theta_{heading}$ but the plane flight direction.
+Thus the COG is a biased plane yaw $\Theta_{heading}$ direction. It would be best to use plane orientation from the IMU sensor. It is not done here to reduce the number of sensors for this demonstration. The COG bias is small enough if we assume the wind speed to be small compared to the airplane airspeed. It might be possible with a more sophisticated script to compensate this bias.&lt;/p>
+&lt;p>W. Premerlani propose a &lt;a href="https://drive.google.com/file/d/0ByvTkVQo3tqXVzBYQUZicUNvbEE/view" target="_blank" rel="noopener">wind estimation&lt;/a> using exclusively GPS data. Tests with this GPS dataset was not conclusive while trying to use all GPS sample while the platform direction is modified (i.e. COG derivative is above a given threshold). GPS dynamic seems too slow to provide robust results.&lt;/p>
+&lt;h4 id="other-flight-data">Other flight data&lt;/h4>
+&lt;p>Plane was equipped with two GPS:&lt;/p>
+&lt;ul>
+&lt;li>one uBlox M8N GPS and&lt;/li>
+&lt;li>one MTK3339.&lt;/li>
+&lt;/ul>
+&lt;p>The uBlox trace presented on the map below is better than the MTK trace. The uBlox chip was used exclusively for the curves above. The MTK trace can be shown on the &lt;a href="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" target="_blank" rel="noopener">map&lt;/a> (top left icon). The KML file can be opened with Google Earth which provide a 3D view of the trace showing the height of the plane.&lt;/p>
+&lt;iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" style="width: 100% ; height: 480px">&lt;/iframe>
+&lt;!--
+Project folder:
+C:\M91449\MCHP_Blockset\Projects\2017_10_Autopilote\2018_04_12_LogChampdeTir_PitotNum_magOk_LowWind
+-->
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Least Significant Bit&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref3:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>Course Over Ground&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+&lt;div class="pswp__bg">&lt;/div>
+&lt;div class="pswp__scroll-wrap">
+&lt;div class="pswp__container">
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;div class="pswp__item">&lt;/div>
+&lt;/div>
+&lt;div class="pswp__ui pswp__ui--hidden">
+&lt;div class="pswp__top-bar">
+&lt;div class="pswp__counter">&lt;/div>
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
+&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
+&lt;div class="pswp__preloader">
+&lt;div class="pswp__preloader__icn">
+&lt;div class="pswp__preloader__cut">
+&lt;div class="pswp__preloader__donut">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+&lt;div class="pswp__share-tooltip">&lt;/div>
+&lt;/div>
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+&lt;/button>
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+&lt;/button>
+&lt;div class="pswp__caption">
+&lt;div class="pswp__caption__center">&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>The board &lt;a href="https://www.mateksys.com/?portfolio=pdb-xpw" target="_blank" rel="noopener">PDB-XPW&lt;/a> from MATEK System is a voltage regulator with an current measurement adapted for quad copters current with a max current measurement of 140 Amps. For an RC plane project, the current measurement might be reduced to increase current measurement resolution.&lt;/p>
+&lt;p>The chip &amp;ldquo;INA1x9 High-Side Measurement Current Shunt Monitor&amp;rdquo; from Texas Instrument condition and amplify the shunt resistor voltage drop providing an analog output proportional to the current.&lt;/p>
+&lt;p>On the PDB-XPW board, the INA1x9 chip is the black 5 pins component tagged E39 below the 0.05 Ohms shunt resistor, itself just below to the Power supply input connector.&lt;/p>
+&lt;p>The amplification gain is set with the 47 kOhm resistor next to the INA1x9 component. This original value of 47 kOhm correspond to a gain of 47.
+The gain is the value in kOhm as stated by the chip documentation:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">Resistor&lt;/th>
+&lt;th style="text-align:center">Gain&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">1 kOhm&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">5 Kohm&lt;/td>
+&lt;td style="text-align:center">5&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">10 Kohm&lt;/td>
+&lt;td style="text-align:center">10&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">50 Kohm&lt;/td>
+&lt;td style="text-align:center">50&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">100 Kohm&lt;/td>
+&lt;td style="text-align:center">100&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The 47 kOhm resistor is replaced with a 270 kOhm resistor providing a gain of 270 instead of 47.
+The original current measurement range is reduced from 140 (A) to 20 (A) (140 * 47/270 = 20).&lt;/p>
+&lt;p>The current measurement output is an analog signal swinging from 0 to 3.3V coding linearly for current in [0 - 20] Amps range. This lower current range fit with the RC plane platform like Bixler 2, Firstar 1600 or Ranger 1600.&lt;/p></description></item></channel></rss>

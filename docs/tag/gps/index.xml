@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GPS | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/gps/</link><atom:link href="https://lubin.kerhuel.eu/tag/gps/index.xml" rel="self" type="application/rss+xml"/><description>GPS</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_3.png</url><title>GPS</title><link>https://lubin.kerhuel.eu/tag/gps/</link></image><item><title>UxV toolbox</title><link>https://lubin.kerhuel.eu/uxv/</link><pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The UxV toolbox for Matlab/Simulink provides Matlab scripts and simulink blocks for UAVs to handle MAVLink protocol, GPS, RC receivers and telemetry protocols.&lt;/p>
+&lt;ul>
+&lt;li>Matlab script for post flight data analyses (MAVLink).&lt;/li>
+&lt;li>Simulink blocks for autopilote model based design (Rapid Control Prototyping using Simulink)&lt;/li>
+&lt;/ul>
+&lt;p>This model-based design and analysis tools speed-up the back and forth between experimental tests and simulation.&lt;/p>
+&lt;h2 id="matlab-scripts-for-mavlink">Matlab scripts for MAVLink&lt;/h2>
+&lt;p>Three main scripts enable decoding MAVLink messages, creating simulink model for simulation based on logged data, and generating map trajectory trace from GPS messages.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Script&lt;/th>
+&lt;th>Input&lt;/th>
+&lt;th>Output&lt;/th>
+&lt;th>Function&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>(1) &lt;em>mavlink2mat&lt;/em>&lt;/td>
+&lt;td>Mavlink log&lt;/td>
+&lt;td>.mat&lt;/td>
+&lt;td>matlab analysis&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>(2) &lt;em>mavlink2simulink&lt;/em>&lt;/td>
+&lt;td>Mavlink log&lt;/td>
+&lt;td>.mat / .mdl (.slx)&lt;/td>
+&lt;td>simulation based on real data&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>(3) &lt;em>mavlink2kml&lt;/em>&lt;/td>
+&lt;td>Mavlink log&lt;/td>
+&lt;td>.kml&lt;/td>
+&lt;td>plot GPS trace(s) on a map&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;em>mavlink2gui&lt;/em>&lt;/td>
+&lt;td>Mavlink log&lt;/td>
+&lt;td>GUI&lt;/td>
+&lt;td>graphical exploration of mavlink log&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;em>mavlinkgui&lt;/em> script opens a Graphical User Interface to explore MAVLink data. It list MAVLink messages found in a log file and plot selected {message - value}. Plot script is customizable enabling user to go beyond a simple plot. The GUI provides access to the three scripts mentioned above.&lt;/p>
+&lt;h2 id="simulink-blocks">Simulink blocks&lt;/h2>
+&lt;p>10 added blocks add essentials UAV features to implement an autopilot on a dsPIC DSC. Theses blocks complete the MPLAB blocks for Simulink from Microchip providing peripheral blocks for code generation. Theses works on top of the MathWorks Embedded Coder. Added features:&lt;/p>
+&lt;ul>
+&lt;li>GPS
+&lt;ul>
+&lt;li>&lt;em>GPS Parser&lt;/em> to decode NMEA messages&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>MATH
+&lt;ul>
+&lt;li>&lt;em>Quaternion to Cardan FxPt&lt;/em> to convert quaternion angle to Cardan angle in fixed point (similar to euler)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>MAVLink:
+&lt;ul>
+&lt;li>&lt;em>SEND&lt;/em> (send a message)&lt;/li>
+&lt;li>&lt;em>RECEIVE&lt;/em> (Receive a message)&lt;/li>
+&lt;li>&lt;em>MAVLink Data&lt;/em> (Way Points data)&lt;/li>
+&lt;li>&lt;em>MAVLink Parser&lt;/em> (decode input message and implement WayPoint&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> and Parameter&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> protocols)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="block-receiver-telemetry">Receivers-Telemetry&lt;/a>
+&lt;ul>
+&lt;li>&lt;em>S.BUS&lt;/em> receive RC channels&lt;/li>
+&lt;li>&lt;em>Smart Port&lt;/em> send telemetry values&lt;/li>
+&lt;li>&lt;em>F.Port&lt;/em> receive RC channels + send telemetry&lt;/li>
+&lt;li>&lt;em>Sensor for Smart.Port or F.Port&lt;/em> set values to send over telemetry&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Except the MATH block, theses blocks are typically connected to the dsPIC UART Rx/Tx block to send/receive the data flow from a GPS, a receiver, a radio link.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>Theses blocks are developped by Lubin Kerhuel and distributed for free with the &lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink" target="_blank" rel="noopener">MPLAB device blocks for Simulink&lt;/a> from Microchip.&lt;/p>
+&lt;ol>
+&lt;li>Install the MPLAB Device Blocks for Microchip&lt;/li>
+&lt;li>type &lt;em>pinInfo&lt;/em>, click on &lt;em>go to Third Part Tools folder&lt;/em>&lt;/li>
+&lt;li>Start script &lt;em>UxV_Blockset_Installer.p&lt;/em> in the UxV_blockset folder.&lt;/li>
+&lt;/ol>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>&lt;em>Way Point protocol&lt;/em> allows setting and reading WayPoint from a MAVLink compatible ground station.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>&lt;em>Parameter protocol&lt;/em> enable tuning from any MAVLink ground station the Simulink tunable parameters which are normally tuned with External Mode or from the Processor In the Loop simulation (PIL).&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>&lt;em>Sensor for Smart.Port or F.Port&lt;/em> block is used with either the &lt;em>Smart Port&lt;/em> of the &lt;em>F.Port&lt;/em> block. Theses protocol allows sending telemetry packet back to the Remote Controller (RC) interface. It enables emulation of Frsky sensor (battery voltage and current, variometer, airspeed, GPS) adding features to your remote easily. They also enable emulation of BetaFlight telemetry. Used with LUA script, this add features like artificial horizon, air speed, vertical speed, distance from home and many other to your remote (tested with &lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki" target="_blank" rel="noopener">yapuu LUA scripts&lt;/a>.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item></channel></rss>
