@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UxV | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/uxv/</link><atom:link href="https://lubin.kerhuel.eu/tag/uxv/index.xml" rel="self" type="application/rss+xml"/><description>UxV</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_3.png</url><title>UxV</title><link>https://lubin.kerhuel.eu/tag/uxv/</link></image><item><title>UxV toolbox</title><link>https://lubin.kerhuel.eu/uxv/</link><pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UxV | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/uxv/</link><atom:link href="https://lubin.kerhuel.eu/tag/uxv/index.xml" rel="self" type="application/rss+xml"/><description>UxV</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hu18314724763525769891.png</url><title>UxV</title><link>https://lubin.kerhuel.eu/tag/uxv/</link></image><item><title>UxV toolbox</title><link>https://lubin.kerhuel.eu/uxv/</link><pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>The UxV toolbox for Matlab/Simulink provides Matlab scripts and simulink blocks for UAVs to handle MAVLink protocol, GPS, RC receivers and telemetry protocols.&lt;/p>
 &lt;ul>
 &lt;li>Matlab script for post flight data analyses (MAVLink).&lt;/li>
@@ -157,41 +157,41 @@
 &lt;thead>
 &lt;tr>
 &lt;th>&lt;/th>
-&lt;th style="text-align:center">Baudrate&lt;/th>
-&lt;th style="text-align:center">Duplex&lt;/th>
-&lt;th style="text-align:center">Logic&lt;/th>
-&lt;th style="text-align:center">parity&lt;/th>
-&lt;th style="text-align:center">stop-bit&lt;/th>
-&lt;th style="text-align:center">flow-ctrl&lt;/th>
+&lt;th style="text-align: center">Baudrate&lt;/th>
+&lt;th style="text-align: center">Duplex&lt;/th>
+&lt;th style="text-align: center">Logic&lt;/th>
+&lt;th style="text-align: center">parity&lt;/th>
+&lt;th style="text-align: center">stop-bit&lt;/th>
+&lt;th style="text-align: center">flow-ctrl&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>S.BUS&lt;/td>
-&lt;td style="text-align:center">100000&lt;/td>
-&lt;td style="text-align:center">Rx only&lt;/td>
-&lt;td style="text-align:center">3.3V inverted&lt;/td>
-&lt;td style="text-align:center">even&lt;/td>
-&lt;td style="text-align:center">2&lt;/td>
-&lt;td style="text-align:center">no&lt;/td>
+&lt;td style="text-align: center">100000&lt;/td>
+&lt;td style="text-align: center">Rx only&lt;/td>
+&lt;td style="text-align: center">3.3V inverted&lt;/td>
+&lt;td style="text-align: center">even&lt;/td>
+&lt;td style="text-align: center">2&lt;/td>
+&lt;td style="text-align: center">no&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Smart Port&lt;/td>
-&lt;td style="text-align:center">57600&lt;/td>
-&lt;td style="text-align:center">&lt;strong>Half&lt;/strong>&lt;/td>
-&lt;td style="text-align:center">3.3V inverted&lt;/td>
-&lt;td style="text-align:center">no&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">no&lt;/td>
+&lt;td style="text-align: center">57600&lt;/td>
+&lt;td style="text-align: center">&lt;strong>Half&lt;/strong>&lt;/td>
+&lt;td style="text-align: center">3.3V inverted&lt;/td>
+&lt;td style="text-align: center">no&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
+&lt;td style="text-align: center">no&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>F.Port&lt;/td>
-&lt;td style="text-align:center">115200&lt;/td>
-&lt;td style="text-align:center">&lt;strong>Half&lt;/strong>&lt;/td>
-&lt;td style="text-align:center">3.3V inverted&lt;/td>
-&lt;td style="text-align:center">no&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">no&lt;/td>
+&lt;td style="text-align: center">115200&lt;/td>
+&lt;td style="text-align: center">&lt;strong>Half&lt;/strong>&lt;/td>
+&lt;td style="text-align: center">3.3V inverted&lt;/td>
+&lt;td style="text-align: center">no&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
+&lt;td style="text-align: center">no&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -200,47 +200,47 @@
 &lt;thead>
 &lt;tr>
 &lt;th>&lt;/th>
-&lt;th style="text-align:center">Implementation&lt;/th>
-&lt;th style="text-align:center">Buffer size&lt;/th>
-&lt;th style="text-align:center">Interrupt priority&lt;/th>
+&lt;th style="text-align: center">Implementation&lt;/th>
+&lt;th style="text-align: center">Buffer size&lt;/th>
+&lt;th style="text-align: center">Interrupt priority&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>S.BUS Rx&lt;/td>
-&lt;td style="text-align:center">Circular Buffer&lt;/td>
-&lt;td style="text-align:center">64&lt;/td>
-&lt;td style="text-align:center">5&lt;/td>
+&lt;td style="text-align: center">Circular Buffer&lt;/td>
+&lt;td style="text-align: center">64&lt;/td>
+&lt;td style="text-align: center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>S.BUS Tx&lt;/td>
-&lt;td style="text-align:center">None&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align: center">None&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Smart Port Rx&lt;/td>
-&lt;td style="text-align:center">Circular Buffer&lt;/td>
-&lt;td style="text-align:center">32&lt;/td>
-&lt;td style="text-align:center">5&lt;/td>
+&lt;td style="text-align: center">Circular Buffer&lt;/td>
+&lt;td style="text-align: center">32&lt;/td>
+&lt;td style="text-align: center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Smart Port Tx&lt;/td>
-&lt;td style="text-align:center">Circular Buffer&lt;/td>
-&lt;td style="text-align:center">32&lt;/td>
-&lt;td style="text-align:center">6&lt;/td>
+&lt;td style="text-align: center">Circular Buffer&lt;/td>
+&lt;td style="text-align: center">32&lt;/td>
+&lt;td style="text-align: center">6&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>F.Port Rx&lt;/td>
-&lt;td style="text-align:center">Circular Buffer&lt;/td>
-&lt;td style="text-align:center">32&lt;/td>
-&lt;td style="text-align:center">5&lt;/td>
+&lt;td style="text-align: center">Circular Buffer&lt;/td>
+&lt;td style="text-align: center">32&lt;/td>
+&lt;td style="text-align: center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>F.Port Tx&lt;/td>
-&lt;td style="text-align:center">Circular Buffer&lt;/td>
-&lt;td style="text-align:center">64&lt;/td>
-&lt;td style="text-align:center">5&lt;/td>
+&lt;td style="text-align: center">Circular Buffer&lt;/td>
+&lt;td style="text-align: center">64&lt;/td>
+&lt;td style="text-align: center">5&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

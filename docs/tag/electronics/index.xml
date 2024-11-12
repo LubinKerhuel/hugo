@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Electronics | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/electronics/</link><atom:link href="https://lubin.kerhuel.eu/tag/electronics/index.xml" rel="self" type="application/rss+xml"/><description>Electronics</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_3.png</url><title>Electronics</title><link>https://lubin.kerhuel.eu/tag/electronics/</link></image><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Electronics | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/electronics/</link><atom:link href="https://lubin.kerhuel.eu/tag/electronics/index.xml" rel="self" type="application/rss+xml"/><description>Electronics</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hu18314724763525769891.png</url><title>Electronics</title><link>https://lubin.kerhuel.eu/tag/electronics/</link></image><item><title>MATEKSYS PDB-XPW Dual BEC &amp; Current Module tweak to increase current measurement sensitivity</title><link>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
@@ -47,30 +47,30 @@ The gain is the value in kOhm as stated by the chip documentation:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Resistor&lt;/th>
-&lt;th style="text-align:center">Gain&lt;/th>
+&lt;th style="text-align: center">Resistor&lt;/th>
+&lt;th style="text-align: center">Gain&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">1 kOhm&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align: center">1 kOhm&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">5 Kohm&lt;/td>
-&lt;td style="text-align:center">5&lt;/td>
+&lt;td style="text-align: center">5 Kohm&lt;/td>
+&lt;td style="text-align: center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">10 Kohm&lt;/td>
-&lt;td style="text-align:center">10&lt;/td>
+&lt;td style="text-align: center">10 Kohm&lt;/td>
+&lt;td style="text-align: center">10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">50 Kohm&lt;/td>
-&lt;td style="text-align:center">50&lt;/td>
+&lt;td style="text-align: center">50 Kohm&lt;/td>
+&lt;td style="text-align: center">50&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">100 Kohm&lt;/td>
-&lt;td style="text-align:center">100&lt;/td>
+&lt;td style="text-align: center">100 Kohm&lt;/td>
+&lt;td style="text-align: center">100&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

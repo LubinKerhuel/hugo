@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorials | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/tutorials/</link><atom:link href="https://lubin.kerhuel.eu/tag/tutorials/index.xml" rel="self" type="application/rss+xml"/><description>Tutorials</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://lubin.kerhuel.eu/media/icon_hua5ed3a3c5aab9d478a9217a3fd35ab73_87443_512x512_fill_lanczos_center_3.png</url><title>Tutorials</title><link>https://lubin.kerhuel.eu/tag/tutorials/</link></image><item><title>miniature airspeed sensor</title><link>https://lubin.kerhuel.eu/slides/pitot-build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/pitot-build/</guid><description>&lt;h2 id="pitot-tube">Pitot tube&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorials | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/tutorials/</link><atom:link href="https://lubin.kerhuel.eu/tag/tutorials/index.xml" rel="self" type="application/rss+xml"/><description>Tutorials</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://lubin.kerhuel.eu/media/icon_hu18314724763525769891.png</url><title>Tutorials</title><link>https://lubin.kerhuel.eu/tag/tutorials/</link></image><item><title>miniature airspeed sensor</title><link>https://lubin.kerhuel.eu/slides/pitot-build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/pitot-build/</guid><description>&lt;h2 id="pitot-tube">Pitot tube&lt;/h2>
 &lt;h3 id="miniature-airspeed-sensor">Miniature airspeed sensor&lt;/h3>
 &lt;h4 id="for-rc-plane--uav">for RC plane &amp;amp; UAV&lt;/h4>
 &lt;p>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">full&lt;/a> description&lt;/p>
@@ -85,26 +85,26 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">$\underbrace{v_{pitot}-v_{wind}^{p}-v_{gps}}_{error}$&lt;/th>
-&lt;th style="text-align:center">m/s&lt;/th>
-&lt;th style="text-align:center">km/h&lt;/th>
+&lt;th style="text-align: center">$\underbrace{v_{pitot}-v_{wind}^{p}-v_{gps}}_{error}$&lt;/th>
+&lt;th style="text-align: center">m/s&lt;/th>
+&lt;th style="text-align: center">km/h&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">mean&lt;/td>
-&lt;td style="text-align:center">0.017&lt;/td>
-&lt;td style="text-align:center">0.06&lt;/td>
+&lt;td style="text-align: center">mean&lt;/td>
+&lt;td style="text-align: center">0.017&lt;/td>
+&lt;td style="text-align: center">0.06&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">standard deviation&lt;/td>
-&lt;td style="text-align:center">0.74&lt;/td>
-&lt;td style="text-align:center">2.6&lt;/td>
+&lt;td style="text-align: center">standard deviation&lt;/td>
+&lt;td style="text-align: center">0.74&lt;/td>
+&lt;td style="text-align: center">2.6&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

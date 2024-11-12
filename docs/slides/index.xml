@@ -85,26 +85,26 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">$\underbrace{v_{pitot}-v_{wind}^{p}-v_{gps}}_{error}$&lt;/th>
-&lt;th style="text-align:center">m/s&lt;/th>
-&lt;th style="text-align:center">km/h&lt;/th>
+&lt;th style="text-align: center">$\underbrace{v_{pitot}-v_{wind}^{p}-v_{gps}}_{error}$&lt;/th>
+&lt;th style="text-align: center">m/s&lt;/th>
+&lt;th style="text-align: center">km/h&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">mean&lt;/td>
-&lt;td style="text-align:center">0.017&lt;/td>
-&lt;td style="text-align:center">0.06&lt;/td>
+&lt;td style="text-align: center">mean&lt;/td>
+&lt;td style="text-align: center">0.017&lt;/td>
+&lt;td style="text-align: center">0.06&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">standard deviation&lt;/td>
-&lt;td style="text-align:center">0.74&lt;/td>
-&lt;td style="text-align:center">2.6&lt;/td>
+&lt;td style="text-align: center">standard deviation&lt;/td>
+&lt;td style="text-align: center">0.74&lt;/td>
+&lt;td style="text-align: center">2.6&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -504,31 +504,31 @@ slope est fixe
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">IEEE 754&lt;/th>
-&lt;th style="text-align:center">Single&lt;/th>
-&lt;th style="text-align:center">Double&lt;/th>
+&lt;th style="text-align: center">IEEE 754&lt;/th>
+&lt;th style="text-align: center">Single&lt;/th>
+&lt;th style="text-align: center">Double&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">Format width&lt;/td>
-&lt;td style="text-align:center">32&lt;/td>
-&lt;td style="text-align:center">64&lt;/td>
+&lt;td style="text-align: center">Format width&lt;/td>
+&lt;td style="text-align: center">32&lt;/td>
+&lt;td style="text-align: center">64&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Sign bit&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align: center">Sign bit&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">exponent width&lt;/td>
-&lt;td style="text-align:center">8&lt;/td>
-&lt;td style="text-align:center">11&lt;/td>
+&lt;td style="text-align: center">exponent width&lt;/td>
+&lt;td style="text-align: center">8&lt;/td>
+&lt;td style="text-align: center">11&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Precision width&lt;/td>
-&lt;td style="text-align:center">23&lt;span style="color:yellow">+1&lt;/span>&lt;/td>
-&lt;td style="text-align:center">52&lt;span style="color:yellow">+1&lt;/span>&lt;/td>
+&lt;td style="text-align: center">Precision width&lt;/td>
+&lt;td style="text-align: center">23&lt;span style="color:yellow">+1&lt;/span>&lt;/td>
+&lt;td style="text-align: center">52&lt;span style="color:yellow">+1&lt;/span>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -554,36 +554,36 @@ slope est fixe
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Parameter&lt;/th>
-&lt;th style="text-align:center">Single&lt;/th>
-&lt;th style="text-align:center">Double&lt;/th>
-&lt;th style="text-align:center">Custom&lt;/th>
+&lt;th style="text-align: center">Parameter&lt;/th>
+&lt;th style="text-align: center">Single&lt;/th>
+&lt;th style="text-align: center">Double&lt;/th>
+&lt;th style="text-align: center">Custom&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">Format width&lt;/td>
-&lt;td style="text-align:center">32&lt;/td>
-&lt;td style="text-align:center">64&lt;/td>
-&lt;td style="text-align:center">8&lt;/td>
+&lt;td style="text-align: center">Format width&lt;/td>
+&lt;td style="text-align: center">32&lt;/td>
+&lt;td style="text-align: center">64&lt;/td>
+&lt;td style="text-align: center">8&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Sign bit&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align: center">Sign bit&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">exponent width&lt;/td>
-&lt;td style="text-align:center">8&lt;/td>
-&lt;td style="text-align:center">11&lt;/td>
-&lt;td style="text-align:center">4&lt;/td>
+&lt;td style="text-align: center">exponent width&lt;/td>
+&lt;td style="text-align: center">8&lt;/td>
+&lt;td style="text-align: center">11&lt;/td>
+&lt;td style="text-align: center">4&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Precision width&lt;/td>
-&lt;td style="text-align:center">23+1&lt;/td>
-&lt;td style="text-align:center">52+1&lt;/td>
-&lt;td style="text-align:center">3+1&lt;/td>
+&lt;td style="text-align: center">Precision width&lt;/td>
+&lt;td style="text-align: center">23+1&lt;/td>
+&lt;td style="text-align: center">52+1&lt;/td>
+&lt;td style="text-align: center">3+1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -897,31 +897,31 @@ slope est fixe
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">IEEE 754&lt;/th>
-&lt;th style="text-align:center">Single&lt;/th>
-&lt;th style="text-align:center">Double&lt;/th>
+&lt;th style="text-align: center">IEEE 754&lt;/th>
+&lt;th style="text-align: center">Single&lt;/th>
+&lt;th style="text-align: center">Double&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">Format width&lt;/td>
-&lt;td style="text-align:center">32&lt;/td>
-&lt;td style="text-align:center">64&lt;/td>
+&lt;td style="text-align: center">Format width&lt;/td>
+&lt;td style="text-align: center">32&lt;/td>
+&lt;td style="text-align: center">64&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Sign bit&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align: center">Sign bit&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">exponent width&lt;/td>
-&lt;td style="text-align:center">8&lt;/td>
-&lt;td style="text-align:center">11&lt;/td>
+&lt;td style="text-align: center">exponent width&lt;/td>
+&lt;td style="text-align: center">8&lt;/td>
+&lt;td style="text-align: center">11&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Precision width&lt;/td>
-&lt;td style="text-align:center">23&lt;span style="color:yellow">+1&lt;/span>&lt;/td>
-&lt;td style="text-align:center">52&lt;span style="color:yellow">+1&lt;/span>&lt;/td>
+&lt;td style="text-align: center">Precision width&lt;/td>
+&lt;td style="text-align: center">23&lt;span style="color:yellow">+1&lt;/span>&lt;/td>
+&lt;td style="text-align: center">52&lt;span style="color:yellow">+1&lt;/span>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -947,36 +947,36 @@ slope est fixe
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Parameter&lt;/th>
-&lt;th style="text-align:center">Single&lt;/th>
-&lt;th style="text-align:center">Double&lt;/th>
-&lt;th style="text-align:center">Custom&lt;/th>
+&lt;th style="text-align: center">Parameter&lt;/th>
+&lt;th style="text-align: center">Single&lt;/th>
+&lt;th style="text-align: center">Double&lt;/th>
+&lt;th style="text-align: center">Custom&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">Format width&lt;/td>
-&lt;td style="text-align:center">32&lt;/td>
-&lt;td style="text-align:center">64&lt;/td>
-&lt;td style="text-align:center">8&lt;/td>
+&lt;td style="text-align: center">Format width&lt;/td>
+&lt;td style="text-align: center">32&lt;/td>
+&lt;td style="text-align: center">64&lt;/td>
+&lt;td style="text-align: center">8&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Sign bit&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align: center">Sign bit&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">exponent width&lt;/td>
-&lt;td style="text-align:center">8&lt;/td>
-&lt;td style="text-align:center">11&lt;/td>
-&lt;td style="text-align:center">4&lt;/td>
+&lt;td style="text-align: center">exponent width&lt;/td>
+&lt;td style="text-align: center">8&lt;/td>
+&lt;td style="text-align: center">11&lt;/td>
+&lt;td style="text-align: center">4&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Precision width&lt;/td>
-&lt;td style="text-align:center">23+1&lt;/td>
-&lt;td style="text-align:center">52+1&lt;/td>
-&lt;td style="text-align:center">3+1&lt;/td>
+&lt;td style="text-align: center">Precision width&lt;/td>
+&lt;td style="text-align: center">23+1&lt;/td>
+&lt;td style="text-align: center">52+1&lt;/td>
+&lt;td style="text-align: center">3+1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

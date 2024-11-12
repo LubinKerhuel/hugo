@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lubin Kerhuel | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/authors/lubin/</link><atom:link href="https://lubin.kerhuel.eu/authors/lubin/index.xml" rel="self" type="application/rss+xml"/><description>Lubin Kerhuel</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://lubin.kerhuel.eu/authors/lubin/avatar_hub88d8bfcd9aca835933e1808b55368c2_25702_270x270_fill_q75_lanczos_center.jpg</url><title>Lubin Kerhuel</title><link>https://lubin.kerhuel.eu/authors/lubin/</link></image><item><title>Replacement motor for Parrot Disco FPV Flying Wing</title><link>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</link><pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lubin Kerhuel | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/authors/lubin/</link><atom:link href="https://lubin.kerhuel.eu/authors/lubin/index.xml" rel="self" type="application/rss+xml"/><description>Lubin Kerhuel</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://lubin.kerhuel.eu/authors/lubin/avatar_hu10454476979157224246.jpg</url><title>Lubin Kerhuel</title><link>https://lubin.kerhuel.eu/authors/lubin/</link></image><item><title>Replacement motor for Parrot Disco FPV Flying Wing</title><link>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</link><pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/parrot-disco-motor-replacement/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
@@ -343,83 +343,83 @@ m = 72mm
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">v (m/s)&lt;/th>
-&lt;th style="text-align:center">v (Km/h)&lt;/th>
-&lt;th style="text-align:center">$P_{diff}$ (Pa)&lt;/th>
-&lt;th style="text-align:center">~ $H_2O$ (cm)&lt;/th>
-&lt;th style="text-align:center">&lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> &amp;amp; &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
+&lt;th style="text-align: center">v (m/s)&lt;/th>
+&lt;th style="text-align: center">v (Km/h)&lt;/th>
+&lt;th style="text-align: center">$P_{diff}$ (Pa)&lt;/th>
+&lt;th style="text-align: center">~ $H_2O$ (cm)&lt;/th>
+&lt;th style="text-align: center">&lt;a href="https://www.nxp.com/part/MP3V5004DP#/" target="_blank" rel="noopener">MP3V5004dp&lt;/a> &amp;amp; &lt;a href="https://www.microchip.com/wwwproducts/en/MCP3428" target="_blank" rel="noopener">MCP3428&lt;/a> (0.2041Pa / LSB&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">3.6&lt;/td>
-&lt;td style="text-align:center">0.6&lt;/td>
-&lt;td style="text-align:center">0.006&lt;/td>
-&lt;td style="text-align:center">3&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
+&lt;td style="text-align: center">3.6&lt;/td>
+&lt;td style="text-align: center">0.6&lt;/td>
+&lt;td style="text-align: center">0.006&lt;/td>
+&lt;td style="text-align: center">3&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">2&lt;/td>
-&lt;td style="text-align:center">7.2&lt;/td>
-&lt;td style="text-align:center">2.4&lt;/td>
-&lt;td style="text-align:center">0.024&lt;/td>
-&lt;td style="text-align:center">12&lt;/td>
+&lt;td style="text-align: center">2&lt;/td>
+&lt;td style="text-align: center">7.2&lt;/td>
+&lt;td style="text-align: center">2.4&lt;/td>
+&lt;td style="text-align: center">0.024&lt;/td>
+&lt;td style="text-align: center">12&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">4&lt;/td>
-&lt;td style="text-align:center">14.4&lt;/td>
-&lt;td style="text-align:center">9.6&lt;/td>
-&lt;td style="text-align:center">0.096&lt;/td>
-&lt;td style="text-align:center">47&lt;/td>
+&lt;td style="text-align: center">4&lt;/td>
+&lt;td style="text-align: center">14.4&lt;/td>
+&lt;td style="text-align: center">9.6&lt;/td>
+&lt;td style="text-align: center">0.096&lt;/td>
+&lt;td style="text-align: center">47&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">7&lt;/td>
-&lt;td style="text-align:center">25.2&lt;/td>
-&lt;td style="text-align:center">29.4&lt;/td>
-&lt;td style="text-align:center">0.294&lt;/td>
-&lt;td style="text-align:center">144&lt;/td>
+&lt;td style="text-align: center">7&lt;/td>
+&lt;td style="text-align: center">25.2&lt;/td>
+&lt;td style="text-align: center">29.4&lt;/td>
+&lt;td style="text-align: center">0.294&lt;/td>
+&lt;td style="text-align: center">144&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">10&lt;/td>
-&lt;td style="text-align:center">36&lt;/td>
-&lt;td style="text-align:center">60&lt;/td>
-&lt;td style="text-align:center">0.6&lt;/td>
-&lt;td style="text-align:center">294&lt;/td>
+&lt;td style="text-align: center">10&lt;/td>
+&lt;td style="text-align: center">36&lt;/td>
+&lt;td style="text-align: center">60&lt;/td>
+&lt;td style="text-align: center">0.6&lt;/td>
+&lt;td style="text-align: center">294&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">15&lt;/td>
-&lt;td style="text-align:center">54&lt;/td>
-&lt;td style="text-align:center">135&lt;/td>
-&lt;td style="text-align:center">1.3&lt;/td>
-&lt;td style="text-align:center">661&lt;/td>
+&lt;td style="text-align: center">15&lt;/td>
+&lt;td style="text-align: center">54&lt;/td>
+&lt;td style="text-align: center">135&lt;/td>
+&lt;td style="text-align: center">1.3&lt;/td>
+&lt;td style="text-align: center">661&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">20&lt;/td>
-&lt;td style="text-align:center">72&lt;/td>
-&lt;td style="text-align:center">240&lt;/td>
-&lt;td style="text-align:center">2.4&lt;/td>
-&lt;td style="text-align:center">1176&lt;/td>
+&lt;td style="text-align: center">20&lt;/td>
+&lt;td style="text-align: center">72&lt;/td>
+&lt;td style="text-align: center">240&lt;/td>
+&lt;td style="text-align: center">2.4&lt;/td>
+&lt;td style="text-align: center">1176&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">25&lt;/td>
-&lt;td style="text-align:center">90&lt;/td>
-&lt;td style="text-align:center">375&lt;/td>
-&lt;td style="text-align:center">3.75&lt;/td>
-&lt;td style="text-align:center">1837&lt;/td>
+&lt;td style="text-align: center">25&lt;/td>
+&lt;td style="text-align: center">90&lt;/td>
+&lt;td style="text-align: center">375&lt;/td>
+&lt;td style="text-align: center">3.75&lt;/td>
+&lt;td style="text-align: center">1837&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">30&lt;/td>
-&lt;td style="text-align:center">108&lt;/td>
-&lt;td style="text-align:center">540&lt;/td>
-&lt;td style="text-align:center">5.4&lt;/td>
-&lt;td style="text-align:center">2646&lt;/td>
+&lt;td style="text-align: center">30&lt;/td>
+&lt;td style="text-align: center">108&lt;/td>
+&lt;td style="text-align: center">540&lt;/td>
+&lt;td style="text-align: center">5.4&lt;/td>
+&lt;td style="text-align: center">2646&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">40&lt;/td>
-&lt;td style="text-align:center">144&lt;/td>
-&lt;td style="text-align:center">960&lt;/td>
-&lt;td style="text-align:center">9.6&lt;/td>
-&lt;td style="text-align:center">&lt;em>4704&lt;/em> (4095 sat)&lt;/td>
+&lt;td style="text-align: center">40&lt;/td>
+&lt;td style="text-align: center">144&lt;/td>
+&lt;td style="text-align: center">960&lt;/td>
+&lt;td style="text-align: center">9.6&lt;/td>
+&lt;td style="text-align: center">&lt;em>4704&lt;/em> (4095 sat)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -545,21 +545,21 @@ m = 72mm
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">error&lt;/th>
-&lt;th style="text-align:center">m/s&lt;/th>
-&lt;th style="text-align:center">km/h&lt;/th>
+&lt;th style="text-align: center">error&lt;/th>
+&lt;th style="text-align: center">m/s&lt;/th>
+&lt;th style="text-align: center">km/h&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">mean&lt;/td>
-&lt;td style="text-align:center">0.017&lt;/td>
-&lt;td style="text-align:center">0.06&lt;/td>
+&lt;td style="text-align: center">mean&lt;/td>
+&lt;td style="text-align: center">0.017&lt;/td>
+&lt;td style="text-align: center">0.06&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">standard deviation&lt;/td>
-&lt;td style="text-align:center">0.74&lt;/td>
-&lt;td style="text-align:center">2.6&lt;/td>
+&lt;td style="text-align: center">standard deviation&lt;/td>
+&lt;td style="text-align: center">0.74&lt;/td>
+&lt;td style="text-align: center">2.6&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -676,30 +676,30 @@ The gain is the value in kOhm as stated by the chip documentation:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Resistor&lt;/th>
-&lt;th style="text-align:center">Gain&lt;/th>
+&lt;th style="text-align: center">Resistor&lt;/th>
+&lt;th style="text-align: center">Gain&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">1 kOhm&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align: center">1 kOhm&lt;/td>
+&lt;td style="text-align: center">1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">5 Kohm&lt;/td>
-&lt;td style="text-align:center">5&lt;/td>
+&lt;td style="text-align: center">5 Kohm&lt;/td>
+&lt;td style="text-align: center">5&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">10 Kohm&lt;/td>
-&lt;td style="text-align:center">10&lt;/td>
+&lt;td style="text-align: center">10 Kohm&lt;/td>
+&lt;td style="text-align: center">10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">50 Kohm&lt;/td>
-&lt;td style="text-align:center">50&lt;/td>
+&lt;td style="text-align: center">50 Kohm&lt;/td>
+&lt;td style="text-align: center">50&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">100 Kohm&lt;/td>
-&lt;td style="text-align:center">100&lt;/td>
+&lt;td style="text-align: center">100 Kohm&lt;/td>
+&lt;td style="text-align: center">100&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -871,26 +871,26 @@ lab subject is availalbe at: &lt;a href="https://rcp.ctrl-elec.fr/" target="_bla
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">$\underbrace{v_{pitot}-v_{wind}^{p}-v_{gps}}_{error}$&lt;/th>
-&lt;th style="text-align:center">m/s&lt;/th>
-&lt;th style="text-align:center">km/h&lt;/th>
+&lt;th style="text-align: center">$\underbrace{v_{pitot}-v_{wind}^{p}-v_{gps}}_{error}$&lt;/th>
+&lt;th style="text-align: center">m/s&lt;/th>
+&lt;th style="text-align: center">km/h&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">mean&lt;/td>
-&lt;td style="text-align:center">0.017&lt;/td>
-&lt;td style="text-align:center">0.06&lt;/td>
+&lt;td style="text-align: center">mean&lt;/td>
+&lt;td style="text-align: center">0.017&lt;/td>
+&lt;td style="text-align: center">0.06&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">standard deviation&lt;/td>
-&lt;td style="text-align:center">0.74&lt;/td>
-&lt;td style="text-align:center">2.6&lt;/td>
+&lt;td style="text-align: center">standard deviation&lt;/td>
+&lt;td style="text-align: center">0.74&lt;/td>
+&lt;td style="text-align: center">2.6&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
