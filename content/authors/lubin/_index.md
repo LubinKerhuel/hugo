@@ -29,9 +29,9 @@ email: lubin@kerhuel.eu
 
 # List (academic) interests or hobbies
 interests:
-- Control Theory
+- Control Theory \& applied math
 - Embedded system
-- Bodysurf
+- Swimming
 
 # List qualifications (such as academic degrees)
 education:
@@ -42,7 +42,7 @@ education:
   - course: Master of Research - Signal Processing and Digital Communication
     institution: University of Nice Sophia-Antipolis
     year: 2004
-  - courses: Engineer - System on Chip
+  - course: Engineer - System on Chip
     institution: ESIEE Paris
     year: 2004
 
@@ -90,10 +90,23 @@ social:
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 
+# Create Simulink toolbox for dsPIC Microcontrollers.
+#	Write rate-monotonic scheduler (multitasking RTOS)
+#	- sum-up hardware capabilities in an easy to use graphical interface. Generate C code.
+#	- Optimize code implementing through Simulink Code Replacement Library. Wrote low level code in C or assembly for best use of the hardware
+#	- add PIC32 chip
+#		- Scheduler, Peripheral user interface and code, enabling CMSIS Optimisation
+#	- add SAMx2, SAMx5 and SAMx7 chip family (respectively for Cortex M0+, Cortex M4 and Cortex M7) 
+#		- Scheduler, Peripheral user interface and code, enabling CMSIS Optimisation
+
+
+#	- 2022, recenter on dsPIC. Adding dsPIC A chip (Scheduler, Peripheral user interface)
+
+
 ---
 
 {{% callout warning %}}
-The postings on this site are my own and do not represent Microchip's positions, strategies, or opinions.
+Postings on this website are my own and do not represent Microchip's positions, strategies, or opinions.
 {{% /callout %}}
 
 Control projects during my academic study ended-up with simplest PID algorithm tuned through successive trials.
@@ -105,9 +118,9 @@ Without a budget for dSPACE, SpeedGoat or another NI alternative, rapid prototyp
 $$
 \text{One push button}
 \left\\{ \begin{array}{l}
-\text{- C code generation,} \\\\\\
-\text{- Compilation,} \\\\\\
-\text{- Upload \& run on the target.} \\\\\\
+\text{- Generate C code} \\\\\\
+\text{- Compile} \\\\\\
+\text{- Upload \& Run on the target} 
 \end{array} \right.
 $$ 
 
@@ -122,3 +135,5 @@ For company, scientists, and students, *rapid prototyping enables focusing on ne
 Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.
 
 Most projects use the free [Microchip blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink) targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my [old website](https://www.kerhuel.eu/wiki/).
+
+
