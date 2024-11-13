@@ -9,7 +9,7 @@ authors: lubin
 superuser: true
 
 # Role/position
-role: Engineer
+role: Engineer, PhD
 
 
 # Details for the Contact Widget
@@ -102,6 +102,9 @@ highlight_name: false
 
 #	- 2022, recenter on dsPIC. Adding dsPIC A chip (Scheduler, Peripheral user interface)
 
+# MBSE: Model Based Design Engineer
+# Digital Twin
+# modeling from first principle modeling (or physical modeling), or data driven model
 
 ---
 
@@ -109,11 +112,9 @@ highlight_name: false
 Postings on this website are my own and do not represent Microchip's positions, strategies, or opinions.
 {{% /callout %}}
 
-Control projects during my academic study ended-up with simplest PID algorithm tuned through successive trials.
-Code implementation for embedded systems requires an important effort. Time left for modeling, identification and simulation is often null.
+Embedded systems requires programming skills and an important set-up effort. Control algorithm is typically implemented last with a PI feedback loop. However control theory provides many solutions to explore improving systems dynamic responses, perturbation rejection and robusness to model mismatch.
 
-I started in 2005 developing a blockset for Matlab/Simulink targeting dsPIC 33F microcontrollers to overcome such constraint.
-Without a budget for dSPACE, SpeedGoat or another NI alternative, rapid prototyping became possible on any dsPIC based board.
+Interrested in applied math, I developed a blockset for Matlab/Simulink targeting dsPIC microcontrollers in 2005. It enables focusing on the controller part using simulink simulation rather than on implementation problems. Rapid Control Prototyping (RCP) became possible on any dsPIC based board. It is embedded on cheap demo or custom board and does not required budget to aquire high-end tools like dSPACE, SpeedGoat, National Instrument alternative. 
 
 $$
 \text{One push button}
@@ -124,16 +125,27 @@ $$
 \end{array} \right.
 $$ 
 
-This Model Based Design (MBD) approach enabled efficient research on signal processing validated with real robot for my [PhD thesis](https://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009.
-It reduces the time from the simulation to our [autonomous robot](https://www.researchgate.net/profile/Nicolas-Franceschini/publication/261957721/figure/fig11/AS:613971820285953@1523393697097/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_W640.jpg) and replaced somehow our dSPACE platform which was not embedded anyway.
+I used this dsPIC Target toolbox for my [PhD thesis](https://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009 on.
+It shorten path from the visual signal processing simulation and control of our [aerial robot](https://www.researchgate.net/profile/Nicolas-Franceschini/publication/261957721/figure/fig11/AS:613971820285953@1523393697097/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_W640.jpg) and replaced the original dSPACE platform in our lab.
 
-I used the same Rapid Control Prototyping (RCP) to develop data fusion algorithm on motion analysis for wearable sports article at [MOVEA](https://www.cea-tech.fr/cea-tech/english/Pages/success-stories/movea.aspx) in 2010-2011. 
+The same aproach was then used to develop data fusion algorithm on motion analysis in wearable sports article at [MOVEA](https://www.cea-tech.fr/cea-tech/english/Pages/success-stories/movea.aspx) in 2010-2011. 
 
-I joined [Microchip Technology](https://www.microchip.com/) where I am pursuing the development of the [MPLAB blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink) to target dsPIC and PIC32 microcontrollers.
+I joined in 2011 [Microchip Technology](https://www.microchip.com/) to pursue the development of the [MPLAB blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink). The tool target dsPIC and was extended to target: 
+- dsPIC A
+- PIC32 (MIPS core)
+- SAMx2 (ARM Cortex M0+)
+- SAMx5 (ARM Cortex M4)
+- SAMx7 (ARM Cortex M7)
 
-For company, scientists, and students, *rapid prototyping enables focusing on new ideas* rather than getting into the details of embedded programming.
-Shortening the loopback $\lbrace Simulation \Leftrightarrow Hardware \rbrace$ allows improving algorithms, obtaining better results, and reducing the time to market.
+We implemented a rate-monotonic scheduler (multitasking system) and integrates completely to the MathWorks environment with support for PIL (Processor In the Loop), External-Mode...
 
-Most projects use the free [Microchip blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink) targeting dsPIC, PIC32 and few others micro-controllers. Old project are available on my [old website](https://www.kerhuel.eu/wiki/).
+The tool growth to target up to 650 chips. The development task and support was splitted in 2022. I will continue focusing on dsPIC new developpments and support.
 
+For company, scientists, and students, *rapid prototyping enables focusing on ideas* rather than getting lost into the details of embedded programming.
+Shortening the loopback $Simulation \Leftrightarrow Hardware $ allows to 
+- refine and validate a model thanks to early test
+- develop controller using the system digital twin
+- implement the final controller
+- benefit from the wide MathWorks tools available
 
+Electronics projects from this website use the [Microchip blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink). Older project are available on my [old website](https://www.kerhuel.eu/wiki/).
