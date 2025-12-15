@@ -53,7 +53,7 @@ The 48V version is more comfortable than the 36V version. With the 36V version, 
 
 Problems encountered:
   - 2300 km: crank bearing noise.
-    Seems cranck were not tight enough. Noise in warm weather (>15°C) Not changed yet but working fine (it's winter time).
+    Seems crank were not tight enough. Noise in warm weather (>15°C) Not changed yet but working fine (it's winter time).
 
 
 {{< figure 

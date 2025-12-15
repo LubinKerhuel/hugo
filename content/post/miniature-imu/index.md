@@ -72,7 +72,7 @@ Three types of MEMS sensors noted respectively A,G and M measure 3 quantities in
 - (G) rate Gyros measure the angular speed rate $\vec{G}$
 - (M) Magnetometers measure the magnetic field $\vec{m}$
 
-Theses sensors are sometime all in one single package. Boards provides 6 (AG), 9 (AGM) and even 10 DoF[^DoF] including a barometer. 
+These sensors are sometimes all in one single package. Boards provides 6 (AG), 9 (AGM) and even 10 DoF[^DoF] including a barometer. 
 
 Example of MEMS sensors: MPU9250 - MPU6050 - MPU6000 - ICM20608
 
@@ -88,7 +88,7 @@ TRIAD algorithm works under the assumption that
 - the object is not subject to accelerations and
 - the object is not subject to magnetic perturbations.
 
-Most dynamics system are subject to accelerations, or take place indoor where magnetic field is not reliable. Another sensor allows reducing theses assumption constraints.
+Most dynamic systems are subject to accelerations, or take place indoors where magnetic field is not reliable. Another sensor allows reducing these assumption constraints.
 
 ### Accelerometers - rate Gyro - Magnetometers (AGM)
 

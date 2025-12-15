@@ -44,7 +44,7 @@ math: false
 
 Original motor of my parrot Disco Flying wing is broken after few flights. It is not burned. The CHUCK controller is still ok including the motor power stage. The problem comes from wires connections cut at the interface between motor and power cable. It is difficult to repair as the connection break is just few millimeters from the motor windings.
 
-The root cause for theses wire cuts seems to be vibrations: On the original PF070253 DISCO motor, the power cable is not attached on the motor but directly connected on the thin motor wiring. Vibration of the cable powering the motor is likely to break thin motor wiring at the interface between cable and motor.
+The root cause for these wire cuts seems to be vibrations: On the original PF070253 DISCO motor, the power cable is not attached on the motor but directly connected on the thin motor wiring. Vibration of the cable powering the motor is likely to break thin motor wiring at the interface between cable and motor.
 
 {{< figure 
 src="/img/parrot-original-motor-front-small.jpg"

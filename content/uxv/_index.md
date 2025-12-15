@@ -67,7 +67,7 @@ Three main scripts enable decoding MAVLink messages, creating simulink model for
 
 ## Simulink blocks
 
-10 added blocks add essentials UAV features to implement an autopilot on a dsPIC DSC. Theses blocks complete the MPLAB blocks for Simulink from Microchip providing peripheral blocks for code generation. Theses works on top of the MathWorks Embedded Coder.  Added features:
+10 added blocks add essential UAV features to implement an autopilot on a dsPIC DSC. These blocks complete the MPLAB blocks for Simulink from Microchip providing peripheral blocks for code generation. These work on top of the MathWorks Embedded Coder.  Added features:
 
 - GPS
   - *GPS Parser* to decode NMEA messages
@@ -84,11 +84,11 @@ Three main scripts enable decoding MAVLink messages, creating simulink model for
   - *F.Port* receive RC channels + send telemetry
   - *Sensor for Smart.Port or F.Port* set values to send over telemetry[^Telemetry]
 
-Except the MATH block, theses blocks are typically connected to the dsPIC UART Rx/Tx block to send/receive the data flow from a GPS, a receiver, a radio link.
+Except the MATH block, these blocks are typically connected to the dsPIC UART Rx/Tx block to send/receive the data flow from a GPS, a receiver, a radio link.
 
 ## Installation
 
-Theses blocks are developped by Lubin Kerhuel and distributed for free with the [MPLAB device blocks for Simulink](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink) from Microchip.
+These blocks are developed by Lubin Kerhuel and distributed for free with the [MPLAB device blocks for Simulink](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink) from Microchip.
 
 1. Install the MPLAB Device Blocks for Microchip
 2. type *pinInfo*, click on *go to Third Part Tools folder*
@@ -99,4 +99,4 @@ Theses blocks are developped by Lubin Kerhuel and distributed for free with the 
 
 [^Parameter]: *Parameter protocol* enable tuning from any MAVLink ground station the Simulink tunable parameters which are normally tuned with External Mode or from the Processor In the Loop simulation (PIL).
 
-[^Telemetry]: *Sensor for Smart.Port or F.Port* block is used with either the *Smart Port* of the *F.Port* block. Theses protocol allows sending telemetry packet back to the Remote Controller (RC) interface. It enables emulation of Frsky sensor (battery voltage and current, variometer, airspeed, GPS) adding features to your remote easily. They also enable emulation of BetaFlight telemetry. Used with LUA script, this add features like artificial horizon, air speed, vertical speed, distance from home and many other to your remote (tested with [yapuu LUA scripts](https://github.com/yaapu/FrskyTelemetryScript/wiki).
+[^Telemetry]: *Sensor for Smart.Port or F.Port* block is used with either the *Smart Port* of the *F.Port* block. These protocols allow sending telemetry packets back to the Remote Controller (RC) interface. It enables emulation of Frsky sensor (battery voltage and current, variometer, airspeed, GPS) adding features to your remote easily. They also enable emulation of BetaFlight telemetry. Used with LUA script, this adds features like artificial horizon, air speed, vertical speed, distance from home and many others to your remote (tested with [yaapu LUA scripts](https://github.com/yaapu/FrskyTelemetryScript/wiki)).

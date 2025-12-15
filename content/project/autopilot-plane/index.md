@@ -167,7 +167,7 @@ Add automatic guidance of the plane, using MAVLink Way point sets.
 
 Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.
 
-Ideas to dvpt:
+Ideas to develop:
 
 - IMU
 - [Pitot tube](/post/pitot-build/)

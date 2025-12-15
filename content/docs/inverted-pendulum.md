@@ -182,7 +182,7 @@ caption="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reac
 numbered="true"
 >}}
 
-## Pendul Equations
+## Pendulum Equations
 
 The Dynamic fundamental law applied on the pendulum:
 $$ \sum \vec{Force} = m.\vec{a} $$
@@ -334,7 +334,7 @@ The parameters $\tau$ is "guessed" in a first step.
 In a second step, a $2^{nd}$ inertial sensor board is temporary glued in the middle of the wheel diameter to as the inertial sensor is in the wheel rotation axe.
 An identification can be computed from the motor set-point and the wheel movements while the pendulum was actively controlled up by a first feedback loop.
 
-Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between theses periodic re-initialization.
+Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between these periodic re-initializations.
 
 {{< figure 
 src="/img/pendulum-gy91-wheel.jpg"

@@ -54,7 +54,7 @@ slides:
 ---
 ## Stand-still Identification
 
-- R during rotor "alignement" (800ms)
+- R during rotor "alignment" (800ms)
 - L during current relaxation phase (300ms)
 
 - Assuming: $Ts \<\< \tau$

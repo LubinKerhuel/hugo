@@ -127,7 +127,7 @@ numbered="true"
 src="/img/uxv-block-sbus-scheme-uart-connection.png"
 link="/img/uxv-block-sbus-scheme-uart-connection.png"
 width="100%"
-title="Scheme of the UART Rx block connected to the the S.BUS block."
+title="Scheme of the UART Rx block connected to the S.BUS block."
 caption="Scheme to decode S.BUS for use in a dsPIC"
 numbered="true"
 >}}
@@ -147,7 +147,7 @@ Smart Port (S.Port) use UART where Rx and Tx pins are set on the same pin with i
 
 UART configuration setting:
 
-- 56700 bauds/s
+- 57600 bauds/s
 - Half duplex
 - Rx and Tx inverted logic (Idle state is low level), 3.3V
 - No parity

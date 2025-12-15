@@ -50,9 +50,9 @@ menu:
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
 
-The block add a sensor "packet" to be transmitted to a receiver through the Smart Port of the F.Port. The receiver send the telemetry packet to the Remote controller (RC). Thus the Simulink should have either a Smart Port or a F.Port block.
+The block adds a sensor "packet" to be transmitted to a receiver through the Smart Port of the F.Port. The receiver send the telemetry packet to the Remote controller (RC). Thus the Simulink should have either a Smart Port or a F.Port block.
 
-Each sensor block declare the sensor reference composed of the two parameters PhysId and {Address+Offset}. Sensor value is composed of 4 bytes array block input. Multiple instance of the sensor block can be added in a model. Two instance can have the same sensor reference wihch is used for sensor sending multiple packets with various values (see FrSky FVLSS or GPS sensor).
+Each sensor block declare the sensor reference composed of the two parameters PhysId and {Address+Offset}. Sensor value is composed of 4 bytes array block input. Multiple instance of the sensor block can be added in a model. Two instance can have the same sensor reference which is used for sensor sending multiple packets with various values (see FrSky FVLSS or GPS sensor).
 
 Each block instance add a 4 bytes buffer to store the sensor value which is updated at block execution time. The block sample rate defines the update rate of the internal buffer.
 
@@ -86,4 +86,4 @@ Communication with the receiver can use either the Smart Port, or the F.Port.
 
 The sensor PhyId, APPID and APPID Offset variant are set within the block.
 The PRIM field must be set to 0X10 for a sensor. The sensor value unit is set within the block.
-Block input is the 4 bytes codint for the sensor value. 
+Block input is the 4 bytes coding for the sensor value. 

@@ -73,7 +73,7 @@ date_format = "Jan 2006"
   
     - Design and realisation of an electronic board (sensor, signal processing, data transmission) for measuring human head's 3D acceleration.
     - Design and realization of a miniature vestibular implant for small mammal.
-- Applied math : Linear Analysis (PCA, LDA) to extract relevant information from large measurement database. Script to generate automatic report throught matlab and LaTeX."""
+- Applied math : Linear Analysis (PCA, LDA) to extract relevant information from large measurement database. Script to generate automatic report through MATLAB and LaTeX."""
 
 
 [[experience]]
