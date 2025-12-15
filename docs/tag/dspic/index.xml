@@ -1,351 +1,312 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DsPIC | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/dspic/</link><atom:link href="https://lubin.kerhuel.eu/tag/dspic/index.xml" rel="self" type="application/rss+xml"/><description>DsPIC</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hu18314724763525769891.png</url><title>DsPIC</title><link>https://lubin.kerhuel.eu/tag/dspic/</link></image><item><title>Fixed-wing autopilot based on Simulink model</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
-&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
-&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
-&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-&lt;div class="pswp__bg">&lt;/div>
-&lt;div class="pswp__scroll-wrap">
-&lt;div class="pswp__container">
-&lt;div class="pswp__item">&lt;/div>
-&lt;div class="pswp__item">&lt;/div>
-&lt;div class="pswp__item">&lt;/div>
-&lt;/div>
-&lt;div class="pswp__ui pswp__ui--hidden">
-&lt;div class="pswp__top-bar">
-&lt;div class="pswp__counter">&lt;/div>
-&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
-&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
-&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
-&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
-&lt;div class="pswp__preloader">
-&lt;div class="pswp__preloader__icn">
-&lt;div class="pswp__preloader__cut">
-&lt;div class="pswp__preloader__donut">&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-&lt;div class="pswp__share-tooltip">&lt;/div>
-&lt;/div>
-&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-&lt;/button>
-&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-&lt;/button>
-&lt;div class="pswp__caption">
-&lt;div class="pswp__caption__center">&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;h2 id="a-16-bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools">A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2>
-&lt;h3 id="motivation">Motivation&lt;/h3>
-&lt;p>Building a platform for testing various autopilot control loop has become simple thanks to the many low cost elements available. To cite few of them:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>10 DoF IMU&lt;/strong>: (~$5\ $$),&lt;/li>
-&lt;li>&lt;strong>GPS board&lt;/strong>: (~$10\ $$),&lt;/li>
-&lt;li>&lt;strong>Pitot tube&lt;/strong> (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">custom&lt;/a>): (~$20\ $$),&lt;/li>
-&lt;li>&lt;strong>Microcontroller board&lt;/strong>: depend on the board; rely on $\approx 5\ $$ mcu,&lt;/li>
-&lt;li>&lt;strong>Plane&lt;/strong> platform: from $60$ to $120\ $$ including servos and motors.&lt;/li>
-&lt;li>You also need few RC hardware:
-&lt;ul>
-&lt;li>&lt;strong>receiver&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>remote control&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>battery pack&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>few optional hardware for &lt;strong>data logging&lt;/strong>, &lt;strong>telemetry&lt;/strong>, &lt;strong>camera&lt;/strong>&amp;hellip;&lt;/li>
-&lt;/ul>
-&lt;h3 id="difference-with-existing-autopilot">Difference with existing autopilot&lt;/h3>
-&lt;p>Many off the shelf autopilot exists and works great. To mention few of them:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://ardupilot.org/" target="_blank" rel="noopener">Ardupilot&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://px4.io/" target="_blank" rel="noopener">PX4&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://inavflight.com/" target="_blank" rel="noopener">iNav&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.librepilot.org/site/index.html" target="_blank" rel="noopener">LibrePilot&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://wiki.paparazziuav.org/wiki/Main_Page" target="_blank" rel="noopener">Paparazzi&lt;/a>.&lt;/li>
-&lt;li>Others are listed on the &lt;a href="https://blog.dronetrest.com/flight-controller-firmware/" target="_blank" rel="noopener">DroneTrest review&lt;/a>).&lt;/li>
-&lt;/ul>
-&lt;p>Usually, their internal parameters can be tuned. But, inserting your customized control-loop in such autopilot requires understanding the code structure underneath. Even well documented, it represents hundreds of C functions to navigate into, before starting any changes.
-Your custom control loop might not fit within the existing structure. You might want to implement a more advanced controller than existing PIDs, use a different sample rate etc&amp;hellip;&lt;/p>
-&lt;p>Starting a new project is sometime faster than re-use a pre-existing advanced one.
-The presented autopilot uses a Model Based Design (MBD) approach: The autopilot code is generated from a unique Simulink model. Everything is within the diagram, from low level sensors handling up to the controller design. This MBD aproach is also named Rapid Control Prototyping (RCP).&lt;/p>
-&lt;p>The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
-Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p>
-&lt;p>Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p>
-&lt;p>Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/" target="_blank" rel="noopener">https://slugsuav.soe.ucsc.edu/&lt;/a>) is available online. The update &lt;a href="https://doi.org/10.1155/2018/6892153" target="_blank" rel="noopener">SLUG II&lt;/a> projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p>
-&lt;h3 id="hardware-list">Hardware list&lt;/h3>
-&lt;p>Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p>
-&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" loading="lazy" alt="Volantex Firstar 1600 with Qx7 remote control."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>autopilot platform&lt;/h4>
-&lt;p>Volantex Firstar 1600 with Qx7 remote control.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;ul>
-&lt;li>&lt;strong>RC platform&lt;/strong>: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)&lt;/li>
-&lt;li>&lt;strong>Remote Control&lt;/strong>: FrSky QX7&lt;/li>
-&lt;li>&lt;strong>Receiver&lt;/strong>: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and Smart Port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with Smart Port saving one UART peripheral of the microcontroller. Each protocol uses only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.&lt;/li>
-&lt;li>&lt;strong>Microcontroller&lt;/strong>: dsPIC 33EP on a AUAV V3 board. External motion sensor is used instead of built-in AUAV3 sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV3 board which is difficult to find now. The UDB5 mini is similar and can still be found.&lt;/li>
-&lt;li>&lt;strong>IMU sensor&lt;/strong>: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane. I2C bus is used between sensors and MCU.&lt;/li>
-&lt;li>&lt;strong>Pitot tube&lt;/strong>:
-&lt;ul>
-&lt;li>An inner tube and an outer tube on which four holes are done laterally.&lt;/li>
-&lt;li>Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See &lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">build and test&lt;/a> page.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>GPS&lt;/strong>: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.&lt;/li>
-&lt;li>&lt;strong>Data logger&lt;/strong>: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.).&lt;/li>
-&lt;li>&lt;strong>Radio link&lt;/strong>: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href="https://qgroundcontrol.com/" target="_blank" rel="noopener">qgroundcontrol&lt;/a> base station running on most platforms (PC, android, windows, Linux).&lt;/li>
-&lt;li>&lt;strong>Action cam&lt;/strong>: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li>
-&lt;/ul>
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" loading="lazy" />
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16-bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter.&lt;/h4>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;h3 id="results">Results&lt;/h3>
-&lt;p>Sliding mode-based controller tested in both pitch and roll axis with two mode:&lt;/p>
-&lt;ul>
-&lt;li>Control plane angular rate control (angular speed set-point given through the remote control)&lt;/li>
-&lt;li>Control plane angle attitude (angle set point provided through the remote control)&lt;/li>
-&lt;/ul>
-&lt;p>Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p>
-&lt;p>Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p>
-&lt;p>Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build">here&lt;/a>).&lt;/p>
-&lt;p>Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p>
-&lt;p>Validated automatic calibration of the magnetometer&amp;rsquo;s axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p>
-&lt;h3 id="next-steps">Next steps&lt;/h3>
-&lt;p>Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p>
-&lt;p>Test in flight MAVLink protocol parameters tuning.&lt;/p>
-&lt;p>Add automatic guidance of the plane, using MAVLink Way point sets.&lt;/p>
-&lt;h3 id="site-content">Site content&lt;/h3>
-&lt;p>Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.&lt;/p>
-&lt;p>Ideas to dvpt:&lt;/p>
-&lt;ul>
-&lt;li>IMU&lt;/li>
-&lt;li>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/">Pitot tube&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation">Wind estimation&lt;/a> combining GPS ground-speed with Pitot tube airspeed&lt;/li>
-&lt;li>UxV blocks including GPS, Remote Control and MAVLink blocks and functionalities&lt;/li>
-&lt;li>Magnetometers auto calibration&lt;/li>
-&lt;/ul></description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/docs/inverted-pendulum/</link><pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/docs/inverted-pendulum/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
-&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
-&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
-&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-&lt;div class="pswp__bg">&lt;/div>
-&lt;div class="pswp__scroll-wrap">
-&lt;div class="pswp__container">
-&lt;div class="pswp__item">&lt;/div>
-&lt;div class="pswp__item">&lt;/div>
-&lt;div class="pswp__item">&lt;/div>
-&lt;/div>
-&lt;div class="pswp__ui pswp__ui--hidden">
-&lt;div class="pswp__top-bar">
-&lt;div class="pswp__counter">&lt;/div>
-&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
-&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
-&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
-&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
-&lt;div class="pswp__preloader">
-&lt;div class="pswp__preloader__icn">
-&lt;div class="pswp__preloader__cut">
-&lt;div class="pswp__preloader__donut">&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-&lt;div class="pswp__share-tooltip">&lt;/div>
-&lt;/div>
-&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-&lt;/button>
-&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-&lt;/button>
-&lt;div class="pswp__caption">
-&lt;div class="pswp__caption__center">&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
-&lt;div class="box" style="max-width:45%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_platform_top.png" loading="lazy" alt="Top of the inverted pendulum"/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum_platform_top.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">
-&lt;p>Top of the inverted pendulum&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;h1 id="presentation">Presentation&lt;/h1>
-&lt;p>Stabilization of an inverted pendulum is a common engineering challenge. Objective is to build a low-cost DIY&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> platform to test various feedback control loop.&lt;/p>
-&lt;p>This document describes the hardware and the theoretical model of the pendulum.
-Simulation are presented with Simulink models and an LQR&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> feedback control loop finally stabilizes the platform.&lt;/p>
-&lt;!-- test code -->
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://player.vimeo.com/video/309876246" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
-&lt;/div>
-&lt;!-- You tube alternative:
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dWTK7dTUvCo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
->&lt;/iframe>
-&lt;/div>
--->
-&lt;p>Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).&lt;/p>
-&lt;p>The electronic placed at the top of the pendulum composed of a dsPIC 16 bits microcontroller and an inertial sensor (accelerometers and rate gyro).
-The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see &lt;a href="#hw_trolley">pictures below&lt;/a>).&lt;/p>
-&lt;h1 id="hardware">Hardware&lt;/h1>
-&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube.
-The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries.&lt;/p>
-&lt;div class="box" style="max-width:60%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_platform_reduced_horizontal.png" loading="lazy" alt="Inverted Pendulum platform"/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum_platform.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">
-&lt;p>Inverted Pendulum platform&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;h2 id="head-electronics">Head electronics&lt;/h2>
-&lt;h3 id="microcontroller">Microcontroller&lt;/h3>
-&lt;p>The controller is a &lt;code>Microstick II&lt;/code> board equipped with a &lt;code>dsPIC 33EP128MC202&lt;/code> running at $70\ MIPS$.
-It is powered through the USB connector which &lt;strong>only provide the power supply&lt;/strong> from 4 AA batteries hold in the base.&lt;/p>
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_top.png" loading="lazy" alt="A prototyping board support a Microstick II board with the dsPIC 33EP128MC202. A board from Drotek endowing the Invensense ICM-20608 inertial sensor is screwed on the base board."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum_top.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Microcontroller and sensor on top of the inverted pendulum&lt;/h4>
-&lt;p>A prototyping board support a Microstick II board with the &lt;em>dsPIC 33EP128MC202&lt;/em>. A board from Drotek endowing the Invensense ICM-20608 inertial sensor is screwed on the base board.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;h3 id="imu-sensor">IMU sensor&lt;/h3>
-&lt;p>The unique sensor used is the 6 DoF&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> Invensense &lt;code>ICM-20608&lt;/code> mounted on a &lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener">Drotek sensor board&lt;/a>. It endows:&lt;/p>
-&lt;ul>
-&lt;li>a 3 axis Accelerometers and&lt;/li>
-&lt;li>a 3 axis rate gyros.&lt;/li>
-&lt;/ul>
-&lt;p>The I2C blocks set the BUS clock at $400kHz$ and fetch the 6 sensors values every $1ms$ $(1kHz)$.
-The Simulink I2C blocks setting enable hot plug of the I2C sensor: The microcontroller initializes the sensor each time it is newly detected on the I2C bus.&lt;/p>
-&lt;ul>
-&lt;li>The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.&lt;/li>
-&lt;li>The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.&lt;/li>
-&lt;/ul>
-&lt;p>A Simulink IMU&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> sub-system run a data fusion algorithm to reconstruct a drift-free quaternion angular position at $1kHz$ (the yaw angle drift when magnetometer is not present).
-The stabilization control loop uses the drift-free pitch angle.&lt;/p>
-&lt;p>It is possible to use other sensors like the MPU9250 or MPU6050 with either an I2C or SPI interface.
-The GY-91 board is a 10 DoF&lt;sup id="fnref1:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> widespread board based on the 9 DoF MPU9250 (3 accelerometers, 3 magnetometers, 3 rate gyros) and has a pressure sensor.&lt;/p>
-&lt;h3 id="UARTINTERFACE">UART interface&lt;/h3>
-&lt;p>The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">data-logger&lt;/a> or &lt;a href="https://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener">radio link&lt;/a> for telemetry module or an &lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener">RC receiver&lt;/a> capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p>
-&lt;h2 id="hw_trolley">Base trolley&lt;/h2>
-&lt;h3 id="motors">Motors&lt;/h3>
-&lt;p>The base trolley is a low cost a 2-wheel remote control toy named &lt;code>flywheels&lt;/code>. The toy is from 2012 but 2 wheeled equivalents exist.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DsPIC | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/dspic/</link><atom:link href="https://lubin.kerhuel.eu/tag/dspic/index.xml" rel="self" type="application/rss+xml"/><description>DsPIC</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hu_7804b255830ce5f.png</url><title>DsPIC</title><link>https://lubin.kerhuel.eu/tag/dspic/</link></image><item><title>Fixed-wing autopilot based on Simulink model</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous"&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"&gt;
+&lt;div class="pswp__bg"&gt;&lt;/div&gt;
+&lt;div class="pswp__scroll-wrap"&gt;
+&lt;div class="pswp__container"&gt;
+&lt;div class="pswp__item"&gt;&lt;/div&gt;
+&lt;div class="pswp__item"&gt;&lt;/div&gt;
+&lt;div class="pswp__item"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="pswp__ui pswp__ui--hidden"&gt;
+&lt;div class="pswp__top-bar"&gt;
+&lt;div class="pswp__counter"&gt;&lt;/div&gt;
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)"&gt;&lt;/button&gt;
+&lt;button class="pswp__button pswp__button--share" title="Share"&gt;&lt;/button&gt;
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen"&gt;&lt;/button&gt;
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out"&gt;&lt;/button&gt;
+&lt;div class="pswp__preloader"&gt;
+&lt;div class="pswp__preloader__icn"&gt;
+&lt;div class="pswp__preloader__cut"&gt;
+&lt;div class="pswp__preloader__donut"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"&gt;
+&lt;div class="pswp__share-tooltip"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"&gt;
+&lt;/button&gt;
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"&gt;
+&lt;/button&gt;
+&lt;div class="pswp__caption"&gt;
+&lt;div class="pswp__caption__center"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="a-16-bits-autopilot-designed-with-simulink-and-rapid-control-prototyping-tools"&gt;A 16-bits autopilot designed with Simulink and rapid control prototyping tools&lt;/h2&gt;
+&lt;h3 id="motivation"&gt;Motivation&lt;/h3&gt;
+&lt;p&gt;Building a platform for testing various autopilot control loop has become simple thanks to the many low cost elements available. To cite few of them:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;10 DoF IMU&lt;/strong&gt;: (~$5\ $$),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPS board&lt;/strong&gt;: (~$10\ $$),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pitot tube&lt;/strong&gt; (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/"&gt;custom&lt;/a&gt;): (~$20\ $$),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Microcontroller board&lt;/strong&gt;: depend on the board; rely on $\approx 5\ $$ mcu,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plane&lt;/strong&gt; platform: from $60$ to $120\ $$ including servos and motors.&lt;/li&gt;
+&lt;li&gt;You also need few RC hardware:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;receiver&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;remote control&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;battery pack&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;few optional hardware for &lt;strong&gt;data logging&lt;/strong&gt;, &lt;strong&gt;telemetry&lt;/strong&gt;, &lt;strong&gt;camera&lt;/strong&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="difference-with-existing-autopilot"&gt;Difference with existing autopilot&lt;/h3&gt;
+&lt;p&gt;Many off the shelf autopilot exists and works great. To mention few of them:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://ardupilot.org/" target="_blank" rel="noopener"&gt;Ardupilot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://px4.io/" target="_blank" rel="noopener"&gt;PX4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://inavflight.com/" target="_blank" rel="noopener"&gt;iNav&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.librepilot.org/site/index.html" target="_blank" rel="noopener"&gt;LibrePilot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.paparazziuav.org/wiki/Main_Page" target="_blank" rel="noopener"&gt;Paparazzi&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Others are listed on the &lt;a href="https://blog.dronetrest.com/flight-controller-firmware/" target="_blank" rel="noopener"&gt;DroneTrest review&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usually, their internal parameters can be tuned. But, inserting your customized control-loop in such autopilot requires understanding the code structure underneath. Even well documented, it represents hundreds of C functions to navigate into, before starting any changes.
+Your custom control loop might not fit within the existing structure. You might want to implement a more advanced controller than existing PIDs, use a different sample rate etc&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Starting a new project is sometime faster than re-use a pre-existing advanced one.
+The presented autopilot uses a Model Based Design (MBD) approach: The autopilot code is generated from a unique Simulink model. Everything is within the diagram, from low level sensors handling up to the controller design. This MBD aproach is also named Rapid Control Prototyping (RCP).&lt;/p&gt;
+&lt;p&gt;The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
+Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p&gt;
+&lt;p&gt;Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p&gt;
+&lt;p&gt;Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/" target="_blank" rel="noopener"&gt;https://slugsuav.soe.ucsc.edu/&lt;/a&gt;) is available online. The update &lt;a href="https://doi.org/10.1155/2018/6892153" target="_blank" rel="noopener"&gt;SLUG II&lt;/a&gt; projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p&gt;
+&lt;h3 id="hardware-list"&gt;Hardware list&lt;/h3&gt;
+&lt;p&gt;Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p&gt;
+&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" /&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" loading="lazy" alt="Volantex Firstar 1600 with Qx7 remote control."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/firstar1600-qx7.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;autopilot platform&lt;/h4&gt;
+&lt;p&gt;Volantex Firstar 1600 with Qx7 remote control.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RC platform&lt;/strong&gt;: Volantex Firstar 1600 with stock motors and servos (Alternative platform are Bixler 2 and Ranger 1600)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remote Control&lt;/strong&gt;: FrSky QX7&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Receiver&lt;/strong&gt;: FrSky XSR-M / XSR used with either the S.Bus (receiver channel output) and Smart Port (Telemetry) protocol or with the F.Port protocol which combine both both S.bus with Smart Port saving one UART peripheral of the microcontroller. Each protocol uses only one wire thus half duplex UART. dsPIC UART peripheral enable configuring Tx and Rx on one line.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Microcontroller&lt;/strong&gt;: dsPIC 33EP on a AUAV V3 board. External motion sensor is used instead of built-in AUAV3 sensors. Tiny sensor board with recent chip are easier to firmly attach near the CG reducing vibrations. A custom board based on a dsPIC might replace the AUAV3 board which is difficult to find now. The UDB5 mini is similar and can still be found.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IMU sensor&lt;/strong&gt;: Gy-91 (10 DoF with 3 accelerometers, 3 rate gyro, 3 magnetometers and one barometer). Firmly attached near the CG of the plane. I2C bus is used between sensors and MCU.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pitot tube&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;An inner tube and an outer tube on which four holes are done laterally.&lt;/li&gt;
+&lt;li&gt;Signal conditioning: the pitot tube pressure sensor (MP3V 5004 DP) is done with a MCHP ADC converter which integrate an analog amplifier. Converted pressure is sent to the microcontroller through the I2C bus. See &lt;a href="https://lubin.kerhuel.eu/post/pitot-build/"&gt;build and test&lt;/a&gt; page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPS&lt;/strong&gt;: based on a $\mu$blox M8N chip providing up to 10Hz refresh rate and provided good results compared to competitors chips.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data logger&lt;/strong&gt;: OpenLager board to log on SD card. It allows logging continuous UART output flow with at a baud up to 2 470 000 (much higher than a 115 200 baud rate that OpenLog data logger cannot sustain.).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Radio link&lt;/strong&gt;: 3DR Sik based Radio module for MAVLink telemetry (plane attitude, position, Way Point and Parameters tuning) with &lt;a href="https://qgroundcontrol.com/" target="_blank" rel="noopener"&gt;qgroundcontrol&lt;/a&gt; base station running on most platforms (PC, android, windows, Linux).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action cam&lt;/strong&gt;: RunCam2 to film the plane and its surface control from the top; getting a visual behavior of the autopilot in the action.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" loading="lazy" /&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16-bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter.&lt;/h4&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="results"&gt;Results&lt;/h3&gt;
+&lt;p&gt;Sliding mode-based controller tested in both pitch and roll axis with two mode:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Control plane angular rate control (angular speed set-point given through the remote control)&lt;/li&gt;
+&lt;li&gt;Control plane angle attitude (angle set point provided through the remote control)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p&gt;
+&lt;p&gt;Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p&gt;
+&lt;p&gt;Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build"&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p&gt;
+&lt;p&gt;Validated automatic calibration of the magnetometer&amp;rsquo;s axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p&gt;
+&lt;h3 id="next-steps"&gt;Next steps&lt;/h3&gt;
+&lt;p&gt;Reduce chattering on ailerons when sliding mode control is enabled.&lt;/p&gt;
+&lt;p&gt;Test in flight MAVLink protocol parameters tuning.&lt;/p&gt;
+&lt;p&gt;Add automatic guidance of the plane, using MAVLink Way point sets.&lt;/p&gt;
+&lt;h3 id="site-content"&gt;Site content&lt;/h3&gt;
+&lt;p&gt;Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.&lt;/p&gt;
+&lt;p&gt;Ideas to dvpt:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IMU&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/"&gt;Pitot tube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/#wind-estimation"&gt;Wind estimation&lt;/a&gt; combining GPS ground-speed with Pitot tube airspeed&lt;/li&gt;
+&lt;li&gt;UxV blocks including GPS, Remote Control and MAVLink blocks and functionalities&lt;/li&gt;
+&lt;li&gt;Magnetometers auto calibration&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Inverted Pendulum</title><link>https://lubin.kerhuel.eu/docs/inverted-pendulum/</link><pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/docs/inverted-pendulum/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;div class="box" style="max-width:45%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_platform_top.png" loading="lazy" alt="Top of the inverted pendulum"/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum_platform_top.png" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;
+&lt;p&gt;Top of the inverted pendulum&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h1 id="presentation"&gt;Presentation&lt;/h1&gt;
+&lt;p&gt;Stabilization of an inverted pendulum is a common engineering challenge. Objective is to build a low-cost DIY&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; platform to test various feedback control loop.&lt;/p&gt;
+&lt;p&gt;This document describes the hardware and the theoretical model of the pendulum.
+Simulation are presented with Simulink models and an LQR&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; feedback control loop finally stabilizes the platform.&lt;/p&gt;
+&lt;!-- test code --&gt;
+&lt;div
+style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe
+src="https://player.vimeo.com/video/309876246?dnt=0"
+style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allow="fullscreen"&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;!-- You tube alternative: &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dWTK7dTUvCo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+--&gt;
+&lt;p&gt;Video of the stabilized platform with a 4 state LQR feedback loop. The platform is completely autonomous (no user input).&lt;/p&gt;
+&lt;p&gt;The electronic placed at the top of the pendulum composed of a dsPIC 16 bits microcontroller and an inertial sensor (accelerometers and rate gyro).
+The base of the pendulum is a modified RC toys comprising two wheels driven by two independent DC motor (see &lt;a href="#hw_trolley"&gt;pictures below&lt;/a&gt;).&lt;/p&gt;
+&lt;h1 id="hardware"&gt;Hardware&lt;/h1&gt;
+&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;p&gt;The head and the base trolley are described successively. They are separated with an $8mm$ carbon tube.
+The pendulum length is $0.52m$ from wheel axis to the top. Wheels diameters is $8cm$. Pendulum total weight is $200g$ comprising $111g$ for the 4 AA batteries.&lt;/p&gt;
+&lt;div class="box" style="max-width:60%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_platform_reduced_horizontal.png" loading="lazy" alt="Inverted Pendulum platform"/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum_platform.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;
+&lt;p&gt;Inverted Pendulum platform&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h2 id="head-electronics"&gt;Head electronics&lt;/h2&gt;
+&lt;h3 id="microcontroller"&gt;Microcontroller&lt;/h3&gt;
+&lt;p&gt;The controller is a &lt;code&gt;Microstick II&lt;/code&gt; board equipped with a &lt;code&gt;dsPIC 33EP128MC202&lt;/code&gt; running at $70\ MIPS$.
+It is powered through the USB connector which &lt;strong&gt;only provide the power supply&lt;/strong&gt; from 4 AA batteries hold in the base.&lt;/p&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_top.png" loading="lazy" alt="A prototyping board support a Microstick II board with the dsPIC 33EP128MC202. A board from Drotek endowing the Invensense ICM-20608 inertial sensor is screwed on the base board."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum_top.png" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Microcontroller and sensor on top of the inverted pendulum&lt;/h4&gt;
+&lt;p&gt;A prototyping board support a Microstick II board with the &lt;em&gt;dsPIC 33EP128MC202&lt;/em&gt;. A board from Drotek endowing the Invensense ICM-20608 inertial sensor is screwed on the base board.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="imu-sensor"&gt;IMU sensor&lt;/h3&gt;
+&lt;p&gt;The unique sensor used is the 6 DoF&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt; Invensense &lt;code&gt;ICM-20608&lt;/code&gt; mounted on a &lt;a href="https://store.drotek.com/sensors/779-imu-6dof-icm20608-invensense-pcb-8944595424761.html" target="_blank" rel="noopener"&gt;Drotek sensor board&lt;/a&gt;. It endows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a 3 axis Accelerometers and&lt;/li&gt;
+&lt;li&gt;a 3 axis rate gyros.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The I2C blocks set the BUS clock at $400kHz$ and fetch the 6 sensors values every $1ms$ $(1kHz)$.
+The Simulink I2C blocks setting enable hot plug of the I2C sensor: The microcontroller initializes the sensor each time it is newly detected on the I2C bus.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The accelerometer is configured with a range of $\pm 8g$ low pass filtered at $99Hz$.&lt;/li&gt;
+&lt;li&gt;The rage gyro is configured with a range of $\pm 500 \deg/s$ low pass filtered at $250Hz$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A Simulink IMU&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt; sub-system run a data fusion algorithm to reconstruct a drift-free quaternion angular position at $1kHz$ (the yaw angle drift when magnetometer is not present).
+The stabilization control loop uses the drift-free pitch angle.&lt;/p&gt;
+&lt;p&gt;It is possible to use other sensors like the MPU9250 or MPU6050 with either an I2C or SPI interface.
+The GY-91 board is a 10 DoF&lt;sup id="fnref1:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt; widespread board based on the 9 DoF MPU9250 (3 accelerometers, 3 magnetometers, 3 rate gyros) and has a pressure sensor.&lt;/p&gt;
+&lt;h3 id="UARTINTERFACE"&gt;UART interface&lt;/h3&gt;
+&lt;p&gt;The PCB board provides a $3.3V$ regulator and 4 pin extra interface ( GND, +3.3v, Tx, Rx ) to connect either an UART &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener"&gt;data-logger&lt;/a&gt; or &lt;a href="https://ardupilot.org/copter/docs/common-sik-telemetry-radio.html#common-sik-telemetry-radio" target="_blank" rel="noopener"&gt;radio link&lt;/a&gt; for telemetry module or an &lt;a href="https://www.frsky-rc.com/product/xsr/" target="_blank" rel="noopener"&gt;RC receiver&lt;/a&gt; capable of S.BUS, Smart Port or P.Port protocol (all UART based).&lt;/p&gt;
+&lt;h2 id="hw_trolley"&gt;Base trolley&lt;/h2&gt;
+&lt;h3 id="motors"&gt;Motors&lt;/h3&gt;
+&lt;p&gt;The base trolley is a low cost a 2-wheel remote control toy named &lt;code&gt;flywheels&lt;/code&gt;. The toy is from 2012 but 2 wheeled equivalents exist.
 Its electronics is removed.
-Two pairs of wires power two DC motors in either direction through an &lt;code>L298N&lt;/code> H bridge board module.&lt;/p>
-&lt;div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
-&lt;div class="box" >
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img" style="background-image: url('/img/pendulum_toysrus_flywheels_package.jpg');">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg" loading="lazy" alt="FlyWheels toy package"/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>FlyWheels toy package&lt;/h4>
-&lt;p>FlyWheels toy package&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;div class="box" >
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img" style="background-image: url('/img/pendulum_toysrus_flywheels_open.jpg');">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg" loading="lazy" alt="Two DC motors"/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Two DC motors&lt;/h4>
-&lt;p>Two DC motors&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;/div>
+Two pairs of wires power two DC motors in either direction through an &lt;code&gt;L298N&lt;/code&gt; H bridge board module.&lt;/p&gt;
+&lt;div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery"&gt;
+&lt;div class="box" &gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img" style="background-image: url('/img/pendulum_toysrus_flywheels_package.jpg');"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg" loading="lazy" alt="FlyWheels toy package"/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_package.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;FlyWheels toy package&lt;/h4&gt;
+&lt;p&gt;FlyWheels toy package&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class="box" &gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img" style="background-image: url('/img/pendulum_toysrus_flywheels_open.jpg');"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg" loading="lazy" alt="Two DC motors"/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum_toysrus_flywheels_open.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;Two DC motors&lt;/h4&gt;
+&lt;p&gt;Two DC motors&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;!--
-(pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg))-->
-&lt;h3 id="power-electronics">Power electronics&lt;/h3>
-&lt;p>The L298N H bridge controls two DC motors. For each motor:&lt;/p>
-&lt;ul>
-&lt;li>Two logic signals set the 4 states: direction CW or CCW, brake, or freewheel.&lt;/li>
-&lt;li>The third logic signal power the motor depending on to the state defined.&lt;/li>
-&lt;/ul>
-&lt;p>The third signal is modulated with a 100Hz square periodic signal whose duty cycle vary from 0% to 100% (PWM). It sets the torque for the motor.&lt;/p>
-&lt;p>The flat multicolor ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.&lt;/p>
-&lt;div class="box" style="max-width:60%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_base.png" loading="lazy" alt="A L298N H bridge (for Arduino) power board drives the two DC motors of a modified FlyWheels toy. Four AA batteries powers the pendulum."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum_base.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Base trolley of the inverted pendulum&lt;/h4>
-&lt;p>A &lt;em>L298N H bridge&lt;/em> (for Arduino) power board drives the two DC motors of a modified &lt;em>FlyWheels&lt;/em> toy. &lt;em>Four AA batteries&lt;/em> powers the pendulum.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;h3 id="batteries">Batteries&lt;/h3>
-&lt;p>Four $1.2V$ AA Ni-Mh batteries are dispatched on both side of the trolley.
+(pictures: [Package](Toysrus_FlyWheels_package.jpg), [vehicle](Toysrus_FlyWheels_Vehicle.jpg), [RC+vehicle](Toysrus_FlyWheels_Vehicle_Remote.jpg), [Inside](Toysrus_FlyWheels_Open.jpg))--&gt;
+&lt;h3 id="power-electronics"&gt;Power electronics&lt;/h3&gt;
+&lt;p&gt;The L298N H bridge controls two DC motors. For each motor:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Two logic signals set the 4 states: direction CW or CCW, brake, or freewheel.&lt;/li&gt;
+&lt;li&gt;The third logic signal power the motor depending on to the state defined.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The third signal is modulated with a 100Hz square periodic signal whose duty cycle vary from 0% to 100% (PWM). It sets the torque for the motor.&lt;/p&gt;
+&lt;p&gt;The flat multicolor ribbon connects 6 logic control signals (3 for each motor) from the Microstick II dsPIC output to the of the L298N H bridge.&lt;/p&gt;
+&lt;div class="box" style="max-width:60%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum_base.png" loading="lazy" alt="A L298N H bridge (for Arduino) power board drives the two DC motors of a modified FlyWheels toy. Four AA batteries powers the pendulum."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum_base.png" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Base trolley of the inverted pendulum&lt;/h4&gt;
+&lt;p&gt;A &lt;em&gt;L298N H bridge&lt;/em&gt; (for Arduino) power board drives the two DC motors of a modified &lt;em&gt;FlyWheels&lt;/em&gt; toy. &lt;em&gt;Four AA batteries&lt;/em&gt; powers the pendulum.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="batteries"&gt;Batteries&lt;/h3&gt;
+&lt;p&gt;Four $1.2V$ AA Ni-Mh batteries are dispatched on both side of the trolley.
 $\approx 4.8V$ powers the motors and the electronics.
-The black and red wire from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.&lt;/p>
-&lt;h1 id="pendulum-model">Pendulum Model&lt;/h1>
-&lt;p>The pendulum model is composed of two intertwined sub-system:&lt;/p>
-&lt;ul>
-&lt;li>The pendulum*, with 1 rotation DoF&lt;sup id="fnref2:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> $\theta$ angle around the wheel&amp;rsquo;s axis&lt;/li>
-&lt;li>The trolley*, with 1 translation DoF&lt;sup id="fnref3:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> $x$ position.&lt;/li>
-&lt;/ul>
-&lt;div class="box" style="max-width:100%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png" loading="lazy" alt="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Pendulum free body diagram&lt;/h4>
-&lt;p>$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;h2 id="pendul-equations">Pendul Equations&lt;/h2>
-&lt;p>The Dynamic fundamental law applied on the pendulum:
-$$ \sum \vec{Force} = m.\vec{a} $$&lt;/p>
-&lt;p>The three forces presents are the weight $\vec{P}$, the Friction $\vec{F}$, and the Reaction $\vec{R}$ from the rod &amp;amp; floor:&lt;/p>
-&lt;p>$$ \underbrace{ -mg\vec{j} }_{\vec{P}} \ - \ \underbrace{ k \frac{\partial \vec{r}}{\partial t} }_{\vec{F}} \ + \ \underbrace{ ( mg\vec{j} . \vec{r} + \underbrace{Ctfg}_{\text{Centrifugal}} } _{\vec{R} } ) . \vec{r} = ml \frac{\partial^2\vec{ r }}{\partial t^2} $$&lt;/p>
-&lt;p>With $ \{ \vec{i},\vec{j} \} $ the static earth frame and $ \{ \vec{r},\vec{n} \} $ the pendulum frame (rod and normal direction).
+The black and red wire from the trolley to the top of the pendulum powers the Microstick II electronic and sensors.&lt;/p&gt;
+&lt;h1 id="pendulum-model"&gt;Pendulum Model&lt;/h1&gt;
+&lt;p&gt;The pendulum model is composed of two intertwined sub-system:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The pendulum*, with 1 rotation DoF&lt;sup id="fnref2:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt; $\theta$ angle around the wheel&amp;rsquo;s axis&lt;/li&gt;
+&lt;li&gt;The trolley*, with 1 translation DoF&lt;sup id="fnref3:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt; $x$ position.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="box" style="max-width:100%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png" loading="lazy" alt="$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum-free-body-diagram.png" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Pendulum free body diagram&lt;/h4&gt;
+&lt;p&gt;$\vec{P}$ is the weight at the center of gravity. $\vec{R}$ is the reaction force from the stiff rod and the floor. $\vec{F}$ is a friction force when the pendulum is rotating. $\{ \vec{i},\vec{j} \}$ is the earth frame and $\{ \vec{r},\vec{n} \}$ is the rotating pendulum frame. The inertial sensors are placed on top of the pendulum and measure all accelerations.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h2 id="pendul-equations"&gt;Pendul Equations&lt;/h2&gt;
+&lt;p&gt;The Dynamic fundamental law applied on the pendulum:
+$$ \sum \vec{Force} = m.\vec{a} $$&lt;/p&gt;
+&lt;p&gt;The three forces presents are the weight $\vec{P}$, the Friction $\vec{F}$, and the Reaction $\vec{R}$ from the rod &amp;amp; floor:&lt;/p&gt;
+&lt;p&gt;$$ \underbrace{ -mg\vec{j} }_{\vec{P}} \ - \ \underbrace{ k \frac{\partial \vec{r}}{\partial t} }_{\vec{F}} \ + \ \underbrace{ ( mg\vec{j} . \vec{r} + \underbrace{Ctfg}_{\text{Centrifugal}} } _{\vec{R} } ) . \vec{r} = ml \frac{\partial^2\vec{ r }}{\partial t^2} $$&lt;/p&gt;
+&lt;p&gt;With $ \{ \vec{i},\vec{j} \} $ the static earth frame and $ \{ \vec{r},\vec{n} \} $ the pendulum frame (rod and normal direction).
 $m$ is the mass of the pendulum (without the trolley).
-$l$ is the length from the inter-wheel&amp;rsquo;s axis to the center of mass of the pendulum (without the trolley)&lt;/p>
-&lt;p>$$
+$l$ is the length from the inter-wheel&amp;rsquo;s axis to the center of mass of the pendulum (without the trolley)&lt;/p&gt;
+&lt;p&gt;$$
 \left\{ \begin{array}{rcl}
 \vec{i} &amp;amp; = &amp;amp; \vec{n} . cos(\theta) - \vec{r} . sin(\theta) \\\
 \vec{j} &amp;amp; = &amp;amp; \vec{n} . sin(\theta) + \vec{r} . cos(\theta)
 \end{array} \right.
-$$&lt;/p>
-&lt;p>$$\vec{j}.\vec{r} = cos(\theta)$$&lt;/p>
-&lt;p>Considering the rotation $\theta$, the first and second time derivative of $\vec{r}$ are:&lt;/p>
-&lt;p>$$
+$$&lt;/p&gt;
+&lt;p&gt;$$\vec{j}.\vec{r} = cos(\theta)$$&lt;/p&gt;
+&lt;p&gt;Considering the rotation $\theta$, the first and second time derivative of $\vec{r}$ are:&lt;/p&gt;
+&lt;p&gt;$$
 \begin{array}{rcl}
 \frac{\partial \vec{r}}{\partial t}
 &amp;amp; = &amp;amp;
@@ -356,169 +317,172 @@ $$&lt;/p>
 &amp;amp; = &amp;amp;
 - \ddot{\theta} \vec{n} - \dot{\theta}^2 \vec{r}
 \end{array}
-$$&lt;/p>
-&lt;p>The projection of the forces equation in the pendulum frame $ \{ \vec{r},\vec{n} \} $ is:
+$$&lt;/p&gt;
+&lt;p&gt;The projection of the forces equation in the pendulum frame $ \{ \vec{r},\vec{n} \} $ is:
 $$
 \left\{ \begin{array}{rcl}
 \left( ml\dot{\theta}^2 + Ctfg \right) \vec{r} = \vec{0} \\\
-\left( l \ddot{\theta} + \frac{k}{m}\dot{\theta} - g . sin(\theta) \right) \vec{n} = \vec{0}&lt;br>
+\left( l \ddot{\theta} + \frac{k}{m}\dot{\theta} - g . sin(\theta) \right) \vec{n} = \vec{0}&lt;br&gt;
 \end{array} \right.
-$$&lt;/p>
-&lt;p>The first equation for the $\vec{r}$ axis shows internal forces which cancel each other: the weight $\vec{P} = -mg\vec{j}$ which is compensated on the $\vec{r}$ axis by the term $mg\vec{j}.\vec{r}$ from the reaction force which will also compensate for the Centrifugal force $ml\dot{\theta}^2$.&lt;/p>
-&lt;p>The second differential equation on the $\vec{n}$ axis allows to solve for the evolution of the angle $\theta$.
-It can be made linear with $sin(\theta) \approx \theta$ when the pendulum is up near $0$, or with $sin(\theta) \approx - (\theta - \pi)$ when the pendulum is down near $\pi$.&lt;/p>
-&lt;div class="box" style="max-width:100%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-model-rod.png" loading="lazy" alt="non-linear model of the $\theta$ angle evolution derived from the forces projected on the normal $\vec{n}$ axis of the rod. The trolley linear acceleration input is added."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum-model-rod.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Pendulum model for rod rotation&lt;/h4>
-&lt;p>non-linear model of the $\theta$ angle evolution derived from the forces projected on the normal $\vec{n}$ axis of the rod. The trolley linear acceleration input is added.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;p>The linear approximation for $\theta$ in the laplace domain is a $2^{nd}$ order system:
-$$ \theta(s) \left ( \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 \right ) = 0 $$&lt;/p>
-&lt;p>The pendulum transfer function $F_p = \frac{\theta(s)}{E(s)}$ with a null input $E(s) = 1$
-$$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$&lt;/p>
-&lt;div class="alert alert-note">
-&lt;div>
+$$&lt;/p&gt;
+&lt;p&gt;The first equation for the $\vec{r}$ axis shows internal forces which cancel each other: the weight $\vec{P} = -mg\vec{j}$ which is compensated on the $\vec{r}$ axis by the term $mg\vec{j}.\vec{r}$ from the reaction force which will also compensate for the Centrifugal force $ml\dot{\theta}^2$.&lt;/p&gt;
+&lt;p&gt;The second differential equation on the $\vec{n}$ axis allows to solve for the evolution of the angle $\theta$.
+It can be made linear with $sin(\theta) \approx \theta$ when the pendulum is up near $0$, or with $sin(\theta) \approx - (\theta - \pi)$ when the pendulum is down near $\pi$.&lt;/p&gt;
+&lt;div class="box" style="max-width:100%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-model-rod.png" loading="lazy" alt="non-linear model of the $\theta$ angle evolution derived from the forces projected on the normal $\vec{n}$ axis of the rod. The trolley linear acceleration input is added."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum-model-rod.png" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Pendulum model for rod rotation&lt;/h4&gt;
+&lt;p&gt;non-linear model of the $\theta$ angle evolution derived from the forces projected on the normal $\vec{n}$ axis of the rod. The trolley linear acceleration input is added.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;The linear approximation for $\theta$ in the laplace domain is a $2^{nd}$ order system:
+$$ \theta(s) \left ( \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 \right ) = 0 $$&lt;/p&gt;
+&lt;p&gt;The pendulum transfer function $F_p = \frac{\theta(s)}{E(s)}$ with a null input $E(s) = 1$
+$$ F_p(s) = \frac{1}{ \frac{1}{w_n^2}s^2 + \frac{2 \zeta}{w_n}s \pm 1 } $$&lt;/p&gt;
+&lt;div class="alert alert-note"&gt;
+&lt;div&gt;
 The linear term for $sin$ is positive when the pendulum is up when $\theta \approx 0$ (unstable), and negative when pendulum is down when $\theta \approx \pm \pi$ (stable).
-&lt;/div>
-&lt;/div>
-&lt;p>This transfer function is characterized when the pendulum is down by its natural frequency $w_n = \sqrt{ \frac{g}{l} } $, and a damping factor $\zeta$.&lt;/p>
-&lt;h2 id="pendul-identification">Pendul identification&lt;/h2>
-&lt;p>The parameter $l$ could be estimated from the platform mechanical but the damping parameter $\zeta$ (or frictions coefficient $k$) could not be estimated easily from the platform.&lt;/p>
-&lt;p>The simulation model is satisfactory when the calculation it performs make realistic prediction.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This transfer function is characterized when the pendulum is down by its natural frequency $w_n = \sqrt{ \frac{g}{l} } $, and a damping factor $\zeta$.&lt;/p&gt;
+&lt;h2 id="pendul-identification"&gt;Pendul identification&lt;/h2&gt;
+&lt;p&gt;The parameter $l$ could be estimated from the platform mechanical but the damping parameter $\zeta$ (or frictions coefficient $k$) could not be estimated easily from the platform.&lt;/p&gt;
+&lt;p&gt;The simulation model is satisfactory when the calculation it performs make realistic prediction.
 Experimental measurement is a good method to refine a model and tune its parameters.
-In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the experiment explained below.&lt;/p>
-&lt;h3 id="experimental-logs">Experimental logs&lt;/h3>
-&lt;p>The pendulum is placed on a track (two chairs back to back) to be able to make a complete rotation.
-Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p>
-&lt;p>It oscillates until the damping friction ($\zeta$) stops the free oscillations.&lt;/p>
-&lt;p>The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener">openlager&lt;/a> board connected on the dsPIC &lt;a href="#UARTINTERFACE">UART&lt;/a> interface.&lt;/p>
-&lt;h3 id="simulation-from-logs">Simulation from logs&lt;/h3>
-&lt;p>The measured inertial sensors are then re-used as data source in a Simulink model. $\theta$ angle is reconstructed using an IMU complementary filter algorithm implemented in the quaternion angle representation.&lt;/p>
-&lt;p>The pendulum model is initialized with the experimentation initial condition ($\theta = -18°$ , $\dot \theta = 0$). Trolley linear acceleration input is null.
-Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angle fit with the measured oscillation $\theta$.&lt;/p>
-&lt;div class="box" style="max-width:100%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-identification-theta.png" loading="lazy" alt="$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum-identification-theta.png" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Identification - experimental $\theta$ angle reconstructed from inertial sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4>
-&lt;p>$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align: center">Pendulum Parameters&lt;/th>
-&lt;th style="text-align: center">Identified Value&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align: center">$l$&lt;/td>
-&lt;td style="text-align: center">$0.45 m$&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: center">$k$&lt;/td>
-&lt;td style="text-align: center">$0.4$&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: center">$w_n = \sqrt{\frac{g}{l}}$&lt;/td>
-&lt;td style="text-align: center">$4.67\ rad.s^{-1}$ ( $0.74 Hz$ or $1.35s$ period )&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: center">⬆ Identified pendulum parameters&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="validation-and-imu-improvement">Validation and IMU improvement&lt;/h3>
-&lt;p>Parameters $l$ and $k$ can be further validated using the force equation and the estimated pendulum angle $\theta$.&lt;/p>
-&lt;p>The IMU input measurements is composed of the rate gyro and the accelerometers data. Magnetometers is not used in this pendulum example.
+In our case, the parameters $l$ and $\zeta$ (or $k$) are identified from the experiment explained below.&lt;/p&gt;
+&lt;h3 id="experimental-logs"&gt;Experimental logs&lt;/h3&gt;
+&lt;p&gt;The pendulum is placed on a track (two chairs back to back) to be able to make a complete rotation.
+Motor are off and the pendulum is released up-side with in the unstable condition ($\theta = -18°$ , $\dot \theta = 0$).&lt;/p&gt;
+&lt;p&gt;It oscillates until the damping friction ($\zeta$) stops the free oscillations.&lt;/p&gt;
+&lt;p&gt;The $1kHz$ sampled rate gyro and accelerometers values are recorded onboard an &lt;a href="https://github.com/d-ronin/openlager/wiki" target="_blank" rel="noopener"&gt;openlager&lt;/a&gt; board connected on the dsPIC &lt;a href="#UARTINTERFACE"&gt;UART&lt;/a&gt; interface.&lt;/p&gt;
+&lt;h3 id="simulation-from-logs"&gt;Simulation from logs&lt;/h3&gt;
+&lt;p&gt;The measured inertial sensors are then re-used as data source in a Simulink model. $\theta$ angle is reconstructed using an IMU complementary filter algorithm implemented in the quaternion angle representation.&lt;/p&gt;
+&lt;p&gt;The pendulum model is initialized with the experimentation initial condition ($\theta = -18°$ , $\dot \theta = 0$). Trolley linear acceleration input is null.
+Parameters $l$ and $k$ are iteratively tuned until the model $\hat{\theta}$ angle fit with the measured oscillation $\theta$.&lt;/p&gt;
+&lt;div class="box" style="max-width:100%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-identification-theta.png" loading="lazy" alt="$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum-identification-theta.png" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Identification - experimental $\theta$ angle reconstructed from inertial sensors (wide grey curve) vs pendulum model (read and blue dashed curves)&lt;/h4&gt;
+&lt;p&gt;$\theta$ angle from free oscillation experiment is compared against two pendulum models. The pendulum is released at time $16.7s$ upside ($18°$) and let free to oscillate. The grey curve is the experimental angle reference reconstructed from inertial sensors measurements. The blue dashed curve is a pendulum model using a linear damping with $k = 0.4$. The red doted curve use a nonlinear damping with the nonlinear term -1.1*$sign(\dot{\theta})$ added to the linear damping with $k = 0.17$.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: center"&gt;Pendulum Parameters&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Identified Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;$l$&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$0.45 m$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;$k$&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$0.4$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;$w_n = \sqrt{\frac{g}{l}}$&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$4.67\ rad.s^{-1}$ ( $0.74 Hz$ or $1.35s$ period )&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;⬆ Identified pendulum parameters&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="validation-and-imu-improvement"&gt;Validation and IMU improvement&lt;/h3&gt;
+&lt;p&gt;Parameters $l$ and $k$ can be further validated using the force equation and the estimated pendulum angle $\theta$.&lt;/p&gt;
+&lt;p&gt;The IMU input measurements is composed of the rate gyro and the accelerometers data. Magnetometers is not used in this pendulum example.
 The IMU input also require the predicted acceleration vector (resp magnetometer is used).
-The IMU output the sensor orientation and provides the gravity vector prediction as seen in the sensor estimated attitude (i.e. quaternion angle).&lt;/p>
-&lt;p>Comparing the gravity vector predicted with the accelerometer&amp;rsquo;s measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p>
-&lt;p>Considering the pendulum principal movement rotation $\theta$, the equations of forces applied on the pendulum derive from $\hat \theta$ a prediction for the dynamic acceleration.
-The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in these calculations.&lt;/p>
-&lt;p>The updated acceleration comprising both a static and dynamic part is fed into the IMU algorithm improving the IMU correction of the rate gyro integration drift even when the pendulum is not static.&lt;/p>
-&lt;h1 id="trolley-model">Trolley Model&lt;/h1>
-&lt;h2 id="trolley-equations">Trolley Equations&lt;/h2>
-&lt;div class="alert alert-warning">
-&lt;div>
+The IMU output the sensor orientation and provides the gravity vector prediction as seen in the sensor estimated attitude (i.e. quaternion angle).&lt;/p&gt;
+&lt;p&gt;Comparing the gravity vector predicted with the accelerometer&amp;rsquo;s measurement do not match because the sensor measures both the gravity plus the dynamic acceleration induced by the pendulum movements.&lt;/p&gt;
+&lt;p&gt;Considering the pendulum principal movement rotation $\theta$, the equations of forces applied on the pendulum derive from $\hat \theta$ a prediction for the dynamic acceleration.
+The good match between the predicted acceleration and the experimental measurement confirm somehow the correctness of parameters $l$ and $k$ involved in these calculations.&lt;/p&gt;
+&lt;p&gt;The updated acceleration comprising both a static and dynamic part is fed into the IMU algorithm improving the IMU correction of the rate gyro integration drift even when the pendulum is not static.&lt;/p&gt;
+&lt;h1 id="trolley-model"&gt;Trolley Model&lt;/h1&gt;
+&lt;h2 id="trolley-equations"&gt;Trolley Equations&lt;/h2&gt;
+&lt;div class="alert alert-warning"&gt;
+&lt;div&gt;
 Below is under construction &amp;#x1f6a7;
-&lt;/div>
-&lt;/div>
-&lt;p>The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$.
-This dynamic includes the motor dynamics when it is loaded with the trolley considering the pendulum as vertical.&lt;/p>
-&lt;p>The model considers as negligible the effect of the pendulum forces (translational and rotational) applied on the trolley.&lt;/p>
-&lt;p>$$ x(s) = \frac{1}{\tau s + 1} $$&lt;/p>
-&lt;h2 id="trolley-identification">Trolley Identification&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align: center">Trolley Parameter&lt;/th>
-&lt;th style="text-align: center">Estimated Value&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align: center">$\tau$&lt;/td>
-&lt;td style="text-align: center">$0.3s$&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>The trolley does not have any sensors. No encoder or current sensor are used to control the two motors.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The translational movement of the trolley is modeled as a $1^{st}$ order system characterized by its time constant $\tau$.
+This dynamic includes the motor dynamics when it is loaded with the trolley considering the pendulum as vertical.&lt;/p&gt;
+&lt;p&gt;The model considers as negligible the effect of the pendulum forces (translational and rotational) applied on the trolley.&lt;/p&gt;
+&lt;p&gt;$$ x(s) = \frac{1}{\tau s + 1} $$&lt;/p&gt;
+&lt;h2 id="trolley-identification"&gt;Trolley Identification&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: center"&gt;Trolley Parameter&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Estimated Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;$\tau$&lt;/td&gt;
+&lt;td style="text-align: center"&gt;$0.3s$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The trolley does not have any sensors. No encoder or current sensor are used to control the two motors.
 The parameters $\tau$ is &amp;ldquo;guessed&amp;rdquo; in a first step.
 In a second step, a $2^{nd}$ inertial sensor board is temporary glued in the middle of the wheel diameter to as the inertial sensor is in the wheel rotation axe.
-An identification can be computed from the motor set-point and the wheel movements while the pendulum was actively controlled up by a first feedback loop.&lt;/p>
-&lt;p>Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between theses periodic re-initialization.&lt;/p>
-&lt;div class="box" style="max-width:45%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-gy91-wheel.jpg" loading="lazy" alt="The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91 board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires)."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/pendulum-gy91-wheel.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered">&lt;h4>Identification of trolley in real inverted pendulum condition.&lt;/h4>
-&lt;p>The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91 board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires).&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;h1 id="controller">Controller&lt;/h1>
-&lt;p>&lt;code>Stabilization overview:&lt;/code> The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilizes the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.&lt;/p>
-&lt;h2 id="linearized-model">Linearized model&lt;/h2>
-&lt;h2 id="lqr-feedback-controller">LQR feedback controller&lt;/h2>
-&lt;p>Video of the inverted Pendulum when it encounters a wall:
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://player.vimeo.com/video/309876329" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
-&lt;/div>&lt;/p>
-&lt;!-- You tube alternative:
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xbu4hXOnemE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
->&lt;/iframe>
-&lt;/div>
--->
-&lt;p>Another way to stabilize a pendulum with an electric seesaw (&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener">video&lt;/a>).&lt;/p>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr>
-&lt;ol>
-&lt;li id="fn:1">
-&lt;p>Do It Yourself&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2">
-&lt;p>Linear Quadratic Regulator&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:3">
-&lt;p>Degree of Freedom&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref3:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:4">
-&lt;p>Inertial Measurement Unit&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/div></description></item></channel></rss>
+An identification can be computed from the motor set-point and the wheel movements while the pendulum was actively controlled up by a first feedback loop.&lt;/p&gt;
+&lt;p&gt;Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between theses periodic re-initialization.&lt;/p&gt;
+&lt;div class="box" style="max-width:45%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pendulum-gy91-wheel.jpg" loading="lazy" alt="The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91 board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires)."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/pendulum-gy91-wheel.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Identification of trolley in real inverted pendulum condition.&lt;/h4&gt;
+&lt;p&gt;The angular speed rate of the wheel is measured with one rate gyro form one added GY-91 sensor board. The GY-91 board is hot glued on one pendulum wheel. The pendulum is stabilized with a controller using an estimated trolley model. Four wires from the GY-91 to the microcontroller power the sensor and retrieve sensor data through the I2C bus (2 wires).&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h1 id="controller"&gt;Controller&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Stabilization overview:&lt;/code&gt; The microcontroller computes the angle of the pendulum from the inertial sensor measurements (accelerometers and rate gyro). A feedback loop stabilizes the pendulum up right while maintaining the pendulum position still. The pendulum translation is estimated through an internal dynamic model of the trolley stimulated with a copy of the DC motor command. The pendulum slow translations reflect the drift of the internal estimation of the displacement.&lt;/p&gt;
+&lt;h2 id="linearized-model"&gt;Linearized model&lt;/h2&gt;
+&lt;h2 id="lqr-feedback-controller"&gt;LQR feedback controller&lt;/h2&gt;
+&lt;p&gt;Video of the inverted Pendulum when it encounters a wall:
+&lt;div
+style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe
+src="https://player.vimeo.com/video/309876329?dnt=0"
+style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allow="fullscreen"&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;!-- You tube alternative: &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xbu4hXOnemE?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+--&gt;
+&lt;p&gt;Another way to stabilize a pendulum with an electric seesaw (&lt;a href="https://sciencedemonstrations.fas.harvard.edu/presentations/inverted-pendulum" target="_blank" rel="noopener"&gt;video&lt;/a&gt;).&lt;/p&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Do It Yourself&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Linear Quadratic Regulator&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Degree of Freedom&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref2:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref3:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;Inertial Measurement Unit&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item></channel></rss>

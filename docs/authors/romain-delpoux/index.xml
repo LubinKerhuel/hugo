@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Romain Delpoux | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link><atom:link href="https://lubin.kerhuel.eu/authors/romain-delpoux/index.xml" rel="self" type="application/rss+xml"/><description>Romain Delpoux</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://lubin.kerhuel.eu/authors/romain-delpoux/avatar_hu9692949562379381554.jpg</url><title>Romain Delpoux</title><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link></image><item><title>Lab INSA - Real Time Control for a DC / PMSM Motors</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p>Control a 24V motor (Pravalux 24v DC) using the MCLV-V2 board with a dsPIC 33EP256MC506.
-This hands-on is for 5th year students at INSA-Lyon.&lt;/p>
-&lt;p>The hands-on Lab subject available at: &lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener">https://rtdc.ctrl-elec.fr/&lt;/a>.&lt;/p>
-&lt;p>Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p>
-&lt;ul>
-&lt;li>Real-time scheduler / CPU load analysis&lt;/li>
-&lt;li>Fixed-point datatypes&lt;/li>
-&lt;/ul>
-&lt;p>2021: Dspace project not feasible in labs due to Covid-19. It was replaced with home lab on MCLV-2 boards (sent to students) replacing Dspace.
-lab subject is availalbe at: &lt;a href="https://rcp.ctrl-elec.fr/" target="_blank" rel="noopener">https://rcp.ctrl-elec.fr/&lt;/a>&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Romain Delpoux | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link><atom:link href="https://lubin.kerhuel.eu/authors/romain-delpoux/index.xml" rel="self" type="application/rss+xml"/><description>Romain Delpoux</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://lubin.kerhuel.eu/authors/romain-delpoux/avatar_hu_5168742b7ceb92d3.jpg</url><title>Romain Delpoux</title><link>https://lubin.kerhuel.eu/authors/romain-delpoux/</link></image><item><title>Lab INSA - Real Time Control for a DC / PMSM Motors</title><link>https://lubin.kerhuel.eu/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/project/lab-dc-motor/</guid><description>&lt;p&gt;Control a 24V motor (Pravalux 24v DC) using the MCLV-V2 board with a dsPIC 33EP256MC506.
+This hands-on is for 5th year students at INSA-Lyon.&lt;/p&gt;
+&lt;p&gt;The hands-on Lab subject available at: &lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;https://rtdc.ctrl-elec.fr/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Slides presents the adaptation required to go from a Simulink model for Simulation (or DSPACE) to a Simulink model targeting a microcontrollers. Two topics are presented:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time scheduler / CPU load analysis&lt;/li&gt;
+&lt;li&gt;Fixed-point datatypes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2021: Dspace project not feasible in labs due to Covid-19. It was replaced with home lab on MCLV-2 boards (sent to students) replacing Dspace.
+lab subject is availalbe at: &lt;a href="https://rcp.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;https://rcp.ctrl-elec.fr/&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

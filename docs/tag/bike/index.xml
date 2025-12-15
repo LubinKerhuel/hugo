@@ -1,146 +1,146 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bike | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/bike/</link><atom:link href="https://lubin.kerhuel.eu/tag/bike/index.xml" rel="self" type="application/rss+xml"/><description>Bike</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hu18314724763525769891.png</url><title>Bike</title><link>https://lubin.kerhuel.eu/tag/bike/</link></image><item><title>Electric Kombi bike</title><link>https://lubin.kerhuel.eu/post/motorized-kombi-bike/</link><pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/motorized-kombi-bike/</guid><description>&lt;!-- Enable Photo Swipe + gallery features -->
-&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous">
-&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous">
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous">&lt;/script>
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous">&lt;/script>
-&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-&lt;div class="pswp__bg">&lt;/div>
-&lt;div class="pswp__scroll-wrap">
-&lt;div class="pswp__container">
-&lt;div class="pswp__item">&lt;/div>
-&lt;div class="pswp__item">&lt;/div>
-&lt;div class="pswp__item">&lt;/div>
-&lt;/div>
-&lt;div class="pswp__ui pswp__ui--hidden">
-&lt;div class="pswp__top-bar">
-&lt;div class="pswp__counter">&lt;/div>
-&lt;button class="pswp__button pswp__button--close" title="Close (Esc)">&lt;/button>
-&lt;button class="pswp__button pswp__button--share" title="Share">&lt;/button>
-&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen">&lt;/button>
-&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out">&lt;/button>
-&lt;div class="pswp__preloader">
-&lt;div class="pswp__preloader__icn">
-&lt;div class="pswp__preloader__cut">
-&lt;div class="pswp__preloader__donut">&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-&lt;div class="pswp__share-tooltip">&lt;/div>
-&lt;/div>
-&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-&lt;/button>
-&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-&lt;/button>
-&lt;div class="pswp__caption">
-&lt;div class="pswp__caption__center">&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;p>A KOMBI bike motorized with the TSDZ2 mid drive motor.
-The motor firmware is upgraded with the &lt;a href="https://github.com/OpenSource-EBike-firmware/TSDZ2_wiki/wiki" target="_blank" rel="noopener">TSDZ2 Flexible OpenSource firmware&lt;/a> initiated by Casainho.&lt;/p>
-&lt;p>Typically, empty or loaded with two kids; three in rare occasions; 2300km so far with original bike chain and original motor blue gear and clutch.&lt;/p>
-&lt;p>The first blue bike (pictures below) uses a 36V motor - 36V battery (battery swing from 33V to 42.4V). A second bike realized with the 48V TSDZ2 motor - 48V battery (swing from 40V to 52V).
-The 48V version is more comfortable than the 36V version. With the 36V version, the battery swing does not allows to benefit the full potential of the motor when once it is half empty. This is not noticed with the 48V motor.&lt;/p>
-&lt;p>Problems encountered:&lt;/p>
-&lt;ul>
-&lt;li>2300 km: crank bearing noise.
-Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not changed yet but working fine (it&amp;rsquo;s winter time).&lt;/li>
-&lt;/ul>
-&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" />
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" loading="lazy" alt="Original pedals"/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Motor Installation (1/3)&lt;/h4>
-&lt;p>Original pedals&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" loading="lazy" alt="Accessing the BSA 68 bottom bracket"/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Motor Installation (2/3)&lt;/h4>
-&lt;p>Accessing the BSA 68 bottom bracket&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" loading="lazy" alt="BSA 68 bottom bracket"/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Motor Installation (3/3)&lt;/h4>
-&lt;p>BSA 68 bottom bracket&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" loading="lazy" alt="TSDZ2 lying against the front tube protected by an air tube"/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>TSDZ2 motor installed&lt;/h4>
-&lt;p>TSDZ2 lying against the front tube protected by an air tube&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" loading="lazy" alt="Battery vertically installed behind the seat"/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Yuba KOMBI bike equipped with TSDZ2 motor and battery&lt;/h4>
-&lt;p>Battery vertically installed behind the seat&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" loading="lazy" alt="Setup for trailing a BMX race-mini bike (no-one on the BMX). The trailed bike is free to rotate about its steering wheel axis and vertically (up-down) following smoothly the front bike."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Yuba KOMBI bike trailing a bike&lt;/h4>
-&lt;p>Setup for trailing a BMX race-mini bike (no-one on the BMX). The trailed bike is free to rotate about its steering wheel axis and vertically (up-down) following smoothly the front bike.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" loading="lazy" alt="The front wheel of the trailed bike is engaged in a fence of the foot pod. A strap maintains the front wheel firmly attached to the trailing bike providing two degree of freedom to the trailed bike frame. A second strap helps to maintain the bike the same vertical plane. Note the foot-pod fence small angle providing space for kids foots on the front bike."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>Attachment setup for trailing another bike&lt;/h4>
-&lt;p>The front wheel of the trailed bike is engaged in a fence of the foot pod. A strap maintains the front wheel firmly attached to the trailing bike providing two degree of freedom to the trailed bike frame. A second strap helps to maintain the bike the same vertical plane. Note the foot-pod fence small angle providing space for kids foots on the front bike.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;div class="box" style="max-width:80%">
-&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" loading="lazy" alt="Yuba KOMBI bike attached with two other bikes on the car rack."/>
-&lt;/div>
-&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" itemprop="contentUrl">&lt;/a>
-&lt;figcaption >&lt;h4>KOMBI bike on a car rack&lt;/h4>
-&lt;p>Yuba KOMBI bike attached with two other bikes on the car rack.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;h3 id="various">Various&lt;/h3>
-&lt;p>&lt;a href="https://em3ev.com/" target="_blank" rel="noopener">https://em3ev.com/&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>36V battery: 3.385 kg&lt;/li>
-&lt;li>42V battery: 3.965 kg&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bike | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/bike/</link><atom:link href="https://lubin.kerhuel.eu/tag/bike/index.xml" rel="self" type="application/rss+xml"/><description>Bike</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hu_7804b255830ce5f.png</url><title>Bike</title><link>https://lubin.kerhuel.eu/tag/bike/</link></image><item><title>Electric Kombi bike</title><link>https://lubin.kerhuel.eu/post/motorized-kombi-bike/</link><pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/post/motorized-kombi-bike/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous"&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js" integrity="sha384-HotcxRWS6/oszHPwknjGnd066fV8+ycnO5TXDcOscFWvTtaiCtEEv+9s5Qrn1iJD" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"&gt;
+&lt;div class="pswp__bg"&gt;&lt;/div&gt;
+&lt;div class="pswp__scroll-wrap"&gt;
+&lt;div class="pswp__container"&gt;
+&lt;div class="pswp__item"&gt;&lt;/div&gt;
+&lt;div class="pswp__item"&gt;&lt;/div&gt;
+&lt;div class="pswp__item"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="pswp__ui pswp__ui--hidden"&gt;
+&lt;div class="pswp__top-bar"&gt;
+&lt;div class="pswp__counter"&gt;&lt;/div&gt;
+&lt;button class="pswp__button pswp__button--close" title="Close (Esc)"&gt;&lt;/button&gt;
+&lt;button class="pswp__button pswp__button--share" title="Share"&gt;&lt;/button&gt;
+&lt;button class="pswp__button pswp__button--fs" title="Toggle fullscreen"&gt;&lt;/button&gt;
+&lt;button class="pswp__button pswp__button--zoom" title="Zoom in/out"&gt;&lt;/button&gt;
+&lt;div class="pswp__preloader"&gt;
+&lt;div class="pswp__preloader__icn"&gt;
+&lt;div class="pswp__preloader__cut"&gt;
+&lt;div class="pswp__preloader__donut"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"&gt;
+&lt;div class="pswp__share-tooltip"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"&gt;
+&lt;/button&gt;
+&lt;button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"&gt;
+&lt;/button&gt;
+&lt;div class="pswp__caption"&gt;
+&lt;div class="pswp__caption__center"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;A KOMBI bike motorized with the TSDZ2 mid drive motor.
+The motor firmware is upgraded with the &lt;a href="https://github.com/OpenSource-EBike-firmware/TSDZ2_wiki/wiki" target="_blank" rel="noopener"&gt;TSDZ2 Flexible OpenSource firmware&lt;/a&gt; initiated by Casainho.&lt;/p&gt;
+&lt;p&gt;Typically, empty or loaded with two kids; three in rare occasions; 2300km so far with original bike chain and original motor blue gear and clutch.&lt;/p&gt;
+&lt;p&gt;The first blue bike (pictures below) uses a 36V motor - 36V battery (battery swing from 33V to 42.4V). A second bike realized with the 48V TSDZ2 motor - 48V battery (swing from 40V to 52V).
+The 48V version is more comfortable than the 36V version. With the 36V version, the battery swing does not allows to benefit the full potential of the motor when once it is half empty. This is not noticed with the 48V motor.&lt;/p&gt;
+&lt;p&gt;Problems encountered:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2300 km: crank bearing noise.
+Seems cranck were not tight enough. Noise in warm weather (&amp;gt;15°C) Not changed yet but working fine (it&amp;rsquo;s winter time).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" /&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" loading="lazy" alt="Original pedals"/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-01.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;Motor Installation (1/3)&lt;/h4&gt;
+&lt;p&gt;Original pedals&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" loading="lazy" alt="Accessing the BSA 68 bottom bracket"/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-02.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;Motor Installation (2/3)&lt;/h4&gt;
+&lt;p&gt;Accessing the BSA 68 bottom bracket&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" loading="lazy" alt="BSA 68 bottom bracket"/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-pedal-removal-03.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;Motor Installation (3/3)&lt;/h4&gt;
+&lt;p&gt;BSA 68 bottom bracket&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" loading="lazy" alt="TSDZ2 lying against the front tube protected by an air tube"/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-motor-installation.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;TSDZ2 motor installed&lt;/h4&gt;
+&lt;p&gt;TSDZ2 lying against the front tube protected by an air tube&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" loading="lazy" alt="Battery vertically installed behind the seat"/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-battery-installation.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;Yuba KOMBI bike equipped with TSDZ2 motor and battery&lt;/h4&gt;
+&lt;p&gt;Battery vertically installed behind the seat&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" loading="lazy" alt="Setup for trailing a BMX race-mini bike (no-one on the BMX). The trailed bike is free to rotate about its steering wheel axis and vertically (up-down) following smoothly the front bike."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-01.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;Yuba KOMBI bike trailing a bike&lt;/h4&gt;
+&lt;p&gt;Setup for trailing a BMX race-mini bike (no-one on the BMX). The trailed bike is free to rotate about its steering wheel axis and vertically (up-down) following smoothly the front bike.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" loading="lazy" alt="The front wheel of the trailed bike is engaged in a fence of the foot pod. A strap maintains the front wheel firmly attached to the trailing bike providing two degree of freedom to the trailed bike frame. A second strap helps to maintain the bike the same vertical plane. Note the foot-pod fence small angle providing space for kids foots on the front bike."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-tracting-bike-02.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;Attachment setup for trailing another bike&lt;/h4&gt;
+&lt;p&gt;The front wheel of the trailed bike is engaged in a fence of the foot pod. A strap maintains the front wheel firmly attached to the trailing bike providing two degree of freedom to the trailed bike frame. A second strap helps to maintain the bike the same vertical plane. Note the foot-pod fence small angle providing space for kids foots on the front bike.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class="box" style="max-width:80%"&gt;
+&lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+&lt;div class="img"&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" loading="lazy" alt="Yuba KOMBI bike attached with two other bikes on the car rack."/&gt;
+&lt;/div&gt;
+&lt;a href="https://lubin.kerhuel.eu/img/yuba-kombi-tsdz2-on-car.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
+&lt;figcaption &gt;&lt;h4&gt;KOMBI bike on a car rack&lt;/h4&gt;
+&lt;p&gt;Yuba KOMBI bike attached with two other bikes on the car rack.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="various"&gt;Various&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://em3ev.com/" target="_blank" rel="noopener"&gt;https://em3ev.com/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;36V battery: 3.385 kg&lt;/li&gt;
+&lt;li&gt;42V battery: 3.965 kg&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

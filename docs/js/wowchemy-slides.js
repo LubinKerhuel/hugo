@@ -1,5 +1,5 @@
 (() => {
-  // ns-params:@params
+  // ns-hugo-params:<stdin>
   var slides = { backgroundtransition: "fade", defaulttiming: 120, highlight_style: "dracula", history: false, mousewheel: true, previewlinks: true, progress: true, theme: "black", transition: "zoom", transition_speed: "fast" };
 
   // <stdin>
