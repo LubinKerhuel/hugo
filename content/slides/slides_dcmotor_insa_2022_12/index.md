@@ -36,11 +36,11 @@ slides:
 \[[Lab](https://rtdc.ctrl-elec.fr/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
 
 ---
-## Objectifs du cours
+## Objectifs
 
 - Comprendre l'approche Model-Based Design
-- Maîtriser les types de données (fixed point, flottant)
 - Implémenter un contrôleur temps réel
+- Maîtriser les types de données (fixed point, flottant)
 - Comprendre l'implémentation multi-rate
 
 ---

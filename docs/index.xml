@@ -2289,11 +2289,11 @@ GPS
 &lt;/p&gt;
 &lt;p&gt;[&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;Lab&lt;/a&gt;] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin"&gt;L.Kerhuel&lt;/a&gt; - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux"&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="objectifs-du-cours"&gt;Objectifs du cours&lt;/h2&gt;
+&lt;h2 id="objectifs"&gt;Objectifs&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Comprendre l&amp;rsquo;approche Model-Based Design&lt;/li&gt;
-&lt;li&gt;Maîtriser les types de données (fixed point, flottant)&lt;/li&gt;
 &lt;li&gt;Implémenter un contrôleur temps réel&lt;/li&gt;
+&lt;li&gt;Maîtriser les types de données (fixed point, flottant)&lt;/li&gt;
 &lt;li&gt;Comprendre l&amp;rsquo;implémentation multi-rate&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
