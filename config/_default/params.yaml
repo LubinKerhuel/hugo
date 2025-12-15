@@ -15,12 +15,12 @@ appearance:
   font: myfont
   font_size: L
 
-# Photoswipe
+# Photoswipe gallery plugin
 plugins_css: [hugo-easy-gallery]
 plugins_js: [load-photoswipe]
 
-# Added parmaeters
-reading_time: false   # could be set per pages, or globally
+# Reading time display (can be set per page or globally)
+reading_time: false
 
 
 # SEO
@@ -75,11 +75,11 @@ locale:
 
 features:
   syntax_highlighter:
-    enable: true # per page basis
-    extra_languages: 
+    enable: true
+    extra_languages:
       - matlab
     theme: 'vs2015'
-      
+
   math:
     enable: true
   privacy_pack:
@@ -93,27 +93,10 @@ features:
     shape: circle
   comment:
     provider: ''
-    disqus:
-      shortname: ''
-      show_count: true
-    commento:
-      url: ''
-    giscus:
-      repo: ''
-      repo_id: ''
-      category: ''
-      category_id: ''
   search:
-    provider: wowchemy
-    algolia:
-      app_id: ''
-      api_key: ''
-      index_name: ''
-      show_logo: false
+    provider: ''  # Disabled - reduces JS bundle size
   map:
-    provider: 'mapnik'
-    api_key: ''
-    zoom: 6
+    provider: ''  # Disabled - not used on this site
 
 # Extensions
 

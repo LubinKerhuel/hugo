@@ -1,35 +1,36 @@
 # Theme metadata
 name = "myDarkBlue"
 
-# Is theme light or dark?
+# Dark mode (primary theme)
 [dark]
-	# Primary
-  primary = "hsl(195, 90%, 58%)"	
+  # Primary accent color (cyan-blue)
+  primary = "hsl(195, 90%, 58%)"
   primary_light = "hsl(195, 90%, 68%)"
-  primary_dark = "hsl(195, 90%, 48%)" 
+  primary_dark = "hsl(195, 90%, 48%)"
 
-	# Menu
+  # Menu/navbar
   menu_primary = "rgb(20, 22, 34)"
   menu_text = "rgba(255,255,255,0.6)"
   menu_text_active = "rgba(255,255,255,1)"
   menu_title = "#fff"
 
-	# Home sections
+  # Home sections (alternating dark backgrounds)
   home_section_odd = "hsla(231, 15%, 18%, 1)"
   home_section_even = "hsla(231, 15%, 16%, 1)"
 
+# Light mode (for day/night toggle if enabled)
 [light]
-	# Primary
-  primary = "hsl(195, 90%, 58%)"	
-  primary_light = "hsl(195, 90%, 68%)"
-  primary_dark = "hsl(195, 90%, 48%)" 
+  # Primary accent color (same cyan-blue)
+  primary = "hsl(195, 90%, 40%)"
+  primary_light = "hsl(195, 90%, 50%)"
+  primary_dark = "hsl(195, 90%, 30%)"
 
-	# Menu
-  menu_primary = "rgb(20, 22, 34)"
-  menu_text = "rgba(255,255,255,0.6)"
-  menu_text_active = "rgba(255,255,255,1)"
-  menu_title = "#fff"
+  # Menu/navbar (light variant)
+  menu_primary = "rgb(240, 242, 245)"
+  menu_text = "rgba(0,0,0,0.6)"
+  menu_text_active = "rgba(0,0,0,0.9)"
+  menu_title = "#1a1a2e"
 
-	# Home sections
-  home_section_odd = "hsla(231, 15%, 18%, 1)"
-  home_section_even = "hsla(231, 15%, 16%, 1)"
+  # Home sections (alternating light backgrounds)
+  home_section_odd = "hsl(0, 0%, 100%)"
+  home_section_even = "hsl(0, 0%, 97%)"
