@@ -140,7 +140,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" loading="lazy" alt="Scheme to decode S.BUS for use in a dsPIC"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" itemprop="contentUrl"&gt;&lt;/a&gt;
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Scheme of the UART Rx block connected to the the S.BUS block.&lt;/h4&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Scheme of the UART Rx block connected to the S.BUS block.&lt;/h4&gt;
 &lt;p&gt;Scheme to decode S.BUS for use in a dsPIC&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -160,7 +160,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;p&gt;Smart Port (S.Port) use UART where Rx and Tx pins are set on the same pin with inverted logic (1 is high level). One single wire is used in half duplex communication mode.&lt;/p&gt;
 &lt;p&gt;UART configuration setting:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;56700 bauds/s&lt;/li&gt;
+&lt;li&gt;57600 bauds/s&lt;/li&gt;
 &lt;li&gt;Half duplex&lt;/li&gt;
 &lt;li&gt;Rx and Tx inverted logic (Idle state is low level), 3.3V&lt;/li&gt;
 &lt;li&gt;No parity&lt;/li&gt;

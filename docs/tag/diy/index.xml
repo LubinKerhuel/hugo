@@ -258,7 +258,7 @@ m = 72mm
 &lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" loading="lazy" alt="GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$)."/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-gps-wind-calibration.png" itemprop="contentUrl"&gt;&lt;/a&gt;
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Experimental measurement comparing GPS ground speed with pitot-tube airspeed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the the pitot tube subtracted from the estimated wind.&lt;/h4&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Experimental measurement comparing GPS ground speed with pitot-tube airspeed on 200s of a Firstar 1600 RC plane flight. Match between the GPS ground speed and the pitot tube subtracted from the estimated wind.&lt;/h4&gt;
 &lt;p&gt;GPS Speed over ground (red). Pitot airspeed (blue) computed with $\rho=1.15$. Reconstructed up-front wind (green). Pitot airspeed minus wind estimated (black) where $V_pitot$ is averaged and under-sampled by a factor 5 reducing its sampling rate from 250Hz to 50Hz. Up-front wind is estimated from the GPS COG angle ($\approx \theta_{heading}$), and the estimated wind strength ($V_{wind}= 2.5 m/s$) and direction ($\theta_{wind} = 101°$).&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -501,7 +501,7 @@ The black and red wire from the trolley to the top of the pendulum powers the Mi
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;h2 id="pendul-equations"&gt;Pendul Equations&lt;/h2&gt;
+&lt;h2 id="pendulum-equations"&gt;Pendulum Equations&lt;/h2&gt;
 &lt;p&gt;The Dynamic fundamental law applied on the pendulum:
 $$ \sum \vec{Force} = m.\vec{a} $$&lt;/p&gt;
 &lt;p&gt;The three forces presents are the weight $\vec{P}$, the Friction $\vec{F}$, and the Reaction $\vec{R}$ from the rod &amp;amp; floor:&lt;/p&gt;
@@ -650,7 +650,7 @@ This dynamic includes the motor dynamics when it is loaded with the trolley cons
 The parameters $\tau$ is &amp;ldquo;guessed&amp;rdquo; in a first step.
 In a second step, a $2^{nd}$ inertial sensor board is temporary glued in the middle of the wheel diameter to as the inertial sensor is in the wheel rotation axe.
 An identification can be computed from the motor set-point and the wheel movements while the pendulum was actively controlled up by a first feedback loop.&lt;/p&gt;
-&lt;p&gt;Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between theses periodic re-initialization.&lt;/p&gt;
+&lt;p&gt;Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between these periodic re-initializations.&lt;/p&gt;
 &lt;div class="box" style="max-width:45%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;

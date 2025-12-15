@@ -1,6 +1,6 @@
 (() => {
   // ns-hugo-params:<stdin>
-  var slides = { backgroundtransition: "fade", defaulttiming: 120, highlight_style: "dracula", history: false, mousewheel: true, previewlinks: true, progress: true, theme: "black", transition: "zoom", transition_speed: "fast" };
+  var slides = { backgroundtransition: "fade", defaulttiming: 120, highlight_style: "dracula", history: false, mousewheel: true, previewlinks: true, progress: true, slide_number: true, theme: "black", transition: "zoom", transition_speed: "fast" };
 
   // <stdin>
   var enabledPlugins = [RevealMarkdown, RevealSearch, RevealNotes, RevealMath.KaTeX, RevealZoom];

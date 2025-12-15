@@ -45,7 +45,7 @@
 &lt;/table&gt;
 &lt;p&gt;&lt;em&gt;mavlinkgui&lt;/em&gt; script opens a Graphical User Interface to explore MAVLink data. It list MAVLink messages found in a log file and plot selected {message - value}. Plot script is customizable enabling user to go beyond a simple plot. The GUI provides access to the three scripts mentioned above.&lt;/p&gt;
 &lt;h2 id="simulink-blocks"&gt;Simulink blocks&lt;/h2&gt;
-&lt;p&gt;10 added blocks add essentials UAV features to implement an autopilot on a dsPIC DSC. Theses blocks complete the MPLAB blocks for Simulink from Microchip providing peripheral blocks for code generation. Theses works on top of the MathWorks Embedded Coder. Added features:&lt;/p&gt;
+&lt;p&gt;10 added blocks add essential UAV features to implement an autopilot on a dsPIC DSC. These blocks complete the MPLAB blocks for Simulink from Microchip providing peripheral blocks for code generation. These work on top of the MathWorks Embedded Coder. Added features:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;GPS
 &lt;ul&gt;
@@ -74,9 +74,9 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Except the MATH block, theses blocks are typically connected to the dsPIC UART Rx/Tx block to send/receive the data flow from a GPS, a receiver, a radio link.&lt;/p&gt;
+&lt;p&gt;Except the MATH block, these blocks are typically connected to the dsPIC UART Rx/Tx block to send/receive the data flow from a GPS, a receiver, a radio link.&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
-&lt;p&gt;Theses blocks are developped by Lubin Kerhuel and distributed for free with the &lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink" target="_blank" rel="noopener"&gt;MPLAB device blocks for Simulink&lt;/a&gt; from Microchip.&lt;/p&gt;
+&lt;p&gt;These blocks are developed by Lubin Kerhuel and distributed for free with the &lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink" target="_blank" rel="noopener"&gt;MPLAB device blocks for Simulink&lt;/a&gt; from Microchip.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Install the MPLAB Device Blocks for Microchip&lt;/li&gt;
 &lt;li&gt;type &lt;em&gt;pinInfo&lt;/em&gt;, click on &lt;em&gt;go to Third Part Tools folder&lt;/em&gt;&lt;/li&gt;
@@ -92,7 +92,7 @@
 &lt;p&gt;&lt;em&gt;Parameter protocol&lt;/em&gt; enable tuning from any MAVLink ground station the Simulink tunable parameters which are normally tuned with External Mode or from the Processor In the Loop simulation (PIL).&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:3"&gt;
-&lt;p&gt;&lt;em&gt;Sensor for Smart.Port or F.Port&lt;/em&gt; block is used with either the &lt;em&gt;Smart Port&lt;/em&gt; of the &lt;em&gt;F.Port&lt;/em&gt; block. Theses protocol allows sending telemetry packet back to the Remote Controller (RC) interface. It enables emulation of Frsky sensor (battery voltage and current, variometer, airspeed, GPS) adding features to your remote easily. They also enable emulation of BetaFlight telemetry. Used with LUA script, this add features like artificial horizon, air speed, vertical speed, distance from home and many other to your remote (tested with &lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki" target="_blank" rel="noopener"&gt;yapuu LUA scripts&lt;/a&gt;.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sensor for Smart.Port or F.Port&lt;/em&gt; block is used with either the &lt;em&gt;Smart Port&lt;/em&gt; of the &lt;em&gt;F.Port&lt;/em&gt; block. These protocols allow sending telemetry packets back to the Remote Controller (RC) interface. It enables emulation of Frsky sensor (battery voltage and current, variometer, airspeed, GPS) adding features to your remote easily. They also enable emulation of BetaFlight telemetry. Used with LUA script, this adds features like artificial horizon, air speed, vertical speed, distance from home and many others to your remote (tested with &lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki" target="_blank" rel="noopener"&gt;yaapu LUA scripts&lt;/a&gt;).&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description></item><item><title>block receiver &amp; telemetry: S.BUS, Smart Port, F.Port</title><link>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
@@ -237,7 +237,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" loading="lazy" alt="Scheme to decode S.BUS for use in a dsPIC"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" itemprop="contentUrl"&gt;&lt;/a&gt;
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Scheme of the UART Rx block connected to the the S.BUS block.&lt;/h4&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Scheme of the UART Rx block connected to the S.BUS block.&lt;/h4&gt;
 &lt;p&gt;Scheme to decode S.BUS for use in a dsPIC&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -257,7 +257,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;p&gt;Smart Port (S.Port) use UART where Rx and Tx pins are set on the same pin with inverted logic (1 is high level). One single wire is used in half duplex communication mode.&lt;/p&gt;
 &lt;p&gt;UART configuration setting:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;56700 bauds/s&lt;/li&gt;
+&lt;li&gt;57600 bauds/s&lt;/li&gt;
 &lt;li&gt;Half duplex&lt;/li&gt;
 &lt;li&gt;Rx and Tx inverted logic (Idle state is low level), 3.3V&lt;/li&gt;
 &lt;li&gt;No parity&lt;/li&gt;

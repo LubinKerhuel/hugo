@@ -45,7 +45,7 @@
 &lt;/table&gt;
 &lt;p&gt;&lt;em&gt;mavlinkgui&lt;/em&gt; script opens a Graphical User Interface to explore MAVLink data. It list MAVLink messages found in a log file and plot selected {message - value}. Plot script is customizable enabling user to go beyond a simple plot. The GUI provides access to the three scripts mentioned above.&lt;/p&gt;
 &lt;h2 id="simulink-blocks"&gt;Simulink blocks&lt;/h2&gt;
-&lt;p&gt;10 added blocks add essentials UAV features to implement an autopilot on a dsPIC DSC. Theses blocks complete the MPLAB blocks for Simulink from Microchip providing peripheral blocks for code generation. Theses works on top of the MathWorks Embedded Coder. Added features:&lt;/p&gt;
+&lt;p&gt;10 added blocks add essential UAV features to implement an autopilot on a dsPIC DSC. These blocks complete the MPLAB blocks for Simulink from Microchip providing peripheral blocks for code generation. These work on top of the MathWorks Embedded Coder. Added features:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;GPS
 &lt;ul&gt;
@@ -74,9 +74,9 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Except the MATH block, theses blocks are typically connected to the dsPIC UART Rx/Tx block to send/receive the data flow from a GPS, a receiver, a radio link.&lt;/p&gt;
+&lt;p&gt;Except the MATH block, these blocks are typically connected to the dsPIC UART Rx/Tx block to send/receive the data flow from a GPS, a receiver, a radio link.&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
-&lt;p&gt;Theses blocks are developped by Lubin Kerhuel and distributed for free with the &lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink" target="_blank" rel="noopener"&gt;MPLAB device blocks for Simulink&lt;/a&gt; from Microchip.&lt;/p&gt;
+&lt;p&gt;These blocks are developed by Lubin Kerhuel and distributed for free with the &lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink" target="_blank" rel="noopener"&gt;MPLAB device blocks for Simulink&lt;/a&gt; from Microchip.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Install the MPLAB Device Blocks for Microchip&lt;/li&gt;
 &lt;li&gt;type &lt;em&gt;pinInfo&lt;/em&gt;, click on &lt;em&gt;go to Third Part Tools folder&lt;/em&gt;&lt;/li&gt;
@@ -92,7 +92,7 @@
 &lt;p&gt;&lt;em&gt;Parameter protocol&lt;/em&gt; enable tuning from any MAVLink ground station the Simulink tunable parameters which are normally tuned with External Mode or from the Processor In the Loop simulation (PIL).&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:3"&gt;
-&lt;p&gt;&lt;em&gt;Sensor for Smart.Port or F.Port&lt;/em&gt; block is used with either the &lt;em&gt;Smart Port&lt;/em&gt; of the &lt;em&gt;F.Port&lt;/em&gt; block. Theses protocol allows sending telemetry packet back to the Remote Controller (RC) interface. It enables emulation of Frsky sensor (battery voltage and current, variometer, airspeed, GPS) adding features to your remote easily. They also enable emulation of BetaFlight telemetry. Used with LUA script, this add features like artificial horizon, air speed, vertical speed, distance from home and many other to your remote (tested with &lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki" target="_blank" rel="noopener"&gt;yapuu LUA scripts&lt;/a&gt;.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sensor for Smart.Port or F.Port&lt;/em&gt; block is used with either the &lt;em&gt;Smart Port&lt;/em&gt; of the &lt;em&gt;F.Port&lt;/em&gt; block. These protocols allow sending telemetry packets back to the Remote Controller (RC) interface. It enables emulation of Frsky sensor (battery voltage and current, variometer, airspeed, GPS) adding features to your remote easily. They also enable emulation of BetaFlight telemetry. Used with LUA script, this adds features like artificial horizon, air speed, vertical speed, distance from home and many others to your remote (tested with &lt;a href="https://github.com/yaapu/FrskyTelemetryScript/wiki" target="_blank" rel="noopener"&gt;yaapu LUA scripts&lt;/a&gt;).&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description></item><item><title>block receiver &amp; telemetry: S.BUS, Smart Port, F.Port</title><link>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/uxv/block-receiver-telemetry/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
@@ -237,7 +237,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" loading="lazy" alt="Scheme to decode S.BUS for use in a dsPIC"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-sbus-scheme-uart-connection.png" itemprop="contentUrl"&gt;&lt;/a&gt;
-&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Scheme of the UART Rx block connected to the the S.BUS block.&lt;/h4&gt;
+&lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Scheme of the UART Rx block connected to the S.BUS block.&lt;/h4&gt;
 &lt;p&gt;Scheme to decode S.BUS for use in a dsPIC&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -257,7 +257,7 @@ Vector output size set to &amp;ldquo;inherited via internal rule&amp;rdquo; is g
 &lt;p&gt;Smart Port (S.Port) use UART where Rx and Tx pins are set on the same pin with inverted logic (1 is high level). One single wire is used in half duplex communication mode.&lt;/p&gt;
 &lt;p&gt;UART configuration setting:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;56700 bauds/s&lt;/li&gt;
+&lt;li&gt;57600 bauds/s&lt;/li&gt;
 &lt;li&gt;Half duplex&lt;/li&gt;
 &lt;li&gt;Rx and Tx inverted logic (Idle state is low level), 3.3V&lt;/li&gt;
 &lt;li&gt;No parity&lt;/li&gt;
@@ -384,8 +384,8 @@ Rx and Tx channels are used. They are assigned to the same pin. UART is configur
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The block add a sensor &amp;ldquo;packet&amp;rdquo; to be transmitted to a receiver through the Smart Port of the F.Port. The receiver send the telemetry packet to the Remote controller (RC). Thus the Simulink should have either a Smart Port or a F.Port block.&lt;/p&gt;
-&lt;p&gt;Each sensor block declare the sensor reference composed of the two parameters PhysId and {Address+Offset}. Sensor value is composed of 4 bytes array block input. Multiple instance of the sensor block can be added in a model. Two instance can have the same sensor reference wihch is used for sensor sending multiple packets with various values (see FrSky FVLSS or GPS sensor).&lt;/p&gt;
+&lt;p&gt;The block adds a sensor &amp;ldquo;packet&amp;rdquo; to be transmitted to a receiver through the Smart Port of the F.Port. The receiver send the telemetry packet to the Remote controller (RC). Thus the Simulink should have either a Smart Port or a F.Port block.&lt;/p&gt;
+&lt;p&gt;Each sensor block declare the sensor reference composed of the two parameters PhysId and {Address+Offset}. Sensor value is composed of 4 bytes array block input. Multiple instance of the sensor block can be added in a model. Two instance can have the same sensor reference which is used for sensor sending multiple packets with various values (see FrSky FVLSS or GPS sensor).&lt;/p&gt;
 &lt;p&gt;Each block instance add a 4 bytes buffer to store the sensor value which is updated at block execution time. The block sample rate defines the update rate of the internal buffer.&lt;/p&gt;
 &lt;p&gt;The behaviour vary between Smart Port and F.Port protocol:&lt;/p&gt;
 &lt;h3 id="behaviour-with-smart-port"&gt;behaviour with Smart Port&lt;/h3&gt;
@@ -408,7 +408,7 @@ The block update sample rate is selected by end user. whose value will be sent t
 &lt;p&gt;Communication with the receiver can use either the Smart Port, or the F.Port.&lt;/p&gt;
 &lt;p&gt;The sensor PhyId, APPID and APPID Offset variant are set within the block.
 The PRIM field must be set to 0X10 for a sensor. The sensor value unit is set within the block.
-Block input is the 4 bytes codint for the sensor value.&lt;/p&gt;</description></item><item><title>Fixed-wing autopilot based on Simulink model</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+Block input is the 4 bytes coding for the sensor value.&lt;/p&gt;</description></item><item><title>Fixed-wing autopilot based on Simulink model</title><link>https://lubin.kerhuel.eu/project/autopilot-plane/</link><pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/project/autopilot-plane/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" integrity="sha384-yX+tSqQp3yF8BiTuLLOwNyaqtmZ9yFQT7IYg7U9YU9Dz/JDlh6JJQmNClCmvYl+b" crossorigin="anonymous"&gt;
 &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" integrity="sha384-R6P/wJIrxjHcm//YCjb0S6rRgebsNn3u6U4NxVI8R03iSPAR5CwPqoq1n6U/tjFE" crossorigin="anonymous"&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js" integrity="sha384-jkeJ/ETDRD/P4Y3I3CQi1QIwrEJjR9GdAZV2/aqDwwgA5ldCNiExYJeBwKyQC/+q" crossorigin="anonymous"&gt;&lt;/script&gt;
@@ -543,7 +543,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;p&gt;Add automatic guidance of the plane, using MAVLink Way point sets.&lt;/p&gt;
 &lt;h3 id="site-content"&gt;Site content&lt;/h3&gt;
 &lt;p&gt;Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.&lt;/p&gt;
-&lt;p&gt;Ideas to dvpt:&lt;/p&gt;
+&lt;p&gt;Ideas to develop:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IMU&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/"&gt;Pitot tube&lt;/a&gt;&lt;/li&gt;
@@ -700,7 +700,7 @@ The black and red wire from the trolley to the top of the pendulum powers the Mi
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;h2 id="pendul-equations"&gt;Pendul Equations&lt;/h2&gt;
+&lt;h2 id="pendulum-equations"&gt;Pendulum Equations&lt;/h2&gt;
 &lt;p&gt;The Dynamic fundamental law applied on the pendulum:
 $$ \sum \vec{Force} = m.\vec{a} $$&lt;/p&gt;
 &lt;p&gt;The three forces presents are the weight $\vec{P}$, the Friction $\vec{F}$, and the Reaction $\vec{R}$ from the rod &amp;amp; floor:&lt;/p&gt;
@@ -849,7 +849,7 @@ This dynamic includes the motor dynamics when it is loaded with the trolley cons
 The parameters $\tau$ is &amp;ldquo;guessed&amp;rdquo; in a first step.
 In a second step, a $2^{nd}$ inertial sensor board is temporary glued in the middle of the wheel diameter to as the inertial sensor is in the wheel rotation axe.
 An identification can be computed from the motor set-point and the wheel movements while the pendulum was actively controlled up by a first feedback loop.&lt;/p&gt;
-&lt;p&gt;Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between theses periodic re-initialization.&lt;/p&gt;
+&lt;p&gt;Still the pendulum model including the trolley is simulated with its feedback loop controller and results are compared against recorded data of the real system running the same feedback loop controller. The simulated pendulum states are re-initialized periodically ($\approx 2s$) with the real pendulum states as the model would diverge otherwise due to perturbations not modeled and model discrepancies. Correctness of the model can be checked between these periodic re-initializations.&lt;/p&gt;
 &lt;div class="box" style="max-width:45%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;
