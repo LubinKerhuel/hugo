@@ -3,6 +3,11 @@
 ::
 :: Original one-time creation of the repo in an EMPTY folder:
 ::     git clone https://github.com/LubinKerhuel/MTR6.git .
+
+mkdir C:\MASTERs\26061_MTR6
+cd /d C:\MASTERs\26061_MTR6
+git clone https://github.com/LubinKerhuel/MTR6.git .
+
 ::
 :: This script does the equivalent without needing an empty folder, and can be
 :: re-run any time to re-sync (local modifications are discarded).
