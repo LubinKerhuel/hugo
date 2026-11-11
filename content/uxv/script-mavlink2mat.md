@@ -38,14 +38,10 @@ sitemap:
 # parent = "inverted_pendulum_flywheels"
 menu:
     uxv:
-        parent: uxv-toolbox
-        name: scripts        
-        weight: 100
-    uxv:
         parent: scripts
         name: mavlink2mat
         identifier: mavlink2mat
-        weight: 110 
+        weight: 110
 
 ---
 

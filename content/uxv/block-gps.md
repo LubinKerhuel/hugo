@@ -38,14 +38,10 @@ sitemap:
 # parent = "inverted_pendulum_flywheels"
 menu:
     uxv:
-        parent: uxv-toolbox
-        name: blocks        
-        weight: 2
-    uxv:
         parent: blocks
         name: GPS
         identifier: gps
-        weight: 10 
+        weight: 10
 
 ---
 

@@ -125,7 +125,7 @@ $$
 \end{array} \right.
 $$ 
 
-I used this dsPIC Target toolbox for my [PhD thesis](https://www.kerhuel.eu/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009 on.
+I used this dsPIC Target toolbox for my [PhD thesis](https://archive.kerhuel.eu/legacy/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009 on.
 It shorten path from the visual signal processing simulation and control of our [aerial robot](https://www.researchgate.net/profile/Nicolas-Franceschini/publication/261957721/figure/fig11/AS:613971820285953@1523393697097/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_W640.jpg) and replaced the original dSPACE platform in our lab.
 
 The same approach was then used to develop data fusion algorithm on motion analysis in wearable sports article at [MOVEA](https://www.cea-tech.fr/cea-tech/english/Pages/success-stories/movea.aspx) in 2010-2011. 
@@ -148,4 +148,4 @@ Shortening the loopback $Simulation \Leftrightarrow Hardware $ allows to
 - implement the final controller
 - benefit from the wide MathWorks tools available
 
-Electronics projects from this website use the [Microchip blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink). Older project are available on my [old website](https://www.kerhuel.eu/wiki/).
+Electronics projects from this website use the [Microchip blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink). Older project are available on my [old website](https://archive.kerhuel.eu/wiki/).

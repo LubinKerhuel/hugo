@@ -14,7 +14,7 @@ summary: rapid control prototyping experiments (2006-2011) with dsPIC. Former bl
 # tags:
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://www.kerhuel.eu/wiki/
+external_link: https://archive.kerhuel.eu/wiki/
 
 
 # share = false  # Show social sharing links?
@@ -49,7 +49,7 @@ profile: true  # Show author profile?
 # To use, add an image named `featured.jpg/png` to your project's folder. 
 image:
   # Caption (optional)
-  caption: IMU [page](https://www.kerhuel.eu/wiki/Miniature_Inertial_Measurement_Unit_-_IMU)
+  caption: IMU [page](https://archive.kerhuel.eu/wiki/miniature-inertial-measurement-unit-imu/)
   
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
