@@ -2,7 +2,7 @@
 # Experience widget.
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = false  # Activate this widget? true/false
+active = true  # Activate this widget? true/false
 weight = 50  # Order that this section will appear.
 
 title = "Experience"
@@ -18,23 +18,23 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "Ph. D"
+  title = "Engineer"
   company = "Microchip Technology Inc"
   company_url = "https://www.microchip.com"
   location = "Bayonne"
   date_start = "2011-09-01"
   date_end = ""
-  description = """Developp Matlab/Simulink suport package to target dsPIC / PIC32 microcontrollers familly."""
+  description = """Developed the Matlab/Simulink support package (MPLAB Device Blocks) for the dsPIC and PIC32 microcontroller families."""
 
 
 [[experience]]
-  title = "Ph. D"
-  company = "Movea "
+  title = "Engineer"
+  company = "Movea"
   company_url = "https://www.cea-tech.fr/cea-tech/english/Pages/success-stories/movea.aspx"
   location = "Grenoble"
   date_start = "2010-02-01"
   date_end = "2011-09-01"
-  description = """Developp motion sensor data fusion algorithm for embedded system equipped with MEMS."""
+  description = """Developed motion-sensor data fusion algorithms for embedded systems equipped with MEMS."""
 
 
 [[experience]]

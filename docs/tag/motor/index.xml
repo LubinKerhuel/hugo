@@ -39,7 +39,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Original motor of my parrot Disco Flying wing is broken after few flights. It is not burned. The CHUCK controller is still ok including the motor power stage. The problem comes from wires connections cut at the interface between motor and power cable. It is difficult to repair as the connection break is just few millimeters from the motor windings.&lt;/p&gt;
+&lt;p&gt;Original motor of the parrot Disco Flying wing is broken after few flights. It is not burned. The CHUCK controller is still ok including the motor power stage. The problem comes from wires connections cut at the interface between motor and power cable. It is difficult to repair as the connection break is just few millimeters from the motor windings.&lt;/p&gt;
 &lt;p&gt;The root cause for these wire cuts seems to be vibrations: On the original PF070253 DISCO motor, the power cable is not attached on the motor but directly connected on the thin motor wiring. Vibration of the cable powering the motor is likely to break thin motor wiring at the interface between cable and motor.&lt;/p&gt;
 &lt;link rel="stylesheet" href="https://lubin.kerhuel.eu/css/hugo-easy-gallery.css" /&gt;
 &lt;div class="box" style="max-width:80%"&gt;
@@ -66,7 +66,7 @@
 &lt;/div&gt;
 &lt;p&gt;The original DISCO motor (PF070253, 1280KV) is difficult to find and out-priced. The SURPASS Hobby C2826 (size 2208) - 1350KV have similar shape and electrical characteristics. It is compatible with the Parrot stock foldable propeller and DISCO wing motor mount. The motor reference is unclear as the motor size correspond to a &amp;ldquo;2208&amp;rdquo; but the motor is stamped (and sold) with reference C2826. Box of the SURPASS Hobby motor mention is &amp;ldquo;C2826 (2208) - 1350KV&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;With this motor upgrade, the DISCO Flying wing is flying as with the original motor. The Parrot CHUCK controller handle motor speed as if it was the original one. Power consumption seems similar than the one with the original motor. It has been tested with the original DISCO propeller.&lt;/p&gt;
-&lt;p&gt;I get a propeller replacement candidate in case the original did not fit the motor: the GEMFAN 8040 which fit that motor and has the same size as the stock propeller (Not tested).&lt;/p&gt;
+&lt;p&gt;A replacement propeller candidate was identified in case the original does not fit the motor: the GEMFAN 8040 which fit that motor and has the same size as the stock propeller (Not tested).&lt;/p&gt;
 &lt;div class="box" style="max-width:100%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;

@@ -15,7 +15,7 @@ hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 
-disableLanguages: fr
+# Francais active : version francaise complete servie sous /fr/ (EN reste la langue principale).
 
 ############################
 ## MODULES

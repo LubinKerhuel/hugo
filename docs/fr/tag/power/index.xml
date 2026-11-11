@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Power | Prototypage rapide de commande</title><link>https://lubin.kerhuel.eu/fr/tag/power/</link><atom:link href="https://lubin.kerhuel.eu/fr/tag/power/index.xml" rel="self" type="application/rss+xml"/><description>Power</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>fr-FR</language><lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hu_854b44b36e8700d6.png</url><title>Power</title><link>https://lubin.kerhuel.eu/fr/tag/power/</link></image><item><title>Modification du module double BEC et mesure de courant MATEKSYS PDB-XPW pour augmenter la sensibilité de la mesure de courant</title><link>https://lubin.kerhuel.eu/fr/post/matek-pdb-xpw/</link><pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/fr/post/matek-pdb-xpw/</guid><description>&lt;!-- Enable Photo Swipe + gallery features --&gt;
+&lt;p&gt;La carte &lt;a href="https://www.mateksys.com/?portfolio=pdb-xpw" target="_blank" rel="noopener"&gt;PDB-XPW&lt;/a&gt; de MATEK System est un régulateur de tension équipé d&amp;rsquo;une mesure de courant adaptée aux courants des quadricoptères, avec une mesure maximale de 140 ampères. Pour un projet d&amp;rsquo;avion RC, il est possible de réduire la plage de mesure du courant afin d&amp;rsquo;augmenter la résolution de la mesure.&lt;/p&gt;
+&lt;p&gt;Le circuit « INA1x9 High-Side Measurement Current Shunt Monitor » de Texas Instrument conditionne et amplifie la chute de tension aux bornes de la résistance de shunt, et fournit une sortie analogique proportionnelle au courant.&lt;/p&gt;
+&lt;p&gt;Sur la carte PDB-XPW, le circuit INA1x9 est le composant noir à 5 broches marqué E39, situé sous la résistance de shunt de 0,05 ohm, elle-même placée immédiatement sous le connecteur d&amp;rsquo;entrée d&amp;rsquo;alimentation.&lt;/p&gt;
+&lt;p&gt;Le gain d&amp;rsquo;amplification est fixé par la résistance de 47 kOhm adjacente au composant INA1x9. Cette valeur d&amp;rsquo;origine de 47 kOhm correspond à un gain de 47.
+Le gain correspond à la valeur exprimée en kOhm, comme l&amp;rsquo;indique la documentation du circuit :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: center"&gt;Résistance&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Gain&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;1 kOhm&lt;/td&gt;
+&lt;td style="text-align: center"&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;5 Kohm&lt;/td&gt;
+&lt;td style="text-align: center"&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;10 Kohm&lt;/td&gt;
+&lt;td style="text-align: center"&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;50 Kohm&lt;/td&gt;
+&lt;td style="text-align: center"&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;100 Kohm&lt;/td&gt;
+&lt;td style="text-align: center"&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;La résistance de 47 kOhm est remplacée par une résistance de 270 kOhm, ce qui conduit à un gain de 270 au lieu de 47.
+La plage de mesure de courant d&amp;rsquo;origine passe ainsi de 140 A à 20 A (140 * 47/270 = 20).&lt;/p&gt;
+&lt;p&gt;La sortie de mesure du courant est un signal analogique variant de 0 à 3,3 V, codant linéairement le courant sur la plage [0 - 20] ampères. Cette plage de courant plus faible est adaptée aux avions RC tels que le Bixler 2, le Firstar 1600 ou le Ranger 1600.&lt;/p&gt;</description></item></channel></rss>

@@ -42,7 +42,7 @@ math: false
 <!-- Enable Photo Swipe + gallery features -->
 {{< load-photoswipe >}}
 
-Original motor of my parrot Disco Flying wing is broken after few flights. It is not burned. The CHUCK controller is still ok including the motor power stage. The problem comes from wires connections cut at the interface between motor and power cable. It is difficult to repair as the connection break is just few millimeters from the motor windings.
+Original motor of the parrot Disco Flying wing is broken after few flights. It is not burned. The CHUCK controller is still ok including the motor power stage. The problem comes from wires connections cut at the interface between motor and power cable. It is difficult to repair as the connection break is just few millimeters from the motor windings.
 
 The root cause for these wire cuts seems to be vibrations: On the original PF070253 DISCO motor, the power cable is not attached on the motor but directly connected on the thin motor wiring. Vibration of the cable powering the motor is likely to break thin motor wiring at the interface between cable and motor.
 
@@ -68,7 +68,7 @@ The original DISCO motor (PF070253, 1280KV) is difficult to find and out-priced.
 
 With this motor upgrade, the DISCO Flying wing is flying as with the original motor. The Parrot CHUCK controller handle motor speed as if it was the original one. Power consumption seems similar than the one with the original motor. It has been tested with the original DISCO propeller. 
 
-I get a propeller replacement candidate in case the original did not fit the motor: the GEMFAN 8040 which fit that motor and has the same size as the stock propeller (Not tested).
+A replacement propeller candidate was identified in case the original does not fit the motor: the GEMFAN 8040 which fit that motor and has the same size as the stock propeller (Not tested).
 
 {{< figure 
 src="/img/parrot-surpass-c2826-mount-wires-small.jpg"

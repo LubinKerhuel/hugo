@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Control | Prototypage rapide de commande</title><link>https://lubin.kerhuel.eu/fr/tag/control/</link><atom:link href="https://lubin.kerhuel.eu/fr/tag/control/index.xml" rel="self" type="application/rss+xml"/><description>Control</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>fr-FR</language><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate><image><url>https://lubin.kerhuel.eu/media/icon_hu_854b44b36e8700d6.png</url><title>Control</title><link>https://lubin.kerhuel.eu/fr/tag/control/</link></image><item><title>TP INSA - Commande temps réel d'un moteur DC / PMSM</title><link>https://lubin.kerhuel.eu/fr/project/lab-dc-motor/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/fr/project/lab-dc-motor/</guid><description>&lt;p&gt;Commande d&amp;rsquo;un moteur 24 V (Pravalux 24 V DC) avec la carte MCLV-V2 équipée d&amp;rsquo;un dsPIC 33EP256MC506.
+Ce TP s&amp;rsquo;adresse aux étudiants de 5e année de l&amp;rsquo;INSA-Lyon.&lt;/p&gt;
+&lt;p&gt;Le sujet du TP est disponible à l&amp;rsquo;adresse : &lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;https://rtdc.ctrl-elec.fr/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Les diapositives présentent les adaptations nécessaires pour passer d&amp;rsquo;un modèle Simulink de simulation (ou dSPACE) à un modèle Simulink ciblant un microcontrôleur. Deux sujets sont abordés :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ordonnancement temps réel / analyse de la charge du processeur&lt;/li&gt;
+&lt;li&gt;Types de données en virgule fixe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2021 : le TP sur dSPACE n&amp;rsquo;étant pas envisageable en salle à cause de la pandémie de Covid-19, il a été remplacé par un TP à domicile sur des cartes MCLV-2 envoyées aux étudiants.
+Le sujet du TP est disponible à l&amp;rsquo;adresse : &lt;a href="https://rcp.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;https://rcp.ctrl-elec.fr/&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

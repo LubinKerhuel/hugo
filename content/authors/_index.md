@@ -5,4 +5,5 @@ cms_exclude: true
 cascade:
   build:
     list: never
+summary: "Authors of the projects, articles and tools published on this site."
 ---

@@ -41,5 +41,6 @@ content:
 
 design:
   columns: '2'
+summary: "Contact Lubin Kerhuel."
 ---
 

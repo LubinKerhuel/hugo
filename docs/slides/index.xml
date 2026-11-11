@@ -134,7 +134,7 @@
 &lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;[&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;Lab&lt;/a&gt;] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin"&gt;L.Kerhuel&lt;/a&gt; - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux"&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;h2 id="summary-rapid-prototyping-with-simulink-on-dspic-dc-motor-control-course-material"&gt;summary: &amp;ldquo;Rapid prototyping with Simulink on dsPIC: DC motor control course material.&amp;rdquo;&lt;/h2&gt;
 &lt;h2 id="plan"&gt;Plan:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -730,7 +730,7 @@ GPS
 &lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Prototypage Rapide avec Simulink sur dsPIC</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa_2022_12/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa_2022_12/</guid><description>&lt;h2 id="prototypage-rapide"&gt;Prototypage Rapide&lt;/h2&gt;
+&lt;/ul&gt;</description></item><item><title>Prototypage Rapide avec Simulink sur dsPIC (INSA, déc. 2022)</title><link>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa_2022_12/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/slides_dcmotor_insa_2022_12/</guid><description>&lt;h2 id="prototypage-rapide"&gt;Prototypage Rapide&lt;/h2&gt;
 &lt;h3 id="model-based-design"&gt;Model Based Design&lt;/h3&gt;
 &lt;p class="stretch"&gt;
 &lt;a href="https://fr.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu/"&gt;
@@ -738,7 +738,7 @@ GPS
 &lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;[&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;Lab&lt;/a&gt;] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin"&gt;L.Kerhuel&lt;/a&gt; - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux"&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;h2 id="summary-rapid-prototyping-with-simulink-on-dspic-dc-motor-control-course-material-december-2022-edition"&gt;summary: &amp;ldquo;Rapid prototyping with Simulink on dsPIC: DC motor control course material, December 2022 edition.&amp;rdquo;&lt;/h2&gt;
 &lt;h2 id="objectifs"&gt;Objectifs&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Comprendre l&amp;rsquo;approche Model-Based Design&lt;/li&gt;

@@ -45,4 +45,5 @@ design:
 
   # For Showcase view, flip alternate rows?
   flip_alt_rows: false
+summary: "Selected projects: DC and PMSM motor labs, inverted pendulum, fixed-wing autopilot, and the archive of the former website."
 ---

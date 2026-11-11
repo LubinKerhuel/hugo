@@ -12,4 +12,5 @@ list_format : 3
 header:
   image: ''
   caption: ''
+summary: "Slide decks from courses and talks on rapid control prototyping with Simulink and dsPIC microcontrollers."
 ---

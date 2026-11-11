@@ -22,7 +22,7 @@ organizations:
   url: https://www.microchip.com/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Interested in signal processing and control theory. 10 years experience with rapid control prototyping.
+bio: Interested in signal processing and control theory. Rapid control prototyping since 2005; at Microchip since 2011.
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: lubin@kerhuel.eu
@@ -106,15 +106,16 @@ highlight_name: false
 # Digital Twin
 # modeling from first principle modeling (or physical modeling), or data driven model
 
+summary: "Lubin Kerhuel: engineer and PhD, developer of the MPLAB Device Blocks for Simulink at Microchip Technology."
 ---
 
 {{% callout warning %}}
-Postings on this website are my own and do not represent Microchip's positions, strategies, or opinions.
+The content of this website is personal and does not represent Microchip's positions, strategies, or opinions.
 {{% /callout %}}
 
-Embedded systems requires programming skills and an important set-up effort. Control algorithm is typically implemented last with a PI feedback loop. However control theory provides many solutions to explore improving systems dynamic responses, perturbation rejection and robusness to model mismatch.
+Embedded systems require programming skills and an important set-up effort. Control algorithm is typically implemented last with a PI feedback loop. However control theory provides many solutions to explore improving systems dynamic responses, perturbation rejection and robustness to model mismatch.
 
-Interested in applied math, I developed a blockset for Matlab/Simulink targeting dsPIC microcontrollers in 2005. It enables focusing on the controller part using simulink simulation rather than on implementation problems. Rapid Control Prototyping (RCP) became possible on any dsPIC based board. It is embedded on cheap demo or custom board and does not required budget to aquire high-end tools like dSPACE, SpeedGoat, National Instrument alternative. 
+Interested in applied math, a blockset for Matlab/Simulink targeting dsPIC microcontrollers was developed in 2005. It enables focusing on the controller part using Simulink simulation rather than on implementation problems. Rapid Control Prototyping (RCP) became possible on any dsPIC based board. It is embedded on cheap demo or custom board and does not require budget to acquire high-end tools like dSPACE, SpeedGoat, National Instrument alternative. 
 
 $$
 \text{One push button}
@@ -125,27 +126,27 @@ $$
 \end{array} \right.
 $$ 
 
-I used this dsPIC Target toolbox for my [PhD thesis](https://archive.kerhuel.eu/legacy/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009 on.
-It shorten path from the visual signal processing simulation and control of our [aerial robot](https://www.researchgate.net/profile/Nicolas-Franceschini/publication/261957721/figure/fig11/AS:613971820285953@1523393697097/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_W640.jpg) and replaced the original dSPACE platform in our lab.
+This dsPIC Target toolbox was used for a [PhD thesis](https://archive.kerhuel.eu/legacy/publi/Kerhuel_2009_PhD.pdf) on bio-robotics from 2006 to 2009.
+It shortens the path from the visual signal processing simulation and control of our [aerial robot](https://www.researchgate.net/profile/Nicolas-Franceschini/publication/261957721/figure/fig11/AS:613971820285953@1523393697097/a-OSCAR-II-like-its-predecessor-OSCAR-I-is-a-tethered-aerial-robot-that-orients-its_W640.jpg) and replaced the original dSPACE platform in our lab.
 
 The same approach was then used to develop data fusion algorithm on motion analysis in wearable sports article at [MOVEA](https://www.cea-tech.fr/cea-tech/english/Pages/success-stories/movea.aspx) in 2010-2011. 
 
-I joined in 2011 [Microchip Technology](https://www.microchip.com/) to pursue the development of the [MPLAB blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink). The tool target dsPIC and was extended to target: 
-- dsPIC A
+Joining [Microchip Technology](https://www.microchip.com/) in 2011 allowed the development of the [MPLAB blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink). The toolbox initially targeted dsPIC and was extended to: 
+- dsPIC33A
 - PIC32 (MIPS core)
 - SAMx2 (ARM Cortex M0+)
 - SAMx5 (ARM Cortex M4)
 - SAMx7 (ARM Cortex M7)
 
-We implemented a rate-monotonic scheduler (multitasking system) and integrates completely to the MathWorks environment with support for PIL (Processor In the Loop), External-Mode...
+We implemented a rate-monotonic scheduler (multitasking system) and integrates completely with the MathWorks environment with support for PIL (Processor In the Loop) and External Mode.
 
-The tool growth to target up to 650 chips. The development task and support was splitted in 2022. I will continue focusing on dsPIC new developments and support.
+The toolbox now targets up to 650 chips. The development and support tasks were split in 2022. Current efforts focus on new dsPIC developments and support.
 
-For company, scientists, and students, *rapid prototyping enables focusing on ideas* rather than getting lost into the details of embedded programming.
-Shortening the loopback $Simulation \Leftrightarrow Hardware $ allows to 
+For company, scientists, and students, *rapid prototyping enables focusing on ideas* rather than getting lost in the details of embedded programming.
+Shortening the loopback $Simulation \Leftrightarrow Hardware $ allows you to 
 - refine and validate a model thanks to early test
 - develop controller using the system digital twin
 - implement the final controller
 - benefit from the wide MathWorks tools available
 
-Electronics projects from this website use the [Microchip blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink). Older project are available on my [old website](https://archive.kerhuel.eu/wiki/).
+Electronics projects from this website use the [Microchip blockset](https://www.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink). Older projects are available on the [old website](https://archive.kerhuel.eu/wiki/).

@@ -483,7 +483,7 @@ Your custom control loop might not fit within the existing structure. You might 
 The presented autopilot uses a Model Based Design (MBD) approach: The autopilot code is generated from a unique Simulink model. Everything is within the diagram, from low level sensors handling up to the controller design. This MBD aproach is also named Rapid Control Prototyping (RCP).&lt;/p&gt;
 &lt;p&gt;The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
 Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.&lt;/p&gt;
-&lt;p&gt;Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare&amp;hellip;).&lt;/p&gt;
+&lt;p&gt;Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Compare, Input Capture&amp;hellip;).&lt;/p&gt;
 &lt;p&gt;Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (&lt;a href="https://slugsuav.soe.ucsc.edu/" target="_blank" rel="noopener"&gt;https://slugsuav.soe.ucsc.edu/&lt;/a&gt;) is available online. The update &lt;a href="https://doi.org/10.1155/2018/6892153" target="_blank" rel="noopener"&gt;SLUG II&lt;/a&gt; projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).&lt;/p&gt;
 &lt;h3 id="hardware-list"&gt;Hardware list&lt;/h3&gt;
 &lt;p&gt;Various combination of material was tested. Below is a selected list of hardware which prove to be efficient.&lt;/p&gt;
@@ -532,7 +532,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;li&gt;Control plane angular rate control (angular speed set-point given through the remote control)&lt;/li&gt;
 &lt;li&gt;Control plane angle attitude (angle set point provided through the remote control)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)&lt;/p&gt;
+&lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 2 470 000)&lt;/p&gt;
 &lt;p&gt;Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p&gt;
 &lt;p&gt;Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build"&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p&gt;
@@ -542,7 +542,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;p&gt;Test in flight MAVLink protocol parameters tuning.&lt;/p&gt;
 &lt;p&gt;Add automatic guidance of the plane, using MAVLink Way point sets.&lt;/p&gt;
 &lt;h3 id="site-content"&gt;Site content&lt;/h3&gt;
-&lt;p&gt;Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.&lt;/p&gt;
+&lt;p&gt;Time constraints does not allow writing a complete description of the project as originally planned. The most interesting and inspiring parts of the project will be posted.&lt;/p&gt;
 &lt;p&gt;Ideas to develop:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IMU&lt;/li&gt;

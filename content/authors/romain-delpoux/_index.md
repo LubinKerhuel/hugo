@@ -110,4 +110,5 @@ social:
 
  # math: false
 
+summary: "Assistant Professor at Laboratoire Ampere and INSA Lyon, co-author of the on-chip rapid control prototyping work."
 ---

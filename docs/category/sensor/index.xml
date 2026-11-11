@@ -189,7 +189,7 @@ m = 72mm
 &lt;/div&gt;
 &lt;h4 id="possible-noiseoffset-sources"&gt;possible noise/offset sources&lt;/h4&gt;
 &lt;p&gt;The sensor is sensitive to its own orientation. Flipping the sensor up-side down creates an negative offset of 12.5mV (100 LSB&lt;sup id="fnref3:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; with the analog to digital circuit setting).&lt;/p&gt;
-&lt;p&gt;MCP5398 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="https://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener"&gt;MCP 1700&lt;/a&gt;) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p&gt;
+&lt;p&gt;MCP3428 and MP3V5004dp are both powered with 3.3V. A linear voltage regulator (&lt;a href="https://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" target="_blank" rel="noopener"&gt;MCP 1700&lt;/a&gt;) filter-out the 5V sensor board input to 3.3V. The analog signal remains however sensitive to fluctuation on the 5v input. Particular attention should be taken with telemetry which pollute power supply if they do not have their dedicated regulator. Also the electromagnetic burst from telemetry module might pollute the overall electronic including the ground; A periodic burst correlated with MAVLink packets sent was noticed on pitot output (20 to 300 LSB, nothing noticed on IMU sensors) caused by a 3DR telemetry module when its antenna is placed too close to non protected electronics part. Problem solved by moving the antenna away and reducing the Tx emitting power.&lt;/p&gt;
 &lt;h2 id="flight-setup"&gt;Flight setup&lt;/h2&gt;
 &lt;p&gt;The sensor is mounted on the wing of a FirStar 1600 RC plane.&lt;/p&gt;
 &lt;div class="box" style="max-width:80%"&gt;
@@ -239,7 +239,7 @@ m = 72mm
 &lt;/div&gt;
 &lt;h2 id="experimental-results"&gt;Experimental results&lt;/h2&gt;
 &lt;p&gt;The MCP3428 samples $P_{diff}$ at 250Hz during flights. $V_{Pitot}=\sqrt{\frac{2}{\rho}*P_{diff}}$ with $\rho = 1.15$.&lt;/p&gt;
-&lt;p&gt;No calibration were required. Sensor theoretical output scaling were used with the formula to compute the speed from the pressure. $\rho$ value was tune from a default value 1.2 to 1.16 which minimized the mean error however the improvement was not a big deal. The only value to adjust is the raw pressure measurement offset (zero). The zero value for the sensor used is -1800.&lt;/p&gt;
+&lt;p&gt;No calibration were required. Sensor theoretical output scaling were used with the formula to compute the speed from the pressure. $\rho$ value was tune from a default value 1.2 to 1.15 which minimized the mean error however the improvement was not a big deal. The only value to adjust is the raw pressure measurement offset (zero). The zero value for the sensor used is -1800.&lt;/p&gt;
 &lt;p&gt;Matlab script converting 250Hz raw MCP3428 to Pressure (Pa) and Speed (m/s):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-matlab" data-lang="matlab"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;% Pitot Calibration. P_pitot is a vector with raw MCP3428 output read from I2C bus.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;P_pitot_cal&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.2041&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;double&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;P_pitot&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1800&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c"&gt;% to Pa unit&lt;/span&gt;
@@ -264,7 +264,7 @@ m = 72mm
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;p&gt;More figures in &lt;a href="https://lubin.kerhuel.eu/slides/pitot-build/#/10"&gt;online presentation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The GPS update rate is 10Hz. It is sampled at 50Hz to minimize delay. The pitot-tube sensor update rate is 260Hs but it is sampled at 250Hz.&lt;/p&gt;
+&lt;p&gt;The GPS update rate is 10Hz. It is sampled at 50Hz to minimize delay. The pitot-tube sensor update rate is 240 SPS, but it is sampled at 250Hz.&lt;/p&gt;
 &lt;p&gt;The error is defined with $error = V_{gps} - \left( V_{Pitot} - V_{wind}*cos(\Theta_{heading} + \Theta_{wind}) \right) $. For the 200s of the flight shown on the figure, the error measured is:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;

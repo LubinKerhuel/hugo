@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 2  # Order that this section will appear.
 
 title = "Projets"
-subtitle = "model based design"
+subtitle = "conception basée sur modèle"
 
 [content]
   # Page type to display. E.g. project.

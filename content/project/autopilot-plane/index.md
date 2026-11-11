@@ -96,7 +96,7 @@ The presented autopilot uses a Model Based Design (MBD) approach: The autopilot 
 The autopilot control-loop uses standard math blocks. Low level systems is taken care with the Microchip blockset driving the microcontroller peripherals. The UxV blockset provide easily access to GPS, Remote Control S.BUS, F.Port and Smart Port protocol, MAVLink messaging including Way Point and Parameters protocols.
 Such Simulink model allows to "get-in" the project graphically. It allows simulating parts of the system based on a simulated plane or based on values previously logged from a real flight which is helpful to design feed-forward sensor fusions algorithms.
 
-Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Capture, Input Compare...).
+Another key difference is the use of a 16-bit microcontroller while other autopilot uses 32-bit microcontroller. 16-bits dsPIC prove to provide all required resources thanks to the efficient architecture underneath which handle the many peripheral used in an efficient way (UART, I2C, Output Compare, Input Capture...).
 
 Note however a similar model based design using dsPIC microcontroller beeing developed at UCSC by Pr G.H.Elkaim in a project named SLUG. Their design is independent from the one presented here. The original project handled by M.I Lizarraga [SLUG] (https://slugsuav.soe.ucsc.edu/) is available online. The update [SLUG II](https://doi.org/10.1155/2018/6892153) projects rely on the same tool used here to target the dsPIC: the blockset for Microchip microcontrollers (free).
 
@@ -142,7 +142,7 @@ Sliding mode-based controller tested in both pitch and roll axis with two mode:
 - Control plane angular rate control (angular speed set-point given through the remote control)
 - Control plane angle attitude (angle set point provided through the remote control)
 
-Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 24700000)
+Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 2 470 000)
 
 Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).
 
@@ -165,7 +165,7 @@ Add automatic guidance of the plane, using MAVLink Way point sets.
 
 ### Site content ###
 
-Time constraints does not allow writing a complete description of the project as originally planned. Part of projects which I find interesting and inspiring will be posted.
+Time constraints does not allow writing a complete description of the project as originally planned. The most interesting and inspiring parts of the project will be posted.
 
 Ideas to develop:
 

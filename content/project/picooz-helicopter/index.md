@@ -1,6 +1,6 @@
 +++
 # Project title.
-title = "speed control of a tiny helicopter rotor"
+title = "Picooz helicopter: sensorless rotor speed control"
 
 # Date this page was created.
 date = 2018-12-01

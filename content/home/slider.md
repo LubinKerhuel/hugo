@@ -17,7 +17,7 @@ height = "300px"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "Hello"
-  content = "I am center aligned :smile:"
+  content = "Center-aligned text :smile:"
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -36,7 +36,7 @@ height = "300px"
 
 [[item]]
   title = "Left"
-  content = "I am left aligned :smile:"
+  content = "Left-aligned text :smile:"
   align = "left"
 
   overlay_color = "#555"  # An HTML color value.
@@ -45,7 +45,7 @@ height = "300px"
 
 [[item]]
   title = "Right"
-  content = "I am right aligned :smile:"
+  content = "Right-aligned text :smile:"
   align = "right"
 
   overlay_color = "#333"  # An HTML color value.
