@@ -18,6 +18,7 @@ sitemap:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
+  alt_text: "RunCam 2 action camera with its custom 3-wire cable, and the commercial remote-control cable"
   caption: 'Top: RunCam 2 action cam with custom 3 wires cable powering the cam and triggering records. Bottom: Commercial cable with electronic converting RC PWM output to runCam2 control pulses pattern.'
   focal_point: ""
   preview_only: false

@@ -57,6 +57,7 @@ links = [
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 
 [image]
+  alt_text = "Blue DC motor with shafts at both ends and two wires"
   # Caption (optional)
   caption = "Motor Pravalux"
   

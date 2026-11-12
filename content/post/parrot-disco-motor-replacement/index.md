@@ -18,6 +18,7 @@ sitemap:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
+  alt_text: "Parrot Disco flying wing with Surpass Hobby C2826 (2208) 1350 KV motor"
   caption: Parrot Disco with Surpass Hobby C2826 (2208) 1350KV motor
 #  focal_point: TopLeft
   preview_only: false

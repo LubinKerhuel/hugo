@@ -18,6 +18,7 @@ sitemap:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
+  alt_text: "Module double BEC et mesure de courant PDB-XPW (MATEK Systems)"
   caption: Module double BEC et mesure de courant PDB-XPW. Image de MATEK Systems.
   focal_point: TopRight
   preview_only: false

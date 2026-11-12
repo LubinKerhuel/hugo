@@ -171,6 +171,7 @@ Le message est envoyé par un bloc UART Tx.
 {{< figure 
 src="/img/uxv-block-fport-gui-control-frame.png"
 link="/img/uxv-block-fport-gui-control-frame.png"
+alt="Paramètres du bloc F.Port, onglet Control Frame : sorties décodées des canaux et indicateurs d’état"
 width="40%"
 title=""
 caption=""
@@ -180,6 +181,7 @@ numbered="true"
 {{< figure 
 src="/img/uxv-block-fport-scheme-uart-connection.png"
 link="/img/uxv-block-fport-scheme-uart-connection.png"
+alt="Modèle Simulink : la réception UART1 Rx alimente le décodeur F.Port, qui fournit les signaux de commande S.BUS et les canaux CH1 à CH10 ; la télémétrie repart par UART1 Tx"
 width="80%"
 title=""
 caption=""

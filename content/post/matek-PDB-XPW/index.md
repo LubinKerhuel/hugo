@@ -18,6 +18,7 @@ sitemap:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
+  alt_text: "PDB-XPW dual BEC and current-sensing module (MATEK Systems)"
   caption: PDB-XPW Dual BEC & current module. Image from MATEK Systems.
   focal_point: TopRight
   preview_only: false

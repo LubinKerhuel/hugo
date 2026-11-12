@@ -48,6 +48,7 @@ profile: true  # Show author profile?
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 
 image:
+  alt_text: "Screenshot of the archived wiki page “Miniature Inertial Measurement Unit - IMU”, showing a photo of the board (ADIS16080 gyroscope, MMA7260 accelerometer)"
   # Caption (optional)
   caption: IMU [page](https://archive.kerhuel.eu/wiki/miniature-inertial-measurement-unit-imu/)
   

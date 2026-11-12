@@ -18,6 +18,7 @@ sitemap:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
+  alt_text: "Aile volante Parrot Disco équipée du moteur Surpass Hobby C2826 (2208) 1350 KV"
   caption: Parrot Disco avec le moteur Surpass Hobby C2826 (2208) 1350KV
 #  focal_point: TopLeft
   preview_only: false

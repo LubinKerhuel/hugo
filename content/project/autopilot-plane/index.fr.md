@@ -48,6 +48,7 @@ links = [
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 
 [image]
+  alt_text = "Avion RC à voilure fixe posé sur les dunes, face à la mer"
   # Caption (optional)
   caption = "Avion Firstar 1600"
   
@@ -129,6 +130,7 @@ numbered="true"
 {{< figure 
 src="/img/autopilot-electronic-sensors-bundle_1.jpg"
 link="/img/autopilot-electronic-sensors-bundle_1.jpg"
+alt="Électronique embarquée d’une configuration d’essai : récepteur, carte de puissance, enregistreur, contrôleur AUAV3, capteurs et GPS"
 width="80%"
 title="Électronique embarquée. Une des premières configurations destinées à évaluer divers capteurs. Éléments utilisés : récepteur X8R, carte de distribution PDB-XPM, enregistreur de données sur SD OpenLager, microcontrôleur dsPIC 16 bits AUAV3 avec capteurs (MPU6050), carte IMU 1, carte IMU 2, capteur de pression MP3V5004DP pour le tube de Pitot, GPS1, GPS2, batterie LiPo 3S 2200 mAh, émetteur Qx7."
 numbered="true"

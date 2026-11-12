@@ -18,6 +18,7 @@ sitemap:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
+  alt_text: "Caméra RunCam 2 avec son câble personnalisé à 3 fils, et le câble du commerce"
   caption: 'En haut : caméra d''action RunCam 2 avec un câble personnalisé à 3 fils qui alimente la caméra et déclenche les enregistrements. En bas : câble du commerce dont l''électronique convertit la sortie PWM RC en séquence d''impulsions de commande de la runCam2.'
   focal_point: ""
   preview_only: false

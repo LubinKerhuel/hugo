@@ -171,6 +171,7 @@ The message is sent through an UART Tx block.
 {{< figure 
 src="/img/uxv-block-fport-gui-control-frame.png"
 link="/img/uxv-block-fport-gui-control-frame.png"
+alt="F.Port block parameters, Control Frame tab: decoded channel outputs and status flags"
 width="40%"
 title=""
 caption=""
@@ -180,6 +181,7 @@ numbered="true"
 {{< figure 
 src="/img/uxv-block-fport-scheme-uart-connection.png"
 link="/img/uxv-block-fport-scheme-uart-connection.png"
+alt="Simulink model: UART1 Rx feeds the F.Port parser, which outputs the S.BUS control signals and channels CH1 to CH10; telemetry is returned through UART1 Tx"
 width="80%"
 title=""
 caption=""

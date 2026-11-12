@@ -48,6 +48,7 @@ links = [
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 
 [image]
+  alt_text = "Fixed-wing RC plane on the dunes beside the sea"
   # Caption (optional)
   caption = "Firstar 1600 plane"
   
@@ -129,6 +130,7 @@ numbered="true"
 {{< figure 
 src="/img/autopilot-electronic-sensors-bundle_1.jpg"
 link="/img/autopilot-electronic-sensors-bundle_1.jpg"
+alt="Embedded electronics of an early test configuration: receiver, power board, data logger, AUAV3 controller, sensors and GPS"
 width="80%"
 title="Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16-bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter."
 numbered="true"

@@ -84,7 +84,7 @@ slides:
 ---
 
 <p class="stretch">
-<img data-src="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg">
+<img data-src="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" alt="Wing with brass Pitot tube and its electronic board (MP3V5004DP pressure sensor)">
 </p>
 
 <!-- ![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg) -->
@@ -92,7 +92,7 @@ slides:
 ---
 
 <p class="stretch">
-<img data-src="/img/pitot-darcy-prandtl-wing-carbon2.jpg">
+<img data-src="/img/pitot-darcy-prandtl-wing-carbon2.jpg" alt="Wing with carbon Pitot tube">
 </p>
 
 <!-- <section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" >

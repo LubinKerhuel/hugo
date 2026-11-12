@@ -67,6 +67,7 @@ url_poster = ""
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 
 [image]
+  alt_text = "Two-wheeled inverted pendulum robot: vertical rod with a sensor board on top, motor driver and AA batteries at the base"
   # Caption (optional)
   caption = "head of the inverted pendulum"
   

@@ -31,6 +31,7 @@ slides: pitot-build
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
+  alt_text: "Tube de Pitot en carbone fixé à l’aile par un aimant"
   caption: Tube de Pitot en carbone fixé à l'aile par un aimant.
   focal_point: Left
   preview_only: false
@@ -210,6 +211,7 @@ Un aimant est collé sur le tube de Pitot. Un 2ᵉ aimant intégré à l'aile pe
 {{< figure 
 src="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
 link="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
+alt="Tube de Pitot en laiton avec sa carte électronique, monté sur la plateforme à voilure fixe Firstar 1600"
 width="100%"
 title="Tube de Pitot en laiton avec sa carte électronique, embarqué sur l'avion Firstar 1600."
 numbered="true"

@@ -29,7 +29,7 @@ slides:
 
 <p class="stretch">
 <a href="https://fr.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu/">
-<img data-src="/img/logo_mplab-deviceblocksforsimulink-whitebackground.png">
+<img data-src="/img/logo_mplab-deviceblocksforsimulink-whitebackground.png" alt="MPLAB Device Blocks for Simulink logo">
 </a>
 </p>
 
@@ -66,7 +66,7 @@ summary: "Rapid prototyping with Simulink on dsPIC: DC motor control course mate
 {{< slide background-color="#FFFFFF" >}}
 
 <p class="stretch">
-<img data-src="./Picooz_DC_Motor_Electronic_All.png">
+<img data-src="./Picooz_DC_Motor_Electronic_All.png" alt="Picooz DC motor and electronics, overview">
 </p>
 
 {{< speaker_note >}}
@@ -261,7 +261,7 @@ float8bit = unique([flipud(-TotalVal); TotalVal]); % with neg vals
 ## Data-type 
 
 <p class="stretch">
-<img data-src="./Simulink_TypeCast_FixPtFormat.png">
+<img data-src="./Simulink_TypeCast_FixPtFormat.png" alt="Simulink type conversion, fixed-point format">
 </p>
 
 ---
@@ -372,7 +372,7 @@ Implémentation en temps discret:
 #### Modèle multi-rate
 
 <p class="stretch">
-<img data-src="./Model_Hardware_Test_withSampleTime.png">
+<img data-src="./Model_Hardware_Test_withSampleTime.png" alt="Simulink model for hardware test with sample time">
 </p>
 
 <section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" >

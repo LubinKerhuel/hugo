@@ -18,6 +18,7 @@ sitemap:
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
+  alt_text: "Vélo long-tail Yuba Kombi équipé du moteur Tongsheng TSDZ2"
   caption: Yuba Kombi long-tail équipé du moteur Tongsheng TSDZ2
   focal_point: TopLeft
   preview_only: false

@@ -31,6 +31,7 @@ slides: pitot-build
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
+  alt_text: "Carbon Pitot tube attached to the wing with a magnet"
   caption: Carbon Pitot-tube attached to the wing with a magnet.
   focal_point: Left
   preview_only: false
@@ -210,6 +211,7 @@ One magnet is glued on the Pitot tube. A 2nd magnet integrated in the wing allow
 {{< figure 
 src="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
 link="/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"
+alt="Brass Pitot tube with its electronic board, mounted on the Firstar 1600 fixed-wing platform"
 width="100%"
 title="Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform."
 numbered="true"
