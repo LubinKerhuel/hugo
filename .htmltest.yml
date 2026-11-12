@@ -1,0 +1,8 @@
+DirectoryPath: "docs"
+IgnoreURLs:
+- "fonts.gstatic.com"
+- "^/misc/js/script.js$"
+IgnoreDirs:
+- "lib"
+CacheExpires: "6h"
+IgnoreInternalEmptyHash: true

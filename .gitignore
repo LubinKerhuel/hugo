@@ -1,2 +1,16 @@
 public/
 .idea/
+# Local build artefacts and tools (never versioned)
+resources/
+tmp/
+hugo*.exe
+hugo*.exe.old
+htmltest.exe
+docs_old/
+docs_ref/
+zz_reference/
+.hugo_build.lock
+*.bak
+*.lnk
+*.url
+assets/jsconfig.json
