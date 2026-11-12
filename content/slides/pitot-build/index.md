@@ -16,7 +16,7 @@ slides:
   theme: black  # Reveal JS theme name
   highlight_style: dracula  # Highlight JS theme name
   
-  #slide_number: true
+  slide_number: true
 #  progress: true 
 #  transition: zoom
 #  transition_speed: fast
@@ -43,7 +43,7 @@ slides:
 ### Miniature airspeed sensor
 #### for RC plane & UAV
 
-[full](/post/pitot-build) description
+[full](/post/pitot-build/) description
 
 ---
 
@@ -157,7 +157,7 @@ with wind:
 
 ---
 
-[page](/post/pitot-build) with further details
+[page](/post/pitot-build/) with further details
 
 ---
 

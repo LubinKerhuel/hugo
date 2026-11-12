@@ -33,7 +33,7 @@ slides:
 </a>
 </p>
 
-\[[Lab](https://rtdc.ctrl-elec.fr/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
+\[[Lab](https://rtdc.ctrl-elec.fr/)\] - [L.Kerhuel](/authors/lubin/) - [R.Delpoux](/authors/romain-delpoux/)
 
 summary: "Rapid prototyping with Simulink on dsPIC: DC motor control course material, December 2022 edition."
 ---

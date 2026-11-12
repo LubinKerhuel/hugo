@@ -9,7 +9,7 @@ slides:
   theme: black  # Reveal JS theme name
   highlight_style: dracula  # Highlight JS theme name
   
-  #slide_number: true
+  slide_number: true
   progress: true 
   transition: zoom
   transition_speed: fast
@@ -33,7 +33,7 @@ slides:
 </a>
 </p>
 
-\[[Lab](https://rtdc.ctrl-elec.fr/)\] - [L.Kerhuel](/authors/lubin) - [R.Delpoux](/authors/romain-delpoux)
+\[[Lab](https://rtdc.ctrl-elec.fr/)\] - [L.Kerhuel](/authors/lubin/) - [R.Delpoux](/authors/romain-delpoux/)
 
 summary: "Rapid prototyping with Simulink on dsPIC: DC motor control course material."
 ---
