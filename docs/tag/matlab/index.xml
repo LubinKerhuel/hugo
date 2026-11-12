@@ -65,7 +65,7 @@
 &lt;li&gt;&lt;em&gt;MAVLink Parser&lt;/em&gt; (decode input message and implement WayPoint&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; and Parameter&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; protocols)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="block-receiver-telemetry"&gt;Receivers-Telemetry&lt;/a&gt;
+&lt;li&gt;&lt;a href="block-receiver-telemetry/"&gt;Receivers-Telemetry&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;S.BUS&lt;/em&gt; receive RC channels&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Smart Port&lt;/em&gt; send telemetry values&lt;/li&gt;
@@ -534,7 +534,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;/ul&gt;
 &lt;p&gt;Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the IMU estimation algorithm, autopilot control loop and all low tasks (handle various protocols (I2C, NMEA for GPS, F.Port, MAVLink and log sensors data at 1Khz through an UART configured at 2 470 000)&lt;/p&gt;
 &lt;p&gt;Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).&lt;/p&gt;
-&lt;p&gt;Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build"&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Pitot tube airspeed estimation validated using GPS speed measurement as reference (&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/"&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.&lt;/p&gt;
 &lt;p&gt;Validated automatic calibration of the magnetometer&amp;rsquo;s axis offset and gain. Once in the air, the magnetic perturbation near the floor are negligible. An algorithm automatically determines if the calibration can be refined using current data (using standard flight input data, no looping or specific roll required).&lt;/p&gt;
 &lt;h3 id="next-steps"&gt;Next steps&lt;/h3&gt;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorials | Rapid Control Prototyping</title><link>https://lubin.kerhuel.eu/tag/tutorials/</link><atom:link href="https://lubin.kerhuel.eu/tag/tutorials/index.xml" rel="self" type="application/rss+xml"/><description>Tutorials</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-US</language><image><url>https://lubin.kerhuel.eu/media/icon_hu_854b44b36e8700d6.png</url><title>Tutorials</title><link>https://lubin.kerhuel.eu/tag/tutorials/</link></image><item><title>miniature airspeed sensor</title><link>https://lubin.kerhuel.eu/slides/pitot-build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lubin.kerhuel.eu/slides/pitot-build/</guid><description>&lt;h2 id="pitot-tube"&gt;Pitot tube&lt;/h2&gt;
 &lt;h3 id="miniature-airspeed-sensor"&gt;Miniature airspeed sensor&lt;/h3&gt;
 &lt;h4 id="for-rc-plane--uav"&gt;for RC plane &amp;amp; UAV&lt;/h4&gt;
-&lt;p&gt;&lt;a href="https://lubin.kerhuel.eu/post/pitot-build"&gt;full&lt;/a&gt; description&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/"&gt;full&lt;/a&gt; description&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;
 &lt;figure &gt;
@@ -114,7 +114,7 @@
 &lt;li&gt;from 101° (east)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;a href="https://lubin.kerhuel.eu/post/pitot-build"&gt;page&lt;/a&gt; with further details&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://lubin.kerhuel.eu/post/pitot-build/"&gt;page&lt;/a&gt; with further details&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="flight-trace"&gt;flight trace&lt;/h3&gt;
 &lt;section data-background-iframe="https://www.google.com/maps/d/u/0/embed?mid=1-K7dsmfbMCDL3IQK1z3IEtSduB2OWXr9" data-background-opacity=1&gt;

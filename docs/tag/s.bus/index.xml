@@ -65,7 +65,7 @@
 &lt;li&gt;&lt;em&gt;MAVLink Parser&lt;/em&gt; (decode input message and implement WayPoint&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; and Parameter&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; protocols)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="block-receiver-telemetry"&gt;Receivers-Telemetry&lt;/a&gt;
+&lt;li&gt;&lt;a href="block-receiver-telemetry/"&gt;Receivers-Telemetry&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;S.BUS&lt;/em&gt; receive RC channels&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Smart Port&lt;/em&gt; send telemetry values&lt;/li&gt;
