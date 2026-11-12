@@ -109,7 +109,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;div class="box" style="max-width:80%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" loading="lazy" /&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" loading="lazy" alt="Embedded electronics of an early test configuration: receiver, power board, data logger, AUAV3 controller, sensors and GPS"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16-bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter.&lt;/h4&gt;

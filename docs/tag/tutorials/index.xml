@@ -48,12 +48,12 @@
 &lt;/p&gt;
 &lt;hr&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" alt="Wing with brass Pitot tube and its electronic board (MP3V5004DP pressure sensor)"&gt;
 &lt;/p&gt;
 &lt;!-- ![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg) --&gt;
 &lt;hr&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" alt="Wing with carbon Pitot tube"&gt;
 &lt;/p&gt;
 &lt;!-- &lt;section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" &gt;
 &lt;/section&gt; --&gt;

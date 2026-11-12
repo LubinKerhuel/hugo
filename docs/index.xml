@@ -178,7 +178,7 @@ The message is sent through an UART Tx block.&lt;/p&gt;
 &lt;div class="box" style="max-width:40%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-fport-gui-control-frame.png" loading="lazy" /&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-fport-gui-control-frame.png" loading="lazy" alt="F.Port block parameters, Control Frame tab: decoded channel outputs and status flags"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-fport-gui-control-frame.png" itemprop="contentUrl"&gt;&lt;/a&gt;
 &lt;/figure&gt;
@@ -186,7 +186,7 @@ The message is sent through an UART Tx block.&lt;/p&gt;
 &lt;div class="box" style="max-width:80%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-fport-scheme-uart-connection.png" loading="lazy" /&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/uxv-block-fport-scheme-uart-connection.png" loading="lazy" alt="Simulink model: UART1 Rx feeds the F.Port parser, which outputs the S.BUS control signals and channels CH1 to CH10; telemetry is returned through UART1 Tx"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/uxv-block-fport-scheme-uart-connection.png" itemprop="contentUrl"&gt;&lt;/a&gt;
 &lt;/figure&gt;
@@ -767,7 +767,7 @@ m = 72mm
 &lt;div class="box" style="max-width:100%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" loading="lazy" /&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" loading="lazy" alt="Brass Pitot tube with its electronic board, mounted on the Firstar 1600 fixed-wing platform"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform.&lt;/h4&gt;
@@ -1010,7 +1010,7 @@ Such Simulink model allows to &amp;ldquo;get-in&amp;rdquo; the project graphical
 &lt;div class="box" style="max-width:80%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" loading="lazy" /&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" loading="lazy" alt="Embedded electronics of an early test configuration: receiver, power board, data logger, AUAV3 controller, sensors and GPS"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Embedded electronics. One early configuration for testing various sensors. Elements used: X8R receiver, PDB-XPM power board, OpenLager SD data logger, AUAV3 16-bit dsPIC microcontroller with sensors (MPU6050), IMU board 1, IMU board 2, Pressure sensor MP3V5004DP for pitot tube, GPS1, GPS2, 3S 2200maH LiPo battery, Qx7 transmitter.&lt;/h4&gt;
@@ -1598,12 +1598,12 @@ style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;
 &lt;/p&gt;
 &lt;hr&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" alt="Wing with brass Pitot tube and its electronic board (MP3V5004DP pressure sensor)"&gt;
 &lt;/p&gt;
 &lt;!-- ![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg) --&gt;
 &lt;hr&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" alt="Wing with carbon Pitot tube"&gt;
 &lt;/p&gt;
 &lt;!-- &lt;section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" &gt;
 &lt;/section&gt; --&gt;
@@ -1680,7 +1680,7 @@ style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;
 &lt;h3 id="model-based-design"&gt;Model Based Design&lt;/h3&gt;
 &lt;p class="stretch"&gt;
 &lt;a href="https://fr.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu/"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png" alt="MPLAB Device Blocks for Simulink logo"&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;[&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;Lab&lt;/a&gt;] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin/"&gt;L.Kerhuel&lt;/a&gt; - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux/"&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
@@ -1722,7 +1722,7 @@ data-transition_speed="slow"
 &lt;p&gt;
 &lt;figure &gt;
 &lt;div class="d-flex justify-content-center"&gt;
-&lt;div class="w-100" &gt;&lt;img src="./Picooz_02_Open.jpg" alt="./Picooz_01_Open.jpg" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;div class="w-100" &gt;&lt;img src="./Picooz_02_Open.jpg" alt="Picooz, open" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;hr&gt;
@@ -1734,7 +1734,7 @@ data-transition_speed="slow"
 &lt;p&gt;
 &lt;figure &gt;
 &lt;div class="d-flex justify-content-center"&gt;
-&lt;div class="w-100" &gt;&lt;img src="./Picooz_03_Motor.jpg" alt="./Picooz_03_Close.jpg" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;div class="w-100" &gt;&lt;img src="./Picooz_03_Motor.jpg" alt="Picooz motor" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;hr&gt;
@@ -1742,7 +1742,7 @@ data-transition_speed="slow"
 data-background-color="#FFFFFF"
 &gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Picooz_DC_Motor_Electronic_All.png"&gt;
+&lt;img data-src="./Picooz_DC_Motor_Electronic_All.png" alt="Picooz DC motor and electronics, overview"&gt;
 &lt;/p&gt;
 &lt;aside class="notes"&gt;
 Commande en Vitesse
@@ -1921,7 +1921,7 @@ Single Tasking / Multi Tasking
 &lt;hr&gt;
 &lt;h4 id="modèle-multi-rate"&gt;Modèle multi-rate&lt;/h4&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Model_Hardware_Test_withSampleTime.png"&gt;
+&lt;img data-src="./Model_Hardware_Test_withSampleTime.png" alt="Simulink model for hardware test with sample time"&gt;
 &lt;/p&gt;
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" &gt;
 &lt;/section&gt;
@@ -2183,7 +2183,7 @@ GPS
 &lt;hr&gt;
 &lt;h2 id="data-type"&gt;Data-type&lt;/h2&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Simulink_TypeCast_FixPtFormat.png"&gt;
+&lt;img data-src="./Simulink_TypeCast_FixPtFormat.png" alt="Simulink type conversion, fixed-point format"&gt;
 &lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="data-type-notation"&gt;Data-type notation&lt;/h2&gt;
@@ -2284,7 +2284,7 @@ GPS
 &lt;h3 id="model-based-design"&gt;Model Based Design&lt;/h3&gt;
 &lt;p class="stretch"&gt;
 &lt;a href="https://fr.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu/"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png" alt="MPLAB Device Blocks for Simulink logo"&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;[&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;Lab&lt;/a&gt;] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin/"&gt;L.Kerhuel&lt;/a&gt; - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux/"&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
@@ -2337,7 +2337,7 @@ data-transition_speed="slow"
 data-background-color="#FFFFFF"
 &gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Picooz_DC_Motor_Electronic_All.png"&gt;
+&lt;img data-src="./Picooz_DC_Motor_Electronic_All.png" alt="Picooz DC motor and electronics, overview"&gt;
 &lt;/p&gt;
 &lt;aside class="notes"&gt;
 Commande en Vitesse
@@ -2575,7 +2575,7 @@ GPS
 &lt;hr&gt;
 &lt;h2 id="data-type"&gt;Data-type&lt;/h2&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Simulink_TypeCast_FixPtFormat.png"&gt;
+&lt;img data-src="./Simulink_TypeCast_FixPtFormat.png" alt="Simulink type conversion, fixed-point format"&gt;
 &lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="data-type-notation"&gt;Data-type notation&lt;/h2&gt;
@@ -2722,7 +2722,7 @@ Single Tasking / Multi Tasking
 &lt;hr&gt;
 &lt;h4 id="modèle-multi-rate"&gt;Modèle multi-rate&lt;/h4&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Model_Hardware_Test_withSampleTime.png"&gt;
+&lt;img data-src="./Model_Hardware_Test_withSampleTime.png" alt="Simulink model for hardware test with sample time"&gt;
 &lt;/p&gt;
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" &gt;
 &lt;/section&gt;

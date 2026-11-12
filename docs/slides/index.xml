@@ -48,12 +48,12 @@
 &lt;/p&gt;
 &lt;hr&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" alt="Wing with brass Pitot tube and its electronic board (MP3V5004DP pressure sensor)"&gt;
 &lt;/p&gt;
 &lt;!-- ![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg) --&gt;
 &lt;hr&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" alt="Wing with carbon Pitot tube"&gt;
 &lt;/p&gt;
 &lt;!-- &lt;section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" &gt;
 &lt;/section&gt; --&gt;
@@ -130,7 +130,7 @@
 &lt;h3 id="model-based-design"&gt;Model Based Design&lt;/h3&gt;
 &lt;p class="stretch"&gt;
 &lt;a href="https://fr.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu/"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png" alt="MPLAB Device Blocks for Simulink logo"&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;[&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;Lab&lt;/a&gt;] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin/"&gt;L.Kerhuel&lt;/a&gt; - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux/"&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
@@ -172,7 +172,7 @@ data-transition_speed="slow"
 &lt;p&gt;
 &lt;figure &gt;
 &lt;div class="d-flex justify-content-center"&gt;
-&lt;div class="w-100" &gt;&lt;img src="./Picooz_02_Open.jpg" alt="./Picooz_01_Open.jpg" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;div class="w-100" &gt;&lt;img src="./Picooz_02_Open.jpg" alt="Picooz, open" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;hr&gt;
@@ -184,7 +184,7 @@ data-transition_speed="slow"
 &lt;p&gt;
 &lt;figure &gt;
 &lt;div class="d-flex justify-content-center"&gt;
-&lt;div class="w-100" &gt;&lt;img src="./Picooz_03_Motor.jpg" alt="./Picooz_03_Close.jpg" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;div class="w-100" &gt;&lt;img src="./Picooz_03_Motor.jpg" alt="Picooz motor" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;hr&gt;
@@ -192,7 +192,7 @@ data-transition_speed="slow"
 data-background-color="#FFFFFF"
 &gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Picooz_DC_Motor_Electronic_All.png"&gt;
+&lt;img data-src="./Picooz_DC_Motor_Electronic_All.png" alt="Picooz DC motor and electronics, overview"&gt;
 &lt;/p&gt;
 &lt;aside class="notes"&gt;
 Commande en Vitesse
@@ -371,7 +371,7 @@ Single Tasking / Multi Tasking
 &lt;hr&gt;
 &lt;h4 id="modèle-multi-rate"&gt;Modèle multi-rate&lt;/h4&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Model_Hardware_Test_withSampleTime.png"&gt;
+&lt;img data-src="./Model_Hardware_Test_withSampleTime.png" alt="Simulink model for hardware test with sample time"&gt;
 &lt;/p&gt;
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" &gt;
 &lt;/section&gt;
@@ -633,7 +633,7 @@ GPS
 &lt;hr&gt;
 &lt;h2 id="data-type"&gt;Data-type&lt;/h2&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Simulink_TypeCast_FixPtFormat.png"&gt;
+&lt;img data-src="./Simulink_TypeCast_FixPtFormat.png" alt="Simulink type conversion, fixed-point format"&gt;
 &lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="data-type-notation"&gt;Data-type notation&lt;/h2&gt;
@@ -734,7 +734,7 @@ GPS
 &lt;h3 id="model-based-design"&gt;Model Based Design&lt;/h3&gt;
 &lt;p class="stretch"&gt;
 &lt;a href="https://fr.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu/"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/logo_mplab-deviceblocksforsimulink-whitebackground.png" alt="MPLAB Device Blocks for Simulink logo"&gt;
 &lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;[&lt;a href="https://rtdc.ctrl-elec.fr/" target="_blank" rel="noopener"&gt;Lab&lt;/a&gt;] - &lt;a href="https://lubin.kerhuel.eu/authors/lubin/"&gt;L.Kerhuel&lt;/a&gt; - &lt;a href="https://lubin.kerhuel.eu/authors/romain-delpoux/"&gt;R.Delpoux&lt;/a&gt;&lt;/p&gt;
@@ -787,7 +787,7 @@ data-transition_speed="slow"
 data-background-color="#FFFFFF"
 &gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Picooz_DC_Motor_Electronic_All.png"&gt;
+&lt;img data-src="./Picooz_DC_Motor_Electronic_All.png" alt="Picooz DC motor and electronics, overview"&gt;
 &lt;/p&gt;
 &lt;aside class="notes"&gt;
 Commande en Vitesse
@@ -1025,7 +1025,7 @@ GPS
 &lt;hr&gt;
 &lt;h2 id="data-type"&gt;Data-type&lt;/h2&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Simulink_TypeCast_FixPtFormat.png"&gt;
+&lt;img data-src="./Simulink_TypeCast_FixPtFormat.png" alt="Simulink type conversion, fixed-point format"&gt;
 &lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="data-type-notation"&gt;Data-type notation&lt;/h2&gt;
@@ -1172,7 +1172,7 @@ Single Tasking / Multi Tasking
 &lt;hr&gt;
 &lt;h4 id="modèle-multi-rate"&gt;Modèle multi-rate&lt;/h4&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="./Model_Hardware_Test_withSampleTime.png"&gt;
+&lt;img data-src="./Model_Hardware_Test_withSampleTime.png" alt="Simulink model for hardware test with sample time"&gt;
 &lt;/p&gt;
 &lt;section data-background-image="./Scope_SingleTasking_70MIPS.png" data-background-opacity=0.06 data-background-position="center" &gt;
 &lt;/section&gt;

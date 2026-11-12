@@ -206,7 +206,7 @@ Un tel modèle Simulink permet d&amp;rsquo;« entrer » dans le projet de maniè
 &lt;div class="box" style="max-width:80%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" loading="lazy" /&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" loading="lazy" alt="Électronique embarquée d’une configuration d’essai : récepteur, carte de puissance, enregistreur, contrôleur AUAV3, capteurs et GPS"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/autopilot-electronic-sensors-bundle_1.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Électronique embarquée. Une des premières configurations destinées à évaluer divers capteurs. Éléments utilisés : récepteur X8R, carte de distribution PDB-XPM, enregistreur de données sur SD OpenLager, microcontrôleur dsPIC 16 bits AUAV3 avec capteurs (MPU6050), carte IMU 1, carte IMU 2, capteur de pression MP3V5004DP pour le tube de Pitot, GPS1, GPS2, batterie LiPo 3S 2200 mAh, émetteur Qx7.&lt;/h4&gt;

@@ -454,7 +454,7 @@ m = 72mm
 &lt;div class="box" style="max-width:100%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" loading="lazy" /&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" loading="lazy" alt="Brass Pitot tube with its electronic board, mounted on the Firstar 1600 fixed-wing platform"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform.&lt;/h4&gt;

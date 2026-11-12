@@ -454,7 +454,7 @@ m = 72mm
 &lt;div class="box" style="max-width:100%"&gt;
 &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
 &lt;div class="img"&gt;
-&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" loading="lazy" /&gt;
+&lt;img itemprop="thumbnail" src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" loading="lazy" alt="Brass Pitot tube with its electronic board, mounted on the Firstar 1600 fixed-wing platform"/&gt;
 &lt;/div&gt;
 &lt;a href="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" itemprop="contentUrl"&gt;&lt;/a&gt;
 &lt;figcaption data-pre="Figure " data-post=":" class="numbered"&gt;&lt;h4&gt;Brass Pitot tube with its electronic board mounted onboard the Firstar 1600 fixed wing platform.&lt;/h4&gt;
@@ -753,12 +753,12 @@ lab subject is availalbe at: &lt;a href="https://rcp.ctrl-elec.fr/" target="_bla
 &lt;/p&gt;
 &lt;hr&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg" alt="Wing with brass Pitot tube and its electronic board (MP3V5004DP pressure sensor)"&gt;
 &lt;/p&gt;
 &lt;!-- ![Wing with Pitot](/img/pitot-darcy-prandtl-wing-brass-mp3v5004dp-mcp3428.jpg) --&gt;
 &lt;hr&gt;
 &lt;p class="stretch"&gt;
-&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg"&gt;
+&lt;img data-src="https://lubin.kerhuel.eu/img/pitot-darcy-prandtl-wing-carbon2.jpg" alt="Wing with carbon Pitot tube"&gt;
 &lt;/p&gt;
 &lt;!-- &lt;section data-background-image="/img/pitot-darcy-prandtl-wing-carbon2.jpg" data-background-opacity=1 data-background-position="center" data-background-size="contain" &gt;
 &lt;/section&gt; --&gt;
