@@ -1,4 +1,6 @@
 DirectoryPath: "docs"
+# Theme share buttons emit mailto:?subject=... (no recipient, valid per RFC 6068): not an error
+CheckMailto: false
 IgnoreURLs:
 # Reveal.js client-side slide routes (e.g. /slides/x/#/10): not verifiable statically
 - '#/\d+$'
