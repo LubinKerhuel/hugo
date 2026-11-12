@@ -146,7 +146,7 @@ La charge moyenne du processeur était de 7 à 8 % sur un dsPIC 33EP cadencé à
 
 Le dispositif a été éprouvé par vent fort. Il met en évidence une robustesse satisfaisante malgré le faible nombre de paramètres réglés jusqu'ici (lien vidéo en haut de page).
 
-L'estimation de la vitesse air par le tube de Pitot a été validée en prenant la vitesse GPS comme référence ([ici](/post/pitot-build)).
+L'estimation de la vitesse air par le tube de Pitot a été validée en prenant la vitesse GPS comme référence ([ici](/post/pitot-build/)).
 
 L'estimation de la vitesse et de la direction du vent, basée sur la différence entre les mesures de vitesse GPS et du tube de Pitot en tenant compte de l'orientation de l'avion, a été validée.
 

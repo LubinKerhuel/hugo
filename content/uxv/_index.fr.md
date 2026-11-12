@@ -78,7 +78,7 @@ Le script *mavlinkgui* ouvre une interface graphique (GUI) pour explorer les don
   - *RECEIVE* (recevoir un message)
   - *MAVLink Data*  (données de points de passage)
   - *MAVLink Parser* (décode le message d'entrée et met en œuvre les protocoles WayPoint[^WayPoint] et Parameter[^Parameter])
-- [Récepteurs-Télémétrie](block-receiver-telemetry)
+- [Récepteurs-Télémétrie](block-receiver-telemetry/)
   - *S.BUS* reçoit les canaux RC
   - *Smart Port* envoie les valeurs de télémétrie
   - *F.Port* reçoit les canaux RC + envoie la télémétrie

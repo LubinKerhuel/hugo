@@ -78,7 +78,7 @@ Three main scripts enable decoding MAVLink messages, creating simulink model for
   - *RECEIVE* (Receive a message)
   - *MAVLink Data*  (Way Points data)
   - *MAVLink Parser* (decode input message and implement WayPoint[^WayPoint] and Parameter[^Parameter] protocols)
-- [Receivers-Telemetry](block-receiver-telemetry)
+- [Receivers-Telemetry](block-receiver-telemetry/)
   - *S.BUS* receive RC channels
   - *Smart Port* send telemetry values
   - *F.Port* receive RC channels + send telemetry

@@ -3,7 +3,7 @@ title: "On Chip Rapid Control Prototyping for Education"
 authors: ["romain-delpoux", "lubin", "Vincent Léchappé", "Arnaud Duvernois"]
 date: "2020-07-01"
 publishDate: "2020-07-01"
-publication_types: ["1"]
+publication_types: ["paper-conference"]
 publication: "*21st IFAC World Congress*, Berlin, Germany, July 2020"
 publication_short: "IFAC 2020"
 abstract: ""

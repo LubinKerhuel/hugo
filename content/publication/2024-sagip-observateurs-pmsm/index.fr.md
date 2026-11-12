@@ -3,7 +3,7 @@ title: "Méthodologie pour la conception d'observateurs basée sur l'enregistrem
 authors: ["Samar Alhaj Hassan", "romain-delpoux", "lubin", "Vincent Léchappé", "Xavier Brun"]
 date: "2024-05-01"
 publishDate: "2024-05-01"
-publication_types: ["1"]
+publication_types: ["paper-conference"]
 publication: "*Congrès annuel de la SAGIP*, Villeurbanne, France, mai 2024"
 publication_short: "SAGIP 2024"
 abstract: ""

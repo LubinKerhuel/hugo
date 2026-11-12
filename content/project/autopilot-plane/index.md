@@ -146,7 +146,7 @@ Average CPU load was 7 to 8% on a dsPIC 33EP running at 70 MIPS. It includes the
 
 Tested with strong wind. Showing good robustness despite the low number of parameters tuned so far (video link on top).
 
-Pitot tube airspeed estimation validated using GPS speed measurement as reference ([here](/post/pitot-build)).
+Pitot tube airspeed estimation validated using GPS speed measurement as reference ([here](/post/pitot-build/)).
 
 Validated the wind speed and direction estimation based on a difference between the GPS and pitot tube speed measurement considering the plane orientation.
 

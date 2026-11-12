@@ -1,5 +1,9 @@
 DirectoryPath: "docs"
 IgnoreURLs:
+# Reveal.js client-side slide routes (e.g. /slides/x/#/10): not verifiable statically
+- '#/\d+$'
+# Theme links type badges to /publication/#<csl-type>; the list page has no per-type anchor (browser falls back to top)
+- '^/(fr/)?publication/#[a-z-]+$'
 - "fonts.gstatic.com"
 - "^/misc/js/script.js$"
 IgnoreDirs:
